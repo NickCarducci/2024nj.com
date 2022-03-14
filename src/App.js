@@ -312,6 +312,9 @@ export default class App extends React.Component {
         gerontocracy). Is 50% debt spending for wealth inequality good for
         prices?
         <br />
+        1/hour-GDP/p
+        <br />
+        <br />
         Nick Carducci - Chairperson at Saver Party (2020–present)
         <br />
         "With poverty defined as the bottom 20% of earners, how can you
