@@ -273,7 +273,7 @@ export default class App extends React.Component {
         </div>
         <div
           onClick={() => {
-            window.scroll(0, 1);
+            window.scroll(0, 100);
             this.setState({ trigger: true });
           }}
           style={{
