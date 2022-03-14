@@ -798,7 +798,7 @@ class Wages extends React.Component {
       <div
         style={{
           width: "100%",
-          height: lineheight + 50,
+          height: lineheight + 90,
           position: "relative",
           backgroundColor: "rgb(190,150,180)"
         }}
@@ -986,7 +986,13 @@ class Wages extends React.Component {
             </div>
           </div>
         </div>
-        <div style={{ position: "relative", height: lineheight }}>
+        <div
+          style={{
+            position: "relative",
+            height: lineheight,
+            marginTop: "30px"
+          }}
+        >
           <svg style={linecss} xmlns="http://www.w3.org/2000/svg">
             {noData.map(
               ([x, y], i) =>
