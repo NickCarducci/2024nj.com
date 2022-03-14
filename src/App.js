@@ -281,6 +281,26 @@ export default class App extends React.Component {
             backgroundColor: "rgba(20,20,20,.5)"
           }}
         />
+        "There are more people signing up than needed, but we still conscript
+        young males against their will. We want support and a no-fly-zone to
+        come back. Promises made need to be promises kept," not if the promise
+        was counterfeit, cunt.
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/way6aqkdaxp0u0k/Screen%20Shot%202022-03-14%20at%204.17.58%20PM.png?dl=0"
+          }
+          float={"left"}
+          title="MP Kiev, 'looking straight down the barrel'"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         <div
           style={{
             display: "flex",
