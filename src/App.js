@@ -281,26 +281,6 @@ export default class App extends React.Component {
             backgroundColor: "rgba(20,20,20,.5)"
           }}
         />
-        "There are more people signing up than needed, but we still conscript
-        young males against their will. We want support and a no-fly-zone to
-        come back. Promises made need to be promises kept," not if the promise
-        was counterfeit, cunt.
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dl.dropboxusercontent.com/s/way6aqkdaxp0u0k/Screen%20Shot%202022-03-14%20at%204.17.58%20PM.png?dl=0"
-          }
-          float={"left"}
-          title="MP Kiev, 'looking straight down the barrel'"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
         <div
           style={{
             display: "flex",
@@ -323,6 +303,63 @@ export default class App extends React.Component {
             S&D
           </div>
         </div>
+        Free oil, over currency dead body! Platform royalty and sign off, today!
+        Target margin Motor Vehicle ID NFC operational monopsony bridge
+        tolls/spectrum/pipelines. N=2 significance is meaningless. Take out the
+        virus, inceminate cell on stage! Health insurance needed for invoices
+        alone. False/surrendered bid pools, Obamacare mean inflation; name your
+        price, collateralized red-line (investment bank funded welfare &
+        gerontocracy). Is 50% debt spending for wealth inequality good for
+        prices?
+        <br />
+        Nick Carducci - Chairperson at Saver Party (2020–present)
+        <br />
+        "With poverty defined as the bottom 20% of earners, how can you
+        eliminate poverty, since there’s always a bottom 20%?"
+        <br />
+        You are describing income inequality, not poverty with numeration as
+        inflation
+        <br />
+        <br />
+        Food Clothing Shelter Utilities with imputed mortgages; unpoverty
+        threshold used to be thrice food, income.
+        <h4>
+          who is making the weapons? Painting the tape? Give Ukraine the
+          schematics{space}&bull;{space}take out conscriptors and issuers of war
+          bonds
+        </h4>
+        Progressives v Occupy 2024, fine lower court judges for successful
+        appeals, no state vic, ubi globally or bust, no-candidate voters count,
+        Truncated Production Tax world peace, regressive. With me in charge of
+        education, 16-19 will +20% faster than down 1990-. 1/hour-GDP/p
+        <h4>anti-communism=collateralization-professionals</h4>
+        "China is a communist nation: it has a shortage of girls so it has a
+        one-child policy."
+        <br />
+        Small business is not the lifeblood of the American economy, 50 average
+        age, used to be 20, with self employed, 15!!!
+        <br />
+        <br />
+        "There are more people signing up than needed, but we still conscript
+        young males against their will. We want support and a no-fly-zone to
+        come back. Promises made need to be promises kept," not if the promise
+        was counterfeit, cunt.
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/way6aqkdaxp0u0k/Screen%20Shot%202022-03-14%20at%204.17.58%20PM.png?dl=0"
+          }
+          float={"left"}
+          title="MP Kiev, 'looking straight down the barrel'"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         Prosperity and jobs are counterproductive
         <br />
         <br />
