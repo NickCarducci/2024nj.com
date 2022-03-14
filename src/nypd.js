@@ -360,7 +360,7 @@ class NYPD extends React.Component {
         <div
           style={{
             position: "relative",
-            height: "56px",
+            height: "36px",
             overflowX: "auto",
             overflowY: "hidden",
             width: "100%",
@@ -385,6 +385,7 @@ class NYPD extends React.Component {
         </div>
         <div
           style={{
+            marginTop: "20px",
             position: "relative",
             height: lineheight
           }}
