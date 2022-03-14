@@ -309,6 +309,12 @@ export default class App extends React.Component {
             Plandemic
           </div>
         </div>
+        <h4>
+          liquid market propaganda - 30under5.us
+          <span role="img" aria-label="umbrella">
+            ️☔
+          </span>
+        </h4>
         The military on both sides have more people than things to do, proving
         how useless income actually has been, to the core functions of
         monetary-debits
