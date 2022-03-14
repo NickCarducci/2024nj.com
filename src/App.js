@@ -51,6 +51,7 @@ export default class App extends React.Component {
     this.gas = React.createRef();
     this.depression = React.createRef();
     this.supply = React.createRef();
+    this.plandemic = React.createRef();
   }
   componentDidMount = () => {
     //document.getElementsByTagName("body")[0].style.margin = 0;
@@ -192,6 +193,8 @@ export default class App extends React.Component {
           window.scroll(0, this.depression.current.offsetTop);
         } else if (["/gas", "/oil"].includes(this.props.pathname)) {
           window.scroll(0, this.gas.current.offsetTop);
+        } else if (["/plandemic"].includes(this.props.pathname)) {
+          window.scroll(0, this.plandemic.current.offsetTop);
         }
       };
       check();
@@ -302,7 +305,13 @@ export default class App extends React.Component {
           <div id="supply" onClick={goTo} style={navitem}>
             S&D
           </div>
+          <div id="plandemic" onClick={goTo} style={navitem}>
+            Plandemic
+          </div>
         </div>
+        found it outside, predicted it would; do it then
+        <br />
+        <br />
         Why is Bill O’Reilly ok with shooting, 14k dead, 17 wounded until
         “chemical” bacteria anthrax, smallpox is coincidence. Can’t have
         bivariate true hypothesis two-cause artifact, let alone asymptomatic
@@ -2361,6 +2370,7 @@ export default class App extends React.Component {
         </a>
         ," says the 'lawyer'
         <br />
+        <hr ref={this.plandemic} />
         <Vax
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
