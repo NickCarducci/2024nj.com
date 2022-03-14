@@ -309,6 +309,8 @@ export default class App extends React.Component {
             Plandemic
           </div>
         </div>
+        5 days to recovery
+        <br />
         found it outside, predicted it would; do it then
         <br />
         <br />
