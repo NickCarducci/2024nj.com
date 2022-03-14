@@ -309,6 +309,14 @@ export default class App extends React.Component {
             Plandemic
           </div>
         </div>
+        The military on both sides have more people than things to do, proving
+        how useless income actually has been, to the core functions of
+        monetary-debits
+        <br />
+        if anything at all, other than vault share tax without state vig bail -
+        2 week anon executions + geohash/month spoofable paytech public review
+        <br />
+        <br />
         5 days to recovery
         <br />
         found it outside, predicted it would; do it then
