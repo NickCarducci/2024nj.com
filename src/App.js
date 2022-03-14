@@ -303,6 +303,13 @@ export default class App extends React.Component {
             S&D
           </div>
         </div>
+        Why is Bill O’Reilly ok with shooting, 14k dead, 17 wounded until
+        “chemical” bacteria anthrax, smallpox is coincidence. Can’t have
+        bivariate true hypothesis two-cause artifact, let alone asymptomatic
+        testing has proven it isn’t even correlated, 1% die , 50% common cold
+        normally
+        <br />
+        <br />
         Free oil, over currency dead body! Platform royalty and sign off, today!
         Target margin Motor Vehicle ID NFC operational monopsony bridge
         tolls/spectrum/pipelines. N=2 significance is meaningless. Take out the
@@ -324,8 +331,21 @@ export default class App extends React.Component {
         inflation
         <br />
         <br />
-        Food Clothing Shelter Utilities with imputed mortgages; unpoverty
-        threshold used to be thrice food, income.
+        Food Clothing Shelter Utilities (FCSU) * 1.2 for the employee
+        contribution constant with imputed mortgages; unpoverty threshold used
+        to be thrice food, income.
+        <br />
+        <br />
+        A percentile of an absolute (income), rather than a ratio (poverty), is
+        skewed by concentration-of-presentation, alone; however, poverty
+        thresholds flatten percentile of a ratio to a distribution, forged by
+        despondency from said threshold. The base calculation uses a third of
+        income on FCSU.
+        <br />
+        <br />
+        We can end poverty by adjudicating contract law over surrendered
+        freedoms so 1/hour-GDP/p is maximized as labor is variable part of
+        sprints with material, and we can lessen income despondency.
         <h4>
           who is making the weapons? Painting the tape? Give Ukraine the
           schematics{space}&bull;{space}take out conscriptors and issuers of war
