@@ -279,8 +279,8 @@ export default class App extends React.Component {
           style={{
             display: this.state.trigger ? "none" : "block",
             position: "absolute",
-            height: "101%",
-            width: "100%",
+            height: document.documentElement.scrollHeight,
+            width: "calc(100% - 40px)",
             backgroundColor: "rgba(20,20,20,.5)"
           }}
         />
@@ -309,6 +309,9 @@ export default class App extends React.Component {
             Plandemic
           </div>
         </div>
+        '.cc' tld might be shunned by colluders for being generally cheaper
+        complementary all else. Multifamily housing charging stations selling to
+        himself, Pete Buttgieg, any price
         <h4>
           liquid market propaganda - 30under5.us
           <span role="img" aria-label="umbrella">
@@ -337,7 +340,7 @@ export default class App extends React.Component {
         “chemical” bacteria anthrax, smallpox is coincidence. Can’t have
         bivariate true hypothesis two-cause artifact, let alone asymptomatic
         testing has proven it isn’t even correlated, 1% die , 50% common cold
-        normally
+        normally. "Find out whther it is deadly or not," Dr. Rand Paul.
         <br />
         <br />
         Free oil, over currency dead body! Platform royalty and sign off, today!
