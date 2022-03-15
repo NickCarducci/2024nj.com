@@ -390,6 +390,11 @@ export default class App extends React.Component {
           schematics{space}&bull;{space}take out conscriptors and issuers of war
           bonds
         </h4>
+        “Sanctions so they do not have a single dollar to fund their war
+        effort,” that is trade, not plundering. They have the same value of
+        goods, idiot.
+        <br />
+        <br />
         Progressives v Occupy 2024, fine lower court judges for successful
         appeals, no state vic, ubi globally or bust, no-candidate voters count,
         Truncated Production Tax world peace, regressive. With me in charge of
