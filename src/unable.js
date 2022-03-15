@@ -83,19 +83,20 @@ class Unable extends React.Component {
       const data = Object.values(unable)[i];
       Object.keys(data).forEach((disability, i) => {
         const num = Object.values(data)[i];
+        if (!num || disability === "beneficiaries") return null;
         if (!disabilities[disability]) disabilities[disability] = [];
-        disabilities[disability].push([year, num]);
-        types.push(num);
+        disabilities[disability].push([year, data.beneficiaries * (num / 100)]);
+        types.push(data.beneficiaries * (num / 100));
       });
       date.push(year);
       beneficiaries.push(data.beneficiaries);
       beneficiariesData.push([year, data.beneficiaries]);
       return noData.push([year, 0]);
     });
-    const all = [...beneficiaries, ...types];
-    var lowBeneficiaries = Math.min(...all);
+    //const all = [...beneficiaries, ...types];
+    var lowBeneficiaries = Math.min(...types);
     var lowDate = Math.min(...date);
-    var highBeneficiaries = Math.max(...all);
+    var highBeneficiaries = Math.max(...types);
     var highDate = Math.max(...date);
     //console.log(dataData);
     var state = {
@@ -211,7 +212,121 @@ class Unable extends React.Component {
     ]);
     //console.log(this.state.oilprice);
 
-    const beneficiariesData = this.state.beneficiariesData.map(([x, y]) => [
+    /*const beneficiariesData = this.state.beneficiariesData.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);*/
+    const musculoskeletal = this.state.musculoskeletal.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const psychiatric = this.state.psychiatric.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const circulatory = this.state.circulatory.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const endocrinologic = this.state.endocrinologic.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const nervous = this.state.nervous.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const injurious = this.state.injurious.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const respiratory = this.state.respiratory.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const sensory = this.state.sensory.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const intellectual = this.state.intellectual.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const infectionparasite = this.state.infectionparasite.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const immunocompromised = this.state.immunocompromised.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const neoplasmic = this.state.neoplasmic.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const onconogenic = this.state.onconogenic.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const digestive = this.state.digestive.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const genitourinary = this.state.genitourinary.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const epidermic = this.state.epidermic.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const prejudicial = this.state.prejudicial.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const other = this.state.other.map(([x, y]) => [
+      ((x - this.state.lowDate) / this.state.xAxis) *
+        0.9 *
+        this.props.lastWidth,
+      ((y - this.state.lowBeneficiaries) / this.state.yAxis) * 150
+    ]);
+    const none = this.state.none.map(([x, y]) => [
       ((x - this.state.lowDate) / this.state.xAxis) *
         0.9 *
         this.props.lastWidth,
@@ -284,7 +399,7 @@ class Unable extends React.Component {
                 style={{
                   width: "5px",
                   height: "5px",
-                  backgroundColor: "deepskyblue"
+                  backgroundColor: "green"
                 }}
               />
               beneficiaries
@@ -313,7 +428,103 @@ class Unable extends React.Component {
                   />
                 )
             )}
-            {beneficiariesData.map(
+            {/*beneficiariesData.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+                )*/}
+            {musculoskeletal.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {psychiatric.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="red"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {circulatory.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {endocrinologic.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {nervous.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {injurious.map(
               ([x, y], i) =>
                 !isNaN(x) &&
                 !isNaN(y) && (
@@ -323,6 +534,198 @@ class Unable extends React.Component {
                     width={2}
                     height={2}
                     stroke="deepskyblue"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {respiratory.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {sensory.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {intellectual.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {infectionparasite.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {immunocompromised.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {neoplasmic.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {onconogenic.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {digestive.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {genitourinary.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {epidermic.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {other.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+            )}
+            {none.map(
+              ([x, y], i) =>
+                !isNaN(x) &&
+                !isNaN(y) && (
+                  <rect
+                    x={x}
+                    y={y}
+                    width={2}
+                    height={2}
+                    stroke="green"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
