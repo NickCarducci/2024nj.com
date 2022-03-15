@@ -312,6 +312,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        "$1b is not enough to start a community in Upstate NY for NYC homeless -
+        don't put innocent people together with mental people; the ivory tower,
+        witches." Rudy Giuliani, "T2t pays mortgage to lift burden of mortgage."
+        <br />
+        <br />
         The right likes prescription fees, closed source vig, immigration fees
         and leases to the treasury.
         <br />
