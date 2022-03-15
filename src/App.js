@@ -314,9 +314,11 @@ export default class App extends React.Component {
         </div>
         state vic trust breaking hypocrisy
         <br />
+        National Benefit Survey{space}
+        <a href="https://goo.gl/maps/sXPpYvt1CKNQBV7z8">2005</a>
+        {space}doesn't even cite{space}
         <a href="https://goo.gl/maps/PhL42fo1WWWT2TSa7">
-          2005 National Benefit Survey doesn't even cite psychiatric
-          scapegoating
+          psychiatric scapegoating
         </a>
         .
         <br />
