@@ -820,6 +820,8 @@ class Wages extends React.Component {
               National Household Income
             </a>
             <br />
+            part time 30hr workweek
+            <br />
             {payOrEmploys ? "$" : !this.state.percapita ? "" : ""}
             {shortNumber(this.state.highDeaths * (payOrEmploys ? 1000 : 100)) +
               (payOrEmploys || !this.state.percapita ? "" : "%")}
