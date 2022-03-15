@@ -313,6 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        force majeure is not only reason why you cannot surrender bids of
+        others, bitch. Talk radio is only appropriate income, albeit all your
+        fucking sponsors are finance
+        <br />
+        <br />
         Funeral costs, are free rider mutable, so funds just raises bids. Known
         hazard guaratee compells fraud like less than expected exces deaths
         classified as unknown pandemic.
