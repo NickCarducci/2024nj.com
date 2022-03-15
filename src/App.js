@@ -312,6 +312,14 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        The right likes prescription fees, closed source vig, immigration fees
+        and leases to the treasury.
+        <br />
+        How does funds for foods help? Just raises bid.
+        <br />
+        Democrats and Republican like leases to the treasury
+        <br />
+        <br />
         (cash/debt)*income is the only way out, reverse amortize, today!
         Surrendered plunderings, Standardized Guarantee Plundering Schemes
         <br />
@@ -357,7 +365,7 @@ export default class App extends React.Component {
         $2.2t/yr levies/tax-receipts + $1.8/yr debt/deficit-spending has worked,
         albeit $2t is all the currency that exists, albeit now checkable
         deposits are income, that which makes the checking non-fungible for
-        dollars, now…
+        dollars, now… venmo+varo=vau.money
         <br />
         <br />
         At a certain point, hours will be so inefficient GDP/hour productivity,
