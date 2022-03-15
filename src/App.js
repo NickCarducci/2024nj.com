@@ -312,6 +312,15 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        state vic trust breaking hypocrisy
+        <br />
+        <a href="https://goo.gl/maps/PhL42fo1WWWT2TSa7">
+          2005 National Benefit Survey doesn't even cite psychiatric
+          scapegoating
+        </a>
+        .
+        <br />
+        <br />
         "$1b is not enough to start a community in Upstate NY for NYC homeless -
         don't put innocent people together with mental people; the ivory tower,
         witches." Rudy Giuliani, "T2t pays mortgage to lift burden of mortgage."
