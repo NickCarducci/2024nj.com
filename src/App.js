@@ -309,6 +309,11 @@ export default class App extends React.Component {
             Plandemic
           </div>
         </div>
+        Directly more comes into
+        <br />
+        Stock market and dollar collapses if dollar collapses
+        <br />
+        <br />
         USPTO Commerce{space}
         <a href="https://qr.ae/pGLwJp">science rents</a>
         {space}state vics
@@ -1003,7 +1008,8 @@ export default class App extends React.Component {
         <br />
         <br />
         energy security, not trading, is national security, says the liberty
-        loving latino
+        loving latino. Only pay for what you need, name your price, ask priced
+        by liabilities, false/surrendered bid pools
         <h4>
           illegal aliens are productive, Chris Salcedo wishes for the treasury
           to gain fees
