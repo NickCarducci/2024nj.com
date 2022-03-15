@@ -25,6 +25,7 @@ import Salaries from "./salaries";
 import GDP from "./gdp";
 import SSA from "./ssa";
 import NetToGDP from "./net";
+import Unable from "./unable";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -312,10 +313,22 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Funeral costs, are free rider mutable, so funds just raises bids. Known
+        hazard guaratee compells fraud like less than expected exces deaths
+        classified as unknown pandemic.
+        <br />
+        <br />
         I'll turn the gun on you if you conscript me or execute excalations
         beyond reciprocation, lest for plundered surrenderings
         <br />
         <br />
+        <Unable
+          lastWidth={Math.min(600, this.state.lastWidth)}
+          style={{
+            paddingBottom: "15px",
+            backgroundColor: "rgb(190,150,180)"
+          }}
+        />
         state vic trust breaking hypocrisy
         <br />
         National Benefit Survey{space}
