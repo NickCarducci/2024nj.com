@@ -21,7 +21,7 @@ import {
   setDoc,
   increment
 } from "firebase/firestore";
-import Wages from "./wages";
+import Salaries from "./salaries";
 import GDP from "./gdp";
 import SSA from "./ssa";
 import NetToGDP from "./net";
@@ -309,6 +309,12 @@ export default class App extends React.Component {
             Plandemic
           </div>
         </div>
+        <h4>Ned Price: “Credible War Crimes”</h4>
+        Bob Sellers: “Men are forced to fight for their country,” meaning taxes,
+        which is not plundered in geospatial warfare, so there is no reason for
+        it
+        <br />
+        <br />
         Directly more comes into
         <br />
         Stock market and dollar collapses if dollar collapses
@@ -2001,6 +2007,36 @@ export default class App extends React.Component {
         surrendering bid or outrights, alone
         <br />
         <br />
+        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
+        (2020–present)
+        <br />
+        "Can a government reasonably run a never-ending deficit?"
+        <br />
+        Reasonably is a legal adverb, that of which is beyond the scope of
+        oxymoronic unequal equal bond-tax Article 1.8 (U.S., constitutionally)
+        Tranquil and voluntary trade, trust-breaking hypocrisy for:
+        <br />
+        <br />
+        free rider mutable, debt spending, state non-tortious victimization or
+        closed source vig,
+        <br />
+        <br />
+        let alone by contract law: to surrender third party donee beneficiary
+        and foreseeable force majeure (borrower defense).
+        <br />
+        <br />
+        For the U.S., 10% debt service and 38% Standardized Guarantee Schemes of
+        $2.2t/yr levies/tax-receipts + $1.8/yr debt/deficit-spending has worked,
+        albeit $2t is all the currency that exists, albeit now checkable
+        deposits are income, that which makes the checking non-fungible for
+        dollars, now…
+        <br />
+        <br />
+        At a certain point, hours will be so inefficient GDP/hour productivity,
+        salaries may need to be fabricated to keep laborless-demand from
+        starving, once they start.
+        <br />
+        <br />
         oil prices skyrocketing because of leases
         <br />
         Orthopedic surgeon forced medication and castration, RiverviewMedCtr,
@@ -2554,7 +2590,7 @@ export default class App extends React.Component {
         by GDP/p 0%/yr+ amidst 3%/yr+ population, 1800–1913). This is a global
         trend, extrapolating from GDP/p growth, globally, yet I have not charted
         to confirm the same is for employment by age.
-        <Wages
+        <Salaries
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
             paddingBottom: "15px",
