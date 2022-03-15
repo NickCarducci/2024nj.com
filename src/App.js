@@ -308,8 +308,51 @@ export default class App extends React.Component {
           <div id="plandemic" onClick={goTo} style={navitem}>
             Plandemic
           </div>
+          <a href="https://commie.dev" style={navitem}>
+            commie.dev
+          </a>
         </div>
-        <h4>Ned Price: “Credible War Crimes”</h4>
+        <h4>
+          third party donee beneficiary squeezel trade is not a subsidy, if
+          margins are of labor. sprints with material and variable-part labor.
+        </h4>
+        Efficient, undercut competition by input costs, of bidding and not
+        surrendering bid or outrights, alone
+        <br />
+        <br />
+        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
+        (2020–present)
+        <br />
+        "Can a government reasonably run a never-ending deficit?"
+        <br />
+        Reasonably is a legal adverb, that of which is beyond the scope of
+        oxymoronic unequal equal bond-tax Article 1.8 (U.S., constitutionally)
+        Tranquil and voluntary trade, trust-breaking hypocrisy for:
+        <br />
+        <br />
+        free rider mutable, debt spending, state non-tortious victimization or
+        closed source vig,
+        <br />
+        <br />
+        let alone by contract law: to surrender third party donee beneficiary
+        and foreseeable force majeure (borrower defense).
+        <br />
+        <br />
+        For the U.S., 10% debt service and 38% Standardized Guarantee Schemes of
+        $2.2t/yr levies/tax-receipts + $1.8/yr debt/deficit-spending has worked,
+        albeit $2t is all the currency that exists, albeit now checkable
+        deposits are income, that which makes the checking non-fungible for
+        dollars, now…
+        <br />
+        <br />
+        At a certain point, hours will be so inefficient GDP/hour productivity,
+        salaries may need to be fabricated to keep laborless-demand from
+        starving, once they start.
+        <h4>
+          Ned Price: “Credible War Crimes,” like paying yourself? Only because
+          you are of free rider immutable scope does subsidy make for 0y/1x
+          1/hour-GDP/p. GDP/hour is COUNTERproductivity
+        </h4>
         Bob Sellers: “Men are forced to fight for their country,” meaning taxes,
         which is not plundered in geospatial warfare, so there is no reason for
         it
@@ -2003,38 +2046,6 @@ export default class App extends React.Component {
           <br />
           trust-breaking
         </h3>
-        Efficient, undercut competition by input costs, of bidding and not
-        surrendering bid or outrights, alone
-        <br />
-        <br />
-        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
-        (2020–present)
-        <br />
-        "Can a government reasonably run a never-ending deficit?"
-        <br />
-        Reasonably is a legal adverb, that of which is beyond the scope of
-        oxymoronic unequal equal bond-tax Article 1.8 (U.S., constitutionally)
-        Tranquil and voluntary trade, trust-breaking hypocrisy for:
-        <br />
-        <br />
-        free rider mutable, debt spending, state non-tortious victimization or
-        closed source vig,
-        <br />
-        <br />
-        let alone by contract law: to surrender third party donee beneficiary
-        and foreseeable force majeure (borrower defense).
-        <br />
-        <br />
-        For the U.S., 10% debt service and 38% Standardized Guarantee Schemes of
-        $2.2t/yr levies/tax-receipts + $1.8/yr debt/deficit-spending has worked,
-        albeit $2t is all the currency that exists, albeit now checkable
-        deposits are income, that which makes the checking non-fungible for
-        dollars, now…
-        <br />
-        <br />
-        At a certain point, hours will be so inefficient GDP/hour productivity,
-        salaries may need to be fabricated to keep laborless-demand from
-        starving, once they start.
         <br />
         <br />
         oil prices skyrocketing because of leases
