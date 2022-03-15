@@ -336,11 +336,13 @@ export default class App extends React.Component {
         found it outside, predicted it would; do it then
         <br />
         <br />
-        Why is Bill O’Reilly ok with shooting, 14k dead, 17 wounded until
-        “chemical” bacteria anthrax, smallpox is coincidence. Can’t have
-        bivariate true hypothesis two-cause artifact, let alone asymptomatic
-        testing has proven it isn’t even correlated, 1% die , 50% common cold
-        normally. "Find out whther it is deadly or not," Dr. Rand Paul.
+        Forcing people to fight is a war crime, not allowing them to leave and
+        surrendering their freedoms. Why is Bill O’Reilly ok with shooting, 14k
+        dead, 17 wounded until “chemical” bacteria anthrax, smallpox is
+        coincidence. Can’t have bivariate true hypothesis two-cause artifact,
+        let alone asymptomatic testing has proven it isn’t even correlated, 1%
+        die , 50% common cold normally. "Find out whther it is deadly or not,"
+        Dr. Rand Paul.
         <br />
         <br />
         Free oil, over currency dead body! Platform royalty and sign off, today!
