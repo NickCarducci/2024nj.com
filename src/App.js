@@ -312,10 +312,21 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        (cash/debt)*income is the only way out, reverse amortize, today!
+        Surrendered plunderings, Standardized Guarantee Plundering Schemes
+        <br />
+        <br />
         Guarantee rollover standardized scheme; I have government at 1/3 debt;
         1/9 inflation considering false bid pools and implausible use leases.
         GDP is a rated-velocity of m2 collateralized neighborhood and brands,
         non-concurrentable of course
+        <br />
+        <br />
+        leases and rig rates, we can build a platform for dollar owners to sign
+        off on drilling and royalty, dollars are shares of UT NM WY - yet{space}
+        <span style={{ color: "red" }}>
+          checking is no longer fungible for dollars/currency
+        </span>
         <h4>
           third party donee beneficiary squeeze; trade is not a subsidy, if
           margins are of labor. sprints with material and variable-part labor.
@@ -354,11 +365,11 @@ export default class App extends React.Component {
         starving, once they start.
         <h3>Truncated Production Tax 2024nj.com/carducci world peace</h3>
         <h4>
-          Ned Price: “Credible War Crimes,” like paying yourself? Only because
-          you are of free rider immutable scope does subsidy make for 0y/1x
-          1/hour-GDP/p. Regressive free rider immutable sewage (gravity toilets)
-          police and lawuits. Monetary-debits by transaction-fees = no growth/p.
-          GDP/hour is COUNTERproductivity
+          Ned Price: “Credible War Crimes,” like paying yourself; conscription
+          and bond? Only because you are of free rider immutable scope does
+          subsidy make for 0y/1x 1/hour-GDP/p. Regressive free rider immutable
+          sewage (gravity toilets) police and lawuits. Monetary-debits by
+          transaction-fees = no growth/p. GDP/hour is COUNTERproductivity.
         </h4>
         Bob Sellers: “Men are forced to fight for their country,” meaning taxes,
         which is not plundered in geospatial warfare, so there is no reason for
