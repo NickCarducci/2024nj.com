@@ -320,7 +320,8 @@ export default class App extends React.Component {
         <a href="https://goo.gl/maps/PhL42fo1WWWT2TSa7">
           psychiatric scapegoating
         </a>
-        .
+        . Disease of the nervous system disability is 4x multiple sclerosis
+        (16.4% of disabled vs .7%/19%)
         <br />
         <br />
         "$1b is not enough to start a community in Upstate NY for NYC homeless -
