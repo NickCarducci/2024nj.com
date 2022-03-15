@@ -371,9 +371,9 @@ class Unable extends React.Component {
             style={{ color: "grey" }}
             href="https://www.ssa.gov/disabilityresearch/documents/TTW5_4_NBSstats2.pdf"
           >
-            {new Date(this.state.lowDate).getFullYear()}
+            {this.state.lowDate}
             &nbsp;-&nbsp;
-            {new Date(this.state.highDate).getFullYear()}
+            {this.state.highDate}
           </a>
         </div>
         <div
