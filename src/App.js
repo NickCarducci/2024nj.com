@@ -312,6 +312,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        I'll turn the gun on you if you conscript me or execute excalations
+        beyond reciprocation, lest for plundered surrenderings
+        <br />
+        <br />
         state vic trust breaking hypocrisy
         <br />
         National Benefit Survey{space}
