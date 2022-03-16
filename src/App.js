@@ -313,6 +313,9 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        no one is defending currency owners from checkable deposits no longer
+        concurrentable, they can be ran on, like savings, checking. No one
+        except me
         <h4>
           20% would fight for their, "country." Ron Liddle, 20% now healthcare
           general fund false bid pool all-spend
