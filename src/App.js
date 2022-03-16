@@ -313,7 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        <h4>greg kelly is a flammable tool</h4>
+        <h4>
+          greg kelly is a flammable tool; "giving the planes for free is a fa di
+          to compli."
+        </h4>
         charge their currency for Migs by share-split of monetary debits, jerry
         curl, not even leases to treasury
         <h4>
