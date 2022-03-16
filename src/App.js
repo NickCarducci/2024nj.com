@@ -313,12 +313,17 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        "flatten economy," government and structures is stagflation, retard.
+        <br />
         Bipartisan consensus to pay for their weapons instead of we already paid
         contractors, so why don't they share split Ukraine or the currendy
         fungible for it, that which checking no longer is, the Hryvnia? I can
         make a platform for royalty and drilling sign off for currency holders
         that they are subservient to customers, not leases to the treasury from
-        NM WY UT
+        NM WY UT. "bloodthirsty," they are paid, conscripted, and Ukraine has
+        more people than jobs. Russia wants taxes the way to peace is a protocol
+        that hands spoofing geohash/mo power to the people, without per diem
+        incarceration nor operational loss bond profit
         <br />
         <br />
         It is ready, NSF just won't let it happen. "Supply side economics just
