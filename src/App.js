@@ -313,6 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          I'm the smartest person in the world, and you are going to say I
+          hallucinate? you retards call expenses per hour productivity, that is
+          a measure of counterproductivity
+        </h4>
         they have more conscripts than jobs, and a Hryvnia currency, If money is
         the issue, why not share-split their currency? just pay northrup grummen
         themselves, their whole currency fungible for lands can't be more than
