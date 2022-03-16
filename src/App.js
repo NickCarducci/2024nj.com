@@ -313,6 +313,12 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        The old are not disabled, people with OCD are not disabled, I am not
+        disabled on account of my messy hair, I have a hole in my leg, people
+        are in wheelchairs. the system abuses the mad for running a balance of
+        accrual and surrendered labor-demand bid, tortious
+        <br />
+        <br />
         Loren bobart wants to fund Ukraine, why? They are forcing people to
         fight especially when there are more people than jobs?
         <br />
@@ -353,6 +359,24 @@ export default class App extends React.Component {
         . Disease of the nervous system disability is 4x multiple sclerosis
         (16.4% of disabled vs .7%/19%)
         <br />
+        <br />
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout ? "" : "https://www.youtube.com/embed/pJyiPeod3yQ"
+          }
+          float={"left"}
+          title="I interview my grandma on disability fraud and implausible use leases and surrendered bid guarantees https://youtu.be/pJyiPeod3yQ"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Countries can choose as much as an international law can bar, yet
+        conscription and state vic, free rider mutable, debt spending or closed
+        source vig, general fund standardized guarantee is criminal
         <br />
         "$1b is not enough to start a community in Upstate NY for NYC homeless -
         don't put innocent people together with mental people; the ivory tower,
@@ -538,6 +562,7 @@ export default class App extends React.Component {
         young males against their will. We want support and a no-fly-zone to
         come back. Promises made need to be promises kept," not if the promise
         was counterfeit, cunt.
+        <br />
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
