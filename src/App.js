@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          $1b to additional funding of self-dealing government owned enterprise
+          leases to treasury general fund standardized guarantee
+        </h4>
         Poland leasing is not as a per pros than{space}
         <span style={{ color: "red" }}>
           having Ukraine's currency, Hryvnia, share split fungible for lands,
