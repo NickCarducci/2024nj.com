@@ -313,11 +313,30 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        we already paid contractors' material and variable-part labor, for the
+        stuff we turnover
+        <br />
+        so why don't they share split Ukraine, or the currency fungible for it,
+        <br />
+        that which checking no longer is because of the pandemic, the Hryvnia?
+        <br />
+        for labors' leases or margins?
+        <br />
+        if they can't afford it that means our economy isn't as efficient,
+        GDP/hour is Counterproductivity
+        <br />
+        I can make a platform for royalty and drilling sign off
+        <br />
+        for currency holders that they are subservient to customers, not leases
+        to the treasury from NM WY UT
         <h4>
           obviously, the Republicans and Democrats would rather spend us into
           debt than make money on Ukraine's currency, share split
         </h4>
-        "flatten economy," government and structures is stagflation, retard.
+        they are realizing weapons' margins are larger than all of Ukraine, due
+        to labors' borrowings and despondent lendings, let alone absolutely from
+        labor-borne-demand for 0y/1x efficiency, 1/hour-GDP/p. "Flatten
+        economy," government and structures is stagflation, retard.
         <br />
         Bipartisan consensus to pay for their weapons instead of we already paid
         contractors, so why don't they share split Ukraine or the currendy
