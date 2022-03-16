@@ -313,6 +313,19 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        If money is the issue, why not share-split their currency? Checking
+        isn’t even fungible for currency anymore, which is good for UT NM and
+        WY, I can Mae a platform for 11/12 industry consensus of dollar owners,
+        sign off on drilling and royalties, where they are subservient with
+        customers instead of leases to the treasury.
+        <br />
+        <br />
+        Zellinski should stop conscripting their people and pay for as many
+        weapons as they want with their Hryvnia Share split ? We produce it so
+        you can do it without margins and leases. They have more people than
+        things to do and they are conscripting? We can for oil have a platform
+        for royalties and drilling 11/12 dollar owner consensus, so they are
+        subservient to customers instead of leases
         <h4>why are we share-splitting our own currency retard bitch</h4>
         all the right cares about is jobs, but what about efficiency by lower
         expenses per hour?
