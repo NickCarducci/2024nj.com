@@ -313,6 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        "If you give them/turn over missiles, and schematics, that is the same
+        as no-fly-zone." Marsha Blackburn. It is already paid by us, make them
+        share-split their currency, you already force their men to fight
+        <br />
+        <br />
         "Once you reach a size common carrier, two versions," neither are
         rational, you must pay users to discriminate, and desist by court to
         suspend. Threats can notify police, but that is it - and police cannot
