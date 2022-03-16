@@ -313,6 +313,7 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>20% would fight for their, "country"</h4>
         "NWP 12 authorizes the construction, maintenance, repair and removal of
         utility lines and associated facilities{space}
         <a href="https://www.orrick.com/en/Insights/2020/05/Uncertainty-Lingers-During-Appeal-of-Nationwide-Permit-12-Ruling">
@@ -346,7 +347,7 @@ export default class App extends React.Component {
         .
         <h1>
           We can kill you for malfeasance when you can for arrest, faggot wall
-          st
+          st{/**who does need needs hypocrisy coming atcha */}
         </h1>
         <h4>
           "our diversity is secure." why would you nationalize a general fund
