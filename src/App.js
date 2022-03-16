@@ -417,7 +417,7 @@ export default class App extends React.Component {
         Bipartisan consensus to pay for their weapons instead of we already paid
         contractors, so why don't they share split Ukraine or the{space}
         <span style={{ color: "red" }}>
-          currendy fungible for it, that which checking no longer is
+          currency fungible for it, that which checking no longer is
         </span>
         , the Hryvnia? I can make a platform for royalty and drilling sign off
         for currency holders that they are{space}
