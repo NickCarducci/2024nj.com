@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        all the right cares about is jobs, but what about efficiency by lower
+        expenses per hour?
+        <br />
+        <br />
         why would you ever agree to someone spending your money on
         njautolending.com? pay for what you need and moving forward is not what
         happens with a guaranteed bid name any price scheme
@@ -328,7 +332,10 @@ export default class App extends React.Component {
           to a truncated production tax system? and Don't allow Ukraine to join
           NATO mid-fight? Geohash/month report from your pay tech of choice,
           spoonable 3%under$2k can suffice sewage police lawsuits free rider
-          immutable
+          immutable. we can target margin and have no leases, by the way I can
+          make a platform for royalty setting and sign off of dollar fungible UT
+          NM WY, yet now, checking isn't fungible for currency, so I can't even
+          boycott credit at all now. conscription is NOT a country I will defend
         </h4>
         "POTUS is willing to help in 90 days," says Rob Schmitt, how about move
         to a truncated production tax system? and Don't allow Ukraine to join
