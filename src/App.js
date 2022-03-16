@@ -313,6 +313,14 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Bipartisan consensus to pay for their weapons instead of we already paid
+        contractors, so why don't they share split Ukraine or the currendy
+        fungible for it, that which checking no longer is, the Hryvnia? I can
+        make a platform for royalty and drilling sign off for currency holders
+        that they are subservient to customers, not leases to the treasury from
+        NM WY UT
+        <br />
+        <br />
         It is ready, NSF just won't let it happen. "Supply side economics just
         makes sense," anytime supply doesn't equate labor-demand, there is
         dead-weight profit along the 1/hour-GDP/p plane, retard.
