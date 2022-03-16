@@ -316,7 +316,13 @@ export default class App extends React.Component {
         <h4>
           warmonger thune, #hack4congress token; they are scapegoating jobless
           conscripts, all they have is money, why don’t they share-split their
-          Hryvnia?
+          Hryvnia? We set the price (with their currency). Balance of trade is
+          positive if your economy is more efficient by hours not just income
+          thrice expense, which lowers if there is asset equality how about move
+          to a truncated production tax system? and Don't allow Ukraine to join
+          NATO mid-fight? Geohash/month report from your pay tech of choice,
+          spoonable 3%under$2k can suffice sewage police lawsuits free rider
+          immutable
         </h4>
         "POTUS is willing to help in 90 days," says Rob Schmitt, how about move
         to a truncated production tax system? and Don't allow Ukraine to join
