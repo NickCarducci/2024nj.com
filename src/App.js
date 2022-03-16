@@ -313,6 +313,46 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>Human rights charter</h4>All human beings are born free and equal in
+        dignity and rights. For reason of efficiency per hour in
+        labor-borne-demand. Everyone has the right to life, liberty and the
+        security of person. Conscription and surrendered freedom to bid by
+        standardized guaranteed scheme and implausible use lease, or closed
+        source licensure vig.
+        <br />
+        No one shall be subjected to torture or to cruel, inhuman or degrading
+        treatment or punishment. Competing with consumer intent deduced,
+        -tortious, not for state victimization and free rider mutable tax or
+        debt spending.
+        <br />
+        Everyone is entitled in full equality to a fair and public hearing by an
+        independent and impartial tribunal, in the determination of his rights
+        and obligations and of any criminal charge against him. Whistleblowers
+        with standing.
+        <br />
+        Everyone has the right to freedom of movement and residence anywhere in
+        the world, for price discretion, alone, ascertainable by comps.
+        <br />
+        <br />
+        Everyone has the right to leave any country, including his own, and to
+        return to his country.
+        <br />
+        No one has a right to nation-build and prevent commerce.
+        <br />
+        Everyone has a right to education. Education should be dismantled as a
+        money-making scheme, so that ingredient lists are open, to review, and
+        the progression of science is efficient.
+        <br />
+        Everyonehastherightfreelytoparticipateintheculturallifeofthe community,
+        to enjoy the arts and to share in scientific advancement and its
+        benefits.
+        <br />
+        With royalties as an answer is exclusive, all-cause endeavor.
+        <br />
+        “Nothing in this Declaration may be interpreted as implying for any
+        State, group or person any right to engage in any activity or to perform
+        any act aimed at the destruction of any of the rights and freedoms set
+        forth herein. We can be hypocrites.” UN
         <h4>
           "Why doesn’t Ukraine share-split currency instead of just giving them
           the Migs?" Rudy Giuliani clicks, Brian Kilmeade clicks
