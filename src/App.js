@@ -313,6 +313,14 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Loren bobart wants to fund Ukraine, why? They are forcing people to
+        fight especially when there are more people than jobs?
+        <br />
+        <br />
+        “It’s a no brainer choosing car shield, takes a huge paperwork burden
+        off you, lock in your price now, it will never go up.”
+        <br />
+        <br />
         force majeure is not only reason why you cannot surrender bids of
         others, bitch. Talk radio is only appropriate income, albeit all your
         fucking sponsors are finance
@@ -696,6 +704,20 @@ export default class App extends React.Component {
         Post-Millennial. In one ear out the other bitch I don’t know what the
         fuck you’re saying. "Nuclear is safe lest Tsunami!!!!"
         <br />
+        <br />
+        middle class certainly are losing on net , let alone unrealized gains
+        and losses of a balance sheet, generally.{space}
+        <span
+          onClick={() =>
+            this.setState({
+              suggestcharttypeNetToGDP:
+                "lendings of financial-debt certificates"
+            })
+          }
+        >
+          here
+        </span>
+        {space}is unrealized lendings, skew between households not shown
         <br />
         Take in the Ukrainians, instead of our own people, for a ride
         <NetToGDP
