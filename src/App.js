@@ -322,7 +322,11 @@ export default class App extends React.Component {
         , they are being selfish and conscripting instead of matching our input
         costs, which by the way are so high because of labors' leases, we have
         an expensive economy, not because we have net imports actually in
-        weight, quality nor grade
+        weight, quality nor grade, but because of those very leases, higher
+        expenses per hour that which OECD calls productivity, and government and
+        structures is growth without inflation
+        <br />
+        <br /> laborless-demand, lower 1/hour-GDP/p
         <br />
         <br />I can make a platform for currency owners to sign off on drilling
         and royalties instead of these leases to the treasury from UT NM and WY.
@@ -390,7 +394,7 @@ export default class App extends React.Component {
         they are realizing weapons' margins are larger than all of Ukraine, due
         to labors' borrowings and despondent lendings, let alone absolutely from
         labor-borne-demand for 0y/1x efficiency, 1/hour-GDP/p. "Flatten
-        economy," government and structures is stagflation, retard.
+        economy," government and structures is unstagflation, retard.
         <br />
         Bipartisan consensus to pay for their weapons instead of we already paid
         contractors, so why don't they share split Ukraine or the{space}
