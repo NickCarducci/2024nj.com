@@ -511,8 +511,12 @@ export default class App extends React.Component {
         <br />
         If money is the issue, why not share-split their currency? Checking
         isn’t even fungible for currency anymore, which is good for UT NM and
-        WY, I can Mae a platform for 11/12 industry consensus of dollar owners,
-        sign off on drilling and royalties, where they are{space}
+        WY,{space}
+        <span style={{ color: "purple" }}>
+          I can make a platform for 11/12 industry consensus of dollar owners,
+          sign off on drilling and royalties
+        </span>
+        , where they are{space}
         <span style={{ color: "dodgerblue" }}>
           subservient with customers instead of leases to the treasury
         </span>
@@ -522,9 +526,12 @@ export default class App extends React.Component {
         Zellinski should stop conscripting their people and pay for as many
         weapons as they want with their Hryvnia Share split ? We produce it so
         you can do it without margins and leases. They have more people than
-        things to do and they are conscripting? We can for oil have a platform
-        for royalties and drilling 11/12 dollar owner consensus, so they are
-        subservient to customers instead of leases
+        things to do and they are conscripting? We can,{space}
+        <span style={{ color: "purple" }}>
+          for oil, have a platform for royalties and drilling 11/12 dollar owner
+          consensus
+        </span>
+        , so they are subservient to customers instead of leases
         <h4>why are we share-splitting our own currency retard bitch</h4>
         all the right cares about is jobs, but what about efficiency by lower
         expenses per hour?
@@ -545,9 +552,14 @@ export default class App extends React.Component {
           to a truncated production tax system? and Don't allow Ukraine to join
           NATO mid-fight? Geohash/month report from your pay tech of choice,
           spoonable 3%under$2k can suffice sewage police lawsuits free rider
-          immutable. we can target margin and have no leases, by the way I can
-          make a platform for royalty setting and sign off of dollar fungible UT
-          NM WY,{space}
+          immutable. we can{space}
+          <span style={{ color: "purple" }}>
+            target margin operational monopsony (spectrum bridge Motor Vehicle
+            ID NFC pipeline marketplace paid user discriminate and whistleblower
+            inclusive juror assist)
+          </span>
+          {space}and have no leases, by the way I can make a platform for
+          royalty setting and sign off of dollar fungible UT NM WY,{space}
           <span style={{ color: "red" }}>
             yet now, checking isn't fungible for currency
           </span>
@@ -905,11 +917,13 @@ export default class App extends React.Component {
         progressive (flat).
         <br />
         <br />
-        Putin wants to tax, so provide alternative: geohash/mo precinct
-        spoofable truncated production tax, free rider immutables sewage
-        (gravity toilet), police, lawsuits. Motor Vehicle NFC bridge-toll
-        widgets, target margin operational monopsonies (spectrum/pipelines),
-        platform for royalty and sign off lease-free-permits
+        <span style={{ color: "purple" }}>
+          Putin wants to tax, so provide alternative: geohash/mo precinct
+          spoofable truncated production tax, free rider immutables sewage
+          (gravity toilet), police, lawsuits. Motor Vehicle NFC bridge-toll
+          widgets, target margin operational monopsonies (spectrum/pipelines),
+          platform for royalty and sign off lease-free-permits
+        </span>
         <br />
         <br />
         Progressives vs Occupy: global ubi or bust, investment bank leases for
