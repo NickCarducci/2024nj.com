@@ -313,6 +313,8 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        charge their currency for Migs by share-split of monetary debits, jerry
+        curl, not even leases to treasury
         <h4>
           "ukrainians are doing their darndest, lets let them do more, send them
           our inventory to steal from dollar fungible inventory."
