@@ -313,6 +313,16 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        18m/800k is nothing, and imports equate exports, washing because our
+        labor-costs are all leases of implausible use, standardized guarantee
+        schemes, general fund self-dealing, closed source licensure vig and
+        loitering surrendered freedoms, and other forms of laborless-demand.
+        <br />
+        <br />
+        Fallen angels are appealing or else why, it is a test of policy or
+        execution of an unwanted real-policy
+        <br />
+        {/**Sun Zu you must let your combatant a way out */}
         putin wants to have geographically and russia as a state vig, we all
         want our own closed source licensure state vig hey bud do you want to
         talk?
