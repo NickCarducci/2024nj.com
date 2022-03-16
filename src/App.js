@@ -313,6 +313,7 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>why are we share-splitting our own currency retard bitch</h4>
         all the right cares about is jobs, but what about efficiency by lower
         expenses per hour?
         <br />
