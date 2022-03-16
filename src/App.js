@@ -313,7 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        <h4>warmonger thune, #hack4congress token</h4>
+        <h4>
+          warmonger thune, #hack4congress token; they are scapegoating jobless
+          conscripts, all they have is money, why don’t they share-split their
+          Hryvnia?
+        </h4>
         "POTUS is willing to help in 90 days," says Rob Schmitt, how about move
         to a truncated production tax system? and Don't allow Ukraine to join
         NATO mid-fight?
