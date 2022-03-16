@@ -313,6 +313,7 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        conscription beyond utility of jobs is NOT a country I will defend
         <h4>
           warmonger thune, #hack4congress token; they are scapegoating jobless
           conscripts, all they have is money, why don’t they share-split their
