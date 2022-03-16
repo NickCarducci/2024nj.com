@@ -313,6 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        why would you ever agree to someone spending your money on
+        njautolending.com? pay for what you need and moving forward is not what
+        happens with a guaranteed bid name any price scheme
+        <br />
+        <br />
         conscription beyond utility of jobs is NOT a country I will defend
         <h4>
           warmonger thune, #hack4congress token; they are scapegoating jobless
