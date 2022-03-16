@@ -319,12 +319,20 @@ export default class App extends React.Component {
         conscripting instead of matching our input costs, which by the way are
         so high because of labors' leases, we have an expensive economy, not
         because we have net imports actually in weight, quality nor grade
+        <br />
         <br />I can make a platform for currency owners to sign off on drilling
         and royalties instead of these leases to the treasury from UT NM and WY.
         truncated production tax is the incentive for Putin, and his people, war
         bonds, an obvious war crime beyond conscriptions, you don't need the UN
         to define a conflict of interest. these same people say expenses per
         hour is productivity.
+        <br />
+        <br />
+        “American tax payer money,” can a government reasonably run a
+        never-ending deficit? Short answer is yes, especially when there is only
+        $2t currency and $1.8t/yr loaned, there is no limit apparently. front
+        running groceries is pure harm, bond profit operational loss conflict of
+        interest.
         <h4>
           Brian Kilmeade will not entertain to his conservative audience the
           idea to force Ukraine to share-split for our inventory, just like he
