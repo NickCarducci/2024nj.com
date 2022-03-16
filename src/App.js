@@ -313,6 +313,7 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        {/**Irving fake vax not a fed offense */}
         18m/800k is nothing, and imports equate exports, washing because our
         labor-costs are all leases of implausible use, standardized guarantee
         schemes, general fund self-dealing, closed source licensure vig and
@@ -331,7 +332,7 @@ export default class App extends React.Component {
           <span style={{ color: "purple" }}>
             planes for free (they aren't even savers in USD, as a people)
           </span>
-          {space}is a fa di to compli."
+          {space}is a fa di to compli. fake vax not a fed offense"
         </h4>
         charge their currency for Migs by share-split of monetary debits, jerry
         curl, not even leases to treasury
