@@ -313,6 +313,12 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        "NWP 12 authorizes the construction, maintenance, repair and removal of
+        utility lines and associated facilities{space}
+        <a href="https://www.orrick.com/en/Insights/2020/05/Uncertainty-Lingers-During-Appeal-of-Nationwide-Permit-12-Ruling">
+          if the loss of wetlands is no more than ½ acre for each
+        </a>
+        {space}single and complete project."
         <h4>
           people are dying to drive prices up, even if they actually aren't
         </h4>
@@ -348,7 +354,7 @@ export default class App extends React.Component {
           having malfeasance
         </h4>
         Mortgage Bribe: "Kristie nohm, can you educate the public because I
-        think the media are it is cheaer and safer than road or rail, $5
+        think the media are it is cheaper and safer than road or rail, $5
         cheaper, half. "people have less money and that means everything is
         costing more. The boxes get checked with this Keystone pipeline."
         <br />
