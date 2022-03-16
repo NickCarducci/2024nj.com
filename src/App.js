@@ -313,6 +313,9 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        It is ready, NSF just won't let it happen.
+        <br />
+        <br />
         "If you give them/turn over missiles, and schematics, that is the same
         as no-fly-zone." Marsha Blackburn. It is already paid by us, make them
         share-split their currency, you already force their men to fight
