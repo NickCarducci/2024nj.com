@@ -313,6 +313,8 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Short answer is yes, especially when there is only $2t currency and
+        $1.8t/yr loaned, there is no limit apparently.
         <h4>Human rights charter</h4>All human beings are born free and equal in
         dignity and rights. For reason of efficiency per hour in
         labor-borne-demand. Everyone has the right to life, liberty and the
