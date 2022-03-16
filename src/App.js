@@ -313,6 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        GDP by people is not a thing to be scared of, who would fight for
+        share-split except for conscription, that which both sides finance and
+        force. They are being selfish, we can charge Ukraine for defense
+        weaponry, do not shelve our inventory. it is not dragging our feet. Ron
+        Johnson I will deskin you
         <h4>
           Dick Morris: "Currency as a checkable deposit nonconcurrentable is NOT
           a future."
@@ -323,7 +328,10 @@ export default class App extends React.Component {
         <br />
         Traitor Dick Morris: "you know it is $129m/day due, rubles is nothing,"
         that doesn't make Russia broke. Your debts are Savers' money,{space}
-        <a href="https://qr.ae/pGLa3i">
+        <a
+          href="https://qr.ae/pGLa3i"
+          style={{ backgroundColor: "rgba(200,200,230,.7)" }}
+        >
           your money is accrued foreseeable force majeure and third party donee
         </a>
         .
