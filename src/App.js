@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        anytime you delay a payment you are surrendering the bid of another,
+        that is not "your budget." Raymore and Flannigan. Stay in your lane
+        <br />
+        <br />
         no one is defending currency owners from checkable deposits no longer
         concurrentable, they can be ran on, like savings, checking. No one
         except me
