@@ -313,6 +313,24 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          Brian Kilmeade will not entertain to his conservative audience the
+          idea to force Ukraine to share-split for our inventory, just like he
+          wouldn't mention corporate and mortgage debt, 2/3 total and 2/9
+          inflationary laborless-demand (surrendered bid of third party donee)
+        </h4>
+        target margin operational monopsonies but free rider mutable pipelines,
+        bridges and spectrum
+        <br />
+        government scope imo given Motor Vehicle ID NFC for tolls, sewage for
+        gravity toilets, police and lawsuits,
+        <br />
+        truncated productiontax world peace
+        <br />
+        money without natural demand is 1y/0x elastic for less 1/hour-GDP/p
+        efficiency
+        <br />
+        <br />
         we already paid contractors' material and variable-part labor, for the
         stuff we turnover
         <br />
@@ -331,7 +349,12 @@ export default class App extends React.Component {
         to the treasury from NM WY UT
         <h4>
           obviously, the Republicans and Democrats would rather spend us into
-          debt than make money on Ukraine's currency, share split
+          debt than make money on Ukraine's currency, share split fungible for
+          lands, and yet checking no longer is fungible for that because of the
+          pandemic, so I cannot actually boycott credit anymore as a ticket
+          seller, even making my own transaction-fee-islamic-bank. I can make a
+          platform for currency owners to sign off on drilling and royalties
+          instead of these leases to the treasury from UT NM and WY.
         </h4>
         they are realizing weapons' margins are larger than all of Ukraine, due
         to labors' borrowings and despondent lendings, let alone absolutely from
@@ -2709,6 +2732,197 @@ export default class App extends React.Component {
         </a>
         <br />
         Hospitalizations and vaccine per capita correlate positively. Maybe just
+        behavioral correlation, not causation - when using{space}
+        <a href="https://www.cdc.gov/flu/weekly/overview.htm#:~:text=5.%20Mortality%20Surveillance">
+          all-cause
+        </a>
+        {space}PIC. Alzheimer’s is caused by sewage.
+        <br />
+        Financial-userers, lenders landlords and insurers are surrendering
+        donee-beneficiaries outright and bid. Leases={">"}$oil
+        <br />
+        We are asymptomatically testing for the first time, proving it isn’t
+        correlated. 1% die, 50% sniffle
+        <br />
+        Non-exclusive byproduct or not even correlated when testing asymptomatic
+        ally don’t send doctor to do econometrist job
+        <h4>
+          the right of contract; liable for diligence in surrendered freedoms by
+          bid, or outright
+        </h4>
+        <hr />
+        Nick Carducci - CEO & Founder at Thumbprint.us - Social Calendar
+        (2012–present)
+        <br />
+        "Which economic system works best?"
+        <br />
+        1/12 industry-vertical against horizontal merger, regulations; the
+        lovely monopsony and skills-trading economists.
+        <br />
+        <br />
+        We are always impacting, elsewise self-harm; imputable favors,
+        scientific contribution, even copy.
+        <br />
+        <br />
+        Open ingredient lists, NFC Motor Vehicle ween cops off bonds spoofable
+        precinct 3% under $2k truncated production tax, reverse amortize
+        govrent%/outlays and (cash/debt)*income just the same, allow
+        whistleblowers on such 11/12 minimal viable product GENERAL MAINTENANCE
+        UNIT, duress, moot and without permission, and 1/12 as
+        like-“collateral,” to provide partners with security in
+        non-general-income max-royalty, to replace future potential debt
+        arrangements, thereafter.
+        <hr />
+        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
+        (2020–present)
+        <br />
+        "What industries only exist because of economic inequality?"
+        <br />
+        Insurers, lenders and landlords imbue enumerable and able to reverse
+        amortize, loss, by,
+        <br />
+        <br />
+        &bull;{space}implausible use leases,
+        <br />
+        &bull;{space}false bid pool loss,
+        <br />
+        &bull;{space}lenders loitering,
+        <br />
+        all of which are technically illegal for surrendering others’ freedoms,
+        like counterfeit in contract, liable of the contractor, that is the
+        buyer, of a scope of work, or with currency.
+        <br />
+        <br />
+        <div
+          style={{
+            borderLeft: "3px solid",
+            paddingLeft: "5px"
+          }}
+        >
+          If the estimates are higher than the original contract price, the
+          homeowner may seek the difference as an ascertainable loss.
+        </div>
+        <br />
+        should not be tortious. Known hazards. Consumer fraud, known hazard,
+        force majeure - the difference is intent, let alone donee beneficiary
+        (others' standing-grounds).
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/c9e74wex0s58qx4/old%20people%20work.jpeg?dl=0"
+          }
+          float={null}
+          title="https://fred.stlouisfed.org/graph/?g=MDZy"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/234613ckwgiez3i/ssa%20general%20fund.jpeg?dl=0"
+          }
+          float={null}
+          title="SSA trust fund balance geronimo 2020- $2t"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <a href="https://analsolutions.net">
+          blind trust over currency policy-making (SSAMedicareTax%/outlays
+          capital loss deflation)
+        </a>
+        <br />
+        put country ahead of government, corporation and mortgage. 50 average
+        age small business. restoring Salt will put money back into pockets of
+        labor, where it belongs. Actually, I'm on the other edge, the
+        bottom-bottom line, sprints are 1/2 material-labor
+        <h4>
+          Youth are short of work by income, but not hours; the{space}
+          <a href="https://fred.stlouisfed.org/graph/?g=MF0d">
+            rising costs of healthcare
+          </a>
+          , not for tech relenting, alone
+        </h4>
+        <a href="https://fred.stlouisfed.org/graph/?g=MDZy">
+          We work more than ever
+        </a>
+        , and not because of population growth (but because of finance, evident
+        by GDP/p 0%/yr+ amidst 3%/yr+ population, 1800–1913). This is a global
+        trend, extrapolating from GDP/p growth, globally, yet I have not charted
+        to confirm the same is for employment by age.
+        <Salaries
+          lastWidth={Math.min(600, this.state.lastWidth)}
+          style={{
+            paddingBottom: "15px",
+            backgroundColor: "rgb(190,150,180)"
+          }}
+        />
+        Here, we see retirement age used the pandemic to not come back to work;
+        albeit work is an artifact of tech deprecation,{space}
+        <a href="https://fred.stlouisfed.org/graph/?g=MISp">1/hour-GDP/p</a>
+        . The U.S. accounts 19% of its population as disabled, including being
+        mad and old, to profit by bonds’ operational loss and investment bank
+        funded welfare, “general revenue,” trust-breaking-hypocrisy.
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/7c9d2y2of1elpol/Screen%20Shot%202022-03-08%20at%2010.41.04%20AM.png?dl=0"
+          }
+          float={"right"}
+          title="gold stocks homes autos"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        why would you believe governments that say expected deaths are famines?
+        and People only live longer by proper sewage (cross-ref India-U.S.).
+        They make money just building and blowing up fireworks that they{space}
+        <a href="https://qr.ae/pGdaNd">debt spend and tax for</a>. Profits are
+        only made by subjugating labor-demand.
+        <h4>scapegoating duress beyond minimal viable product</h4>
+        Trust-breaking/building hypocrisy; investment bank funded welfare;
+        <br />
+        <br />
+        Tort known hazards no evidence by comparable isolate non-price
+        discrimination, not exclusively chat, for Tranquil and voluntary-trade,
+        whistleblower on jury without state vig nor false bid pool, implausible
+        use lease, not loitering lender surrendered outrights.
+        <a
+          style={{
+            shapeOutside: "rect()",
+            float: "right",
+            maxWidth: "100%",
+            padding: "0px 10px",
+            //fontSize: "20px",
+            fontFamily: "'Pacifico', sans-serif"
+            //color: "rgb(230,230,255)"
+            //backgroundColor: "rgb(32, 22, 11)"
+          }}
+          href="https://gmunit.us"
+        >
+          gmunit.us
+        </a>
+      </div>
+    );
+  }
+}
+
         behavioral correlation, not causation - when using{space}
         <a href="https://www.cdc.gov/flu/weekly/overview.htm#:~:text=5.%20Mortality%20Surveillance">
           all-cause
