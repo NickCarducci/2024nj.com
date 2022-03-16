@@ -326,8 +326,11 @@ export default class App extends React.Component {
         charge their currency for Migs by share-split of monetary debits, jerry
         curl, not even leases to treasury
         <h4>
-          "ukrainians are doing their darndest, lets let them do more, send them
-          our inventory to steal from dollar fungible inventory."
+          "ukrainians are doing their darndest, lets let them do more,{space}
+          <span style={{ color: "purple" }}>
+            send them our inventory to steal from dollar fungible inventory
+          </span>
+          ."
         </h4>
         .25 6 more relenting of quantitative tightening to incentivize less debt
         spending by mortgage, treasury and corporates.
@@ -352,10 +355,13 @@ export default class App extends React.Component {
         <br />
         <br />I can make a platform for currency owners to sign off on drilling
         and royalties instead of these leases to the treasury from UT NM and WY.
-        truncated production tax is the incentive for Putin, and his people, war
-        bonds, an obvious war crime beyond conscriptions, you don't need the UN
-        to define a conflict of interest. these same people say expenses per
-        hour is productivity.
+        {space}
+        <span style={{ color: "purple" }}>
+          truncated production tax is the incentive for Putin, and his people,
+          war bonds, an obvious war crime beyond conscriptions
+        </span>
+        , you don't need the UN to define a conflict of interest. these same
+        people say expenses per hour is productivity.
         <br />
         <br />
         “American tax payer money,” can a government reasonably run a
@@ -433,9 +439,11 @@ export default class App extends React.Component {
           subservient to customers, not leases to the treasury from NM WY UT
         </span>
         . "bloodthirsty," they are paid, conscripted, and Ukraine has more
-        people than jobs. Russia wants taxes the way to peace is a protocol that
-        hands spoofing geohash/mo power to the people, without per diem
-        incarceration nor operational loss bond profit
+        people than jobs. Russia wants taxes; the way to peace is a{space}
+        <span style={{ color: "purple" }}>
+          protocol that hands spoofing geohash/mo power to the people, without
+          per diem incarceration nor operational loss bond profit
+        </span>
         <br />
         <br />
         It is ready, NSF just won't let it happen. "Supply side economics just
