@@ -313,6 +313,12 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        they have more conscripts than jobs, and a Hryvnia currency, If money is
+        the issue, why not share-split their currency? just pay northrup grummen
+        themselves, their whole currency fungible for lands can't be more than
+        what they need.
+        <br />
+        <br />
         If money is the issue, why not share-split their currency? Checking
         isn’t even fungible for currency anymore, which is good for UT NM and
         WY, I can Mae a platform for 11/12 industry consensus of dollar owners,
