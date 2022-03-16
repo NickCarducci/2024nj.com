@@ -313,6 +313,13 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        copyrights are forever, the only constraint is if it is an exclusive
+        endeavor
+        <br />
+        <br />
+        Traitor Dick Morris: "you know it is $129m/day due, rubles is nothing,"
+        that doesn't make Russia broke. Your debts are Savers' money, your money
+        is accrued foreseeable force majeure and third party donee.
         <h4>
           "our diversity is secure." why would you nationalize a general fund
           standardized guaranteed scheme? We can kill you for stealing and
@@ -671,6 +678,10 @@ export default class App extends React.Component {
         <br />
         I'll turn the gun on you if you conscript me or execute excalations
         beyond reciprocation, lest for plundered surrenderings
+        <br />
+        <br />
+        “To understand why Russia is attacking would take a psychiatrist.” Dick
+        Morris
         <br />
         <br />
         nervous system (16%) and injured (7%)
