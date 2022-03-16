@@ -313,6 +313,9 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          people are dying to drive prices up, even if they actually aren't
+        </h4>
         GDP by people is not a thing to be scared of, who would fight for
         share-split except for conscription, that which both sides finance and
         force. They are being selfish, we can charge Ukraine for defense
