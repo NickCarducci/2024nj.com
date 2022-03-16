@@ -313,7 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        <h4>20% would fight for their, "country"</h4>
+        <h4>
+          20% would fight for their, "country." Ron Liddle, 20% now healthcare
+          general fund false bid pool all-spend
+        </h4>
         "NWP 12 authorizes the construction, maintenance, repair and removal of
         utility lines and associated facilities{space}
         <a href="https://www.orrick.com/en/Insights/2020/05/Uncertainty-Lingers-During-Appeal-of-Nationwide-Permit-12-Ruling">
