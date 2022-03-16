@@ -313,7 +313,9 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        It is ready, NSF just won't let it happen.
+        It is ready, NSF just won't let it happen. "Supply side economics just
+        makes sense," anytime supply doesn't equate labor-demand, there is
+        dead-weight profit along the 1/hour-GDP/p plane, retard.
         <br />
         <br />
         "If you give them/turn over missiles, and schematics, that is the same
