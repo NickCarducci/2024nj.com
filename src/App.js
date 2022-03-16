@@ -345,6 +345,18 @@ export default class App extends React.Component {
         money-making scheme, so that ingredient lists are open, to review, and
         the progression of science is efficient.
         <br />
+        Any funding towards it is 1y/0x elastic for essentials of education,
+        being ingredient list and tutors as explicit variable-part.
+        <br />
+        <div style={{ backgroundColor: "rgba(230, 200,220,.7)" }}>
+          Livelihood and if it matters, principles.
+          <br />
+          Minimal viable product false bid pool standardized guarantee scheme.
+          <br />
+          Scale and skew, how many are above the threshold, by rate per
+          population
+        </div>
+        <br />
         Everyonehastherightfreelytoparticipateintheculturallifeofthe community,
         to enjoy the arts and to share in scientific advancement and its
         benefits.
