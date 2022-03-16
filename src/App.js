@@ -316,8 +316,8 @@ export default class App extends React.Component {
         .25 6 more relenting of quantitative tightening to incentivize less debt
         spending by mortgage, treasury and corporates.
         <h4>
-          $1b to additional funding of self-dealing government owned enterprise
-          leases to treasury general fund standardized guarantee
+          $6.5b to additional funding of self-dealing government owned
+          enterprise leases to treasury general fund standardized guarantee
         </h4>
         Poland leasing is not as a per pros than{space}
         <span style={{ color: "red" }}>
@@ -383,8 +383,9 @@ export default class App extends React.Component {
         <br />
         I can make a platform for royalty and drilling sign off
         <br />
-        for currency holders that they are subservient to customers, not leases
-        to the treasury from NM WY UT
+        for currency holders that they are{space}
+        <span style={{ color: "dodgerblue" }}>subservient to customers</span>,
+        not leases to the treasury from NM WY UT
         <h4>
           obviously, the Republicans and Democrats would rather spend us into
           debt than make money on Ukraine's{space}
@@ -408,12 +409,14 @@ export default class App extends React.Component {
           currendy fungible for it, that which checking no longer is
         </span>
         , the Hryvnia? I can make a platform for royalty and drilling sign off
-        for currency holders that they are subservient to customers, not leases
-        to the treasury from NM WY UT. "bloodthirsty," they are paid,
-        conscripted, and Ukraine has more people than jobs. Russia wants taxes
-        the way to peace is a protocol that hands spoofing geohash/mo power to
-        the people, without per diem incarceration nor operational loss bond
-        profit
+        for currency holders that they are{space}
+        <span style={{ color: "dodgerblue" }}>
+          subservient to customers, not leases to the treasury from NM WY UT
+        </span>
+        . "bloodthirsty," they are paid, conscripted, and Ukraine has more
+        people than jobs. Russia wants taxes the way to peace is a protocol that
+        hands spoofing geohash/mo power to the people, without per diem
+        incarceration nor operational loss bond profit
         <br />
         <br />
         It is ready, NSF just won't let it happen. "Supply side economics just
@@ -465,8 +468,11 @@ export default class App extends React.Component {
         If money is the issue, why not share-split their currency? Checking
         isn’t even fungible for currency anymore, which is good for UT NM and
         WY, I can Mae a platform for 11/12 industry consensus of dollar owners,
-        sign off on drilling and royalties, where they are subservient with
-        customers instead of leases to the treasury.
+        sign off on drilling and royalties, where they are{space}
+        <span style={{ color: "dodgerblue" }}>
+          subservient with customers instead of leases to the treasury
+        </span>
+        .
         <br />
         <br />
         Zellinski should stop conscripting their people and pay for as many
@@ -1027,8 +1033,11 @@ export default class App extends React.Component {
         1y/0x elastic.
         <br />
         <br />
-        Royalties instead of leases for then prices are subservient to competing
-        FOR labor-demand. 1/12 industry-vertical line as max-royalty
+        Royalties instead of leases{space}
+        <span style={{ color: "dodgerblue" }}>
+          for then prices are subservient to competing FOR
+        </span>
+        {space}labor-demand. 1/12 industry-vertical line as max-royalty
         "collateral" after deflating capital loss (cash/debt)*income every year
         back, appreciate Savers' UT NM WY. Pipelines are reasury gains, why?
         Just let dollar fungible state-lands (20% of U.S.) sign off drilling and
@@ -1414,9 +1423,13 @@ export default class App extends React.Component {
         <br />
         Why wouldn’t we just truncated production tax? Putin/Zelinski/U.S. just
         wants to spend money (principal-bond loss profit). Why wouldn’t you
-        provide the schematics for $40k nightvision goggles instead of charge
-        the people by the lease ask-price you set, unsubservient to labor-demand
-        bid-capacity.
+        {space}
+        <span style={{ color: "dodgerblue" }}>
+          provide the schematics for $40k nightvision goggles instead of charge
+          the people by the lease ask-price you set, unsubservient to
+          labor-demand bid-capacity
+        </span>
+        .
         <br />
         <br />
         Destroy jobs with disruptive technology, elbowing out the top left from
@@ -1435,13 +1448,16 @@ export default class App extends React.Component {
         ​the professionals claim bacteria is severe version of viral pneumonia,
         that is insane Why wouldn’t you provide the schematics for $40k
         noghtvisoon goggles instead of charge the people by the lease ask-price
-        you set, unsubservient to labor-demand bid-capacity. They have liability
-        for to continue to steer us wrong with saveface. ​All labs have failed
-        to show virus creation with a virus and cell, without mitosis. you
-        idiots say Wuhan successfully made virus, no one has ever done that
-        ​they try and try, then find it lying around. n=2 is meaningless
-        significance and baby-boomers namesake population growth life expectancy
-        ago old age growth namesake
+        you set,{space}
+        <span style={{ color: "dodgerblue" }}>
+          unsubservient to labor-demand bid-capacity. They have liability for to
+          continue to steer us wrong with saveface
+        </span>
+        . ​All labs have failed to show virus creation with a virus and cell,
+        without mitosis. you idiots say Wuhan successfully made virus, no one
+        has ever done that ​they try and try, then find it lying around. n=2 is
+        meaningless significance and baby-boomers namesake population growth
+        life expectancy ago old age growth namesake
         <br />
         <br />
         It’s about jobs and industry , pro American is the distribution of
