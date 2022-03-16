@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          obviously, the Republicans and Democrats would rather spend us into
+          debt than make money on Ukraine's currency, share split
+        </h4>
         "flatten economy," government and structures is stagflation, retard.
         <br />
         Bipartisan consensus to pay for their weapons instead of we already paid
