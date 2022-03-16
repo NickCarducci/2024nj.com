@@ -313,12 +313,16 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        Poland leasing is not as a per pros than having Ukraine's currency,
-        Hryvnia, share split fungible for lands, although checking no longer is
-        fungible for that because of the pandemic, they are being selfish and
-        conscripting instead of matching our input costs, which by the way are
-        so high because of labors' leases, we have an expensive economy, not
-        because we have net imports actually in weight, quality nor grade
+        Poland leasing is not as a per pros than{space}
+        <span style={{ color: "red" }}>
+          having Ukraine's currency, Hryvnia, share split fungible for lands,
+          although checking no longer is fungible for that because of the
+          pandemic
+        </span>
+        , they are being selfish and conscripting instead of matching our input
+        costs, which by the way are so high because of labors' leases, we have
+        an expensive economy, not because we have net imports actually in
+        weight, quality nor grade
         <br />
         <br />I can make a platform for currency owners to sign off on drilling
         and royalties instead of these leases to the treasury from UT NM and WY.
@@ -354,9 +358,13 @@ export default class App extends React.Component {
         we already paid contractors' material and variable-part labor, for the
         stuff we turnover
         <br />
-        so why don't they share split Ukraine, or the currency fungible for it,
-        <br />
-        that which checking no longer is because of the pandemic, the Hryvnia?
+        so why don't they{space}
+        <span style={{ color: "red" }}>
+          share split Ukraine, or the currency fungible for it,
+          <br />
+          that which checking no longer is because of the pandemic
+        </span>
+        , the Hryvnia?
         <br />
         for labors' leases or margins?
         <br />
@@ -369,12 +377,15 @@ export default class App extends React.Component {
         to the treasury from NM WY UT
         <h4>
           obviously, the Republicans and Democrats would rather spend us into
-          debt than make money on Ukraine's currency, share split fungible for
-          lands, and yet checking no longer is fungible for that because of the
-          pandemic, so I cannot actually boycott credit anymore as a ticket
-          seller, even making my own transaction-fee-islamic-bank. I can make a
-          platform for currency owners to sign off on drilling and royalties
-          instead of these leases to the treasury from UT NM and WY.
+          debt than make money on Ukraine's{space}
+          <span style={{ color: "red" }}>
+            currency, share split fungible for lands, and yet checking no longer
+            is fungible for that because of the pandemic
+          </span>
+          , so I cannot actually boycott credit anymore as a ticket seller, even
+          making my own transaction-fee-islamic-bank. I can make a platform for
+          currency owners to sign off on drilling and royalties instead of these
+          leases to the treasury from UT NM and WY.
         </h4>
         they are realizing weapons' margins are larger than all of Ukraine, due
         to labors' borrowings and despondent lendings, let alone absolutely from
@@ -382,14 +393,17 @@ export default class App extends React.Component {
         economy," government and structures is stagflation, retard.
         <br />
         Bipartisan consensus to pay for their weapons instead of we already paid
-        contractors, so why don't they share split Ukraine or the currendy
-        fungible for it, that which checking no longer is, the Hryvnia? I can
-        make a platform for royalty and drilling sign off for currency holders
-        that they are subservient to customers, not leases to the treasury from
-        NM WY UT. "bloodthirsty," they are paid, conscripted, and Ukraine has
-        more people than jobs. Russia wants taxes the way to peace is a protocol
-        that hands spoofing geohash/mo power to the people, without per diem
-        incarceration nor operational loss bond profit
+        contractors, so why don't they share split Ukraine or the{space}
+        <span style={{ color: "red" }}>
+          currendy fungible for it, that which checking no longer is
+        </span>
+        , the Hryvnia? I can make a platform for royalty and drilling sign off
+        for currency holders that they are subservient to customers, not leases
+        to the treasury from NM WY UT. "bloodthirsty," they are paid,
+        conscripted, and Ukraine has more people than jobs. Russia wants taxes
+        the way to peace is a protocol that hands spoofing geohash/mo power to
+        the people, without per diem incarceration nor operational loss bond
+        profit
         <br />
         <br />
         It is ready, NSF just won't let it happen. "Supply side economics just
@@ -473,8 +487,12 @@ export default class App extends React.Component {
           spoonable 3%under$2k can suffice sewage police lawsuits free rider
           immutable. we can target margin and have no leases, by the way I can
           make a platform for royalty setting and sign off of dollar fungible UT
-          NM WY, yet now, checking isn't fungible for currency, so I can't even
-          boycott credit at all now. conscription is NOT a country I will defend
+          NM WY,{space}
+          <span style={{ color: "red" }}>
+            yet now, checking isn't fungible for currency
+          </span>
+          , so I can't even boycott credit at all now. conscription is NOT a
+          country I will defend
         </h4>
         "POTUS is willing to help in 90 days," says Rob Schmitt, how about move
         to a truncated production tax system? and Don't allow Ukraine to join
