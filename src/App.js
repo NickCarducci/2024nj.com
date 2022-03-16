@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          Dick Morris: "Currency as a checkable deposit nonconcurrentable is NOT
+          a future."
+        </h4>
         copyrights are forever, the only constraint is if it is an exclusive
         endeavor
         <br />
