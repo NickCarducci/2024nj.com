@@ -313,6 +313,8 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        .25 6 more relenting of quantitative tightening to incentivize less debt
+        spending by mortgage, treasury and corporates.
         <h4>
           $1b to additional funding of self-dealing government owned enterprise
           leases to treasury general fund standardized guarantee
