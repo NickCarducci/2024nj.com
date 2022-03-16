@@ -320,6 +320,10 @@ export default class App extends React.Component {
         Traitor Dick Morris: "you know it is $129m/day due, rubles is nothing,"
         that doesn't make Russia broke. Your debts are Savers' money, your money
         is accrued foreseeable force majeure and third party donee.
+        <h1>
+          We can kill you for malfeasance when you can for arrest, faggot wall
+          st
+        </h1>
         <h4>
           "our diversity is secure." why would you nationalize a general fund
           standardized guaranteed scheme? We can kill you for stealing and
