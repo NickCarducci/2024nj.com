@@ -315,8 +315,8 @@ export default class App extends React.Component {
         </div>
         hey bud do you want to talk?
         <h4>
-          greg kelly is a flammable tool; "giving the planes for free is a fa di
-          to compli."
+          greg kelly is a flammable tool; "giving the planes for free (they
+          aren't even savers in USD, as a people) is a fa di to compli."
         </h4>
         charge their currency for Migs by share-split of monetary debits, jerry
         curl, not even leases to treasury
