@@ -363,8 +363,10 @@ export default class App extends React.Component {
         <br />
         <br /> laborless-demand, lower 1/hour-GDP/p
         <br />
-        <br />I can make a platform for currency owners to sign off on drilling
-        and royalties instead of these leases to the treasury from UT NM and WY.
+        <br />
+        <span style={{ color: "purple" }}>I can make a platform</span>
+        {space}for currency owners to sign off on drilling and royalties instead
+        of these leases to the treasury from UT NM and WY.
         {space}
         <span style={{ color: "purple" }}>
           truncated production tax is the incentive for Putin, and his people,
@@ -416,7 +418,8 @@ export default class App extends React.Component {
         if they can't afford it that means our economy isn't as efficient,
         GDP/hour is Counterproductivity
         <br />
-        I can make a platform for royalty and drilling sign off
+        <span style={{ color: "purple" }}>I can make a platform</span>
+        {space}for royalty and drilling sign off
         <br />
         for currency holders that they are{space}
         <span style={{ color: "dodgerblue" }}>subservient to customers</span>,
@@ -429,9 +432,10 @@ export default class App extends React.Component {
             is fungible for that because of the pandemic
           </span>
           , so I cannot actually boycott credit anymore as a ticket seller, even
-          making my own transaction-fee-islamic-bank. I can make a platform for
-          currency owners to sign off on drilling and royalties instead of these
-          leases to the treasury from UT NM and WY.
+          making my own transaction-fee-islamic-bank.{" "}
+          <span style={{ color: "purple" }}>I can make a platform</span>
+          {space}for currency owners to sign off on drilling and royalties
+          instead of these leases to the treasury from UT NM and WY.
         </h4>
         they are realizing weapons' margins are larger than all of Ukraine, due
         to labors' borrowings and despondent lendings, let alone absolutely from
@@ -443,8 +447,10 @@ export default class App extends React.Component {
         <span style={{ color: "red" }}>
           currency fungible for it, that which checking no longer is
         </span>
-        , the Hryvnia? I can make a platform for royalty and drilling sign off
-        for currency holders that they are{space}
+        , the Hryvnia?{" "}
+        <span style={{ color: "purple" }}>I can make a platform</span>
+        {space}for royalty and drilling sign off for currency holders that they
+        are{space}
         <span style={{ color: "dodgerblue" }}>
           subservient to customers, not leases to the treasury from NM WY UT
         </span>
