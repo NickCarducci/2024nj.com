@@ -313,6 +313,11 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          "our diversity is secure." why would you nationalize a general fund
+          standardized guaranteed scheme? We can kill you for stealing and
+          having malfeasance
+        </h4>
         Mortgage Bribe: "Kristie nohm, can you educate the public because I
         think the media are it is cheaer and safer than road or rail, $5
         cheaper, half. "people have less money and that means everything is
