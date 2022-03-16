@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          "Why doesn’t Ukraine share-split currency instead of just giving them
+          the Migs?" Rudy Giuliani clicks, Brian Kilmeade clicks
+        </h4>
         {/**Irving fake vax not a fed offense */}
         18m/800k is nothing, and imports equate exports, washing because our
         labor-costs are all leases of implausible use, standardized guarantee
