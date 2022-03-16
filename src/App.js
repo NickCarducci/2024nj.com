@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>
+          "ukrainians are doing their darndest, lets let them do more, send them
+          our inventory to steal from dollar fungible inventory."
+        </h4>
         .25 6 more relenting of quantitative tightening to incentivize less debt
         spending by mortgage, treasury and corporates.
         <h4>
@@ -1485,7 +1489,11 @@ export default class App extends React.Component {
         <br />
         <br />
         Leases/balanceSheets/UnfinedAppeals/WhistleblowersExcluded are
-        ask-price, first; royalties are subservient to actual labor-demand.
+        ask-price, first;{space}
+        <span style={{ color: "dodgerblue" }}>
+          royalties are subservient to actual labor-demand
+        </span>
+        .
         <br />
         <br />
         Is permits cheaper,{space}
