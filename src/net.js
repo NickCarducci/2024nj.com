@@ -2353,11 +2353,9 @@ class NetToGDP extends React.Component {
               ? financialData
               : this.state.chartType === "household accounts"
               ? householdData
-              : this.state.chartType ===
-                "lendings of financial-debt certificates"
+              : this.state.chartType === "lendings of monetary-debits"
               ? creditData
-              : this.state.chartType ===
-                "borrowings of financial-debt certificates"
+              : this.state.chartType === "borrowings of monetary-debits"
               ? loansData
               : this.state.chartType === "new debt"
               ? newdebtData
@@ -2409,8 +2407,7 @@ class NetToGDP extends React.Component {
               : this.state.chartType === "household accounts"
               ? householdData.householdestate + householdData.householdcheckable
               : //+householdData.householdgoods
-              this.state.chartType ===
-                "borrowings of financial-debt certificates"
+              this.state.chartType === "borrowings of monetary-debits"
               ? data.financialMortages * 1.3 * gdp
               : selection.households;
           households.push(household);
@@ -2423,8 +2420,7 @@ class NetToGDP extends React.Component {
                 householdData.householddeposits +
                 householdData.householdfinance +
                 householdData.householdcredits //+ householdData.householdborrowing
-              : this.state.chartType ===
-                "borrowings of financial-debt certificates"
+              : this.state.chartType === "borrowings of monetary-debits"
               ? data.government * gdp + data.municipalities * gdp
               : selection.government + selection.municipalities;
           notes.push(government);
@@ -2446,8 +2442,7 @@ class NetToGDP extends React.Component {
                 financialData.funds
               : this.state.chartType === "household accounts"
               ? householdData.householdequities //+householdData.householdborrowing +householdData.householdcredits
-              : this.state.chartType ===
-                "lendings of financial-debt certificates"
+              : this.state.chartType === "lendings of monetary-debits"
               ? corporateExmortgage
               : selection.corporate;
           corporates.push(corporate);
@@ -2459,8 +2454,7 @@ class NetToGDP extends React.Component {
               ? financialData.self + financialData.insurance
               : this.state.chartType === "household accounts"
               ? householdData.householdself //+ householdData.householdcredits
-              : this.state.chartType ===
-                "lendings of financial-debt certificates"
+              : this.state.chartType === "lendings of monetary-debits"
               ? selfExmortgage
               : lowdata
               ? selection.corporateOrSelf - selection.corporate
@@ -2474,13 +2468,11 @@ class NetToGDP extends React.Component {
                 financialData.estates
               : this.state.chartType === "household accounts"
               ? householdData.householdmortgages
-              : this.state.chartType ===
-                "lendings of financial-debt certificates"
+              : this.state.chartType === "lendings of monetary-debits"
               ? creditData.corporateMortgages + creditData.selfemployedMortgages
-              : [
-                  "borrowings of financial-debt certificates",
-                  "spending (m2)"
-                ].includes(this.state.chartType)
+              : ["borrowings of monetary-debits", "spending (m2)"].includes(
+                  this.state.chartType
+                )
               ? loansData.corporateMortgages + loansData.selfemployedMortgages
               : data.financialMortages;
           const bonds =
@@ -2493,13 +2485,11 @@ class NetToGDP extends React.Component {
                 financialData.repurchases
               : this.state.chartType === "household accounts"
               ? householdData.householdbonds + householdData.householdlending
-              : this.state.chartType ===
-                "lendings of financial-debt certificates"
+              : this.state.chartType === "lendings of monetary-debits"
               ? corporateExmortgage + selfExmortgage
-              : [
-                  "borrowings of financial-debt certificates",
-                  "spending (m2)"
-                ].includes(this.state.chartType)
+              : ["borrowings of monetary-debits", "spending (m2)"].includes(
+                  this.state.chartType
+                )
               ? loansData.corporate -
                 loansData.corporateMortgages +
                 loansData.selfemployed -
@@ -2702,13 +2692,9 @@ class NetToGDP extends React.Component {
             }}
           >
             {["new debt"].includes(this.state.chartType) ? "annum/" : ""}
-            {["lendings of financial-debt certificates"].includes(
-              this.state.chartType
-            )
+            {["lendings of monetary-debits"].includes(this.state.chartType)
               ? "share"
-              : ["borrowings of financial-debt certificates"].includes(
-                  this.state.chartType
-                )
+              : ["borrowings of monetary-debits"].includes(this.state.chartType)
               ? "total"
               : "quarterly"}
             &nbsp;
@@ -2724,8 +2710,8 @@ class NetToGDP extends React.Component {
               {[
                 "liabilities/GDP, m2*velocity",
                 "spending (m2)",
-                "borrowings of financial-debt certificates",
-                "lendings of financial-debt certificates",
+                "borrowings of monetary-debits",
+                "lendings of monetary-debits", //financial-debt certificates
                 "household accounts",
                 "financial accounts",
                 "new debt"
@@ -2738,7 +2724,7 @@ class NetToGDP extends React.Component {
             &nbsp;
             {[
               "spending (m2)",
-              "borrowings of financial-debt certificates",
+              "borrowings of monetary-debits",
               "household accounts",
               "financial accounts"
             ].includes(this.state.chartType)
