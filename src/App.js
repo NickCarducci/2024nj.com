@@ -313,6 +313,14 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        My excuse is that it doesn't work, asymptomatic has proven not
+        correlated all-cause and excess less than expected.
+        <br />
+        <br />"
+        <a href="https://teapharmacy.party/drugs">
+          Cocaine transported up a Mexicans' anus
+        </a>
+        ."
         <h4>
           I'm the smartest person in the world, and you are going to say I
           hallucinate? you retards call expenses per hour productivity, that is
