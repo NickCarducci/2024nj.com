@@ -313,6 +313,12 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <h4>warmonger thune, #hack4congress token</h4>
+        "POTUS is willing to help in 90 days," says Rob Schmitt, how about move
+        to a truncated production tax system? and Don't allow Ukraine to join
+        NATO mid-fight?
+        <br />
+        <br />
         The old are not disabled, people with OCD are not disabled, I am not
         disabled on account of my messy hair, I have a hole in my leg, people
         are in wheelchairs. the system abuses the mad for running a balance of
