@@ -317,6 +317,11 @@ export default class App extends React.Component {
           "Why doesn’t Ukraine share-split currency instead of just giving them
           the Migs?" Rudy Giuliani clicks, Brian Kilmeade clicks
         </h4>
+        Why are we just giving it to them, are they trying to offload treasury
+        inventory to countries that will not abide to Savers claim for
+        fungibility for that
+        <br />
+        <br />
         {/**Irving fake vax not a fed offense */}
         18m/800k is nothing, and imports equate exports, washing because our
         labor-costs are all leases of implausible use, standardized guarantee
