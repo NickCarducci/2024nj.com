@@ -323,7 +323,11 @@ export default class App extends React.Component {
         <br />
         <br />
         My excuse is that it doesn't work, asymptomatic has proven not
-        correlated all-cause and excess less than expected.{space}
+        correlated all-cause and{space}
+        <a href="https://www.researchgate.net/publication/350902311_Estimating_market_index_valuation_from_macroeconomic_trends/figures?lo=1">
+          excess less than expected
+        </a>
+        .{space}
         <span style={{ color: "dodgerblue" }}>
           Also, mRNA-spoofing graft is onconogenetic-accelerating, and fetal
           cell lines are gross.
