@@ -313,7 +313,9 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        hey bud do you want to talk?
+        putin wants to have geographically and russia as a state vig, we all
+        want our own closed source licensure state vig hey bud do you want to
+        talk?
         <h4>
           greg kelly is a flammable tool; "giving the{space}
           <span style={{ color: "purple" }}>
