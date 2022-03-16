@@ -313,6 +313,12 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Mortgage Bribe: "Kristie nohm, can you educate the public because I
+        think the media are it is cheaer and safer than road or rail, $5
+        cheaper, half. "people have less money and that means everything is
+        costing more. The boxes get checked with this Keysgtone pipeline."
+        <br />
+        <br />
         Short answer is yes, especially when there is only $2t currency and
         $1.8t/yr loaned, there is no limit apparently.
         <h4>Human rights charter</h4>All human beings are born free and equal in
@@ -662,6 +668,7 @@ export default class App extends React.Component {
         beyond reciprocation, lest for plundered surrenderings
         <br />
         <br />
+        nervous system (16%) and injured (7%)
         <Unable
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
