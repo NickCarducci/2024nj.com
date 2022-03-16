@@ -322,8 +322,11 @@ export default class App extends React.Component {
         <br />
         <br />
         Traitor Dick Morris: "you know it is $129m/day due, rubles is nothing,"
-        that doesn't make Russia broke. Your debts are Savers' money, your money
-        is accrued foreseeable force majeure and third party donee.
+        that doesn't make Russia broke. Your debts are Savers' money,{space}
+        <a href="https://qr.ae/pGLa3i">
+          your money is accrued foreseeable force majeure and third party donee
+        </a>
+        .
         <h1>
           We can kill you for malfeasance when you can for arrest, faggot wall
           st
@@ -336,7 +339,7 @@ export default class App extends React.Component {
         Mortgage Bribe: "Kristie nohm, can you educate the public because I
         think the media are it is cheaer and safer than road or rail, $5
         cheaper, half. "people have less money and that means everything is
-        costing more. The boxes get checked with this Keysgtone pipeline."
+        costing more. The boxes get checked with this Keystone pipeline."
         <br />
         <br />
         Short answer is yes, especially when there is only $2t currency and
