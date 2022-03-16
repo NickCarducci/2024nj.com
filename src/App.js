@@ -315,8 +315,11 @@ export default class App extends React.Component {
         </div>
         hey bud do you want to talk?
         <h4>
-          greg kelly is a flammable tool; "giving the planes for free (they
-          aren't even savers in USD, as a people) is a fa di to compli."
+          greg kelly is a flammable tool; "giving the{space}
+          <span style={{ color: "purple" }}>
+            planes for free (they aren't even savers in USD, as a people)
+          </span>
+          {space}is a fa di to compli."
         </h4>
         charge their currency for Migs by share-split of monetary debits, jerry
         curl, not even leases to treasury
@@ -355,9 +358,12 @@ export default class App extends React.Component {
         <br />
         “American tax payer money,” can a government reasonably run a
         never-ending deficit? Short answer is yes, especially when there is only
-        $2t currency and $1.8t/yr loaned, there is no limit apparently. front
-        running groceries is pure harm, bond profit operational loss conflict of
-        interest.
+        $2t currency and $1.8t/yr loaned, there is no limit apparently.{space}
+        <span style={{ color: "purple" }}>
+          front running groceries is pure harm, bond profit operational loss
+          conflict of interest
+        </span>
+        .
         <h4>
           Brian Kilmeade will not entertain to his conservative audience the
           idea to force Ukraine to share-split for our inventory, just like he
