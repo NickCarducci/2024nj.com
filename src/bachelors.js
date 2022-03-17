@@ -8839,37 +8839,43 @@ class Bachelors extends React.Component {
     };
     this.state = state;
   }
-  componentDidUpdate = () => {
-    if (this.state.industry !== this.state.laststate) {
-      this.setState({ laststate: this.state.industry }, () => {
-        let currentData = [];
-        let currentDataData = [];
-        bachelors.forEach((x, i) => {
-          const industry = x.title;
-          if (this.state.industry === industry) {
-            Object.keys(x)
-              .filter((f) => !["title", "employment"].includes(f))
-              .forEach((el, i) => {
-                const edulevel = numcheck(el);
-                const num =
-                  (x[el] / 100) * Number(x.employment.replace(",", "")) * 1000;
-                if (!isNaN(num) && isFinite(num)) {
-                  currentData.push(num);
-                  currentDataData.push([edulevel, num]);
-                }
-              });
-          }
-        });
-        var lowPPCS = Math.min(...currentData);
-        var highPPCS = Math.max(...currentData /*, this.state.all*/);
-        var state = {
-          highPPCS,
-          currentDataData,
-          lowPPCS
-        };
-        this.setState(state);
-      });
+  componentDidUpdate = (prevProps) => {
+    if (this.props.suggestBachelor !== prevProps.suggestBachelor) {
+      this.update(this.props.suggestBachelor);
     }
+    if (this.state.industry !== this.state.laststate) {
+      this.setState({ laststate: this.state.industry }, () =>
+        this.update(this.state.industry)
+      );
+    }
+  };
+  update = (statedindustry) => {
+    let currentData = [];
+    let currentDataData = [];
+    bachelors.forEach((x, i) => {
+      const industry = x.title;
+      if (statedindustry === industry) {
+        Object.keys(x)
+          .filter((f) => !["title", "employment"].includes(f))
+          .forEach((el, i) => {
+            const edulevel = numcheck(el);
+            const num =
+              (x[el] / 100) * Number(x.employment.replace(",", "")) * 1000;
+            if (!isNaN(num) && isFinite(num)) {
+              currentData.push(num);
+              currentDataData.push([edulevel, num]);
+            }
+          });
+      }
+    });
+    var lowPPCS = Math.min(...currentData);
+    var highPPCS = Math.max(...currentData /*, this.state.all*/);
+    var state = {
+      highPPCS,
+      currentDataData,
+      lowPPCS
+    };
+    this.setState(state);
   };
   render() {
     const { occupations } = this.state;
