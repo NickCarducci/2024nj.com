@@ -333,6 +333,25 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        making money by hedge funds is gains in neighborhood and brand
+        good-will, non-concurrentable and asset inequality for inneffient
+        GDP/p-1/hour
+        <br />
+        <br />
+        Now all the sudden Greg kelly can talk like a white guy after I bring up
+        checking isn’t fungible for currency after him not understanding excess
+        deaths are less than expected by population growth a life expectancy
+        ago.{space}
+        <span role="img" aria-label="shamrock ukraine">
+          ️☘🇺🇦
+        </span>
+        we already paid contractors, so why don't they share split Ukraine or
+        the currendy fungible for it, that which checking no longer is, the
+        Hryvnia? I can make a platform for royalty and drilling sign off for
+        currency holders that they are subservient to customers, not leases to
+        the treasury from NM WY UT
+        <br />
+        <br />
         "Too burdensome blood tests?" Mr. Tonko asks the{space}
         <span id="phlebotomists" onClick={goTo}>
           Phlebotomists
