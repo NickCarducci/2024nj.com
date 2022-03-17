@@ -194,6 +194,12 @@ export default class App extends React.Component {
           window.scroll(0, this.edu.current.offsetTop);
         } else if (["/$", "/bachelors"].includes(this.props.pathname)) {
           window.scroll(0, this.$.current.offsetTop);
+        } else if (
+          ["/phlebotomists", "/Phlebotomists"].includes(this.props.pathname)
+        ) {
+          this.setState({ suggestBachelor: "Phlebotomists" }, () =>
+            window.scroll(0, this.$.current.offsetTop)
+          );
         } else if (this.props.pathname === "/ssa") {
           window.scroll(0, this.ssa.current.offsetTop);
         } else if (this.props.pathname === "/carducci") {
@@ -327,7 +333,12 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        "
+        "Too burdensome blood tests?" Mr. Tonko asks the{space}
+        <span id="phlebotomists" onClick={goTo}>
+          Phlebotomists
+        </span>
+        .<br />
+        <br />"
         <a href="https://qr.ae/pGLVpQ">
           Philanthropic funding to really support individuals, as well, when we
           raise the average price
@@ -2367,6 +2378,7 @@ export default class App extends React.Component {
         "parents getting involved in politics for the first time, unspoken for
         voting blocs are real people!"
         <Bachelors
+          suggestBachelor={this.state.suggestBachelor}
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
             paddingBottom: "15px",
