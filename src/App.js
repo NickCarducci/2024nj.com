@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        durable approval is dissmissive of all of FDA, NIH and USPTO; (1) naming
+        and (2) open ingredient lists for (a) less exclusivity
+        <br />
+        <br />
         i am going to sound like this fucker (Mr. Bilirakis) now all because I
         don't have a bone marrow transplant.
         <br />
