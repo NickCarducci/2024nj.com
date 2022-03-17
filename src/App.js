@@ -347,6 +347,7 @@ export default class App extends React.Component {
         debt/cash per person a year over Savers' land-exploration rights, $ (20%
         of U.S.)?
         <br />
+        <br />
         Likely not, given checking is not fungible for currency anymore, due to
         the pandemic. I can’t associate with people that suffer such basis rate
         fallacy, as excess was less than expected, unless Amazon will try to
@@ -367,6 +368,19 @@ export default class App extends React.Component {
         <span role="img" aria-label="shamrock ukraine">
           ️☘🇺🇦
         </span>
+        As a designer, you want to launch once
+        <br />
+        If you aren’t treating the product map like a public relations endeavor,
+        and without exclusive answer copy
+        <br />
+        Community and commitment
+        <br />
+        You could say, we would owe that money for many, many years, and we
+        would pay that money, of course, 44x is corp mort tsy debt level
+        <br />
+        And 11x velocity-imputed by size (assuming equal weight)
+        <br />
+        <br />
         we already paid contractors, so why don't they share split Ukraine or
         the currency fungible for it, that which checking no longer is, the
         Hryvnia? I can make a platform for royalty and drilling sign off for
