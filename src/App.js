@@ -258,7 +258,9 @@ export default class App extends React.Component {
     };
     const goTo = (path) =>
       (window.location.href = `https://${window.location.hostname}/${path.target.id}`);
-
+    const linkyblinky = {
+      color: "deepskyblue"
+    };
     return (
       <div
         style={{
@@ -333,6 +335,29 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        The rationale is to compel less borrowing by the government? Why would
+        we allow borrowing at all with{space}
+        <span id="carducci" onClick={goTo} style={linkyblinky}>
+          truncated production tax NJ for Nick Carducci U.S. Senate 2024
+        </span>
+        {space}on the horizon - (debt/cash)*income, geohash/mo spoofable
+        precinct. Future collateral is 1/12 vertical-industry designation for
+        max-royalty, no surrender of others’ freedoms to bid, as
+        labor-borne-demand.
+        <br />
+        <br />
+        Mind you, I am a developer for bookkeeping software, that believes a
+        transaction-fee based currency is the future - now that USD is fungible
+        for treasury inventory (at least 23% of oil-wells in America are
+        “federally-leased” back to us through corporations instead of dollar
+        royalty and drilling sign off, to be subservient to customers). Debt is
+        the cause of inflation, that is the rationale that the Federal Reserve
+        provides for raising rates. Why do that pennywise short for a pound
+        cowardice? Just work for demand in real time without a money ‘market’ by
+        “collateral” as NAICS industry-designations as tortious for revenue for
+        max-royalty, undisbursed.
+        <br />
+        <br />
         <a href="https://qr.ae/pGLV3y">
           We have to show we have the strength, and the courage, to offload
           treasury inventory of currency, for free actually for they have no
@@ -414,7 +439,7 @@ export default class App extends React.Component {
         <br />
         <br />
         "Too burdensome blood tests?" Mr. Tonko asks the{space}
-        <span id="phlebotomists" onClick={goTo}>
+        <span id="phlebotomists" onClick={goTo} style={linkyblinky}>
           Phlebotomists
         </span>
         .<br />
