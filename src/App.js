@@ -35,6 +35,7 @@ export default class App extends React.Component {
     console.log(name);
     const firestore = getFirestore(firebase);
     this.state = {
+      posts: [],
       trigger: false,
       firestore,
       browser: name,
@@ -67,6 +68,15 @@ export default class App extends React.Component {
         foo.id = doc.id;
         this.setState({ signatures: foo.count });
       }
+    });
+    onSnapshot(collection(this.state.firestore, "posts"), (snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        if (doc.exists()) {
+          var foo = doc.data();
+          foo.id = doc.id;
+          this.setState({ posts: foo.count });
+        }
+      });
     });
   };
   componentWillUnmount = () => {
@@ -203,6 +213,7 @@ export default class App extends React.Component {
     }
   };
   render() {
+    const { posts } = this.state;
     const handleScollImgError = (e) => {
       if (e.message) {
         console.log(e.message);
@@ -313,9 +324,14 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        {posts.map((p) => {
+          return <div>{p.message}</div>;
+        })}
         Diseases cannot be designated by artifact, alone, for that may not be
         the cause unless you test exclusively for it with (a) correlations and
-        endogenoous-debasements, from me sure, and in (b) population-surveys
+        endogenoous-debasements, from{space}
+        <a href="https://brainscan.info">me sure</a>, and in (b)
+        population-surveys
         <h4>
           How to Run a{space}
           <a href="https://teapharmacy.party/drugs">Drug Cartel</a>
