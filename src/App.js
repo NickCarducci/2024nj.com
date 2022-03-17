@@ -378,6 +378,22 @@ export default class App extends React.Component {
         for the closed source vig.
         <br />
         <br />
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.youtube.com/embed/WlSVwRaO-iQ?start=884"
+          }
+          float={"left"}
+          title="I interview curtis sliwa on disability fraud, general fund standardized guarantee schemes and implausible use leases and surrendered bid outrights https://youtu.be/WlSVwRaO-iQ?t=884"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         "Paychecks were growing twice as fast as prices under Trump," he caused
         more hours worked (
         <a href="https://fred.stlouisfed.org/graph/?g=N3OP">
