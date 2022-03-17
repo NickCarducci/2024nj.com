@@ -335,10 +335,13 @@ export default class App extends React.Component {
         })}
         <h4>I'm going to kill all of you</h4>
         non monetary-lending corporate and household checking are up, but the
-        self employed aren't included in the economy. Corporate tax free, and As
-        you can know, I've led my life as far away from credit as income as
-        possible. I am making a bank to have checking that is fungible for
-        currency.
+        self employed aren't included in the economy.{space}
+        <a href="https://www.ssa.gov/oact/progdata/taxRates.html">
+          Corporate tax free
+        </a>
+        , and As you can know, I've led my life as far away from credit as
+        income as possible. I am making a bank to have checking that is fungible
+        for currency.
         <br />
         I know Amazon's income is credit/good-will, insurance (false bid pool
         loss non-insulated-from-donee-beneficiary nor concurrentable investment
