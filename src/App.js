@@ -347,6 +347,14 @@ export default class App extends React.Component {
         checking, because of the global pandemic) promised.
         <br />
         <br />
+        As an alternative means of finance, without licensure but for naming and
+        open ingredient lists and non-exclusive answers of endeavors, even rare
+        disease ARPA-H uses the same input costs, and licensure fees, as well as
+        animal life, let alone variable-part, labors’ leases and borrowings, is
+        1/12 industry-vertical as “collateral” max-royalty, and of course
+        copy-investing for brand- or neighborhood-good will gains.
+        <br />
+        <br />
         <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
           No Surrender of Others' Freedom Sample Clauses | Law Insider Sample
           Contracts and Business Agreements
