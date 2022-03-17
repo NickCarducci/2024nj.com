@@ -313,6 +313,17 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Surely it is caused by asset inequality, the mode of income inequality (
+        <a href="https://adailyimpeachment.quora.com/">
+          denomination of “spm” poverty skew
+        </a>
+        , income matching 3rd, rather than original “official” thrice expenses),
+        laborless-demand and rental-income in implausible use leases, general
+        fund standardized guarantees, closed source licensure and other
+        surrendered freedoms to bid by labor-borne-demand, or you’ll forever be
+        tortiously-ascertainable.
+        <br />
+        <br />
         "First, how are you feeling?" FUCKING FINE!
         <br />
         Drug discovery front-running doesn't help people, bitch. Borrowings
@@ -367,7 +378,8 @@ export default class App extends React.Component {
         might be able to buy $1.8t/yr treasury borrowing.
         <br />
         <br />
-        Jobs are an artifact of counterproductivity,{space}
+        You are really important to all of us. Jobs are an artifact of
+        counterproductivity,{space}
         <a href="https://qr.ae/pGLJMX">GDP/p</a>-1/hour
         <br />
         <br />
@@ -439,11 +451,11 @@ export default class App extends React.Component {
         Short answer is yes, especially when there is only $2t currency and
         $1.8t/yr loaned, there is no limit apparently.
         <h4>Human rights charter</h4>All human beings are born free and equal in
-        dignity and rights. For reason of efficiency per hour in
-        labor-borne-demand. Everyone has the right to life, liberty and the
-        security of person. Conscription and surrendered freedom to bid by
-        standardized guaranteed scheme and implausible use lease, or closed
-        source licensure vig.
+        dignity and rights. You are really important to all of us. For reason of
+        efficiency per hour in labor-borne-demand. Everyone has the right to
+        life, liberty and the security of person. Conscription and surrendered
+        freedom to bid by standardized guaranteed scheme and implausible use
+        lease, or closed source licensure vig.
         <br />
         No one shall be subjected to torture or to cruel, inhuman or degrading
         treatment or punishment. Competing with consumer intent deduced,
