@@ -327,6 +327,27 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/sqf6c2uuuf4kjzg/Screen%20Shot%202022-03-17%20at%201.39.57%20PM.png?dl=0"
+          }
+          float={"left"}
+          title="The Future of Medicine: Legislation to Encourage Innovation and Improve Oversight (Energy and Commerce Committee, Youtube) - https://youtu.be/Oiy0aFXyKzU"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Work to ensure continued acces to medication for all patients by
+        invoicing the general fund and leasing corporate profits to the
+        treasury.
+        <br />
+        <br />
         Diseases cannot be designated by artifact, alone, for that may not be
         the cause unless you test exclusively for it with (a) correlations and
         endogenoous-debasements, from{space}
@@ -454,7 +475,7 @@ export default class App extends React.Component {
         <br />
         <br />
         <Cable
-          style={{ width: "100%" }}
+          style={{  }}
           onError={handleScollImgError}
           //img={true}
           src={
