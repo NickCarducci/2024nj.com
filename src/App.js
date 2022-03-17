@@ -313,6 +313,31 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
+        University (Graduated 2015)
+        <br />
+        The Fed raised interest rates for the first time since 2018. How will
+        this change affect the economy?
+        <br />
+        <br />
+        More people will invest in equities and commodities, until they begin to
+        target a coupon rate again (step in before the natural market asks for
+        more). Now that{space}
+        <a
+          href="https://fred.stlouisfed.org/graph/?g=N1OV"
+          style={{ color: "red" }}
+        >
+          checking is no longer fungible
+        </a>
+        {space}
+        for $2t currency because of the pandemic,{space}
+        <a href="https://fred.stlouisfed.org/graph/?g=N3Ld">
+          checkable deposits
+        </a>
+        {space}
+        might be able to buy $1.8t/yr treasury borrowing.
+        <br />
+        <br />
         Jobs are an artifact of counterproductivity, GDP/p-1/hour
         <br />
         <br />
