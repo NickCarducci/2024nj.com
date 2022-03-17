@@ -327,10 +327,25 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        "
+        <a href="https://qr.ae/pGLVpQ">
+          Philanthropic funding to really support individuals, as well, when we
+          raise the average price
+        </a>
+        , or scapegoat target margins of a market where{space}
+        <a href="https://qr.ae/pGLVNS">supply already doesn't equate demand</a>
+        {/**    Compared to standardized guarantee schemes without price controls, 
+        it certainly saves money, but only because supply already doesn’t equate labor-demand. 
+        Better to ban invoices for surrendered freedom and foreseeable force majeure ascertainable
+        standing and tortious grounds */}
+        , as a sorted propensity of indifference and labor-borne-budget
+        contraints, for the 1/hour-GDP/p plane of Supply and Demand, by
+        Microeconomic gaming."
+        <br />
         <Cable
-          style={{ width: "100%" }}
+          style={{ width: "200px" }}
           onError={handleScollImgError}
-          //img={true}
+          img={true}
           src={
             this.state.noyout
               ? ""
