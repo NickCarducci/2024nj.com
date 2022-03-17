@@ -333,6 +333,28 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <h4>I'm going to kill all of you</h4>
+        non monetary-lending corporate and household checking are up, but the
+        self employed aren't included in the economy. Corporate tax free, and As
+        you can know, I've led my life as far away from credit as income as
+        possible. I am making a bank to have checking that is fungible for
+        currency.
+        <br />
+        I know Amazon's income is credit/good-will, insurance (false bid pool
+        loss non-insulated-from-donee-beneficiary nor concurrentable investment
+        bank), and I can only imagine what else. Would you like to make
+        accommodations so I am not a hypocrite and contributing to the $12k/64
+        debt/cash per person a year over Savers' land-exploration rights, $ (20%
+        of U.S.)?
+        <br />
+        Likely not, given checking is not fungible for currency anymore, due to
+        the pandemic. I can’t associate with people that suffer such basis rate
+        fallacy, as excess was less than expected, unless Amazon will try to
+        explain to me that sewage causes Alzheimer’s, people were once negative
+        years old and wrinkles isn’t an artifact of natural age of death. Nick
+        Carducci.sh
+        <br />
+        <br />
         making money by hedge funds is gains in neighborhood and brand
         good-will, non-concurrentable and asset inequality for inneffient
         GDP/p-1/hour
@@ -346,7 +368,7 @@ export default class App extends React.Component {
           ️☘🇺🇦
         </span>
         we already paid contractors, so why don't they share split Ukraine or
-        the currendy fungible for it, that which checking no longer is, the
+        the currency fungible for it, that which checking no longer is, the
         Hryvnia? I can make a platform for royalty and drilling sign off for
         currency holders that they are subservient to customers, not leases to
         the treasury from NM WY UT
