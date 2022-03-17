@@ -313,6 +313,12 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Small and mid-sized biotech companies are forced to shut down because of
+        operations, and the technology is thereby banned or rent-seeken by the
+        government trust. We require the review documents, for reasons you know
+        (or else).
+        <br />
+        <br />
         durable approval is dissmissive of all of FDA, NIH and USPTO; (1) naming
         and (2) open ingredient lists for (a) less exclusivity
         <br />
