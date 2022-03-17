@@ -313,6 +313,8 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Actual innovation.
+        <br />
         Reasonable doubt for policy and permit requires an alternative.
         <br />
         Small and mid-sized biotech companies are forced to shut down because of
