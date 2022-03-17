@@ -313,7 +313,55 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
-        Actual innovation.
+        <h4>
+          How to Run a{space}
+          <a href="https://teapharmacy.party/drugs">Drug Cartel</a>
+          {space}with the Government: Money Laundering 301
+        </h4>
+        "How do I solve a money debt problem?"
+        <br />
+        Nick Carducci - Bookkeeper at Household Chores (2006-present)
+        <br />
+        Money-debt, or borrowings of monetary-debits, financial and monetary
+        liability, is best solved by (cash/debt)*income reverse amortization,
+        transaction-fee based inventory of treasury (state-lands) or vault share
+        consortium, currency with truncated production tax for free rider
+        immutable sewage police lawsuits 3% under $2k geohash/month report
+        spoofable precinct without closed-source-vig nor general fund
+        self-dealing scapegoating elder-delinquency and laborless-demand for
+        asset inequality standardized guarantee false bid pool name your price
+        tool schemes nor free rider mutable trust breaking, hypocrisy and
+        <div style={{ borderLeft: "3px solid", paddingLeft: "5px" }}>
+          or else, you know what,
+        </div>
+        ratification. That means voting for{space}
+        <a href="https://2024nj.com/carducci">
+          NJ for Nick Carducci U.S. Senate 2024
+        </a>
+        .
+        <br />
+        <br />
+        As an individual, you can claim borrower defense forseeable force
+        majeure, just cite $12k/64, or donee beneficiary defense, that which is
+        the actual owner of the dollars (currency, not even fungible for
+        checking, because of the global pandemic) promised.
+        <br />
+        <br />
+        <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
+          No Surrender of Others' Freedom Sample Clauses | Law Insider Sample
+          Contracts and Business Agreements
+        </a>
+        <br />
+        <a href="https://studentaid.gov/borrower-defense">
+          https://studentaid.gov/borrower-defense
+        </a>
+        <br />
+        <br />
+        Actual innovation. Actual labor-borne-demand lest dead-weight of
+        1/hour-GDP/p enumerated economic welfare you fucking retarded vet. even
+        he is booned by false bid pools, and cannot comment on funding, as
+        politicians can only own currency and concurrentable commodities, lest
+        abstain.
         <br />
         Reasonable doubt for policy and permit requires an alternative.
         <br />
