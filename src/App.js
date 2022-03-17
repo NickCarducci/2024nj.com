@@ -334,11 +334,18 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         <a href="https://qr.ae/pGLV3y">
-          We have to show we have the strenght, and the courage, to offload
+          We have to show we have the strength, and the courage, to offload
           treasury inventory of currency, for free actually for they have no
           savings in Dollars
         </a>
         .<h4>Taxing large accounts is the most taxing</h4>
+        “Biden is doing nothing to increase the inventory of oil and gas.”
+        <br />
+        “A big mistake $600m minerals and labor for taxes and fees under there.”
+        <br />
+        I’m gonna string your from meat hooks!
+        <br />
+        <br />
         You don't need to medicate to house, for trespass is not adjunicatable,
         but you can't make this a solution when rental-income is
         laborless-demand of implausible use leases, general fund and closed
