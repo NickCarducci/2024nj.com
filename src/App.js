@@ -313,6 +313,13 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Jobs are an artifact of counterproductivity, GDP/p-1/hour
+        <br />
+        <br />
+        Brian Kilmeade: “Huge unemployment ruins entrepreneurship,” small
+        business is average 50 and most workers are 30.
+        <br />
+        <br />
         anytime you delay a payment you are surrendering the bid of another,
         that is not "your budget." Raymore and Flannigan. Stay in your lane
         <br />
