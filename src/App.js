@@ -313,6 +313,33 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Drug discovery front-running doesn't help people, bitch. Borrowings
+        instead of mental health insurance fraud, I have a hole in my leg I will
+        kill all of you. Without threat of legal action, from known hazards,
+        exclusive answer endeavor, state-closed-source-vig, estimates?
+        Post-approval evidence generation notwithstanding, except for non-PII
+        data, and disability claims (OCD and age-related disease
+        notwithstanding). Time to approval is notwithstanding with open
+        ingredient lists replacing the function of the FDA, and exclusive answer
+        endeavor replaces the USPTO. Clinical and not surrogate supporting
+        metrics. "Access and affordability are built into the innovation-model
+        so Americans and tax-payers ban benefit from the
+        federally-funded-research, ARPA-H rare diseases." 1y/0x elastic free
+        rider mutable for skew of disease type, still uses the same input costs
+        except for licensing, branding and association-fees (not association)
+        for the closed source vig.
+        <br />
+        <br />
+        "Paychecks were growing twice as fast as prices under Trump," he caused
+        more hours worked (
+        <a href="https://fred.stlouisfed.org/graph/?g=N3OP">
+          wages, hours, prices
+        </a>
+        ). Kevin Brady, "Medicare on financial footing by taking OCD and
+        age-related disabilities general fund standardized guarantee scheme, not
+        popular to do because, with old people, they don't get elected."
+        <br />
+        <br />
         Nick Carducci - BA in Political Science & Economics, Johns Hopkins
         University (Graduated 2015)
         <br />
@@ -338,7 +365,8 @@ export default class App extends React.Component {
         might be able to buy $1.8t/yr treasury borrowing.
         <br />
         <br />
-        Jobs are an artifact of counterproductivity, GDP/p-1/hour
+        Jobs are an artifact of counterproductivity,{space}
+        <a href="https://qr.ae/pGLJMX">GDP/p</a>-1/hour
         <br />
         <br />
         Brian Kilmeade: “Huge unemployment ruins entrepreneurship,” small
@@ -356,6 +384,10 @@ export default class App extends React.Component {
           20% would fight for their, "country." Ron Liddle, 20% now healthcare
           general fund false bid pool all-spend
         </h4>
+        the lease has been bought, but they need to stop the war against
+        wastewater, in the U.S., for jobs
+        <br />
+        <br />
         "NWP 12 authorizes the construction, maintenance, repair and removal of
         utility lines and associated facilities{space}
         <a href="https://www.orrick.com/en/Insights/2020/05/Uncertainty-Lingers-During-Appeal-of-Nationwide-Permit-12-Ruling">
@@ -747,8 +779,8 @@ export default class App extends React.Component {
         classified as unknown pandemic.
         <br />
         <br />
-        I'll turn the gun on you if you conscript me or execute excalations
-        beyond reciprocation, lest for plundered surrenderings
+        I'll turn the gun on you if you reserve/conscript me or execute
+        excalations beyond reciprocation, lest for plundered surrenderings
         <br />
         <br />
         “To understand why Russia is attacking would take a psychiatrist.” Dick
@@ -973,10 +1005,10 @@ export default class App extends React.Component {
         age, used to be 20, with self employed, 15!!!
         <br />
         <br />
-        "There are more people signing up than needed, but we still conscript
-        young males against their will. We want support and a no-fly-zone to
-        come back. Promises made need to be promises kept," not if the promise
-        was counterfeit, cunt.
+        "There are more people signing up than needed, but we still
+        reserve/conscript young males against their will. We want support and a
+        no-fly-zone to come back. Promises made need to be promises kept," not
+        if the promise was counterfeit, cunt.
         <br />
         <Cable
           style={{ width: "200px" }}
