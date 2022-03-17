@@ -349,10 +349,10 @@ export default class App extends React.Component {
         <br />
         <br />
         Diseases cannot be designated by artifact, alone, for that may not be
-        the cause unless you test exclusively for it with (a) correlations and
-        endogenoous-debasements, from{space}
+        the cause unless you test exclusively for it with (a) correlations
+        (meaningfully-diverse) and endogenoous-debasements, from{space}
         <a href="https://brainscan.info">me sure</a>, and in (b)
-        population-surveys
+        population-surveys (significance with assumptions of meaning)
         <h4>
           How to Run a{space}
           <a href="https://teapharmacy.party/drugs">Drug Cartel</a>
@@ -475,7 +475,7 @@ export default class App extends React.Component {
         <br />
         <br />
         <Cable
-          style={{  }}
+          style={{}}
           onError={handleScollImgError}
           //img={true}
           src={
