@@ -313,6 +313,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        i am going to sound like this fucker (Mr. Bilirakis) now all because I
+        don't have a bone marrow transplant.
+        <br />
+        <br />
         Surely it is caused by asset inequality, the mode of income inequality (
         <a href="https://adailyimpeachment.quora.com/">
           denomination of “spm” poverty skew
@@ -3265,4 +3269,3 @@ export default class App extends React.Component {
     );
   }
 }
-
