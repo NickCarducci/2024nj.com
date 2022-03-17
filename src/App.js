@@ -335,7 +335,7 @@ export default class App extends React.Component {
         kick you in the nuts! "NIH funds projects that they believe are
         qualified for funding. We know the competition for federal research
         dollars is fierce," that is competing with consumers by superfluous
-        scope.
+        scope. I will use the methods I prosecute, for example.
         <br />
         <br />
         "metholological advancements that are needed to use medical health data,
