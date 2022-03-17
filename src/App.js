@@ -333,6 +333,7 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <a href="https://qr.ae/pGLVqg">MISDIMEANOR My ARSE</a>
         <h4>I'm going to kill all of you</h4>
         non monetary-lending corporate and household checking are up, but the
         self employed aren't included in the economy.{space}
