@@ -313,6 +313,8 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Reasonable doubt for policy and permit requires an alternative.
+        <br />
         Small and mid-sized biotech companies are forced to shut down because of
         operations, and the technology is thereby banned or rent-seeken by the
         government trust. We require the review documents, for reasons you know
