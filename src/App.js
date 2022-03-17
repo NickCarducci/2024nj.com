@@ -350,7 +350,8 @@ export default class App extends React.Component {
         <br />
         Diseases cannot be designated by artifact, alone, for that may not be
         the cause unless you test exclusively for it with (a) correlations
-        (meaningfully-diverse) and endogenoous-debasements, from{space}
+        (meaningfully-diverse) and endogenoous-debasements (homogeneous, not
+        heterogenous or exogeneous correlation-coincidence), from{space}
         <a href="https://brainscan.info">me sure</a>, and in (b)
         population-surveys (significance with assumptions of meaning)
         <h4>
