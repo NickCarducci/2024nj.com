@@ -335,6 +335,24 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Nick Carducci - Econometrist at Occupy Wall St
+        <br />
+        The former National Economic Council Director on the right calls
+        employer-benefit standardized guarantee scheme (PCE, BEA), or
+        out-of-pocket cheaper (CPI, BLS), inflation, prosperity, before
+        <div style={{ borderLeft: "3px solid", paddingLeft: "5px" }}>
+          income-expenses in a time-period gain
+        </div>
+        is known to supply-siders to raise bid by ask, who have more
+        laborless-demand of input costs, I guess, and yet thereby generate a
+        loss of economic welfare in Supply and Demand (Microeconomics), -1y/0x
+        1/hour-GDP/p, for labor is always supply, lest for dead-weight, for
+        vertical industry lines, or maybe to some propensity despondency by
+        total, and horizontal, living costs, between markets being the only time
+        labor in one market out-profits/-saves another. There are about 12
+        mutually exclusive lines of business by NAICS code, I gather.
+        <br />
+        <br />
         James Comer: "Not having a job is a problem because it is a cost on
         savings." $12k/yr spending and $6k actual currency, per person, Rob
         Finnerty: "I don't get it, the government can just give us all a $60k
