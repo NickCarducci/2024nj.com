@@ -338,9 +338,11 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        "if we don't have energy independence with NBP12 wastewater, we are
+        "if we don't have energy independence with NWP12 wastewater, we are
         idiots instead of retards. I was in the military for 25 years," yeah it
-        shows.
+        shows, Mike Gallagar, "I don't even belong to a political party. The
+        Russians, Chinese and Iranians respond to what we do, not what we say.
+        Do things with hard-power. We need peace thru strength."
         <br />
         <br />
         In the Nick of time, Johnny come lately, master of trade dominates
