@@ -335,6 +335,12 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        James Comer: "Not having a job is a problem because it is a cost on
+        savings." $12k/yr spending and $6k actual currency, per person, Rob
+        Finnerty: "I don't get it, the government can just give us all a $60k
+        electric car, or lease us our currency fungible lands for."
+        <br />
+        <br />
         Should you pay a debt that has gone to collections?
         <br />
         Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
