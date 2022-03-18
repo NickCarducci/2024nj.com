@@ -339,9 +339,26 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         You cannot force me to do something I haven't done before my actual, not
-        age nor madness non-biomedical disability onset. Rob O'neil: "his
-        soldiers are shooting themselves so they do not have to go to the front
-        lines, and have already been paid."
+        age nor madness non-biomedical disability onset.
+        <br />
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dl.dropboxusercontent.com/s/giebgfrxgx5d0gp/Screen%20Shot%202022-03-18%20at%2010.35.45%20AM.png?dl=0"
+          }
+          float={"right"}
+          title="https://www.google.com/search?q=guardrail"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Rob O'neil: "his soldiers are shooting themselves so they do not have to
+        go to the front lines, and have already been paid."
         <br />
         <br />
         "if we don't have energy independence with NWP12 wastewater, we are
