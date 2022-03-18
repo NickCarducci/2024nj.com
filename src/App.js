@@ -335,6 +335,7 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        {/**going to make everyone feel guilty */}
         Nick Carducci - Econometrist at Occupy Wall St
         <br />
         The former National Economic Council Director on the right calls
@@ -345,7 +346,7 @@ export default class App extends React.Component {
         </div>
         is known to supply-siders to raise bid by ask, who have more
         laborless-demand of input costs, I guess, and yet thereby generate a
-        loss of economic welfare in Supply and Demand (Microeconomics), -1y/0x
+        loss of economic welfare in Supply and Demand (Microeconomics), 1y/-1x
         1/hour-GDP/p, for labor is always supply, lest for dead-weight, for
         vertical industry lines, or maybe to some propensity despondency by
         total, and horizontal, living costs, between markets being the only time
