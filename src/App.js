@@ -335,6 +335,33 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Should you pay a debt that has gone to collections?
+        <br />
+        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
+        (2020-present)
+        <br />
+        If you need your savings, don’t feel compelled to pay the consumer debt,
+        nor firesale your assets. Regardless, debts are tortious for standing by
+        the borrower for force majeure ($12k/64 new debt/cash U.S. per person)
+        and third party donee beneficiaries whom actually have the cash
+        promised, and will be reversed by (cash/debt)*income that will be the
+        last before 1/12 industry-vertical as “collateral” max-royalty to become
+        subservient to customers of labor-borne-demand.
+        <br />
+        <br />
+        Kenneth Thomas - English, please. Something that the average person can
+        parse.
+        <br />
+        <br />
+        “Tortious,” means you can sue for “force majeure,” that means
+        foreseeable impossible intent. After “reverse” amortization, future
+        debts will be organized in a way that disburses return to the business
+        account by 1/12 NAICS industry designation, for “standing” or the
+        ability to sue on “laundering grounds,” or dodging max-royalty, which is
+        an “operational rate” as opposed to time-based, so that you await
+        customers instead of take credit as income.
+        <br />
+        <br />
         Joe Pinion: "Unemployment that you paid your entire life into," general
         fund actual currency versus bonds will be reversed, bond holders deserve
         nothing.
