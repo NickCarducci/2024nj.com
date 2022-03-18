@@ -54,6 +54,7 @@ export default class App extends React.Component {
     this.depression = React.createRef();
     this.supply = React.createRef();
     this.plandemic = React.createRef();
+    this.disability = React.createRef();
   }
   componentDidMount = () => {
     //document.getElementsByTagName("body")[0].style.margin = 0;
@@ -200,6 +201,8 @@ export default class App extends React.Component {
           this.setState({ suggestBachelor: "Phlebotomists" }, () =>
             window.scroll(0, this.$.current.offsetTop)
           );
+        } else if (this.props.pathname === "/disability") {
+          window.scroll(0, this.disability.current.offsetTop);
         } else if (this.props.pathname === "/ssa") {
           window.scroll(0, this.ssa.current.offsetTop);
         } else if (this.props.pathname === "/carducci") {
@@ -335,6 +338,11 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        "if we don't have energy independence with NBP12 wastewater, we are
+        idiots instead of retards. I was in the military for 25 years," yeah it
+        shows.
+        <br />
+        <br />
         In the Nick of time, Johnny come lately, master of trade dominates
         <br />
         Nick Carducci - Bookkeeper at Household Chores (2006–present)
@@ -1155,6 +1163,7 @@ export default class App extends React.Component {
         NATO mid-fight?
         <br />
         <br />
+        <hr ref={this.disability} />
         The old are not disabled, people with OCD are not disabled, I am not
         disabled on account of my messy hair, I have a hole in my leg, people
         are in wheelchairs. the system abuses the mad for running a balance of
