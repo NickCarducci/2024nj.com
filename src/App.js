@@ -338,8 +338,18 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        "you have to fail and realize what you are really going after. Don't
-        take the job.
+        "Get married, house, is it worth it?" well we have to impute your
+        mortgage and employer contribution inflation, if you have none
+        <br />
+        <br />
+        "take the leap try something new, they don't realize the debt they are
+        going into, it is the goal, when you talk about business being bought
+        out, he sold his company for $29m, and what matters to him, is cash.
+        then lets his customers pay for leases. When entrepreneurs sell, they
+        get depressed, because they know they let the buyer damage their
+        customers beyond their minimal viable product contribution to science by
+        royalty process. you have to fail and realize what you are really going
+        after. Don't take the job.
         <br />
         morale killing women and children, on the dole."
         <br />
