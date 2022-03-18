@@ -8801,10 +8801,14 @@ class Bachelors extends React.Component {
     let currentDataData = [];
     let occupations = [];
     var all = null;
+    const statedindustry = props.suggestBachelor
+      ? props.suggestBachelor
+      : "Total, all occupations";
     bachelors.forEach((x, i) => {
       const industry = x.title;
       occupations.push(industry);
-      if ("Total, all occupations" === industry) {
+
+      if (statedindustry.toLowerCase() === industry.toLowerCase()) {
         Object.keys(x)
           .filter((f) => !["title", "employment"].includes(f))
           .forEach((el, i) => {
@@ -8826,6 +8830,7 @@ class Bachelors extends React.Component {
     var highPPCS = Math.max(...currentData /*, all*/);
     var highDate = Math.max(...date);
     var state = {
+      industry: statedindustry,
       all,
       occupations,
       highPPCS,
@@ -8841,7 +8846,7 @@ class Bachelors extends React.Component {
   }
   componentDidUpdate = (prevProps) => {
     if (this.props.suggestBachelor !== prevProps.suggestBachelor) {
-      this.update(this.props.suggestBachelor);
+      this.setState({ industry: this.state.suggestBachelor });
     }
     if (this.state.industry !== this.state.laststate) {
       this.setState({ laststate: this.state.industry }, () =>
@@ -8854,7 +8859,7 @@ class Bachelors extends React.Component {
     let currentDataData = [];
     bachelors.forEach((x, i) => {
       const industry = x.title;
-      if (statedindustry === industry) {
+      if (statedindustry.toLowerCase() === industry.toLowerCase()) {
         Object.keys(x)
           .filter((f) => !["title", "employment"].includes(f))
           .forEach((el, i) => {
@@ -8873,6 +8878,7 @@ class Bachelors extends React.Component {
     var state = {
       highPPCS,
       currentDataData,
+      yAxisPPCS: highPPCS - 0,
       lowPPCS
     };
     this.setState(state);
@@ -8969,6 +8975,7 @@ class Bachelors extends React.Component {
                 width: "100%",
                 maxWidth: "580px"
               }}
+              defaultValue={this.state.industry}
               state={this.state.industry}
               onChange={(name) => {
                 this.setState({ industry: name.target.value });
@@ -8980,11 +8987,17 @@ class Bachelors extends React.Component {
                 </option>
               ))}
             </select>
-            <a href="https://www.bls.gov/emp/data/occupational-data.htm">
+            <a
+              href="https://www.bls.gov/emp/data/occupational-data.htm"
+              style={{ color: "white" }}
+            >
               Employed
             </a>
             -
-            <a href="https://www.bls.gov/emp/tables/educational-attainment.htm">
+            <a
+              href="https://www.bls.gov/emp/tables/educational-attainment.htm"
+              style={{ color: "white" }}
+            >
               product
             </a>
             :&nbsp;
