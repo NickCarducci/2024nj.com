@@ -335,8 +335,41 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        {/**"unfounded accusations, ...I use the wine" */}
+        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
+        (2020–present)
+        <br />
+        What happens when you owe a college money?
+        <br />
+        If you already have the degree, provided, likely-then, that
+        <br />
+        1. you have serviced it by their coupon rate, and
+        <br />
+        2. the federal reserve doesn’t try to prevent borrowing by
+        <br />
+        a. allowing tsy mort and corp rates to rise,
+        <br />
+        b. share-split rights of other currency-holders notwithstanding for
+        logistics’ sake,
+        <br />
+        You can argue foreseeable impossible intent (borrower defense, force
+        majeure) or by donee beneficiary to keep it, albeit historically only
+        exclusive explicitly enumerated purchases are revocable, especially
+        non-durable goods.
+        <br />
+        <br />
+        Yet, like self employed vs small business tax discrepancy, legal
+        etymology changes, and consumer debt ex-durable goods, or degrees, are
+        actually repossesable except for ethics and reason, division of labor,
+        0y/1x 1/hour-GDP/p efficiency, yet
+        <br />
+        <br />
+        I am sympathetic only for the costs we share by accrual, credit as
+        income, the surrendered freedom of others, or labor-borne-demand.
+        <br />
+        <br />
         {/**going to make everyone feel guilty */}
-        Nick Carducci - Econometrist at Occupy Wall St
+        Nick Carducci - Econometrist at Occupy Wall St (2008-present)
         <br />
         The former National Economic Council Director on the right calls
         employer-benefit standardized guarantee scheme (PCE, BEA), or
