@@ -335,6 +335,11 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Joe Pinion: "Unemployment that you paid your entire life into," general
+        fund actual currency versus bonds will be reversed, bond holders deserve
+        nothing.
+        <br />
+        <br />
         The rationale is to compel less borrowing by the government? Why would
         we allow borrowing at all with{space}
         <span id="carducci" onClick={goTo} style={linkyblinky}>
@@ -1598,7 +1603,7 @@ export default class App extends React.Component {
         49% will be fungible for revenue of admin account by withdrawal (or
         sale), in the same NAICS industry-vertical, “”
         <br />
-        <nr />
+        <br />
         Gen. Mark McGuire: "'The only way to descalate,' is to ward escalation,"
         Truncated Production Tax is the only diplomatic solution. Ukraine cannot
         force fighting. If I were in charge of the UN, I would take Zelinski
