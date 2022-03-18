@@ -8846,7 +8846,7 @@ class Bachelors extends React.Component {
   }
   componentDidUpdate = (prevProps) => {
     if (this.props.suggestBachelor !== prevProps.suggestBachelor) {
-      this.setState({ industry: this.state.suggestBachelor });
+      this.setState({ industry: this.props.suggestBachelor });
     }
     if (this.state.industry !== this.state.laststate) {
       this.setState({ laststate: this.state.industry }, () =>
