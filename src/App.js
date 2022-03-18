@@ -338,8 +338,16 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        "People are worried about his mental stability, he has nuclear and has
+        been called a war criminal with huge crowds, what do you think is is
+        mind, set, right now, George Papodopolous?" "A lot of people are
+        standing up to the rig-rate Autocrat. We cannot assume the future of
+        Russia is Putin or someone like him. There are a lot of protestors
+        there, with flags for 'country'." Bianca Delagarza
+        <br />
+        <br />
         "Get married, house, is it worth it?" well we have to impute your
-        mortgage and employer contribution inflation, if you have none
+        mortgage and employer contribution inflation, if you have none.
         <br />
         <br />
         "take the leap try something new, they don't realize the debt they are
