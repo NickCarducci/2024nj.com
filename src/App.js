@@ -338,6 +338,18 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Fed buying mortgage bonds is good for prosperity.
+        <br />
+        <br />
+        Nick Carducci - Econometrist at Occupy Wall St (2008–present)
+        <br />
+        "Should the Fed return to the early 1980s interest rates to put a halt
+        to hyperinflation?"
+        <br />
+        Imagine relenting from matching $2t currency ask for $1.8t/yr instead of
+        banning debt? Reverse amortize (cash/debt)*income.
+        <br />
+        <br />
         "People are worried about his mental stability, he has nuclear and has
         been called a war criminal with huge crowds, what do you think is is
         mind, set, right now, George Papodopolous?" "A lot of people are
