@@ -335,6 +335,16 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Nick Carducci - Bookkeeper at Household Chores (2006–present)
+        <br />
+        Do we tire of ourselves at some point?
+        <br />
+        The limit does not exist! As to{space}
+        <a href="https://micro-theory.com">1/hour-GDP/p</a>
+        {space}variance and percentile with normalized and meaningful
+        population-survey.
+        <br />
+        <br />
         {/**"unfounded accusations, ...I use the wine" */}
         Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
         (2020–present)
@@ -511,7 +521,12 @@ export default class App extends React.Component {
         As a designer, you want to launch once
         <br />
         If you aren’t treating the product map like a public relations endeavor,
-        and without exclusive answer copy
+        and without exclusive answer copy. User centered design is to service
+        yourself, otherwise, your research is vicarious (and someone else can
+        service better).{space}
+        <span role="img" aria-label="black-circle underscore black-circle">
+          ●_●
+        </span>
         <br />
         Community and commitment
         <br />
