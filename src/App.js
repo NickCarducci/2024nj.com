@@ -435,11 +435,9 @@ export default class App extends React.Component {
         actually repossesable except for ethics and reason, division of labor,
         0y/1x 1/hour-GDP/p efficiency, yet
         <br />
-        <br />
-        I am sympathetic only for the costs we share by accrual, credit as
+        <br />I am sympathetic only for the costs we share by accrual, credit as
         income, the surrendered freedom of others, or labor-borne-demand.
-        <br />
-        <br />
+        <h4>I am the best economist, and smartest person, in the world</h4>
         {/**going to make everyone feel guilty */}
         Nick Carducci - Econometrist at Occupy Wall St (2008-present)
         <br />
