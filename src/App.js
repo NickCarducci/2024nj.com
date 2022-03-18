@@ -338,6 +338,8 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        morale killing women and children, on the dole.
+        <br />
         You cannot force me to do something I haven't done before my actual, not
         age nor madness non-biomedical disability onset.
         <br />
