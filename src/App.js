@@ -340,9 +340,13 @@ export default class App extends React.Component {
         })}
         "if we don't have energy independence with NWP12 wastewater, we are
         idiots instead of retards. I was in the military for 25 years," yeah it
-        shows, Mike Gallagar, "I don't even belong to a political party. The
-        Russians, Chinese and Iranians respond to what we do, not what we say.
-        Do things with hard-power. We need peace thru strength."
+        shows, James on Brian Kilmeade ('why don't we share-split the Hryvnia
+        instead of providing them our inventory?' click currency is fungible for
+        their resources, albeit the global pandemic caused checking to be non
+        fungible for currency and therefore treasury leases and inventory), "I
+        don't even belong to a political party. The Russians, Chinese and
+        Iranians respond to what we do, not what we say. Do things with
+        hard-power. We need peace thru strength."
         <br />
         <br />
         In the Nick of time, Johnny come lately, master of trade dominates
