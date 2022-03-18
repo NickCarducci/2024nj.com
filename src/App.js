@@ -361,8 +361,7 @@ export default class App extends React.Component {
         />
         Rob O'neil: "his soldiers are shooting themselves so they do not have to
         go to the front lines, and have already been paid."
-        <br />
-        <br />
+        <h4>Chris Christie goes to Jail (warn tort jail)</h4>
         "if we don't have energy independence with NWP12 wastewater, we are
         idiots instead of retards. I was in the military for 25 years," yeah it
         shows, James on Brian Kilmeade ('why don't we share-split the Hryvnia
