@@ -3464,6 +3464,10 @@ Object.keys(dataData).forEach((label, i) => {
             state={this.state.fundtype}
             onChange={(name) => {
               this.setState({
+                byFund:
+                  name.target.value === "ssaoldagesurvivors"
+                    ? "period"
+                    : this.state.byFund,
                 fundtype: name.target.value,
                 chosenYear:
                   name.target.value !== "ssaoldagesurvivors" &&
@@ -3539,7 +3543,10 @@ Object.keys(dataData).forEach((label, i) => {
               this.setState({ byFund: name.target.value });
             }}
           >
-            {["period", "fund", "bene"].map((name) => (
+            {(this.state.fundtype === "ssaoldagesurvivors"
+              ? ["period", "fund", "bene"]
+              : ["period", "fund", "bene"]
+            ).map((name) => (
               <option key={name} style={{ maxWidth: "100%" }}>
                 {name}
               </option>
@@ -3826,3 +3833,4 @@ Object.keys(dataData).forEach((label, i) => {
 }
 
 export default SSA;
+
