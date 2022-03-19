@@ -338,6 +338,11 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        AntiCommunist, collateralization-professional, Dr. Savage: "take those
+        in with skills and money to lease to the treasury, bonds." People
+        without skills are laborers, idiot.
+        <br />
+        <br />
         Motor Vehicle NFC free rider mutable operational monopsony target margin
         trust-/lease-breaking outright pipelines/spectrum/bridges instead of
         matching by standardized guarantee scheme, general fund self dealing and
