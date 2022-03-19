@@ -339,7 +339,8 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         Prosperous people per person by income and expenses instead of hours and
-        asset/debt equality.
+        asset/debt equality. Stargate SG-1: "Bacteria not in mitosis culture, so
+        it is virus."
         <br />
         <br />
         Fed buying mortgage bonds is good for prosperity.
