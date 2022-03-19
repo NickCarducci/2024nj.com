@@ -338,6 +338,14 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Royalties% and local wastewarer NWP12 currency platform
+        <br />
+        <br />
+        The treasury is going to hold Russian rig-rate lesser oligarchs from
+        borrowing against their properties, unused except as collateral, for
+        loitering surrendered bid of others
+        <br />
+        <br />
         AntiCommunist, collateralization-professional, Dr. Savage: "take those
         in with skills and money to lease to the treasury, bonds." People
         without skills are laborers, idiot.
