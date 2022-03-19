@@ -338,6 +338,12 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        FREE by taxing others is laborless-demand of the producer, supply side.
+        implausible use lease above 5 storefronts and condominiums, spoofable
+        precinct geohash/month report regressive/truncated preoduction tax world
+        peace without conflict of interest, involuntary commitment-breeding
+        <br />
+        <br />
         Royalties% and local wastewarer NWP12 currency platform
         <br />
         <br />
