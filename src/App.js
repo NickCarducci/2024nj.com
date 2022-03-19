@@ -338,6 +338,32 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        cash is fungible for treasury{space}
+        <a href="https://www.census.gov/manufacturing/m3/historical_data/index.html">
+          inventory
+        </a>
+        <br />
+        An index of market concentration rolling false big pool fund is not a
+        good thing. Bear markets is easy living (by hour, Payne Capital
+        Management doesn't account for it in defining rosy-days),
+        <br />
+        Once you are investing off the dark pools and broker pay to anonymize
+        duress of hypocrisy of disclosure to public and other retail traders,
+        not just amongst brokers’
+        <h4>Why doesn't Zelinski share-split?</h4>
+        Guaranteed Bond Income & Booming $150t non-concurrentable currency $2t
+        labor-borne-demand,
+        <br />
+        $550b/yr+ dividends paid for laborless-demand is not good news nor the
+        best thing for families nor the right way to invest for
+        scientific-trust-building. This is a cause of inflation, with mortgages
+        and guarantees. Stagflation is expenses without government nor
+        structural projected leases' material and variable-part labor costs.
+        <br />
+        <br />
+        "Zelinski might say we need to stop this fight."
+        <br />
+        <br />
         Prosperous people per person by income and expenses instead of hours and
         asset/debt equality. Stargate SG-1: "Bacteria not in mitosis culture, so
         it is virus." Under my rule, I don't want to know purchase reports by
