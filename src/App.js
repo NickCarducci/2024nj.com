@@ -338,6 +338,10 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Prosperous people per person by income and expenses instead of hours and
+        asset/debt equality.
+        <br />
+        <br />
         Fed buying mortgage bonds is good for prosperity.
         <br />
         <br />
