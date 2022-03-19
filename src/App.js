@@ -55,6 +55,7 @@ export default class App extends React.Component {
     this.supply = React.createRef();
     this.plandemic = React.createRef();
     this.disability = React.createRef();
+    this.police = React.createRef();
   }
   componentDidMount = () => {
     //document.getElementsByTagName("body")[0].style.margin = 0;
@@ -215,6 +216,8 @@ export default class App extends React.Component {
           window.scroll(0, this.gas.current.offsetTop);
         } else if (["/plandemic"].includes(this.props.pathname)) {
           window.scroll(0, this.plandemic.current.offsetTop);
+        } else if (["/nypd", "/police"].includes(this.props.pathname)) {
+          window.scroll(0, this.police.current.offsetTop);
         }
       };
       check();
@@ -344,13 +347,18 @@ export default class App extends React.Component {
         “Workers’ coop tax breaks!” -@cudney4ma
         <br />
         ‘It’s good for business, per diem’ expected Mike Baker, “that is what
-        everyone expects me to say.”
+        everyone expects me to say.
         <br />
-        “Not being able to save money for house, where is 50’s or 80’s.”
+        ...Not being able to save money for house, where is 50’s or 80’s.
         <br />
         <br />
-        medical attention, desparate to get their son out to college but don't
-        have the money.
+        ...medical attention, desparate to get their son out to college but
+        don't have the money. you get a longer shelf life from the kid-asset,
+        {space}
+        <span id="nypd" onClick={goTo} style={{ color: "blue" }}>
+          if you get what I'm throwing down
+        </span>
+        ."
         <br />
         <br />
         recruiting somebody for espionage tech advancement is processing
@@ -3396,6 +3404,7 @@ export default class App extends React.Component {
         essentially, for branded-IP is nearly science, lower
         <br />
         <br />
+        <hr ref={this.police} />
         <NYPD
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
