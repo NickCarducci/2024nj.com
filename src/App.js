@@ -338,6 +338,24 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Jesus died BECAUSE of sins, never did He say He would die for sin
+        sacrifice, but He has embodied G-d to end such practice
+        <br />
+        “Workers’ coop tax breaks!” -@cudney4ma
+        <br />
+        ‘It’s good for business, per diem’ expected Mike Baker, “that is what
+        everyone expects me to say.”
+        <br />
+        “Not being able to save money for house, where is 50’s or 80’s.”
+        <br />
+        <br />
+        medical attention, desparate to get their son out to college but don't
+        have the money.
+        <br />
+        <br />
+        recruiting somebody for espionage tech advancement is processing
+        science/royalty
+        <br />
         FREE by taxing others is laborless-demand of the producer, supply side.
         implausible use lease above 5 storefronts and condominiums, spoofable
         precinct geohash/month report regressive/truncated preoduction tax world
