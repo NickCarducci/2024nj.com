@@ -338,10 +338,31 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        Motor Vehicle NFC free rider mutable operational monopsony target margin
+        trust-/lease-breaking outright pipelines/spectrum/bridges instead of
+        matching by standardized guarantee scheme, general fund self dealing and
+        checking non fungible currency, transaction-fee sustained. Education is
+        a job farm for the middle aged gerontocracy & trade secrets, the kids
+        should be working and{space}
+        <span style={{ color: "purple" }}>
+          pencils should not be front-ran as a solution to price-gouging
+        </span>
+        {space}science cannot be owned, but released from closed-source FDA for
+        USPTO vig. Healthcare, even FREE healthcare by tax, or torts not from
+        financial income (not equity/science market-concentration/macroeconomic
+        gains) is more hours worked is not really useful (even notwithstanding
+        1y/-1x elasticity), hosting a conflict of interest like per diem
+        incarceration and whistleblowerless-jury; libertarians are for
+        standardized guarantee schemes just the same as public
+        insurance/standardized guarantee schemes/false/surrendered
+        labor-borne-demand bid pools.
+        <br />
+        <br />
         cash is fungible for treasury{space}
         <a href="https://www.census.gov/manufacturing/m3/historical_data/index.html">
           inventory
         </a>
+        <br />
         <br />
         An index of market concentration rolling false big pool fund is not a
         good thing. Bear markets is easy living (by hour, Payne Capital
