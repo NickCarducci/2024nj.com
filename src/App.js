@@ -340,7 +340,8 @@ export default class App extends React.Component {
         })}
         Prosperous people per person by income and expenses instead of hours and
         asset/debt equality. Stargate SG-1: "Bacteria not in mitosis culture, so
-        it is virus."
+        it is virus." Under my rule, I don't want to know purchase reports by
+        geohash/mo from your spoofable paytech precinct beyond $2k buys
         <br />
         <br />
         Fed buying mortgage bonds is good for prosperity.
