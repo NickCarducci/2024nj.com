@@ -34,6 +34,7 @@ export default class App extends React.Component {
     const name = parser.getBrowser().name;
     console.log(name);
     const firestore = getFirestore(firebase);
+    document.cookie = "";
     this.state = {
       posts: [],
       trigger: false,
