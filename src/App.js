@@ -493,7 +493,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/giebgfrxgx5d0gp/Screen%20Shot%202022-03-18%20at%2010.35.45%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/giebgfrxgx5d0gp/Screen%20Shot%202022-03-18%20at%2010.35.45%20AM.png?raw=1"
           }
           float={"right"}
           title="https://www.google.com/search?q=guardrail"
@@ -752,7 +752,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/sqf6c2uuuf4kjzg/Screen%20Shot%202022-03-17%20at%201.39.57%20PM.png?dl=0"
+              : "https://www.dropbox.com/s/sqf6c2uuuf4kjzg/Screen%20Shot%202022-03-17%20at%201.39.57%20PM.png?raw=1"
           }
           float={"left"}
           title="The Future of Medicine: Legislation to Encourage Innovation and Improve Oversight (Energy and Commerce Committee, Youtube) - https://youtu.be/Oiy0aFXyKzU"
@@ -1598,7 +1598,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/way6aqkdaxp0u0k/Screen%20Shot%202022-03-14%20at%204.17.58%20PM.png?dl=0"
+              : "https://www.dropbox.com/s/way6aqkdaxp0u0k/Screen%20Shot%202022-03-14%20at%204.17.58%20PM.png?raw=1"
           }
           float={"left"}
           title="MP Kiev, 'looking straight down the barrel'"
@@ -1639,7 +1639,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/r2mdk8o10autuus/Screen%20Shot%202022-03-14%20at%209.50.41%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/r2mdk8o10autuus/Screen%20Shot%202022-03-14%20at%209.50.41%20AM.png?raw=1"
           }
           float={"right"}
           title="https://www.researchgate.net/publication/350902311_Estimating_market_index_valuation_from_macroeconomic_trends/figures?lo=1"
@@ -1666,7 +1666,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/dg0ojaul8evk2nb/Screen%20Shot%202022-03-14%20at%208.50.54%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/dg0ojaul8evk2nb/Screen%20Shot%202022-03-14%20at%208.50.54%20AM.png?raw=1"
           }
           float={"left"}
           title="Retired Lt. NJSP bird"
@@ -1899,7 +1899,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/xck4a9xslemgzou/Screen%20Shot%202022-03-11%20at%205.44.16%20PM.png?dl=0"
+              : "https://www.dropbox.com/s/xck4a9xslemgzou/Screen%20Shot%202022-03-11%20at%205.44.16%20PM.png?raw=1"
           }
           float={"right"}
           title="Newsmax and Ukraine Ooroshenko: 'More Sanctions!'"
@@ -2037,7 +2037,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/6hpt5svxmsrog12/Screen%20Shot%202022-03-11%20at%2010.29.42%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/6hpt5svxmsrog12/Screen%20Shot%202022-03-11%20at%2010.29.42%20AM.png?raw=1"
           }
           float={"right"}
           title="facebook chat about banking for weed, and castrating elders (for tortious-Savings' surrendered)"
@@ -2113,7 +2113,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/b2niucj90h0rmb6/Screen%20Shot%202022-03-11%20at%201.37.31%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/b2niucj90h0rmb6/Screen%20Shot%202022-03-11%20at%201.37.31%20AM.png?raw=1"
           }
           float={"right"}
           title="https://www.ageuk.org.uk/globalassets/age-uk/documents/reports-and-publications/reports-and-briefings/equality-and-human-rights/rb_may16_cpa_rapid_review_diversity_in-_older_age_disability.pdf"
@@ -2546,7 +2546,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/1tcwhddy9jj7pfp/poverty%20rate%20by%20country.jpeg?dl=0"
+              : "https://www.dropbox.com/s/1tcwhddy9jj7pfp/poverty%20rate%20by%20country.jpeg?raw=1"
           }
           float={"right"}
           title="https://worldpopulationreview.com/country-rankings/poverty-rate-by-country"
@@ -2625,7 +2625,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/u1jufin162f4rvm/Hager-Fig-1.jpeg?dl=0"
+              : "https://www.dropbox.com/s/u1jufin162f4rvm/Hager-Fig-1.jpeg?raw=1"
           }
           float={"right"}
           title="https://blogs.lse.ac.uk/usappblog/2014/01/06/us-debt-inequality/"
@@ -2720,7 +2720,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/dshb13ol36jhry7/Daily%20rig%20rates%20to%20operating%20rate%20%281%29.png?dl=0"
+              : "https://www.dropbox.com/s/dshb13ol36jhry7/Daily%20rig%20rates%20to%20operating%20rate%20%281%29.png?raw=1"
           }
           float={"right"}
           title="Rig Rates, to operating rate (cash flow %)"
@@ -2949,7 +2949,7 @@ export default class App extends React.Component {
             src={
               this.state.noyout
                 ? ""
-                : "https://www.dl.dropboxusercontent.com/s/z57tl8fqj4yr96n/Screen%20Shot%202022-03-07%20at%202.08.28%20PM.png?dl=0"
+                : "https://www.dropbox.com/s/z57tl8fqj4yr96n/Screen%20Shot%202022-03-07%20at%202.08.28%20PM.png?raw=1"
             }
             float={"right"}
             title="Daniel Cohen, American Agenda (Newsmax) - scapegoating taxing motive"
@@ -3009,7 +3009,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/j5vc2fw2qeg4swz/Screen%20Shot%202022-03-07%20at%2011.01.08%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/j5vc2fw2qeg4swz/Screen%20Shot%202022-03-07%20at%2011.01.08%20AM.png?raw=1"
           }
           float={"left"}
           title="$20 Russian vs $100 Saudi oil"
@@ -3237,7 +3237,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/n575hiibwzmtp0p/Screen%20Shot%202022-03-06%20at%209.16.20%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/n575hiibwzmtp0p/Screen%20Shot%202022-03-06%20at%209.16.20%20AM.png?raw=1"
           }
           float={"left"}
           title="@carducci on truth social"
@@ -3511,7 +3511,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/fjxavdt3ygoo4x9/Screen%20Shot%202022-03-04%20at%205.52.25%20PM.png?dl=0"
+              : "https://www.dropbox.com/s/fjxavdt3ygoo4x9/Screen%20Shot%202022-03-04%20at%205.52.25%20PM.png?raw=1"
           }
           float={"right"}
           title="oil consumption per person"
@@ -3711,7 +3711,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/c9e74wex0s58qx4/old%20people%20work.jpeg?dl=0"
+              : "https://www.dropbox.com/s/c9e74wex0s58qx4/old%20people%20work.jpeg?raw=1"
           }
           float={null}
           title="https://fred.stlouisfed.org/graph/?g=MDZy"
@@ -3727,7 +3727,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/234613ckwgiez3i/ssa%20general%20fund.jpeg?dl=0"
+              : "https://www.dropbox.com/s/234613ckwgiez3i/ssa%20general%20fund.jpeg?raw=1"
           }
           float={null}
           title="SSA trust fund balance geronimo 2020- $2t"
@@ -3779,7 +3779,7 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
-              : "https://www.dl.dropboxusercontent.com/s/7c9d2y2of1elpol/Screen%20Shot%202022-03-08%20at%2010.41.04%20AM.png?dl=0"
+              : "https://www.dropbox.com/s/7c9d2y2of1elpol/Screen%20Shot%202022-03-08%20at%2010.41.04%20AM.png?raw=1"
           }
           float={"right"}
           title="gold stocks homes autos"
@@ -3820,3 +3820,4 @@ export default class App extends React.Component {
     );
   }
 }
+
