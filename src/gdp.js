@@ -426,14 +426,13 @@ class GDPchild extends React.Component {
       margin: "2px"
     };
 
-    const lineheight = this.props.lineheight ? this.props.lineheight : 200;
     const linecss = {
       left: "0px",
       bottom: "0px",
       display: "flex",
       position: "absolute",
       width: "100%",
-      height: lineheight + 10,
+      height: "200px",
       transform: "translate(0%,0%) scale(1,-1)"
     };
     const shortNumber = (scler, notRound) => {
@@ -453,68 +452,37 @@ class GDPchild extends React.Component {
       }
       return newnum + (decimal ? "." + decimal : "") + suff[app];
     };
-    const coefficience = (this.props.lastWidth - 60) / this.props.lastWidth;
     const noData = this.state.noData.map(([x, y]) => [
       ((x - this.state.lowDate) / this.state.xAxis) *
-        coefficience *
+        0.9 *
         this.props.lastWidth,
       0
     ]);
     const testingData = this.state.testingData.map(([x, y]) => [
       ((x - this.state.lowDate) / this.state.xAxis) *
-        coefficience *
+        0.9 *
         this.props.lastWidth,
-      ((y - this.state.lowTesting) / this.state.yAxis) * lineheight
+      ((y - this.state.lowTesting) / this.state.yAxis) * 150
     ]);
     if (this.props.data) {
       return (
         <div
-          style={{
-            width: "100%",
-            height: lineheight + 50,
-            position: "relative"
-          }}
+          style={{ width: "100%", minHeight: "230px", position: "relative" }}
         >
           <div
             style={{
-              alignItems: "flex-end",
-              bottom: "0px",
-              height: "60px",
+              padding: "4px 8px",
+              top: "60px",
               display: "flex",
               position: "absolute",
-              width: "100%",
-              left: "2px",
-              zIndex: "0",
-              overflowX: "auto",
-              overflowY: "hidden"
+              left: "0px",
+              flexDirection: "column",
+              zIndex: "1",
+              backgroundColor: "rgba(250,250,250,.6)"
             }}
           >
-            <div
-              style={{
-                backgroundColor: "rgba(250,250,250,0.6)",
-                fontSize: "15px",
-                display: "flex",
-                position: "absolute",
-                width: "max-content"
-              }}
-            >
-              Gross Domestic Product per population/person/cohort/capita
-              <br />
-              any deviation is technological advancement. which way?
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundColor: "rgba(255,255,255,.3)",
-              padding: "4px 8px",
-              position: "absolute",
-              right: "0px"
-            }}
-          >
-            ${shortNumber(Math.round(this.state.lowTesting * 100) / 100)}/person
-            -&nbsp;
-            <br />${shortNumber(Math.round(this.state.highTesting * 100) / 100)}
-            /person
+            ${Math.round(this.state.lowTesting * 100) / 100}/person -&nbsp;
+            <br />${Math.round(this.state.highTesting * 100) / 100}/person
             <div
               style={{
                 height: "min-content",
@@ -528,14 +496,12 @@ class GDPchild extends React.Component {
               {this.state.highDate}
             </div>
           </div>
-          <br />
-          <div
-            style={{
-              position: "relative",
-              height: lineheight
-            }}
-          >
-            <svg style={linecss} xmlns="http://www.w3.org/2000/svg">
+          <div style={{ transform: "translate(0px,220px)" }}>
+            <svg
+              className="all"
+              style={linecss}
+              xmlns="http://www.w3.org/2000/svg"
+            >
               {noData.map(
                 ([x, y], i) =>
                   !isNaN(x) &&
@@ -570,6 +536,53 @@ class GDPchild extends React.Component {
               )}
             </svg>
           </div>
+          <div
+            style={{
+              backgroundColor: "rgba(250,250,250,0.6)",
+              top: "10px",
+              height: "40px",
+              display: "flex",
+              position: "relative",
+              width: "100%",
+              left: "2px",
+              zIndex: "0",
+              overflowX: "auto",
+              overflowY: "hidden"
+            }}
+          >
+            <div
+              style={{
+                fontSize: "15px",
+                display: "flex",
+                position: "absolute",
+                width: "max-content"
+              }}
+            >
+              Gross Domestic Product per population/person/cohort/capita
+              <br />
+              any deviation is technological advancement. which way?
+              {/*<div style={{ width: "min-content" }}>
+                <div
+                  style={{
+                    width: "5px",
+                    height: "5px",
+                    backgroundColor: "orange"
+                  }}
+                />
+                covid19&nbsp;(+)&nbsp;&nbsp;
+              </div>
+              <div style={{ width: "min-content" }}>
+                <div
+                  style={{
+                    width: "5px",
+                    height: "5px",
+                    backgroundColor: "black"
+                  }}
+                />
+                num
+                </div>*/}
+            </div>
+          </div>
         </div>
       );
     } else return null;
@@ -581,18 +594,21 @@ class GDP extends React.Component {
     super(props);
     const popdatapre2010 = popdata.filter((x) => x.year < 2010);
     this.state = {
-      chosenDecade: 2000,
-      chosenDecadeInx: popdatapre2010.length,
+      chosenDecade: 1890,
+      chosenDecadeInx: popdatapre2010.length - 12,
       data: gdpdata
         .map((x) => {
           var foo = { ...x };
+          var b4Idx = null;
           var thisdecade = popdata.find(
             (p) => x.year - p.year < 10 && x.year - p.year > -1
           );
           if (foo.num) {
             foo.num = foo.num * 1000000000;
           }
-          var addi = thisdecade.pop * ((x.year - thisdecade.year) / 10);
+          var b4pop = popdata[b4Idx - 1] ? popdata[b4Idx - 1].pop : 0;
+          var b4year = popdata[b4Idx - 1] ? popdata[b4Idx - 1].year : 0;
+          var addi = (thisdecade.pop - b4pop) * ((x.year - b4year) / 10);
           foo.pop = thisdecade.pop + addi;
           return foo;
         })
@@ -651,98 +667,62 @@ class GDP extends React.Component {
     //console.log(this.props.covidData);
     //if (this.state.chosenState === this.state.lastChosenState) {
     const popdatapre2010 = popdata.filter((x) => x.year < 2010);
-    const labelstyle = {
-      textAlign: "right",
-      color: "white",
-      backgroundColor: "rgba(50,120,200,.6)",
-      height: "min-content",
-      position: "absolute",
-      flexWrap: "wrap"
-    };
     return (
-      <div
-        style={{
-          width: "100%",
-          position: "relative",
-          backgroundColor: "rgb(110,95,140)"
-        }}
-      >
-        <span style={labelstyle}>
-          gdp/p&nbsp;
-          <a
-            style={{ color: "white" }}
-            href="https://fred.stlouisfed.org/graph/?g=MHaa"
-          >
-            mv1===mv2==GDP
-          </a>
-          /yr&nbsp;
-          <span role="img" aria-label="skull">
-            💀
-          </span>
-          <div
-            style={{
-              zIndex: "1",
-              position: "relative",
-              margin: "10px 50px",
-              display: "flex",
-              width: "calc(70% - 20px)",
-              justifyContent: "space-between"
-            }}
-          >
-            <div
-              style={{
-                cursor: "pointer",
-                border: "1px solid",
-                padding: "10px",
-                userSelect: "none"
-              }}
-              onClick={() => {
-                if (this.state.chosenDecadeInx > 0)
-                  this.setState(
-                    { chosenDecadeInx: this.state.chosenDecadeInx - 1 },
-                    () => {
-                      this.setState({
-                        chosenDecade:
-                          popdatapre2010[this.state.chosenDecadeInx].year
-                      });
-                    }
-                  );
-              }}
-            >
-              {"<"}
-            </div>
-            {this.state.chosenDecade}
-            <div
-              style={{
-                cursor: "pointer",
-                border: "1px solid",
-                padding: "10px",
-                userSelect: "none"
-              }}
-              onClick={() => {
-                if (this.state.chosenDecadeInx < popdatapre2010.length - 1)
-                  this.setState(
-                    { chosenDecadeInx: this.state.chosenDecadeInx + 1 },
-                    () => {
-                      this.setState({
-                        chosenDecade:
-                          popdatapre2010[this.state.chosenDecadeInx].year
-                      });
-                    }
-                  );
-              }}
-            >
-              {">"}
-            </div>
-          </div>
+      <div>
+        cases to tests; mv1===mv2==GDP/yr&nbsp;
+        <span role="img" aria-label="skull">
+          💀
         </span>
-
         <GDPchild
-          lastWidth={this.props.lastWidth - 20}
+          lastWidth={this.props.lastWidth}
           data={data} //filteredByState
           crime={this.state.crime}
           chosenState={this.state.chosenState}
         />
+        <div
+          style={{
+            margin: "10px 50px",
+            display: "flex",
+            width: "70%",
+            justifyContent: "space-between"
+          }}
+        >
+          <div
+            style={{ border: "1px solid", padding: "10px", userSelect: "none" }}
+            onClick={() => {
+              if (this.state.chosenDecadeInx > 0)
+                this.setState(
+                  { chosenDecadeInx: this.state.chosenDecadeInx - 1 },
+                  () => {
+                    this.setState({
+                      chosenDecade:
+                        popdatapre2010[this.state.chosenDecadeInx].year
+                    });
+                  }
+                );
+            }}
+          >
+            {"<"}
+          </div>
+          {this.state.chosenDecade}
+          <div
+            style={{ border: "1px solid", padding: "10px", userSelect: "none" }}
+            onClick={() => {
+              if (this.state.chosenDecadeInx < popdatapre2010.length - 1)
+                this.setState(
+                  { chosenDecadeInx: this.state.chosenDecadeInx + 1 },
+                  () => {
+                    this.setState({
+                      chosenDecade:
+                        popdatapre2010[this.state.chosenDecadeInx].year
+                    });
+                  }
+                );
+            }}
+          >
+            {">"}
+          </div>
+        </div>
       </div>
     );
   }
