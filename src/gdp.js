@@ -426,13 +426,14 @@ class GDPchild extends React.Component {
       margin: "2px"
     };
 
+    const lineheight = this.props.lineheight ? this.props.lineheight : 200;
     const linecss = {
       left: "0px",
       bottom: "0px",
       display: "flex",
       position: "absolute",
       width: "100%",
-      height: "200px",
+      height: lineheight + 10,
       transform: "translate(0%,0%) scale(1,-1)"
     };
     const shortNumber = (scler, notRound) => {
@@ -452,37 +453,68 @@ class GDPchild extends React.Component {
       }
       return newnum + (decimal ? "." + decimal : "") + suff[app];
     };
+    const coefficience = (this.props.lastWidth - 60) / this.props.lastWidth;
     const noData = this.state.noData.map(([x, y]) => [
       ((x - this.state.lowDate) / this.state.xAxis) *
-        0.9 *
+        coefficience *
         this.props.lastWidth,
       0
     ]);
     const testingData = this.state.testingData.map(([x, y]) => [
       ((x - this.state.lowDate) / this.state.xAxis) *
-        0.9 *
+        coefficience *
         this.props.lastWidth,
-      ((y - this.state.lowTesting) / this.state.yAxis) * 150
+      ((y - this.state.lowTesting) / this.state.yAxis) * lineheight
     ]);
     if (this.props.data) {
       return (
         <div
-          style={{ width: "100%", minHeight: "230px", position: "relative" }}
+          style={{
+            width: "100%",
+            height: lineheight + 50,
+            position: "relative"
+          }}
         >
           <div
             style={{
-              padding: "4px 8px",
-              top: "60px",
+              alignItems: "flex-end",
+              bottom: "0px",
+              height: "60px",
               display: "flex",
               position: "absolute",
-              left: "0px",
-              flexDirection: "column",
-              zIndex: "1",
-              backgroundColor: "rgba(250,250,250,.6)"
+              width: "100%",
+              left: "2px",
+              zIndex: "0",
+              overflowX: "auto",
+              overflowY: "hidden"
             }}
           >
-            ${Math.round(this.state.lowTesting * 100) / 100}/person -&nbsp;
-            <br />${Math.round(this.state.highTesting * 100) / 100}/person
+            <div
+              style={{
+                backgroundColor: "rgba(250,250,250,0.6)",
+                fontSize: "15px",
+                display: "flex",
+                position: "absolute",
+                width: "max-content"
+              }}
+            >
+              Gross Domestic Product per population/person/cohort/capita
+              <br />
+              any deviation is technological advancement. which way?
+            </div>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255,255,255,.3)",
+              padding: "4px 8px",
+              position: "absolute",
+              right: "0px"
+            }}
+          >
+            ${shortNumber(Math.round(this.state.lowTesting * 100) / 100)}/person
+            -&nbsp;
+            <br />${shortNumber(Math.round(this.state.highTesting * 100) / 100)}
+            /person
             <div
               style={{
                 height: "min-content",
@@ -496,12 +528,14 @@ class GDPchild extends React.Component {
               {this.state.highDate}
             </div>
           </div>
-          <div style={{ transform: "translate(0px,220px)" }}>
-            <svg
-              className="all"
-              style={linecss}
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <br />
+          <div
+            style={{
+              position: "relative",
+              height: lineheight
+            }}
+          >
+            <svg style={linecss} xmlns="http://www.w3.org/2000/svg">
               {noData.map(
                 ([x, y], i) =>
                   !isNaN(x) &&
@@ -535,53 +569,6 @@ class GDPchild extends React.Component {
                   )
               )}
             </svg>
-          </div>
-          <div
-            style={{
-              backgroundColor: "rgba(250,250,250,0.6)",
-              top: "10px",
-              height: "40px",
-              display: "flex",
-              position: "relative",
-              width: "100%",
-              left: "2px",
-              zIndex: "0",
-              overflowX: "auto",
-              overflowY: "hidden"
-            }}
-          >
-            <div
-              style={{
-                fontSize: "15px",
-                display: "flex",
-                position: "absolute",
-                width: "max-content"
-              }}
-            >
-              Gross Domestic Product per population/person/cohort/capita
-              <br />
-              any deviation is technological advancement. which way?
-              {/*<div style={{ width: "min-content" }}>
-                <div
-                  style={{
-                    width: "5px",
-                    height: "5px",
-                    backgroundColor: "orange"
-                  }}
-                />
-                covid19&nbsp;(+)&nbsp;&nbsp;
-              </div>
-              <div style={{ width: "min-content" }}>
-                <div
-                  style={{
-                    width: "5px",
-                    height: "5px",
-                    backgroundColor: "black"
-                  }}
-                />
-                num
-                </div>*/}
-            </div>
           </div>
         </div>
       );
