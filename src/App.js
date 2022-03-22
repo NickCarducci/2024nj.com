@@ -343,7 +343,25 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         "China needs economic growth to satiafry its population," how does that
-        make sense? Why would China's population depend on higher expenses?
+        make sense?
+        <br />
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/p1gm1q2wtxizt9u/Screen%20Shot%202022-03-22%20at%204.25.10%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Eric Bolling and Ron Johnson complaining about lower costs"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Why would China's population depend on higher expenses?
         <br />
         <br />
         Corporates are subservient to customers unless they use inventory to
