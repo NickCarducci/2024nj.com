@@ -342,6 +342,10 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        "China needs economic growth to satiafry its population," how does that
+        make sense? Why would China's population depend on higher expenses?
+        <br />
+        <br />
         Corporates are subservient to customers unless they use inventory to
         profit beyond sales (leases, law, without desist by NAICS variable or
         paid, and comp-yet, writers).
