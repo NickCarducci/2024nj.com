@@ -298,7 +298,7 @@ export default class App extends React.Component {
         >
           &#9998;
         </div>
-        <div
+        {/*<div
           onClick={() => {
             window.scroll(0, 100);
             this.setState({ trigger: true });
@@ -310,7 +310,7 @@ export default class App extends React.Component {
             width: "calc(100% - 40px)",
             backgroundColor: "rgba(20,20,20,.5)"
           }}
-        />
+        />*/}
         <div
           style={{
             display: "flex",
