@@ -342,7 +342,63 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        "China needs economic growth to satiafry its population," how does that
+        "Conservative government regulations," Calvin.
+        <h4>
+          You cannot keep your insurance as it names a price from expiring
+          premiums of labor borne bid
+        </h4>
+        I want to be able to not take credit as checking without currency,
+        treasury inventory/royalty%
+        <br />
+        Checking is no longer fungible for treasury inventory/royalty% currency
+        due to pandemic.
+        <h4>Should castrate, jail or intranet. Medicate to house, why?</h4>
+        Same as disability for madness vs actual disability is lookers vs
+        statutory or rape. Intranet instead to save money. Class action
+        shouldn’t make any non responders’ claims, moot. Again. Login.gov for
+        minors and repeat statutory film makers. Gross is not a crime,
+        non-consent by not of age, statutory; “consent” notwithstanding. You all
+        realize the internet can be made into an Intranet, right? We can stop
+        the objects. As a website developer we need login.gov to stop convicts
+        and under age. Please don’t conflate perverts with pedophiles, prudes.
+        <br />
+        What is "partisan," Mazie, that is not to ward? Word salad!
+        <br />
+        Get your book straight before telling a justice they are useless, Mazie.
+        <br />
+        If there was no displacement of justice inviting partisanship then there
+        would be no justices... for countervailing law and judges for cases as
+        it happens...
+        <br />
+        There are too many laws, that lawyers use to profit and comparative
+        innocence is frequent.
+        <br />
+        <br />
+        Mazie: "ideological basis instead of the facts and the law;" supreme
+        courts only see cases in which laws countervail eachother.
+        <br />
+        Obviously the law is not enough.
+        <br />
+        If no ideology were necessary there would be no people beyond arresting
+        officer
+        <br />
+        <br />
+        "One way or the other." I invented the political compass. Count
+        non-voters
+        <h4>Dismantle financial industry instead</h4>
+        1/3 non-voters are for occupying wall st to stop debt. and insurance
+        public and private. libertarians like surrendering others' freedoms to
+        bid as labor-borne. stop votes to make changes without politicians
+        turning out more than half (?) voters.
+        <br />
+        <br />
+        Stop votes to make changes without politicians turning out more than
+        half (?) voters. Originally I was thinking it to be an automatic no for
+        “no candidate,” which could invoke power (or lack thereof) of then of
+        politicians’ vote, by their turnout*statutory power (House/Senate size)
+        <br />
+        <br />
+        "China needs economic growth to satisfy its population," how does that
         make sense?
         <br />
         <Cable
