@@ -342,7 +342,13 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        A Cyber attack cannot happen with proper CORS authentication, bitch Bridget Gabriel.<br/>
+        Corporates are subservient to customers unless they use inventory to
+        profit beyond sales (leases, law, without desist by NAICS variable or
+        paid, and comp-yet, writers).
+        <br />
+        A Cyber attack cannot happen with proper CORS authentication, bitch
+        Bridget Gabriel.
+        <br />
         Closed source vig "Licenses to{space}
         <a href="https://teapharmacy.party/drugs">
           sell your inventory legally
