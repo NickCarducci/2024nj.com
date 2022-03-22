@@ -299,19 +299,6 @@ export default class App extends React.Component {
           &#9998;
         </div>
         <div
-          onClick={() => {
-            window.scroll(0, 100);
-            this.setState({ trigger: true });
-          }}
-          style={{
-            display: this.state.trigger ? "none" : "block",
-            position: "absolute",
-            height: document.documentElement.scrollHeight,
-            width: "calc(100% - 40px)",
-            backgroundColor: "rgba(20,20,20,.5)"
-          }}
-        />
-        <div
           style={{
             display: "flex",
             backgroundColor: "green"
