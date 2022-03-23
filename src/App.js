@@ -351,7 +351,7 @@ export default class App extends React.Component {
         <br />
         <br />
         mood altering hapiness mediocation for housing the homeless. why
-        medicate for housing the homeless?
+        medicate for housing the homeless?. what but for mvp
         <br />
         <br />
         "consider the circumstances." Cornyn "no," political decisions
