@@ -343,7 +343,13 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         unique files? Euro login.gov. let’s dance. We need to nip it in the bud.
-        cors? are we talking variance of quality skew?
+        cors? are we talking variance of quality skew? (modes of commission of
+        crimes change, like internet, an indication relative to baseline, we all
+        see them on the internet) unique files? Euro login.gov. let’s dance. We
+        need to nip it in the bud. cors? are we talking variance of quality
+        skew? Variance goes to intent, as for what else, 3-50 years for
+        “trolling for images of children and sexual exploitations.” There we go,
+        bond loss profit
         <br />
         <Cable
           style={{ width: "100%" }}
