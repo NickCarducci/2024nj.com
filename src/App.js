@@ -345,7 +345,10 @@ export default class App extends React.Component {
         <h4>
           your cup will overfloweth with inventory by transaction fee currency;
           non-perishable of grade; truncated production tax can replace unequal
-          bond-tax and bail excess of tortious claims
+          bond-tax and bail excess of tortious claims{space}
+          <a href="https://qr.ae/pG0sYK">&now</a>
+          {space}currency offletting coupled with non-currency checking pandemic
+          proposed by baby boomers
         </h4>
         the economy is equal part corp mort gov, treasury-debit=federal reserve
         currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
@@ -4053,3 +4056,4 @@ export default class App extends React.Component {
     );
   }
 }
+
