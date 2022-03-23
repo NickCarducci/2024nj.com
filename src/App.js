@@ -342,13 +342,19 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        put merck in the water and mandate testing for fatties, consistency in
-        what matter.
+        the economy is equal part corp mort gov, treasury-debit=federal reserve
+        currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
+        corp).
         <h4>For what it is worth.</h4>
-        I am not a publisher when I compile without paying users, I am a writer
-        with sources.
+        I am not a publisher when I compile without paying users, nor am I
+        publishing automatically (user generated, free rider mutable), I am a
+        writer with sources.
         <br />
-        Gold standard transaction fee + 3% under $2k.
+        Gold standard transaction fee + 3% under $2k, free rider immutable
+        sewage gravity toilets, police and lawsuits, as to ward open ingredient
+        list and naming, without per diem incarceration and conflict of interest
+        to provide Tranquil and voluntary trade, but for what other than
+        1/hour-GDP/p economic welfare.
         <br />
         “Philosophy vs methodology, screen for predisposition that judges
         shouldn’t have but for folks who want them to have.”
@@ -358,17 +364,20 @@ export default class App extends React.Component {
         <br />
         <br />
         put merck in the water and mandate testing for fatties, consistency in
-        what matter. 11/12 NAICS, 1/12 max-royalty vertical lines
+        what matter. 11/12 NAICS, 1/12 max-royalty vertical lines.
         <br />
         <br />
         eat my ass to get into my events because Alzheimers presentation came
         about with sewage
         <br />
         <br />
-        mood altering hapiness mediocation for housing the homeless. why
-        medicate for housing the homeless?. what but for mvp. economic law has
-        shown. Religious freedom but not as evidence. inseminate cell in the
-        courtroom.
+        mood altering hapiness medication for housing the homeless. why medicate
+        for housing the homeless? Superfluous abuse, what but for if not mvp,
+        for bars. economic law has shown much less thn ascertanable discrepancy
+        between PCE and CPI in intentional harm of standardized guarantee
+        Schemes, yet for surrendered freedom of third party donee beneficiaries
+        witht the labor-borne bid to demand. Religious freedom but not as
+        evidence. inseminate cell in the courtroom.
         <br />
         <br />
         "consider the circumstances." Cornyn "no," political decisions
