@@ -342,6 +342,9 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <h4>
+          your cup will overfloweth with inventory by transaction fee currency
+        </h4>
         the economy is equal part corp mort gov, treasury-debit=federal reserve
         currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
         corp). you cannot hold my client with no thing to review. who reviews
