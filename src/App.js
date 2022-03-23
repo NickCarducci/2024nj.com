@@ -344,7 +344,7 @@ export default class App extends React.Component {
         })}
         <h4>
           <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">Faster</a>
-          {space}means an{space}
+          {space}<a href="https://fred.stlouisfed.org/graph/?g=Ni4B">means</a>{space}an{space}
           <a href="https://qr.ae/pG0sEN">insurmoutable loss</a>
         </h4>
         The Supreme Court cannot possibly be impartial unless lower courts are
