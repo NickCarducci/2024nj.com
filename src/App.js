@@ -463,12 +463,14 @@ export default class App extends React.Component {
         </h4>
         "Cameras in the courtroom," what possibly could be the purpose of not
         doing that? Are you trying to hide incriminations and launder funds thru
-        per diem incarceration to bond-index-funds? “? of application of law,
-        not of fact,” is the role of Supreme Ct, & appeals are otherwise. That’s
-        y it’s bonkers to not (1) weigh “partisans,” and (2) fine lower courts
-        for successful appeals. Share split the Hryvnia. Appropriate
-        “partisanship” often happens as everyone has laws or precedence to
-        defend themselves or be plaintiff. Like pharma cops.
+        per diem incarceration to bond-index-funds?
+        <h4>Supreme court that follows precedence is useless, for appealer</h4>
+        “? of application of law, not of fact,” is the role of Supreme Ct, &
+        appeals are otherwise. That’s y it’s bonkers to not (1) weigh
+        “partisans,” and (2) fine lower courts for successful appeals. Share
+        split the Hryvnia. Appropriate “partisanship” often happens as everyone
+        has laws or precedence to defend themselves or be plaintiff. Like pharma
+        cops.
         <h4>Minnesota carface-killed Floyd PharmaBank</h4>
         Ah man she (Ketanji Brown Jackson) is a cop; naming and open ingredients
         can dismantle FDA/USPTO/NIH. World intellectual property no science
