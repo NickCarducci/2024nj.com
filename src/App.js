@@ -342,6 +342,9 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        The Supreme Court cannot possibly be impartial unless lower courts are
+        wrong. Founders {">"} Congress. See petty tax 1775-1787 ratification.
+        <br />
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
@@ -358,6 +361,8 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
+        dispositive lessers back to monetary-debits
+        <br />
         Lean in. -50% infant and toddler 3 months, why? WE WILL NOT RELITIGATE.
         Superfluous medication duress is not good behavior. Take medication only
         way out, castration by any means. Why would you jail or medicate
@@ -378,8 +383,15 @@ export default class App extends React.Component {
         </h4>
         the economy is equal part corp mort gov, treasury-debit=federal reserve
         currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
-        corp). you cannot hold my client with no thing to review. who reviews
-        naming "the thing?" I can programmatically. sentancing
+        corp, 20 years to double for homes and GDP, 50 for people, 40 for
+        expenses,{space}
+        <a href="https://fred.stlouisfed.org/graph/?g=NhZj">including</a>
+        {space}
+        <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
+          insurance
+        </a>
+        ). you cannot hold my client with no thing to review. who reviews naming
+        "the thing?" I can programmatically. sentancing
         <h4>For what it is worth.</h4>
         I am not a publisher when I compile without paying users, nor am I
         publishing automatically (user generated, free rider mutable), I am a
