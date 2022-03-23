@@ -344,7 +344,9 @@ export default class App extends React.Component {
         })}
         <h4>
           <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">Faster</a>
-          {space}<a href="https://fred.stlouisfed.org/graph/?g=Ni4B">means</a>{space}an{space}
+          {space}
+          <a href="https://fred.stlouisfed.org/graph/?g=Ni4B">means</a>
+          {space}an{space}
           <a href="https://qr.ae/pG0sEN">insurmoutable loss</a>
         </h4>
         The Supreme Court cannot possibly be impartial unless lower courts are
@@ -370,9 +372,10 @@ export default class App extends React.Component {
         {/**discrimination is deduced by comp or chats */}
         <br />
         Lean in. -50% infant and toddler 3 months, why? WE WILL NOT RELITIGATE.
-        Superfluous medication duress is not good behavior. Take medication only
-        way out, castration by any means. Why would you jail or medicate
-        homeless, just house them and login.gov
+        "all cases would be denounced, otherwise" - Cynthia Ganz. Superfluous
+        medication duress is not good behavior. Take medication only way out,
+        castration by any means. Why would you jail or medicate homeless, just
+        house them and login.gov
         <br />
         <br />
         constitution can be living insofar that it is not oxymoronic.
