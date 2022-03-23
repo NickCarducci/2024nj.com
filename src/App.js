@@ -391,7 +391,10 @@ export default class App extends React.Component {
           insurance
         </a>
         ). you cannot hold my client with no thing to review. who reviews naming
-        "the thing?" I can programmatically. sentancing
+        "the thing?" I can programmatically. sentancing. PCE-CPI ascertainable;
+        rollover. Labor-borne.
+        {/**discern intent of imbue values from constitution 
+        as founder preamble over congress */}
         <h4>For what it is worth.</h4>
         I am not a publisher when I compile without paying users, nor am I
         publishing automatically (user generated, free rider mutable), I am a
