@@ -343,7 +343,22 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         put merck in the water and mandate testing for fatties, consistency in
-        what matter
+        what matter.
+        <h4>For what it is worth.</h4>
+        I am not a publisher when I compile without paying users, I am a writer
+        with sources.
+        <br />
+        Gold standard transaction fee + 3% under $2k.
+        <br />
+        “Philosophy vs methodology, screen for predisposition that judges
+        shouldn’t have but for folks who want them to have.”
+        <br />
+        Judicial philosophy, convenience, originalist, non-consistency yet for
+        quality skew.
+        <br />
+        <br />
+        put merck in the water and mandate testing for fatties, consistency in
+        what matter. 11/12 NAICS, 1/12 max-royalty vertical lines
         <br />
         <br />
         eat my ass to get into my events because Alzheimers presentation came
