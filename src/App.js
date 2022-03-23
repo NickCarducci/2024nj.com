@@ -342,6 +342,46 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        treasury and currency have control over inventory, not Executive nor
+        Congress, that which have power to Tax in an equal manner. Bail is only
+        to be inexcessive and bond-tax is only to be equal lmao ok.
+        <h4>
+          "I promise not to be political," You only SEE cases that have two laws
+          or incorrect circuits. "Stare Decisis,"{/**let precedence stand */}{" "}
+          precedence is law. Let hypocritical/incorrect precedence stand? Like
+          trust breaking hypocrisy? Crack is base form of cocaine and Ritalin?
+          Everyone can use that. What about equal presentation of weed daily use
+          and in accidents, DUI per diem incarceration state victimization
+          especially without linkage? The Supreme Court needs to solve
+          conflicting Grassley laws.{" "}
+          {/*I appreciate Ossoff appreciating journals
+          but Github has been having many a problems during these hearings
+          exclusively, very unlikely by happenstance*/}
+          innocence, and bad things. Bail is only to be inexcessive and bond-tax
+          is only to be equal lmao ok
+        </h4>
+        "Cameras in the courtroom," what possibly could be the purpose of not
+        doing that? Are you trying to hide incriminations and launder funds thru
+        per diem incarceration to bond-index-funds? “? of application of law,
+        not of fact,” is the role of Supreme Ct, & appeals are otherwise. That’s
+        y it’s bonkers to not (1) weigh “partisans,” and (2) fine lower courts
+        for successful appeals. Share split the Hryvnia. Appropriate
+        “partisanship” often happens as everyone has laws or precedence to
+        defend themselves or be plaintiff. Like pharma cops.
+        <h4>Minnesota carface-killed Floyd PharmaBank</h4>
+        Ah man she (Ketanji Brown Jackson) is a cop; naming and open ingredients
+        can dismantle FDA/USPTO/NIH. World intellectual property no science
+        processing too broad! Treasury leasing lefties get to the right. Global
+        ubi albeit labor-borne demand forlorn to the left. Monetary-debits have
+        always been vault share treasury inventory currency, leases no need, try
+        transaction fees on NAICS max-royalty, royalty% for UT NM WY thus far,
+        and geohash/month (Truncated Production Tax, open ingredient and naming)
+        2 week Public review (equities)
+        <br />
+        <br />
+        Name your price tool surrendered freedom of others
+        <br />
+        <br />
         "Conservative government regulations," Calvin.
         <h4>
           You cannot keep your insurance as it names a price from expiring
