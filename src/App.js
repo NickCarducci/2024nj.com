@@ -342,6 +342,23 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        {/**appeal="trial, record" */}
+        The market is the only available mechanism? Galbraith is crap! Occupy
+        Wall St to end standardized guarantee schemes for NAICS max-royalty,
+        treasury inventory currency royalty% not lessings, surrendered freedom
+        to bid of labor-borne! (Cash/debt)*income reverse amortize{space}
+        <a href="https://www.youtube.com/watch?v=5u3UCz0TM5Q">for Savers</a>!
+        <span role="img" aria-label="bottom white-circle squirrel">
+          ️↙⚪️🐿
+        </span>
+        <br />
+        borrowers loiter, name your price loiter surrender bid of labor-borne of
+        thrid party donee beneficiary, PCE benefits ascertainable loss to CPI
+        bundle of expenses (net velocity, concurrent).
+        <br />
+        <br />
+        money animal testing, USPTO FDA NIH, transaction fee no license but for
+        KYC naming. reparations for licenses - craft beer?
         <h4>
           This is our fault.” Supreme Court exclusive role is to resolve laws
         </h4>
