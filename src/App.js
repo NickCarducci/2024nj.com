@@ -342,6 +342,9 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        unique files? Euro login.gov. let’s dance. We need to nip it in the bud.
+        cors? are we talking variance of quality skew?
+        <br />
         <Cable
           style={{ width: "100%" }}
           onError={handleScollImgError}
