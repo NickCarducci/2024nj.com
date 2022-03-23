@@ -344,7 +344,8 @@ export default class App extends React.Component {
         })}
         the economy is equal part corp mort gov, treasury-debit=federal reserve
         currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
-        corp).
+        corp). you cannot hold my client with no thing to review. who reviews
+        naming "the thing?" I can programmatically. sentancing
         <h4>For what it is worth.</h4>
         I am not a publisher when I compile without paying users, nor am I
         publishing automatically (user generated, free rider mutable), I am a
