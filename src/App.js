@@ -343,7 +343,9 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         <h4>
-          your cup will overfloweth with inventory by transaction fee currency
+          your cup will overfloweth with inventory by transaction fee currency;
+          non-perishable of grade; truncated production tax can replace unequal
+          bond-tax and bail excess of tortious claims
         </h4>
         the economy is equal part corp mort gov, treasury-debit=federal reserve
         currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
@@ -380,7 +382,7 @@ export default class App extends React.Component {
         for bars. economic law has shown much less thn ascertanable discrepancy
         between PCE and CPI in intentional harm of standardized guarantee
         Schemes, yet for surrendered freedom of third party donee beneficiaries
-        witht the labor-borne bid to demand. Religious freedom but not as
+        with the labor-borne bid to demand. Religious freedom but not as
         evidence. inseminate cell in the courtroom.
         <br />
         <br />
