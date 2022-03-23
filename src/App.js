@@ -343,9 +343,9 @@ export default class App extends React.Component {
           return <div>{p.message}</div>;
         })}
         <h4>
-          <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">
-            Faster means an insurmoutable loss
-          </a>
+          <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">Faster</a>
+          {space}means an{space}
+          <a href="https://qr.ae/pG0sEN">insurmoutable loss</a>
         </h4>
         The Supreme Court cannot possibly be impartial unless lower courts are
         wrong. Founders {">"} Congress. See petty tax 1775-1787 ratification.
@@ -367,6 +367,7 @@ export default class App extends React.Component {
           scrollTop={this.state.scrollTop}
         />
         dispositive lessers back to monetary-debits
+        {/**discrimination is deduced by comp or chats */}
         <br />
         Lean in. -50% infant and toddler 3 months, why? WE WILL NOT RELITIGATE.
         Superfluous medication duress is not good behavior. Take medication only
