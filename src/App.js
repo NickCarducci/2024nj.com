@@ -342,6 +342,11 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <h4>
+          <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">
+            Faster means an insurmoutable loss
+          </a>
+        </h4>
         The Supreme Court cannot possibly be impartial unless lower courts are
         wrong. Founders {">"} Congress. See petty tax 1775-1787 ratification.
         <br />
@@ -394,7 +399,9 @@ export default class App extends React.Component {
         "the thing?" I can programmatically. sentancing. PCE-CPI ascertainable;
         rollover. Labor-borne.
         {/**discern intent of imbue values from constitution 
-        as founder preamble over congress */}
+        as founder preamble over congress */}{" "}
+        the first is bizarre, and they will be hysterical if having to live
+        incorrectly “A lot of others wish they got it.” SORRY!
         <h4>For what it is worth.</h4>
         I am not a publisher when I compile without paying users, nor am I
         publishing automatically (user generated, free rider mutable), I am a
