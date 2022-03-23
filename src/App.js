@@ -349,7 +349,11 @@ export default class App extends React.Component {
         need to nip it in the bud. cors? are we talking variance of quality
         skew? Variance goes to intent, as for what else, 3-50 years for
         “trolling for images of children and sexual exploitations.” There we go,
-        bond loss profit
+        bond loss profit lower the boom on people that seek these images for
+        pleasure." harm disgust to images to people portrayed in them, children
+        abused, and in terms of imprisonment, supervision labor and superfluous
+        personal watchers for $2.2t/yr tax, $1.8t/yr %2t isn't too burdensome to
+        raise rates on reconciliation of precedencial budget
         <br />
         <Cable
           style={{ width: "100%" }}
