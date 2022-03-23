@@ -341,7 +341,11 @@ export default class App extends React.Component {
         </div>
         {posts.map((p) => {
           return <div>{p.message}</div>;
-        })}Transaction fee 2 week review geohash/month 
+        })}
+        constitution can be living insofar that it is not oxymoronic.
+        Transaction fee 2 week review geohash/month - NAICS max-royalty and
+        business permits of open ingredient naming, NOT licensures. Royalties%,
+        NOT lessing monetary-debits
         <h4>
           your cup will overfloweth with inventory by transaction fee currency;
           non-perishable of grade; truncated production tax can replace unequal
