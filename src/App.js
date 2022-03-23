@@ -342,7 +342,26 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
-        Why would you jail or medicate homeless, just house them and login.gov
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/3q9198pwpgtix70/Screen%20Shot%202022-03-23%20at%203.25.16%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Day 3 https://www.facebook.com/USSenateDemocrats/videos/702212010962709/"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Lean in. -50% infant and toddler 3 months, why? WE WILL NOT RELITIGATE.
+        Superfluous medication duress is not good behavior. Take medication only
+        way out, castration by any means. Why would you jail or medicate
+        homeless, just house them and login.gov
         <br />
         <br />
         constitution can be living insofar that it is not oxymoronic.
@@ -4063,4 +4082,3 @@ export default class App extends React.Component {
     );
   }
 }
-
