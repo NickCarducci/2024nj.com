@@ -342,6 +342,22 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/tcdiskhodxx29n3/Screen%20Shot%202022-03-23%20at%2011.48.46%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="Day 3 https://www.facebook.com/USSenateDemocrats/videos/702212010962709/"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         Share split the Hryvnia, figure it out, for input costs as to not match
         inflation but actual input costs
         <br />
@@ -3951,4 +3967,3 @@ export default class App extends React.Component {
     );
   }
 }
-
