@@ -342,6 +342,25 @@ export default class App extends React.Component {
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/j74rw3jhtno5sca/Screen%20Shot%202022-03-24%20at%208.50.33%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="oann free dental"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        PCE-CPI is ascertainably a loss by insurance. Take this down
+        <br />
+        <br />
         "The Demand is more than the Supply," has no basis
         <h4>
           <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">Faster</a>
