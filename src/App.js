@@ -209,7 +209,7 @@ export default class App extends React.Component {
           window.scroll(0, this.ssa.current.offsetTop);
         } else if (this.props.pathname === "/carducci") {
           window.scroll(0, this.carducci.current.offsetTop);
-        } else if (["/gas", "/oil"].includes(this.props.pathname)) {
+        } else if (["/supply"].includes(this.props.pathname)) {
           window.scroll(0, this.supply.current.offsetTop);
         } else if (this.props.pathname === "/depression") {
           window.scroll(0, this.depression.current.offsetTop);
