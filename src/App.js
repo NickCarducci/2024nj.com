@@ -1696,6 +1696,14 @@ export default class App extends React.Component {
         (16.4% of disabled vs .7%/19%)
         <br />
         <br />
+        Nick Carducci - Injured yet labeled schizophrenic for boycott credit
+        income
+        <br />"
+        <a href="https://qr.ae/pG0awX">
+          Will less education ever be a disability
+        </a>
+        ?" Disability by tax, alone
+        <br />
         <Cable
           style={{ width: "100%" }}
           onError={handleScollImgError}
