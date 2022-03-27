@@ -339,6 +339,15 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        <a href="https://qr.ae/pG0Zty">
+          index funds aren't fungible for actual shares
+        </a>
+        , corporate bonds aren't loans, for they have No SEC for inventory
+        before default, let alone forseeable impossibility or{space}
+        <a href="https://qr.ae/pG0ZKL">surrendered freedom known</a>
+        {space}of labor-borne guarantee-plausible use, derivative endogenous
+        all-bound hedge by expiration or isolate.
+        <br />
         {posts.map((p) => {
           return <div>{p.message}</div>;
         })}
