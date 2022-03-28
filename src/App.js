@@ -339,6 +339,17 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Not only is slavery, standardized guarantee, debenture checking (sell
+        inventory before default, or defaulted home equity loan personal buy
+        before default) or compound loan by surrendered freedom to bid of
+        rollover-equivalence-coefficience, nor implausible use leases (beyond 5
+        storefronts and condominiums per person, "never outright," "-inventory")
+        disqualifying as ascertainable lessing (PCE-CPI empoloyers contributions
+        standardized guarantee, 'name-your-price' tool for ask-proposal), but
+        GDP/p expense per year, for everyone, 1814-1870 a bit above tech
+        advancement -.01%/yr+ baseline -1913 amongst population growth 3-1%/yr+,
+        crowding out enbunked!
+        <br />
         <a href="https://qr.ae/pG0Zty">
           index funds aren't fungible for actual shares
         </a>
