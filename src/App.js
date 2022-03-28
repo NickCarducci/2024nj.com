@@ -207,7 +207,7 @@ export default class App extends React.Component {
           window.scroll(0, this.disability.current.offsetTop);
         } else if (this.props.pathname === "/ssa") {
           window.scroll(0, this.ssa.current.offsetTop);
-        } else if (this.props.pathname === "/carducci") {
+        } else if (["/vote","/carducci"].includes(this.props.pathname)) {
           window.scroll(0, this.carducci.current.offsetTop);
         } else if (["/supply"].includes(this.props.pathname)) {
           window.scroll(0, this.supply.current.offsetTop);
