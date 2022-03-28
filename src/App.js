@@ -339,6 +339,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Support to Ukraine from the U.S. of inventory instead of Hrynvia share
+        split fungible for their lands? Erin Burnett
+        <br />
+        <br />
         “Corruptly, not criminally, but politically and any other way,” Mark
         Levin
         <br />
