@@ -207,7 +207,7 @@ export default class App extends React.Component {
           window.scroll(0, this.disability.current.offsetTop);
         } else if (this.props.pathname === "/ssa") {
           window.scroll(0, this.ssa.current.offsetTop);
-        } else if (["/vote","/carducci"].includes(this.props.pathname)) {
+        } else if (["/vote", "/carducci"].includes(this.props.pathname)) {
           window.scroll(0, this.carducci.current.offsetTop);
         } else if (["/supply"].includes(this.props.pathname)) {
           window.scroll(0, this.supply.current.offsetTop);
@@ -339,6 +339,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        “Corruptly, not criminally, but politically and any other way,” Mark
+        Levin
+        <br />
+        <br />
         Not only is slavery, standardized guarantee, debenture checking (sell
         inventory before default, or defaulted home equity loan personal buy
         before default) or compound loan by surrendered freedom to bid of
