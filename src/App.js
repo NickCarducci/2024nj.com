@@ -436,6 +436,48 @@ export default class App extends React.Component {
         the first is bizarre, and they will be hysterical if having to live
         incorrectly “A lot of others wish they got it.” SORRY!
         <h4>For what it is worth.</h4>
+        {/**When Donald Trump said: "I'm a budget 
+      cutter and I have cut the budget." - is it actually true? 
+              
+        Nick Carducci
+        , Chairperson at Saver Party (2020-present)*/}
+        <a href="https://fred.stlouisfed.org/graph/?g=NtmQ">
+          $1.8t/yr debt spending was risen 20%/yr+ on $2t currency
+        </a>
+        , and he allowed the treasury-debit (federal reserve) to buy $4t
+        mortgage backed securities for checking, that is $3t household and $1t
+        corporate, to bail out private debt of home loans and corporate
+        debentures (no SEC for inventory before default), as well as{space}
+        <a href="https://fred.stlouisfed.org/graph/?g=NtnN">
+          ppp average age 50 small business
+        </a>
+        . I have suggested to him NAICS max-royalty, but he kept saying, “I’m
+        King Debt, I’m King Debt, Tariff science!” I never did understand
+        draining the swamp, but{space}
+        <b>
+          now his judges are convicting based on dangerousness; I prefer
+          programmatic-evidence, reviewable, or immediate acquittal
+        </b>
+        , and (cash/debt)*income reverse amortization, and geohash/month + 2
+        week public review unilateral known hazard tort and jail without per
+        diem incarceration and investible debenture demand incentivizing and
+        un-bona fide war, on both sides; after years of foreigners exporting
+        U.S. imports for dollars, are we dispensing of inventory before default
+        as debentures/bonds of monetary-debits or corporate-equities often do,
+        albeit only theoretical a bond on debit, or debenture is, a corporate
+        bond on name alone, unlike a home loan, that which home equity loans
+        included, is accompanied by a legitimate balance, while a mortgage is
+        subject to bankruptcy laws and more atune to{space}
+        <i>surrendered freedom of third party donee beneficiary</i>
+        {space}than home equity, but still less than it needs to be, like a 1/12
+        vertical-industry-line would suffice for{space}
+        <i>1/hour-GDP/p economic welfare</i>. Home equity loan, therefore
+        defaulted with balance is then like a personal anti-debenture that can
+        reneg with foreseeable impossibility defense, or a friend claiming
+        surrendered freedom to bid of labor-borne demand, to relent upon the
+        closing, buying assets instead of selling them, before default.
+        <br />
+        <br />
         I am not a publisher when I compile without paying users, nor am I
         publishing automatically (user generated, free rider mutable), I am a
         writer with sources.
