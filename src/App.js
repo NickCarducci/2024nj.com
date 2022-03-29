@@ -349,7 +349,7 @@ export default class App extends React.Component {
         $1.8t/yr debt-spending with $2t currency because of Republicans
         <h4>
           "access to laborless-demand funding," trustbreaking hypocrisy by the
-          EPA:
+          EPA (democrats don't care about laborequity.org):
         </h4>
         "being mayor of a growing city," is not a reason to front run input
         costs (gentrification, monopsony, "creating jobs" without demand is
