@@ -342,6 +342,10 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        lived in community and investing back into community, municipalities
+        bonds operating costs.
+        <br />
+        <br />
         Free (on what planet is it tax all-cause fallacy) government assistance
         to go ssolar is anticompetitive, if there is harm like wastewater or
         lessing and standardized guarantee schemes, then ban them,{space}
@@ -4377,4 +4381,3 @@ export default class App extends React.Component {
     );
   }
 }
-
