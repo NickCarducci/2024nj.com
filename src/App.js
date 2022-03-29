@@ -342,6 +342,7 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        break nationalism: free science; dollar checking world currency is done to yourself you disgusting old person<br/>
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
