@@ -342,6 +342,10 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        <h4>
+          The only accounting is a slap back. If you cut somebody hand off,
+          guess what?
+        </h4>
         Save workers Global ubi laborless-demand, Hospital fund tax for
         invoices? I'll end them on surrendered freedom (s: donee beneficiary) or
         foreseeble impossibility (s: loitering-borrower) - NAICS (1/12
