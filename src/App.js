@@ -342,7 +342,29 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
-        +$4t mortgage and checking is surrendered freedom of $2t currency holders as labor-borne-demand
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/ry3k94f99g5umpa/Screen%20Shot%202022-03-29%20at%201.08.15%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="Mr. Olson tribal gentrification by loans and tax for labor-cost same quality no change"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Mr. Olson, "Tribes need wherewithall," to get +$4t mortgage and checking
+        is surrendered freedom of $2t currency holders as labor-borne-demand and
+        get the money are the two key aspects of our continued malfeasance over
+        such free rider mutable waterways, save for sewage geohash/month + 2
+        week public review and naming/opensource jail unilaterally-known never
+        tort by name-your-price surrendered freedom of labor-borne non-rollover
+        prevention of inventory outright sales
         <br />
         <br />
         <Cable
@@ -2936,7 +2958,7 @@ export default class App extends React.Component {
           sheet is power, ask-first leases, while royalties are subservient to
           bids and actual labor-demand, for 1/hour-GDP/p
         </h4>
-        ​the professionals claim bacteria is severe version of viral pneumonia,
+        the professionals claim bacteria is severe version of viral pneumonia,
         that is insane Why wouldn’t you provide the schematics for $40k
         noghtvisoon goggles instead of charge the people by the lease ask-price
         you set,{space}
@@ -4166,9 +4188,9 @@ export default class App extends React.Component {
         lease) and insurers (false bid pool).
         <br />
         <br />
-        ​leases are exclusive cause of oil prices, was being blocked on LIVE:
-        Fed Chair Powell testifies before the Senate Banking Committee on
-        monetary policy on Yahoo Finance (3/3/2022)
+        leases are exclusive cause of oil prices, was being blocked on LIVE: Fed
+        Chair Powell testifies before the Senate Banking Committee on monetary
+        policy on Yahoo Finance (3/3/2022)
         <br />
         <br />
         <h4>
