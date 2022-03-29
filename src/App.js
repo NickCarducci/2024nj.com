@@ -2189,8 +2189,14 @@ export default class App extends React.Component {
         <a href="https://goo.gl/maps/PhL42fo1WWWT2TSa7">
           psychiatric scapegoating
         </a>
-        . Disease of the nervous system disability is 4x multiple sclerosis
-        (16.4% of disabled vs .7%/19%)
+        . Disease of the nervous system disability{space}
+        <span style={{ textDecoration: "line-through" }}>
+          is 4x multiple sclerosis
+        </span>
+        (16.4% of disabled
+        <span style={{ textDecoration: "line-through" }}>
+          {space}vs .7%/19%)
+        </span>
         <br />
         <br />
         Nick Carducci - Injured yet labeled schizophrenic for boycott credit
