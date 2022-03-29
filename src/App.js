@@ -339,6 +339,10 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Claudia tenny, studdering has nothing to do with intelligence, just
+        careful with words.
+        <br />
+        <br />
         Demand for investible income is tort-cray-cray
         <br />
         <br />
