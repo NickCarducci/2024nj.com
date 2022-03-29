@@ -345,7 +345,8 @@ export default class App extends React.Component {
         no conditions - $4t mortgage by checking (because of Trump AND Biden) no
         longer fungible for currency, treasury-debits, UT, NM, WY and whatever,
         $2t,{space}
-        <a href="https://qr.ae/pvy3yw">$6t M1 total</a>
+        <a href="https://qr.ae/pvy3yw">$6t M1 total</a>. $5.8t/yr budget,
+        $1.8t/yr debt-spending with $2t currency because of Republicans
         <h4>
           "access to laborless-demand funding," trustbreaking hypocrisy by the
           EPA:
