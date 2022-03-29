@@ -342,7 +342,20 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
-        break nationalism: free science; dollar checking world currency is done to yourself you disgusting old person<br/>
+        break nationalism: free science; dollar checking world currency is done
+        to yourself you disgusting old person!
+        <br />
+        "Separation of power against monarchism, one world," - "Republicans
+        1775-1787: 'New World Order'"
+        <br />
+        “Retail politics,” Rush Limbaugh
+        <br />
+        “Knows how to raise money.”
+        <br />
+        You just talking to me babe
+        <br />
+        Age comps Disabled
+        <br />
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
