@@ -342,6 +342,25 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        PCE-CPI SRF is not a good thing, it is expense, Mr. Johnson (OH, trust
+        breaking hypocrisy), if public works are damaging to citizens, aren't
+        you all admitting guilt? water is free rider mutable, so your funds are
+        ALWAYS higher bid and ask to the same resource.
+        <br /> apprenticeship programs for funding for educators to withhold
+        more information? people who want ownership of return not just jobs for
+        {space}
+        <b>corporate profit will be ascertainably harmed</b>
+        <br />
+        led service line replacements can have private outfits without any
+        revenue going to treasury debts (foreseeable impossible or surrendered
+        freedom of bid for labor-borne on 1/hour-GDP/p reason and Tranquil
+        grounds, need is not funding yet jail the public works with such poor
+        accountability, that is derived by price and jail, never fines from the
+        currency as Savers' fungible for guarantee otherwise, still
+        laborless-demand, victimization nor Public, non
+        <b>-individualized, -reparations</b>, + cash/debt)
+        <br />
+        <br />
         expense by structure housing instead of outright is not what we want;
         The bourgeoisie is charitable out of self-interest; it gives nothing
         outright
