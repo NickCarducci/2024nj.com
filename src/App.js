@@ -338,8 +338,21 @@ export default class App extends React.Component {
           <a href="https://commie.dev" style={navitem}>
             commie.dev
           </a>
-          <a href="https://qr.ae/pvy3yw" style={navitem}>Fed Res</a>
+          <a href="https://qr.ae/pvy3yw" style={navitem}>
+            Fed Res
+          </a>
         </div>
+        Save workers Global ubi laborless-demand, Hospital fund tax for
+        invoices? I'll end them on surrendered freedom (s: donee beneficiary) or
+        foreseeble impossibility (s: loitering-borrower) - NAICS (1/12
+        vertical-industry-line, max-royalty) not debenture sales before default
+        + (cash/debt)*income reverse amortize, fine appeals and permit business
+        by NAICS (11/12 vertical-industry-line, mvp consensus)
+        <br />
+        <br />
+        “Claim islands?” geohash/month + 2 week public review
+        <br />
+        <br />
         Russian speaking Donbas, share split can afford treasury inventory!!!
         <br />
         <br />
