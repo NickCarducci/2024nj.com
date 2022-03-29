@@ -323,7 +323,8 @@ export default class App extends React.Component {
             style={navitem}
             role="img"
             aria-label="wheelchair"
-          >♿
+          >
+            ♿
           </span>
           <div id="depression" onClick={goTo} style={navitem}>
             Depression
@@ -350,6 +351,8 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        neighborhood name-your-price' tort hysterical
+        <br />
         « The worlds reserve currency is New Hampton Woods in NH for good will
         of branded IP science rents, inventory lessing let alone debenture sales
         before default and personal, buy
