@@ -342,6 +342,17 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        funds from checking, no longer fungible for currency, that is
+        treasury-debit, or debenture when inventory is loose before default,
+        like Consumer Fraud estimates as, "property" Acted/prevented-commerce;
+        an anti-trust case waiting to happen. Quick plunder firesale is a
+        fallacy, only does money help when there are scientific exclusive answer
+        as{space}
+        <a href="https://login.gov">property</a>, substantiated by{space}
+        <a href="https://teapharmacy.party/drugs">FDA</a>/
+        <a href="https://thumbprint.us">USPTO</a>/
+        <a href="https://magnate.company">NIH</a>
+        {space}themselves
         <h4>proposals to ask price for labor</h4>
         subcontract on government free rider mutable ushers no progress, just
         ongoing-expense for non-outright inventory sales but implausible use
