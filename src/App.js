@@ -342,6 +342,56 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/allmaiahxg834g4/Screen%20Shot%202022-03-29%20at%201.48.42%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Mr. Yarmuth saying Article 1.8 equal bond tax scope is free rider mutable trust building and loose debentures"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "reduce the carried interest rate by share-split of Savers to help
+        investible $2t currency for $1.8t/yr debt spending." surrendered freedom
+        of labor-borne bid - I'm going to kill you
+        <br />
+        <br />
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/9m3cs76e1dmvfcn/Screen%20Shot%202022-03-29%20at%201.43.41%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="OMB saying GDP is not expense"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        American Rescue Plan job growth by hour or per retiree artifact of tech
+        deprecation, busy-work and -/hour-GDP/p (recession is success, Great
+        Recession took 4 years to recover from, with growth of expenses and
+        hours worked).
+        <br />
+        <br />
+        “We lock in the price.” Well, it is not funded by transaction fees, just
+        estimate and Consumer Fraud, still to be produced with variable-part
+        labor and material inventory.
+        <br />
+        Consumers decide to move away, and UT NM WY is Savers' currency!
+        <br />
+        <br />
         how is a debenture that sells inventory before default, "responsible?,"
         Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
         5.2% actually with autism or downs, 16% with nervous system with only 4%
