@@ -342,6 +342,17 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        expense by structure housing instead of outright is not what we want;
+        The bourgeoisie is charitable out of self-interest; it gives nothing
+        outright
+        <h4>
+          Bipartisan Infrastructure Bill for real GDP gov+struct-exp does not
+          include the{space}
+          <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
+            plural edge, Saver/Occupy/Cash Acct/Bookkeeper violence on Wall
+            St./CNBC
+          </a>
+        </h4>
         funds from checking, no longer fungible for currency, that is
         treasury-debit, or debenture when inventory is loose before default,
         like Consumer Fraud estimates as, "property" Acted/prevented-commerce;
