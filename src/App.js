@@ -342,9 +342,29 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/6j6xaxvei4rt3mf/Screen%20Shot%202022-03-29%20at%2012.18.50%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="Buddy Carter (GA) shilling for redistribution"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "They need funds to drill a well," consumer surrogate maxx-royalty 1/12
+        NAICS - Buddy Carter, small town Georgia, share split and tax corporate
+        (redistribution from cities? BLS uses city bundle for Christs' sake)
         <h4>
-          when you target funding by share-split, tax or debt-spending to those
-          most in need,{space}
+          when you target funding by{space}
+          <b>share-split, tax or debt-spending</b>
+          {space}to those most in need,{space}
           <span style={{ color: "purple" }}>
             instead of banning laborless costs
           </span>
