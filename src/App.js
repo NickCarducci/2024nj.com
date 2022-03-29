@@ -3793,6 +3793,21 @@ export default class App extends React.Component {
           }}
           //href="https://carducci.us/primary"
         >
+          <div
+            style={{
+              backgroundColor: "black",
+              padding: "10px"
+            }}
+          >
+            <a
+              style={{
+                color: "white"
+              }}
+              href="https://occupywall.us"
+            >
+              OccupyWall.us
+            </a>
+          </div>
           <h2>
             {/*Where do you live, bitch?I will find you */}Are you a New Jersey
             voter?
