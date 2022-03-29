@@ -358,6 +358,21 @@ export default class App extends React.Component {
         before default and personal, buy
         <br />
         <br />
+        Poverty threshold for rate per capita and your percentile from that is
+        (to be below) a third the skew/despondence of expenses imputed mortgage
+        (SPM) not 1939 income thrice food anymore
+        <br />
+        *1.2 healthcare and PCE-CPI?
+        <br />
+        Transaction petty occupy 65% to end superfluous
+        <br />I yield back Article 1.8{space}
+        <span role="img" aria-label="nuts">
+          🥜
+        </span>
+        salt vat transaction fee max-royalty NAICS tort mvp and haikus are so
+        powerful
+        <br />
+        <br />
         we can do{space}
         <a href="https://qr.ae/pvyETN">powers</a>
         {space}to the border spoofable precinct geohash/month + 2 week public
