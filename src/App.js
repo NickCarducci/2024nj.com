@@ -412,7 +412,8 @@ export default class App extends React.Component {
         <br />
         Estimates as property is like a debenture to sell inventory before
         default, let alone a debenture on a debenture of inventory, don’t get me
-        started
+        started. Name and open ingredient, home equity loan (defaulted) like a
+        personal loan, buy stuff before default
         <br />
         <br />
         I want to go down in history as the next Bob Saget
