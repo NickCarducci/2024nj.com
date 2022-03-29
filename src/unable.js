@@ -381,16 +381,59 @@ class Unable extends React.Component {
             position: "absolute"
           }}
         >
-          <span
-            style={{
-              backgroundColor: "rgba(250,250,250,.6)",
-              color: "white",
-              padding: "8px",
-              lineHeight: "34px",
-              maxWidth: "max-content",
-              width: "calc(100% - 80px)"
-            }}
-          ></span>
+          <div style={{ display: "flex" }}>
+            <span
+              style={{
+                backgroundColor: "rgba(250,250,250,.6)",
+                color: "white",
+                padding: "0px 6px",
+                lineHeight: "34px",
+                maxWidth: "max-content",
+                width: "calc(100% - 80px)"
+              }}
+            >
+              {shortNumber(this.state.lowBeneficiaries)}-
+              {shortNumber(this.state.highBeneficiaries)}
+            </span>
+            <div
+              style={{
+                marginTop: "6px",
+                display: "flex",
+                width: "max-content"
+              }}
+            >
+              <div style={labelitem}>
+                <div
+                  style={{
+                    width: "5px",
+                    height: "5px",
+                    backgroundColor: "deepskyblue"
+                  }}
+                />
+                honest
+              </div>
+              <div style={labelitem}>
+                <div
+                  style={{
+                    width: "5px",
+                    height: "5px",
+                    backgroundColor: "limegreen"
+                  }}
+                />
+                old
+              </div>
+              <div style={labelitem}>
+                <div
+                  style={{
+                    width: "5px",
+                    height: "5px",
+                    backgroundColor: "red"
+                  }}
+                />
+                antisocial
+              </div>
+            </div>
+          </div>
           <div
             style={{ marginTop: "6px", display: "flex", width: "max-content" }}
           >
@@ -399,10 +442,10 @@ class Unable extends React.Component {
                 style={{
                   width: "5px",
                   height: "5px",
-                  backgroundColor: "green"
+                  backgroundColor: "orange"
                 }}
               />
-              beneficiaries
+              multiple sclerosis and other polio variants, all-cause
             </div>
           </div>
         </div>
@@ -435,9 +478,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -451,9 +494,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -483,9 +526,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -499,9 +542,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -517,7 +560,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="orange"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -547,9 +590,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -563,9 +606,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -581,7 +624,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -597,7 +640,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -613,7 +656,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -629,7 +672,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -645,7 +688,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -659,9 +702,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -677,7 +720,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -693,7 +736,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -709,7 +752,7 @@ class Unable extends React.Component {
                     y={y}
                     width={2}
                     height={2}
-                    stroke="green"
+                    stroke="deepskyblue"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
@@ -723,9 +766,9 @@ class Unable extends React.Component {
                   <rect
                     x={x}
                     y={y}
-                    width={2}
+                    width={7}
                     height={2}
-                    stroke="green"
+                    stroke="limegreen"
                     fill="blue"
                     strokeWidth={1}
                     key={i}
