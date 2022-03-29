@@ -342,6 +342,12 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        Free (on what planet is it tax all-cause fallacy) government assistance
+        to go ssolar is anticompetitive, if there is harm like wastewater or
+        lessing and standardized guarantee schemes, then ban them,{space}
+        <a href="https://occupywall.us">don't contribute to them</a>!
+        <br />
+        <br />
         Worth billion dollars.” On what planet 30% public works leaks. "It is a
         shame that goes unchecked," because of bond loss profit instead of
         truncated production tax geohash/month + 2 week public review, Ms.
@@ -4371,3 +4377,4 @@ export default class App extends React.Component {
     );
   }
 }
+
