@@ -339,6 +339,16 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        On the Money, "stagflation is low growth of employer contribution
+        expenses (PCE), and high premiums expiring (CPI)."
+        <br />
+        <br />
+        <a href="https://qr.ae/pG0Jjo">Stagflation and real GDP</a>
+        {space}is government and{space}
+        <a href="https://qr.ae/pvy6j8">structures</a>, used to less-inventory
+        instead of outright sales for labor-borne-demand.
+        <br />
+        <br />
         I want to go down in history as the next Bob Saget
         <br />
         <br />
