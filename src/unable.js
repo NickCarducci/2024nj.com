@@ -1,7 +1,7 @@
 import React from "react";
 const unable = {
   "2006": {
-    beneficiaries: 9645921,
+    beneficiaries: 7101355 - 823106 + 525012,
     musculoskeletal: 36,
     psychiatric: 32.8,
     circulatory: 21,
@@ -383,6 +383,7 @@ class Unable extends React.Component {
         >
           <div style={{ display: "flex" }}>
             <span
+              //onClick={()=>this.setState({ssaOrsurvey:"https://www.ssa.gov/oact/STATS/dibStat.html"})}
               style={{
                 backgroundColor: "rgba(250,250,250,.6)",
                 color: "white",
@@ -392,7 +393,13 @@ class Unable extends React.Component {
                 width: "calc(100% - 80px)"
               }}
             >
-              {shortNumber(this.state.lowBeneficiaries)}-
+              <a
+                style={{ color: "white" }}
+                href="https://www.ssa.gov/oact/STATS/dibStat.html"
+              >
+                DI, SSI, both
+              </a>
+              : {shortNumber(this.state.lowBeneficiaries)}-
               {shortNumber(this.state.highBeneficiaries)}
             </span>
             <div
