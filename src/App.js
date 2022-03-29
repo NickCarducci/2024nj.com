@@ -437,10 +437,12 @@ export default class App extends React.Component {
         <br />
         how is a debenture that sells inventory before default, "responsible?,"
         Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
-        5.2% actually with autism or downs, 16% with nervous system with only
+        5.2% actually with autism or downs,{space}
+        <a href="https://2024nj.com/disability">16% with nervous system</a>
+        {space}(2013, 2.1m) DOES match
         {space}
         <a href="https://www.christopherreeve.org/living-with-paralysis/stats-about-paralysis">
-          4% counted by 2.5m Chris Reeves
+          counted by 2.5m Chris Reeves
         </a>
         ??? You are the most irresponsible bunch ever for decades Are you going
         to stop me doing my own physical therapy to do yours?
