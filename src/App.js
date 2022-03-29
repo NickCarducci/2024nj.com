@@ -3946,7 +3946,9 @@ export default class App extends React.Component {
         happens, again, only nominally).
         <br />
         <br />
-        U.S. imports $1b/day oil, Q600k/day, that is $1.6k/day oil each barrel
+        U.S. imports $1b/day oil, Q600k/day,{space}
+        <a href="https://saverparty.xyz/global">that is</a>
+        {space}$1.6k/day oil each barrel
         <h4 ref={this.gas}>
           obviously the main factor in oil by wells is{space}
           <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
