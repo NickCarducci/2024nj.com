@@ -342,6 +342,29 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        <Cable
+          style={{ width: "300px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/cf31b7k2cawqqs4/Pew%20Wealth.png?raw=1"
+          }
+          float={"right"}
+          title="PEW income and wealth https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        real GDP and income inequality are mutual exclusive fallacies, for the
+        former gets government and structures, -science/skew and -1/hour-GDP/p;
+        the latter, well, gini doesn't talk about wealth, albeit
+        {space}
+        <span style={{ color: "green" }}>non-concurrentable</span>, that is the
+        very problem when they are liabilities, rather than{space}
+        <span style={{ color: "green" }}>non-fungible assets</span>.
         <h4>
           The only accounting is a slap back. If you cut somebody hand off,
           guess what?
@@ -432,7 +455,7 @@ export default class App extends React.Component {
               : "https://www.dropbox.com/s/j74rw3jhtno5sca/Screen%20Shot%202022-03-24%20at%208.50.33%20AM.png?raw=1"
           }
           float={"left"}
-          title="oann free dental"
+          title="oann free dental - standardized guarantee scheme PCE-CPI discernable"
           scrolling={this.state.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
