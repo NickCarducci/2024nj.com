@@ -342,6 +342,7 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        no conditions
         <h4>
           "access to laborless-demand funding," trustbreaking hypocrisy by the
           EPA:
