@@ -3885,8 +3885,8 @@ export default class App extends React.Component {
         Fed Chair Powell testifies before the Senate Banking Committee on
         monetary policy on Yahoo Finance (3/3/2022)
         <h4 ref={this.gas}>
-          obviously the main factor in oil by wells is leases; trust-breaking
-          hypocrisy
+          obviously the main factor in oil by wells is{space}
+          <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
         </h4>
         <OIL
           lastWidth={Math.min(600, this.state.lastWidth)}
