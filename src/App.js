@@ -343,6 +343,30 @@ export default class App extends React.Component {
           </a>
         </div>
         <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/xioga9dr041m6jk/Screen%20Shot%202022-03-29%20at%202.21.47%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Newsmax Stephen Moore talking government and implausible use lease return structure growth to employer benefit net loss"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        “Expenses should grow per hour.” Stephen Moore Taxes for profits and
+        wages of laborless-demand, free rider mutable trust breaking hypocrisy,
+        albeit 1/3 of mort direct loan and loose corporate debenture.
+        <br />
+        What happens when inventory goes down, prices goes up,” well how can you
+        say that at the same time as subsidies you get more of something?
+        <br />
+        <br />
+        <Cable
           style={{ width: "100%" }}
           onError={handleScollImgError}
           img={true}
@@ -413,9 +437,13 @@ export default class App extends React.Component {
         <br />
         how is a debenture that sells inventory before default, "responsible?,"
         Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
-        5.2% actually with autism or downs, 16% with nervous system with only 4%
-        counted by 2.5m Chris Reeves??? You are the most irresponsible bunch
-        ever for decades
+        5.2% actually with autism or downs, 16% with nervous system with only
+        {space}
+        <a href="https://www.christopherreeve.org/living-with-paralysis/stats-about-paralysis">
+          4% counted by 2.5m Chris Reeves
+        </a>
+        ??? You are the most irresponsible bunch ever for decades Are you going
+        to stop me doing my own physical therapy to do yours?
         <br />
         <br />
         <Cable
