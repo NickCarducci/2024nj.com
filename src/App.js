@@ -342,6 +342,37 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        how is a debenture that sells inventory before default, "responsible?,"
+        Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
+        5.2% actually with autism or downs, 16% with nervous system with only 4%
+        counted by 2.5m Chris Reeves??? You are the most irresponsible bunch
+        ever for decades
+        <br />
+        <br />
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/c3x8om9j0itugy5/Screen%20Shot%202022-03-29%20at%201.13.41%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Richard Diaz gentrifying his community, never inventory outright but public trust breaking hypocrisy, albeit 1/3 with corp debenture and mortgage loan"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        $750b capital costs, funding infusion by making checking not fungible
+        for currency?
+        <br />
+        <br />
+        Split equitably, for laborless-demand never. Why do you want to fund the
+        criminals instead of jail them? Because you are guilty?
+        <br />
+        <br />
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
