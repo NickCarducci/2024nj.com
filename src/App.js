@@ -317,6 +317,14 @@ export default class App extends React.Component {
             backgroundColor: "green"
           }}
         >
+          <span
+            id="disability"
+            onClick={goTo}
+            style={navitem}
+            role="img"
+            aria-label="wheelchair"
+          >♿
+          </span>
           <div id="depression" onClick={goTo} style={navitem}>
             Depression
           </div>
@@ -365,6 +373,10 @@ export default class App extends React.Component {
         You just talking to me babe
         <br />
         Age comps Disabled
+        <br />
+        Significant!&bull;{space}&bull; “Existing business needs more help.”
+        Nigel Farage
+        <br />
         <br />
         <Cable
           style={{ width: "200px" }}
