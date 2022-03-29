@@ -364,10 +364,22 @@ export default class App extends React.Component {
         {space}
         <span style={{ color: "green" }}>non-concurrentable</span>, that is the
         very problem when they are liabilities, rather than{space}
-        <span style={{ color: "green" }}>non-fungible assets</span>.
+        <span style={{ color: "green" }}>non-fungible (for cash) assets</span>,
+        of{space}
+        <a href="https://qr.ae/pG0JjN">debits of a bundle</a>, not a{space}
+        <a href="https://qr.ae/pvy3WX">
+          pandemic-borne fractional checking to save mortgage values
+        </a>
+        {space}and{space}
+        {space}
+        <a href="https://qr.ae/pvy3UU">
+          <b>prevent commerce</b>
+        </a>
+        .
         <h4>
           The only accounting is a slap back. If you cut somebody hand off,
           guess what?
+          {/**he was a rubixcube genius with a future and he wasted potential on lessing */}
         </h4>
         Save workers Global ubi laborless-demand, Hospital fund tax for
         invoices? I'll end them on surrendered freedom (s: donee beneficiary) or
