@@ -342,6 +342,11 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        we can do{space}
+        <a href="https://qr.ae/pvyETN">powers</a>
+        {space}to the border spoofable precinct geohash/month + 2 week public
+        review,
+        <br />
         break nationalism: free science; dollar checking world currency is done
         to yourself you disgusting old person!
         <br />
