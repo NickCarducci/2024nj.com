@@ -338,6 +338,7 @@ export default class App extends React.Component {
           <a href="https://commie.dev" style={navitem}>
             commie.dev
           </a>
+          <a href="https://qr.ae/pvy3yw" style={navitem}>Fed Res</a>
         </div>
         Russian speaking Donbas, share split can afford treasury inventory!!!
         <br />
@@ -3911,6 +3912,9 @@ export default class App extends React.Component {
         ​leases are exclusive cause of oil prices, was being blocked on LIVE:
         Fed Chair Powell testifies before the Senate Banking Committee on
         monetary policy on Yahoo Finance (3/3/2022)
+        <br />
+        <br />
+        U.S. imports $1b/day oil, Q600k/day, that is $1.6k/day oil each barrel
         <h4 ref={this.gas}>
           obviously the main factor in oil by wells is{space}
           <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
