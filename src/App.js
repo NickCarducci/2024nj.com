@@ -339,6 +339,9 @@ export default class App extends React.Component {
             commie.dev
           </a>
         </div>
+        Russian speaking Donbas, share split can afford treasury inventory!!!
+        <br />
+        <br />
         On the Money, "stagflation is low growth of employer contribution
         expenses (<a href="https://saverparty.xyz/poverty">PCE</a>), and high
         premiums expiring (CPI)."
@@ -348,6 +351,10 @@ export default class App extends React.Component {
         {space}is government and{space}
         <a href="https://qr.ae/pvy6j8">structures</a>, used to less-inventory
         instead of outright sales for labor-borne-demand.
+        <br />
+        <br />
+        “Because they are out of the market, prices have gone up.” If supply is
+        substitutive for labor-demand by another market, it should wash
         <br />
         <br />
         I want to go down in history as the next Bob Saget
