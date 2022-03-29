@@ -342,6 +342,12 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        <h4>proposals to ask price for labor</h4>
+        subcontract on government free rider mutable ushers no progress, just
+        ongoing-expense for non-outright inventory sales but implausible use
+        leases, standardized guarantee schemes and debentures/loans
+        <br />
+        <br />
         lived in community and investing back into community, municipalities
         bonds operating costs.
         <br />
