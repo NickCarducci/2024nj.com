@@ -343,6 +343,25 @@ export default class App extends React.Component {
           </a>
         </div>
         <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/wjwcevdleeeeyf4/Screen%20Shot%202022-03-29%20at%201.54.59%20PM.png?raw=1"
+          }
+          float={null}
+          title="Newsmax Halperin and John Bachman, smiling about $2t currency spent by larceny $4t checking mortgage, for a CDC covered INsignificant single-year death rate expected 1941 baby-boomer growth"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        'Currency comes from G-d,' JHU arts and sciences
+        <br />
+        <br />
+        <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
           img={true}
