@@ -343,11 +343,15 @@ export default class App extends React.Component {
           </a>
         </div>
         <h4>
-          deplay funding of surrendered freedoms of labor-borne for 1/hour-GDP/p
+          deploy funding of surrendered freedoms of labor-borne for 1/hour-GDP/p
           economic welfare forlorn, by Mr. McGoff (IN), "this is a lay-up,"
-          actually it is 1y/-1x price to welfare
+          actually it is 1y/-1x price to welfare.
+          {/**exclusive answer, "only source; therein lies problem, set asides for admin, state-spec not fed." */}
+          SRS 47/2700 CT public waterways free rider mutable, target margin
+          operational monopsonies. Sewage is not that, for gravity toilet is
+          free rider immutable, as is naming and open ingredient unilateral
+          known hazard tort and jail (individuals)
         </h4>
-        <br />
         no conditions - $4t mortgage by checking (because of Trump AND Biden) no
         longer fungible for currency, treasury-debits, UT, NM, WY and whatever,
         $2t,{space}
