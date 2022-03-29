@@ -3931,6 +3931,21 @@ export default class App extends React.Component {
         monetary policy on Yahoo Finance (3/3/2022)
         <br />
         <br />
+        <h4>
+          my{space}
+          <a href="https://thumbprint.us">contributions</a>, business and Saver
+          (1/hour-GDP/p economic welfare) liesure are to explain, I am not doing
+          this for fun.
+        </h4>
+        Shut down permit is only abetted by Savers' fungible lands -{space}
+        <a href="https://sgp.fas.org/crs/misc/R43390.pdf#page=11">
+          IF there is a savings to be made
+        </a>
+        {space}and not just refined like a (nominal) balance of trade that is
+        calculated (by forex/customs force) to exclude labor costs (as it
+        happens, again, only nominally).
+        <br />
+        <br />
         U.S. imports $1b/day oil, Q600k/day, that is $1.6k/day oil each barrel
         <h4 ref={this.gas}>
           obviously the main factor in oil by wells is{space}
