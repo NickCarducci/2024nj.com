@@ -348,9 +348,14 @@ export default class App extends React.Component {
           EPA:
         </h4>
         "being mayor of a growing city," is not a reason to front run input
-        costs (gentrification, monopsony). To boot, I have proven crowding out
-        when substitution from labor-demand of another market as a fallacy, with
-        history of 0%/yr+ GDP/p amidst 3-1%/yr+ population
+        costs (gentrification, monopsony, "creating jobs" without demand is
+        busy-work, for more expenses per hour, not less -{space}
+        <a href="https://youtu.be/UiprxrmHhbQ?t=79">
+          and then less hours required
+        </a>
+        ). To boot, I have proven crowding out when substitution from
+        labor-demand of another market as a fallacy, with history of 0%/yr+
+        GDP/p amidst 3-1%/yr+ population
         <br />
         <br />
         $35b clean drinking water programmes, just jail producers that don't,
