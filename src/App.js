@@ -351,6 +351,7 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        tax goes to treasury<br/>
         neighborhood name-your-price' tort hysterical
         <br />
         « The worlds reserve currency is New Hampton Woods in NH for good will
