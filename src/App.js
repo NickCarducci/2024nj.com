@@ -342,6 +342,30 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        +$4t mortgage and checking is surrendered freedom of $2t currency holders as labor-borne-demand
+        <br />
+        <br />
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/jw96rfruqdggp04/Screen%20Shot%202022-03-29%20at%2012.56.23%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Ruiz (CA) saying checking is not surrendered freedom of currency holders"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "We just put money into SRF as checking by mortgage, but we can't use
+        it," Mr. Ruiz (CA), why don't you ban finance as income and compel
+        investors into taking the (jailed) led-pipe guys' place?
+        <br />
+        <br />
         "Investments in clean infrastructure by Biden will help," in no way
         greater than jailing any led-pipe operators, and allowing for private
         ownership so that they are subservient to customers' needs, not
