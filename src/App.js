@@ -342,6 +342,16 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        "Investments in clean infrastructure by Biden will help," in no way
+        greater than jailing any led-pipe operators, and allowing for private
+        ownership so that they are subservient to customers' needs, not
+        investible income Demand, conflict of interest to treat{space}
+        <a href="https://vaults.biz/gdp">GDP</a>/hour as{space}
+        <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
+          productivity
+        </a>
+        <br />
+        <br />
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
