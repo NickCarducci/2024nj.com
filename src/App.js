@@ -342,6 +342,11 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        « The worlds reserve currency is New Hampton Woods in NH for good will
+        of branded IP science rents, inventory lessing let alone debenture sales
+        before default and personal, buy
+        <br />
+        <br />
         we can do{space}
         <a href="https://qr.ae/pvyETN">powers</a>
         {space}to the border spoofable precinct geohash/month + 2 week public
