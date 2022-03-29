@@ -357,6 +357,11 @@ export default class App extends React.Component {
         substitutive for labor-demand by another market, it should wash
         <br />
         <br />
+        Estimates as property is like a debenture to sell inventory before
+        default, let alone a debenture on a debenture of inventory, don’t get me
+        started
+        <br />
+        <br />
         I want to go down in history as the next Bob Saget
         <br />
         <br />
@@ -368,7 +373,8 @@ export default class App extends React.Component {
         <br />
         <br />
         Support to Ukraine from the U.S. of inventory instead of Hrynvia share
-        split fungible for their lands? Erin Burnett
+        split fungible for their lands? Erin Burnett. Zlinski is executing POWs,
+        it is not a nice war where we just destroy eachothers’ stuff
         <br />
         <br />
         “Corruptly, not criminally, but politically and any other way,” Mark
