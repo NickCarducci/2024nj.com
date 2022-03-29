@@ -342,6 +342,27 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        "Loans may not be ideal on private property[, but with the state, bond
+        loss profits]." It is never ideal for expenses above negotiation by
+        labor-borne-capacity, let alone non-concurrency.
+        <br />
+        <br />
+        <Cable
+          style={{ width: "200px" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/87dpr0h4bnfh0i9/Screen%20Shot%202022-03-29%20at%2012.02.29%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Mr. Johnson OH Trusting the Tap: Upgrading America's Drinking Water Infrastructure - https://youtu.be/arpaH3oy77Q"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         PCE-CPI SRF is not a good thing, it is expense, Mr. Johnson (OH, trust
         breaking hypocrisy), if public works are damaging to citizens, aren't
         you all admitting guilt? water is free rider mutable, so your funds are
