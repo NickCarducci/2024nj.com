@@ -342,6 +342,21 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        <h4>
+          when you target funding by share-split, tax or debt-spending to those
+          most in need,{space}
+          <span style={{ color: "purple" }}>
+            instead of banning laborless costs
+          </span>
+          {space}like non-rollover insurance, invoice, loose-inventory-debenture
+          or debit-fungible-loan, kept down payments and loitering instead of
+          max-royalty NAICS industry-vertical-line 1/12 tortious, but not before
+          (cash/debt)*income reverse amortization and then truncated production
+          tax with spoofable geohash/month for abuse and 2 week public review,
+          no-candidate counts to power and holdings by other than dollar in
+          scope of collective bargain (against an
+          substitutively-indifferent-inventory) as well.
+        </h4>
         "Loans may not be ideal on private property[, but with the state, bond
         loss profits]." It is never ideal for expenses above negotiation by
         labor-borne-capacity, let alone non-concurrency.
