@@ -342,7 +342,10 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
-        no conditions
+        no conditions - $4t mortgage by checking (because of Trump AND Biden) no
+        longer fungible for currency, treasury-debits, UT, NM, WY and whatever,
+        $2t,{space}
+        <a href="https://qr.ae/pvy3yw">$6t M1 total</a>
         <h4>
           "access to laborless-demand funding," trustbreaking hypocrisy by the
           EPA:
