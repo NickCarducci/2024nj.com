@@ -2814,7 +2814,6 @@ class NetToGDP extends React.Component {
               style={{
                 width: "min-content"
               }}
-              defaultValue="liabilities/GDP, m2*velocity"
               state={this.state.chartType}
               onChange={(name) => {
                 this.setState({ chartType: name.target.value });
