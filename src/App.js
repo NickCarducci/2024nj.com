@@ -351,9 +351,15 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
-        you can get away with not being taxed, for precedence of tea musket face<br/>
-        most unemployment is 50+<br/>
-        tax goes to treasury<br/>
+        I have to rebuild node js to boycott credit. I am not employble because
+        I will not take credit as income. Savich deskinned
+        <br />
+        you can get away with not being taxed, for precedence of tea musket face
+        <br />
+        most unemployment is 50+
+        <br />
+        tax goes to treasury
+        <br />
         neighborhood name-your-price' tort hysterical
         <br />
         « The worlds reserve currency is New Hampton Woods in NH for good will
