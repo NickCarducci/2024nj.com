@@ -351,6 +351,7 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        (I had to assume it was an accounting change, not legal)
         We made checking ($6t) more than currency %2t because how much is abroad (39%)
         <br />
         <br />
