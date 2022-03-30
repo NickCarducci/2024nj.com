@@ -694,7 +694,8 @@ export default class App extends React.Component {
         "<a href="https://qr.ae/pvyLnQ">I'm not talking about minor crimes</a>,"
         there is conviction without programmatic evidence reviewable or
         immediately acquit for jail of unilaterally-known hazard -{space}
-        <a href="https://thumbprint.us">torttech</a>
+        <a href="https://thumbprint.us">torttech</a>. you deserve to have your
+        throat cut
       </div>
     );
   }
