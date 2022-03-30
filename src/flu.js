@@ -3060,7 +3060,8 @@ class Spanish extends React.Component {
             <br />
             scale{" "}
           </div>
-          <div
+          <a
+            href="https://humanharvest.info/polio"
             style={{
               backgroundColor: "rgba(255,255,255,.3)",
               padding: "4px 8px",
@@ -3071,7 +3072,7 @@ class Spanish extends React.Component {
             {this.state.lowDate}
             &nbsp;-&nbsp;
             {this.state.highDate}
-          </div>
+          </a>
         </div>
         <div
           style={{
