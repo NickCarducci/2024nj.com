@@ -2269,25 +2269,61 @@ class NetToGDP extends React.Component {
     let notesData = [];
     let bond = [];
     let bondData = [];
-    Object.keys(levelRatio).map((yr, i) => {
-      const year = new Date(yr).getTime();
-      const data = Object.values(levelRatio)[i];
-      date.push(year);
-      households.push(data.households);
-      householdsData.push([year, data.households]);
-      corporates.push(data.corporate);
-      corporatesData.push([year, data.corporate]);
-      selfs.push(data.selfemployed);
-      selfsData.push([year, data.selfemployed]);
-      mortgages.push(data.financialMortages);
-      mortgagesData.push([year, data.financialMortages]);
-      bond.push(data.corporateBonds);
-      bondData.push([year, data.corporateBonds]);
-      notes.push(data.government);
-      notesData.push([year, data.government]);
+    let curren = [];
+    let currenData = [];
+    const chartType = "federal reserve";
+    if (chartType === "federal reserve") {
+      currency.forEach((set) => {
+        const yr = set[0];
+        const checkingData = checking[yr];
+        const balanceData = balance[yr];
+        const year = new Date(yr).getTime();
+        curren.push(set[1]);
+        currenData.push([year, set[1]]);
+        date.push(year);
+        noData.push([year, 0]);
+        if (checkingData) {
+          households.push(checkingData.household);
+          householdsData.push([year, checkingData.household]);
 
-      return noData.push([year, 0]);
-    });
+          notes.push(checkingData.government);
+          notesData.push([year, checkingData.government]);
+
+          corporates.push(checkingData.corporate);
+          corporatesData.push([year, checkingData.corporate]);
+
+          selfs.push(checkingData.bottomhalf);
+          selfsData.push([year, checkingData.bottomhalf]);
+        }
+        if (balanceData) {
+          mortgages.push(balanceData.mortgage);
+          mortgagesData.push([year, balanceData.mortgage]);
+
+          bond.push(balanceData.assets);
+          bondData.push([year, balanceData.assets]);
+        }
+      });
+      // console.log(bondData);
+    } else
+      Object.keys(levelRatio).map((yr, i) => {
+        const year = new Date(yr).getTime();
+        const data = Object.values(levelRatio)[i];
+        date.push(year);
+        households.push(data.households);
+        householdsData.push([year, data.households]);
+        corporates.push(data.corporate);
+        corporatesData.push([year, data.corporate]);
+        selfs.push(data.selfemployed);
+        selfsData.push([year, data.selfemployed]);
+        mortgages.push(data.financialMortages);
+        mortgagesData.push([year, data.financialMortages]);
+        bond.push(data.corporateBonds);
+        bondData.push([year, data.corporateBonds]);
+        notes.push(data.government);
+        notesData.push([year, data.government]);
+
+        return noData.push([year, 0]);
+      });
     const all = [
       ...households,
       ...corporates,
@@ -2302,6 +2338,8 @@ class NetToGDP extends React.Component {
     var highDate = Math.max(...date);
     //console.log(dataData);
     var state = {
+      chartType,
+      //laststate: chartType,
       date,
       highNetRatio,
       notesData,
@@ -2316,8 +2354,7 @@ class NetToGDP extends React.Component {
       lowNetRatio,
       highDate,
       lowDate,
-      newDebtData: [],
-      currenData: []
+      currenData
     };
     this.state = state;
   }
@@ -2753,22 +2790,25 @@ class NetToGDP extends React.Component {
               width: "calc(100% - 80px)"
             }}
           >
-            {"federal reserve" === this.state.chartType
-              ? `checking`
-              : `${
-                  (["new debt"].includes(this.state.chartType)
-                    ? "annum/"
-                    : "") +
-                  (["lendings of monetary-debits"].includes(
-                    this.state.chartType
-                  )
-                    ? "share"
-                    : ["borrowings of monetary-debits"].includes(
-                        this.state.chartType
-                      )
-                    ? "total"
-                    : "quarterly")
-                }`}
+            {"federal reserve" === this.state.chartType ? (
+              <a
+                href="https://fred.stlouisfed.org/graph/?g=NAXa"
+                style={{ color: "white" }}
+              >
+                checking
+              </a>
+            ) : (
+              `${
+                (["new debt"].includes(this.state.chartType) ? "annum/" : "") +
+                (["lendings of monetary-debits"].includes(this.state.chartType)
+                  ? "share"
+                  : ["borrowings of monetary-debits"].includes(
+                      this.state.chartType
+                    )
+                  ? "total"
+                  : "quarterly")
+              }`
+            )}
             &nbsp;
             <select
               style={{
