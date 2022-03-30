@@ -363,7 +363,8 @@ export default class App extends React.Component {
         GDP/p grew but 1787-1814 and 1870-1913 it fell (less work per living
         expense)
         <h4>the license to science, -less</h4>
-        5G is an input cost and doesn't need to go thru the pentagon lmao
+        5G is an input cost (excludes revenue to income, hourly-wage, not
+        inventory-sales) and doesn't need to go thru the pentagon lmao
         <br />
         <Cable
           style={{ height: "400px" }}
@@ -4797,3 +4798,4 @@ export default class App extends React.Component {
     );
   }
 }
+
