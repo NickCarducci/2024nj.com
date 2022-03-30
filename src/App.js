@@ -357,6 +357,9 @@ export default class App extends React.Component {
             Occupy
           </a>
         </div>
+        "the fed has to raise rates," but they have been buying $4t mortgages
+        for checking over $2t currency, that used to match, and be fungible for
+        treasury debit, not debenture (loose inventory)
         <h1>
           trade secret vig mcghee;{space}
           <a href="https://youtu.be/Weqb9KrQ-TU?t=21">inseminate cell online</a>
