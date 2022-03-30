@@ -451,6 +451,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Checking and salaries should have tripled 3/2020-<br/>
         Dr. Drew after 4x checking for mortgage, he says homelessness is because
         of the way G-d made people; just prosecute implausible use leases above
         5 condo and stores, stop standardized guarantee ascertainable
