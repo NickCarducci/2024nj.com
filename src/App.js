@@ -409,7 +409,9 @@ export default class App extends React.Component {
               id="grad-cap"
               onClick={goTo}
               style={navitem}
-            >🎓</span>
+            >
+              🎓
+            </span>
             <span
               role="img"
               aria-label="oil"
@@ -449,6 +451,36 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Dr. Drew after 4x checking for mortgage, he says homelessness is because
+        of the way G-d made people; just prosecute implausible use leases above
+        5 condo and stores, stop standardized guarantee ascertainable
+        foreseeable impossibility and donee beneficiary labor-borne bid
+        surrenderings.
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/ve6pgjw8zlzl7xs/Screen%20Shot%202022-03-30%20at%206.58.23%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Dr. Drew after 4x checking for mortgage, he says homelessness is because of the way G-d made people"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        you don't need to medicate the homeless
+        <br />
+        “Psychiatrists diagnose by behavior naming instead of creation nor
+        {space}
+        <a href="https://brainscan.info">even CT scan</a>, hospital bed, look at
+        your streets, that is a mental health crisis,” you don’t need to
+        Medicare the homeless.
+        <br />
+        <br />
         "the fed has to raise rates," but they have been buying $4t mortgages
         for checking over $2t currency, that used to match, and be fungible for
         treasury debit, not debenture (loose inventory)
