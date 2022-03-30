@@ -357,8 +357,32 @@ export default class App extends React.Component {
             Occupy
           </a>
         </div>
+        +$4t checking tripled $2t, salaries and cash balances should have
+        tripled.
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout ? "" :"https://www.dropbox.com/s/tpd9cuwm8rry1hf/Screen%20Shot%202022-03-30%20at%204.35.02%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="FDA medical device auth shill"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        User fee committment capacity and expertise, $2.5b The FDA/USPTO/NIH
+        does not exclusively ensure safe and effective medical technologies, and
+        they are more expensive than naming open source and unilateral known
+        jail programmatic evidence reviewable or acquit immediately no
+        hysterical ‘name-your-price’ tort.
+        <br />
+        <br />
         65% mortgage, not their home, 35% rent, not their home. market liquidity
-        implausible use lease standardized guarantee, lessing inventory, not their bid
+        implausible use lease standardized guarantee, lessing inventory, not
+        their bid
         <br />
         <br />
         sustainable housing by medication and before knocking out implausible
