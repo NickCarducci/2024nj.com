@@ -360,7 +360,8 @@ export default class App extends React.Component {
         sustainable housing by medication and before knocking out implausible
         use leases is not "sustainable" as per 1/hour-GDP(p*q)/population.
         Division of labor is mathematically proven 1775-1787 war then 1814-1870
-        GDP/p grew but 1787-1814 and 1870-1913 it fell (less work per living expense)
+        GDP/p grew but 1787-1814 and 1870-1913 it fell (less work per living
+        expense)
         <h4>the license to science, -less</h4>
         5G is an input cost and doesn't need to go thru the pentagon lmao
         <br />
@@ -470,9 +471,15 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        “Expenses should grow per hour.” Stephen Moore Taxes for profits and
-        wages of laborless-demand, free rider mutable trust breaking hypocrisy,
-        albeit 1/3 of mort direct loan and loose corporate debenture.
+        “
+        <a href="https://twitter.com/viathumbprint/status/1413909110140149768?s=20&t=zN8fJIe7ByDpXFv7jcZ2dw">
+          Expenses should grow
+        </a>
+        {space}per{space}
+        <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">hour</a>
+        .” Stephen Moore Taxes for profits and wages of laborless-demand, free
+        rider mutable trust breaking hypocrisy, albeit 1/3 of mort direct loan
+        and loose corporate debenture.
         <br />
         What happens when inventory goes down, prices goes up,” well how can you
         say that at the same time as subsidies you get more of something?
