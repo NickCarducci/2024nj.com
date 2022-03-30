@@ -351,6 +351,9 @@ export default class App extends React.Component {
             Fed Res
           </a>
         </div>
+        We made checking ($6t) more than currency %2t because how much is abroad (39%)
+        <br />
+        <br />
         I have to rebuild node js to boycott credit. I am not employble because
         I will not take credit as income. Savich deskinned
         <br />
