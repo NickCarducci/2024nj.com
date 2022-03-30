@@ -357,16 +357,19 @@ export default class App extends React.Component {
             Occupy
           </a>
         </div>
+        sustainable housing by medication and before knocking out implausible
+        use leases is not "sustainable" as per 1/hour-GDP(p*q)/population.
+        Division of labor is mathematically proven 1775-1787 war then 1814-1870
+        GDP/p grew but 1787-1814 and 1870-1913 it fell (less work per living expense)
         <h4>the license to science, -less</h4>
-        5G is an input cost and doesn't need to go thru the pentagon lmao<br/>
+        5G is an input cost and doesn't need to go thru the pentagon lmao
+        <br />
         <Cable
-          style={{ height:"400px", }}
+          style={{ height: "400px" }}
           onError={handleScollImgError}
           //img={true}
           src={
-            this.state.noyout
-              ? ""
-              : "https://www.youtube.com/embed/GOn7HZDZPhQ"
+            this.state.noyout ? "" : "https://www.youtube.com/embed/GOn7HZDZPhQ"
           }
           float={"left"}
           title="Kirby 3/30/22 $139b pentagon r&d free rider mutable input cost 5g"
