@@ -357,6 +357,10 @@ export default class App extends React.Component {
             Occupy
           </a>
         </div>
+        65% mortgage, not their home, 35% rent, not their home. market liquidity
+        implausible use lease standardized guarantee, lessing inventory, not their bid
+        <br />
+        <br />
         sustainable housing by medication and before knocking out implausible
         use leases is not "sustainable" as per 1/hour-GDP(p*q)/population.
         Division of labor is mathematically proven 1775-1787 war then 1814-1870
@@ -4798,4 +4802,3 @@ export default class App extends React.Component {
     );
   }
 }
-
