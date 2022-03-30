@@ -350,9 +350,15 @@ export default class App extends React.Component {
           <a href="https://qr.ae/pvy3yw" style={navitem}>
             Fed Res
           </a>
-        </div>
-        (I had to assume it was an accounting change, not legal)
-        We made checking ($6t) more than currency %2t because how much is abroad (39%)
+          <a
+            href="https://occupywall.us"
+            style={{ ...navitem, backgroundColor: "black", color: "white" }}
+          >
+            Occupy
+          </a>
+        </div>ahh suck it.<br/>
+        (I had to assume it was an accounting change, not legal) We made
+        checking ($6t) more than currency $2t because how much is abroad (39%)
         <br />
         <br />
         I have to rebuild node js to boycott credit. I am not employble because
