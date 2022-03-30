@@ -356,7 +356,10 @@ export default class App extends React.Component {
           >
             Occupy
           </a>
-        </div>“Ah, suck it,” Larry kudlow, “<a href="https://qr.ae/pvyLop">No</a>!”<br/>
+        </div>
+        “Ah, suck it,” Larry kudlow, “<a href="https://qr.ae/pvyLop">No</a>!”
+        The best economist in the world says $4t mortgage for checking over $2t.
+        <br />
         (I had to assume it was an accounting change, not legal) We made
         checking ($6t) more than currency $2t because how much is abroad (39%)
         <br />
