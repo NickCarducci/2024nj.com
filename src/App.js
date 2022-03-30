@@ -357,6 +357,39 @@ export default class App extends React.Component {
             Occupy
           </a>
         </div>
+        <h4>the license to science, -less</h4>
+        5G is an input cost and doesn't need to go thru the pentagon lmao<br/>
+        <Cable
+          style={{ height:"400px", }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.youtube.com/embed/GOn7HZDZPhQ"
+          }
+          float={"left"}
+          title="Kirby 3/30/22 $139b pentagon r&d free rider mutable input cost 5g"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <a href="https://truncatedsalestax.com/gov">
+          Geneva convention forced medication not held
+        </a>
+        {space}&bull;{space}geohash/month + 2 week public review 3% under $2k
+        Truncated Production Tax
+        <br />
+        National Benefit Survey 2005 doesn't even cite psychiatric scapegoating.
+        Disease of the nervous system disability is 7% injured and 5.2% actually
+        with autism or downs, 16% with nervous system (2013, 2.1m) DOES match
+        counted by 2.5m Chris Reeves???
+        <br />
+        how is a debenture that sells inventory before default, "responsible?,"
+        Johnson? 35.4% disabled anti-social
+        <br />
+        <br />
         “Ah, suck it,” Larry kudlow, “<a href="https://qr.ae/pvyLop">No</a>!”
         The best economist in the world says $4t mortgage for checking over $2t.
         <br />
@@ -2236,7 +2269,10 @@ export default class App extends React.Component {
         <br />
         “To understand why Russia is attacking would take a psychiatrist.” Dick
         Morris
-        <h4>Award is 19% of "disabled" (12m/62.7m that is also 19% of 330m as it happens)</h4>
+        <h4>
+          Award is 19% of "disabled" (12m/62.7m that is also 19% of 330m as it
+          happens)
+        </h4>
         nervous system (16%) and injured (7%)
         <Unable
           lastWidth={Math.min(600, this.state.lastWidth)}
