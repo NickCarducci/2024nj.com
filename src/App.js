@@ -2236,8 +2236,7 @@ export default class App extends React.Component {
         <br />
         “To understand why Russia is attacking would take a psychiatrist.” Dick
         Morris
-        <br />
-        <br />
+        <h4>Award is 19% of "disabled" (12m/62.7m that is also 19% of 330m as it happens)</h4>
         nervous system (16%) and injured (7%)
         <Unable
           lastWidth={Math.min(600, this.state.lastWidth)}
