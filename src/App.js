@@ -311,51 +311,143 @@ export default class App extends React.Component {
             backgroundColor: "rgba(20,20,20,.5)"
           }}
         />*/}
-        <div
-          style={{
-            display: "flex",
-            backgroundColor: "green"
-          }}
-        >
-          <span
-            id="disability"
-            onClick={goTo}
-            style={navitem}
-            role="img"
-            aria-label="wheelchair"
+        <div style={{}}>
+          <div
+            style={{
+              display: "flex",
+              backgroundColor: "green"
+            }}
           >
-            ♿
-          </span>
-          <div id="depression" onClick={goTo} style={navitem}>
-            Depression
+            <span
+              id="disability"
+              onClick={goTo}
+              style={navitem}
+              role="img"
+              aria-label="wheelchair"
+            >
+              ♿
+            </span>
+            <div id="depression" onClick={goTo} style={navitem}>
+              Depression
+            </div>
+            <div id="ssa" onClick={goTo} style={navitem}>
+              SSA
+            </div>
+            <div id="supply" onClick={goTo} style={navitem}>
+              S&D
+            </div>
+            <div id="plandemic" onClick={goTo} style={navitem}>
+              Plandemic
+            </div>
+            <a href="https://commie.dev" style={navitem}>
+              commie.dev
+            </a>
+            <a href="https://qr.ae/pvy3yw" style={navitem}>
+              Fed Res
+            </a>
+            <a
+              href="https://occupywall.us"
+              style={{ ...navitem, backgroundColor: "black", color: "white" }}
+            >
+              Occupy
+            </a>
           </div>
-          <div id="gas" onClick={goTo} style={navitem}>
-            Oil
-          </div>
-          <div id="bachelors" onClick={goTo} style={navitem}>
-            Bachelors
-          </div>
-          <div id="ssa" onClick={goTo} style={navitem}>
-            SSA
-          </div>
-          <div id="supply" onClick={goTo} style={navitem}>
-            S&D
-          </div>
-          <div id="plandemic" onClick={goTo} style={navitem}>
-            Plandemic
-          </div>
-          <a href="https://commie.dev" style={navitem}>
-            commie.dev
-          </a>
-          <a href="https://qr.ae/pvy3yw" style={navitem}>
-            Fed Res
-          </a>
-          <a
-            href="https://occupywall.us"
-            style={{ ...navitem, backgroundColor: "black", color: "white" }}
+          <div
+            style={{
+              height: "30px",
+              display: "flex",
+              alignItems: "center",
+              padding: "4px 10px",
+              fontSize: "10px"
+            }}
           >
-            Occupy
-          </a>
+            <a href="https://electiontechnology.quora.com" style={navitem}>
+              <Cable
+                style={{ backgroundColor: "white", width: "20px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/zmlgzjiign754i1/electiontechnology%20%281%29.png?raw=1"
+                }
+                float={"left"}
+                title="https://electiontechnology.quora.com"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+            </a>
+            <a href="https://thumbprint.us/voting" style={navitem}>
+              <Cable
+                style={{ backgroundColor: "white", width: "20px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/9oci4efa4zsh90q/Thumbprint_logo.png?raw=1"
+                }
+                float={"left"}
+                title="https://thumbprint.us/voting"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+            </a>
+            <a href="https://saverparty.xyz" style={navitem}>
+              <span role="img" aria-label="squirrel">
+                🐿
+              </span>
+            </a>
+            "I'm going to invoke so much duress on my exclusive answers"
+            <span
+              role="img"
+              aria-label="bachelors"
+              id="grad-cap"
+              onClick={goTo}
+              style={navitem}
+            >🎓</span>
+            <span
+              role="img"
+              aria-label="oil"
+              id="gas"
+              onClick={goTo}
+              style={navitem}
+            >
+              🛢
+            </span>
+            <a href="https://teapharmacy.party/drugs" style={navitem}>
+              <span role="img" aria-label="pharmacy">
+                ⚕️
+              </span>
+            </a>
+            <a href="https://vaults.biz/sdr" style={navitem}>
+              <span role="img" aria-label="vault">
+                🏦
+              </span>
+            </a>
+            <a href="https://occupywallst.quora.com" style={navitem}>
+              <Cable
+                style={{ backgroundColor: "white", width: "20px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/sjy2dil74i4ty8w/occupy%20logo_144%20%281%29.png?raw=1"
+                }
+                float={"left"}
+                title="https://occupywallst.quora.com"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+            </a>
+          </div>
         </div>
         "the fed has to raise rates," but they have been buying $4t mortgages
         for checking over $2t currency, that used to match, and be fungible for
