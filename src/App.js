@@ -508,19 +508,6 @@ export default class App extends React.Component {
         Consumers decide to move away, and UT NM WY is Savers' currency!
         <br />
         <br />
-        how is a debenture that sells inventory before default, "responsible?,"
-        Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
-        5.2% actually with autism or downs,{space}
-        <a href="https://2024nj.com/disability">16% with nervous system</a>
-        {space}(2013, 2.1m) DOES match
-        {space}
-        <a href="https://www.christopherreeve.org/living-with-paralysis/stats-about-paralysis">
-          counted by 2.5m Chris Reeves
-        </a>
-        ??? You are the most irresponsible bunch ever for decades Are you going
-        to stop me doing my own physical therapy to do yours?
-        <br />
-        <br />
         <Cable
           style={{ width: "200px" }}
           onError={handleScollImgError}
@@ -2272,6 +2259,19 @@ export default class App extends React.Component {
         <span style={{ textDecoration: "line-through" }}>
           {space}vs .7%/19%)
         </span>
+        <br />
+        <br />
+        how is a debenture that sells inventory before default, "responsible?,"
+        Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
+        5.2% actually with autism or downs,{space}
+        <a href="https://2024nj.com/disability">16% with nervous system</a>
+        {space}(2013, 2.1m) DOES match
+        {space}
+        <a href="https://www.christopherreeve.org/living-with-paralysis/stats-about-paralysis">
+          counted by 2.5m Chris Reeves
+        </a>
+        ??? You are the most irresponsible bunch ever for decades Are you going
+        to stop me doing my own physical therapy to do yours?
         <br />
         <br />
         Nick Carducci - Injured yet labeled schizophrenic for boycott credit
