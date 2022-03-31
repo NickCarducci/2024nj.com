@@ -451,6 +451,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        i do everything you fucking faggot<br/>
         Why would I incentivise index fund (fungible for nothing) and have
         investors increase profits and lose standing with too broad science
         (exclusive answer)
