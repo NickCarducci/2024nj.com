@@ -451,6 +451,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        “They do anything they can to force a guilty plea,” isn’t that moot? You
+        need to use evidence, not duress. I took a plea to not go to jail for
+        Driving High, which presents the same per accicent and daily - If I said I was disorderly and 
+        they didn't have to look at the evidence, I would be able to not go to jail
+        <br />
+        <br />
         So nuts they did it twice, communists STOP LESSING INVENTORY - Mark
         Levin is a{space}
         <span role="img" aria-label="pig">
