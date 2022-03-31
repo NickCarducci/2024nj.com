@@ -457,6 +457,8 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Aphasia is dementia all cause{space}<a href="https://qr.ae/pvKRxY">(?)</a>
+        <br/>
         <Cable
           onError={handleScollImgError}
           img={true}
