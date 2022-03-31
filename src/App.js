@@ -336,8 +336,14 @@ export default class App extends React.Component {
             <div id="supply" onClick={goTo} style={navitem}>
               S&D
             </div>
-            <span onClick={()=>this.setState({opt:!this.state.opt})}><Cable
-                style={{ ...navitem,backgroundColor: "green", width: "8px",height:"13px" }}
+            <span onClick={() => this.setState({ opt: !this.state.opt })}>
+              <Cable
+                style={{
+                  ...navitem,
+                  backgroundColor: "green",
+                  width: "8px",
+                  height: "13px"
+                }}
                 onError={handleScollImgError}
                 img={true}
                 src={
@@ -351,7 +357,8 @@ export default class App extends React.Component {
                 fwd={this["scrollImg" + scrollnum()]}
                 scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
                 scrollTop={this.state.scrollTop}
-              /></span>
+              />
+            </span>
             <div id="plandemic" onClick={goTo} style={navitem}>
               Plandemic
             </div>
@@ -480,6 +487,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Can someone be held for at least 30 days, linkage between mental illness
+        and drug addiction, none of those are relevant to the crime of
+        tresspass, you just have no where to put them because of implausible use
+        leases.
+        <br />
         There is no Science without{space}
         <a href="https://brainscan.info">
           CT scan{space}
