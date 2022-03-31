@@ -487,6 +487,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        name-your-price hysteria{space}&bull;{space}Bond loss profit instead of
+        rollover insurance, bred messy hair ssa discrimination I am of the 7%
+        injured, not 35.4% crazy, all-cause (?)
+        <br />
+        <br />
         No way energy investment is not the way to reduce dependence in energy
         and gas in Iran, Venezuela, Russia. Leases and wastewater are the
         solution for the American people.
@@ -740,7 +745,9 @@ export default class App extends React.Component {
         Levin is a{space}
         <span role="img" aria-label="pig">
           🐷
-        </span>. Not making a profit, social engineers by hourly expense, shortage by bond loss profit
+        </span>
+        . Not making a profit, social engineers by hourly expense, shortage by
+        bond loss profit
         <br />
         Checking and salaries should have tripled 3/2020-
         <br />
