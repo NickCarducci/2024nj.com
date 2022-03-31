@@ -487,9 +487,14 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        ​Tax still black market - and people withhold large items like homes if not 3% under $2k
-        <br/><br/>
-        pedo nor stray castration! nuder puppy mill owners!{/**general spank or certificate */}
+        ​Tax still black market - and people withhold large items like homes if
+        not 3% under $2k. China cheap garbage{space}
+        <a href="https://saverparty.xyz/global">physical stronger</a>
+        {space}Import with USD, forced!
+        <br />
+        <br />
+        pedo nor stray castration! nuder puppy mill owners!
+        {/**general spank or certificate */}
         <br />
         due diligence, contractor liable (EULA surrendered freedom, donee
         beneficiary labor-demand)
