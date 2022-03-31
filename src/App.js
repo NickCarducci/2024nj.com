@@ -451,10 +451,32 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/6lf0azokstjuehf/Screen%20Shot%202022-03-31%20at%203.07.22%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="Eamonn Isabel - (NHS) Dr. Ally Faffee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h4>everyone can concentrate with cocaine, but prescriptions prevent commerce</h4>
+        Maybe mental health is underfunded because there is no demand from
+        labor, or you have already forced laborless-demand by standardized
+        guarantee scheme and tax to pay for invoice.
+        <br />
+        <br />
         “They do anything they can to force a guilty plea,” isn’t that moot? You
         need to use evidence, not duress. I took a plea to not go to jail for
-        Driving High, which presents the same per accicent and daily - If I said I was disorderly and 
-        they didn't have to look at the evidence, I would be able to not go to jail
+        Driving High, which presents the same per accicent and daily - If I said
+        I was disorderly and they didn't have to look at the evidence, I would
+        be able to not go to jail
         <br />
         <br />
         So nuts they did it twice, communists STOP LESSING INVENTORY - Mark
