@@ -451,7 +451,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        i do everything you fucking faggot<br/>
+        i do everything you fucking faggot{space}&bull;{space}First I look at
+        {space}
+        <a href="https://humanharvest.info/polio">statistics</a>
+        {space}and (geometry) calculus-
+        <a href="https://micro-theory.com">micro</a>
+        {space}and East Asia, then{space}
+        <a href="https://youtube.com/nickcarduccinj">politics</a>
+        {space}and public{space}
+        <a href="https://froth.app">finance</a>,{space}
+        <a href="https://vaults.biz/gdp">history</a>, law and{space}
+        <a href="https://saverparty.xyz/global">Islam</a>, then{space}
+        <a href="https://qr.ae/pvKR2C">macro</a>
+        {space}and{space}
+        <a href="https://github.com/nickcarducci">code</a>
+        <br />
         Why would I incentivise index fund (fungible for nothing) and have
         investors increase profits and lose standing with too broad science
         (exclusive answer)
