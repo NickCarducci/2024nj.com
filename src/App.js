@@ -487,14 +487,16 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        pedo nor stray castration! nuder puppy mill owners!
+        ​Tax still black market - and people withhold large items like homes if not 3% under $2k
+        <br/><br/>
+        pedo nor stray castration! nuder puppy mill owners!{/**general spank or certificate */}
         <br />
         due diligence, contractor liable (EULA surrendered freedom, donee
         beneficiary labor-demand)
         <br />
         name-your-price hysteria{space}&bull;{space}Bond loss profit instead of
         rollover insurance, bred messy hair ssa discrimination I am of the 7%
-        injured, not 35.4% crazy, all-cause (?)
+        injured, not 35.4% crazy, all-cause (?){/**disenfranchised people */}
         <br />
         <br />
         No way energy investment is not the way to reduce dependence in energy
