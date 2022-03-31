@@ -626,7 +626,13 @@ export default class App extends React.Component {
         <a href="https://github.com/nickcarducci">code</a>. "GDP is bad,
         principal + interest can't be made from principal trade of inventory and
         revenue/hours" Financial Markets and Inst Macro (D, D, D){space}
-        <a href="https://qr.ae/pvKRk1">you're lucky I didn't kill Mr. Ball</a>
+        <a href="https://qr.ae/pvKRk1">you're lucky I didn't kill Mr. Ball</a>.
+        Dumping cheap product is against our{space}
+        <a href="https://qr.ae/pvKTxe">national interest</a>, for their labor is
+        cheaper. Substitute demand of another market proves crowding out and
+        subsidies{space}
+        <a href="https://qr.ae/pvKppO">unlocking economic-welfare</a>,
+        1/hour-GDP/p WRONG
         <br />
         Why would I incentivise index fund (
         <span style={{ textDecoration: "line-through" }}>
