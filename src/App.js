@@ -457,6 +457,16 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        There is no Science without{space}
+        <a href="https://brainscan.info">
+          CT scan{space}
+          <span role="img" aria-label="brain">
+            🧠
+          </span>
+        </a>
+        . Don't need to medicate to house homeless, that are such a way because
+        of finance and laborless-demand.
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
