@@ -457,6 +457,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        {/*researchtyping Get me out of here. beam me up, scottie<br/>"russian incrazeian"*/}
         Aphasia is dementia all cause{space}<a href="https://qr.ae/pvKRxY">(?)</a>
         <br/>
         <Cable
@@ -530,7 +531,24 @@ export default class App extends React.Component {
           Consumer Fraud, -tortious
         </span>
         <br />
-        <br />i do everything you fucking faggot{space}&bull;{space}First I look
+        <br />
+        <Cable
+        style={{}}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              :"https://www.youtube.com/embed/OqgUxnqc3AM?start=52" 
+          }
+          float={"right"}
+          title={`Frank Morano-Fact Check Peter Navarro, Employment, Immigration, (GdP, 52") & Wuhan-Serendipitous-Semination`}
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        i do everything you fucking faggot{space}&bull;{space}First I look
         at
         {space}
         <a href="https://humanharvest.info/polio">statistics</a>
