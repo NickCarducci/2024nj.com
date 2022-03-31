@@ -451,6 +451,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Why would I incentivise index fund (fungible for nothing) and have
+        investors increase profits and lose standing with too broad science
+        (exclusive answer)
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -466,7 +469,10 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        <h4>everyone can concentrate with cocaine, but prescriptions prevent commerce</h4>
+        <h4>
+          everyone can concentrate with cocaine, but prescriptions prevent
+          commerce
+        </h4>
         Maybe mental health is underfunded because there is no demand from
         labor, or you have already forced laborless-demand by standardized
         guarantee scheme and tax to pay for invoice.
