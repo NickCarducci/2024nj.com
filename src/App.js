@@ -361,6 +361,7 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
+            Prosperity! -science/skew: import Brazilian Real!
             <a href="https://electiontechnology.quora.com" style={navitem}>
               <Cable
                 style={{ backgroundColor: "white", width: "20px" }}
