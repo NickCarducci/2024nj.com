@@ -487,8 +487,35 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        "they deserve medication and shelter." Most kill shelters host puppy
-        mill overproduction, not stray.
+        No way energy investment is not the way to reduce dependence in energy
+        and gas in Iran, Venezuela, Russia. Leases and wastewater are the
+        solution for the American people.
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/1vvshocci6zgwa5/Screen%20Shot%202022-03-31%20at%206.05.22%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Macroeconomics Household heads and corporates, 1/3 share with debentures (corp, tsy) and mortgage"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Is this in reference to $1t corporate and $3t household? Everyone{space}
+        <a href="https://qr.ae/pvKpsN">move back home</a>,{space}
+        <a href="https://qr.ae/pvyLDk">chore</a>.
+        <br />
+        <br />
+        "they deserve medication and{space}
+        <a href="https://www.yumpu.com/en/document/read/18596138/slave-narratives-library-of-congress/41">
+          shelter
+        </a>
+        ." Most kill shelters host puppy mill overproduction, not stray.
         <br />
         Can someone be held for at least 30 days, linkage between mental illness
         and drug addiction, none of those are relevant to the crime of
@@ -5252,4 +5279,3 @@ export default class App extends React.Component {
     );
   }
 }
-
