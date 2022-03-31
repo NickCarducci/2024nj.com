@@ -336,6 +336,22 @@ export default class App extends React.Component {
             <div id="supply" onClick={goTo} style={navitem}>
               S&D
             </div>
+            <span onClick={()=>this.setState({opt:!this.state.opt})}><Cable
+                style={{ ...navitem,backgroundColor: "green", width: "8px",height:"13px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/zqtdliklfpau6si/nj%20white.png?raw=1"
+                }
+                float={"left"}
+                title="NJ png"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              /></span>
             <div id="plandemic" onClick={goTo} style={navitem}>
               Plandemic
             </div>
@@ -361,7 +377,6 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
-            Prosperity! -science/skew: import Brazilian Real!
             <a href="https://electiontechnology.quora.com" style={navitem}>
               <Cable
                 style={{ backgroundColor: "white", width: "20px" }}
@@ -403,13 +418,20 @@ export default class App extends React.Component {
                 🐿
               </span>
             </a>
-            <span>
-              "I'm going to invoke{space}
-              <a href="https://qr.ae/pvKRD1">so much</a>
-              {space}duress on my{space}
-              <a href="https://qr.ae/pvKRxY">exclusive</a>
-              {space}answers"
-            </span>
+            {this.state.opt ? (
+              <span>
+                Prosperity! -science/skew: import Brazilian Real! Fine loser
+                judges. Torttech programmatic
+              </span>
+            ) : (
+              <span>
+                "I'm going to invoke{space}
+                <a href="https://qr.ae/pvKRD1">so much</a>
+                {space}duress on my{space}
+                <a href="https://qr.ae/pvKRxY">exclusive</a>
+                {space}answers"
+              </span>
+            )}
             <span
               role="img"
               aria-label="bachelors"
