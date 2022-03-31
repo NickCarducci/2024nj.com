@@ -451,6 +451,27 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/32lmxaena03nncy/Screen%20Shot%202022-03-31%20at%205.19.06%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="GBNews Joe Ventre Taxpayers' Alliance on name-your-price pooling, and 'radical thinking'"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "$8.5b/yr savings by next year automations."
+        <br />
+        You could save $10t by stopping standardized guarantee schemes and $19t
+        by stopping invoices, $8t housing
+        <br />
+        <br />
         They sponsored me and paid for it with worker coop/
         <span style={{ color: "purple" }}>
           corporation double tax to go public
@@ -459,11 +480,12 @@ export default class App extends React.Component {
         <span style={{ color: "cornflowerblue" }}>
           max-royalty in each industry, so royalty% subservient to customers
         </span>
-        {space}as opposed to debentures or power of legal-cohorts - time is how it
-        is made, and it is not how it can be kempt.{space}
+        {space}as opposed to debentures or power of legal-cohorts - time is how
+        it is made, and it is not how it can be kempt.{space}
         <span style={{ color: "red" }}>
           Saver-lesser mediation is nothing but (cash/debt)*income, and
-          max-royalty thereafter, for vertical-industry-line skimping, or Consumer Fraud, -tortious
+          max-royalty thereafter, for vertical-industry-line skimping, or
+          Consumer Fraud, -tortious
         </span>
         <br />
         <br />i do everything you fucking faggot{space}&bull;{space}First I look
