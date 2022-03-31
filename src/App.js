@@ -740,7 +740,7 @@ export default class App extends React.Component {
         Levin is a{space}
         <span role="img" aria-label="pig">
           🐷
-        </span>
+        </span>. Not making a profit, social engineers by hourly expense, shortage by bond loss profit
         <br />
         Checking and salaries should have tripled 3/2020-
         <br />
