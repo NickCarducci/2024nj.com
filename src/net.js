@@ -7,7 +7,7 @@ import {
   loansofdebtoutstanding,
   newdebt
 } from "./netdata";
-import { balance, checking, currency } from "./balance";
+import { accounts, balance, checking, currency } from "./balance";
 const gdps = {
   "1952-03-01": {
     corporateOrSelf: 443100,
@@ -2271,6 +2271,23 @@ class NetToGDP extends React.Component {
     let bondData = [];
     let curren = [];
     let currenData = [];
+    let account = [];
+    let accounttypes = [];
+    let accountData = {};
+    Object.keys(accounts).forEach((yr, i) => {
+      const year = new Date(yr).getTime();
+      if (i === 0) {
+        Object.keys(accounts[yr]).forEach((x) => {
+          accounttypes.push(x);
+          return (accountData[x] = []);
+        });
+      }
+
+      Object.keys(accounts[yr]).forEach((name) => {
+        account.push(accounts[yr][name]);
+        accountData[name].push([year, accounts[yr][name]]);
+      });
+    });
     const chartType = "federal reserve";
     if (chartType === "federal reserve") {
       currency.forEach((set) => {
@@ -2332,12 +2349,16 @@ class NetToGDP extends React.Component {
       ...bond,
       ...notes
     ];
+    var lowAccount = Math.min(...account);
+    var highAccount = Math.max(...account);
     var lowNetRatio = Math.min(...all);
     var lowDate = Math.min(...date);
     var highNetRatio = Math.max(...all);
     var highDate = Math.max(...date);
     //console.log(dataData);
     var state = {
+      accounttypes,
+      ...accountData,
       chartType,
       //laststate: chartType,
       date,
@@ -2349,12 +2370,15 @@ class NetToGDP extends React.Component {
       mortgagesData,
       householdsData,
       noData,
+      yAxisAccount: highAccount - lowAccount,
       yAxis: highNetRatio - lowNetRatio,
       xAxis: highDate - lowDate,
       lowNetRatio,
       highDate,
       lowDate,
-      currenData
+      currenData,
+      highAccount,
+      lowAccount
     };
     this.state = state;
   }
@@ -2660,73 +2684,88 @@ class NetToGDP extends React.Component {
       }
       return newnum + (decimal ? "." + decimal : "") + suff[app];
     };
+    const coeff = (this.props.lastWidth - 60) / this.props.lastWidth;
     //console.log(this.state.oilprice);
     const noData = this.state.noData.map(([x, y]) => [
       ((x - this.state.lowDate) / this.state.xAxis) *
-        0.9 *
+        coeff *
         this.props.lastWidth,
       0
     ]);
     //console.log(this.state.oilprice);
-
+    const heightfix = 150;
     const selfsData = this.state.selfsData
       .filter((x) => x[1] !== 0)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
     const mortgagesData = this.state.mortgagesData
       .filter((x) => x[1] !== 0)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
     const householdsData = this.state.householdsData
       .filter((x) => x[1] !== 0)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
     const corporatesData = this.state.corporatesData
       .filter((x) => x[1] !== 0)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
     const bondData = this.state.bondData
       .filter((x) => x[1] !== 0)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
     const notesData = this.state.notesData
       .filter((x) => x[1] !== 0 && x[1] > 10000)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
     const currenData = this.state.currenData
       .filter((x) => x[1] !== 0)
       .map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxis) *
-          0.9 *
+          coeff *
           this.props.lastWidth,
-        ((y - this.state.lowNetRatio) / this.state.yAxis) * 150
+        ((y - this.state.lowNetRatio) / this.state.yAxis) * heightfix
       ]);
+    var accountData = {};
+    this.state.accounttypes.forEach((x) => {
+      accountData[x] = this.state[x]
+        .filter((x) => x[1] !== 0)
+        .map(([x, y]) => [
+          ((x - this.state.lowDate) / this.state.xAxis) *
+            coeff *
+            this.props.lastWidth,
+          ((y - this.state.lowAccount) / this.state.yAxisAccount) * heightfix
+        ]);
+    });
+    const bizandcheck =
+      this.state.biz && this.state.chartType === "federal reserve";
     const labelitem = {
-      color: "white",
+      transition: ".3s ease-out",
+      color: bizandcheck ? "grey" : "white",
       width: "max-content",
       margin: "0px 4px"
     };
@@ -2792,7 +2831,11 @@ class NetToGDP extends React.Component {
           >
             {"federal reserve" === this.state.chartType ? (
               <a
-                href="https://fred.stlouisfed.org/graph/?g=NAXa"
+                href={
+                  bizandcheck
+                    ? "https://fred.stlouisfed.org/release/tables?rid=52&eid=808834"
+                    : "https://fred.stlouisfed.org/graph/?g=NAXa"
+                }
                 style={{ color: "white" }}
               >
                 checking
@@ -2814,6 +2857,7 @@ class NetToGDP extends React.Component {
               style={{
                 width: "min-content"
               }}
+              defaultValue="liabilities/GDP, m2*velocity"
               state={this.state.chartType}
               onChange={(name) => {
                 this.setState({ chartType: name.target.value });
@@ -2835,16 +2879,20 @@ class NetToGDP extends React.Component {
               ))}
             </select>
             &nbsp;
-            {[
-              "federal reserve",
-              "spending (m2)",
-              "borrowings of monetary-debits",
-              "household accounts",
-              "financial accounts"
-            ].includes(this.state.chartType)
-              ? `$${shortNumber(this.state.lowNetRatio)}-${shortNumber(
-                  this.state.highNetRatio * 1000000
+            {bizandcheck
+              ? `$${shortNumber(this.state.lowAccount * 1000000)}-${shortNumber(
+                  this.state.highAccount * 1000000
                 )}`
+              : [
+                  "federal reserve",
+                  "spending (m2)",
+                  "borrowings of monetary-debits",
+                  "household accounts",
+                  "financial accounts"
+                ].includes(this.state.chartType)
+              ? `$${shortNumber(
+                  this.state.lowNetRatio * 1000000
+                )}-${shortNumber(this.state.highNetRatio * 1000000)}`
               : `${StringDecimal(
                   this.state.lowNetRatio *
                     (this.state.chartType === "new debt" ? 1 : 100)
@@ -2854,94 +2902,156 @@ class NetToGDP extends React.Component {
                 )}%`}
           </span>
           <div
-            style={{ marginTop: "6px", display: "flex", width: "max-content" }}
+            style={{
+              color: "white",
+              marginTop: "6px",
+              zIndex: "1",
+              display: "flex",
+              width: "max-content",
+              maxWidth: "100%",
+              position: "absolute"
+            }}
           >
-            <div style={labelitem}>
-              <div
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "deepskyblue"
-                }}
-              />
-              households
-            </div>
-            <div style={labelitem}>
-              <div
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "plum"
-                }}
-              />
-              corp
-            </div>
-            <div style={labelitem}>
-              <div
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "green"
-                }}
-              />
-              mort
-            </div>
-            <div style={labelitem}>
-              <div
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "purple"
-                }}
-              />
-              self
-            </div>
-            <div style={labelitem}>
-              <div
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "red"
-                }}
-              />
-              bond
-            </div>
-            <div style={labelitem}>
-              <div
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "pink"
-                }}
-              />
-              notes
-            </div>
+            {!bizandcheck ? (
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <div style={labelitem}>
+                  <div
+                    style={{
+                      width: "5px",
+                      height: "5px",
+                      backgroundColor: "deepskyblue"
+                    }}
+                  />
+                  households
+                </div>
+                <div style={labelitem}>
+                  <div
+                    style={{
+                      width: "5px",
+                      height: "5px",
+                      backgroundColor: "plum"
+                    }}
+                  />
+                  corp
+                </div>
+                <div style={labelitem}>
+                  <div
+                    style={{
+                      width: "5px",
+                      height: "5px",
+                      backgroundColor: "green"
+                    }}
+                  />
+                  mort
+                </div>
+                <div style={labelitem}>
+                  <div
+                    style={{
+                      width: "5px",
+                      height: "5px",
+                      backgroundColor: "purple"
+                    }}
+                  />
+                  self
+                </div>
+                <div style={labelitem}>
+                  <div
+                    style={{
+                      width: "5px",
+                      height: "5px",
+                      backgroundColor: "red"
+                    }}
+                  />
+                  bond
+                </div>
+                <div style={labelitem}>
+                  <div
+                    style={{
+                      width: "5px",
+                      height: "5px",
+                      backgroundColor: "pink"
+                    }}
+                  />
+                  notes
+                </div>
+              </div>
+            ) : (
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                {this.state.accounttypes.map((x, i) => (
+                  <div style={labelitem}>
+                    <div
+                      style={{
+                        width: "5px",
+                        height: "5px",
+                        backgroundColor: `rgb(${
+                          (i / this.state.accounttypes.length) * 220 + 30
+                        },${
+                          ((this.state.accounttypes.length / 2 - i) /
+                            this.state.accounttypes.length) *
+                            150 +
+                          90
+                        },${
+                          ((this.state.accounttypes.length - i) /
+                            this.state.accounttypes.length) *
+                            220 +
+                          30
+                        })`
+                      }}
+                    />
+                    {x.substring(0, 5)}
+                  </div>
+                ))}
+              </div>
+            )}
+            <input
+              type="checkbox"
+              //checked={this.state.biz}
+              onChange={() => this.setState({ biz: !this.state.biz })}
+            />
+            "biz"
           </div>
         </div>
         <div style={{ transform: "translate(0px,230px)" }}>
-          <svg
-            className="all"
-            style={linecss}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {noData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={4}
-                    height={4}
-                    stroke="rgb(230,230,230)"
-                    fill="transparent"
-                    strokeWidth={0}
-                    key={i}
-                  />
-                )
-            )}
-            {this.state.chartType === "federal reserve" &&
-              currenData.map(
+          {!bizandcheck && (
+            <svg
+              className="all"
+              style={linecss}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {noData.map(
+                ([x, y], i) =>
+                  !isNaN(x) &&
+                  !isNaN(y) && (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={4}
+                      height={4}
+                      stroke="rgb(230,230,230)"
+                      fill="transparent"
+                      strokeWidth={0}
+                      key={i}
+                    />
+                  )
+              )}
+              {this.state.chartType === "federal reserve" &&
+                currenData.map(
+                  ([x, y], i) =>
+                    !isNaN(x) &&
+                    !isNaN(y) && (
+                      <rect
+                        x={x}
+                        y={y}
+                        width={2}
+                        height={1}
+                        stroke="yellow"
+                        fill="blue"
+                        strokeWidth={1}
+                        key={i}
+                      />
+                    )
+                )}
+              {householdsData.map(
                 ([x, y], i) =>
                   !isNaN(x) &&
                   !isNaN(y) && (
@@ -2949,110 +3059,133 @@ class NetToGDP extends React.Component {
                       x={x}
                       y={y}
                       width={2}
-                      height={1}
-                      stroke="yellow"
+                      height={2}
+                      stroke="deepskyblue"
                       fill="blue"
                       strokeWidth={1}
                       key={i}
                     />
                   )
               )}
-            {householdsData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="deepskyblue"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
-                )
-            )}
-            {corporatesData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="plum"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
-                )
-            )}
-            {mortgagesData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="green"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
-                )
-            )}
-            {selfsData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="purple"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
-                )
-            )}
-            {bondData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="red"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
-                )
-            )}
-            {notesData.map(
-              ([x, y], i) =>
-                !isNaN(x) &&
-                !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="pink"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
-                )
-            )}
+              {corporatesData.map(
+                ([x, y], i) =>
+                  !isNaN(x) &&
+                  !isNaN(y) && (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={2}
+                      height={2}
+                      stroke="plum"
+                      fill="blue"
+                      strokeWidth={1}
+                      key={i}
+                    />
+                  )
+              )}
+              {mortgagesData.map(
+                ([x, y], i) =>
+                  !isNaN(x) &&
+                  !isNaN(y) && (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={2}
+                      height={2}
+                      stroke="green"
+                      fill="blue"
+                      strokeWidth={1}
+                      key={i}
+                    />
+                  )
+              )}
+              {selfsData.map(
+                ([x, y], i) =>
+                  !isNaN(x) &&
+                  !isNaN(y) && (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={2}
+                      height={2}
+                      stroke="purple"
+                      fill="blue"
+                      strokeWidth={1}
+                      key={i}
+                    />
+                  )
+              )}
+              {bondData.map(
+                ([x, y], i) =>
+                  !isNaN(x) &&
+                  !isNaN(y) && (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={2}
+                      height={2}
+                      stroke="red"
+                      fill="blue"
+                      strokeWidth={1}
+                      key={i}
+                    />
+                  )
+              )}
+              {notesData.map(
+                ([x, y], i) =>
+                  !isNaN(x) &&
+                  !isNaN(y) && (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={2}
+                      height={2}
+                      stroke="pink"
+                      fill="blue"
+                      strokeWidth={1}
+                      key={i}
+                    />
+                  )
+              )}
+            </svg>
+          )}
+          <svg
+            className="all"
+            style={linecss}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {bizandcheck &&
+              Object.keys(accountData).map((name, o) => {
+                return accountData[name].map(([x, y], i) => {
+                  return (
+                    !isNaN(x) &&
+                    !isNaN(y) && (
+                      <rect
+                        x={x}
+                        y={y}
+                        width={2}
+                        height={2}
+                        stroke={`rgb(${
+                          (o / this.state.accounttypes.length) * 220 + 30
+                        },${
+                          ((this.state.accounttypes.length / 2 - o) /
+                            this.state.accounttypes.length) *
+                            150 +
+                          90
+                        },${
+                          ((this.state.accounttypes.length - o) /
+                            this.state.accounttypes.length) *
+                            220 +
+                          30
+                        })`}
+                        fill="blue"
+                        strokeWidth={1}
+                        key={i}
+                      />
+                    )
+                  );
+                });
+              })}
           </svg>
         </div>
         {/*<div
