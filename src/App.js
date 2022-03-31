@@ -457,9 +457,30 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/zksaaknjdj3vwep/Screen%20Shot%202022-03-31%20at%208.11.35%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="GBNews Steve Brine MP NHS fines state victimization bond loss profit per diem incarceration unilateral known hazard hysterical standardized guarantee 'name-your-price' tort"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Make the companies pay to get more people off cigs, the state cannot
+        self-victimize; neither discriminate “pollution” by individual health,
+        you already have smoking area motions.
+        <br />
+        <br />
         {/*researchtyping Get me out of here. beam me up, scottie<br/>"russian incrazeian"*/}
-        Aphasia is dementia all cause{space}<a href="https://qr.ae/pvKRxY">(?)</a>
-        <br/>
+        Aphasia is dementia all cause{space}
+        <a href="https://qr.ae/pvKRxY">(?)</a>
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -533,13 +554,13 @@ export default class App extends React.Component {
         <br />
         <br />
         <Cable
-        style={{}}
+          style={{}}
           onError={handleScollImgError}
           //img={true}
           src={
             this.state.noyout
               ? ""
-              :"https://www.youtube.com/embed/OqgUxnqc3AM?start=52" 
+              : "https://www.youtube.com/embed/OqgUxnqc3AM?start=52"
           }
           float={"right"}
           title={`Frank Morano-Fact Check Peter Navarro, Employment, Immigration, (GdP, 52") & Wuhan-Serendipitous-Semination`}
@@ -548,8 +569,9 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        i do everything you fucking{space}<a href="https://vaults.biz/party">faggot</a>{space}&bull;{space}First I look
-        at
+        i do everything you fucking{space}
+        <a href="https://vaults.biz/party">faggot</a>
+        {space}&bull;{space}First I look at
         {space}
         <a href="https://humanharvest.info/polio">statistics</a>
         {space}and (geometry) calculus-
