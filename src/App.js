@@ -464,7 +464,8 @@ export default class App extends React.Component {
         <a href="https://saverparty.xyz/global">Islam</a>, then{space}
         <a href="https://qr.ae/pvKR2C">macro</a>
         {space}and{space}
-        <a href="https://github.com/nickcarducci">code</a>
+        <a href="https://github.com/nickcarducci">code</a>. "GDP is bad," Financial Markets and Inst 
+        Macro (D, D, D) you're lucky I didn't kill Mr. Ball
         <br />
         Why would I incentivise index fund (fungible for nothing) and have
         investors increase profits and lose standing with too broad science
