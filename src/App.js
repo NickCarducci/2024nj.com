@@ -457,6 +457,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "Layoffs in tech self-inflicted pain in China?" - CNN, that actually saves money<br/><br/>
         <Cable
           onError={handleScollImgError}
           img={true}
