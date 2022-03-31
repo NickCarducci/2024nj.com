@@ -548,7 +548,7 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        i do everything you fucking faggot{space}&bull;{space}First I look
+        i do everything you fucking{space}<a href="https://vaults.biz/party">faggot</a>{space}&bull;{space}First I look
         at
         {space}
         <a href="https://humanharvest.info/polio">statistics</a>
