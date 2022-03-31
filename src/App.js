@@ -451,7 +451,23 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        i do everything you fucking faggot{space}&bull;{space}First I look at
+        They sponsored me and paid for it with worker coop/
+        <span style={{ color: "purple" }}>
+          corporation double tax to go public
+        </span>
+        /standardized guarantee loss for copy over{space}
+        <span style={{ color: "cornflowerblue" }}>
+          max-royalty in each industry, so royalty% subservient to customers
+        </span>
+        {space}as opposed to debentures or power of legal-cohorts - time is how it
+        is made, and it is not how it can be kempt.{space}
+        <span style={{ color: "red" }}>
+          Saver-lesser mediation is nothing but (cash/debt)*income, and
+          max-royalty thereafter, for vertical-industry-line skimping, or Consumer Fraud, -tortious
+        </span>
+        <br />
+        <br />i do everything you fucking faggot{space}&bull;{space}First I look
+        at
         {space}
         <a href="https://humanharvest.info/polio">statistics</a>
         {space}and (geometry) calculus-
