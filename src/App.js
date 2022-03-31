@@ -457,7 +457,35 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        "Layoffs in tech self-inflicted pain in China?" - CNN, that actually saves money<br/><br/>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/3rn9gqyhhulocwt/Screen%20Shot%202022-03-31%20at%203.13.22%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="Jaeson Jones Newsmax American Agenda - https://www.cbp.gov/newsroom/media-resources/stats"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        They are trying to reach friends and family, they know where they are
+        going.
+        <br />
+        Women and families, credible claims of asylum,{space}
+        <a href="https://www.cbp.gov/newsroom/media-resources/stats">versus</a>
+        {space}singletons
+        <br />
+        <br />"
+        <a href="https://www.linkedin.com/posts/javascript-developer_ugcPost-6913022657198223360-z7pS?utm_source=linkedin_share&utm_medium=member_desktop_web">
+          Layoffs in tech
+        </a>
+        {space}self-inflicted pain in China?" - CNN, that actually saves money
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -590,9 +618,12 @@ export default class App extends React.Component {
         revenue/hours" Financial Markets and Inst Macro (D, D, D){space}
         <a href="https://qr.ae/pvKRk1">you're lucky I didn't kill Mr. Ball</a>
         <br />
-        Why would I incentivise index fund (<span style={{textDecoration:"line-through"}}>fungible for nothing</span>) and have
-        investors increase profits and lose standing with too broad science
-        (exclusive answer)
+        Why would I incentivise index fund (
+        <span style={{ textDecoration: "line-through" }}>
+          fungible for nothing
+        </span>
+        , sell and pay ) and have investors increase profits and lose standing
+        with too broad science (exclusive answer)
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -1260,7 +1291,10 @@ export default class App extends React.Component {
         advancement -.01%/yr+ baseline -1913 amongst population growth 3-1%/yr+,
         crowding out enbunked!
         <br />
-        <a href="https://qr.ae/pG0Zty" style={{textDecoration:"line-through"}}>
+        <a
+          href="https://qr.ae/pG0Zty"
+          style={{ textDecoration: "line-through" }}
+        >
           index funds aren't fungible for actual shares
         </a>
         , corporate bonds aren't loans, for they have No SEC for inventory
