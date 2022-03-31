@@ -487,6 +487,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "they deserve medication and shelter." Most kill shelters host puppy
+        mill overproduction, not stray.
+        <br />
         Can someone be held for at least 30 days, linkage between mental illness
         and drug addiction, none of those are relevant to the crime of
         tresspass, you just have no where to put them because of implausible use
@@ -5249,3 +5252,4 @@ export default class App extends React.Component {
     );
   }
 }
+
