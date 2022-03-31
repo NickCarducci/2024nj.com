@@ -590,7 +590,7 @@ export default class App extends React.Component {
         revenue/hours" Financial Markets and Inst Macro (D, D, D){space}
         <a href="https://qr.ae/pvKRk1">you're lucky I didn't kill Mr. Ball</a>
         <br />
-        Why would I incentivise index fund (fungible for nothing) and have
+        Why would I incentivise index fund (<span style={{textDecoration:"line-through"}}>fungible for nothing</span>) and have
         investors increase profits and lose standing with too broad science
         (exclusive answer)
         <Cable
@@ -1260,7 +1260,7 @@ export default class App extends React.Component {
         advancement -.01%/yr+ baseline -1913 amongst population growth 3-1%/yr+,
         crowding out enbunked!
         <br />
-        <a href="https://qr.ae/pG0Zty">
+        <a href="https://qr.ae/pG0Zty" style={{textDecoration:"line-through"}}>
           index funds aren't fungible for actual shares
         </a>
         , corporate bonds aren't loans, for they have No SEC for inventory
