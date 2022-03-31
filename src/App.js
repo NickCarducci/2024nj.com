@@ -457,6 +457,25 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
+              : "https://www.dropbox.com/s/p56kfqmurfqzqgd/Screen%20Shot%202022-03-31%20at%205.25.40%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="Ukraine GBNews youtuber Russian populous mad anti-social militaristic"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        The Russians are sick, Militaristic, and mad, we kill their prisoners of
+        war, america castrates pedo and medicate homeless, bond loss profit.
+        <br />
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
               : "https://www.dropbox.com/s/32lmxaena03nncy/Screen%20Shot%202022-03-31%20at%205.19.06%20AM.png?raw=1"
           }
           float={"right"}
@@ -472,6 +491,21 @@ export default class App extends React.Component {
         by stopping invoices, $8t housing
         <br />
         <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/lg0hfo0x7dhfmtj/battle-of-lexington.jpeg?raw=1"
+          }
+          float={"right"}
+          title="History Channel battle of lexington"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         They sponsored me and paid for it with worker coop/
         <span style={{ color: "purple" }}>
           corporation double tax to go public
