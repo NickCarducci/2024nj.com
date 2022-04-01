@@ -487,12 +487,19 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        ​the federal government just tripled checking for mortgage $4t, did you get any? "yes"
-        <br/><br/>
+        estimates are not property - they are waiting in line for spot up to
+        changing sprint requirements
+        <br />
+        <br />
+        ​the federal government just tripled checking for mortgage $4t, did you
+        get any? "yes"
+        <br />
+        <br />
         ​Tax still black market - and people withhold large items like homes if
         not 3% under $2k. China cheap garbage{space}
         <a href="https://saverparty.xyz/global">physical stronger</a>
-        {space}Import with USD, forced!{/**send it - coupon, thanks joe and joe */}
+        {space}Import with USD, forced!
+        {/**send it - coupon, thanks joe and joe */}
         <br />
         <br />
         pedo nor stray castration! nuder puppy mill owners!
@@ -740,8 +747,10 @@ export default class App extends React.Component {
           scrollTop={this.state.scrollTop}
         />
         <h4>
+          Energy/5G/bridge investment instead of NFC motor vehicle and
+          competition. Ritalin is amphetamines. Amphetamines are cocaine.
           everyone can concentrate with cocaine, but prescriptions prevent
-          commerce
+          commerce. science in naming and open source
         </h4>
         Maybe mental health is underfunded because there is no demand from
         labor, or you have already forced laborless-demand by standardized
