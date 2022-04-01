@@ -488,6 +488,25 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        If{space}
+        <a href="https://www.census.gov/library/stories/2022/01/national-poverty-in-america-awareness-month-measuring-poverty.html">
+          poverty
+        </a>
+        {space}is to be lowered, how better than to start counting income over
+        third despondence/ 33rd percentile of expenses, rather than thrice
+        average expenses in Minimum Household Food Cost for 2-chorer household (1963)
+        <br />
+        <br />
+        Put him out of his misery like{space}
+        <a
+          href="https://markethistory.quora.com"
+          style={{
+            color: "gold"
+          }}
+        >
+          prevent substitution
+        </a>
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -503,8 +522,8 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        Libertarian thinks guarantee safety net should be for delinquent-elderly and
-        pensioners, instead of living-hour labor and disabled?
+        Libertarian thinks guarantee safety net should be for delinquent-elderly
+        and pensioners, instead of living-hour labor and disabled?
         <br />
         <br />
         You don’t know these things - I am consenstech
