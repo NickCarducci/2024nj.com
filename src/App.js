@@ -488,13 +488,34 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/exmgw8jqo2s9v2d/Screen%20Shot%202022-04-01%20at%2012.25.55%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="Mahyar Tousi GBNews - living libertarian"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Libertarian thinks guarantee safety net should be for delinquent-elderly and
+        pensioners, instead of living-hour labor and disabled?
+        <br />
+        <br />
         You don’t know these things - I am consenstech
         <br />
-        Moore (<a href="https://qr.ae/pvKhqc">permit 12 wastewater</a>) and Powell (max-royalty)
+        Moore (<a href="https://qr.ae/pvKhqc">permit 12 wastewater</a>) and
+        Powell (max-royalty)
         <br />
         1/hour-GDP/p horseshoe and understand markets in all areas
         <br />
-        Pay peanuts you get monkeys{space}<a href="https://qr.ae/pvKhlQ">((GDP-PCE) /GDP)</a>
+        Pay peanuts you get monkeys{space}
+        <a href="https://qr.ae/pvKhlQ">((GDP-PCE) /GDP)</a>
         <br />
         Career Donald trump business people and remainers free rider mutable
         gravity toilet, naming and open source, hand for hand diplomacy
