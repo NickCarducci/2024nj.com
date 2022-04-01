@@ -1,4 +1,5 @@
 import React from "react";
+import Cable from "./Dropwire";import React from "react";
 import Cable from "./Dropwire";
 import Bachelors from "./bachelors";
 import TwitterTweetEmbed from "./TwitterTweetEmbed";
@@ -336,7 +337,13 @@ export default class App extends React.Component {
             <div id="supply" onClick={goTo} style={navitem}>
               S&D
             </div>
-            <span onClick={() => this.setState({ opt: !this.state.opt })}>
+            <span
+              onClick={() =>
+                this.setState({
+                  opt: this.state.opt === 1 ? true : this.state.opt ? false : 1
+                })
+              }
+            >
               <Cable
                 style={{
                   ...navitem,
@@ -425,7 +432,16 @@ export default class App extends React.Component {
                 🐿
               </span>
             </a>
-            {this.state.opt ? (
+            {this.state.opt === 1 ? (
+              <span>
+                “Not enough{space}
+                <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
+                  growth
+                </a>
+                , too much{space}
+                <a href="https://qr.ae/pvKt09">Stimulus</a>.” Larry Kudlow
+              </span>
+            ) : this.state.opt ? (
               <span>
                 Prosperity! -science/skew: import Brazilian Real! Fine loser
                 judges. Torttech programmatic - immediate acquittal
