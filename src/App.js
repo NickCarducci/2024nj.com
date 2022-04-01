@@ -488,6 +488,24 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/knykjfya119k9xu/Screen%20Shot%202022-04-01%20at%201.41.26%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="GBNews abandoned laborequity.org accounting broad - hysterical torts and bizarre measure of productivity, expense/hour"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        You are gonna fucking die bitch, of starvation, for that is what you do to me, when you triple checking after expenses but not for me
+        <br/>
+        <br/>
         If{space}
         <a href="https://www.census.gov/library/stories/2022/01/national-poverty-in-america-awareness-month-measuring-poverty.html">
           poverty
