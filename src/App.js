@@ -494,6 +494,23 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
+              : "https://www.dropbox.com/s/o3fto2aib3uyxxl/Screen%20Shot%202022-04-01%20at%201.54.26%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="GBNews Ben Habib decentralization not devolution"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />Decentralization by local counsels and anarchy, devolution Nicholas sturgeon , smaller units of operative authority
+        <br/>
+        <br/>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
               : "https://www.dropbox.com/s/knykjfya119k9xu/Screen%20Shot%202022-04-01%20at%201.41.26%20PM.png?raw=1"
           }
           float={"right"}
