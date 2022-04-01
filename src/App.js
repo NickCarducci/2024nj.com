@@ -487,6 +487,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Welfare (debit-vault) or{space}
+        <a href="https://www.quora.com/How-did-South-Korea-become-100-times-wealthier-than-most-African-countries-in-less-than-70-years/answer/Daniel-Na-22">
+          expense
+        </a>. weening bond loss profit off cops and property off scripts
+        <br />
         2.5m population{space}
         <a href="https://qr.ae/pGEZyS">growth half life ago</a>.
         <br />
