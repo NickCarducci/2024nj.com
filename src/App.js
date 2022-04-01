@@ -504,6 +504,7 @@ export default class App extends React.Component {
           scrollTop={this.state.scrollTop}
         />
         Licensing and USD-only-for-export/foreign-customs-import restrictions for very good reasons.
+        Stop government from funding their own licenses.
         <br/>
         <br/>
         amortization is concurrentable not{space}
