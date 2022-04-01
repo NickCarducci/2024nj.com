@@ -487,6 +487,34 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        2.5m population{space}
+        <a href="https://qr.ae/pGEZyS">growth half life ago</a>.
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/72luiqbsmkk4n5n/Screen%20Shot%202022-04-01%20at%2010.10.26%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="Macroeconomics Household heads and corporates, 1/3 share with debentures (corp, tsy) and mortgage"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        USAID vs substitutive labor-demand Jobs or{space}
+        <a href="https://github.com/NickCarducci/mastercard-backbank/blob/main/src/require.js">
+          2.3.6.carducci
+        </a>
+        ? Survey of households,{space}
+        <a href="https://vaults.biz/party">individuals</a>
+        {space}don’t{space}
+        <a href="https://fred.stlouisfed.org/graph/?g=NIXB">matter</a>
+        <br />
+        <br />
         estimates are not property - they are waiting in line for spot up to
         changing sprint requirements
         <br />
