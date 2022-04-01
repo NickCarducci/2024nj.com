@@ -525,6 +525,8 @@ export default class App extends React.Component {
         />
         Libertarian thinks guarantee safety net should be for delinquent-elderly
         and pensioners, instead of living-hour labor and disabled?
+        "we had no protection from mortgage rates in the early 80's" well you all are idiots, 
+        every EULA has a no surrender anothers' freedom clause.
         <br />
         <br />
         You don’t know these things - I am consenstech
