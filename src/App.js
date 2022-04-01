@@ -488,6 +488,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        You cannpt have funds garnished as they com in from a third partty donee
+        beneficiary's surrendered freedom to bid, nor foreseeable impossibility
+        until then.
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -502,9 +507,11 @@ export default class App extends React.Component {
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
-        />Decentralization by local counsels and anarchy, devolution Nicholas sturgeon , smaller units of operative authority
-        <br/>
-        <br/>
+        />
+        Decentralization by local counsels and anarchy, devolution Nicholas
+        sturgeon , smaller units of operative authority
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -520,9 +527,10 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        You are gonna fucking die bitch, of starvation, for that is what you do to me, when you triple checking after expenses but not for me
-        <br/>
-        <br/>
+        You are gonna fucking die bitch, of starvation, for that is what you do
+        to me, when you triple checking after expenses but not for me
+        <br />
+        <br />
         If{space}
         <a href="https://www.census.gov/library/stories/2022/01/national-poverty-in-america-awareness-month-measuring-poverty.html">
           poverty
@@ -559,9 +567,9 @@ export default class App extends React.Component {
           scrollTop={this.state.scrollTop}
         />
         Libertarian thinks guarantee safety net should be for delinquent-elderly
-        and pensioners, instead of living-hour labor and disabled?
-        "we had no protection from mortgage rates in the early 80's" well you all are idiots, 
-        every EULA has a no surrender anothers' freedom clause.
+        and pensioners, instead of living-hour labor and disabled? "we had no
+        protection from mortgage rates in the early 80's" well you all are
+        idiots, every EULA has a no surrender anothers' freedom clause.
         <br />
         <br />
         You don’t know these things - I am consenstech
@@ -912,23 +920,25 @@ export default class App extends React.Component {
           Energy/5G/bridge investment instead of NFC motor vehicle and
           competition. Ritalin is amphetamines. Amphetamines are cocaine.
           everyone can concentrate with cocaine, but prescriptions prevent
-          commerce. science in naming and open source. 
+          commerce. science in naming and open source.
           <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/9lx46bm7dy7tqew/Screen%20Shot%202022-04-01%20at%201.29.20%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Nami GBNews Dr. Grahame Buss"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-          <a href="https://magnatecompany">Electric</a>{space}<a href="https://froth.app">infrastructure</a>
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyout
+                ? ""
+                : "https://www.dropbox.com/s/9lx46bm7dy7tqew/Screen%20Shot%202022-04-01%20at%201.29.20%20PM.png?raw=1"
+            }
+            float={"right"}
+            title="Nami GBNews Dr. Grahame Buss"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <a href="https://magnatecompany">Electric</a>
+          {space}
+          <a href="https://froth.app">infrastructure</a>
           will not be easily upgraded, you just want to damage longevity for
           future contracts.
         </h4>
