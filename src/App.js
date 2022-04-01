@@ -428,7 +428,7 @@ export default class App extends React.Component {
             {this.state.opt ? (
               <span>
                 Prosperity! -science/skew: import Brazilian Real! Fine loser
-                judges. Torttech programmatic
+                judges. Torttech programmatic - immediate acquittal
               </span>
             ) : (
               <span>
@@ -492,7 +492,7 @@ export default class App extends React.Component {
         <br />
         <br />
         ​the federal government just tripled checking for mortgage $4t, did you
-        get any? "yes"
+        get any? "yes" Did your cash balance triple after expenses?
         <br />
         <br />
         ​Tax still black market - and people withhold large items like homes if
@@ -729,8 +729,14 @@ export default class App extends React.Component {
         <span style={{ textDecoration: "line-through" }}>
           fungible for nothing
         </span>
-        , sell and pay ) and have investors increase profits and lose standing
-        with too broad science (exclusive answer)
+        , sell and pay ~ default/debenture loose inventory stocks and corp/tsy
+        bonds - not a direct loan lessing nor{space}
+        <span style={{ color: "red" }}>
+          then without compound third party donee beneficiary surrendered
+          freedom to bid by labor-borne for 1/hour-GDP/p
+        </span>
+        {space}) and have investors increase profits and lose standing with too
+        broad science (exclusive answer)
         <Cable
           onError={handleScollImgError}
           img={true}
