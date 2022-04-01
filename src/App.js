@@ -436,7 +436,7 @@ export default class App extends React.Component {
                 <a href="https://qr.ae/pvKRD1">so much</a>
                 {space}duress on my{space}
                 <a href="https://qr.ae/pvKRxY">exclusive</a>
-                {space}answers"
+                {space}answers." Naming and open source{space}&bull;{space}acquittal bond loss profit per diem
               </span>
             )}
             <span
@@ -487,11 +487,33 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-amortization is concurrentable not{space}<span style={{color:"purple"}}>larceny in contract</span><br/>
+
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/5qbcegpp2d7y2cm/Screen%20Shot%202022-04-01%20at%2011.17.48%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="Blaine Holt licensing and export reason _ (?)"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Licensing and USD-only-for-export/foreign-customs-import restrictions for very good reasons.
+        <br/>
+        <br/>
+        amortization is concurrentable not{space}
+        <span style={{ color: "purple" }}>larceny in contract</span>
+        <br />
         Welfare (debit-vault) or{space}
         <a href="https://www.quora.com/How-did-South-Korea-become-100-times-wealthier-than-most-African-countries-in-less-than-70-years/answer/Daniel-Na-22">
           expense
-        </a>. weening bond loss profit off cops and property off scripts
+        </a>
+        . weening bond loss profit off cops and property off scripts
         <br />
         2.5m population{space}
         <a href="https://qr.ae/pGEZyS">growth half life ago</a>.
