@@ -494,7 +494,8 @@ export default class App extends React.Component {
         </a>
         {space}is to be lowered, how better than to start counting income over
         third despondence/ 33rd percentile of expenses, rather than thrice
-        average expenses in Minimum Household Food Cost for 2-chorer household (1963)
+        average expenses in Minimum Household Food Cost for 2-chorer household
+        (1963)
         <br />
         <br />
         Put him out of his misery like{space}
@@ -874,7 +875,25 @@ export default class App extends React.Component {
           Energy/5G/bridge investment instead of NFC motor vehicle and
           competition. Ritalin is amphetamines. Amphetamines are cocaine.
           everyone can concentrate with cocaine, but prescriptions prevent
-          commerce. science in naming and open source
+          commerce. science in naming and open source. 
+          <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/9lx46bm7dy7tqew/Screen%20Shot%202022-04-01%20at%201.29.20%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Nami GBNews Dr. Grahame Buss"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+          <a href="https://magnatecompany">Electric</a>{space}<a href="https://froth.app">infrastructure</a>
+          will not be easily upgraded, you just want to damage longevity for
+          future contracts.
         </h4>
         Maybe mental health is underfunded because there is no demand from
         labor, or you have already forced laborless-demand by standardized
