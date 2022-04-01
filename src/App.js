@@ -488,9 +488,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        You cannpt have funds garnished as they com in from a third partty donee
+        You cannot have funds garnished as they com in from a third partty donee
         beneficiary's surrendered freedom to bid, nor foreseeable impossibility
-        until then.
+        until then. There is $88t debt and $2t currency, so why would anyone be
+        garnished before everyone is? The only mediation between Saver and
+        lesser is (cash/debt)*income
         <br />
         <br />
         <Cable
