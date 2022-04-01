@@ -1,5 +1,4 @@
 import React from "react";
-import Cable from "./Dropwire";import React from "react";
 import Cable from "./Dropwire";
 import Bachelors from "./bachelors";
 import TwitterTweetEmbed from "./TwitterTweetEmbed";
@@ -339,9 +338,25 @@ export default class App extends React.Component {
             </div>
             <span
               onClick={() =>
-                this.setState({
-                  opt: this.state.opt === 1 ? true : this.state.opt ? false : 1
-                })
+                this.setState(
+                  {
+                    opt:
+                      this.state.opt === 1 ? true : this.state.opt ? false : 1
+                  },
+                  () =>
+                    this.state.width < 400 &&
+                    window.alert(
+                      this.state.opt === 1
+                        ? `“Not enough growth (https://www.bls.gov/osmr/research-papers/2017/st170010.htm), 
+                        too much (https://qr.ae/pvKt09) Stimulus." Larry Kudlow`
+                        : this.state.opt
+                        ? ` Prosperity! -science/skew: import Brazilian Real! Fine loser
+                  judges. Torttech programmatic - immediate acquittal`
+                        : `"I'm going to invoke so much (https://qr.ae/pvKRD1)
+                  duress on my (https://qr.ae/pvKRxY) exclusive answers." Naming and open source - 
+                  acquittal bond loss profit per diem`
+                    )
+                )
               }
             >
               <Cable
@@ -432,7 +447,7 @@ export default class App extends React.Component {
                 🐿
               </span>
             </a>
-            {this.state.opt === 1 ? (
+            {this.state.width < 400 ?null:this.state.opt === 1 ? (
               <span>
                 “Not enough{space}
                 <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
