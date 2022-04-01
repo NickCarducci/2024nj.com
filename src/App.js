@@ -436,7 +436,8 @@ export default class App extends React.Component {
                 <a href="https://qr.ae/pvKRD1">so much</a>
                 {space}duress on my{space}
                 <a href="https://qr.ae/pvKRxY">exclusive</a>
-                {space}answers." Naming and open source{space}&bull;{space}acquittal bond loss profit per diem
+                {space}answers." Naming and open source{space}&bull;{space}
+                acquittal bond loss profit per diem
               </span>
             )}
             <span
@@ -487,7 +488,27 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-
+        You don’t know these things - I am consenstech
+        <br />
+        Moore (<a href="https://qr.ae/pvKhqc">permit 12 wastewater</a>) and Powell (max-royalty)
+        <br />
+        1/hour-GDP/p horseshoe and understand markets in all areas
+        <br />
+        Pay peanuts you get monkeys{space}<a href="https://qr.ae/pvKhlQ">((GDP-PCE) /GDP)</a>
+        <br />
+        Career Donald trump business people and remainers free rider mutable
+        gravity toilet, naming and open source, hand for hand diplomacy
+        <br />
+        Trade is revenue hours or inventory sales. Supply is utility
+        indifference substitutive labor-demand.
+        <br />
+        They get free housing as contracted in advance price lock name your
+        price expiring false bid pool, albeit surrendered negotiations of labor,
+        but for the worker co-op and corporate, then again to lodge
+        -science/skew.
+        <br />
+        But what for inventory and living-hour indifference substitution.
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -503,10 +524,10 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        Licensing and USD-only-for-export/foreign-customs-import restrictions for very good reasons.
-        Stop government from funding their own licenses.
-        <br/>
-        <br/>
+        Licensing and USD-only-for-export/foreign-customs-import restrictions
+        for very good reasons. Stop government from funding their own licenses.
+        <br />
+        <br />
         amortization is concurrentable not{space}
         <span style={{ color: "purple" }}>larceny in contract</span>
         <br />
@@ -4191,20 +4212,27 @@ export default class App extends React.Component {
         <br />
         <br />
         <hr ref={this.supply} />
-        The snapshot of the Supply and Demand plane has no representation of
-        physical resource supply, just potential trade for hours, 1/hour-GDP/p,
-        unless relative. If relative to another point in time, it is a leftward
-        movement of ordered-propensities to meet MUI by
-        ask-bid-inventory-opportunity, for this, or other markets, in which
-        lower Supply makes Demand average utility cost traded, higher, less
-        traded - not raise price when Supply is in a loward-shift - price is an
-        effect of trade and propensities. Yet, if Demand is elastic, all Demand
-        consumes at the scarce price, and yet-still-for competiton will
-        lowardly-shift, even perfectly-elastic Demand.
+        The{space}
+        <a href="https://qr.ae/pG0Uat">snapshot</a>
+        {space}of the Supply and Demand plane has no representation of physical
+        resource supply, just potential trade for hours,{space}
+        <span style={{ color: "green" }}>1/hour-GDP/p</span>, unless relative.
+        If relative to another point in time, it is a (1y/-1x) leftward movement
+        of ordered-propensities to meet MUI by ask-bid-inventory-opportunity,
+        for this, or other markets, in which lower Supply makes Demand average
+        utility cost traded, higher, less traded - not raise price when Supply
+        is in a (1y/-1x) loward-shift - price is an effect of trade and
+        propensities. Yet, if Demand is elastic, all Demand consumes at the
+        scarce price, and yet-still-for competiton will (1y/-1x) lowardly-shift,
+        even perfectly-elastic Demand.
         <br />
         <br />
-        Leftward supply is matched by demand when scarcity breeds competition,
-        and a drop in price does so for both. A leftward shift in supply
+        Leftward (1y/-1x) supply is matched by demand when scarcity breeds
+        {space}
+        <a href="https://micro-theory.com" style={{ color: "green" }}>
+          competition
+        </a>
+        , and a drop in price does so for both. A leftward shift in supply
         propensities may be for a substitute fungible-currency-bid becoming
         cheaper or a compliment fungible-currency-bid becoming expensive (when
         both, elastic, weak is no relation for inventory bid nor opportunity
