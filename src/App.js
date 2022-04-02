@@ -519,11 +519,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        You cannot have funds garnished as they come in from a third partty donee
-        beneficiary's surrendered freedom to bid, nor foreseeable impossibility
-        until then. There is $88t debt and $2t currency, so why would anyone be
-        garnished before everyone is? The only mediation between Saver and
-        lesser is (cash/debt)*income
+        You cannot have funds garnished as they come in from a third partty
+        donee beneficiary's surrendered freedom to bid, nor foreseeable
+        impossibility until then. There is $88t debt and $2t currency, so why
+        would anyone be garnished before everyone is? The only mediation between
+        Saver and lesser is (cash/debt)*income
         <br />
         <br />
         These{space}
@@ -533,7 +533,13 @@ export default class App extends React.Component {
         (cash/debt)*income.
         <br />
         It’s like first it was municipals, then it was corporations, now it is
-        heads of households, certainly not the{space}<a href="https://vaults.biz/party">30 hr self employed</a>.
+        heads of households, certainly not the{space}
+        <a href="https://vaults.biz/party">30 hr</a>
+        {space}
+        <a href="https://www.ssa.gov/oact/progdata/taxRates.html">
+          self employed
+        </a>
+        .
         <br />
         <br />
         <Cable
