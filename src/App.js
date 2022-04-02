@@ -350,7 +350,7 @@ export default class App extends React.Component {
                         ? `“Not enough growth (https://www.bls.gov/osmr/research-papers/2017/st170010.htm), 
                         too much (https://qr.ae/pvKt09) Stimulus." Larry Kudlow`
                         : this.state.opt
-                        ? ` Prosperity! -science/skew: import Brazilian Real! Fine loser
+                        ? ` Prosperity! -science/skew: import Brazilian (https://qr.ae/pvKyC4) Real! Fine loser
                   judges. Torttech programmatic - immediate acquittal`
                         : `"I'm going to invoke so much (https://qr.ae/pvKRD1)
                   duress on my (https://qr.ae/pvKRxY) exclusive answers." Naming and open source - 
@@ -458,8 +458,10 @@ export default class App extends React.Component {
               </span>
             ) : this.state.opt ? (
               <span>
-                Prosperity! -science/skew: import Brazilian Real! Fine loser
-                judges. Torttech programmatic - immediate acquittal
+                Prosperity! -science/skew: import{space}
+                <a href="https://qr.ae/pvKyC4">Brazilian</a>
+                {space}Real! Fine loser judges. Torttech programmatic -
+                immediate acquittal
               </span>
             ) : (
               <span>
