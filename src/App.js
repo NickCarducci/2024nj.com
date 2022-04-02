@@ -311,7 +311,7 @@ export default class App extends React.Component {
             backgroundColor: "rgba(20,20,20,.5)"
           }}
         />*/}
-        <div style={{}}>
+        <div style={{overflowX:"auto",overflowY:"hidden"}}>
           <div
             style={{
               display: "flex",
