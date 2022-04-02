@@ -447,7 +447,7 @@ export default class App extends React.Component {
                 🐿
               </span>
             </a>
-            {this.state.width < 400 ?null:this.state.opt === 1 ? (
+            {this.state.width < 400 ? null : this.state.opt === 1 ? (
               <span>
                 “Not enough{space}
                 <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
@@ -519,11 +519,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        You cannot have funds garnished as they com in from a third partty donee
+        You cannot have funds garnished as they come in from a third partty donee
         beneficiary's surrendered freedom to bid, nor foreseeable impossibility
         until then. There is $88t debt and $2t currency, so why would anyone be
         garnished before everyone is? The only mediation between Saver and
         lesser is (cash/debt)*income
+        <br />
+        <br />
+        These{space}
+        <a href="https://qr.ae/pvKt09">profits</a>
+        {space}need to be delivered to shareholders evenly, not income
+        increases. Then we can reverse amortize income (as profits, is, too),
+        (cash/debt)*income.
+        <br />
+        It’s like first it was municipals, then it was corporations, now it is
+        heads of households, certainly not the{space}<a href="https://vaults.biz/party">30 hr self employed</a>.
         <br />
         <br />
         <Cable
