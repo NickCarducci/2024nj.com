@@ -5351,7 +5351,9 @@ export default class App extends React.Component {
         </a>
         ," says the 'lawyer'
         <br />
-        <hr ref={this.plandemic} />
+        <h4 ref={this.plandemic}>
+          <a href="https://qr.ae/pvKRxY">okay</a>?
+        </h4>
         <Vax
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
