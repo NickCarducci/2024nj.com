@@ -406,7 +406,6 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
-            
             <a href="https://markethistory.quora.com" style={navitem}>
               <Cable
                 style={{ backgroundColor: "white", width: "20px" }}
@@ -511,7 +510,15 @@ export default class App extends React.Component {
               🛢
             </span>
             <a href="https://teapharmacy.party/drugs" style={navitem}>
-              <span role="img" aria-label="pharmacy" style={!this.state.ios?{}:{backgroundColor:"black",color:"white"}}>
+              <span
+                role="img"
+                aria-label="pharmacy"
+                style={
+                  !this.state.ios
+                    ? {}
+                    : { backgroundColor: "black", color: "white" }
+                }
+              >
                 ⚕️
               </span>
             </a>
@@ -540,6 +547,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/xwcn37f6t6c81f0/Screen%20Shot%202022-04-03%20at%205.05.44%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Another Trump 'Save America' Rally"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Biden Triggered massive inflation,"{space}
+        <a href="https://courttechnology.quora.com">
+          you added $5t to top 50% for mortgages above $2t currency that used to
+          match...
+        </a>. When is that ever relevant? superfluous free rider mutable greed
         <div
           style={{
             color: "khaki",
@@ -558,7 +585,10 @@ export default class App extends React.Component {
           <a href="https://markethistory.quora.com">name your price</a>
           {space}hysterical tort or debenture of loose inventory that is larceny
           in contract of anothers’ labor, measured by expenses{space}
-          <a href="https://vaults.biz/work" style={{ color: "white" }}>per hour</a>, or
+          <a href="https://vaults.biz/work" style={{ color: "white" }}>
+            per hour
+          </a>
+          , or
           {space}
           <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
             productivity
