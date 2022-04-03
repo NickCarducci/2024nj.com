@@ -530,7 +530,14 @@ export default class App extends React.Component {
           <a href="https://qr.ae/pvKAPp">bid to negotiate by labor-borne</a>.
         </h1>
         "They{space}
-        <a href="https://qr.ae/pvKAHH">needed to pay (in hours)</a>
+        <a href="https://qr.ae/pvKAHH">
+          needed to pay (in hours,{space}
+          <i>
+            Principal from interest instead of max-royalty is impossible
+            (laborless-demand notwithstanding)
+          </i>
+          )
+        </a>
         {space}for food or people aren't{space}
         <a href="https://qr.ae/pvKACl">interested</a>
         {space}in{space}
