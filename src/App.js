@@ -41,7 +41,7 @@ export default class App extends React.Component {
       firestore,
       browser: name,
       scrollTop: 0,
-      serviceCancelingImages: name.includes("Safari")
+      ios: name.includes("Safari")
     };
     for (let i = 0; i < 220; i++) {
       this["scrollImg" + i] = React.createRef();
@@ -406,6 +406,25 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
+            
+            <a href="https://markethistory.quora.com" style={navitem}>
+              <Cable
+                style={{ backgroundColor: "white", width: "20px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/87fwrqaht8znlhu/markethistory%20%283%29.png?raw=1"
+                }
+                float={"left"}
+                title="https://markethistory.quora.com"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+            </a>
             <a href="https://electiontechnology.quora.com" style={navitem}>
               <Cable
                 style={{ backgroundColor: "white", width: "20px" }}
@@ -492,7 +511,7 @@ export default class App extends React.Component {
               🛢
             </span>
             <a href="https://teapharmacy.party/drugs" style={navitem}>
-              <span role="img" aria-label="pharmacy">
+              <span role="img" aria-label="pharmacy" style={!this.state.ios?{}:{backgroundColor:"black",color:"white"}}>
                 ⚕️
               </span>
             </a>
