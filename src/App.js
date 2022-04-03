@@ -311,7 +311,7 @@ export default class App extends React.Component {
             backgroundColor: "rgba(20,20,20,.5)"
           }}
         />*/}
-        <div style={{overflowX:"auto",overflowY:"hidden"}}>
+        <div style={{ overflowX: "auto", overflowY: "hidden" }}>
           <div
             style={{
               display: "flex",
@@ -521,6 +521,24 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>
+          <a href="https://qr.ae/pvKAFN">Truncated Production Tax</a>
+          {space}&bull;ween cops off bonds/royalties, name and open source,
+          {space}
+          <a href="https://qr.ae/pvKAFh">hysterical name-your-price torts</a>,
+          surrendered{space}
+          <a href="https://qr.ae/pvKAPp">bid to negotiate by labor-borne</a>.
+        </h1>
+        "They{space}
+        <a href="https://qr.ae/pvKAHH">needed to pay (in hours)</a>
+        {space}for food or people aren't{space}
+        <a href="https://qr.ae/pvKACl">interested</a>
+        {space}in{space}
+        <a href="https://qr.ae/pvKAFd">investing in treasuries</a>." Low
+        unemployment, and relatively{space}
+        <a href="https://qr.ae/pvKhqc">high growth rate</a>
+        <br />
+        <br />
         You cannot have funds garnished as they come in from a third partty
         donee beneficiary's surrendered freedom to bid, nor foreseeable
         impossibility until then. There is $88t debt and $2t currency, so why
