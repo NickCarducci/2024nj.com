@@ -521,6 +521,32 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <div
+          style={{
+            color: "khaki",
+            borderRadius: "10px",
+            margin: "10px",
+            padding: "10px",
+            backgroundColor: "forestgreen",
+            border: "3px solid"
+          }}
+        >
+          Demand{space}
+          <a href="https://qr.ae/pGjU9D" style={{ color: "white" }}>
+            efficiency
+          </a>
+          {space}by being borne of labor{space}
+          <a href="https://markethistory.quora.com">name your price</a>
+          {space}hysterical tort or debenture of loose inventory that is larceny
+          in contract of anothers’ labor, measured by expenses{space}
+          <a href="https://vaults.biz/work" style={{ color: "white" }}>per hour</a>, or
+          {space}
+          <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
+            productivity
+          </a>
+          .
+        </div>
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
