@@ -521,6 +521,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/7rjo4v0o2h8mceh/Screen%20Shot%202022-04-03%20at%201.25.41%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="'Heating or Eating?' asked Former MPs on GBNews and the Authoritarian-Libertarian Cheeseit"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        “National debt of $20t and GDP of $21-22t,{space}
+        <a href="https://billbiden.org">Joe Biden</a>
+        {space}
+        <a href="https://qr.ae/pvKAa9">dug us into one Hell of a hole</a>.”
+        Borrowers loiter, lenders surrender loose inventory or hysterical claim.
+        <br />
+        “Very much engaging with car plants.”
         <h1>
           <a href="https://qr.ae/pvKAFN">Truncated Production Tax</a>
           {space}&bull;ween cops off bonds/royalties, name and open source,
