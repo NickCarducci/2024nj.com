@@ -547,6 +547,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3>the greater good, ensuring no science can be charged by loose inventory debenture indices</h3>
         How is $2t currency in circulation outside fed banks but $7t checking in
         household, nonprofit and corporate accounts
         <br />
