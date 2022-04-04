@@ -547,6 +547,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        How is $2t currency in circulation outside fed banks but $7t checking in
+        household, nonprofit and corporate accounts
+        <br />
+        "Welfare benefits, people addicted to drugs does to society," who is the
+        victim?, faggot? Loitering? Stop scapegoating prosecution. Invasion is not
+        commercial people, who are more peaceful, treasury fees for visa is not
+        necessary. "Coming to NY Chicago," Mark Brnovich, those are working age, the
+        Republicans always blame their own policies on the faults of illegal
+        immigrants, who are more peaceful
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -566,7 +577,8 @@ export default class App extends React.Component {
         <a href="https://courttechnology.quora.com">
           you added $5t to top 50% for mortgages above $2t currency that used to
           match...
-        </a>. When is that ever relevant? superfluous free rider mutable greed
+        </a>
+        . When is that ever relevant? superfluous free rider mutable greed
         <div
           style={{
             color: "khaki",
