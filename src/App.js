@@ -566,6 +566,29 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>
+          this pussy condones 35.4% disability awards for anti-social,
+          age(delinquency/gaming) and obesity (25% of 19% of 19% honest)
+        </h1>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/m6lyghhrgzchz83/Screen%20Shot%202022-04-05%20at%2012.51.37%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Physicians and mental health professionals must face these issues," we
+        are voluntary-users! Leave us alone, creep!
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
