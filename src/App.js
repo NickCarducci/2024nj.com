@@ -566,8 +566,18 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Rural (TARGET MARGIN CUSTOMER SURROGATE BY VERTICAL LINE SKIMPING, no
+        more direct loan nor loose collateral but for (cash/debt)*income naked
+        swimmers
+        <br />
+        teletherapist and psychiatric prescription commerce prevention with NFC
+        Motor Vehicle naming and open source + 2 week public review
         <h1>a disorder without an unknown hazard</h1>
-        "We would like to concentrate on{space}<a href="https://youtu.be/WlSVwRaO-iQ?t=559">housing people with substance usage</a>{space}
+        "We would like to concentrate on{space}
+        <a href="https://youtu.be/WlSVwRaO-iQ?t=559">
+          housing people with substance usage
+        </a>
+        {space}
         beyond vig for doctor"
         <Cable
           onError={handleScollImgError}
