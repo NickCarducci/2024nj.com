@@ -547,9 +547,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "charging stations is not for poor pwople," because of upgrade costs
+        <br />
+        debenture income non-fungible share fraud, 501(c)(3) 3yr consecutive
+        account fraud
+        <br />
         {/*Select words dragon on the ground - plattitudes */}
-        -science/skew{space}<span role="img"aria-label="shrug">🤷🏽‍♂️</span>{/**elon shrugs about debt */space}
-        how $4b with no cash and $500b?
+        -science/skew{space}
+        <span role="img" aria-label="shrug">
+          🤷🏽‍♂️
+        </span>
+        {/**elon shrugs about debt */ space}
+        how $4b with no cash and $500b?{space}
+        <span role="img" aria-label="shrug">
+          🤷🏽‍♂️
+        </span>
+        {space}pitfall all Messy hair{space}
+        <a href="https://saverparty.xyz/">racism</a>.{space}
+        <span role="img" aria-label="bottom-left white-circle squirrel">
+          ↙️⚪️🐿
+        </span>
+        Saver is for{space}
+        <a href="https://vaults.biz/immi">open borders</a>.
         <h4>
           The Treasury cannot afford it, other than legal tort, why can’t the
           Federal Reserve? $1.8t/yr debt spending $2t currency outside fed banks
