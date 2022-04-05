@@ -567,7 +567,7 @@ export default class App extends React.Component {
           </div>
         </div>
         <h1>a disorder without an unknown hazard</h1>
-        "We would like to concentrate on housing people with substance usage
+        "We would like to concentrate on{space}<a href="https://youtu.be/WlSVwRaO-iQ?t=559">housing people with substance usage</a>{space}
         beyond vig for doctor"
         <Cable
           onError={handleScollImgError}
