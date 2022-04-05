@@ -575,7 +575,22 @@ export default class App extends React.Component {
         are IDIOTS for it. No better than Floyd
         <br />
         <br />
-        "Barriers to Reimbursing providers," and $5t checking mortgages 50-90%,
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/x6dihu6c476myvq/Screen%20Shot%202022-04-05%20at%2012.37.48%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Barriers to{space}<a href="https://courttechnology.quora.com">Reimbursing</a>{space}providers," and $5t checking mortgages 50-90%,
         90-99%, 1%, 501(c)(3) (?), corporate, and $200b for bottom 50%, but you
         lowered poverty, after expenses, right?
         <Cable
