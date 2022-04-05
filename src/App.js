@@ -547,6 +547,41 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        $5m/ school-based health center gentrification, primary-care in
+        accessible location, $25m 125 awards to hospital funds, if there is no
+        labor-demand, there is no labor-borne-demand, 1/hour-GDP/p, just
+        busy-work in higher prices, 1y/-1x. This is Economics 101
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/ybrl4geio25zmea/Screen%20Shot%202022-04-05%20at%2011.44.10%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h1>You will watch me do fentanyl, faggot</h1>
+        family-based critical approach, non-compete payee mortgage loitering
+        spending larceny in contract over surrendered freedom (EULA) is due for
+        mediation and malfeasance for violent-insurrection.
+        <br />
+        involuntary intervention is what wwe need by our own decisions, you
+        absolute cunt.
+        <br />
+        <br />
+        Substance use crisis because of pandemic or lacing marijuana and
+        heroine? 501(c)(3) can hold assets year to year or not? I'm going to
+        kill John Sarbines for starving people of substituting for supply by
+        labor-demand of other markets.
+        <br />
+        <br />
         behaviorial and substance use (
         <a href="https://truncatedsalestax.com/gov">INVOLUNTARY COMMITMENT</a>
         {space}FOR TRESPASS ON IMPLAUSIBLE USE LEASE AND STANDARDIZED HYSTERICAL
@@ -563,7 +598,7 @@ export default class App extends React.Component {
               : "https://www.dropbox.com/s/gzmg9alrysup6bt/Screen%20Shot%202022-04-05%20at%2011.33.40%20AM.png?raw=1"
           }
           float={"left"}
-          title="Title 42, 'until we have comp, bi, imm reform that commits to securing and pathway for quality'"
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
           scrolling={this.state.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
