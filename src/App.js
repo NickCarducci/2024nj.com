@@ -406,6 +406,25 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
+            <a href="https://realecon.quora.com" style={navitem}>
+              <Cable
+                style={{ backgroundColor: "white", width: "20px" }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/3tihiodmcmspwnc/realecon.png?raw=1"
+                }
+                float={"left"}
+                title="https://realecon.quora.com"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+            </a>
+
             <a href="https://markethistory.quora.com" style={navitem}>
               <Cable
                 style={{ backgroundColor: "white", width: "20px" }}
@@ -547,7 +566,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h1>Emotional disturbance and OCD is fraudulent disability</h1>
+        <h1>
+          Emotional disturbance and OCD is fraudulent disability; homelessness
+          is because of LESSING NEVER OUTRIGHT sales, prescription preventing
+          commerce; drugs are used because WE LIKE THEM - name and open source
+          fentanyl dealers for purity (DO NOT BAN VOLUNTARY ACTION WITH
+          PREJUDICIAL HARM, real standing notwithstanding)
+        </h1>
         If someone wants to use opiods with known hazards, fucking let them, you
         don't need to scapegoat for reason to have healthcare records obliged by
         Access to data inherently-required
