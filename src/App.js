@@ -566,8 +566,19 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3>The economics (or lack thereof) of pharmacies</h3>
+        “Individuals struggling with substance use.” Leave us alone, bitch, if
+        we use we don’t struggle, we like it. You still arrest and fine for DUI
+        with weed when daily use and accidet shows same presentation? We can all
+        concentrate with cocaine, and{space}
+        <a href="https://teapharmacy.party/drugs">fentanyl</a>
+        {space}is useful if you would just resist trust breaking hypocrisy of
+        FDA/USPTO/NIH for less economic welfare, 1/hour-GDP/p by division of
+        labor comparative advantage.
+        <br />
+        <br />
         <Cable
-        style={{width:"100%"}}
+          style={{ width: "100%" }}
           onError={handleScollImgError}
           img={true}
           src={
@@ -583,11 +594,12 @@ export default class App extends React.Component {
           scrollTop={this.state.scrollTop}
         />
         <h1>
-          people{space}<a href="https://2024nj.com/nypd">murder and steal for money</a>, stop scapegoating your poor
-          stewardship of labor-equity on people's brains or voluntary drug use,
-          or will to die after definancialization (cash/debt)*income,
-          geohash/month + 2 week public review truncated production tax & 1/12
-          vertical line revenue skimping
+          people{space}
+          <a href="https://2024nj.com/nypd">murder and steal for money</a>, stop
+          scapegoating your poor stewardship of labor-equity on people's brains
+          or voluntary drug use, or will to die after definancialization
+          (cash/debt)*income, geohash/month + 2 week public review truncated
+          production tax & 1/12 vertical line revenue skimping
         </h1>
         "We must invest in prevention strategies and suicide efforts." Oh yeah?
         D.A.R.E. showed MORE voluntary drug use
