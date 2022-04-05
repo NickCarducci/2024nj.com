@@ -547,7 +547,32 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h1><a href="https://qr.ae/pvKwDH">GDP: The Big Lie</a></h1>
+        <h4>
+          'We are already facing and unpr. incr. in migrants/yr, and it will
+          only get worse if the Admin ends virus scapegoating'
+        </h4>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          style={{ width: "100%" }}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/1jrwqlc46pujlm1/Screen%20Shot%202022-04-05%20at%208.24.52%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="Title 42, 'until we have comp, bi, imm reform that commits to securing and pathway for quality'"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "WE CAN ONLY TAKE IN AN INFLUX OF MIGRANTS WITH QUALITY{space}
+        <a href="https://vaults.biz/immi">IMMIGRANTS</a>
+        {space}ONLY," Booker and Menendez
+        <h1>
+          <a href="https://qr.ae/pvKwDH">GDP: The Big Lie</a>
+        </h1>
         Acsertainable loss and Mark Halperin ("conservative") says it is access
         like Stephen Moore says subsidies gets you more and the same time
         inventory scarcity isn't substitutive for labor-demand of another
