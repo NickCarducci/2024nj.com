@@ -566,8 +566,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        What does $2t currency and checking "outside fed banks" even mean? Who
+        are these people with $5t in fed banks? how does $2t outside checking,
+        currency, make for $21t GDP/yr? PCE-CPI certain loss!
         <h1>taxes for invoices</h1>
-        Corporates will now fuck 2010 profit balance for shareholders, watch.<br/>
+        Corporates will now fuck 2010 profit balance for shareholders, watch.
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -592,6 +596,17 @@ export default class App extends React.Component {
         it affordable to buy healthcare." $5t after expenses went to the filthy
         rich, $1.5t "non-profit" ...not, $2t corporate, $3t top 50%, $200b
         bottom (launder debt)
+        <br />
+        <br />
+        GDP/hour is productivity is bizarre; standardized hysterical claims,
+        taxes for invoices, how about surrendered freedom (EULA) to bid for
+        economic welfare, 1/hour-GDP/p? Starve the suppliers so they lower costs
+        instead, you nut. PCE-CPI insurance certain loss, prescriptions for
+        naming and open source, why at all. Reverse the general fund,
+        (cash/invoices)*income; Tranquil and voluntary trade Article 1.8
+        oxymoronic bond-tax (out of scope trust breaking hypocrisy, free rider
+        mutable laborless-demand and gentrification instead of streamlining
+        labor-equity?
         <h2>Older American delinquency by gaming - kill them all</h2>
         Samsa as a function of pandemic (500k/yr excess is less than expected,
         and any change per single-year death rate is significant with n=2019-20
