@@ -547,7 +547,19 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Nonconcurrentable collateral<br/>
+        <h4>
+          The Treasury cannot afford it, other than legal tort, why can’t the
+          Federal Reserve? $1.8t/yr debt spending $2t currency outside fed banks
+          sufficed 2010–3/2020, already ridiculous.
+        </h4>
+        “On the autism spectrum learning to speak.” Lee Zeldin has never met an
+        Autistic person, there is communication but a large portion cannot talk.
+        How wide is the spectrum? Any studderer? Anyone who cannot have income
+        equality? We must have quality skew, for at least appreciating
+        utiliuty/indifference quality, won't you?
+        <br />
+        Nonconcurrentable collateral
+        <br />
         If Ukraine supplies 70% of EU's grain-inventory, cannot they{space}
         <a href="https://nextdoor.com/g/b5t1jo2tp/">
           share split their Hrynvia
@@ -617,7 +629,9 @@ export default class App extends React.Component {
         standardized guarantee certain loss off jury
         <h3>
           the greater good, ensuring no science can be charged by loose
-          inventory{space}<b>loose-debenture</b>{space}indices
+          inventory{space}
+          <b>loose-debenture</b>
+          {space}indices
         </h3>
         How is $2t currency in circulation outside fed banks but $7t checking in
         household, nonprofit and corporate accounts
