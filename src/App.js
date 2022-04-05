@@ -605,6 +605,26 @@ export default class App extends React.Component {
         D.A.R.E. showed MORE voluntary drug use
         <br />
         <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/dkafbx0wnvuagcz/Screen%20Shot%202022-04-05%20at%201.13.59%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        We know a lot more than we did before. In fact, the Surgeon General says that the lockdown have had a devastating impact on [self-reported??? Or involuntary committment for prejudice of “he pushed me.”] whistleblowers of standardized hysterical claims of expiring premiums laborless demand invoice surrendered bid, now!
+        <br/>
+        
+        "What is being done to ensure mental health and substance abuse disorders that resulted from madated school closures (timing but all-cause? artifact is not scientific, need CT scan exclusive cause, at least)<br/>
+        <br/>
         Why would you not allow me to do my own physical therapy? Brett
         (RiverviewMdCtr treating muscle laceration with slander, with messy hair
         diagnosis and rollover insurance relenting?) was a waste of space
