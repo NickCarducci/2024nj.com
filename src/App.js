@@ -547,6 +547,40 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        behaviorial and substance use (
+        <a href="https://truncatedsalestax.com/gov">INVOLUNTARY COMMITMENT</a>
+        {space}FOR TRESPASS ON IMPLAUSIBLE USE LEASE AND STANDARDIZED HYSTERICAL
+        CLAIMS), or government-pharmacy-cartel-debenture due for carfacing
+        {space}
+        <a href="https://billbiden.org">the President</a>?<br />
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/gzmg9alrysup6bt/Screen%20Shot%202022-04-05%20at%2011.33.40%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="Title 42, 'until we have comp, bi, imm reform that commits to securing and pathway for quality'"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Standardized prescription guarantee FDA/USPTO/NIH self-dealing.
+        Mental-health (21) bipartisan (60/100) bills, $1b/yr 2014-2016, we paid
+        for it with offsets, with someone interested in Tesla over Twitter.
+        People on the strets has nothing to do with mental health, that is
+        subjective as to what{space}
+        <a href="https://">qualifies</a>
+        {space}healthy, for we can all concentrate with cocaine; they claim
+        marijuana and heroine lacing contributes to the deaths of{space}
+        <a href="https://teapharmacy.party/drugs">fentanyl</a>, so then
+        dismantle FDA/USPTO/NIH and name and open source
+        <br />
+        <br />
         1/hour-<a href="https://vaults.biz/gdp">GDP/p</a>
         {space}is[ my equation for]{space}
         <a href="https://fred.stlouisfed.org/graph/?g=NSCH">economic welfare</a>
@@ -560,6 +594,13 @@ export default class App extends React.Component {
         naming and open source, conscription especially bond loss profit is war
         crime, especially if it washes.
         <br />
+        How many? Put it on a chart for both Russian and Ukrainian deaths? Don’t
+        need to castrate pedo just allow e2e on device for intranet NFC Motor
+        Vehicle bridge toll
+        <h1>
+          How can you trust them after $5t only $200b for bottom 50% over $2t
+          debenture of treasury
+        </h1>
         {space}
         <span style={{ color: "purple" }}>
           debenture income non-fungible debit-share
@@ -599,8 +640,8 @@ export default class App extends React.Component {
         If Ukraine supplies 70% of EU's grain-inventory, cannot they{space}
         <a href="https://nextdoor.com/g/b5t1jo2tp/">
           share split their Hrynvia
-        </a>{space}("pussy!")
-        ?
+        </a>
+        {space}("pussy!") ?
         <h4>
           Wouldn't it be nice if we had self-care and{space}
           <a href="https://markethistory.quora.com">
