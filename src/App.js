@@ -547,6 +547,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        {/*Select words dragon on the ground - plattitudes */}
+        -science/skew{space}<span role="img"aria-label="shrug">🤷🏽‍♂️</span>{/**elon shrugs about debt */space}
+        how $4b with no cash and $500b?
         <h4>
           The Treasury cannot afford it, other than legal tort, why can’t the
           Federal Reserve? $1.8t/yr debt spending $2t currency outside fed banks
