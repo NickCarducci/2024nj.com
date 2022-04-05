@@ -566,6 +566,18 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>
+          Free Britney, increase economic welfare,{space}
+          <a href="https://realecon.quora.com">1/hour-GDP/p</a>
+        </h1>
+        Payee needs management to net worth concurrentable negative over
+        personal debt with no collateral? Discover, Citi, Wells Fargo, and Chase
+        are IDIOTS for it. No better than Floyd
+        <br />
+        <br />
+        "Barriers to Reimbursing providers," and $5t checking mortgages 50-90%,
+        90-99%, 1%, 501(c)(3) (?), corporate, and $200b for bottom 50%, but you
+        lowered poverty, after expenses, right?
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -752,6 +764,28 @@ export default class App extends React.Component {
         </span>
         {space}fraud, 501(c)(3) 3yr consecutive account fraud
         <br />
+        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
+          For most organizations, an activity is an unrelated business (and
+          subject to unrelated business income tax) if it meets three
+          requirements:
+          <br />
+          <br />
+          It is a trade or business,
+          <br />
+          It is regularly carried on, and
+          <br />
+          It is not substantially related to furthering the exempt purpose of
+          the organization. There are, however, a number of modifications,
+          exclusions, and exceptions to the general definition of unrelated
+          business income.
+        </div>
+        <h4>
+          What about profits on{space}
+          <a href="https://www.irs.gov/charities-non-profits/unrelated-business-income-tax">
+            Related Business
+          </a>
+          {space}beyond margin?
+        </h4>
         {/*Select words dragon on the ground - plattitudes */}
         -science/skew{space}
         <span role="img" aria-label="shrug">
