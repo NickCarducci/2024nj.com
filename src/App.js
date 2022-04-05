@@ -547,10 +547,24 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        "charging stations is not for poor pwople," because of upgrade costs
+        1/hour-<a href="https://vaults.biz/gdp">GDP/p</a>
+        {space}is[ my equation for]{space}
+        <a href="https://fred.stlouisfed.org/graph/?g=NSCH">economic welfare</a>
         <br />
-        debenture income non-fungible share fraud, 501(c)(3) 3yr consecutive
-        account fraud
+        <br />
+        "charging stations is not for poor people," because of{space}
+        <span style={{ color: "purple" }}>upgrade costs</span>. estimates down
+        good until margins are negative then we move on, direct loan by vertical
+        line skimping instead of debenture{space}
+        <span style={{ color: "purple" }}>washing</span>, but trasaction fee
+        naming and open source, conscription especially bond loss profit is war
+        crime, especially if it washes.
+        <br />
+        {space}
+        <span style={{ color: "purple" }}>
+          debenture income non-fungible debit-share
+        </span>
+        {space}fraud, 501(c)(3) 3yr consecutive account fraud
         <br />
         {/*Select words dragon on the ground - plattitudes */}
         -science/skew{space}
@@ -585,7 +599,7 @@ export default class App extends React.Component {
         If Ukraine supplies 70% of EU's grain-inventory, cannot they{space}
         <a href="https://nextdoor.com/g/b5t1jo2tp/">
           share split their Hrynvia
-        </a>
+        </a>{space}("pussy!")
         ?
         <h4>
           Wouldn't it be nice if we had self-care and{space}
