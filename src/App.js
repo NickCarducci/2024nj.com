@@ -566,6 +566,32 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>taxes for invoices</h1>
+        Corporates will now fuck 2010 profit balance for shareholders, watch.<br/>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/10qjfxcmbqqb3l9/Screen%20Shot%202022-04-05%20at%202.06.52%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Obama ACA Newsmax"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Medicare original didn't provide all the benefits that it does today,"
+        advancement -GDP/p claiming credit?
+        <br />
+        “Denying coverage based on labor-bid rights over hysterical claims on
+        expiring premiums.” Pay for prescriptions, fall through cracks, working
+        families pay for coverage. As part of the American Rescue Plan he made
+        it affordable to buy healthcare." $5t after expenses went to the filthy
+        rich, $1.5t "non-profit" ...not, $2t corporate, $3t top 50%, $200b
+        bottom (launder debt)
         <h2>Older American delinquency by gaming - kill them all</h2>
         Samsa as a function of pandemic (500k/yr excess is less than expected,
         and any change per single-year death rate is significant with n=2019-20
