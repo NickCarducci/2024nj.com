@@ -566,6 +566,31 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>Open the border</h1>
+        Vote Saver party{space}
+        <span role="img" aria-label="bottom-left white-circle squirrel">
+          ↙️⚪️🐿
+        </span>{space}
+        to reverse the general fund (cash/invoices)*income. Old people are
+        delinquent, 35.4% OCD SSA FRAUD
+        <br />
+        Revenue skimp vertical industry line can replace future debt relations
+        <br />
+        <br />
+        All cause (?) time is a great healer
+        <br />
+        $5t in “fed banks,” whatever that means, $2t outside = $3t household top
+        50%, $2t corporate, $1.5t “non-profit?”
+        <br />
+        Reverse it don’t let universities keep
+        <h3>you exaserbated income inequality after expenses</h3>
+        Bottom 50% after expenses have $200b/$7t checking, after $5t pandemic
+        checking mortgage
+        <h4>
+          <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
+            Most Americans do not like any insurance
+          </a>
+        </h4>
         What does $2t currency and checking "outside fed banks" even mean? Who
         are these people with $5t in fed banks? how does $2t outside checking,
         currency, make for $21t GDP/yr? PCE-CPI certain loss!
