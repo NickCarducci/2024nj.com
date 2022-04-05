@@ -566,6 +566,33 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+        style={{width:"100%"}}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/jtqglqlpcek4jvk/Screen%20Shot%202022-04-05%20at%201.04.35%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h1>
+          people{space}<a href="https://2024nj.com/nypd">murder and steal for money</a>, stop scapegoating your poor
+          stewardship of labor-equity on people's brains or voluntary drug use,
+          or will to die after definancialization (cash/debt)*income,
+          geohash/month + 2 week public review truncated production tax & 1/12
+          vertical line revenue skimping
+        </h1>
+        "We must invest in prevention strategies and suicide efforts." Oh yeah?
+        D.A.R.E. showed MORE voluntary drug use
+        <br />
+        <br />
         Why would you not allow me to do my own physical therapy? Brett
         (RiverviewMdCtr treating muscle laceration with slander, with messy hair
         diagnosis and rollover insurance relenting?) was a waste of space
