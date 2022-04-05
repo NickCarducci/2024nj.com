@@ -547,6 +547,19 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        If Ukraine supplies 70% of EU's grain-inventory, cannot they{space}
+        <a href="https://nextdoor.com/g/b5t1jo2tp/">
+          share split their Hrynvia
+        </a>
+        ?
+        <h4>
+          Wouldn't it be nice if we had self-care and{space}
+          <a href="https://markethistory.quora.com">
+            housing without medicating
+          </a>
+          ?
+        </h4>
+        {/*"not a criminal if it isn't their gun," Thanks for joining us*/}
         Crime is because of larceny in contract and pharmacy, “our way of life.”
         <h4>
           'We are already facing and unpr. incr. in migrants/yr, and it will
@@ -603,7 +616,7 @@ export default class App extends React.Component {
         standardized guarantee certain loss off jury
         <h3>
           the greater good, ensuring no science can be charged by loose
-          inventory debenture indices
+          inventory{space}<b>loose-debenture</b>{space}indices
         </h3>
         How is $2t currency in circulation outside fed banks but $7t checking in
         household, nonprofit and corporate accounts
