@@ -566,10 +566,30 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/yuy69o77cee3lkj/Screen%20Shot%202022-04-05%20at%2012.19.25%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         <h1>
           Opiod Use and Disorder Act: How to run a{space}
           <a href="https://teapharmacy.party/drugs">government drug cartel</a>
         </h1>
+        <h4>
+          "suicide by mental health conditions, a statistic I want to change,"
+          leading cause of death and disability is actually gluttony. mandate
+          preg test for fatties, today
+        </h4>
         Need assistance at the community level (involuntary "crisis support"
         intervention) But 65% mortgage and loiter, so I can "
         <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
