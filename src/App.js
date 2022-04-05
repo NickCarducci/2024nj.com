@@ -566,11 +566,63 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/ex2rn28axlfd4bq/Screen%20Shot%202022-04-05%20at%203.07.20%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Marx said Communism forces sales outright, never lessing inventory,
+        certainly PCE-CPI ascertainable, estimate down by negative margin, nor
+        beyond plausible use of 5 stores and condos per rental-income
+        account-payable.
+        <br />
+        You are the nut, GDP/hour and non-rollover insurance is bizarre and
+        illegal by EULA standards
+        <br />
+        trauma is a known hazard, stop hysterical claims
+        <br />
+        how is a voluntary action a disorder? even hysteria is rational
+        <br />
+        opiate and drug dependency in tribal and rural entertainment
+        <h3>
+          Ween cops off bond loss profit; involuntary support address whose
+          issues? Bipartisan Summer Hour Prevention Treatment and Recovery act,
+          funded support without voluntary customers, "ive seen traumatized
+          families," they cannot force treatment either, even if they ;ay for it
+        </h3>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/5ff6zxjoyoppstc/Screen%20Shot%202022-04-05%20at%203.01.34%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        domestic violence is not because of brains, especially if you admit
+        change-rate between lockdown and non
         <h1>Open the border</h1>
         Vote Saver party{space}
         <span role="img" aria-label="bottom-left white-circle squirrel">
           ↙️⚪️🐿
-        </span>{space}
+        </span>
+        {space}
         to reverse the general fund (cash/invoices)*income. Old people are
         delinquent, 35.4% OCD SSA FRAUD
         <br />
