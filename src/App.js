@@ -547,16 +547,27 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h3>the greater good, ensuring no science can be charged by loose inventory debenture indices</h3>
+        <h1>Elon Musk can buy twitter while in debt? I can default after selling inventory and home loan personal buy things</h1>
+        <h3>
+          cops chase or else until unreasonable what can you do?
+          self care is being comfortable in your own skin, subsidize member cash advances. It can always be reversed, (cash/debt)*income $5t checking mortgages, bottom 50% got about $200b
+Why does $2t outside fed bank and $5t checking, $200b about bottom 50%</h3>
+        "invisible hand happens," in division of labor, without
+        laborless-demand, public safety by pharma cartel, whistleblowers of
+        standardized guarantee certain loss off jury
+        <h3>
+          the greater good, ensuring no science can be charged by loose
+          inventory debenture indices
+        </h3>
         How is $2t currency in circulation outside fed banks but $7t checking in
         household, nonprofit and corporate accounts
         <br />
         "Welfare benefits, people addicted to drugs does to society," who is the
-        victim?, faggot? Loitering? Stop scapegoating prosecution. Invasion is not
-        commercial people, who are more peaceful, treasury fees for visa is not
-        necessary. "Coming to NY Chicago," Mark Brnovich, those are working age, the
-        Republicans always blame their own policies on the faults of illegal
-        immigrants, who are more peaceful
+        victim?, faggot? Loitering? Stop scapegoating prosecution. Invasion is
+        not commercial people, who are more peaceful, treasury fees for visa is
+        not necessary. "Coming to NY Chicago," Mark Brnovich, those are working
+        age, the Republicans always blame their own policies on the faults of
+        illegal immigrants, who are more peaceful
         <br />
         <br />
         <Cable
