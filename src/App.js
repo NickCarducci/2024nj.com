@@ -563,7 +563,7 @@ export default class App extends React.Component {
           🤷🏽‍♂️
         </span>
         {space}pitfall all Messy hair{space}
-        <a href="https://saverparty.xyz/">racism</a>.{space}
+        <a href="https://saverparty.xyz/racists">racism</a>.{space}
         <span role="img" aria-label="bottom-left white-circle squirrel">
           ↙️⚪️🐿
         </span>
