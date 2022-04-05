@@ -547,10 +547,34 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        If someone wants to use opiods with known hazards, fucking let them, you
+        don't need to scapegoat for reason to have healthcare records obliged by
+        Access to data inherently-required
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/m2gkk8l3kq2ws4k/Screen%20Shot%202022-04-05%20at%2011.48.55%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         $5m/ school-based health center gentrification, primary-care in
         accessible location, $25m 125 awards to hospital funds, if there is no
         labor-demand, there is no labor-borne-demand, 1/hour-GDP/p, just
         busy-work in higher prices, 1y/-1x. This is Economics 101
+        <br />
+        <br />
+        Substance use disorders, how is that scientific if it is voluntary and
+        you have no cause but their free will, with no victim to boot
+        <br />
         <br />
         <Cable
           onError={handleScollImgError}
