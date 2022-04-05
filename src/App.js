@@ -547,11 +547,31 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h1>Elon Musk can buy twitter while in debt? I can default after selling inventory and home loan personal buy things</h1>
+        <h1><a href="https://qr.ae/pvKwDH">GDP: The Big Lie</a></h1>
+        Acsertainable loss and Mark Halperin ("conservative") says it is access
+        like Stephen Moore says subsidies gets you more and the same time
+        inventory scarcity isn't substitutive for labor-demand of another
+        market.
+        <br />
+        “Want insurance to be available to more people.” Only for invoices does
+        taxes and claims become mean inflation equilibrium for standardized
+        guarantee is bid of laborless-demand, like:
+        <h1>
+          Elon Musk can{space}
+          <a href="https://www.quora.com/How-much-money-does-Elon-Musk-have-in-liquid-cash">
+            buy twitter while in debt
+          </a>
+          ? I can default after selling inventory and home loan personal buy
+          things
+        </h1>
         <h3>
-          cops chase or else until unreasonable what can you do?
-          self care is being comfortable in your own skin, subsidize member cash advances. It can always be reversed, (cash/debt)*income $5t checking mortgages, bottom 50% got about $200b
-Why does $2t outside fed bank and $5t checking, $200b about bottom 50%</h3>
+          cops chase or else until unreasonable what can you do? self care is
+          being comfortable in your own skin, subsidize member cash advances. It
+          can always be reversed, (cash/debt)*income $5t checking mortgages,
+          bottom 50% got about $200b Why does $2t outside fed bank and $5t
+          checking,{space}
+          <a href="https://qr.ae/pvKwDx">$200b about bottom 50%</a>
+        </h3>
         "invisible hand happens," in division of labor, without
         laborless-demand, public safety by pharma cartel, whistleblowers of
         standardized guarantee certain loss off jury
