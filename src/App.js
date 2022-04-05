@@ -547,6 +547,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Crime is because of larceny in contract and pharmacy, “our way of life.”
         <h4>
           'We are already facing and unpr. incr. in migrants/yr, and it will
           only get worse if the Admin ends virus scapegoating'
