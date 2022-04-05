@@ -547,6 +547,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Nonconcurrentable collateral<br/>
         If Ukraine supplies 70% of EU's grain-inventory, cannot they{space}
         <a href="https://nextdoor.com/g/b5t1jo2tp/">
           share split their Hrynvia
