@@ -566,6 +566,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Need assistance at the community level (involuntary "crisis support"
+        intervention) But 65% mortgage and loiter, so I can "<a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">trespass</a>."
+        <br />
+        <br />
         Rural (TARGET MARGIN CUSTOMER SURROGATE BY VERTICAL LINE SKIMPING, no
         more direct loan nor loose collateral but for (cash/debt)*income naked
         swimmers
