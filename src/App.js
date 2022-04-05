@@ -566,9 +566,42 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/myajowrgkx0hrj8/Screen%20Shot%202022-04-05%20at%2012.42.32%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        “Well-being is important to be in school and that has been a priority
+        for NIH.”
+        <br />
+        Doesn’t sound very scientific. Education pays, but it isn’t required.
+        Trade-secret job farm - indoctrinating misinformation like{space}
+        <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
+          GDP/hour
+        </a>
+        {space}is a measure of productivity, or that{space}
+        <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
+          providers'
+        </a>
+        {space}
+        <a href="https://realecon.quora.com">certain loss</a>
+        {space}helps
         <h1>
           Free Britney, increase economic welfare,{space}
-          <a href="https://realecon.quora.com">1/hour-GDP/p</a>
+          <a href="https://realecon.quora.com">1/hour-GDP/p</a>.{space}
+          <a href="https://www.bls.gov/spotlight/2011/schools_out/">
+            School is in*
+          </a>
         </h1>
         Payee needs management to net worth concurrentable negative over
         personal debt with no collateral? Discover, Citi, Wells Fargo, and Chase
@@ -590,9 +623,11 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        "Barriers to{space}<a href="https://courttechnology.quora.com">Reimbursing</a>{space}providers," and $5t checking mortgages 50-90%,
-        90-99%, 1%, 501(c)(3) (?), corporate, and $200b for bottom 50%, but you
-        lowered poverty, after expenses, right?
+        "Barriers to{space}
+        <a href="https://courttechnology.quora.com">Reimbursing</a>
+        {space}providers," and $5t checking mortgages 50-90%, 90-99%, 1%,
+        501(c)(3) (?), corporate, and $200b for bottom 50%, but you lowered
+        poverty, after expenses, right?
         <Cable
           onError={handleScollImgError}
           img={true}
