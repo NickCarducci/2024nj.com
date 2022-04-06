@@ -566,13 +566,44 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/w43q5w74w575vu9/Screen%20Shot%202022-04-06%20at%208.45.18%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="GBNews"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Taxes for the last price rise is woefully inadequete." What the actual
+        fuck Adam
+        <br />
+        <br />
         Asymptomatic testing has{space}
         <a href="https://qr.ae/pvKP1x">proven noncorrelation</a>,
         immunocompromised CDC says lymphoma onconogenic, "no-problem."
         <br />
         Compound estimates cannot garner more than over negative margin
+        <h2>
+          "Something is guaranteed to break, so you need CarShield," Bill
+          O'Reilly to pool money together to make prices hysterical
+          {/**PCE-CPI gain or loss? Getting away with murder*/}
+        </h2>
+        "They knew what they were doing when they were taking out the loan,"
+        Bernie McGerk, it is{space}
+        <span style={{ color: "purple" }}>
+          (“A loan system where they are effectively forced to borrow money,”
+          Liam Halligan), foreseeable impossibility, and larceny in contract
+        </span>
+        . "The ones that really need it, they can get 'loans,'"
+        <br />
         <Cable
-        style={{width:"100%"}}
           onError={handleScollImgError}
           img={true}
           src={
@@ -580,25 +611,15 @@ export default class App extends React.Component {
               ? ""
               : "https://www.dropbox.com/s/2anogwle61sgfv3/Screen%20Shot%202022-04-06%20at%207.49.40%20AM.png?raw=1"
           }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          float={"left"}
+          title="Newsmax"
           scrolling={this.state.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        <h2>
-          "Something is guaranteed to break, so you need CarShield," Bill
-          O'Reilly to pool money together to make prices hysterical{/**PCE-CPI gain or loss? Getting away with murder*/}
-        </h2>
-        "They knew what they were doing when they were taking out the loan,"
-        Bernie McGerk, it is{space}
-        <span style={{ color: "purple" }}>
-          duress, foreseeable impossibility, and larceny in contract
-        </span>
-        . "The ones that really need it, they can get 'loans,'" Megan Kelly,
-        loans have collateral bitch, and lending is not necessary for anyone,
-        they always{space}
+        Megan Kelly, loans have collateral bitch, and lending is not necessary
+        for anyone, they always{space}
         <span style={{ color: "purple" }}>
           prevent negotiating of starving producers
         </span>
