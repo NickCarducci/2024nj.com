@@ -566,6 +566,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        A topic is not a publication, that which is under the same guise as a
+        newsfeed, that which would have to pay writers or exchange said
+        non-descriptive title, that which is subject to peer review.
         <h4>All my friends work for banks</h4>
         <Cable
           onError={handleScollImgError}
@@ -764,8 +767,7 @@ export default class App extends React.Component {
         how is a voluntary action a disorder? even hysteria is rational
         <br />
         opiate and drug dependency in tribal and rural entertainment
-        <h1>
-        "Don’t accept Putin as an adequate person, he has no self-care"</h1>
+        <h1>"Don’t accept Putin as an adequate person, he has no self-care"</h1>
         <h3>
           Ween cops off bond loss profit; involuntary support address whose
           issues? Bipartisan Summer Hour Prevention Treatment and Recovery act,
@@ -6517,4 +6519,3 @@ export default class App extends React.Component {
     );
   }
 }
-
