@@ -566,6 +566,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/5m39d7dr0owsxl8/Screen%20Shot%202022-04-06%20at%209.58.41%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="GBNews"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         "What is the profit difference between what goods are sold for and what
         they actually cost to make? Marxism refers to as a 'surplus profit.'"
         <br />
