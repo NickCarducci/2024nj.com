@@ -566,12 +566,40 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Open the borders! Stop via fees? Labor shortage?{space}<a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">Most Americans do not like any insurance</a>.
-        <br/>
-        <br/>
+        "They knew what they were doing when they were taking out the loan,"
+        Bernie McGerk, it is{space}
+        <span style={{ color: "purple" }}>
+          duress, foreseeable impossibility, and larceny in contract
+        </span>
+        . "The ones that really need it, they can get 'loans,'" Megan Kelly,
+        loans have collateral bitch, and lending is not necessary for anyone,
+        they always{space}
+        <span style={{ color: "purple" }}>
+          prevent negotiating of starving producers
+        </span>
+        and{space}
+        <span style={{ color: "purple" }}>
+          makes a moat of -science/skew trade secrets
+        </span>
+        , yet max-royalty can work instead, vertical induatry line revenue
+        skimping totious, and (cash/invoices)*income
+        <br />
+        <br />
+        Open the borders! Stop via fees? Labor shortage?{space}
+        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
+          Most Americans do not like any insurance
+        </a>
+        . Substitution of labor-demand of other markets is not to be prevented
+        by hysterical claims for invoices, surrendered freedom to bid, another
+        larceny in contract, for third party donee beneficiary
+        <br />
+        <br />
         How about a financial system that Saves the dollar?, Mark Steyn??
-        <h1>“Sex attack, awkwardness, is kept in rubber room.” Rudy Giuliani</h1>
-        evidence should be immediate or aquit.<br/>
+        <h1>
+          “Sex attack, awkwardness, is kept in rubber room.” Rudy Giuliani
+        </h1>
+        evidence should be immediate or aquit.
+        <br />
         "The able Ashlene McDonough, this hearing is adjourned." In reference to
         old-age delinquency known hazard disability. what were they doing when
         they were able, gambling their savings? or is it because you are
