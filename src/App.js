@@ -569,7 +569,7 @@ export default class App extends React.Component {
         A topic is not a publication, that which is under the same guise as a
         newsfeed, that which would have to pay writers or exchange said
         non-descriptive title, that which is subject to peer review.
-        <h4>All my friends work for banks</h4>
+        <h4>All my friends work for banks; attorneys never finish the job; sales won't mention competition for moat</h4>
         <Cable
           onError={handleScollImgError}
           img={true}
