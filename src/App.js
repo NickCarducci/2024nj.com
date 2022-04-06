@@ -566,6 +566,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Open the borders! Stop via fees? Labor shortage?{space}<a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">Most Americans do not like any insurance</a>.
+        <br/>
+        <br/>
         How about a financial system that Saves the dollar?, Mark Steyn??
         <h1>“Sex attack, awkwardness, is kept in rubber room.” Rudy Giuliani</h1>
         evidence should be immediate or aquit.<br/>
