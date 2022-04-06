@@ -566,6 +566,39 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "What is the profit difference between what goods are sold for and what
+        they actually cost to make? Marxism refers to as a 'surplus profit.'"
+        <br />
+        Alexandra Engle - Go read Adam Smith. He defined it before Marx and in
+        this instance of surplus profit [division of labor - comparative
+        advantage - skills trading - nationalistic-retardation], Marx's ideals
+        and theory fail miserably in application. No communist country has ever
+        increased the wages of the state employees because they profited more.
+        They shoved it in their pockets and made a very select few rich.
+        <br />
+        Nick Carducci - Communism deprives no man of the power to appropriate
+        the products of society; all that it does is to deprive him of the power
+        to subjugate the labour of others by means of such appropriations.
+        <br />
+        <br />
+        Alexandra Engle - Exactly my point. Marx's idea failed. The USSR meant
+        that Stalin and a select few subjugated everyone else's labor. In North
+        Korea, not a select few but a family, more dynasty than Marx's concept.
+        China? Ditto until they decided to open up their economy to the global
+        economy, and even then Jack Ma paid the price of flying too high.
+        <br />
+        Thanks for quoting only to prove my point.
+        <br />
+        <br />
+        Nick Carducci - Vulgar socialism (and from it in turn a section of the
+        democrats) has taken over distribution as production[, not
+        productive-ward]. After the real relation has long been made clear, why
+        retrogress again?
+        <br />
+        <br />
+        Marx was dead by then, never the governor.
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -627,7 +660,8 @@ export default class App extends React.Component {
         Bernie McGerk, it is{space}
         <span style={{ color: "purple" }}>
           (“A loan system where they are effectively forced to borrow money,”
-          Liam Halligan - 4/6/2022), foreseeable impossibility, and larceny in contract
+          Liam Halligan - 4/6/2022), foreseeable impossibility, and larceny in
+          contract
         </span>
         . "The ones that really need it, they can get 'loans,'"
         <br />
