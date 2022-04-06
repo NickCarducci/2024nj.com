@@ -566,6 +566,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h4>All my friends work for banks</h4>
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -6516,3 +6517,4 @@ export default class App extends React.Component {
     );
   }
 }
+
