@@ -572,6 +572,34 @@ export default class App extends React.Component {
           src={
             this.state.noyout
               ? ""
+              : "https://www.dropbox.com/s/i2gdhv2so3a4i4p/Screen%20Shot%202022-04-06%20at%208.54.16%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="GBNews"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h3>"14 employees, not bad"</h3>
+        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
+        University (Graduated 2015)
+        <br />
+        "Why do people ignore the really good economic news on growth and
+        unemployment and are obsessed with only inflation?"
+        <br />
+        GDP and “unemployment” are metrics for expenses and less hours worked
+        <br />
+        consider that the economists in charge of quora moderation cannot get
+        their story straight on what unemployment and inflation means
+        <br />
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
               : "https://www.dropbox.com/s/w43q5w74w575vu9/Screen%20Shot%202022-04-06%20at%208.45.18%20AM.png?raw=1"
           }
           float={"right"}
@@ -599,7 +627,7 @@ export default class App extends React.Component {
         Bernie McGerk, it is{space}
         <span style={{ color: "purple" }}>
           (“A loan system where they are effectively forced to borrow money,”
-          Liam Halligan), foreseeable impossibility, and larceny in contract
+          Liam Halligan - 4/6/2022), foreseeable impossibility, and larceny in contract
         </span>
         . "The ones that really need it, they can get 'loans,'"
         <br />
