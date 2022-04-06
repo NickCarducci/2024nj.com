@@ -566,10 +566,30 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Asymptomatic testing has{space}
+        <a href="https://qr.ae/pvKP1x">proven noncorrelation</a>,
+        immunocompromised CDC says lymphoma onconogenic, "no-problem."
+        <br />
         Compound estimates cannot garner more than over negative margin
+        <Cable
+        style={{width:"100%"}}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/2anogwle61sgfv3/Screen%20Shot%202022-04-06%20at%207.49.40%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         <h2>
           "Something is guaranteed to break, so you need CarShield," Bill
-          O'Reilly to pool money together to make prices hysterical
+          O'Reilly to pool money together to make prices hysterical{/**PCE-CPI gain or loss? Getting away with murder*/}
         </h2>
         "They knew what they were doing when they were taking out the loan,"
         Bernie McGerk, it is{space}
