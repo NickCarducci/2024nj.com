@@ -566,9 +566,24 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/2fxg219cecun0ue/Screen%20Shot%202022-04-07%20at%2012.17.27%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="Newsmax - Imports are a wash and if not tape-painting it is only so for lower prices per barrel, it is cheaper labor abroad and that surmounts any repatriation effects of self-harm inflation by printing for what is left of $1.8t/yr debt spending and $2t currency outside fed banks and checking (before 3/2020, now checking +$5t more)"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         51% tax on sports betting in NY absurd. That really prevents market
         liquidity. We need truncated production tax to abide by equal Article
-        1.8 bond-tax and trust-break the treasury.
+        1.8 bond-tax and trust-break the treasury. 3% under $2k geohash/month + 2 week public review naming and open source
         <br />
         <br /><a href="https://quora.com/nickcarducci">A topic is not a publication</a>, that which is under the same guise
         as a newsfeed, that which would have to pay writers or exchange said
