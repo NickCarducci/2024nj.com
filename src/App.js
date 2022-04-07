@@ -566,6 +566,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>substitutive-supply: you should say inventory, dunce</h1>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/a58xc54z756k4cc/Screen%20Shot%202022-04-07%20at%2012.53.12%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Oil yahoo finance congressional "
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h1>
+          “Bioengineered virus, no sanctions, is criminal.” Charlie Kirk, Never
+          have we proven virus is even correlated let alone inseminate a cell
+        </h1>
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -581,13 +601,21 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        51% tax on sports betting in NY absurd. That really prevents market
-        liquidity. We need truncated production tax to abide by equal Article
-        1.8 bond-tax and trust-break the treasury. 3% under $2k geohash/month + 2 week public review naming and open source
+        51% tax on sports betting in NY absurd. That really{space}
+        <a href="https://qr.ae/pvKVEM">prevents</a>
+        {space}market
+        <a href="https://qr.ae/pvKVBs">liquidity</a>. We need truncated
+        production tax to abide by equal Article 1.8 bond-tax and trust-break
+        the treasury. 3% under $2k geohash/month + 2 week public review naming
+        and open source
         <br />
-        <br /><a href="https://quora.com/nickcarducci">A topic is not a publication</a>, that which is under the same guise
-        as a newsfeed, that which would have to pay writers or exchange said
-        non-descriptive title, that which is subject to peer review.
+        <br />
+        <a href="https://quora.com/nickcarducci">
+          A topic is not a publication
+        </a>
+        , that which is under the same guise as a newsfeed, that which would
+        have to pay writers or exchange said non-descriptive title, that which
+        is subject to peer review.
         <h4>
           All my friends work for banks; attorneys never finish the job; sales
           won't mention competition for moat
