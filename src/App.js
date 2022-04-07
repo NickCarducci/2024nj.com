@@ -566,6 +566,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h2>
+          They cancel debt without collateral because that is the only way
+          lenders get{space}<a href="https://quora.com/nickcarducci">paid</a>.
+        </h2>
+        "Provide charter schools, not public schools, D.C. teachers' union bond
+        income secession" - "Sitwell Friends Aca"
+        <br />
         Steve: “Philosophy clarifying disease KBJ etymology define women Anomic
         aphasia.”
         <br />
