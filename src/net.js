@@ -2316,8 +2316,8 @@ class NetToGDP extends React.Component {
           mortgages.push(balanceData.mortgage);
           mortgagesData.push([year, balanceData.mortgage]);
 
-          bond.push(balanceData.assets);
-          bondData.push([year, balanceData.assets]);
+          bond.push(balanceData.assets - balanceData.mortgage);
+          bondData.push([year, balanceData.assets - balanceData.mortgage]);
         }
       });
       // console.log(bondData);
@@ -2349,7 +2349,7 @@ class NetToGDP extends React.Component {
       ...bond,
       ...notes
     ];
-    var lowAccount = Math.min(...account);
+    var lowAccount = Math.min(...bond);
     var highAccount = Math.max(...account);
     var lowNetRatio = Math.min(...all);
     var lowDate = Math.min(...date);
@@ -2428,8 +2428,8 @@ class NetToGDP extends React.Component {
               mortgages.push(balanceData.mortgage);
               mortgagesData.push([year, balanceData.mortgage]);
 
-              bond.push(balanceData.assets);
-              bondData.push([year, balanceData.assets]);
+              bond.push(balanceData.assets - balanceData.mortgage);
+              bondData.push([year, balanceData.assets - balanceData.mortgage]);
             }
           });
           // console.log(bondData);
@@ -2857,7 +2857,6 @@ class NetToGDP extends React.Component {
               style={{
                 width: "min-content"
               }}
-              defaultValue="liabilities/GDP, m2*velocity"
               state={this.state.chartType}
               onChange={(name) => {
                 this.setState({ chartType: name.target.value });
