@@ -566,6 +566,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Steve: “Philosophy clarifying disease KBJ etymology define women Anomic
+        aphasia.”
+        <br />
+        GK: "That was an ideology sir, not a defect,
+        <br />
+        'Man,' Xavier Bacerra could’ve, too.
+        <br />
+        Here, first blush, 'Produce eggs or give birth and constitutionally
+        designed for caring and nurturing. Hormones goes either way.'
         <h1>substitutive-supply: you should say inventory, dunce</h1>
         <Cable
           onError={handleScollImgError}
