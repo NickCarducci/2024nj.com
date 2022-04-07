@@ -566,10 +566,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        A topic is not a publication, that which is under the same guise as a
-        newsfeed, that which would have to pay writers or exchange said
+        51% tax on sports betting in NY absurd. That really prevents market
+        liquidity. We need truncated production tax to abide by equal Article
+        1.8 bond-tax and trust-break the treasury.
+        <br />
+        <br /><a href="https://quora.com/nickcarducci">A topic is not a publication</a>, that which is under the same guise
+        as a newsfeed, that which would have to pay writers or exchange said
         non-descriptive title, that which is subject to peer review.
-        <h4>All my friends work for banks; attorneys never finish the job; sales won't mention competition for moat</h4>
+        <h4>
+          All my friends work for banks; attorneys never finish the job; sales
+          won't mention competition for moat
+        </h4>
         <Cable
           onError={handleScollImgError}
           img={true}
