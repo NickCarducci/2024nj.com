@@ -566,6 +566,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/o82ytz5hq42cq9c/Screen%20Shot%202022-04-08%20at%204.57.25%20PM.png?raw=1"
+          }
+          float={"right"}
+          title="Daily Wire"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h3>
+          You can check id but you cannot prevent commerce with treasury fees,
+          you haven’t even inseminated cell,{space}
+          <a href="https://saverparty.xyz/racists">spic</a>
+        </h3>
         Population growth is 1%/yr+, even if supply is not substitutive by
         labor-demand, the cause of price rises 5%/yr+ is obviously because of
         5%APR 20 yr mortgage. Communism prohibits leasing inventory, must sell
