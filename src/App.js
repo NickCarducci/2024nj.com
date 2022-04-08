@@ -566,11 +566,55 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Population growth is 1%/yr+, even if supply is not substitutive by
+        labor-demand, the cause of price rises 5%/yr+ is obviously because of
+        5%APR 20 yr mortgage. Communism prohibits leasing inventory, must sell
+        outright to not infringe on others rights, labor-borne.
+        <br />
+        <br />
+        Jeffrey Burney - people are cold homeless and hungry under communism.
+        And also under most communist systems ownership of private property is
+        banned so owning your own home you couldn’t do that legally￼
+        <br />
+        <br />
+        Communism deprives no man of the power to appropriate the products of
+        society; all that it does is to deprive him of the power to subjugate
+        the labour of others by means of such appropriations.
+        <br />
+        <br />
+        Jeffrey Burney - And who enforces those laws if it deprives no man of
+        power? ￼
+        <br />
+        <br />
+        in contract law, you aren’t allowed to invoke a third party donee
+        beneficiary. Please, if you think stealing in contract is ok, leave me
+        alone
+        <br />
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/dfhn4x10zmbsnpl/Screen%20Shot%202022-04-08%20at%204.26.43%20PM.png?raw=1"
+          }
+          float={"left"}
+          title="Newsmax"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        “Imagine what could have been done with $6m to buy food for black
+        communities.” Is what the right is concerned about instead of suspending
+        larceny in contract
         <h4>
           "<a href="https://qr.ae/pvKzFP">Are you an economist?</a>" no for I am
           {space}
           <a href="https://qr.ae/pvKzoA">diligent</a>:{space}
-          <a href="https://qr.ae/pvKzoO">Giffen goods are for rounding</a>. Estimates until negative margin.
+          <a href="https://qr.ae/pvKzoO">Giffen goods are for rounding</a>.
+          Estimates until negative margin.
         </h4>
         <a href="https://qr.ae/pvKzKY">$400 average</a>, copy and mortgage or
         loose inventory debenture o' corporate or treasury
