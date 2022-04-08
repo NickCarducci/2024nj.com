@@ -566,6 +566,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://qr.ae/pvKzKY">$400 average</a>, copy and mortgage or loose inventory debenture o'
+        corporate or treasury
+        <br />
+        <br />
         46m student loan, 27x less own a business, locker room talk uh uh uh
         (the people that don’t support the war likely fled the country, look,
         they closed instagram, YouTube, these people don’t want to be part of
