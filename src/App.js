@@ -566,8 +566,14 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <a href="https://qr.ae/pvKzKY">$400 average</a>, copy and mortgage or loose inventory debenture o'
-        corporate or treasury
+        <h4>
+          "<a href="https://qr.ae/pvKzFP">Are you an economist?</a>" no for I am
+          {space}
+          <a href="https://qr.ae/pvKzoA">diligent</a>:{space}
+          <a href="https://qr.ae/pvKzoO">Giffen goods are for rounding</a>.
+        </h4>
+        <a href="https://qr.ae/pvKzKY">$400 average</a>, copy and mortgage or
+        loose inventory debenture o' corporate or treasury
         <br />
         <br />
         46m student loan, 27x less own a business, locker room talk uh uh uh
