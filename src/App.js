@@ -570,7 +570,7 @@ export default class App extends React.Component {
           "<a href="https://qr.ae/pvKzFP">Are you an economist?</a>" no for I am
           {space}
           <a href="https://qr.ae/pvKzoA">diligent</a>:{space}
-          <a href="https://qr.ae/pvKzoO">Giffen goods are for rounding</a>.
+          <a href="https://qr.ae/pvKzoO">Giffen goods are for rounding</a>. Estimates until negative margin.
         </h4>
         <a href="https://qr.ae/pvKzKY">$400 average</a>, copy and mortgage or
         loose inventory debenture o' corporate or treasury
