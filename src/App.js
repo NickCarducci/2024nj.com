@@ -224,7 +224,7 @@ export default class App extends React.Component {
       check();
       this.check = setTimeout(check, 4000);
     }
-  };//elated bizarre messy hair 1/hour-GDP/p
+  }; //elated bizarre messy hair 1/hour-GDP/p
   render() {
     const { posts } = this.state;
     const handleScollImgError = (e) => {
@@ -566,11 +566,16 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        46m student loan, 27x less own a business, locker room talk uh uh uh
+        (the people that don’t support the war likely fled the country, look,
+        they closed instagram, YouTube, these people don’t want to be part of
+        the info, but they cannot really hide it.
         <h1>A hysterical claim benefits team</h1>
         We know sewage is cross ref US-India age at death
         <h2>
           They cancel debt without collateral because that is the only way
-          lenders get{space}<a href="https://quora.com/nickcarducci">paid</a>.
+          lenders get{space}
+          <a href="https://quora.com/nickcarducci">paid</a>.
         </h2>
         "Provide charter schools, not public schools, D.C. teachers' union bond
         income secession" - "Sitwell Friends Aca"
