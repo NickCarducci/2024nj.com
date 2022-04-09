@@ -566,6 +566,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h4>
+          <a href="https://www.fbi.gov/file-repository/2020-ncic-missing-person-and-unidentified-person-statistics.pdf/view">
+            Kiddie trafficking
+          </a>
+          {space}and NFC Motor Vehicle liable
+        </h4>
+        <a href="https://humanharvest.info/polio">Covid</a>
+        {space}
+        <a href="https://qr.ae/pvKju9">protection</a>
+        {space}or go back, mass illegal{space}
+        <a href="https://vaults.biz/immi">immigrations</a>, they could have at
+        least used Title 42 as a scapegoat, he gutted all protections that
+        protected us from competitive commerce substitutive supply for
+        labor-demand of other markets and economic welfare, 1/hour-GDP/p
+        {space}
+        <a href="https://teapharmacy.party/drugs">
+          fentanyl 2013-15 demand refinery
+        </a>
+        .
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -588,7 +608,9 @@ export default class App extends React.Component {
         </h3>
         Population growth is 1%/yr+, even if supply is not substitutive by
         labor-demand, the cause of price rises 5%/yr+ is obviously because of
-        5%APR 20 yr mortgage. Communism prohibits leasing inventory, must sell
+        {space}
+        <a href="https://realecon.quora.com">5%APR</a>
+        {space}20 yr mortgage. Communism prohibits leasing inventory, must sell
         outright to not infringe on others rights, labor-borne.
         <br />
         <br />
