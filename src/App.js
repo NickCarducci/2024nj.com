@@ -57,6 +57,7 @@ export default class App extends React.Component {
     this.plandemic = React.createRef();
     this.disability = React.createRef();
     this.police = React.createRef();
+    this.immi=React.createRef()
   }
   componentDidMount = () => {
     //document.getElementsByTagName("body")[0].style.margin = 0;
@@ -219,6 +220,8 @@ export default class App extends React.Component {
           window.scroll(0, this.plandemic.current.offsetTop);
         } else if (["/nypd", "/police"].includes(this.props.pathname)) {
           window.scroll(0, this.police.current.offsetTop);
+        }else if (["/immi", "/immigration"].includes(this.props.pathname)) {
+          window.scroll(0, this.immi.current.offsetTop);
         }
       };
       check();
@@ -566,6 +569,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "Half the returns are from interest, not capital gains," Payne Capital Management
         <h4>
           <a href="https://www.fbi.gov/file-repository/2020-ncic-missing-person-and-unidentified-person-statistics.pdf/view">
             Kiddie trafficking
@@ -1902,6 +1906,7 @@ export default class App extends React.Component {
         . Don't need to medicate to house homeless, that are such a way because
         of finance and laborless-demand.
         <br />
+        <hr ref={this.immi}/>
         <Cable
           onError={handleScollImgError}
           img={true}
