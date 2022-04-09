@@ -4108,7 +4108,6 @@ export default class App extends React.Component {
         NATO mid-fight?
         <br />
         <br />
-        <hr ref={this.disability} />
         The old are not disabled, people with OCD are not disabled, I am not
         disabled on account of my messy hair, I have a hole in my leg, people
         are in wheelchairs. the system abuses the mad for running a balance of
@@ -4117,12 +4116,12 @@ export default class App extends React.Component {
         <br />
         Loren bobart wants to fund Ukraine, why? They are forcing people to
         fight especially when there are more people than jobs?
-        <br />
-        <br />
-        “It’s a no brainer choosing car shield, takes a huge paperwork burden
-        off you, lock in your price now, it will never go up.”
-        <br />
-        <br />
+        <h4>
+          “It’s a no brainer{space}
+          <a href="https://qr.ae/pvKjPO">choosing car shield</a>, takes a huge
+          paperwork burden off you, lock in your price now, it will never go
+          up.”
+        </h4>
         force majeure is not only reason why you cannot surrender bids of
         others, bitch. Talk radio is only appropriate income, albeit all your
         fucking sponsors are finance
@@ -4144,6 +4143,7 @@ export default class App extends React.Component {
           happens)
         </h4>
         nervous system (16%) and injured (7%)
+        <hr ref={this.disability} />
         <Unable
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
@@ -4204,6 +4204,9 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
+        “I’m injured I wanna be able to run marathons until I am your age.”
+        <br />
+        <br />
         Countries can choose as much as an international law can bar, yet
         conscription and state vic, free rider mutable, debt spending or closed
         source vig, general fund standardized guarantee is criminal
