@@ -46,6 +46,7 @@ export default class App extends React.Component {
     for (let i = 0; i < 220; i++) {
       this["scrollImg" + i] = React.createRef();
     }
+    this.work = React.createRef();
     this.carducci = React.createRef();
     this.$ = React.createRef();
     this.edu = React.createRef();
@@ -194,7 +195,9 @@ export default class App extends React.Component {
         if (this.props.pathname !== "/") {
           this.setState({ trigger: true });
         }
-        if (this.props.pathname === "/edu") {
+        if (this.props.pathname === "/work") {
+          window.scroll(0, this.work.current.offsetTop);
+        } else if (this.props.pathname === "/edu") {
           window.scroll(0, this.edu.current.offsetTop);
         } else if (["/$", "/bachelors"].includes(this.props.pathname)) {
           window.scroll(0, this.$.current.offsetTop);
@@ -409,6 +412,11 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
+            <div id="work" onClick={goTo} style={navitem}>
+              <span role="img" aria-label="construction-tan">
+                👷🏽‍♂️
+              </span>
+            </div>
             <a href="https://realecon.quora.com" style={navitem}>
               <Cable
                 style={{ backgroundColor: "white", width: "20px" }}
@@ -6642,6 +6650,7 @@ export default class App extends React.Component {
         by GDP/p 0%/yr+ amidst 3%/yr+ population, 1800–1913). This is a global
         trend, extrapolating from GDP/p growth, globally, yet I have not charted
         to confirm the same is for employment by age.
+        <hr ref={this.work} />
         <Salaries
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
