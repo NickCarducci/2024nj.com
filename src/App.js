@@ -585,7 +585,8 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Viruses tend to spread faster on what evidence? You just claim virus
+        Viruses tend to spread faster on what{space}
+        <a href="https://qr.ae/pvsTGZ">evidence</a>? You just claim virus
         inseminates cell by presentation, non-exclusive or asymptomatic, you
         fucking choose{space}
         <a href="https://www.quora.com/What-is-schizo-economics">retard</a>
