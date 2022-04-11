@@ -421,8 +421,7 @@ export default class App extends React.Component {
                     ? {}
                     : { backgroundColor: "black", color: "white" }
                 }
-              >
-                👷‍♂️
+              >👷🏽‍♂️
               </span>
             </div>
             <a href="https://realecon.quora.com" style={navitem}>
