@@ -590,12 +590,13 @@ export default class App extends React.Component {
           shouldn't happen, these are averages over time, not upwardand downward
           moving individuals
         </a>
-        {space}working for a living-surplus for leisure.
+        {space}working for a living-surplus for leisure. -science/skew is zero
+        sum, inventory form is not substitutive-supply by mining or design
         <h4>
           <a href="https://qr.ae/pvs1ZD">
             rollover hysterical expiring-premium-insurance claims
           </a>
-          , bitch
+          , brown-bitch (Yasmeen Memon, MD; Long Branch, NJ)
         </h4>
         is{space}
         <a href="https://www.njconsumeraffairs.gov/statutes/consumer-fraud-act.pdf">
