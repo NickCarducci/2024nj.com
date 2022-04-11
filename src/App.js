@@ -618,6 +618,9 @@ export default class App extends React.Component {
         {space}not oxymoronic?
         <br />
         <br />
+        
+        <span role="img" aria-label="construction-tan">👷🏽‍♂</span><a href="https://saverparty.xyz/global">india, the worlds, 6th largest national economy</a>
+        <br/>
         <span role="img" aria-label="timer">
           ⏲
         </span>
@@ -630,8 +633,7 @@ export default class App extends React.Component {
         <br />
         L.1995,c.373,s.8.
         <br />
-        <br />
-        <span role="img" aria-label="timer">
+        <span role="img" aria-label="construction-worker">
           👷‍♂️
         </span>{" "}
         56:8-106 Immunity from liability for third party, exception
