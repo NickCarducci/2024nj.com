@@ -421,7 +421,8 @@ export default class App extends React.Component {
                     ? {}
                     : { backgroundColor: "black", color: "white" }
                 }
-              >👷🏽‍♂️
+              >
+                👷🏽‍♂️
               </span>
             </div>
             <a href="https://realecon.quora.com" style={navitem}>
@@ -584,10 +585,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        stop scapegoating{space}
+        stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>)scapegoating{space}
         <a href="https://repealbakeract.quora.com/">pervert</a>. sliwa, do you
         want to{space}
-        <a href="https://qr.ae/pvs1wB">watch</a>?<br />
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12049024/">watch</a>?<br />
         PCE-CPI is an ascertainable loss to economic welfare, 1/hour-GDP/p,
         efficiency. "We need demand for our products," we need substitutable
         supply, exports for Roubles, state-lands, rig-rates royalty% local
