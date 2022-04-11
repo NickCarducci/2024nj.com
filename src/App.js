@@ -585,6 +585,50 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Inequality literally{space}
+        <a href="https://qr.ae/pvs1Sy">
+          shouldn't happen, these are averages over time, not upwardand downward
+          moving individuals
+        </a>
+        {space}working for a living-surplus for leisure.
+        <h4>
+          <a href="https://qr.ae/pvs1ZD">
+            rollover hysterical expiring-premium-insurance claims
+          </a>
+          , bitch
+        </h4>
+        is{space}
+        <a href="https://www.njconsumeraffairs.gov/statutes/consumer-fraud-act.pdf">
+          this
+        </a>
+        {space}not oxymoronic?
+        <br />
+        <br />
+        <span role="img" aria-label="timer">
+          ⏲
+        </span>
+        (?)56:8-74. Warranty given as a matter of law
+        <br />
+        If a dealer fails to give a written warranty required by this act, the
+        dealer nevertheless shall be deemed to have given the warranty as a
+        matter of law, unless a waiver has been signed by the consumer in
+        accordance with section 7 of this act.
+        <br />
+        L.1995,c.373,s.8.
+        <br />
+        <br />
+        <span role="img" aria-label="timer">
+          👷‍♂️
+        </span>{" "}
+        56:8-106 Immunity from liability for third party, exception
+        <br />
+        A third party shall not be liable for an unlawful practice under section
+        2 of this act unless there was an agency relationship between the person
+        who engaged in the home solicitation and the third party.
+        <br />
+        L.2000,c.125,s.3.
+        <br />
+        <br />
         stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>)scapegoating{space}
         <a href="https://repealbakeract.quora.com/">pervert</a>. sliwa, do you
         want to{space}
