@@ -618,9 +618,13 @@ export default class App extends React.Component {
         {space}not oxymoronic?
         <br />
         <br />
-        
-        <span role="img" aria-label="construction-tan">👷🏽‍♂</span><a href="https://saverparty.xyz/global">india, the worlds, 6th largest national economy</a>
-        <br/>
+        <span role="img" aria-label="construction-tan">
+          👷🏽‍♂
+        </span>
+        <a href="https://saverparty.xyz/global">
+          india, the worlds, 6th largest national economy
+        </a>
+        <br />
         <span role="img" aria-label="timer">
           ⏲
         </span>
@@ -645,6 +649,18 @@ export default class App extends React.Component {
         L.2000,c.125,s.3.
         <br />
         <br />
+        <h3
+          style={{
+            float: "left",
+            backgroundColor: "black",
+            color: "white",
+            borderRadius: "10px",
+            margin: "10px",
+            padding: "10px"
+          }}
+        >
+          Warranty is implicitly a surrendered bid
+        </h3>
         stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>)scapegoating{space}
         <a href="https://repealbakeract.quora.com/">pervert</a>. sliwa, do you
         want to{space}
