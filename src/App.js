@@ -586,11 +586,23 @@ export default class App extends React.Component {
           </div>
         </div>
         <h4>Acquit judges of appeal fines and hysterical claim whistleblower</h4>
+          <h3
+            style={{
+              float: "left",
+              backgroundColor: "black",
+              color: "white",
+              borderTopRightRadius: "10px",
+              margin: "10px",
+              padding: "10px",
+              marginBottom: "0px",
+              marginLeft: "0px",
+            }}
+          >Royaly%/consumer</h3>
         In house duress... mvp duress non-compete
         {space}
         <a href="https://qr.ae/pvsGuI">cornering</a>
         <br />
-        I’m no expert, I won’t pretend, I have people onnnnnn. I put people on
+        I’m no expert, I won’t pretend, I have people onnnnnn. I put people on<br/>
         <a href="https://qr.ae/pvsGu5">
           <Cable
             onError={handleScollImgError}
@@ -6848,3 +6860,4 @@ export default class App extends React.Component {
     );
   }
 }
+
