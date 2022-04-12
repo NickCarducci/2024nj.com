@@ -585,6 +585,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://qr.ae/pvsh8q">anon</a>{space}business income<br/>
+        income as a "non profit"{space}
+        <a href="https://nextdoor.com/p/kgbkJZqx285M/c/750954594?utm_source=share">
+          service
+        </a>
+        <br />
         cors NFC Motor Vehicle{space}
         <a href="https://qr.ae/pvsGDH">intranet</a>
         {space}will 100% filter out bad eggs, mal-intentioned, as it were. 3%
@@ -596,7 +602,8 @@ export default class App extends React.Component {
         -science/skew, zero-sum science, mining and design loss.
         <br />
         income after expenses real wage, rose 350k, ons 9 years last largest
-        fall in real child poverty (less than a third of expenses-nationally, income).
+        fall in real child poverty (less than a third of expenses-nationally,
+        income).
         <br />
         <h3
           style={{
@@ -5136,7 +5143,7 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-          <Cable
+        <Cable
           style={{ width: "100%" }}
           onError={handleScollImgError}
           img={true}
