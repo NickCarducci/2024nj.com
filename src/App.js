@@ -648,7 +648,11 @@ export default class App extends React.Component {
         </a>
         {space}in my book,{/**Chris */}
         <br />
-        Kids don't need services, you need to stop taking laborless-income.
+        Kids don't need{space}
+        <a href="https://qr.ae/pvsGqs">services</a>, you need to stop{space}
+        <a href="https://qr.ae/pvsGqi">taking</a>
+        {space}
+        laborless-income.
         <br />
         Viruses tend to spread faster on what{space}
         <a href="https://qr.ae/pvsTGZ">evidence</a>? You just claim virus
