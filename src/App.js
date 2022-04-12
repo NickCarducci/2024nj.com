@@ -585,6 +585,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h4>
+          reverse amortization - (cash/debt)*income... mvp duress non-compete
+          {space}
+          <a href="https://qr.ae/pvsGuI">cornering</a>, fines for no resolution
+          but the same? hysterical known hazard claims, bond loss profit - per
+          diem incarceration
+        </h4>
+        Don't{space}
+        <a href="https://qr.ae/pvsGkP">reneg</a>
+        {space}on debt for producers keep credit.
+        <br />
         Deal is a{space}
         <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
           deal
