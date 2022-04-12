@@ -585,7 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Vaccines work, virus is alive, where is your proof? Just because you found it?<br/>
+        Vaccines work, virus is alive, where is your proof?{space}<a href="https://qr.ae/pvshas">Just because you found it</a>?<br/>
         <h3
           style={{
             float: "right",
