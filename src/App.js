@@ -585,24 +585,32 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h4>Acquit judges of appeal fines and hysterical claim whistleblower</h4>
-          <h3
-            style={{
-              float: "left",
-              backgroundColor: "black",
-              color: "white",
-              borderTopRightRadius: "10px",
-              margin: "10px",
-              padding: "10px",
-              marginBottom: "0px",
-              marginLeft: "0px",
-            }}
-          >Royaly%/consumer</h3>
+        cors NFC Motor Vehicle{space}
+        <a href="https://qr.ae/pvsGDH">intranet</a>
+        {space}will 100% filter out bad eggs, mal-intentioned, as it were. 3% under $2k
+        <h4>
+          Acquit judges of appeal fines and hysterical claim whistleblower
+        </h4>
+        <h3
+          style={{
+            float: "left",
+            backgroundColor: "black",
+            color: "white",
+            borderTopRightRadius: "10px",
+            margin: "10px",
+            padding: "10px",
+            marginBottom: "0px",
+            marginLeft: "0px"
+          }}
+        >
+          Royaly%/consumer
+        </h3>
         In house duress... mvp duress non-compete
         {space}
         <a href="https://qr.ae/pvsGuI">cornering</a>
         <br />
-        I’m no expert, I won’t pretend, I have people onnnnnn. I put people on<br/>
+        I’m no expert, I won’t pretend, I have people onnnnnn. I put people on
+        <br />
         <a href="https://qr.ae/pvsGu5">
           <Cable
             onError={handleScollImgError}
@@ -6860,4 +6868,3 @@ export default class App extends React.Component {
     );
   }
 }
-
