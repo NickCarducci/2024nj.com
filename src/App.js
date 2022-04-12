@@ -585,9 +585,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        income after expenses real wage, fose 350k, ons 9 years last largest
+        fall in real child poverty.
+        <br />
         cors NFC Motor Vehicle{space}
         <a href="https://qr.ae/pvsGDH">intranet</a>
-        {space}will 100% filter out bad eggs, mal-intentioned, as it were. 3% under $2k
+        {space}will 100% filter out bad eggs, mal-intentioned, as it were. 3%
+        under $2k
         <h4>
           Acquit judges of appeal fines and hysterical claim whistleblower
         </h4>
@@ -6868,3 +6872,4 @@ export default class App extends React.Component {
     );
   }
 }
+
