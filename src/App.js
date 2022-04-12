@@ -660,7 +660,7 @@ export default class App extends React.Component {
         <br />
         Kids don't need{space}
         <a href="https://qr.ae/pvsGqs">services</a>, you need to stop{space}
-        <a href="https://qr.ae/pvsGqi">taking</a>
+        <a href="https://qr.ae/pvsGqi">taking</a>. Kids should be at work.
         {space}
         laborless-income.
         <br />
