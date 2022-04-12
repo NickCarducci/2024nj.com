@@ -585,12 +585,33 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        In house duress... mvp duress non-compete
+        {space}
+        <a href="https://qr.ae/pvsGuI">cornering</a>
+        <br />
+        I’m no expert, I won’t pretend, I have people onnnnnn. I put people on
+        <a href="https://qr.ae/pvsGu5">
+          <Cable
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyout
+                ? ""
+                : "https://www.dropbox.com/s/xqlukof0wi27g4q/Screen%20Shot%202022-04-12%20at%204.33.17%20AM.png?raw=1"
+            }
+            float={"left"}
+            title="Econ Zealot 15 yr old"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+        </a>
         <h4>
-          reverse amortization - (cash/debt)*income... mvp duress non-compete
-          {space}
-          <a href="https://qr.ae/pvsGuI">cornering</a>, fines for no resolution
-          but the same? hysterical known hazard claims, bond loss profit - per
-          diem incarceration
+          reverse amortization - (cash/debt)*income, fines for no resolution?
+          hysterical known hazard{space}
+          <a href="https://qr.ae/pvsG50">claims</a>, bond loss profit - per diem
+          incarceration
         </h4>
         Don't{space}
         <a href="https://qr.ae/pvsGkP">reneg</a>
@@ -6826,3 +6847,4 @@ export default class App extends React.Component {
     );
   }
 }
+
