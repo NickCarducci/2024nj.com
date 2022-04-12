@@ -1,4 +1,4 @@
-import React froimport React from "react";
+import React from "react";
 import Cable from "./Dropwire";
 import Bachelors from "./bachelors";
 import TwitterTweetEmbed from "./TwitterTweetEmbed";
@@ -5131,6 +5131,22 @@ export default class App extends React.Component {
           }
           float={"right"}
           title="https://www.ageuk.org.uk/globalassets/age-uk/documents/reports-and-publications/reports-and-briefings/equality-and-human-rights/rb_may16_cpa_rapid_review_diversity_in-_older_age_disability.pdf"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+          <Cable
+          style={{ width: "100%" }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/65x2c376nbtyhk1/Screen%20Shot%202022-04-12%20at%205.59.15%20AM.png?raw=1"
+          }
+          float={"right"}
+          title="https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2019-to-2020/family-resources-survey-financial-year-2019-to-2020#disability-1"
           scrolling={this.state.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
