@@ -585,7 +585,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <a href="https://qr.ae/pvsh8q">anon</a>{space}business income<br/>
+        <a href="https://qr.ae/pvsh8q">anon</a>
+        {space}business income
+        <br />
         income as a "non profit"{space}
         <a href="https://nextdoor.com/p/kgbkJZqx285M/c/750954594?utm_source=share">
           service
@@ -735,6 +737,13 @@ export default class App extends React.Component {
         L.2000,c.125,s.3.
         <br />
         <br />
+        What is something that you just realized? Obamacare doesn't actually
+        save money, it targets mean inflation off non-substitutive-supply (
+        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
+          hysterical
+        </a>
+        {space}pool, implausible invoice, surrendered bid)
+        <br />
         <h3
           style={{
             float: "left",
@@ -745,9 +754,12 @@ export default class App extends React.Component {
             padding: "10px"
           }}
         >
-          Warranty is implicitly a surrendered bid
+          <a href="https://qr.ae/pvshbL" style={{ color: "white" }}>
+            Warranty
+          </a>
+          {space}is implicitly a surrendered bid
         </h3>
-        stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>)scapegoating{space}
+        stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>) scapegoating{space}
         <a href="https://repealbakeract.quora.com/">pervert</a>. sliwa, do you
         want to{space}
         <a href="https://pubmed.ncbi.nlm.nih.gov/12049024/">watch</a>?<br />
