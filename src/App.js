@@ -585,7 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        income after expenses real wage, fose 350k, ons 9 years last largest
+        income after expenses real wage, tose 350k, ons 9 years last largest
         fall in real child poverty.
         <br />
         cors NFC Motor Vehicle{space}
@@ -6872,4 +6872,3 @@ export default class App extends React.Component {
     );
   }
 }
-
