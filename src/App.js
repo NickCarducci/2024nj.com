@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h4>Acquit judges of appeal fines and hysterical claim whistleblower</h4>
         In house duress... mvp duress non-compete
         {space}
         <a href="https://qr.ae/pvsGuI">cornering</a>
@@ -779,7 +780,7 @@ export default class App extends React.Component {
         <br />
         <br />
         Jeffrey Burney - And who enforces those laws if it deprives no man of
-        power? ￼
+        power?
         <br />
         <br />
         in contract law, you aren’t allowed to invoke a third party donee
@@ -6847,4 +6848,3 @@ export default class App extends React.Component {
     );
   }
 }
-
