@@ -1,4 +1,4 @@
-import React from "react";
+import React froimport React from "react";
 import Cable from "./Dropwire";
 import Bachelors from "./bachelors";
 import TwitterTweetEmbed from "./TwitterTweetEmbed";
@@ -585,9 +585,6 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        income after expenses real wage, tose 350k, ons 9 years last largest
-        fall in real child poverty.
-        <br />
         cors NFC Motor Vehicle{space}
         <a href="https://qr.ae/pvsGDH">intranet</a>
         {space}will 100% filter out bad eggs, mal-intentioned, as it were. 3%
@@ -595,6 +592,12 @@ export default class App extends React.Component {
         <h4>
           Acquit judges of appeal fines and hysterical claim whistleblower
         </h4>
+        subsidies (gentrification) can create a lot of jobs for surplus value or
+        -science/skew, zero-sum science, mining and design loss.
+        <br />
+        income after expenses real wage, rose 350k, ons 9 years last largest
+        fall in real child poverty (less than a third of expenses-nationally, income).
+        <br />
         <h3
           style={{
             float: "left",
