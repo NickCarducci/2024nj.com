@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Vaccines work, virus is alive, where is your proof? Just because you found it?<br/>
         <h3
           style={{
             float: "right",
