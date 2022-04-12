@@ -585,6 +585,16 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3
+          style={{
+            float: "right",
+            backgroundColor: "black",
+            color: "white",
+            borderRadius: "10px",
+            margin: "10px",
+            padding: "10px",
+          }}
+        >AOC stopped labor surplus amazon stock</h3>
         <a href="https://qr.ae/pvsh8q">anon</a>
         {space}business income
         <br />
@@ -695,7 +705,14 @@ export default class App extends React.Component {
               padding: "10px"
             }}
           >
-            messy hair frivalous malfeasance
+            messy{space}
+            <a
+              href="https://repealbakeract.quora.com/"
+              style={{ color: "white" }}
+            >
+              hair
+            </a>
+            {space}frivalous malfeasance
           </h3>
           -bitch (Yasmeen Memon, MD; Long Branch, NJ)
         </h4>
@@ -759,7 +776,8 @@ export default class App extends React.Component {
           </a>
           {space}is implicitly a surrendered bid
         </h3>
-        stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>) scapegoating{space}
+        stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>) scapegoating
+        {space}
         <a href="https://repealbakeract.quora.com/">pervert</a>. sliwa, do you
         want to{space}
         <a href="https://pubmed.ncbi.nlm.nih.gov/12049024/">watch</a>?<br />
