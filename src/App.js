@@ -585,6 +585,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Deal is a{space}
+        <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
+          deal
+        </a>
+        {space}in my book,{/**Chris */}
+        <br />
         Kids don't need services, you need to stop taking laborless-income.
         <br />
         Viruses tend to spread faster on what{space}
