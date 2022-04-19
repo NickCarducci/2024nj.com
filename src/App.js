@@ -585,7 +585,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Vaccines work, virus is alive, where is your proof?{space}<a href="https://qr.ae/pvshas">Just because you found it</a>?<br/>
+        <h4>
+          <a href="https://www.facebook.com/groups/opengovgroup/permalink/3224415224456718/">
+            Open Government - By “real” growth, do you mean standardized
+            guarantee schemes, government spending, and structures for leases?
+          </a>
+        </h4>
+        I'm injured but they call me schizophrenic-bipolar because equal and
+        opposite reaction, bid whom takes ask; 35.4% anti-social, 5.2%
+        non-speaking autistic and downs, nearly 48% old muskuloskeletal, 7%
+        injured
+        <br />
+        <a href="https://www.quora.com/unanswered/Can-you-claim-someone-s-mortgaged-home-by-third-party-donee-beneficiary">
+          Can you claim someone’s mortgaged-home by third party donee
+          beneficiary?
+        </a>
+        <br />
+        <a href="https://anticommunism.quora.com/Does-communism-preach-hatred-of-certain-groups-3">
+          Hate from communists
+        </a>
+        <br />
+        Vaccines work, virus is alive, where is your proof?{space}
+        <a href="https://qr.ae/pvshas">Just because you found it</a>?<br />
         <h3
           style={{
             float: "right",
@@ -593,9 +614,11 @@ export default class App extends React.Component {
             color: "white",
             borderRadius: "10px",
             margin: "10px",
-            padding: "10px",
+            padding: "10px"
           }}
-        >AOC stopped labor surplus amazon stock</h3>
+        >
+          AOC stopped labor surplus amazon stock
+        </h3>
         <a href="https://qr.ae/pvsh8q">anon</a>
         {space}business income
         <br />
