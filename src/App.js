@@ -585,7 +585,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Menendez is pro-insurance and invoice.{space}<a href="https://qr.ae/pvsdaH">I will ban them</a>.
+        I'm trying to buy a home, so I will prevent you from mortgaging on my
+        surrendered freedom to bid as a third party donee beneficiary. The next
+        Republican to tell me "value-added" healthcare insurance expiring
+        premium + gov + implausiuble use lease beyond 5 stores and condos
+        strunctures will stop inside-out-of-pocket inflation...
+        <br />
+        <br />
+        Menendez is pro-insurance and invoice.{space}
+        <a href="https://qr.ae/pvsdaH">I will ban them</a>.
         <br />
         <Cable
           style={{ height: "380px", width: "300px" }}
