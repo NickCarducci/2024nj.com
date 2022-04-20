@@ -589,7 +589,12 @@ export default class App extends React.Component {
         surrendered freedom to bid as a third party donee beneficiary. The next
         Republican to tell me "value-added" healthcare insurance expiring
         premium + gov + implausiuble use lease beyond 5 stores and condos
-        strunctures will stop inside-out-of-pocket inflation...
+        strunctures will stop inside-out-of-pocket inflation...{space}
+        <span>
+          <a href="https://qr.ae/pvsL4p">
+            Did the Federal Reserve admit that inflation is caused by debt?
+          </a>
+        </span>
         <br />
         <br />
         Menendez is pro-insurance and invoice.{space}
