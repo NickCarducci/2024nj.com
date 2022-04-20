@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Corporate profit widfall debentures<br/>
         Other side of the coin, (BEA value added share of GDP ascertainable
         damage ?){space}
         <a href="https://census.quora.com">m2 home</a>
