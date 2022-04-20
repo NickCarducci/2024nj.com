@@ -585,6 +585,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Other side of the coin, (BEA value added share of GDP ascertainable
+        damage ?){space}
+        <a href="https://census.quora.com">m2 home</a>
         <h4>
           <a href="https://www.facebook.com/groups/opengovgroup/permalink/3224415224456718/">
             Open Government - By “real” growth, do you mean standardized
@@ -6956,3 +6959,4 @@ export default class App extends React.Component {
     );
   }
 }
+
