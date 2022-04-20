@@ -585,6 +585,8 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Menendez is pro-insurance and invoice.{space}<a href="https://qr.ae/pvsdaH">I will ban them</a>.
+        <br />
         <Cable
           style={{ height: "380px", width: "300px" }}
           onError={handleScollImgError}
@@ -607,7 +609,8 @@ export default class App extends React.Component {
               "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           }}
         />
-        Corporate profit widfall debentures<br/>
+        Corporate profit widfall debentures
+        <br />
         Other side of the coin, (BEA value added share of GDP ascertainable
         damage ?){space}
         <a href="https://census.quora.com">m2 home</a>
