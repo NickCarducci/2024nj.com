@@ -585,6 +585,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          style={{ height: "380px", width: "300px" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://open.spotify.com/embed/track/4P5KoWXOxwuobLmHXLMobV"
+          }
+          float={"right"}
+          title="come as you are"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+          iframe={{
+            frameBorder: "0",
+            allowFullScreen: "",
+            allow:
+              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          }}
+        />
         Corporate profit widfall debentures<br/>
         Other side of the coin, (BEA value added share of GDP ascertainable
         damage ?){space}
@@ -6960,4 +6982,3 @@ export default class App extends React.Component {
     );
   }
 }
-
