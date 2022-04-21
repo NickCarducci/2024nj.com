@@ -585,6 +585,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h4>
+          "smart fight, accross the board, we want improvement," - school is IN!
+        </h4>
+        Michael Bloomberg $15m/schools k-12 for teachers/kids' lost time,
+        internships for our youngsters, creative, thoughtful, aggressive. Keep
+        kids in school 3-7pm to 'ensure they are not in any trouble.'" NY
+        Republicans, 7% Dems, the rest non-voters, I am proud to represent the
+        people that do not like any of you, John Catsimitidis, drop dead!
+        <br />
         I'm trying to buy a home, so I will prevent you from mortgaging on my
         surrendered freedom to bid as a third party donee beneficiary. The next
         Republican to tell me "value-added" healthcare insurance expiring
