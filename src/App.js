@@ -589,9 +589,11 @@ export default class App extends React.Component {
         <br />
         tough guy, get a pat on the head. impovershment all around, less income
         than a third despondency of expenses, AND AFTER, real wages all expense
-        1/hour-GDP/p
-        <br />
-        Third party donee beneficiary. Totally without conflict of interest if
+        1/hour-GDP/p. Third party donee beneficiary, by
+        {space}
+        <b>volume, or abject debit larceny?</b>
+        {space}
+         Totally without conflict of interest if
         held to a new plane? That plane was on its last leg, warranty and
         guarantee is my bid.
         <br />
