@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "Terrorists" label cannot be a pretense to fire and discriminate, taking law into their own hands
         <h4>
           "smart fight, accross the board, we want improvement," - school is IN!
         </h4>
