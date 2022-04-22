@@ -585,7 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Third party donee beneficiary. Totally withouc conflict of interest if
+        Third party donee beneficiary. Totally without conflict of interest if
         held to a new plane? That plane was on its last leg, warranty and
         guarantee is my bid.
         <br />
