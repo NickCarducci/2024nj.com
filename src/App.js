@@ -592,7 +592,8 @@ export default class App extends React.Component {
         Can't have my users promise anothers users' tings.
         <br />
         "Terrorists" label cannot be a pretense to fire and discriminate, taking
-        law into their own hands
+        law into their own hands. 'value-added' expiring premiums save money?
+        rollover, orthopedic surgeon will getcha the schizo-bipolar label
         <h4>
           "smart fight, accross the board, we want improvement," - school is IN!
         </h4>
