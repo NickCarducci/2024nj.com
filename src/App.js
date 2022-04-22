@@ -585,7 +585,14 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        "Terrorists" label cannot be a pretense to fire and discriminate, taking law into their own hands
+        Third party donee beneficiary. Totally withouc conflict of interest if
+        held to a new plane? That plane was on its last leg, warranty and
+        guarantee is my bid.
+        <br />
+        Can't have my users promise anothers users' tings.
+        <br />
+        "Terrorists" label cannot be a pretense to fire and discriminate, taking
+        law into their own hands
         <h4>
           "smart fight, accross the board, we want improvement," - school is IN!
         </h4>
