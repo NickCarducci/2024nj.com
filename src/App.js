@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Use Tranquility as grounds and with reason of efficiency, for hypocrisy and discrimination<br/>
         <Cable
           onError={handleScollImgError}
           img={true}
