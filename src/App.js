@@ -585,10 +585,34 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        1/3 non-vote shows nothing for value-added of "old-school fraudulent
-        votes."{/**Dinesh Desouza */}. Shuffle before extrapolation?<br/>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              :"https://www.dropbox.com/s/9d1eyexy19d5l3h/Screen%20Shot%202022-04-27%20at%2010.23.15%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="v8 engine - https://github.com/NickCarducci/mastercard-backbank"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+          iframe={{
+            frameBorder: "0",
+            allowFullScreen: "",
+            allow:
+              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          }}
+        />
+        1/3 non-vote shows{/**precludes, holds no candle to */} nothing for
+        value-added of "old-school fraudulent votes."{/**Dinesh Desouza */}.
+        Shuffle before extrapolation?{/**name? 2000mules.com */}
         <br />
-        Are you willing to pay for outside-of-pocket, government and structure real GDP/yr?
+        <br />
+        Are you willing to pay for outside-of-pocket, government and structure
+        real GDP/yr?
         <br />
         Transitory won't make unemployment.
         <br />
