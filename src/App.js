@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Are you willing to pay?<br/>
         Transitory won't make unemployment.<br/>
         Money in pockets, people in jobs, resources in order to move forward
         <br />
