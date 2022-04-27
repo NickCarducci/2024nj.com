@@ -585,6 +585,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Money in pockets, people in jobs, resources in order to move forward
+        <br />
+        <br />
+        Why is foreign trade unruly? Every government spending is contracting?
+        Khasicstan China. Retirement reform that Macron wants to bring is not
+        Conservative. Guilty of business old age delinquent 48% and anti-social
+        35%. Guilty of business
+        <br />
+        <br />
         Pioneer legit Greenfield value added tech advancement should DEPRECIATE
         <br />
         tough guy, get a pat on the head. impovershment all around, less income
@@ -593,9 +602,8 @@ export default class App extends React.Component {
         {space}
         <b>volume, or abject debit larceny?</b>
         {space}
-         Totally without conflict of interest if
-        held to a new plane? That plane was on its last leg, warranty and
-        guarantee is my bid.
+        Totally without conflict of interest if held to a new plane? That plane
+        was on its last leg, warranty and guarantee is my bid.
         <br />
         Can't have my users promise anothers users' tings.
         <br />
