@@ -585,8 +585,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Are you willing to pay?<br/>
-        Transitory won't make unemployment.<br/>
+        1/3 non-vote shows nothing for value-added of "old-school fraudulent
+        votes."{/**Dinesh Desouza */}. Shuffle before extrapolation?<br/>
+        <br />
+        Are you willing to pay for outside-of-pocket, government and structure real GDP/yr?
+        <br />
+        Transitory won't make unemployment.
+        <br />
         Money in pockets, people in jobs, resources in order to move forward
         <br />
         <br />
