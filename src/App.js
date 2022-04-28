@@ -585,14 +585,20 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Use Tranquility as grounds and with reason of efficiency, for hypocrisy and discrimination<br/>
+        "If I was in charge, I would have helicopters deporting. If we did that
+        enough, the migrant wave would end." - Rand Paul
+        <br />
+        <br />
+        Use Tranquility as grounds and with reason of efficiency, for hypocrisy
+        and discrimination
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
           src={
             this.state.noyout
               ? ""
-              :"https://www.dropbox.com/s/9d1eyexy19d5l3h/Screen%20Shot%202022-04-27%20at%2010.23.15%20AM.png?raw=1"
+              : "https://www.dropbox.com/s/9d1eyexy19d5l3h/Screen%20Shot%202022-04-27%20at%2010.23.15%20AM.png?raw=1"
           }
           float={"left"}
           title="v8 engine - https://github.com/NickCarducci/mastercard-backbank"
