@@ -585,6 +585,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "DOE 2023 tax-payers will reap the benefits of investments by the
+        treasury, and saves the consumers money, for efficient-energy, reaping
+        the benefits of technological advancement for treasury profit." - Frank Pallone
+        <br />
+        <br />
         "If I was in charge, I would have helicopters deporting. If we did that
         enough, the migrant wave would end." - Rand Paul
         <br />
@@ -603,8 +608,7 @@ export default class App extends React.Component {
         <br />
         “Germans will not stop buying Russian rig-rates out of the kindness of
         their hearts.”
-        <br />
-        “<a href="https://thumbprint.quora.com">We ha</a>..”
+        <br />“<a href="https://thumbprint.quora.com">We ha</a>..”
         <br />
         <br />
         Use Tranquility as grounds and with reason of efficiency, for hypocrisy
