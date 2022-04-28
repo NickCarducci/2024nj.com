@@ -601,6 +601,12 @@ export default class App extends React.Component {
         and unemployment."
         <br />
         <br />
+        “Germans will not stop buying Russian rig-rates out of the kindness of
+        their hearts.”
+        <br />
+        “<a href="https://thumbprint.quora.com">We ha</a>..”
+        <br />
+        <br />
         Use Tranquility as grounds and with reason of efficiency, for hypocrisy
         and discrimination
         <br />
