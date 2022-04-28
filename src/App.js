@@ -587,7 +587,9 @@ export default class App extends React.Component {
         </div>
         "DOE 2023 tax-payers will reap the benefits of investments by the
         treasury, and saves the consumers money, for efficient-energy, reaping
-        the benefits of technological advancement for treasury profit." - Frank Pallone
+        the benefits of technological advancement for treasury profit." - Frank
+        Pallone. Someone's gotta fucking do it,{space}
+        <a href="https://substitutivesupply.quora.com">faggot</a>.
         <br />
         <br />
         "If I was in charge, I would have helicopters deporting. If we did that
