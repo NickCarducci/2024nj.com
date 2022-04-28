@@ -585,6 +585,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Drain the Swamp means medicate the homeless, with a special
+        pharmaceutical for each crime.
+        <br />
+        <br />
+        Non-Voters, still hasn't voted, shuffle before extrapolated call, you
+        gotta want efficiency, not productivity of "value-added" real GDP/yr!
+        JACK DORSEY JAIL FOR LYING TO INVESTORS, disbursements vs fiduciary
+        <br />
+        <br />
         "DOE 2023 tax-payers will reap the benefits of investments by the
         treasury, and saves the consumers money, for efficient-energy, reaping
         the benefits of technological advancement for treasury profit." - Frank
