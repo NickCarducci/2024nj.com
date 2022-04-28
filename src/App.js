@@ -589,6 +589,18 @@ export default class App extends React.Component {
         enough, the migrant wave would end." - Rand Paul
         <br />
         <br />
+        "Inside-out-of-pocket inflation is only is stopped by{space}
+        <a href="https://realecon.quora.com/Why-is-efficiency-necessary-but-not-sufficient-for-economic-growth-1">
+          outside-of-pocket, government, structural
+        </a>
+        {space}and{space}
+        <a href="https://www.quora.com/Aside-from-trade-stimulating-economic-growth-which-is-good-for-employment">
+          nominal
+        </a>
+        {space}international trade recession, inflation leads to high recession
+        and unemployment."
+        <br />
+        <br />
         Use Tranquility as grounds and with reason of efficiency, for hypocrisy
         and discrimination
         <br />
