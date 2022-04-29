@@ -585,9 +585,29 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Nick{space}
+        <a href="https://bacterium.quora.com/">Carducci</a>- BA in Political
+        Science & Economics, Johns Hopkins University (Graduated 2015)
+        <br />
+        What is the main{space}
+        <a href="https://census.quora.com/Whats-wrong-with-the-World-Economic-Forum-1">
+          problem
+        </a>
+        {space}of the USA in your opinion?
+        <br />
+        <a href="https://electiontechnology.quora.com/What-is-the-main-problem-of-the-USA-in-your-opinion-1">
+          GDP is “value-added”
+        </a>
+        <br />
+        <a href="https://phyletic.quora.com/Extortion-Duress-Plea-https-courttechnology-quora-com-Why-should-you-explain-what-you-need-1">
+          Self inflicted known hazards, programmatic convictions' customs
+        </a>
+        <br />
+        <br />
         Malfeasance is complicity for login.gov private api now, convict
         intranet with evidence - a witness is not available to acquit when no
-        evidence is available to guilt - 180–80; how will that help, is it necessary?
+        evidence is available to guilt - 180–80; how will that help, is it
+        necessary?
         <br />
         <br />
         Benedict Arnold would comport turncoats to ward treasury visa fees -
