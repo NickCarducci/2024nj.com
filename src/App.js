@@ -585,6 +585,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        It works and is voluntary, fallow tech, participate in program, parent
+        or grand- has to dual-enroll, A product of a teacher is their income,
+        {space}<a href="https://nickcarducciforsenate.quora.com/">never physical</a>
+        <br />
+        <br />
         Nick{space}
         <a href="https://bacterium.quora.com/">Carducci</a>- BA in Political
         Science & Economics, Johns Hopkins University (Graduated 2015)
