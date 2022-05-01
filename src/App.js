@@ -585,9 +585,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Value-added expense{space}
+        <a href="https://census.quora.com/Why-dont-people-reduce-overpopulation-1">
+          realwages.us
+        </a>
+        , "FCSU + FCSU *1.2 + mortgage living wage ={space}
+        <a href="https://quora.com/nickcarducci">$30k/yr</a>," Chris Hahn
+        <br />
         It works and is voluntary, fallow tech, participate in program, parent
         or grand- has to dual-enroll, A product of a teacher is their income,
-        {space}<a href="https://nickcarducciforsenate.quora.com/">never physical</a>
+        {space}
+        <a href="https://nickcarducciforsenate.quora.com/">never physical</a>
         <br />
         <br />
         Nick{space}
