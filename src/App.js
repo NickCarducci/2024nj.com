@@ -585,6 +585,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Unions income inequality SQUASHED by bond income COMPEL STRIKES BY BUYIN
+        HAZARD - pool-charge third party donee beneficiary
+        <br />
         Value-added expense{space}
         <a href="https://census.quora.com/Why-dont-people-reduce-overpopulation-1">
           realwages.us
@@ -625,7 +628,7 @@ export default class App extends React.Component {
         <br />
         Benedict Arnold would comport turncoats to ward treasury visa fees -
         working age to boot -{space}
-        <a href="https://vaults.biz/immi">illegals are good</a>.
+        <a href="https://parcelpolice.quora.com/">illegals are good</a>.
         <br />
         <br />
         Drain the Swamp means medicate the homeless, with a special
@@ -7146,3 +7149,4 @@ export default class App extends React.Component {
     );
   }
 }
+
