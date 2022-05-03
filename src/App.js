@@ -585,6 +585,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://truncatedproductiontax.quora.com">Yes</a>, yet it can
+        also mean just letting up on quantitatively-targeting the household,
+        corporate, “non-profit,” and{space}
+        <b>checkable-deposit</b>
+        {space}borne coupon-ask, a bit.
+        <br />I hope that{space}
+        <b>time and savings-bonds/-deposits</b>
+        <br />
+        1. aren’t used in loans and
+        <br />
+        2. earn some of $600b/yr+ as one of the banks that lend from **something
+        other than{space}
+        <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
+          deposits
+        </a>
+        .
+        <br />
+        <br />
+        Change in billions of GDP “
+        <a href="https://fred.stlouisfed.org/graph/?g=OQF5">value-adds</a>”
+        <br />
+        <br />
         Unions income inequality SQUASHED by bond income COMPEL STRIKES BY BUYIN
         HAZARD - pool-charge third party donee beneficiary
         <br />
@@ -7149,4 +7171,3 @@ export default class App extends React.Component {
     );
   }
 }
-
