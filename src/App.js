@@ -585,6 +585,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a
+          href="https://www.quora.com/Are-non-voters-against-insurance/answer/Aidan-Griffin-29"
+          style={navitem}
+        >
+          <Cable
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyout
+                ? ""
+                : "https://www.dropbox.com/s/vxgy8nfzjlw71gv/Screen%20Shot%202022-05-04%20at%208.08.16%20AM.png?raw=1"
+            }
+            float={"right"}
+            title="https://www.quora.com/Why-doesnt-the-left-get-upset-with-the-racism-of-Karl-Marx/answer/Aidan-Griffin-29"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+        </a>
         <a href="https://truncatedproductiontax.quora.com">Yes</a>, yet it can
         also mean just letting up on quantitatively-targeting the household,
         corporate, “non-profit,” and{space}
