@@ -585,6 +585,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Why is there a license but for closed source? That is not going to hold
+        long, NJ will just take advantage of this oversight of consumer
+        protections from the juris.
         <h3>
           Collective bargaining requires all-at-once and a-la-carte (not
           insurance pool-charge).
