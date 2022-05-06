@@ -585,12 +585,25 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Checking has tripled in 2 years, with
+        GDP-structures-equipment-durable-goods-food-clothing-housing-utilities
+        decreasing while healthcare remained the same proves PROFITS BY PREMIUM
+        ARE NEGATIVELY CORRELATED WITH INCOME per living
+        <br />
+        <br />
+        Can you guys report on income after expenses inequality results from tax
+        breaks on benefits and real GDP/yr productivity value-adds’ expense?
+        That alone is an ascertainable loss, no reference to another century
+        required.
+        <br />
+        <br />
         Benefits are tax-break? for real GDP outside-of-expense per hour
         “value-added-productivity?” Didn’t get in trouble with the healthcare
         industry? Take people out of streets and enslave them, 19/20 $630b/yr
         bank income lending something other than deposits the "Do Fund do great
-        for society." Pool-charge and outright third party donee beneficiary, not your own bid.
-        Luke Petitgout, I'll rip your troat out. Let people do drugs without your imposition, faggot
+        for society." Pool-charge and outright third party donee beneficiary,
+        not your own bid. Luke Petitgout, I'll rip your throat out. Let people
+        do drugs without your imposition, faggot
         <br />
         <br />
         If it really is a crime && evidence, why is there bond? Per diem
