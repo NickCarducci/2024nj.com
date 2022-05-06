@@ -590,7 +590,7 @@ export default class App extends React.Component {
         industry? Take people out of streets and enslave them, 19/20 $630b/yr
         bank income lending something other than deposits the "Do Fund do great
         for society." Pool-charge and outright third party donee beneficiary, not your own bid.
-        Lou Pedigree, I'll rip your troat out. Let people do drugs without your imposition, faggot
+        Luke Petitgout, I'll rip your troat out. Let people do drugs without your imposition, faggot
         <br />
         <br />
         If it really is a crime && evidence, why is there bond? Per diem
