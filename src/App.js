@@ -585,6 +585,43 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://carfacedimonlikefloyd.quora.com">
+          Where do the banks get the money that they lend to people
+        </a>
+        ?
+        <br />
+        Originally Answered: Where do banks get the money used when making a
+        loan to a borrower?
+        <br />
+        <div
+          style={{
+            padding: "4px 10px",
+            border: "3px solid",
+            marginLeft: "4px",
+            float: "left",
+            borderRadius: "10px",
+            marginRight: "10px"
+          }}
+        >
+          <a href="https://virtualid.quora.com" style={{ fontSize: "30px" }}>
+            Virtual ID
+          </a>
+        </div>
+        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
+          Jakob Malki, Jun 8, 2020: "It used to be that they would give you
+          someone else's money, but when multiple people wanted to take a loan,
+          that did not work out so well. So now they just create money out of
+          nothing and give it to you." According to this businessman, 1/20 of
+          bank income is from that. Most of it is not even third party donee
+          beneficiary in a contract, but outright counterfeit, not even
+          collateralizing -ex renovations!{space}
+          <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
+            NICE HVAC's answer to How much of commercial banks’ income is from
+            loans without deposits and how much is from savings for treasuries
+          </a>
+          ?
+        </div>
+        <br />
         <a
           href="https://www.quora.com/Are-non-voters-against-insurance/answer/Aidan-Griffin-29"
           style={navitem}
@@ -617,7 +654,7 @@ export default class App extends React.Component {
         <br />
         2. earn some of $600b/yr+ as one of the banks that lend from **something
         other than{space}
-        <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
+        <a href="https://federalreserve.quora.com/Why-are-some-economists-saying-that-Feds-acted-too-late-to-increase-interest-rate-Whats-going-to-happen-1">
           deposits
         </a>
         .
