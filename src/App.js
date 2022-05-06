@@ -585,8 +585,20 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        George P. Bush, celebrating Spanish because, "
+        <a href="https://www.quora.com/unanswered/If-illegal-immigrants-are-less-criminal-is-the-legal-immigration-system-in-existence-merely-to-acquire-visa-fees">
+          mother born in Mexico
+        </a>
+        ."
+        <br />
         Norm: "Maniacs against employees, if they dont calm down[ riot for
-        Federalism], they are going to have a war this summer."
+        Federalism], they are going to have a war this summer." Dems racist for
+        programs, Repubs for visa fee (
+        <a href="https://vaults.biz/immi">
+          -1%/p presentation illegal-criminal
+        </a>
+        ). "Legal loopholes for asylum[, note of facism from government]," when
+        dogs to phone and hotel?
         <br />
         <br />
         <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
