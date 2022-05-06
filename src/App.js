@@ -585,6 +585,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Norm: "Maniacs against employees, if they dont calm down[ riot for
+        Federalism], they are going to have a war this summer."
+        <br />
+        <br />
+        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
+          “Benefits lower the tax brackets $8k/year daycare, $4k/year
+          abortions,” - Disney. “It may be another motive to expire premiums
+          just for a tax break.”{space}
+          <a href="https://rolloverinsurance.quora.com/">Rollover Insurance</a>
+        </div>
+        <br />
         <a href="https://carfacedimonlikefloyd.quora.com">
           Where do the banks get the money that they lend to people
         </a>
