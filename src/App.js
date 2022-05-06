@@ -585,6 +585,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+          <h4>
+            <a href="https://saverparty.xyz/global">Compel</a>
+            {space}NATO, (<a href="https://saverparty.xyz/nato">how?</a>)
+          </h4>
+          <br />
         <div
           style={{
             padding: "4px 10px",
@@ -594,7 +599,8 @@ export default class App extends React.Component {
             marginRight: "10px"
           }}
         >
-        Benefits’ tax-“free” expense, or income as a loss, is not a fucking tax-“break.”
+          Benefits’ tax-“free” expense, or income as a loss, is not a fucking
+          tax-“break.”
         </div>
         Checking has tripled in 2 years, with
         GDP-structures-equipment-durable-goods-food-clothing-housing-utilities
