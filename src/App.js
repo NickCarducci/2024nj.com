@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        If it really is a crime && evidence, why is there bond? Per diem incarceration bond loss profit?<br/>
         George P. Bush, celebrating Spanish because, "
         <a href="https://www.quora.com/unanswered/If-illegal-immigrants-are-less-criminal-is-the-legal-immigration-system-in-existence-merely-to-acquire-visa-fees">
           mother born in Mexico
