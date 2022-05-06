@@ -585,7 +585,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        If it really is a crime && evidence, why is there bond? Per diem incarceration bond loss profit?<br/>
+        Benefits are tax-break? for real GDP outside-of-expense per hour
+        “value-added-productivity?” Didn’t get in trouble with the healthcare
+        industry? Take people out of streets and enslave them, 19/20 $630b/yr
+        bank income lending something other than deposits the "Do Fund do great
+        for society." Pool-charge and outright third party donee beneficiary, not your own bid.
+        Lou Pedigree, I'll rip your troat out. Let people do drugs without your imposition, faggot
+        <br />
+        <br />
+        If it really is a crime && evidence, why is there bond? Per diem
+        incarceration bond loss profit?
+        <br />
         George P. Bush, celebrating Spanish because, "
         <a href="https://www.quora.com/unanswered/If-illegal-immigrants-are-less-criminal-is-the-legal-immigration-system-in-existence-merely-to-acquire-visa-fees">
           mother born in Mexico
