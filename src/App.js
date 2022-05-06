@@ -594,7 +594,7 @@ export default class App extends React.Component {
         viral and bacterial pneumonia polyphletic? Can you test for
         PIC-concurrently?
         <br />
-        Causation is proven if presentation matches.
+        Causation is proven if presentation matches (with order).
         <br />
         <br />
         ‘Productivity’ according to WEF, OECD and BEA is expenses per hour, the
