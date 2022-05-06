@@ -585,11 +585,59 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-          <h4>
-            <a href="https://saverparty.xyz/global">Compel</a>
-            {space}NATO, (<a href="https://saverparty.xyz/nato">how?</a>)
-          </h4>
+        <h3>
+          Collective bargaining requires all-at-once and a-la-carte (not
+          insurance pool-charge).
+        </h3>
+        1m covid death 500k/yr+, 1.2/yr+ expected. 'Genocide remains to be seen,
+        if virion requires cell to reproduce, how did the first come about? Is
+        viral and bacterial pneumonia polyphletic? Can you test for
+        PIC-concurrently?
+        <br />
+        Causation is proven if presentation matches.
+        <br />
+        <br />
+        ‘Productivity’ according to WEF, OECD and BEA is expenses per hour, the
+        opposite of ‘efficiency’ if you will. If outsourcing is cheaper, the
+        domestic country is more productive, and the foreign country is more
+        efficient.
+        <br />
+        <br />
+        Outsourcing would cut the hours down for the same expense, thereby
+        increasing productivity - or, remaining the same - if foreign wages are
+        just as efficient and the savings are passed on to consumers. Yet
+        moreso:
+        <br />
+        <br />
+        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
+          Productivity by outsourcing -
           <br />
+          only when the variable-part of input-costs, -labor, is outsourced (&&
+          the foreign country is efficient, implied in your decision), can you
+          charge the customer for more expense, passing YOUR savings on as a
+          producer to the customer as margin lol, making more productive profit!
+          <br />
+          <br />
+          For instance, see our{space}
+          <a href="https://fred.stlouisfed.org/graph/?g=OZWu">
+            pharmaceutical expenditure
+          </a>
+          , albeit that is shared by outside-of-pocket and FCSU staples, so will
+          be seen both in real GDP growth and stagflation, it increases because
+          of insurance presentation, and mean inflation targeting is why it is
+          not growing as fast as it was around the 80’s, ?
+        </div>
+        <br />
+        Labor productivity, then, is if those gains from outsourcing are
+        disbursed as expense-benefits, tax-free income-like, or wages outright,
+        versus kept in the corporate profit account, or just tying off any
+        change in productivity at the wage nor proprietor account at all from
+        outsourcing by keeping margins on revenue-income the same.
+        <h4>
+          <a href="https://saverparty.xyz/global">Compel</a>
+          {space}NATO, (<a href="https://saverparty.xyz/nato">how?</a>)
+        </h4>
+        <br />
         <div
           style={{
             padding: "4px 10px",
@@ -7292,3 +7340,4 @@ export default class App extends React.Component {
     );
   }
 }
+
