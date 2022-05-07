@@ -585,11 +585,18 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        TECH DESTROYER
+        <a href="https://monopolies.quora.com/What-are-the-consequences-of-a-business-having-too-much-power-1">
+          TECH
+        </a>
+        -
+        <a href="https://www.quora.com/Will-technology-get-cheaper-in-the-future/answer/Nick-Carducci">
+          DESTROYER
+        </a>
         <br />
         Saving 500 jobs and expenses vs the earth, and leisure?
         <br />
-        Unions used to corpoate next govrent, unemployment claims, now not
+        <a href="https://rolloverinsurance.quora.com">Unions</a>
+        {space}used to corpoate next govrent, unemployment claims, now not
         pool-charge but compel strikes.{space}
         <a href="https://implausibleuseleases.quora.com">
           implausible use leases
