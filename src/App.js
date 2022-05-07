@@ -585,22 +585,33 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "loans (
+        <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
+          most aren't even checkable, time nor savings deposits
+        </a>
+        ) to puchase (
+        <a href="https://vaults.quora.com/What-is-that-one-tip-that-you-can-give-to-someone-who-is-drowning-in-debt-1">
+          third party donee beneficiary
+        </a>
+        ) a service (trade-secrets) is not our fault (duress)."
+        <br />
         <Cable
-            onError={handleScollImgError}
-            img={true}
-            src={
-              this.state.noyout
-                ? ""
-                : "https://www.dropbox.com/s/xzldp22vmnebk95/washington%20post%20retired%20pop.jpeg?raw=1"
-            }
-            float={"right"}
-            title="washington post retired"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-        "Unknown numbers."<br/>
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/xzldp22vmnebk95/washington%20post%20retired%20pop.jpeg?raw=1"
+          }
+          float={"right"}
+          title="washington post retired"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Unknown numbers."
+        <br />
         Ethics in juris is{space}
         <a href="https://phyletic.quora.com/Why-is-killing-illegal-1?ch=10&oid=354318407">
           efficiency
