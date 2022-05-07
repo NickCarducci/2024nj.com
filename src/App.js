@@ -585,6 +585,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        It would take 44 years if current income is used to pay debt,
+        foreseeably impossible and waranty/third party donee beneficiary
+        oxymoronic NJ Consumer Fraud Act.
+        <br />
+        GDP is integrally population, are you overeating?
+        <br />
         "loans (
         <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
           most aren't even checkable, time nor savings deposits
@@ -631,21 +637,22 @@ export default class App extends React.Component {
           insurance pool-charge).
         </h3>
         <a href="https://www.conference-board.org/blog/labor-markets/Retiree-Growth">
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/kibl7ggx3expk1u/retired.png?raw=1"
-          }
-          float={"right"}
-          title="https://www.conference-board.org/blog/labor-markets/Retiree-Growth"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        /></a>
+          <Cable
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyout
+                ? ""
+                : "https://www.dropbox.com/s/kibl7ggx3expk1u/retired.png?raw=1"
+            }
+            float={"right"}
+            title="https://www.conference-board.org/blog/labor-markets/Retiree-Growth"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+        </a>
         1m covid death 500k/yr+, 1.2/yr+ expected. 'Genocide remains to be seen,
         if virion requires cell to reproduce, how did the first come about? Is
         viral and bacterial pneumonia polyphletic? Can you test for
