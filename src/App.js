@@ -630,6 +630,22 @@ export default class App extends React.Component {
           Collective bargaining requires all-at-once and a-la-carte (not
           insurance pool-charge).
         </h3>
+        <a href="https://www.conference-board.org/blog/labor-markets/Retiree-Growth">
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/kibl7ggx3expk1u/retired.png?raw=1"
+          }
+          float={"right"}
+          title="https://www.conference-board.org/blog/labor-markets/Retiree-Growth"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        /></a>
         1m covid death 500k/yr+, 1.2/yr+ expected. 'Genocide remains to be seen,
         if virion requires cell to reproduce, how did the first come about? Is
         viral and bacterial pneumonia polyphletic? Can you test for
