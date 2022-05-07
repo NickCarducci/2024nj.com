@@ -607,10 +607,13 @@ export default class App extends React.Component {
         third party donee beneficiary.
         <br />
         <br />
-        "Lean government, the law of Supply and Demand, let workers and families
-        do their thing, 'We care about poor, minorities, women's rights,' they
-        care about power, any way we can. ...'If they stop there is a disaster,
-        or if they keep going,'{space}
+        "Lean government, the{space}
+        <a href="https://realecon.quora.com/How-does-the-tight-labor-market-cause-inflation-1">
+          law of Supply and Demand
+        </a>
+        , let workers and families do their thing, 'We care about poor,
+        minorities, women's rights,' they care about power, any way we can.
+        ...'If they stop there is a disaster, or if they keep going,'{space}
         <a href="https://federalreserve.quora.com/Why-are-some-economists-saying-that-Feds-acted-too-late-to-increase-interest-rate-Whats-going-to-happen-1">
           moreso if you are in a ditch, you stop digging
         </a>
@@ -621,11 +624,13 @@ export default class App extends React.Component {
         <h2>REGRESSIVE COP TAX - name/review, open source, and sewage</h2>
         <h4>
           ween your justice off per diem incarceration malfeasance-rackets of
-          match-presentation-defunctionary or before physical-evidence, to review.
+          match-presentation-defunctionary or before physical-evidence, to
+          review.
         </h4>
         Truncated Production Tax reverse amortize (cash/debt)*income third party
         donee beneficiary, doctor slave lest for pool-charge, rollover over
-        their dead bodies... geohash/month + 2 week public review "self"-reporting.
+        their dead bodies... geohash/month + 2 week public review
+        "self"-reporting.
         <br />
         <br />
         <a href="https://www.bmj.com/company/newsroom/nine-out-of-10-abortions-done-before-12-weeks-in-many-high-income-countries/">
