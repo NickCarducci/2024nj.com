@@ -585,6 +585,14 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://www.bmj.com/company/newsroom/nine-out-of-10-abortions-done-before-12-weeks-in-many-high-income-countries/">
+          TEST FATTIES
+        </a>{" "}
+        - think of the great{space}
+        <i>health</i>
+        {space}consequences
+        <br />
+        <br />
         It would take 44 years if current income is used to pay debt,
         foreseeably impossible and waranty/third party donee beneficiary
         oxymoronic NJ Consumer Fraud Act.
