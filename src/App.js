@@ -585,6 +585,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Ethics in juris is{space}
+        <a href="https://phyletic.quora.com/Why-is-killing-illegal-1?ch=10&oid=354318407">
+          efficiency
+        </a>
+        , omnipotently.
+        <br />
         <a href="https://www.quora.com/What-are-the-main-challenges-of-macroeconomics-policy/answer/Nick-Carducci">
           Healthcare - pool-charge
         </a>
