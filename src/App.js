@@ -585,6 +585,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyout
+                ? ""
+                : "https://www.dropbox.com/s/xzldp22vmnebk95/washington%20post%20retired%20pop.jpeg?raw=1"
+            }
+            float={"right"}
+            title="washington post retired"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
         "Unknown numbers."<br/>
         Ethics in juris is{space}
         <a href="https://phyletic.quora.com/Why-is-killing-illegal-1?ch=10&oid=354318407">
