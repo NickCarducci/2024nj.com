@@ -585,10 +585,29 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        TECH DESTROYER
+        <br />
+        Saving 500 jobs and expenses vs the earth, and leisure?
+        <br />
+        Unions used to corpoate next govrent, unemployment claims, now not
+        pool-charge but compel strikes.{space}
+        <a href="https://implausibleuseleases.quora.com">
+          implausible use leases
+        </a>
+        {space}market{space}
+        <a href="https://landlordliquidity.quora.com">liquidity</a>. "He is the
+        one that will be paying the bills debt-service for this," We all pay for
+        third party donee beneficiary.
+        <br />
+        <br />
         "Lean government, the law of Supply and Demand, let workers and families
         do their thing, 'We care about poor, minorities, women's rights,' they
-        care about power, any way we can." If they stop there is a disaster or
-        if they keep going, if you are in a ditch, you stop digging.
+        care about power, any way we can. ...'If they stop there is a disaster,
+        or if they keep going,'{space}
+        <a href="https://federalreserve.quora.com/Why-are-some-economists-saying-that-Feds-acted-too-late-to-increase-interest-rate-Whats-going-to-happen-1">
+          moreso if you are in a ditch, you stop digging
+        </a>
+        .'" - Stephen Moore
         <br />
         <br />
         Truncated Production Tax reverse amortize (cash/debt)*income third party
