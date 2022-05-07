@@ -585,6 +585,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://www.quora.com/What-are-the-main-challenges-of-macroeconomics-policy/answer/Nick-Carducci">
+          Healthcare - pool-charge
+        </a>
+        ? 65% anti-insurance, both parties for, so non-voters must be against.
+        <br />
         Why is there a license but for closed source? That is not going to hold
         long, NJ will just take advantage of this oversight of consumer
         protections from the juris.
@@ -7343,4 +7348,3 @@ export default class App extends React.Component {
     );
   }
 }
-
