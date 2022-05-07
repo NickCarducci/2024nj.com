@@ -616,10 +616,16 @@ export default class App extends React.Component {
         </a>
         .'" - Stephen Moore
         <br />
+        GOVMVP:
         <br />
+        <h2>REGRESSIVE COP TAX - name/review, open source, and sewage</h2>
+        <h4>
+          ween your justice off per diem incarceration malfeasance-rackets of
+          match-presentation-defunctionary or before physical-evidence, to review.
+        </h4>
         Truncated Production Tax reverse amortize (cash/debt)*income third party
         donee beneficiary, doctor slave lest for pool-charge, rollover over
-        their dead bodies
+        their dead bodies... geohash/month + 2 week public review "self"-reporting.
         <br />
         <br />
         <a href="https://www.bmj.com/company/newsroom/nine-out-of-10-abortions-done-before-12-weeks-in-many-high-income-countries/">
