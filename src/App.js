@@ -585,6 +585,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "Lean government, the law of Supply and Demand, let workers and families
+        do their thing, 'We care about poor, minorities, women's rights,' they
+        care about power, any way we can." If they stop there is a disaster or
+        if they keep going, if you are in a ditch, you stop digging.
+        <br />
+        <br />
+        Truncated Production Tax reverse amortize (cash/debt)*income third party
+        donee beneficiary, doctor slave lest for pool-charge, rollover over
+        their dead bodies
+        <br />
+        <br />
         <a href="https://www.bmj.com/company/newsroom/nine-out-of-10-abortions-done-before-12-weeks-in-many-high-income-countries/">
           TEST FATTIES
         </a>{" "}
