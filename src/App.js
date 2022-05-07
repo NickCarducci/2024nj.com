@@ -627,10 +627,11 @@ export default class App extends React.Component {
           match-presentation-defunctionary or before physical-evidence, to
           review.
         </h4>
-        Truncated Production Tax reverse amortize (cash/debt)*income third party
-        donee beneficiary, doctor slave lest for pool-charge, rollover over
-        their dead bodies... geohash/month + 2 week public review
-        "self"-reporting.
+        Truncated Production Tax{space}
+        <a href="https://reverseamortization.quora.com">reverse amortize</a>
+        {space}(cash/debt)*income third party donee beneficiary, doctor slave
+        lest for pool-charge, rollover over their dead bodies... geohash/month +
+        2 week public review "self"-reporting.
         <br />
         <br />
         <a href="https://www.bmj.com/company/newsroom/nine-out-of-10-abortions-done-before-12-weeks-in-many-high-income-countries/">
@@ -709,10 +710,16 @@ export default class App extends React.Component {
             scrollTop={this.state.scrollTop}
           />
         </a>
-        1m covid death 500k/yr+, 1.2/yr+ expected. 'Genocide remains to be seen,
-        if virion requires cell to reproduce, how did the first come about? Is
-        viral and bacterial pneumonia polyphletic? Can you test for
-        PIC-concurrently?
+        1m covid death 500k/yr+,{space}
+        <a href="https://actuaries.quora.com/">1.2m/yr+ expected</a>. 'Genocide
+        remains to be seen, if virion requires cell to reproduce, how did the
+        first come about? Is viral and{space}
+        <a href="https://bacterium.quora.com/">bacterial</a>{space}pneumonia polyphletic? Can you
+        test for PIC-concurrently?{space}
+        <a href="https://phyletic.quora.com/">
+          Wuhan failed to inseminate in lab
+        </a>
+        .
         <br />
         Causation is proven if presentation matches (with order).
         <br />
