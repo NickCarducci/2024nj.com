@@ -586,10 +586,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        1/3 non-voters must be anti-insurance if both parties are for it.<br/>
-        Unions - corporate tax-free expense benefit, ...next govrent<br/>
-        "government needs to help IP/gdpi/pool-charge real GDP."
-        <br/>
+        "
+        <a href="https://crowdfundingfortaxes.quora.com">
+          To bring a business in structures depends on safety, not low taxes
+        </a>
+        ."
+        <br />
+        1/3 non-voters must be anti-insurance if both parties are for it.
+        <br />
+        Unions - corporate tax-free expense benefit, ...next govrent
+        <br />
+        "government needs to help IP/gdpi/pool-charge real GDP." If such
+        value-added is such a target to make for efficiency,{space}
+        <a href="https://landlordliquidity.quora.com">landlord liquidity</a>
+        {space}goes without saying.
+        <br />
         {/*sepsis miscarriage - accident?<br/>*/}
         Let's get y'all started.
         <br />
