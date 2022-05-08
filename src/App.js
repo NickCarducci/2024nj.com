@@ -26,6 +26,7 @@ import GDP from "./gdp";
 import SSA from "./ssa";
 import NetToGDP from "./net";
 import Unable from "./unable";
+import Population from "./population";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -745,6 +746,13 @@ export default class App extends React.Component {
         efficient.
         <br />
         <br />
+        <Population
+          lastWidth={Math.min(600, this.state.lastWidth)}
+          style={{
+            paddingBottom: "15px",
+            backgroundColor: "rgb(190,150,180)"
+          }}
+        />
         Outsourcing would cut the hours down for the same expense, thereby
         increasing productivity - or, remaining the same - if foreign wages are
         just as efficient and the savings are passed on to consumers. Yet
@@ -1245,27 +1253,28 @@ export default class App extends React.Component {
             rollover hysterical expiring-premium-insurance claims
           </a>
           , brown
-          <h3
-            style={{
-              float: "right",
-              backgroundColor: "black",
-              color: "white",
-              borderRadius: "10px",
-              margin: "10px",
-              padding: "10px"
-            }}
-          >
-            messy{space}
-            <a
-              href="https://repealbakeract.quora.com/"
-              style={{ color: "white" }}
-            >
-              hair
-            </a>
-            {space}frivalous malfeasance
-          </h3>
-          -bitch (Yasmeen Memon, MD; Long Branch, NJ)
         </h4>
+        <h3
+          style={{
+            float: "right",
+            backgroundColor: "black",
+            color: "white",
+            borderRadius: "10px",
+            margin: "10px",
+            padding: "10px"
+          }}
+        >
+          messy{space}
+          <a
+            href="https://repealbakeract.quora.com/"
+            style={{ color: "white" }}
+          >
+            hair
+          </a>
+          {space}frivalous malfeasance
+        </h3>
+        -bitch (Yasmeen Memon, MD; Long Branch, NJ)
+        <br />
         is{space}
         <a href="https://www.njconsumeraffairs.gov/statutes/consumer-fraud-act.pdf">
           this
