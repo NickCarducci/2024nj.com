@@ -586,9 +586,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Sound money is not acheived by bitcoin, hundreds of node-trust notwithstanding, when you lend it.<br/>
-        "You are a Conspiracy theorist," translates to "I will not belie myself of your conclusions."
-        <br/>
+        Why would I take a job that I know is{space}
+        <a href="https://2024nj.com/bachelors">not necessary, -abjectly</a>, but
+        as well in{space}
+        <i>job utility</i>, when I venture to abstain, relent and force ban of
+        labor-borne due to laborless.{space}
+        <b>It pays, but</b>
+        {space}that doesn't mean it is a better start to be the plunderer, for
+        {space}
+        <b>it is always a firesale</b>
+        {space}and elastic of equillibrium, real and effectual price, or hour,
+        per living. I am a bartender,{space}
+        <a href="https://github.com/NickCarducci/mastercard-backbank">
+          dealing in cash
+        </a>
+        , or I am nothing.
+        <br />
+        Sound money is not acheived by bitcoin, hundreds of node-trust
+        notwithstanding, when you lend it.
+        <br />
+        "You are a Conspiracy theorist," translates to "I will not belie myself
+        of your conclusions."
+        <br />
         <h2>Big egg - precedence shows and also what but for else</h2>
         “Big on the left or the right, the Supreme Court is not above any other
         branch of government.” - Chris Hahn
