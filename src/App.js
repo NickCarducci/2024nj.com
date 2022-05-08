@@ -623,9 +623,22 @@ export default class App extends React.Component {
         govrent
         <br />
         "government needs to help IP/gdpi/pool-charge real GDP." If such
-        value-added is such a target to make for efficiency,{space}
+        value-added is such a{space}
+        <a href="https://economicwelfare.quora.com/What-is-the-most-confusing-aspect-of-economics-1">
+          target
+        </a>
+        {space}to{space}
+        <a href="https://www.quora.com/What-are-the-main-challenges-of-macroeconomics-policy/answer/Nick-Carducci">
+          make
+        </a>
+        {space}for efficiency,{space}
         <a href="https://landlordliquidity.quora.com">landlord liquidity</a>
-        {space}goes without saying.
+        {space}goes without saying (without housing part of CPI that is real of
+        GDP by{space}
+        <a href="https://census.quora.com/What-does-a-high-CPI-indicate-1">
+          GDP-CPI
+        </a>
+        ).
         <br />
         {/*sepsis miscarriage - accident?<br/>*/}
         Let's get y'all started.
