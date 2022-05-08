@@ -33,7 +33,6 @@ class Population extends React.Component {
       if (!dataDataData[yearData[0]]) dataDataData[yearData[0]] = 0;
       dataDataData[yearData[0]] = dataDataData[yearData[0]] + yearData[1];
     });*/
-    console.log(peopleall);
     var lowPeople = Math.min(...peopleall);
     var lowDate = Math.min(...date);
     var highPeople = Math.max(...peopleall);
@@ -123,6 +122,7 @@ class Population extends React.Component {
           ((y - this.state.lowPeople) / this.state.yAxisPeople) * lineheight
         ]);
       });
+
     return (
       <div
         style={{
@@ -134,18 +134,21 @@ class Population extends React.Component {
       >
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,.3)",
+            backgroundColor: "rgba(255,255,255,.7)",
             padding: "4px 8px",
             position: "absolute",
             right: "0px"
           }}
         >
-          {this.state.lowDate}
-          &nbsp;-&nbsp;
-          {this.state.highDate}
+          <a href="https://www.census.gov/data-tools/demo/idb/#/pop?COUNTRY_YEAR=2022&COUNTRY_YR_ANIM=2015&FIPS_SINGLE=US&menu=popViz&POP_YEARS=1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022&FIPS=US&popPages=BYAGE">
+            {this.state.lowDate}
+            &nbsp;-&nbsp;
+            {this.state.highDate}
+          </a>
         </div>
         <div
           style={{
+            userSelect: "none",
             cursor: "pointer",
             display: "flex",
             backgroundColor: "rgba(255,255,255,.6)",
@@ -153,10 +156,6 @@ class Population extends React.Component {
             position: "relative"
           }}
         >
-          <span>
-            {shortNumber(this.state.lowPeople)}-
-            {shortNumber(this.state.highPeople)}
-          </span>
           <select
             onChange={(e) => {
               this.setState({ chosenAge: e.target.value });
@@ -203,7 +202,36 @@ class Population extends React.Component {
           >
             ^
           </div>
-          {" " + this.state.chosenAge}
+          <div>
+            {" " +
+              (!isNaN(this.state.chosenAge)
+                ? this.state.chosenAge
+                : "total min-max single-year")}
+            <br />
+            <span>
+              {String(this.state.chosenAge) &&
+              this.state.peopleData[this.state.chosenAge]
+                ? shortNumber(
+                    Math.min(
+                      ...this.state.peopleData[this.state.chosenAge].map(
+                        (x) => x[1]
+                      )
+                    )
+                  )
+                : shortNumber(this.state.lowPeople)}
+              -
+              {String(this.state.chosenAge) &&
+              this.state.peopleData[this.state.chosenAge]
+                ? shortNumber(
+                    Math.max(
+                      ...this.state.peopleData[this.state.chosenAge].map(
+                        (x) => x[1]
+                      )
+                    )
+                  )
+                : shortNumber(this.state.highPeople)}
+            </span>
+          </div>
         </div>
         <div style={{ height: lineheight + 20, position: "relative" }}>
           <svg
@@ -250,8 +278,8 @@ class Population extends React.Component {
                           ? 5
                           : 1
                       }
-                      stroke={`rgb(${(age / 100) * 200},50,${
-                        age > 74 ? 0 : (age / 100) * 200 + 20
+                      stroke={`rgb(${(age / 100) * 200},80,${
+                        age > 74 ? 0 : (age / 100) * 200 + 60
                       })`} //"deepskyblue"
                       fill="blue"
                       opacity={
