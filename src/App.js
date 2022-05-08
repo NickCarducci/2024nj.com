@@ -6,8 +6,8 @@ import { UAParser } from "ua-parser-js";
 //import Gist from "react-gist";
 import NYPD from "./nypd";
 import OIL from "./oil";
-import EDU from "./edu";
-import Spanish from "./flu";
+import EDU from "./edu";// Do I have to pay sales tax under $10k per person?
+import Spanish from "./flu";//Can you save 5% on gross tax by taking income as a small business owner before reporting?
 import Vax from "./vax";
 import firebase from "./init-firebase.js";
 import {
@@ -586,7 +586,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        {/*<h2>Big egg</h2>*/}
+      <h2>Big egg - precedence shows and also what but for else</h2>
+        “Big on the left or the right, the Supreme Court is not above any other branch of government.” - Chris Hahn
+        <br/>
+        <br/>
         Stagflation will happen when ban insurance.
         <br />
         <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
@@ -601,14 +604,14 @@ export default class App extends React.Component {
           <br />
           of single-year age significance excess death rate p{"<"}.05
           <br />
-          sure but n=2019-20 Imao
+          sure but n=2019-20 lmao
           <br />
           <br />
           Significant change-rate of less than
           <br />
           even a modicum with n=2. Paint normal chance for
           <br />
-          percentile report n{">"}99
+          percentile report n{">"}99 {/*(variance from mean)*/}
         </div>
         <br />
         Does a{space}
@@ -7572,4 +7575,3 @@ export default class App extends React.Component {
     );
   }
 }
-
