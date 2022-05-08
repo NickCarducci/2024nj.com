@@ -586,6 +586,31 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        {/*<h2>Big egg</h2>*/}
+        Stagflation will happen when ban insurance.
+        <br />
+        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
+          Carducci I predict another pandemic in three years{space}
+          <span role="img" aria-label="crystal ball">
+            🔮
+          </span>
+          <br />
+          75 jumped up, now, 73 covid 2020
+          <br />
+          Please if anyone knows the sample size
+          <br />
+          of single-year age significance excess death rate p{"<"}.05
+          <br />
+          sure but n=2019-20 Imao
+          <br />
+          <br />
+          Significant change-rate of less than
+          <br />
+          even a modicum with n=2. Paint normal chance for
+          <br />
+          percentile report n{">"}99
+        </div>
+        <br />
         Does a{space}
         <a href="https://secretary.quora.com/What-does-a-flight-insurance-cover-1">
           pool
@@ -7547,3 +7572,4 @@ export default class App extends React.Component {
     );
   }
 }
+
