@@ -6,8 +6,8 @@ import { UAParser } from "ua-parser-js";
 //import Gist from "react-gist";
 import NYPD from "./nypd";
 import OIL from "./oil";
-import EDU from "./edu";// Do I have to pay sales tax under $10k per person?
-import Spanish from "./flu";//Can you save 5% on gross tax by taking income as a small business owner before reporting?
+import EDU from "./edu"; // Do I have to pay sales tax under $10k per person?
+import Spanish from "./flu"; //Can you save 5% on gross tax by taking income as a small business owner before reporting?
 import Vax from "./vax";
 import firebase from "./init-firebase.js";
 import {
@@ -586,10 +586,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-      <h2>Big egg - precedence shows and also what but for else</h2>
-        “Big on the left or the right, the Supreme Court is not above any other branch of government.” - Chris Hahn
+        "You are a Conspiracy theorist," translates to "I will not belie myself of your conclusions."
         <br/>
-        <br/>
+        <h2>Big egg - precedence shows and also what but for else</h2>
+        “Big on the left or the right, the Supreme Court is not above any other
+        branch of government.” - Chris Hahn
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/n9uzab1lk3bfrvn/Screen%20Shot%202022-05-08%20at%204.51.13%20PM.png?raw=1"
+          }
+          float={"right"}
+          title=""
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <br />
         Stagflation will happen when ban insurance.
         <br />
         <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
@@ -645,6 +663,7 @@ export default class App extends React.Component {
         ."
         <br />
         1/3 non-voters must be anti-insurance if both parties are for it.
+        {/**swing voter, "most privvy soccer mom, to what costs" */}
         <br />
         Unions -{space}
         <b>corporate/(employer) tax(income)-free expense benefit</b>, ...next
