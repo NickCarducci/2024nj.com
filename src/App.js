@@ -586,9 +586,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        "Conscripts, not-so-well-read Red Army." Bond loss profit banned would probably stop the war for incentive to spend.
-        <br/> 
-        "
+        Does a pool-chargeness of expense-benefits make it third party donee
+        beneficiary bid, by corporate account, or is it the horizontal-nature,
+        like Barclays and Apple. For that matter, a company cannot lend you
+        their expense for that is horizontal and surrendered bid. Tax-free
+        employee-living costs as a business-expense is not. Neither is income as
+        a loss for APV-amortized self-employment tax and max royalties.
+        <br />
+        <br />
+        "Conscripts, not-so-well-read Red Army." Bond loss profit banned would
+        probably stop the war for incentive to spend.
+        <br />"
         <a href="https://crowdfundingfortaxes.quora.com">
           To bring a business in structures depends on safety, not low taxes
         </a>
@@ -771,6 +779,7 @@ export default class App extends React.Component {
             backgroundColor: "rgb(190,150,180)"
           }}
         />
+        {/**yeah you like that don't ya */}
         Outsourcing would cut the hours down for the same expense, thereby
         increasing productivity - or, remaining the same - if foreign wages are
         just as efficient and the savings are passed on to consumers. Yet
