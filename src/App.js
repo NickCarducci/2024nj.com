@@ -591,15 +591,21 @@ export default class App extends React.Component {
           pool
         </a>
         -chargeness of expense-benefits make it third party donee beneficiary
-        bid, by corporate account, or is it{space}<b>the horizontal-nature</b>, like Barclays
-        and Apple. For that matter, a company cannot lend you their expense for
-        that is horizontal and{space}<b>surrendered bid</b>. Tax-free employee-living costs
-        as a{space}
+        bid, by corporate account, or is it{space}
+        <b>
+          <a href="https://realecon.quora.com/Are-Republicans-really-against-providing-healthcare-to-all-Americans-or-is-this-some-kind-of-running-joke-As-a-European-1">
+            the horizontal-nature
+          </a>
+        </b>
+        , like Barclays and Apple. For that matter, a company cannot lend you
+        their expense for that is horizontal and{space}
+        <b>surrendered bid</b>. Tax-free employee-living costs as a{space}
         <a href="https://thumbprint.quora.com/Are-non-voters-against-insurance-1">
           business-expense
         </a>
-        ,{space}<b>is not</b>. Neither is income as a loss for APV-amortized self-employment
-        tax and max royalties.
+        ,{space}
+        <b>is not</b>. Neither is income as a loss for APV-amortized
+        self-employment tax and max royalties.
         <br />
         <br />
         "Conscripts, not-so-well-read Red Army." Bond loss profit banned would
@@ -612,7 +618,9 @@ export default class App extends React.Component {
         <br />
         1/3 non-voters must be anti-insurance if both parties are for it.
         <br />
-        Unions -{space}<b>corporate/(employer) tax(income)-free expense benefit</b>, ...next govrent
+        Unions -{space}
+        <b>corporate/(employer) tax(income)-free expense benefit</b>, ...next
+        govrent
         <br />
         "government needs to help IP/gdpi/pool-charge real GDP." If such
         value-added is such a target to make for efficiency,{space}
