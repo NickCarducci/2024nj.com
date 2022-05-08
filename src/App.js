@@ -586,6 +586,8 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "Conscripts, not-so-well-read Red Army." Bond loss profit banned would probably stop the war for incentive to spend.
+        <br/> 
         "
         <a href="https://crowdfundingfortaxes.quora.com">
           To bring a business in structures depends on safety, not low taxes
