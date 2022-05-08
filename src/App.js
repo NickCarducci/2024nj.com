@@ -586,12 +586,20 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Does a pool-chargeness of expense-benefits make it third party donee
-        beneficiary bid, by corporate account, or is it the horizontal-nature,
-        like Barclays and Apple. For that matter, a company cannot lend you
-        their expense for that is horizontal and surrendered bid. Tax-free
-        employee-living costs as a business-expense is not. Neither is income as
-        a loss for APV-amortized self-employment tax and max royalties.
+        Does a{space}
+        <a href="https://secretary.quora.com/What-does-a-flight-insurance-cover-1">
+          pool
+        </a>
+        -chargeness of expense-benefits make it third party donee beneficiary
+        bid, by corporate account, or is it{space}<b>the horizontal-nature</b>, like Barclays
+        and Apple. For that matter, a company cannot lend you their expense for
+        that is horizontal and{space}<b>surrendered bid</b>. Tax-free employee-living costs
+        as a{space}
+        <a href="https://thumbprint.quora.com/Are-non-voters-against-insurance-1">
+          business-expense
+        </a>
+        ,{space}<b>is not</b>. Neither is income as a loss for APV-amortized self-employment
+        tax and max royalties.
         <br />
         <br />
         "Conscripts, not-so-well-read Red Army." Bond loss profit banned would
@@ -604,7 +612,7 @@ export default class App extends React.Component {
         <br />
         1/3 non-voters must be anti-insurance if both parties are for it.
         <br />
-        Unions - corporate tax-free expense benefit, ...next govrent
+        Unions -{space}<b>corporate/(employer) tax(income)-free expense benefit</b>, ...next govrent
         <br />
         "government needs to help IP/gdpi/pool-charge real GDP." If such
         value-added is such a target to make for efficiency,{space}
