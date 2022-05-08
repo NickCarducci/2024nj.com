@@ -585,11 +585,19 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Let's get y'all started.
+        <br />
         Need 11/12 jury-permit to prove (DSM/courts differing standards of
-        physical evidence, and grounds) mental illness, for what? trespass to
-        nowhere is enough to arrest and house, no need to kickback risperidone eugenics,
-        just like illegal immigration (-1%/p criminal, 86 visa fees and FDA with
-        naming and open source).
+        physical evidence, and grounds) mental illness, for what?{space}
+        <a href="https://https://crowdfundingfortaxes.quora.com/">
+          trespass to nowhere
+        </a>
+        {space}is{space}
+        <b>
+          enough to arrest and house, no need to kickback risperidone eugenics
+        </b>
+        , just like illegal immigration (-1%/p criminal, 86 visa fees and FDA
+        with naming and open source).
         <br />
         <br />
         <a href="https://monopolies.quora.com/What-are-the-consequences-of-a-business-having-too-much-power-1">
@@ -721,8 +729,8 @@ export default class App extends React.Component {
         <a href="https://actuaries.quora.com/">1.2m/yr+ expected</a>. 'Genocide
         remains to be seen, if virion requires cell to reproduce, how did the
         first come about? Is viral and{space}
-        <a href="https://bacterium.quora.com/">bacterial</a>{space}pneumonia polyphletic? Can you
-        test for PIC-concurrently?{space}
+        <a href="https://bacterium.quora.com/">bacterial</a>
+        {space}pneumonia polyphletic? Can you test for PIC-concurrently?{space}
         <a href="https://phyletic.quora.com/">
           Wuhan failed to inseminate in lab
         </a>
