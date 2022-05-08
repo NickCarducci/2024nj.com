@@ -585,6 +585,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Need 11/12 jury-permit to prove (DSM/courts differing standards of
+        physical evidence, and grounds) mental illness, for what? trespass to
+        nowhere is enough to arrest and house, no need to kickback risperidone eugenics,
+        just like illegal immigration (-1%/p criminal, 86 visa fees and FDA with
+        naming and open source).
+        <br />
+        <br />
         <a href="https://monopolies.quora.com/What-are-the-consequences-of-a-business-having-too-much-power-1">
           TECH
         </a>
