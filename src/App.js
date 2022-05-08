@@ -586,6 +586,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Sound money is not acheived by bitcoin, hundreds of node-trust notwithstanding, when you lend it.<br/>
         "You are a Conspiracy theorist," translates to "I will not belie myself of your conclusions."
         <br/>
         <h2>Big egg - precedence shows and also what but for else</h2>
