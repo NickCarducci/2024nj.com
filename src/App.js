@@ -586,6 +586,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        1/3 non-voters must be anti-insurance if both parties are for it.<br/>
+        Unions - corporate tax-free expense benefit, ...next govrent<br/>
+        "government needs to help IP/gdpi/pool-charge real GDP."
+        <br/>
+        {/*sepsis miscarriage - accident?<br/>*/}
         Let's get y'all started.
         <br />
         Need 11/12 jury-permit to prove (DSM/courts differing standards of
