@@ -650,6 +650,10 @@ export default class App extends React.Component {
           even a modicum with n=2. Paint normal chance for
           <br />
           percentile report n{">"}99 {/*(variance from mean)*/}
+          <br />
+          <br />
+          an exponential bump has two rates of change along a time-period-series.
+          how far from real mean?
         </div>
         <br />
         Does a{space}
