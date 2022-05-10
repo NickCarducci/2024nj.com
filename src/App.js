@@ -586,6 +586,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Vertical-expense-line instead of supply-chain? supply is propensities
+        for utility/indifference of substitutive-supply, sorted. We need less
+        laborless-demand, so that it doesn't suffocate labor-borne. Non-voters
+        are anti-insurance, for less real GDP and stagflation thereby, but less
+        pool-charge of third party donee beneficiary. Plants by government
+        subsidies just increases the same inout costs of material and
+        variable-part labor for more money, elastic equillibrium.
+        <br />
+        <br />
         Why would I take a job that I know is{space}
         <a href="https://2024nj.com/bachelors">not necessary, -abjectly</a>, but
         as well in{space}
@@ -652,7 +661,10 @@ export default class App extends React.Component {
           percentile report n{">"}99 {/*(variance from mean)*/}
           <br />
           <br />
-          an exponential bump has two rates of change along a time-period-series.
+          an exponential bump has two rates of change along a
+          time-period-series.
+          <br />
+          <br />
           how far from real mean?
         </div>
         <br />
