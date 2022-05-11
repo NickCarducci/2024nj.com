@@ -586,7 +586,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Is real GDP profit of fixed costs?
+        Why do I have to rebuild 2012 software to take debit without credit?
+        <br />
+        <br />
+        “There needs to be better efforts made to ensure that we have formula,
+        that a recall doesn’t happen because one plant in MI{space}
+        <a href="https://generalmaintenanceunit.quora.com">screws</a>
+        {space}up.”
+        <br />
+        <br />
+        Is real GDP profit of{space}
+        <a href="https://substitutivesupply.quora.com">fixed costs</a>?
         <br />
         Tax breaks are discrimination of sector and organizational structure in
         my book, and you need a reason for a law to pass muster of public
