@@ -586,6 +586,61 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Is real GDP profit of fixed costs?
+        <br />
+        Tax breaks are discrimination of sector and organizational structure in
+        my book, and you need a reason for a law to pass muster of public
+        opinion, not{space}
+        <i>just because that’s how it is done</i>.{space}
+        <b>
+          <a href="https://www.quora.com/Why-isn-t-healthcare-an-income-taxable-fringe-benefit">
+            Why
+          </a>
+        </b>
+        {space}
+        is
+        <br />
+        1. healthcare,
+        <br />
+        2. within perimeter and necessary housing, and
+        <br />
+        3. investment
+        <br />
+        contributions, tax-free? From your “defense” of the law, the reason is
+        trust-building, prima facie.
+        <br />
+        <a href="https://www.quora.com/Can-I-pay-myself-through-a-business-to-not-pay-income-taxes-like-it-is-a-fixed-cost/answer/Nick-Carducci">
+          Nick Carducci's answer to Can I pay myself through a business to not
+          pay income taxes like it is a fixed cost?
+        </a>
+        <br />
+        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/amp/">
+          65%
+        </a>
+        {space}
+        are anti-insurance, and both parties are for, so non-voters must find
+        pool-charges to not be additive to the General{space}
+        <a href="https://economicwelfare.quora.com/)">Welfare</a>
+        {space}
+        but destructive, as well. Third party{space}
+        <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
+          donee
+        </a>
+        {space}
+        beneficiary bid is the grounds I present to not only end invoices but
+        insurance as well. What is an estimate, warranty or guarantee if it is
+        not a consignment of{space}
+        <a href="https://thirdpartybeneficiary.quora.com/">
+          Third party beneficiaries'
+        </a>
+        {space}
+        bids, surrendered.
+        <br />
+        <br />
+        "Polish migs would have stopped us from signing $40b (Ukrainians are
+        rich, they can pay for it)" Con. Steven P Mississipi
+        <br />
+        <br />
         Vertical-expense-line instead of supply-chain? supply is propensities
         for utility/indifference of substitutive-supply, sorted. We need less
         laborless-demand, so that it doesn't suffocate labor-borne. Non-voters
