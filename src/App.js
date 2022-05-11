@@ -586,6 +586,8 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        I’ve got an idea, ‘pay for your own shit!” There’s your fucking idea
+        <br/>
         what, now you are on my side, fucking... faggot?<br/>
         Secure jobs and close borders,” population and crowding out is a fallacy
         because historically without financialization even amongst 3-1%/yr+
