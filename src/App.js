@@ -586,6 +586,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Secure jobs and close borders,” population and crowding out is a fallacy
+        because historically without financialization even amongst 3-1%/yr+
+        population GDP%/yr flat. Closed source pharmacies, animal testing kink
+        and visa fees for more criminal citizen trust-building is self-harm.
+        <br />
+        <br />
         medicatethehomeless.quora.com
         <br />
         "Broad judgement mental and emotional health," standing for justice?
