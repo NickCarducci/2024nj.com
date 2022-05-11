@@ -586,6 +586,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        China efficiency-parity shows their physical consumption verily is more
+        than the U.S. by population and not physical expense per capita.
+        <br />
         Any draft for tax-jurisdiction (by land) is a rogue state.<br/>
         I’ve got an idea, ‘pay for your own shit!” There’s your fucking idea
         <br/>
