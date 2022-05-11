@@ -586,6 +586,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Any draft for tax-jurisdiction (by land) is a rogue state.<br/>
         I’ve got an idea, ‘pay for your own shit!” There’s your fucking idea
         <br/>
         what, now you are on my side, fucking... faggot?<br/>
