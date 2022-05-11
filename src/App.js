@@ -586,6 +586,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        medicatethehomeless.quora.com
+        <br />
+        "Broad judgement mental and emotional health," standing for justice?
+        <br />
         Why do I have to rebuild 2012 software to take debit without credit?
         <br />
         <br />
