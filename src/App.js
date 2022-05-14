@@ -585,16 +585,40 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Innovation should lessen growth per person,{space}
+        <a href="https://maxroyalties.quora.com">max royalties</a>
+        {space}and third party donee beneficiary protections by EULA but not
+        pool-inflation and invoice are a choice.
+        <br />
+        <br />
         In an economy of opportunity, how do we{space}
         <a href="https://www.quora.com/If-inflation-is-too-much-money-chasing-too-few-goods-are-pool-charges-and-employer-contributions-to-employees-costs-of-living/answer/Steven-Blanchard-28">
           maintain price stability
         </a>
-        ? Buying mortgages and treasuries is normal? "The pain is necessary, but
-        the slow-suffering isn't. They acted rapidly in increasing reserves, now
-        they need to be quick in draining reserves so people buy-in to
-        treasuries again without waiting for the fed, on this 5 basis point
-        trek. It is ok to encounter an old fashioned financial crisis to provide
-        unemployment benefits for the job displacement of corrections." Kathy Barnett
+        ? Buying mortgages and treasuries is{space}
+        <a href="https://secretary.quora.com/How-long-will-it-take-to-pay-off-the-US-national-debt-1">
+          normal
+        </a>
+        ? "The pain is necessary, but the slow-suffering isn't. They acted
+        rapidly in increasing reserves,{space}
+        <a href="https://federalreserve.quora.com/What-can-the-government-do-about-inflation-1">
+          now they need to be quick in draining reserves so people buy-in to
+          treasuries
+        </a>
+        {space}again without waiting for the fed, on this 5 basis point trek. It
+        is ok to encounter an{space}
+        <a href="https://www.quora.com/Is-a-market-crash-grounds-for-continuing-unemployment-claims">
+          old fashioned
+        </a>
+        {space}financial crisis to provide{space}
+        <a href="https://www.quora.com/unanswered/Can-financial-advisors-claim-continuing-unemployment-benefits-for-market-crashes-if-they-tell-their-clients-there-is-no-guarantee-of-funds-returned">
+          unemployment benefits
+        </a>
+        {space}for the{space}
+        <a href="https://www.quora.com/Can-I-claim-unemployment-for-technological-displacement?">
+          job displacement of corrections
+        </a>
+        ." Kathy Barnett
         <br />
         <br />
         If you have technology, you will displace people from the labor market.
