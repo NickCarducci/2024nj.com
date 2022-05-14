@@ -586,13 +586,98 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Population growth might match, drug overdose data 2015-
+        <br />
+        <br />
+        you don’t need to medicate the homeless,
+        <br />
+        <br />
+        trespass to nowhere is grounds enough to house the homeless without
+        pharmaceutical kickbacks
+        <br />
+        <br />
+        You assess drug overdose by the border, how?
+        <br />
+        <br />
+        Motor Vehicle ID Near Field Comm bridge tolls, get us off of 40% debt
+        service of third party donee beneficiary and before you ask what that is
+        it is what people who make product have to ensure they do not invoke,
+        say, promising performance of anothers’ money instead of revenue
+        skimping upon vertical industry lines with max royalties, after reverse
+        amortization (cash/debt)*income. I use reasonable doubt to acquit
+        <br />
+        <br />
+        we need to check the parcels for the fentanyl pills 2% of automobiles
+        are. Its a fruitless endeavor unless we cannot
+        <br />
+        Bring pharmacies and cartels together
+        <br />
+        name/review and open source instead of FDA and animal-testing, instead
+        <br />
+        <br />
+        So all the sudden lifting title 42, is a problem more scapegoating like
+        medicating the homeless when trespass to nowhere is housing ground
+        enough, 
+        when citizens are one percent more criminal than illegals?
+        Asylum note from the threatening government. Why won’t Ukraine
+        share-split Hryvnia for their migs? Makes me think it is to scape
+        refugees for non-hispanic whites. when did we go from dogs to phones and
+        a hotel
+        <br />
+        <br />
+        1m/yr+ net 5m/yr+ births 40m 9m on top of 330m illegal, visa fees and
+        closed source pharmacy
+        <br />
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.youtube.com/embed/eXh8iN9xIRI" 
+          }
+          float={"right"}
+          title="Rita Cosby on Mexican cartels, open source and substitutive supply, ending - https://youtu.be/eXh8iN9xIRI"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        Visa or license fee?
+        <br />
+        <br />
+        Single-year-age excess deaths used a sample size of months because that
+        isn’t 100th of population for significance from mean, it’s like a
+        meaningless significance seasonally
+        <br />
+        <br />
+        Would you say “exclusionary trust” to discern between an
+        investment-trust and an illegal-one? Or monopolistic-one, if you do not
+        consider monopolies illegal prima facie.
+        <br />
+        <br />
+        Vitro fallacies, crowding out is a fallacy and they can counteract the
+        laborless-demand of finance. Bring cartels and pharmacies on the same
+        playing field maybe they won’t be so violent. We need a virtual id for
+        anon voting, brokerages, but also convict intranet, name/review and open
+        source instead of FDA, animal testing and prescription costs nor
+        horizontal pool charges. We need to repatriate industry by banning labor
+        less demand in finance, third party donee beneficiary in implausible use
+        lease pool-charge employer contributions tax free under cost of living
+        and invoice, just wait for customers with an industry-vertical revenue
+        skimping
+        <br />
+        <br />
         China efficiency-parity shows their physical consumption verily is more
         than the U.S. by population and not physical expense per capita.
         <br />
-        Any draft for tax-jurisdiction (by land) is a rogue state.<br/>
+        Any draft for tax-jurisdiction (by land) is a rogue state.
+        <br />
         I’ve got an idea, ‘pay for your own shit!” There’s your fucking idea
-        <br/>
-        what, now you are on my side, fucking... faggot?<br/>
+        <br />
+        what, now you are on my side, fucking... faggot?
+        <br />
         Secure jobs and close borders,” population and crowding out is a fallacy
         because historically without financialization even amongst 3-1%/yr+
         population GDP%/yr flat. Closed source pharmacies, animal testing kink
