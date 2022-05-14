@@ -585,6 +585,18 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        In an economy of opportunity, how do we{space}
+        <a href="https://www.quora.com/If-inflation-is-too-much-money-chasing-too-few-goods-are-pool-charges-and-employer-contributions-to-employees-costs-of-living/answer/Steven-Blanchard-28">
+          maintain price stability
+        </a>
+        ? Buying mortgages and treasuries is normal? "The pain is necessary, but
+        the slow-suffering isn't. They acted rapidly in increasing reserves, now
+        they need to be quick in draining reserves so people buy-in to
+        treasuries again without waiting for the fed, on this 5 basis point
+        trek. It is ok to encounter an old fashioned financial crisis to provide
+        unemployment benefits for the job displacement of corrections." Kathy Barnett
+        <br />
+        <br />
         If you have technology, you will displace people from the labor market.
         I'll bill you for the minutes of Netlify build time that are required to
         doxx additional statements. Your{space}
@@ -5791,9 +5803,10 @@ export default class App extends React.Component {
         {space}is unrealized lendings, skew between households not shown
         <br />
         Take in the Ukrainians, instead of our own people, for a ride
-       
-       <h2 style={{float:"right"}}><a href="https://commie.dev">commie.dev</a></h2>
-       <br/>
+        <h2 style={{ float: "right" }}>
+          <a href="https://commie.dev">commie.dev</a>
+        </h2>
+        <br />
         Don’t send an epidemiologist to do a statisticians job. Significance of
         2 has no meaning, need at least 100 or population/100. Asymptomatic has
         proven virion is not only not an non-exclusive byproduct anymore, but it
