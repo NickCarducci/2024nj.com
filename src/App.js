@@ -586,6 +586,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        “GOP influencers seeking power, not representing its people.” Bitch, I
+        am{space}
+        <a href="https://saverparty.xyz">Saver</a>.
+        <br />
         Welfare, closing the beaches,{space}
         <a href="https://www.quora.com/unanswered/Can-financial-advisors-claim-continuing-unemployment-benefits-for-market-crashes-if-they-tell-their-clients-there-is-no-guarantee-of-funds-returned">
           market-value crash displacement
@@ -623,7 +627,7 @@ export default class App extends React.Component {
             racket DUI twice decadal growth
           </a>
         </h2>
-        <br/>
+        <br />
         You assess drug overdose by the border, how?
         <br />
         <br />
