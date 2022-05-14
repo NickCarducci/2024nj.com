@@ -586,6 +586,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Welfare, closing the beaches,{space}
+        <a href="https://www.quora.com/unanswered/Can-financial-advisors-claim-continuing-unemployment-benefits-for-market-crashes-if-they-tell-their-clients-there-is-no-guarantee-of-funds-returned">
+          market-value crash displacement
+        </a>
+        , unemployment benefits by{space}
+        <a href="https://www.quora.com/Can-I-claim-unemployment-for-technological-displacement">
+          tech displacement
+        </a>
+        ? CYA PWC
+        <br />
+        {/**it doesn't matter substitutive supply efficiency, they just don't want to pay */}
         still boycotting credit... 18m consumed,{space}
         <a href="https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WTTIMUS2&f=W">
           3m in and out
