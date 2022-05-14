@@ -1,6 +1,5 @@
 import React from "react";
 import { usmortality, worldwide, yearly, worldwidepopdata } from "./vaxdata";
-import { yearlypop } from "./wagesdata";
 
 export const shortNumber = (scler, notRound) => {
   var newnum = String(Math.round(scler));
