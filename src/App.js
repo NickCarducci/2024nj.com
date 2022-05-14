@@ -586,6 +586,10 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        the O.K. corrale or efficient by eternities.... who would want to go to
+        jail? who would want to kill and what law would bar holds but without
+        efficiency as omnipotent?
+        <br />
         Population growth might match, drug overdose data 2015-
         <br />
         <br />
@@ -617,8 +621,7 @@ export default class App extends React.Component {
         <br />
         So all the sudden lifting title 42, is a problem more scapegoating like
         medicating the homeless when trespass to nowhere is housing ground
-        enough, 
-        when citizens are one percent more criminal than illegals?
+        enough, when citizens are one percent more criminal than illegals?
         Asylum note from the threatening government. Why won’t Ukraine
         share-split Hryvnia for their migs? Makes me think it is to scape
         refugees for non-hispanic whites. when did we go from dogs to phones and
@@ -629,13 +632,23 @@ export default class App extends React.Component {
         closed source pharmacy
         <br />
         <br />
+        Vitro fallacies, crowding out is a fallacy and they can counteract the
+        laborless-demand of finance. Bring cartels and pharmacies on the same
+        playing field maybe they won’t be so violent. We need a virtual id for
+        anon voting, brokerages, but also convict intranet, name/review and open
+        source instead of FDA, animal testing and prescription costs nor
+        horizontal pool charges. We need to repatriate industry by banning labor
+        less demand in finance, third party donee beneficiary in implausible use
+        lease pool-charge employer contributions tax free under cost of living
+        and invoice, just wait for customers with an industry-vertical revenue
+        skimping
+        <br />
+        <br />
         <Cable
           onError={handleScollImgError}
           //img={true}
           src={
-            this.state.noyout
-              ? ""
-              : "https://www.youtube.com/embed/eXh8iN9xIRI" 
+            this.state.noyout ? "" : "https://www.youtube.com/embed/eXh8iN9xIRI"
           }
           float={"right"}
           title="Rita Cosby on Mexican cartels, open source and substitutive supply, ending - https://youtu.be/eXh8iN9xIRI"
