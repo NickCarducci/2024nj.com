@@ -586,6 +586,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        still boycotting credit... 18m consumed,{space}
+        <a href="https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WTTIMUS2&f=W">
+          3m in and out
+        </a>
+        , 830k potential, doubles the price? no
+        <br />
+        <br />
         the O.K. corrale or efficient by eternities.... who would want to go to
         jail? who would want to kill and what law would bar holds but without
         efficiency as omnipotent?
