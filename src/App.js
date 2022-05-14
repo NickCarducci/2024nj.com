@@ -586,6 +586,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "
+        <a href="https://www.quora.com/Are-trade-secrets-property-or-exclusive-answer-trusts/answer/Robert-Charles-Lee">
+          Not enough industry interest
+        </a>
+        ."
+        <br />
+        <br />
         “GOP influencers seeking power, not representing its people.” Bitch, I
         am{space}
         <a href="https://saverparty.xyz">Saver</a>.
