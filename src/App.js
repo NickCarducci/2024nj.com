@@ -586,6 +586,8 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        If you have technology, you will displace people from the labor market.
+        <br/>
         "
         <a href="https://www.quora.com/Are-trade-secrets-property-or-exclusive-answer-trusts/answer/Robert-Charles-Lee">
           Not enough industry interest
