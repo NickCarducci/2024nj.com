@@ -18203,6 +18203,7 @@ class Mortal extends React.Component {
      },{}]
       */
     });
+    const yearlypop = {};
     Object.keys(yearlypop).forEach((year, i) => {
       var yearSet = null;
       Object.keys(usmortality).forEach((y, i) => {
@@ -18767,6 +18768,7 @@ class Mortal extends React.Component {
            },{}]
             */
           });
+          const yearlypop = {};
           Object.keys(yearlypop).forEach((year, i) => {
             var yearSet = null;
             Object.keys(usmortality).forEach((y, i) => {
@@ -21222,3 +21224,4 @@ class Worldwide extends React.Component {
     ? "high"
     : "cohort"}
 </button>*/
+
