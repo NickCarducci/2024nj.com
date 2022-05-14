@@ -628,8 +628,30 @@ export default class App extends React.Component {
         a hotel
         <br />
         <br />
+        Under $10k/customer is gift - after that your lifetime $11.5m exemption
+        tax hits. Just like employers pay for the cost of living of their
+        employees tax free, given it is normal, not extravagant. General
+        Maintenance Unit would help, 11/12 industry-variable permits of minimal
+        viable duress, name/review and open source, no more FDA/ICE!
+        <br />
+        PCE actually includes up to cost of living employee benefits.
+        <br />
+        And you can you pay yourself as a loss through a small business and
+        sales tax only after $10k/customer/yr.
+        <br />
+        'Physical' product activity would be net import purchases minus the
+        deficit.
+        <br />
+        nominal trade is not a national security issue, but FDI and to boot -
+        not because of - Article 1.8 uniform is by method and scope for treasury
+        rents.
+        <br />
+        Marxism and drug gangs, name/review and open source, minimal viable
+        duress.
+        <br />
+        <br />
         1m/yr+ net 5m/yr+ births 40m 9m on top of 330m illegal, visa fees and
-        closed source pharmacy
+        closed source pharmacy.
         <br />
         <br />
         Vitro fallacies, crowding out is a fallacy and they can counteract the
