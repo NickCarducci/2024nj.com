@@ -24,7 +24,6 @@ import {
 import Salaries from "./salaries";
 import GDP from "./gdp";
 import SSA from "./ssa";
-import NetToGDP from "./net";
 import Unable from "./unable";
 import Population from "./population";
 
@@ -5792,13 +5791,9 @@ export default class App extends React.Component {
         {space}is unrealized lendings, skew between households not shown
         <br />
         Take in the Ukrainians, instead of our own people, for a ride
-        <NetToGDP
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
+       
+       <h2 style={{float:"right"}}><a href="https://commie.dev">commie.dev</a></h2>
+       <br/>
         Don’t send an epidemiologist to do a statisticians job. Significance of
         2 has no meaning, need at least 100 or population/100. Asymptomatic has
         proven virion is not only not an non-exclusive byproduct anymore, but it
