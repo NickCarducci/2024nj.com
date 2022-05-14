@@ -590,7 +590,12 @@ export default class App extends React.Component {
         <a href="https://www.quora.com/Are-trade-secrets-property-or-exclusive-answer-trusts/answer/Robert-Charles-Lee">
           Not enough industry interest
         </a>
-        ."
+        ." Real wages only discounts non-employer-contributions. Profits aren't
+        included, and so then neither is inequality after all-expense (
+        <a href="https://secretary.quora.com/How-long-will-it-take-to-pay-off-the-US-national-debt-1">
+          where checkable deposits end up
+        </a>
+        ).
         <br />
         <br />
         “GOP influencers seeking power, not representing its people.” Bitch, I
