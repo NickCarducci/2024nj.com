@@ -636,8 +636,8 @@ export default class App extends React.Component {
         <br />
         PCE actually includes up to cost of living employee benefits.
         <br />
-        And you can you pay yourself as a loss through a small business and
-        sales tax only after $10k/customer/yr.
+        And you can you pay yourself (BARTENDERS) as a loss through a small
+        business and sales tax only after $10k/customer/yr.
         <br />
         'Physical' product activity would be net import purchases minus the
         deficit.
