@@ -593,13 +593,11 @@ export default class App extends React.Component {
           scope
         </a>
         {space}of requirements were ambiguous and third party donee beneficiary
-        invoking, just the same as your reasoning for growth of structures, equipment and intellectual property
-          (claims instead of copyright, that implies claim/person limitation).
+        invoking, just the same as your reasoning for growth of structures,
+        equipment and intellectual property (claims instead of copyright, that
+        implies claim/person limitation).
         <br />
-        <br />
-        If you have technology, you will displace people from the labor market.
-        <br/>
-        "
+        <br />"
         <a href="https://www.quora.com/Are-trade-secrets-property-or-exclusive-answer-trusts/answer/Robert-Charles-Lee">
           Not enough industry interest
         </a>
@@ -733,6 +731,21 @@ export default class App extends React.Component {
           scrollTop={this.state.scrollTop}
         />
         Visa or license fee?
+        <br />
+        <br />
+        "Half the Democrats would be closed to substitutive-supply for
+        Americans.
+        <br />
+        Economic growth, revenue side, for corporate profits,” is what Newt
+        Gingrich cares about,{space}
+        <a href="https://www.quora.com/If-there-is-a-rise-in-demand-and-a-shortage-does-the-demand-curve-shift-or-does-the-supply-curve-shift/answer/Nick-Carducci">
+          totally elastic upwards of equilibrium
+        </a>
+        .
+        <br />
+        <br />
+        “A balanced budget will boost economic growth.” Actually deficit counts
+        towards not physical profit purchase but real GDP
         <br />
         <br />
         Single-year-age excess deaths used a sample size of months because that
