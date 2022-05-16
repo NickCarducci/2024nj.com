@@ -585,6 +585,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h2>Room & Board, duress (legal)</h2>
+        “Nobody called in,” he said. “Nobody called any complaints,” Gramaglia
+        said. The threat was “general” in nature, he said, and not related to
+        race.
+        <br />
+        New York is one of several states that have enacted “red flag” laws in
+        recent years that were intended to try and prevent mass shootings
+        committed by people who show warning signs that they might be a threat
+        to themselves or others.
+        <br />
+        <br />
         Innovation should lessen growth per person,{space}
         <a href="https://maxroyalties.quora.com">max royalties</a>
         {space}and third party donee beneficiary protections by EULA but not
@@ -683,8 +694,8 @@ export default class App extends React.Component {
           article 1.8 uniform{space}
           <a href="https://www.quora.com/Are-guilty-pleas-moot-if-untrue/answer/Anthony-M-Bruce">
             racket DUI twice decadal growth
-          </a>.
-        "I'm protected by FDIC insurance, right?"
+          </a>
+          . "I'm protected by FDIC insurance, right?"
         </h2>
         <br />
         You assess drug overdose by the border, how?
