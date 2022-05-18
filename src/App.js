@@ -587,9 +587,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        individual division of labor and all-at-once+a-la-carte<br/>
+        Income as successful as they should,{space}
+        <a href="https://www.quora.com/How-did-the-rich-survive-the-Great-Depression/answer/Nick-Carducci">
+          wealth disparity
+        </a>
+        {space}as market concentration, expense-benefits under cost of living
+        TAX FREE (service no sales tax, either) .
+        <br />
+        individual division of labor and all-at-once+a-la-carte
+        <br />
         self-employment-benefits for all w2 instead of unionization
-        <br/>
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
