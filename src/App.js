@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        sample size is months? 73 2020 3 years 78
         <h2>Room & Board, duress (legal)</h2>
         “Nobody called in,” he said. “Nobody called any complaints,” Gramaglia
         said. The threat was “general” in nature, he said, and not related to
