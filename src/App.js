@@ -585,11 +585,19 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Asperger syndrome high-level (?edge) autism spectrum?<br/>
-        make people vote by forcing a "no" to reconcile othewise<br/>
-        sample size is months? 73 2020 3 years 78<br/>
-        real GDP/yr is employee-benefits, market crashes/tech displacement for unemployment benefits
-        <h2>Room & Board, duress (legal)</h2>
+        Asperger syndrome high-level (?edge) autism spectrum?
+        <br />
+        make people vote by forcing a "no" to reconcile othewise
+        <br />
+        sample size is months? 73 2020 3 years 78
+        <br />
+        real GDP/yr is employee-benefits,{space}
+        <a href="https://markethistory.quora.com/Have-unemployment-benefits-been-given-for-deflation-1">
+          market crashes/tech displacement for unemployment benefits
+        </a>
+        <h2>
+          Room & Board, duress (legal){/*"90% single/shooting" - M. Goodwin */}
+        </h2>
         “Nobody called in,” he said. “Nobody called any complaints,” Gramaglia
         said. The threat was “general” in nature, he said, and not related to
         race.
