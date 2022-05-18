@@ -209,6 +209,8 @@ export default class App extends React.Component {
           );
         } else if (this.props.pathname === "/disability") {
           window.scroll(0, this.disability.current.offsetTop);
+        } else if (this.props.pathname === "/covid") {
+          window.scroll(0, this.covid.current.offsetTop);
         } else if (this.props.pathname === "/ssa") {
           window.scroll(0, this.ssa.current.offsetTop);
         } else if (["/vote", "/carducci"].includes(this.props.pathname)) {
@@ -585,6 +587,36 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        physical profit = purchases less deficit, employee-benefit pool-charge,
+        net export -{space}
+        <a href="https://saverparty.xyz/global">
+          efficiency parity to import by *GDP/p ratio of domestic/foreign
+        </a>
+        <br />
+        unkempt{space}
+        <a href="https://livetaxfree.quora.com">uniform</a>
+        <br />
+        It is a gift if you keep track of sales.{space}
+        <a href="https://truncatedwholesaletax.quora.com">
+          Truncated Wholesale Tax
+        </a>
+        {space}is therefore implied to me.
+        <br />
+        Certainly - pool-inflation is ascertainably larger than otherwise. All
+        at once and a la carte is how wholesale differs from collections that
+        are flaccid and lose any bargain, as I describe three facets of such in
+        microeconomics in my piece. I use macroeconomic national accounts
+        elsewhere to ascertain damages to the economy by value added as a share
+        of GDP in insurance/employee-benefit heavy areas (healthcare), to which
+        technology should be lessening price, faster than lifetimes grow. I
+        discuss recently the prospect of tax-free self employment accounts for
+        all w2 workers to compete fairly with{space}
+        <a href="https://selfemploymentbenefits.quora.com">
+          exempt in-kind fringe income ({">"}$10k/customer/yr reporting)
+        </a>
+        {space}
+        benefits, lately, to dismay such trust-building.
+        <br />
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -1250,6 +1282,7 @@ export default class App extends React.Component {
         efficient.
         <br />
         <br />
+        <hr ref={this.covid} />
         <Population
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
