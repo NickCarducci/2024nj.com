@@ -587,6 +587,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h1>
+          <a href="https://truncatedwholesaletax.com">
+            Can you pay yourself through a self-employment account as a
+            bartender to not pay income tax before cost-of-living expenses?
+          </a>
+        </h1>
+        <br />
         physical profit = purchases less deficit, employee-benefit pool-charge,
         net export -{space}
         <a href="https://saverparty.xyz/global">
