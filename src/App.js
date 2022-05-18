@@ -585,6 +585,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Asperger syndrome high-level (?edge) autism spectrum?<br/>
         make people vote by forcing a "no" to reconcile othewise<br/>
         sample size is months? 73 2020 3 years 78<br/>
         real GDP/yr is employee-benefits, market crashes/tech displacement for unemployment benefits
