@@ -587,6 +587,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        individual division of labor and all-at-once+a-la-carte<br/>
         self-employment-benefits for all w2 instead of unionization
         <br/>
         <Cable
