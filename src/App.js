@@ -585,6 +585,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/bktdvebnhwsyvsh/Screen%20Shot%202022-05-18%20at%208.58.15%20AM.png?raw=1"
+          }
+          float={"right"}
+          title=""
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h2>
+          <a href="https://www.quora.com/Can-I-claim-unemployment-for-technological-displacement?">
+            OPEN SOURCE
+          </a>
+        </h2>
         non-voters anti-insurance single-edge-turnout (25-44 -5% 2016-19 U.K.
         Brexit, 5%/-5% liberal leavers)
         <br />
@@ -657,7 +677,7 @@ export default class App extends React.Component {
           unemployment benefits
         </a>
         {space}for the{space}
-        <a href="https://www.quora.com/Can-I-claim-unemployment-for-technological-displacement?">
+        <a href="https://www.quora.com/Is-a-market-crash-grounds-for-continuing-unemployment-claims">
           job displacement of corrections
         </a>
         ." Kathy Barnett
