@@ -587,6 +587,26 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        self-employment-benefits for all w2 instead of unionization
+        <br/>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/p2l3xym3brjqph1/Screen%20Shot%202022-05-18%20at%2011.05.09%20AM.png?raw=1"
+          }
+          float={"left"}
+          title="john fetterman union"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "Populist?"
+        <br />
+        <br />
         <a href="https://www.quora.com/Does-price-change-faster-than-hours-worked/answer/Nick-Carducci">
           skillset for a living wage, education is to displace jobs....
         </a>
@@ -636,7 +656,7 @@ export default class App extends React.Component {
               : "https://www.dropbox.com/s/bktdvebnhwsyvsh/Screen%20Shot%202022-05-18%20at%208.58.15%20AM.png?raw=1"
           }
           float={"right"}
-          title=""
+          title="Liz Fosslien (shouted by Prof. Galloway)"
           scrolling={this.state.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
