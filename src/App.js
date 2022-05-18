@@ -587,7 +587,11 @@ export default class App extends React.Component {
         </div>
         Asperger syndrome high-level (?edge) autism spectrum?
         <br />
-        make people vote by forcing a "no" to reconcile othewise
+        make{space}
+        <a href="https://www.quora.com/How-did-the-rich-survive-the-Great-Depression/answer/Nick-Carducci">
+          people
+        </a>
+        {space}vote by forcing a "no" to reconcile othewise
         <br />
         sample size is months? 73 2020 3 years 78
         <br />
