@@ -587,6 +587,9 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://www.quora.com/Does-price-change-faster-than-hours-worked/answer/Nick-Carducci">
+          skillset for a living wage, education is to displace jobs....
+        </a>
         <h1>
           <a href="https://truncatedwholesaletax.com">
             Can you pay yourself through a self-employment account as a
