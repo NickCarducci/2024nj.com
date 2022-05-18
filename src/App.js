@@ -586,7 +586,8 @@ export default class App extends React.Component {
           </div>
         </div>
         make people vote by forcing a "no" to reconcile othewise<br/>
-        sample size is months? 73 2020 3 years 78
+        sample size is months? 73 2020 3 years 78<br/>
+        real GDP/yr is employee-benefits, market crashes/tech displacement for unemployment benefits
         <h2>Room & Board, duress (legal)</h2>
         “Nobody called in,” he said. “Nobody called any complaints,” Gramaglia
         said. The threat was “general” in nature, he said, and not related to
