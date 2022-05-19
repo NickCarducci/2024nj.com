@@ -590,7 +590,12 @@ export default class App extends React.Component {
         "We borrow it like everything else around here, so{space}
         <a href="https://occupyrepublicans.quora.com/Do-tariffs-make-life-better-for-citizens-1">
           we will see inflation
-        </a>[ by not using Hrynvia]." - Rand Paul
+        </a>
+        [ by not using Hrynvia (
+        <a href="https://courttechnology.quora.com/Is-saying-drop-dead-a-threat-1">
+          70% grain equity for
+        </a>
+        {space}the treasury)]." - Rand Paul
         <br />
         Income as successful as they should,{space}
         <a href="https://www.quora.com/How-did-the-rich-survive-the-Great-Depression/answer/Nick-Carducci">
