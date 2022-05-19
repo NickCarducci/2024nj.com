@@ -587,6 +587,28 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        False statement is not a crime, illicit behavior.<br/>
+        Free healthcare, if inflation is a general rise in prices,
+        {space}
+        <b>pool-inflation is certainly larger</b>
+        {space}than{space}
+        <i>individual capacity budget is required for the transaction</i>.
+        <br />
+        <a href="https://www.quora.com/unanswered/Do-we-still-give-unemployment-benefits-for-deflation">
+          Do we still give unemployment benefits for deflation?
+        </a>
+        <br />
+        <br />
+        Inflation's best measure is after income tax?{space}
+        <a href="https://selfemploymentbenefits.quora.com">
+          Self employment benefits
+        </a>
+        {space}
+        for W2 (bartender) reparations as if corporate
+        in-kind-income-tax-employee-benefits, as a normal relevant-tuition and
+        proximity-housing - bullshit all else.
+        <br />
+        <br />
         "We borrow it like everything else around here, so{space}
         <a href="https://occupyrepublicans.quora.com/Do-tariffs-make-life-better-for-citizens-1">
           we will see inflation
