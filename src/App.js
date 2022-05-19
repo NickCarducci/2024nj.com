@@ -587,7 +587,14 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        False statement is not a crime, illicit behavior.<br/>
+        <b>
+          <a href="https://quora.com/unanswered/Why-arent-business-accounts-taxed-as-service-revenue-comes-in">
+            Why aren't business accounts taxed as service revenue comes in?
+          </a>
+        </b>
+        <br />
+        False statement is not a crime, illicit behavior.
+        <br />
         Free healthcare, if inflation is a general rise in prices,
         {space}
         <b>pool-inflation is certainly larger</b>
