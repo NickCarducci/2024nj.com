@@ -587,6 +587,27 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3>
+          <a href="https://www.quora.com/unanswered/Is-the-cost-of-living-a-cost-of-goods-sold">
+            Is the cost of living a cost of goods sold?
+          </a>
+        </h3>
+        “The least taxed service area[ is professional services], in large part
+        because professional groups have powerful lobbying presences, as opposed
+        to personal services[, like{space}
+        <a href="https://scopebook.quora.com/Are-sales-taxes-charged-on-services-1">
+          grooming
+        </a>
+        ].”
+        <br />
+        That is{space}
+        <a href="https://open.spotify.com/track/2LgEYzVoSKp6fsST6trUh2">
+          all you got
+        </a>
+        ?{space}
+        <a href="https://micro-theory.com">I do everything</a>.
+        <br />
+        <br />
         <b>
           <a href="https://quora.com/unanswered/Why-arent-business-accounts-taxed-as-service-revenue-comes-in">
             Why aren't business accounts taxed as service revenue comes in?
