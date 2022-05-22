@@ -276,6 +276,7 @@ export default class App extends React.Component {
     const linkyblinky = {
       color: "deepskyblue"
     };
+    const picstyle = { backgroundColor: "white", width: "20px", boxShadow:null };
     return (
       <div
         style={{
@@ -417,6 +418,24 @@ export default class App extends React.Component {
               fontSize: "10px"
             }}
           >
+            <a href="https://truncatedwholesaletax.com" style={navitem}>
+              <Cable
+                style={picstyle}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/6movjouiifpm79h/waluigi.png?raw=1"
+                }
+                float={"left"}
+                title="https://truncatedwholesaletax.quora.com"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+            </a>
             <div id="work" onClick={goTo} style={navitem}>
               <span
                 role="img"
@@ -432,7 +451,7 @@ export default class App extends React.Component {
             </div>
             <a href="https://realecon.quora.com" style={navitem}>
               <Cable
-                style={{ backgroundColor: "white", width: "20px" }}
+                style={picstyle}
                 onError={handleScollImgError}
                 img={true}
                 src={
@@ -451,7 +470,7 @@ export default class App extends React.Component {
 
             <a href="https://markethistory.quora.com" style={navitem}>
               <Cable
-                style={{ backgroundColor: "white", width: "20px" }}
+                style={picstyle}
                 onError={handleScollImgError}
                 img={true}
                 src={
@@ -469,7 +488,7 @@ export default class App extends React.Component {
             </a>
             <a href="https://electiontechnology.quora.com" style={navitem}>
               <Cable
-                style={{ backgroundColor: "white", width: "20px" }}
+                style={picstyle}
                 onError={handleScollImgError}
                 img={true}
                 src={
@@ -487,7 +506,7 @@ export default class App extends React.Component {
             </a>
             <a href="https://thumbprint.us/voting" style={navitem}>
               <Cable
-                style={{ backgroundColor: "white", width: "20px" }}
+                style={picstyle}
                 onError={handleScollImgError}
                 img={true}
                 src={
@@ -572,7 +591,7 @@ export default class App extends React.Component {
             </a>
             <a href="https://occupywallst.quora.com" style={navitem}>
               <Cable
-                style={{ backgroundColor: "white", width: "20px" }}
+                style={picstyle}
                 onError={handleScollImgError}
                 img={true}
                 src={
@@ -590,6 +609,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        An investigator's nemesis: not wanting.
+        <br />
+        The top are psychopaths," isn't that ableism?
+        <br />
+        People become politicians (pissed or greedy, Reason)
+        <br />
         Frank Gaffney, use req.origin bro
         <h4>“Thank G-d for that,” howdeeho</h4>
         18m barrels a barrels, 800k a day. Gas doubled, and checkable deposits
