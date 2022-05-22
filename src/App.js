@@ -404,6 +404,9 @@ export default class App extends React.Component {
             >
               Occupy
             </a>
+            <a href="https://www.facebook.com/saverparty" style={navitem}>
+              f
+            </a>
           </div>
           <div
             style={{
@@ -587,6 +590,17 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        Frank Gaffney, use req.origin bro
+        <h4>“Thank G-d for that,” howdeeho</h4>
+        18m barrels a barrels, 800k a day. Gas doubled, and checkable deposits
+        tripled, $2t corporates after business taxes $1t ‘non-profit,’ $3t
+        households. “If you know a witness lies once, you can hold all their
+        testimony as not credible.” - Judge Janine, “Biden caused the
+        inflation.” The CDC market crash deflation/tech displacement
+        unemployment benefits this time, counting significance of single-year
+        mortality is impossibly available for a sample size of time-periods
+        going back to 1920. We only have population in 1x5 and death rates at
+        5x5 year to cohort.
         <h3>
           <a href="https://www.quora.com/unanswered/Is-the-cost-of-living-a-cost-of-goods-sold">
             Is the cost of living a cost of goods sold?
