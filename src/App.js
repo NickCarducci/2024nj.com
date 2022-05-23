@@ -26,7 +26,6 @@ import GDP from "./gdp";
 import SSA from "./ssa";
 import Unable from "./unable";
 import Population from "./population";
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -276,7 +275,11 @@ export default class App extends React.Component {
     const linkyblinky = {
       color: "deepskyblue"
     };
-    const picstyle = { backgroundColor: "white", width: "20px", boxShadow:null };
+    const picstyle = {
+      backgroundColor: "white",
+      width: "20px",
+      boxShadow: null
+    };
     return (
       <div
         style={{
@@ -609,6 +612,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        {/**
+        35.4% anti-social can drive an Uber, 48% age-related musculoskeletal 
+        problems are delinquent and had their chance.
+        90's and covid excess by sewage means we need to go back
+        significance of two time-period ...-cohorts
+         */}
         An investigator's nemesis: not wanting.
         <br />
         The top are psychopaths," isn't that ableism?
@@ -7941,6 +7950,30 @@ export default class App extends React.Component {
         Savers (of *currency*, not *money* nor *savings*) from Treasury.
         <br />
         <br />
+        <div style={{ width: "100%", maxWidth: "400px", float: "right" }}>
+          <Cable
+            style={{ width: "100%", maxWidth: "400px" }}
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.noyout
+                ? ""
+                : "https://www.dropbox.com/s/7ew26j9wgf961o0/bill%20maher%20population%20chart.png?raw=1"
+            }
+            //float={"right"}
+            title="https://www.facebook.com/Maher/videos/1211699499642340"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Bill Maher with a nice chart in his
+          absurdist-/comparative-/figurative-/metaphorical-lead into a{space}
+          <a href="https://www.facebook.com/Maher/videos/1211699499642340">
+            story
+          </a>
+        </div>
+        <br />
         Paralytic polio shows same Multiple sclerosis presentation
         <div
           style={{
@@ -7972,12 +8005,17 @@ export default class App extends React.Component {
           pneumonia
         </a>
         <br />
-        Hospitalizations and vaccine per capita correlate positively. Maybe just
-        behavioral correlation, not causation - when using{space}
+        Hospitalizations and vaccine per capita{space}
+        <a href="https://www.quora.com/Do-monkey-pox-and-AIDS-prove-disease-is-borne-by-fecal-bacteria/">
+          correlate
+        </a>
+        positively. Maybe just behavioral (bivariate coincidence) correlation,
+        not causation - when using{space}
         <a href="https://www.cdc.gov/flu/weekly/overview.htm#:~:text=5.%20Mortality%20Surveillance">
           all-cause
         </a>
-        {space}PIC. Alzheimer’s is caused by sewage.
+        {space}PIC. Alzheimer’s is caused by sewage (
+        <a href="https://sewageisamatterofdomesticviolence.quora.com">?</a>).
         <br />
         Financial-userers, lenders landlords and insurers are surrendering
         donee-beneficiaries outright and bid. Leases={">"}$oil
