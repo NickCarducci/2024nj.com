@@ -612,6 +612,18 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h2>
+          <a href="https://nonprofessionalproprietors.quora.com">
+            Non-Professional-Proprietors
+          </a>
+          {space}(1099{space}
+          <a href="https://regcops.quora.com">cops, tax-free</a>)
+        </h2>
+        {/**
+        //https://www.quora.com/unanswered/How-can-Eric-Adams-look-at-the-reasons-of-offenders-without-considering-them
+        //"[Need to look at the reasons of offenders, not just offenders]."
+        //how can you look at offenders without considering them`
+        */}
         <Cable
           onError={handleScollImgError}
           img={true}
@@ -665,8 +677,15 @@ export default class App extends React.Component {
         <br />
         People become politicians (pissed or greedy, Reason)
         <br />
-        Frank Gaffney, use req.origin bro
-        <h4>“Thank G-d for that,” howdeeho</h4>
+        Frank Gaffney, use{space}
+        <a href="http://wabcradio.com/?p=232786">req.origin</a>
+        {space}bro{space}Minute 29"
+        <h4>
+          “Thank G-d for that,”{space}
+          <a href="https://open.spotify.com/track/7mKkJuVgkR72ozJGvJOTHP">
+            howdeeho
+          </a>
+        </h4>
         18m barrels a barrels, 800k a day. Gas doubled, and checkable deposits
         tripled, $2t corporates after business taxes $1t ‘non-profit,’ $3t
         households. “If you know a witness lies once, you can hold all their
