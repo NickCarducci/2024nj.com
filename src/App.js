@@ -677,7 +677,11 @@ export default class App extends React.Component {
         <a href="https://www.quora.com/unanswered/Is-drug-use-a-red-flag">
           psychopaths
         </a>
-        ," isn't that ableism?
+        ," isn't that{space}
+        <a href="https://www.quora.com/unanswered/Is-mental-illness-a-red-flag">
+          ableism
+        </a>
+        ?
         <br />
         People become politicians (pissed or greedy, Reason)
         <br />
