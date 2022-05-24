@@ -612,6 +612,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/6kxlls6rnpsjy04/homicide%20offending%20age%20weed.jpeg?raw=1"
+          }
+          float={"left"}
+          title="bureau.quora.com - homicide offending age to weed use 90's negatively correlated justice statistics"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
         <h1>
           <a href="https://www.quora.com/unanswered/Is-it-the-job-of-the-state-insurance-to-revoke-your-libido-if-the-gender-that-you-are-attracted-to-keeps-rejecting-you-1">
             cut it off - smd
