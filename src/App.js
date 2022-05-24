@@ -673,7 +673,11 @@ export default class App extends React.Component {
          */}
         An investigator's nemesis: not wanting.
         <br />
-        The top are psychopaths," isn't that ableism?
+        The top are{space}
+        <a href="https://www.quora.com/unanswered/Is-drug-use-a-red-flag">
+          psychopaths
+        </a>
+        ," isn't that ableism?
         <br />
         People become politicians (pissed or greedy, Reason)
         <br />
