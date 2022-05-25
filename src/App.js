@@ -612,6 +612,11 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "
+        <a href="https://www.quora.com/Is-value-added-per-capita-inflation">
+          non-candidate single-issue voters
+        </a>
+        "<br />
         <h2>
           <a href="https://nonprofessionalproprietors.quora.com">
             Non-Professional-Proprietors
