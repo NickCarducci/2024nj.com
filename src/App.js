@@ -612,7 +612,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        "
+        <a href="https://census.quora.com/Are-red-flags-prevalent-in-offending-homicides-as-Richard-Blumenthal-claims-1">
+          Are "red flags" prevalent in offending homicides as Richard Blumenthal
+          claims?
+        </a>
+        <br />
+        <a href="https://www.quora.com/unanswered/Is-mental-illness-a-red-flag">
+          Is mental illness a red flag?
+        </a>
+        <br />"
         <a href="https://www.quora.com/Is-value-added-per-capita-inflation">
           non-candidate single-issue voters
         </a>
