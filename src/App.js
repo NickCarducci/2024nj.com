@@ -612,6 +612,23 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://profiteconomics.quora.com/Disproving-Karl-Marx-s-Labor-Surplus-Exploitation-Theory-Here-is-the-second-disproof-According-to-Marx-1867-Vol">
+          18% of swing voters (10%, 3.06m) approve of the U.S.
+        </a>
+        ,{space}
+        <a href="https://insuranceisnotabusiness.quora.com/The-theft-https-thirdpartybeneficiary-quora-com-is-upon-the-compound-Budget-Constraint-https-www-quora-com-to">
+          39% don't vote
+        </a>
+        .
+        <br />
+        <a href="https://www.quora.com/As-a-third-party-candidate-for-U-S-Senator-for-New-Jersey-would-I-be-better-running-against-them-instead-of-getting-them-to-not-run-a-candidate">
+          Third Party Candidacy NJ 2024
+        </a>
+        {space}-{space}
+        <a href="https://occupyrepublicans.quora.com/Why-was-young-voter-turnout-low-in-Brexit-referendum-1">
+          Brexit 
+        </a>{space}(27%{space}<a href="https://nonvoters.quora.com">nonvoter</a>, still)
+        <br />
         <a href="https://census.quora.com/Are-red-flags-prevalent-in-offending-homicides-as-Richard-Blumenthal-claims-1">
           Are "red flags" prevalent in offending homicides as Richard Blumenthal
           claims?
