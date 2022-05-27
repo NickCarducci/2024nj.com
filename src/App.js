@@ -612,6 +612,98 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://www.quora.com/Is-Steve-Kerr-correct-in-claiming-90-of-Americans-want-universal-background-checks-not-just-robbery-homicide-and-voters">
+          Is Steve Kerr correct in claiming 90% of Americans want universal
+          background checks, not just robbery/homicide and voters?
+        </a>
+        <br />
+        <a href="https://bureau.quora.com/Are-individuals-with-mental-illnesses-in-the-U-S-more-likely-to-become-sex-offenders-or-violent-offenders-1">
+          Are individuals with mental illnesses in the U.S. more likely to
+          become sex offenders, or violent offenders?
+        </a>
+        <Cable
+          style={{ width: "100px" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.youtube.com/embed/7Jy9JyrukCY?start=145"
+          }
+          float={"left"}
+          title="https://youtu.be/7Jy9JyrukCY?t=145"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        "A child who doesn't know what is going on, talk, push on and listen.
+        'Let's figure this out, monitor it closely, turn it off. An adult need
+        to helps kids calmly,'
+        <br />
+        <Cable
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/tb0xwekqn4v9nor/economic%20welfare.jpeg?raw=1"
+          }
+          float={"right"}
+          title="economicwelfare.quora.com"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <h3 style={{float:"left"}}>
+          <a href="https://www.quora.com/What-is-the-effect-of-ignoring-the-law-of-economics/answer/Nick-Carducci">
+            What is the effect of ignoring the law of economics?
+          </a>
+        </h3>
+        Prevent empathetically, because (for) children slowly start voting; stop
+        having to intervene during the attacks." Dr Michelle Borba, "despite the
+        sorrow, let them know life will go on,{space}
+        <a href="https://www.quora.com/unanswered/Might-the-economy-be-the-cause-of-Islamic-banking-terrorism">
+          altruistic-suffering
+        </a>
+        {space}like how the Parkland community got out there and mobilized -
+        became active, said, '[it didn't stop the pain, but helped a little
+        bit].' Teddy bear, plant a tree, ritual to cope, strategies to help with
+        {space}
+        <a href="https://www.quora.com/Should-I-tell-my-teacher-I-self-harm-Why/answer/Nick-Carducci">
+          greif
+        </a>
+        ." Violentaization is prevalent in criminological studies, as opposed to
+        a strong integity-of-empathy-people, who stop bullies. ...Issue no knock
+        warrants by{space}
+        <a href="https://www.quora.com/unanswered/Is-it-true-that-killers-write-manifestos-online-social-media-or-end-to-end-server-messages-before-murdering">
+          manifestos
+        </a>
+        .{space}
+        <a href="https://www.quora.com/unanswered/Are-quiet-and-shy-people-killers">
+          People
+        </a>
+        {space}whom keep to themselves.
+        <br />
+        These essential gift reporting exempt{space}
+        <a href="https://www.quora.com/Should-your-political-opponents-be-able-to-say-you-are-a-danger-to-themselves-or-others-while-children-are-being-killed-more-by-their-parents-lately">
+          psychiatrists
+        </a>
+        {space}are not{space}
+        <a href="https://www.quora.com/unanswered/If-most-mass-shooters-have-been-diagnosed-with-medication-before-offending-does-that-mean-it-doesnt-work">
+          professional
+        </a>
+        .
+        <br />
+        Take guns away from sad people? Shoot on sight{space}
+        <a href="https://www.quora.com/Can-I-count-gun-production-to-interpolate-nearly-all-if-not-all-unregistered-guns">
+          unregistered guns
+        </a>
+        ?<br />
+        Mean world syndrome, only see the bad, pessimistic, view, our children
+        deserve better.
+        <br />
         <a href="https://profiteconomics.quora.com/Disproving-Karl-Marx-s-Labor-Surplus-Exploitation-Theory-Here-is-the-second-disproof-According-to-Marx-1867-Vol">
           18% of swing voters (10%, 3.06m) approve of the U.S.
         </a>
@@ -738,7 +830,7 @@ export default class App extends React.Component {
         <h1>Experts are merely artifactual of problems</h1>
         <Cable
           style={{
-            height:"80px"
+            height: "80px"
           }}
           onError={handleScollImgError}
           //img={true}
@@ -752,7 +844,8 @@ export default class App extends React.Component {
           scrolling={this.state.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop} iframe={{
+          scrollTop={this.state.scrollTop}
+          iframe={{
             frameBorder: "0",
             allowFullScreen: "",
             allow:
@@ -830,16 +923,6 @@ export default class App extends React.Component {
           <br />
           <a href="https://www.quora.com/unanswered/How-small-of-a-discount-can-a-sale-be-to-be-considered-a-gift">
             How small of a discount can a sale be to be considered a gift?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-tax-free-employee-benefits-government-nor-investment">
-            Why doesn’t the best measure of inflation count tax-free employee
-            benefits, government, nor investment?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-services-or-fixed-costs">
-            Why doesn’t the best measure of inflation count services or fixed
-            costs?
           </a>
           <br />
           <a href="https://www.quora.com/Are-unemployment-benefits-given-for-anything-but-deflation-displacement">
