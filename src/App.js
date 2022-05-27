@@ -736,6 +736,29 @@ export default class App extends React.Component {
         going back to 1920. We only have population in 1x5 and death rates at
         5x5 year to cohort.
         <h1>Experts are merely artifactual of problems</h1>
+        <Cable
+          style={{
+            height:"80px"
+          }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://open.spotify.com/embed/track/6XyxCBp6x3jvtxXvMN5sAA?utm_source=generator"
+          }
+          float={"right"}
+          title="https://open.spotify.com/track/6XyxCBp6x3jvtxXvMN5sAA"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop} iframe={{
+            frameBorder: "0",
+            allowFullScreen: "",
+            allow:
+              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          }}
+        />
         <h3>
           <a href="https://www.quora.com/unanswered/Is-the-cost-of-living-a-cost-of-goods-sold">
             Is the cost of living a cost of goods sold?
