@@ -806,11 +806,6 @@ export default class App extends React.Component {
             bartender to not pay income tax before cost-of-living expenses?
           </a>
           <br />
-          <a href="https://www.quora.com/Why-are-professional-services-less-so-subject-to-sales-tax">
-            Can you be a sole proprietor and take business-relevant employee
-            benefits?
-          </a>
-          <br />
           <a href="https://www.quora.com/Can-you-be-a-sole-proprietor-and-take-business-relevant-employee-benefits">
             Can you be a sole proprietor and take business-relevant employee
             benefits?
