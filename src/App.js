@@ -626,8 +626,10 @@ export default class App extends React.Component {
         </a>
         {space}-{space}
         <a href="https://occupyrepublicans.quora.com/Why-was-young-voter-turnout-low-in-Brexit-referendum-1">
-          Brexit 
-        </a>{space}(27%{space}<a href="https://nonvoters.quora.com">nonvoter</a>, still)
+          Brexit
+        </a>
+        {space}(27%{space}
+        <a href="https://nonvoters.quora.com">nonvoter</a>, still)
         <br />
         <a href="https://census.quora.com/Are-red-flags-prevalent-in-offending-homicides-as-Richard-Blumenthal-claims-1">
           Are "red flags" prevalent in offending homicides as Richard Blumenthal
@@ -736,6 +738,79 @@ export default class App extends React.Component {
         <h3>
           <a href="https://www.quora.com/unanswered/Is-the-cost-of-living-a-cost-of-goods-sold">
             Is the cost of living a cost of goods sold?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-tax-free-employee-benefits-government-nor-investment">
+            Why doesn’t the best measure of inflation count tax-free employee
+            benefits, government, nor investment?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-services-or-fixed-costs">
+            Why doesn’t the best measure of inflation count services or fixed
+            costs?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Why-can-cops-and-unprofessionals-not-file-as-a-1099-and-spend-tax-free">
+            Why can cops and unprofessionals not file as a 1099 and spend
+            tax-free?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Granting-W2-instead-of-1099-is-better-for-the-economy-why-is-income-tax-exempt-for-expenses-at-all-Is-it-to-compel-spending-Why">
+            Granting W2 instead of 1099 is better for the economy, why is income
+            tax exempt for expenses at all? Is it to compel spending? Why?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Who-is-the-employer-in-regards-to-employee-benefits">
+            Who is "the employer" in regards to employee benefits?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Is-free-speech-protected-in-the-First-Amendment-in-regards-to-501-c-3">
+            Is free speech protected in the First Amendment in regards to 501(c)
+            (3)?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Why-are-there-tax-breaks-for-employers-over-sole-proprietorships">
+            Why are there tax breaks for employers over sole proprietorships?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Why-are-professional-services-less-so-subject-to-sales-tax">
+            Why are professional services less so subject to sales tax?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Can-you-pay-yourself-through-a-self-employment-account-as-a-bartender-to-not-pay-income-tax-before-cost-of-living-expenses">
+            Can you pay yourself through a self-employment account as a
+            bartender to not pay income tax before cost-of-living expenses?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Why-are-professional-services-less-so-subject-to-sales-tax">
+            Can you be a sole proprietor and take business-relevant employee
+            benefits?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Can-you-be-a-sole-proprietor-and-take-business-relevant-employee-benefits">
+            Can you be a sole proprietor and take business-relevant employee
+            benefits?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/If-you-can-gift-essential-services-exempt-from-reporting-like-healthcare-and-education-why-are-they-called-employee-benefits">
+            If you can gift essential services exempt from reporting like
+            healthcare and education, why are they called employee benefits?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/If-professionals-services-can-be-exempt-from-sales-tax-and-income-tax-for-essentials-like-medical-and-tuition-by-filing-as-a-1099-why-cant-essential-workers-and-unprofessionals-Would-most-income-and-sales-tax-not-go">
+            If professionals services can be exempt from sales tax and income
+            tax for essentials like medical and tuition by filing as a 1099, why
+            can't essential workers and unprofessionals? Would most income and
+            sales tax not go uncollected?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/Why-are-non-essential-medical-nor-educational-gifts-only-considered-gifts-when-provided-at-a-discount">
+            Why are non-essential medical nor educational gifts only considered
+            gifts when provided at a discount?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/How-small-of-a-discount-can-a-sale-be-to-be-considered-a-gift">
+            How small of a discount can a sale be to be considered a gift?
           </a>
         </h3>
         “The least taxed service area[ is professional services], in large part
