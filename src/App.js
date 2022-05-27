@@ -735,6 +735,7 @@ export default class App extends React.Component {
         mortality is impossibly available for a sample size of time-periods
         going back to 1920. We only have population in 1x5 and death rates at
         5x5 year to cohort.
+        <h1>Experts are merely artifactual of problems</h1>
         <h3>
           <a href="https://www.quora.com/unanswered/Is-the-cost-of-living-a-cost-of-goods-sold">
             Is the cost of living a cost of goods sold?
@@ -811,6 +812,21 @@ export default class App extends React.Component {
           <br />
           <a href="https://www.quora.com/unanswered/How-small-of-a-discount-can-a-sale-be-to-be-considered-a-gift">
             How small of a discount can a sale be to be considered a gift?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-tax-free-employee-benefits-government-nor-investment">
+            Why doesn’t the best measure of inflation count tax-free employee
+            benefits, government, nor investment?
+          </a>
+          <br />
+          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-services-or-fixed-costs">
+            Why doesn’t the best measure of inflation count services or fixed
+            costs?
+          </a>
+          <br />
+          <a href="https://www.quora.com/Are-unemployment-benefits-given-for-anything-but-deflation-displacement">
+            Are unemployment benefits given for anything but deflation
+            displacement?
           </a>
         </h3>
         “The least taxed service area[ is professional services], in large part
