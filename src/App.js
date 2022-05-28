@@ -612,6 +612,35 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://www.quora.com/unanswered/Is-Larry-Kudlow-correct-in-saying-that-income-without-taxes-fixed-costs-cost-of-goods-sold-government-and-net-nominal-exports-accounts-for-all-inflation">
+          Is Larry Kudlow correct in saying that income without taxes, fixed
+          costs, cost of goods sold, government, and net (nominal) exports
+          accounts for all inflation?
+        </a>
+        <br />
+        {/*Is Larry Kudlow correct in saying the perfect economy have the lightest tax and regulatory but not relent on tarrifs, or that real GDP accounts for all inflation?*/}
+        <a href="https://www.quora.com/How-small-of-a-discount-can-a-sale-have-to-be-considered-a-gift">
+          How small of a discount can a sale have to be considered a gift?
+        </a>
+        <br />
+        <a href="https://www.quora.com/unanswered/Why-would-there-be-employee-benefits-at-all-when-you-can-gift-medical-and-tuition-as-essential-for-whatever-they-charge-not-to-even-enable-a-discount-for-to-be-under-the-annual-customer-bearing-gift-tax-reporting">
+          Why would there be employee-benefits at all when you can gift medical
+          and tuition as essential for whatever they charge, not to even enable
+          a discount for to be under the annual-customer bearing gift tax
+          reporting threshold?
+        </a>
+        <br />
+        <a href="https://www.quora.com/unanswered/Are-employee-benefits-and-gifts-exempt-for-businesses-cost-of-goods-sold-and-after-personal-income-tax-the-same-functionally-given-their-common-medical-and-tuition-expense-classification-requirements">
+          Are employee benefits and gifts exempt for businesses' cost of goods
+          sold and after personal income tax the same, functionally, given their
+          common medical and tuition expense classification requirements?
+        </a>
+        <br />
+        <a href="https://www.quora.com/unanswered/Why-is-real-GDP-income-without-taxes-fixed-costs-cost-of-goods-sold-government-and-net-nominal-exports">
+          Why is real GDP income without taxes, fixed costs, cost of goods sold,
+          government, and net (nominal) exports?
+        </a>
+        <br />
         <a href="https://www.quora.com/Is-Steve-Kerr-correct-in-claiming-90-of-Americans-want-universal-background-checks-not-just-robbery-homicide-and-voters">
           Is Steve Kerr correct in claiming 90% of Americans want universal
           background checks, not just robbery/homicide and voters?
@@ -656,7 +685,7 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        <h3 style={{float:"left"}}>
+        <h3 style={{ float: "left" }}>
           <a href="https://www.quora.com/What-is-the-effect-of-ignoring-the-law-of-economics/answer/Nick-Carducci">
             What is the effect of ignoring the law of economics?
           </a>
