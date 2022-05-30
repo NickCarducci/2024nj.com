@@ -134,6 +134,7 @@ class Population extends React.Component {
       >
         <div
           style={{
+            zIndex: "9",
             backgroundColor: "rgba(255,255,255,.7)",
             padding: "4px 8px",
             position: "absolute",
