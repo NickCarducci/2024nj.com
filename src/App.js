@@ -856,6 +856,11 @@ export default class App extends React.Component {
         mortality is impossibly available for a sample size of time-periods
         going back to 1920. We only have population in 1x5 and death rates at
         5x5 year to cohort.
+        <br />
+        If population level only goes back to{space}
+        <a href="https://humanharvest.info">1937 vitals</a>, and 1905 only has
+        death rates, the 5 year cohorts can hide the end-(and-beginning-heavy
+        lifetime expectation.
         <h1>Experts are merely artifactual of problems</h1>
         <Cable
           style={{
