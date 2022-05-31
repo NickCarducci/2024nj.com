@@ -612,6 +612,16 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3>
+          Truncated Wholesale Tax for diminis sale (inclusive of relative period
+          to cohort - time). Truncate requires a move yet derivative of measure.
+          One-part big item, yet Wholesale does the minimum of existing
+          extensions. However, once
+          <br />
+          Work from home convenient to client, professional sales and essential
+          gift, inventing for competitors’ insurances,
+          <br />I estimate 70% of sales and income tax will go uncollected.
+        </h3>
         <a href="https://www.quora.com/unanswered/Is-Larry-Kudlow-correct-in-saying-that-income-without-taxes-fixed-costs-cost-of-goods-sold-government-and-net-nominal-exports-accounts-for-all-inflation">
           Is Larry Kudlow correct in saying that income without taxes, fixed
           costs, cost of goods sold, government, and net (nominal) exports
