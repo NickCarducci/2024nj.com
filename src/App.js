@@ -612,6 +612,16 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <a href="https://www.quora.com/unanswered/Is-it-the-job-of-the-government-insurance-to-revoke-your-libido-if-the-gender-that-you-are-attracted-to-keeps-rejecting-you">
+          Is it the job of the government insurance to revoke your libido if the
+          gender that you are attracted to keeps rejecting you?
+        </a>
+        <br />
+        $2k/day for Drug Addicts is why Democrats and Republicans wish to have
+        Involuntary Commitment and Real GDP, fixed costs that include labor, of
+        course, with living costs as a cost of goods sold, at the convenience of
+        your clients, wherever you are, replace cop conflict of interest with
+        Truncated Wholesale Tax 2024.
         <h3>
           Truncated Wholesale Tax for diminis sale (inclusive of relative period
           to cohort - time). Truncate requires a move yet derivative of measure.
