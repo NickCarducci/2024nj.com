@@ -626,6 +626,30 @@ export default class App extends React.Component {
         to increase supply, it allows exasperated demand supply is geared from
         another like
         <br />
+        <Cable
+          style={{
+            height: "80px"
+          }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://open.spotify.com/embed/track/7qdgz117gc5StS0u2ViinE"
+          }
+          float={"right"}
+          title="https://open.spotify.com/track/7qdgz117gc5StS0u2ViinE"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+          iframe={{
+            frameBorder: "0",
+            allowFullScreen: "",
+            allow:
+              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          }}
+        />
         https://www.quora.com/unanswered/Do-Republicans-like-real-GDP-employee-benefits-and-government-deficit
         <br />
         pro growth tax reform increase supply and tight money, a productive
@@ -924,7 +948,15 @@ export default class App extends React.Component {
         <a href="https://humanharvest.info">1937 vitals</a>, and 1905 only has
         death rates, the 5 year cohorts can hide the end-(and-beginning-heavy
         lifetime expectation.
-        <h1>Experts are merely artifactual of problems</h1>
+        <h1>
+          <a href="https://www.quora.com/unanswered/Why-is-America-First-against-outsourcing-for-efficiency-and-savings-MAGA-could-even-keep-the-profits-instead-of-passing-the-savings-on-to-consumers">
+            Experts
+          </a>
+          {space}are merely artifactual of{space}
+          <a href="https://www.quora.com/unanswered/Is-the-federal-reserve-charter-system-a-monopoly-in-the-way-that-credit-is-enforced-for-JavaScript-that-could-easily-extend-modules-for-the-browser">
+            problems
+          </a>
+        </h1>
         <Cable
           style={{
             height: "80px"
@@ -8589,3 +8621,4 @@ export default class App extends React.Component {
     );
   }
 }
+
