@@ -612,6 +612,34 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        "Hard on anyone relying on commercial adjustable rate loans.
+        <br />
+        That goes to the bottom line,{space}
+        <a href="https://www.quora.com/How-do-you-evaluate-macroeconomics/answer/Nick-Carducci">
+          marginally
+        </a>
+        {space}and{space}
+        <a href="https://www.quora.com/If-inflation-happens-before-foreclosures-why-dont-economists-blame-private-credit-as-the-disparity-between-debt-from-cash-grows-Why-do-they-only-blame-the-government-for-compounding-prices">
+          wholly
+        </a>
+        , how will it keep deposits in fed, fight inflation, what will that do
+        to increase supply, it allows exasperated demand supply is geared from
+        another like
+        <br />
+        https://www.quora.com/unanswered/Do-Republicans-like-real-GDP-employee-benefits-and-government-deficit
+        <br />
+        pro growth tax reform increase supply and tight money, a productive
+        endeavor that would be good.
+        <br />
+        <a href="https://www.quora.com/unanswered/Are-fixed-cost-structures-included-in-non-essential-medical-and-tuition-employee-benefits-nor-government-deficit-inflation-or-otherwise-spent-profits-from-the-same-inflation-of-the-prior-quarterly-reporting-periods">
+          Are fixed cost structures included in non-essential (medical and
+          tuition employee benefits) nor government deficit inflation, or
+          otherwise spent profits from the same inflation of the prior quarterly
+          reporting periods
+        </a>
+        ?
+        <br />
+        <br />
         tort reform whistleblowers and drug users seek asylum in Portugal with
         me.
         <br />
