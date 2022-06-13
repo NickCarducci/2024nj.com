@@ -1,90 +1,32 @@
 import React from "react";
-import Cable from "./Dropwire";
-import Bachelors from "./bachelors";
 import TwitterTweetEmbed from "./TwitterTweetEmbed";
+import Cable from "./Dropwire";
+import GDP from "./GDP";
 import { UAParser } from "ua-parser-js";
-//import Gist from "react-gist";
-import NYPD from "./nypd";
-import OIL from "./oil";
-import EDU from "./edu"; // Do I have to pay sales tax under $10k per person?
-import Spanish from "./flu"; //Can you save 5% on gross tax by taking income as a small business owner before reporting?
-import Vax from "./vax";
-import firebase from "./init-firebase.js";
-import {
-  getFirestore,
-  collection,
-  doc,
-  onSnapshot,
-  addDoc,
-  getDoc,
-  updateDoc,
-  setDoc,
-  increment
-} from "firebase/firestore";
-import Salaries from "./salaries";
-import GDP from "./gdp";
-import SSA from "./ssa";
-import Unable from "./unable";
-import Population from "./population";
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     var parser = new UAParser();
     const name = parser.getBrowser().name;
     console.log(name);
-    const firestore = getFirestore(firebase);
-    document.cookie = "";
     this.state = {
-      posts: [],
-      trigger: false,
-      firestore,
       browser: name,
       scrollTop: 0,
-      ios: name.includes("Safari")
+      serviceCancelingImages: name.includes("Safari")
     };
+    this.podcast = React.createRef();
+    this.fema = React.createRef();
     for (let i = 0; i < 220; i++) {
       this["scrollImg" + i] = React.createRef();
     }
-    this.work = React.createRef();
-    this.carducci = React.createRef();
-    this.$ = React.createRef();
-    this.edu = React.createRef();
-    this.ssa = React.createRef();
-    this.primary = React.createRef();
-    this.gas = React.createRef();
-    this.depression = React.createRef();
-    this.supply = React.createRef();
-    this.plandemic = React.createRef();
-    this.disability = React.createRef();
-    this.police = React.createRef();
-    this.immi = React.createRef();
   }
   componentDidMount = () => {
-    //document.getElementsByTagName("body")[0].style.margin = 0;
-    document.body.style.margin = 0;
     window.addEventListener("resize", this.refresh);
     window.addEventListener("scroll", this.handleScroll);
     this.refresh(true);
-
-    onSnapshot(doc(this.state.firestore, "countData", "only"), (doc) => {
-      if (doc.exists()) {
-        var foo = doc.data();
-        foo.id = doc.id;
-        this.setState({ signatures: foo.count });
-      }
-    });
-    onSnapshot(collection(this.state.firestore, "posts"), (snapshot) => {
-      snapshot.docs.forEach((doc) => {
-        if (doc.exists()) {
-          var foo = doc.data();
-          foo.id = doc.id;
-          this.setState({ posts: foo.count });
-        }
-      });
-    });
   };
   componentWillUnmount = () => {
-    document.body.style.margin = null;
     clearTimeout(this.scrollTimeout);
     clearTimeout(this.resizeTimer);
     window.removeEventListener("resize", this.refresh);
@@ -110,8 +52,7 @@ export default class App extends React.Component {
     }
   };
   refresh = (first) => {
-    const width =
-      (this.state.ios ? window.screen.availWidth : window.innerWidth) - 20;
+    const width = this.state.ios ? window.screen.availWidth : window.innerWidth;
     if (first || Math.abs(this.state.lastWidth - width) > 0) {
       clearTimeout(this.resizeTimer);
       this.resizeTimer = setTimeout(() => {
@@ -125,8514 +66,6152 @@ export default class App extends React.Component {
       }, 600);
     }
   };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    if (
-      this.state.first !== "" &&
-      this.state.last !== "" &&
-      this.state.address !== "" &&
-      this.state.city !== "" &&
-      this.state.zip !== ""
-    ) {
-      /*console.log("do");
-      firebase
-        .firestore()
-        .collection("signatures")
-        .where("first", "==", this.state.first)
-        .where("middle", "==", this.state.middle)
-        .where("last", "==", this.state.last)
-        .where("address", "==", this.state.address)
-        .where("city", "==", this.state.city)
-        .where("zip", "==", this.state.zip)
-        .get()
-        .then((doc) => {
-          if (doc.exists) {
-            window.alert("you've signed! 🎉");
-          } else {*/
-
-      addDoc(collection(getFirestore(firebase), "signatures"), {
-        first: this.state.first,
-        middle: this.state.middle,
-        last: this.state.last,
-        address: this.state.address,
-        city: this.state.city,
-        zip: this.state.zip
-      }).then(() => {
-        this.setState({ finished: true });
-        const counts = collection(getFirestore(firebase), "countData");
-
-        getDoc(doc(counts, "only"))
-          .then((dc) => {
-            if (dc.exists()) {
-              updateDoc(doc(counts, "only"), {
-                count: increment(1)
-              });
-            } else {
-              setDoc(doc(counts, "only"), {
-                count: increment(1)
-              });
-            }
-          })
-          .then(() => {
-            window.alert("you've signed! 🎉");
-            this.setState({ finished: true });
-          })
-          .catch((err) => {
-            console.log(err.message);
-            this.setState({ finished: true });
-          });
-      });
-    } else
-      return window.alert(
-        "please complete required fields, all except middle name"
-      );
-  };
   componentDidUpdate = (prevProps) => {
     if (this.props.pathname !== prevProps.pathname) {
-      clearTimeout(this.check);
-      const check = () => {
-        if (this.props.pathname !== "/") {
-          this.setState({ trigger: true });
+      if (this.props.pathname === "/") {
+        this.setState({ journal: true });
+      } else if (this.props.pathname === "/fema") {
+        window.scroll(0, this.fema.current.offsetTop);
+      } else if (this.props.pathname.startsWith("/p/")) {
+        if (this.props.pathname === "/p/the-reason-for-microeconomics") {
+          window.scroll(0, this.podcast.current.offsetTop);
+        } else if (this.props.pathname === "/p/intro") {
+          window.scroll(0, this.podcast.current.offsetTop);
         }
-        if (this.props.pathname === "/work") {
-          window.scroll(0, this.work.current.offsetTop);
-        } else if (this.props.pathname === "/edu") {
-          window.scroll(0, this.edu.current.offsetTop);
-        } else if (["/$", "/bachelors"].includes(this.props.pathname)) {
-          window.scroll(0, this.$.current.offsetTop);
-        } else if (
-          ["/phlebotomists", "/Phlebotomists"].includes(this.props.pathname)
-        ) {
-          this.setState({ suggestBachelor: "Phlebotomists" }, () =>
-            window.scroll(0, this.$.current.offsetTop)
-          );
-        } else if (this.props.pathname === "/disability") {
-          window.scroll(0, this.disability.current.offsetTop);
-        } else if (this.props.pathname === "/covid") {
-          window.scroll(0, this.covid.current.offsetTop);
-        } else if (this.props.pathname === "/ssa") {
-          window.scroll(0, this.ssa.current.offsetTop);
-        } else if (["/vote", "/carducci"].includes(this.props.pathname)) {
-          window.scroll(0, this.carducci.current.offsetTop);
-        } else if (["/supply"].includes(this.props.pathname)) {
-          window.scroll(0, this.supply.current.offsetTop);
-        } else if (this.props.pathname === "/depression") {
-          window.scroll(0, this.depression.current.offsetTop);
-        } else if (["/gas", "/oil"].includes(this.props.pathname)) {
-          window.scroll(0, this.gas.current.offsetTop);
-        } else if (["/plandemic"].includes(this.props.pathname)) {
-          window.scroll(0, this.plandemic.current.offsetTop);
-        } else if (["/nypd", "/police"].includes(this.props.pathname)) {
-          window.scroll(0, this.police.current.offsetTop);
-        } else if (["/immi", "/immigration"].includes(this.props.pathname)) {
-          window.scroll(0, this.immi.current.offsetTop);
-        }
-      };
-      check();
-      this.check = setTimeout(check, 4000);
+      }
     }
-  }; //elated bizarre messy hair 1/hour-GDP/p
+  };
   render() {
-    const { posts } = this.state;
     const handleScollImgError = (e) => {
       if (e.message) {
         console.log(e.message);
         this.setState({ serviceCancelingImages: true });
       }
     };
-    let arrayOfnumbers = 0;
+    let arrayOfnumbers = [0];
     const scrollnum = () => {
-      arrayOfnumbers = arrayOfnumbers + 1; //arrayOfnumbers[arrayOfnumbers.length - 1] + 1;
-      //arrayOfnumbers.push(num);
-      //console.log(arrayOfnumbers)
-      return arrayOfnumbers;
+      const num = arrayOfnumbers[arrayOfnumbers.length - 1] + 1;
+      arrayOfnumbers.push(num);
+      return num;
     };
     const space = " ";
-    /*const scrollPath = (scrollPath) =>
-      [this.state.hoverPath, this.state.scrollPath].includes(scrollPath)
-        ? "2px solid"
-        : "0px solid";
-    const hoverpathe = (ev) =>
-      ev.target &&
-      ev.target.href &&
-      this.setState({
-        hoverPath: ev.target.href.split(`${window.location.origin}/`)[1]
-      });*/
-    const navitem = {
-      fontSize:
-        this.state.width < 300
-          ? "10px"
-          : this.state.width < 400
-          ? "10px"
-          : "14px",
-      width: "max-content",
-      cursor: "pointer",
-      padding: "4px 10px",
-      color: "white"
-    };
-    const goTo = (path) =>
-      (window.location.href = `https://${window.location.hostname}/${path.target.id}`);
-    const linkyblinky = {
-      color: "deepskyblue"
-    };
-    const picstyle = {
-      backgroundColor: "white",
-      width: "20px",
-      boxShadow: null
-    };
     return (
       <div
         style={{
-          width: "calc(100% - 40px)",
-          margin: "10px",
           overflow: "hidden",
-          fontFamily: "arial, sans serif",
-          wordBreak: "break-word",
-          textAlign: "left",
-          maxWidth: "600px"
+          width: "100%",
+          maxWidth: "600px",
+          fontFamily: "sans-serif",
+          textAlign: "center"
         }}
       >
         <div
-          id="carducci"
-          onClick={goTo}
+          onClick={(e) => this.setState({ journal: !this.state.journal })}
           style={{
-            color: "white",
-            textAlign: "center",
-            borderRadius: "30px",
+            transition: `${this.state.journal ? 0.5 : 0.2}s ease-in`,
+            border: "1px solid",
+            borderRadius: "15px",
+            padding: "10px",
+            margin: "10px",
+            backgroundColor: "white",
+            display: "flex",
             position: "fixed",
-            bottom: "10px",
-            right: "20px",
-            width: "36px",
-            padding: "10px 0px",
-            backgroundColor: "green",
-            transform: "scale(-1,1)"
+            width: "calc(100% - 42px)",
+            fontFamily: "sans-serif",
+            justifyContent: this.state.scrollTop === 0 ? "center" : "flex-end"
           }}
         >
-          &#9998;
-        </div>
-        {/*<div
-          onClick={() => {
-            window.scroll(0, 100);
-            this.setState({ trigger: true });
-          }}
-          style={{
-            display: this.state.trigger ? "none" : "block",
-            position: "absolute",
-            height: document.documentElement.scrollHeight,
-            width: "calc(100% - 40px)",
-            backgroundColor: "rgba(20,20,20,.5)"
-          }}
-        />*/}
-        <div style={{ overflowX: "auto", overflowY: "hidden" }}>
-          <div
-            style={{
-              display: "flex",
-              backgroundColor: "green"
-            }}
-          >
-            <span
-              id="disability"
-              onClick={goTo}
-              style={navitem}
-              role="img"
-              aria-label="wheelchair"
-            >
-              ♿
-            </span>
-            <div id="depression" onClick={goTo} style={navitem}>
-              Depression
-            </div>
-            <div id="ssa" onClick={goTo} style={navitem}>
-              SSA
-            </div>
-            <div id="supply" onClick={goTo} style={navitem}>
-              S&D
-            </div>
-            <span
-              onClick={() =>
-                this.setState(
-                  {
-                    opt:
-                      this.state.opt === 1 ? true : this.state.opt ? false : 1
-                  },
-                  () =>
-                    this.state.width < 400 &&
-                    window.alert(
-                      this.state.opt === 1
-                        ? `“Not enough growth (https://www.bls.gov/osmr/research-papers/2017/st170010.htm), 
-                        too much (https://qr.ae/pvKt09) Stimulus." Larry Kudlow`
-                        : this.state.opt
-                        ? ` Prosperity! -science/skew: import Brazilian (https://qr.ae/pvKyC4) Real! Fine loser
-                  judges. Torttech programmatic - immediate acquittal`
-                        : `"I'm going to invoke so much (https://qr.ae/pvKRD1)
-                  duress on my (https://qr.ae/pvKRxY) exclusive answers." Naming and open source - 
-                  acquittal bond loss profit per diem`
-                    )
-                )
-              }
-            >
-              <Cable
-                style={{
-                  ...navitem,
-                  backgroundColor: "green",
-                  width: "8px",
-                  height: "13px"
-                }}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/zqtdliklfpau6si/nj%20white.png?raw=1"
-                }
-                float={"left"}
-                title="NJ png"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </span>
-            <div id="plandemic" onClick={goTo} style={navitem}>
-              Plandemic
-            </div>
-            <a href="https://commie.dev" style={navitem}>
-              commie.dev
-            </a>
-            <a href="https://qr.ae/pvy3yw" style={navitem}>
-              Fed Res
-            </a>
-            <a
-              href="https://occupywall.us"
-              style={{ ...navitem, backgroundColor: "black", color: "white" }}
-            >
-              Occupy
-            </a>
-            <a href="https://www.facebook.com/saverparty" style={navitem}>
-              f
-            </a>
-          </div>
-          <div
-            style={{
-              height: "30px",
-              display: "flex",
-              alignItems: "center",
-              padding: "4px 10px",
-              fontSize: "10px"
-            }}
-          >
-            <a href="https://truncatedwholesaletax.com" style={navitem}>
-              <Cable
-                style={picstyle}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/6movjouiifpm79h/waluigi.png?raw=1"
-                }
-                float={"left"}
-                title="https://truncatedwholesaletax.quora.com"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-            <div id="work" onClick={goTo} style={navitem}>
-              <span
-                role="img"
-                aria-label="construction-tan"
-                style={
-                  !this.state.ios
-                    ? {}
-                    : { backgroundColor: "black", color: "white" }
-                }
-              >
-                👷🏽‍♂️
-              </span>
-            </div>
-            <a href="https://realecon.quora.com" style={navitem}>
-              <Cable
-                style={picstyle}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/3tihiodmcmspwnc/realecon.png?raw=1"
-                }
-                float={"left"}
-                title="https://realecon.quora.com"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-
-            <a href="https://markethistory.quora.com" style={navitem}>
-              <Cable
-                style={picstyle}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/87fwrqaht8znlhu/markethistory%20%283%29.png?raw=1"
-                }
-                float={"left"}
-                title="https://markethistory.quora.com"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-            <a href="https://electiontechnology.quora.com" style={navitem}>
-              <Cable
-                style={picstyle}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/zmlgzjiign754i1/electiontechnology%20%281%29.png?raw=1"
-                }
-                float={"left"}
-                title="https://electiontechnology.quora.com"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-            <a href="https://thumbprint.us/voting" style={navitem}>
-              <Cable
-                style={picstyle}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/9oci4efa4zsh90q/Thumbprint_logo.png?raw=1"
-                }
-                float={"left"}
-                title="https://thumbprint.us/voting"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-            <a href="https://saverparty.xyz" style={navitem}>
-              <span role="img" aria-label="squirrel">
-                🐿
-              </span>
-            </a>
-            {this.state.width < 400 ? null : this.state.opt === 1 ? (
-              <span>
-                “Not enough{space}
-                <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
-                  growth
-                </a>
-                , too much{space}
-                <a href="https://qr.ae/pvKt09">Stimulus</a>.” Larry Kudlow
-              </span>
-            ) : this.state.opt ? (
-              <span>
-                Prosperity! -science/skew: import{space}
-                <a href="https://qr.ae/pvKyC4">Brazilian</a>
-                {space}Real! Fine loser judges. Torttech programmatic -
-                immediate acquittal
-              </span>
-            ) : (
-              <span>
-                "I'm going to invoke{space}
-                <a href="https://qr.ae/pvKRD1">so much</a>
-                {space}duress on my{space}
-                <a href="https://qr.ae/pvKRxY">exclusive</a>
-                {space}answers." Naming and open source{space}&bull;{space}
-                acquittal bond loss profit per diem
-              </span>
-            )}
-            <span
-              role="img"
-              aria-label="bachelors"
-              id="grad-cap"
-              onClick={goTo}
-              style={navitem}
-            >
-              🎓
-            </span>
-            <span
-              role="img"
-              aria-label="oil"
-              id="gas"
-              onClick={goTo}
-              style={navitem}
-            >
-              🛢
-            </span>
-            <a href="https://teapharmacy.party/drugs" style={navitem}>
-              <span
-                role="img"
-                aria-label="pharmacy"
-                style={
-                  !this.state.ios
-                    ? {}
-                    : { backgroundColor: "black", color: "white" }
-                }
-              >
-                ⚕️
-              </span>
-            </a>
-            <a href="https://vaults.biz/sdr" style={navitem}>
-              <span role="img" aria-label="vault">
-                🏦
-              </span>
-            </a>
-            <a href="https://occupywallst.quora.com" style={navitem}>
-              <Cable
-                style={picstyle}
-                onError={handleScollImgError}
-                img={true}
-                src={
-                  this.state.noyout
-                    ? ""
-                    : "https://www.dropbox.com/s/sjy2dil74i4ty8w/occupy%20logo_144%20%281%29.png?raw=1"
-                }
-                float={"left"}
-                title="https://occupywallst.quora.com"
-                scrolling={this.state.scrolling}
-                fwd={this["scrollImg" + scrollnum()]}
-                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-                scrollTop={this.state.scrollTop}
-              />
-            </a>
-          </div>
-        </div>
-        <a href="https://open.spotify.com/track/4tMZoPR9v4kvICAPyknxpa">
-          fighting
-        </a>
-        {space}
-        <a href="https://www.quora.com/unanswered/Can-we-replace-the-FDA-with-open-source-and-login-gov-Know-Your-Customer">
-          RICO
-        </a>
-        <h3>
-          Learn how to{space}
-          <a href="https://www.quora.com/unanswered/Are-revolutions-precedence-for-reasonable-courts">
-            dismantle
-          </a>
-          {space}the{space}
-          <a href="https://www.quora.com/Why-are-homework-and-attendance-important-even-if-the-professor-is-wrong">
-            books
-          </a>
-        </h3>
-        "Hard on anyone relying on commercial adjustable rate loans.
-        <br />
-        That goes to the bottom line,{space}
-        <a href="https://www.quora.com/How-do-you-evaluate-macroeconomics/answer/Nick-Carducci">
-          marginally
-        </a>
-        {space}and{space}
-        <a href="https://www.quora.com/If-inflation-happens-before-foreclosures-why-dont-economists-blame-private-credit-as-the-disparity-between-debt-from-cash-grows-Why-do-they-only-blame-the-government-for-compounding-prices">
-          wholly
-        </a>
-        , how will it keep deposits in fed, fight inflation, what will that do
-        to increase supply, it allows exasperated demand supply is geared from
-        another like
-        <br />
-        <Cable
-          style={{
-            height: "80px"
-          }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://open.spotify.com/embed/track/7qdgz117gc5StS0u2ViinE"
-          }
-          float={"right"}
-          title="https://open.spotify.com/track/7qdgz117gc5StS0u2ViinE"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-          iframe={{
-            frameBorder: "0",
-            allowFullScreen: "",
-            allow:
-              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          }}
-        />
-        https://www.quora.com/unanswered/Do-Republicans-like-real-GDP-employee-benefits-and-government-deficit
-        <br />
-        pro growth tax reform increase supply and tight money, a productive
-        endeavor that would be good.
-        <br />
-        <a href="https://www.quora.com/unanswered/Are-fixed-cost-structures-included-in-non-essential-medical-and-tuition-employee-benefits-nor-government-deficit-inflation-or-otherwise-spent-profits-from-the-same-inflation-of-the-prior-quarterly-reporting-periods">
-          Are fixed cost structures included in non-essential (medical and
-          tuition employee benefits) nor government deficit inflation, or
-          otherwise spent profits from the same inflation of the prior quarterly
-          reporting periods
-        </a>
-        ?
-        <br />
-        <br />
-        tort reform whistleblowers and drug users seek asylum in Portugal with
-        me.
-        <br />
-        Tax-exemptions for essential gifts, -again? Why not use the certain
-        disparity herein by race and outcomes to delinquency to asses the
-        exclusive harm of debt, marginally? Let alone the
-        thirdpartybeneficiary.quora.com contract law ignored in NJ Consumer
-        Fraud Act warranties & estimates, a right &proper oxymoronic decadal-law
-        {space}
-        <a href="https://www.quora.com/What-are-the-consequences-of-universal-healthcare-in-America/answer/Nick-Carducci">
-          my family-business deals with in Fair Haven courts
-        </a>
-        .
-        <br />
-        <br />
-        <a href="https://www.quora.com/unanswered/Is-it-the-job-of-the-government-insurance-to-revoke-your-libido-if-the-gender-that-you-are-attracted-to-keeps-rejecting-you">
-          Is it the job of the government insurance to revoke your libido if the
-          gender that you are attracted to keeps rejecting you?
-        </a>
-        <br />
-        $2k/day for Drug Addicts is why Democrats and Republicans wish to have
-        Involuntary Commitment and Real GDP, fixed costs that include labor, of
-        course, with living costs as a cost of goods sold, at the convenience of
-        your clients, wherever you are, replace cop conflict of interest with
-        Truncated Wholesale Tax 2024.
-        <h3>
-          Truncated Wholesale Tax for diminis sale (inclusive of relative period
-          to cohort - time). Truncate requires a move yet derivative of measure.
-          One-part big item, yet Wholesale does the minimum of existing
-          extensions. However, once
-          <br />
-          Work from home convenient to client, professional sales and essential
-          gift, inventing for competitors’ insurances,
-          <br />I estimate 70% of sales and income tax will go uncollected.
-        </h3>
-        <a href="https://www.quora.com/unanswered/Is-Larry-Kudlow-correct-in-saying-that-income-without-taxes-fixed-costs-cost-of-goods-sold-government-and-net-nominal-exports-accounts-for-all-inflation">
-          Is Larry Kudlow correct in saying that income without taxes, fixed
-          costs, cost of goods sold, government, and net (nominal) exports
-          accounts for all inflation?
-        </a>
-        <br />
-        {/*Is Larry Kudlow correct in saying the perfect economy have the lightest tax and regulatory but not relent on tarrifs, or that real GDP accounts for all inflation?*/}
-        <a href="https://www.quora.com/How-small-of-a-discount-can-a-sale-have-to-be-considered-a-gift">
-          How small of a discount can a sale have to be considered a gift?
-        </a>
-        <br />
-        <a href="https://www.quora.com/unanswered/Why-would-there-be-employee-benefits-at-all-when-you-can-gift-medical-and-tuition-as-essential-for-whatever-they-charge-not-to-even-enable-a-discount-for-to-be-under-the-annual-customer-bearing-gift-tax-reporting">
-          Why would there be employee-benefits at all when you can gift medical
-          and tuition as essential for whatever they charge, not to even enable
-          a discount for to be under the annual-customer bearing gift tax
-          reporting threshold?
-        </a>
-        <br />
-        <a href="https://www.quora.com/unanswered/Are-employee-benefits-and-gifts-exempt-for-businesses-cost-of-goods-sold-and-after-personal-income-tax-the-same-functionally-given-their-common-medical-and-tuition-expense-classification-requirements">
-          Are employee benefits and gifts exempt for businesses' cost of goods
-          sold and after personal income tax the same, functionally, given their
-          common medical and tuition expense classification requirements?
-        </a>
-        <br />
-        <a href="https://www.quora.com/unanswered/Why-is-real-GDP-income-without-taxes-fixed-costs-cost-of-goods-sold-government-and-net-nominal-exports">
-          Why is real GDP income without taxes, fixed costs, cost of goods sold,
-          government, and net (nominal) exports?
-        </a>
-        <br />
-        <a href="https://www.quora.com/Is-Steve-Kerr-correct-in-claiming-90-of-Americans-want-universal-background-checks-not-just-robbery-homicide-and-voters">
-          Is Steve Kerr correct in claiming 90% of Americans want universal
-          background checks, not just robbery/homicide and voters?
-        </a>
-        <br />
-        <a href="https://bureau.quora.com/Are-individuals-with-mental-illnesses-in-the-U-S-more-likely-to-become-sex-offenders-or-violent-offenders-1">
-          Are individuals with mental illnesses in the U.S. more likely to
-          become sex offenders, or violent offenders?
-        </a>
-        <Cable
-          style={{ width: "100px" }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.youtube.com/embed/7Jy9JyrukCY?start=145"
-          }
-          float={"left"}
-          title="https://youtu.be/7Jy9JyrukCY?t=145"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "A child who doesn't know what is going on, talk, push on and listen.
-        'Let's figure this out, monitor it closely, turn it off. An adult need
-        to helps kids calmly,'
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/tb0xwekqn4v9nor/economic%20welfare.jpeg?raw=1"
-          }
-          float={"right"}
-          title="economicwelfare.quora.com"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h3 style={{ float: "left" }}>
-          <a href="https://www.quora.com/What-is-the-effect-of-ignoring-the-law-of-economics/answer/Nick-Carducci">
-            What is the effect of ignoring the law of economics?
-          </a>
-        </h3>
-        Prevent empathetically, because (for) children slowly start voting; stop
-        having to intervene during the attacks." Dr Michelle Borba, "despite the
-        sorrow, let them know life will go on,{space}
-        <a href="https://www.quora.com/unanswered/Might-the-economy-be-the-cause-of-Islamic-banking-terrorism">
-          altruistic-suffering
-        </a>
-        {space}like how the Parkland community got out there and mobilized -
-        became active, said, '[it didn't stop the pain, but helped a little
-        bit].' Teddy bear, plant a tree, ritual to cope, strategies to help with
-        {space}
-        <a href="https://www.quora.com/Should-I-tell-my-teacher-I-self-harm-Why/answer/Nick-Carducci">
-          greif
-        </a>
-        ." Violentaization is prevalent in criminological studies, as opposed to
-        a strong integity-of-empathy-people, who stop bullies. ...Issue no knock
-        warrants by{space}
-        <a href="https://www.quora.com/unanswered/Is-it-true-that-killers-write-manifestos-online-social-media-or-end-to-end-server-messages-before-murdering">
-          manifestos
-        </a>
-        .{space}
-        <a href="https://www.quora.com/unanswered/Are-quiet-and-shy-people-killers">
-          People
-        </a>
-        {space}whom keep to themselves.
-        <br />
-        These essential gift reporting exempt{space}
-        <a href="https://www.quora.com/Should-your-political-opponents-be-able-to-say-you-are-a-danger-to-themselves-or-others-while-children-are-being-killed-more-by-their-parents-lately">
-          psychiatrists
-        </a>
-        {space}are not{space}
-        <a href="https://www.quora.com/unanswered/If-most-mass-shooters-have-been-diagnosed-with-medication-before-offending-does-that-mean-it-doesnt-work">
-          professional
-        </a>
-        .
-        <br />
-        Take guns away from sad people? Shoot on sight{space}
-        <a href="https://www.quora.com/Can-I-count-gun-production-to-interpolate-nearly-all-if-not-all-unregistered-guns">
-          unregistered guns
-        </a>
-        ?<br />
-        Mean world syndrome, only see the bad, pessimistic, view, our children
-        deserve better.
-        <br />
-        <a href="https://profiteconomics.quora.com/Disproving-Karl-Marx-s-Labor-Surplus-Exploitation-Theory-Here-is-the-second-disproof-According-to-Marx-1867-Vol">
-          18% of swing voters (10%, 3.06m) approve of the U.S.
-        </a>
-        ,{space}
-        <a href="https://insuranceisnotabusiness.quora.com/The-theft-https-thirdpartybeneficiary-quora-com-is-upon-the-compound-Budget-Constraint-https-www-quora-com-to">
-          39% don't vote
-        </a>
-        .
-        <br />
-        <a href="https://www.quora.com/As-a-third-party-candidate-for-U-S-Senator-for-New-Jersey-would-I-be-better-running-against-them-instead-of-getting-them-to-not-run-a-candidate">
-          Third Party Candidacy NJ 2024
-        </a>
-        {space}-{space}
-        <a href="https://occupyrepublicans.quora.com/Why-was-young-voter-turnout-low-in-Brexit-referendum-1">
-          Brexit
-        </a>
-        {space}(27%{space}
-        <a href="https://nonvoters.quora.com">nonvoter</a>, still)
-        <br />
-        <a href="https://census.quora.com/Are-red-flags-prevalent-in-offending-homicides-as-Richard-Blumenthal-claims-1">
-          Are "red flags" prevalent in offending homicides as Richard Blumenthal
-          claims?
-        </a>
-        <br />
-        <a href="https://www.quora.com/unanswered/Is-mental-illness-a-red-flag">
-          Is mental illness a red flag?
-        </a>
-        <br />"
-        <a href="https://www.quora.com/Is-value-added-per-capita-inflation">
-          non-candidate single-issue voters
-        </a>
-        "<br />
-        <h2>
-          <a href="https://nonprofessionalproprietors.quora.com">
-            Non-Professional-Proprietors
-          </a>
-          {space}(1099{space}
-          <a href="https://regcops.quora.com">cops, tax-free</a>)
-        </h2>
-        {/**
-        //https://www.quora.com/unanswered/How-can-Eric-Adams-look-at-the-reasons-of-offenders-without-considering-them
-        //"[Need to look at the reasons of offenders, not just offenders]."
-        //how can you look at offenders without considering them`
-        */}
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/6kxlls6rnpsjy04/homicide%20offending%20age%20weed.jpeg?raw=1"
-          }
-          float={"left"}
-          title="bureau.quora.com - homicide offending age to weed use 90's negatively correlated justice statistics"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h1>
-          <a href="https://www.quora.com/unanswered/Is-it-the-job-of-the-state-insurance-to-revoke-your-libido-if-the-gender-that-you-are-attracted-to-keeps-rejecting-you-1">
-            cut it off - smd
-          </a>
-          {space}-{space}
-          <a href="https://nonprofessionalproprietors.quora.com">
-            1099 proximity housing
-          </a>
-          {space}-{space}
-          <a href="https://regressivecops.quora.com">cops</a>
-          {space}-{space}
-          <a href="https://www.quora.com/unanswered/Do-I-need-to-keep-inventing-things-for-my-competitors-unemployment-benefits">
-            market crash/tech/deflation
-          </a>
-          {space}by my inventions?
-        </h1>
-        You are going to smd to{space}
-        <a href="https://thumbprint.us">get in</a>
-        {space}for{space}
-        <a href="http://trajectory-inc.com/about-us/#team-members">
-          mental health
-        </a>
-        , and so you don’t{space}
-        <a href="https://thirdpartybeneficiary.quora.com">chomp my dick off</a>,
-        Ill{space}
-        <a href="https://minimalviableduress.quora.com">put it in a cup</a>?
-        {/**
-        35.4% anti-social can drive an Uber, 48% age-related musculoskeletal 
-        problems are delinquent and had their chance.
-        90's and covid excess by sewage means we need to go back
-        significance of two time-period ...-cohorts
-         */}
-        An investigator's nemesis: not wanting.
-        <br />
-        The top are{space}
-        <a href="https://www.quora.com/unanswered/Is-drug-use-a-red-flag">
-          psychopaths
-        </a>
-        ," isn't that{space}
-        <a href="https://www.quora.com/unanswered/Is-mental-illness-a-red-flag">
-          ableism
-        </a>
-        ?
-        <br />
-        People become politicians (pissed or greedy, Reason)
-        <br />
-        Frank Gaffney, use{space}
-        <a href="http://wabcradio.com/?p=232786">req.origin</a>
-        {space}bro{space}Minute 29"
-        <h4>
-          “Thank G-d for that,”{space}
-          <a href="https://open.spotify.com/track/7mKkJuVgkR72ozJGvJOTHP">
-            howdeeho
-          </a>
-        </h4>
-        18m barrels a barrels, 800k a day. Gas doubled, and checkable deposits
-        tripled, $2t corporates after business taxes $1t ‘non-profit,’ $3t
-        households. “If you know a witness lies once, you can hold all their
-        testimony as not credible.” - Judge Janine, “Biden caused the
-        inflation.” The CDC market crash deflation/tech displacement
-        unemployment benefits this time, counting significance of single-year
-        mortality is impossibly available for a sample size of time-periods
-        going back to 1920. We only have population in 1x5 and death rates at
-        5x5 year to cohort.
-        <br />
-        If population level only goes back to{space}
-        <a href="https://humanharvest.info">1937 vitals</a>, and 1905 only has
-        death rates, the 5 year cohorts can hide the end-(and-beginning-heavy
-        lifetime expectation.
-        <h1>
-          <a href="https://www.quora.com/unanswered/Why-is-America-First-against-outsourcing-for-efficiency-and-savings-MAGA-could-even-keep-the-profits-instead-of-passing-the-savings-on-to-consumers">
-            Experts
-          </a>
-          {space}are merely artifactual of{space}
-          <a href="https://www.quora.com/unanswered/Is-the-federal-reserve-charter-system-a-monopoly-in-the-way-that-credit-is-enforced-for-JavaScript-that-could-easily-extend-modules-for-the-browser">
-            problems
-          </a>
-        </h1>
-        <Cable
-          style={{
-            height: "80px"
-          }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://open.spotify.com/embed/track/6XyxCBp6x3jvtxXvMN5sAA?utm_source=generator"
-          }
-          float={"right"}
-          title="https://open.spotify.com/track/6XyxCBp6x3jvtxXvMN5sAA"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-          iframe={{
-            frameBorder: "0",
-            allowFullScreen: "",
-            allow:
-              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          }}
-        />
-        <h3>
-          <a href="https://www.quora.com/unanswered/Is-the-cost-of-living-a-cost-of-goods-sold">
-            Is the cost of living a cost of goods sold?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-tax-free-employee-benefits-government-nor-investment">
-            Why doesn’t the best measure of inflation count tax-free employee
-            benefits, government, nor investment?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/Why-doesn-t-the-best-measure-of-inflation-count-services-or-fixed-costs">
-            Why doesn’t the best measure of inflation count services or fixed
-            costs?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Why-can-cops-and-unprofessionals-not-file-as-a-1099-and-spend-tax-free">
-            Why can cops and unprofessionals not file as a 1099 and spend
-            tax-free?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Granting-W2-instead-of-1099-is-better-for-the-economy-why-is-income-tax-exempt-for-expenses-at-all-Is-it-to-compel-spending-Why">
-            Granting W2 instead of 1099 is better for the economy, why is income
-            tax exempt for expenses at all? Is it to compel spending? Why?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Who-is-the-employer-in-regards-to-employee-benefits">
-            Who is "the employer" in regards to employee benefits?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Is-free-speech-protected-in-the-First-Amendment-in-regards-to-501-c-3">
-            Is free speech protected in the First Amendment in regards to 501(c)
-            (3)?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Why-are-there-tax-breaks-for-employers-over-sole-proprietorships">
-            Why are there tax breaks for employers over sole proprietorships?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Why-are-professional-services-less-so-subject-to-sales-tax">
-            Why are professional services less so subject to sales tax?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Can-you-pay-yourself-through-a-self-employment-account-as-a-bartender-to-not-pay-income-tax-before-cost-of-living-expenses">
-            Can you pay yourself through a self-employment account as a
-            bartender to not pay income tax before cost-of-living expenses?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Can-you-be-a-sole-proprietor-and-take-business-relevant-employee-benefits">
-            Can you be a sole proprietor and take business-relevant employee
-            benefits?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/If-you-can-gift-essential-services-exempt-from-reporting-like-healthcare-and-education-why-are-they-called-employee-benefits">
-            If you can gift essential services exempt from reporting like
-            healthcare and education, why are they called employee benefits?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/If-professionals-services-can-be-exempt-from-sales-tax-and-income-tax-for-essentials-like-medical-and-tuition-by-filing-as-a-1099-why-cant-essential-workers-and-unprofessionals-Would-most-income-and-sales-tax-not-go">
-            If professionals services can be exempt from sales tax and income
-            tax for essentials like medical and tuition by filing as a 1099, why
-            can't essential workers and unprofessionals? Would most income and
-            sales tax not go uncollected?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/Why-are-non-essential-medical-nor-educational-gifts-only-considered-gifts-when-provided-at-a-discount">
-            Why are non-essential medical nor educational gifts only considered
-            gifts when provided at a discount?
-          </a>
-          <br />
-          <a href="https://www.quora.com/unanswered/How-small-of-a-discount-can-a-sale-be-to-be-considered-a-gift">
-            How small of a discount can a sale be to be considered a gift?
-          </a>
-          <br />
-          <a href="https://www.quora.com/Are-unemployment-benefits-given-for-anything-but-deflation-displacement">
-            Are unemployment benefits given for anything but deflation
-            displacement?
-          </a>
-        </h3>
-        “The least taxed service area[ is professional services], in large part
-        because professional groups have powerful lobbying presences, as opposed
-        to personal services[, like{space}
-        <a href="https://scopebook.quora.com/Are-sales-taxes-charged-on-services-1">
-          grooming
-        </a>
-        ].”
-        <br />
-        That is{space}
-        <a href="https://open.spotify.com/track/2LgEYzVoSKp6fsST6trUh2">
-          all you got
-        </a>
-        ?{space}
-        <a href="https://micro-theory.com">I do everything</a>.
-        <br />
-        <br />
-        <b>
-          <a href="https://quora.com/unanswered/Why-arent-business-accounts-taxed-as-service-revenue-comes-in">
-            Why aren't business accounts taxed as service revenue comes in?
-          </a>
-        </b>
-        <br />
-        False statement is not a crime, illicit behavior.
-        <br />
-        Free healthcare, if inflation is a general rise in prices,
-        {space}
-        <b>pool-inflation is certainly larger</b>
-        {space}than{space}
-        <i>individual capacity budget is required for the transaction</i>.
-        <br />
-        <a href="https://www.quora.com/unanswered/Do-we-still-give-unemployment-benefits-for-deflation">
-          Do we still give unemployment benefits for deflation?
-        </a>
-        <br />
-        <br />
-        Inflation's best measure is after income tax?{space}
-        <a href="https://selfemploymentbenefits.quora.com">
-          Self employment benefits
-        </a>
-        {space}
-        for W2 (bartender) reparations as if corporate
-        in-kind-income-tax-employee-benefits, as a normal relevant-tuition and
-        proximity-housing - bullshit all else.
-        <br />
-        <br />
-        "We borrow it like everything else around here, so{space}
-        <a href="https://occupyrepublicans.quora.com/Do-tariffs-make-life-better-for-citizens-1">
-          we will see inflation
-        </a>
-        [ by not using Hrynvia (
-        <a href="https://courttechnology.quora.com/Is-saying-drop-dead-a-threat-1">
-          70% grain equity for
-        </a>
-        {space}the treasury)]." - Rand Paul
-        <br />
-        Income as successful as they should,{space}
-        <a href="https://www.quora.com/How-did-the-rich-survive-the-Great-Depression/answer/Nick-Carducci">
-          wealth disparity
-        </a>
-        {space}as market concentration, expense-benefits under cost of living
-        TAX FREE (service no sales tax, either) .
-        <br />
-        individual division of labor and all-at-once+a-la-carte
-        <br />
-        self-employment-benefits for all w2 instead of unionization
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/p2l3xym3brjqph1/Screen%20Shot%202022-05-18%20at%2011.05.09%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="john fetterman union"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Populist?"
-        <br />
-        <br />
-        <a href="https://www.quora.com/Does-price-change-faster-than-hours-worked/answer/Nick-Carducci">
-          skillset for a living wage, education is to displace jobs....
-        </a>
-        <h1>
-          <a href="https://truncatedwholesaletax.com">
-            Can you pay yourself through a self-employment account as a
-            bartender to not pay income tax before cost-of-living expenses?
-          </a>
-        </h1>
-        <br />
-        physical profit = purchases less deficit, employee-benefit pool-charge,
-        net export -{space}
-        <a href="https://saverparty.xyz/global">
-          efficiency parity to import by *GDP/p ratio of domestic/foreign
-        </a>
-        <br />
-        unkempt{space}
-        <a href="https://livetaxfree.quora.com">uniform</a>
-        <br />
-        It is a gift if you keep track of sales.{space}
-        <a href="https://truncatedwholesaletax.quora.com">
-          Truncated Wholesale Tax
-        </a>
-        {space}is therefore implied to me.
-        <br />
-        Certainly - pool-inflation is ascertainably larger than otherwise. All
-        at once and a la carte is how wholesale differs from collections that
-        are flaccid and lose any bargain, as I describe three facets of such in
-        microeconomics in my piece. I use macroeconomic national accounts
-        elsewhere to ascertain damages to the economy by value added as a share
-        of GDP in insurance/employee-benefit heavy areas (healthcare), to which
-        technology should be lessening price, faster than lifetimes grow. I
-        discuss recently the prospect of tax-free self employment accounts for
-        all w2 workers to compete fairly with{space}
-        <a href="https://selfemploymentbenefits.quora.com">
-          exempt in-kind fringe income ({">"}$10k/customer/yr reporting)
-        </a>
-        {space}
-        benefits, lately, to dismay such trust-building.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/bktdvebnhwsyvsh/Screen%20Shot%202022-05-18%20at%208.58.15%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="Liz Fosslien (shouted by Prof. Galloway)"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h2>
-          <a href="https://www.quora.com/Can-I-claim-unemployment-for-technological-displacement?">
-            OPEN SOURCE
-          </a>
-        </h2>
-        non-voters anti-insurance single-edge-turnout (25-44 -5% 2016-19 U.K.
-        Brexit, 5%/-5% liberal leavers)
-        <br />
-        you are going to drink molten gold, sid rosenberg
-        <br />
-        Take back all gifts and third party donee beneficiary.{space}
-        <a href="https://inkindincometaxexemptbenefits.quora.com">
-          end insurance
-        </a>
-        ,{space}
-        <a href="https://reverseamortization.quora.com">(cash/debt)*income</a>,
-        vertical-expense-line{space}
-        <a href="https://maxroyalties.quora.com">tortious revenue-skimp</a>/
-        <a href="https://vaults.quora.com">upon-sale</a>.
-        <br />
-        Asperger syndrome high-level (?edge) autism spectrum?
-        <br />
-        make{space}
-        <a href="https://www.quora.com/How-did-the-rich-survive-the-Great-Depression/answer/Nick-Carducci">
-          people
-        </a>
-        {space}vote by forcing a "no" to reconcile othewise
-        <br />
-        sample size is months? 73 2020 3 years 78
-        <br />
-        real GDP/yr is employee-benefits,{space}
-        <a href="https://markethistory.quora.com/Have-unemployment-benefits-been-given-for-deflation-1">
-          market crashes/tech displacement for unemployment benefits
-        </a>
-        <h2>
-          Room & Board, duress (legal){/*"90% single/shooting" - M. Goodwin */}
-        </h2>
-        “Nobody called in,” he said. “Nobody called any complaints,” Gramaglia
-        said. The threat was “general” in nature, he said, and not related to
-        race.
-        <br />
-        New York is one of several states that have enacted “red flag” laws in
-        recent years that were intended to try and prevent mass shootings
-        committed by people who show warning signs that they might be a threat
-        to themselves or others.
-        <br />
-        <br />
-        Innovation should lessen growth per person,{space}
-        <a href="https://maxroyalties.quora.com">max royalties</a>
-        {space}and third party donee beneficiary protections by EULA but not
-        pool-inflation and invoice are a choice.
-        <br />
-        <br />
-        In an economy of opportunity, how do we{space}
-        <a href="https://www.quora.com/If-inflation-is-too-much-money-chasing-too-few-goods-are-pool-charges-and-employer-contributions-to-employees-costs-of-living/answer/Steven-Blanchard-28">
-          maintain price stability
-        </a>
-        ? Buying mortgages and treasuries is{space}
-        <a href="https://secretary.quora.com/How-long-will-it-take-to-pay-off-the-US-national-debt-1">
-          normal
-        </a>
-        ? "The pain is necessary, but the slow-suffering isn't. They acted
-        rapidly in increasing reserves,{space}
-        <a href="https://federalreserve.quora.com/What-can-the-government-do-about-inflation-1">
-          now they need to be quick in draining reserves so people buy-in to
-          treasuries
-        </a>
-        {space}again without waiting for the fed, on this 5 basis point trek. It
-        is ok to encounter an{space}
-        <a href="https://www.quora.com/Is-a-market-crash-grounds-for-continuing-unemployment-claims">
-          old fashioned
-        </a>
-        {space}financial crisis to provide{space}
-        <a href="https://www.quora.com/unanswered/Can-financial-advisors-claim-continuing-unemployment-benefits-for-market-crashes-if-they-tell-their-clients-there-is-no-guarantee-of-funds-returned">
-          unemployment benefits
-        </a>
-        {space}for the{space}
-        <a href="https://www.quora.com/Is-a-market-crash-grounds-for-continuing-unemployment-claims">
-          job displacement of corrections
-        </a>
-        ." Kathy Barnett
-        <br />
-        <br />
-        If you have technology, you will displace people from the labor market.
-        I'll bill you for the minutes of Netlify build time that are required to
-        doxx additional statements. Your{space}
-        <a href="https://www.quora.com/unanswered/If-inflation-is-a-rise-in-price-does-pool-charge-insurance-cause-inflation">
-          scope
-        </a>
-        {space}of requirements were ambiguous and third party donee beneficiary
-        invoking, just the same as your reasoning for growth of structures,
-        equipment and intellectual property (claims instead of copyright, that
-        implies claim/person limitation).
-        <br />
-        <br />"
-        <a href="https://www.quora.com/Are-trade-secrets-property-or-exclusive-answer-trusts/answer/Robert-Charles-Lee">
-          Not enough industry interest
-        </a>
-        ." Real wages only discounts non-employer-contributions. Profits aren't
-        included, and so then neither is inequality after all-expense (
-        <a href="https://secretary.quora.com/How-long-will-it-take-to-pay-off-the-US-national-debt-1">
-          where checkable deposits end up
-        </a>
-        ).
-        <br />
-        <br />
-        “GOP influencers seeking power, not representing its people.” Bitch, I
-        am{space}
-        <a href="https://saverparty.xyz">Saver</a>.
-        <br />
-        Welfare, closing the beaches,{space}
-        <a href="https://www.quora.com/unanswered/Can-financial-advisors-claim-continuing-unemployment-benefits-for-market-crashes-if-they-tell-their-clients-there-is-no-guarantee-of-funds-returned">
-          market-value crash displacement
-        </a>
-        , unemployment benefits by{space}
-        <a href="https://www.quora.com/Can-I-claim-unemployment-for-technological-displacement">
-          tech displacement
-        </a>
-        ? CYA PWC
-        <br />
-        {/**it doesn't matter substitutive supply efficiency, they just don't want to pay */}
-        still boycotting credit... 18m consumed,{space}
-        <a href="https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WTTIMUS2&f=W">
-          3m in and out
-        </a>
-        , 830k potential, doubles the price? no
-        <br />
-        <br />
-        the O.K. corrale or efficient by eternities.... who would want to go to
-        jail? who would want to kill and what law would bar holds but without
-        efficiency as omnipotent?
-        <br />
-        Population growth might match, drug overdose data 2015-
-        <br />
-        <h2 style={{ float: "right" }}>efficiency precedence</h2>
-        <br />
-        you don’t need to medicate the homeless,
-        <br />
-        <br />
-        trespass to nowhere is grounds enough to house the homeless without
-        pharmaceutical kickbacks
-        <h2 style={{ float: "right", width: "200px" }}>
-          article 1.8 uniform{space}
-          <a href="https://www.quora.com/Are-guilty-pleas-moot-if-untrue/answer/Anthony-M-Bruce">
-            racket DUI twice decadal growth
-          </a>
-          . "I'm protected by FDIC insurance, right?"
-        </h2>
-        <br />
-        You assess drug overdose by the border, how?
-        <br />
-        <br />
-        Motor Vehicle ID Near Field Comm bridge tolls, get us off of 40% debt
-        service of third party donee beneficiary and before you ask what that is
-        it is what people who make product have to ensure they do not invoke,
-        say, promising performance of anothers’ money instead of revenue
-        skimping upon vertical industry lines with max royalties, after reverse
-        amortization (cash/debt)*income. I use reasonable doubt to acquit
-        <br />
-        <br />
-        we need to check the parcels for the fentanyl pills 2% of automobiles
-        are. Its a fruitless endeavor unless we cannot
-        <br />
-        Bring pharmacies and cartels together
-        <br />
-        name/review and open source instead of FDA and animal-testing, instead
-        <br />
-        <br />
-        So all the sudden lifting title 42, is a problem more scapegoating like
-        medicating the homeless when trespass to nowhere is housing ground
-        enough, when citizens are one percent more criminal than illegals?
-        Asylum note from the threatening government. Why won’t Ukraine
-        share-split Hryvnia for their migs? Makes me think it is to scape
-        refugees for non-hispanic whites. when did we go from dogs to phones and
-        a hotel
-        <br />
-        <br />
-        Under $10k/customer is gift - after that your lifetime $11.5m exemption
-        tax hits. Just like employers pay for the cost of living of their
-        employees tax free, given it is normal, not extravagant. General
-        Maintenance Unit would help, 11/12 industry-variable permits of minimal
-        viable duress, name/review and open source, no more FDA/ICE!
-        <br />
-        PCE actually includes up to cost of living employee benefits.
-        <br />
-        And you can you pay yourself (BARTENDERS) as a loss through a small
-        business and sales tax only after $10k/customer/yr.
-        <br />
-        'Physical' product activity would be net import purchases minus the
-        deficit.
-        <br />
-        nominal trade is not a national security issue, but FDI and to boot -
-        not because of - Article 1.8 uniform is by method and scope for treasury
-        rents.
-        <br />
-        Marxism and drug gangs, name/review and open source, minimal viable
-        duress.
-        <br />
-        <br />
-        1m/yr+ net 5m/yr+ births 40m 9m on top of 330m illegal, visa fees and
-        closed source pharmacy.
-        <br />
-        <br />
-        Vitro fallacies, crowding out is a fallacy and they can counteract the
-        laborless-demand of finance. Bring cartels and pharmacies on the same
-        playing field maybe they won’t be so violent. We need a virtual id for
-        anon voting, brokerages, but also convict intranet, name/review and open
-        source instead of FDA, animal testing and prescription costs nor
-        horizontal pool charges. We need to repatriate industry by banning labor
-        less demand in finance, third party donee beneficiary in implausible use
-        lease pool-charge employer contributions tax free under cost of living
-        and invoice, just wait for customers with an industry-vertical revenue
-        skimping
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout ? "" : "https://www.youtube.com/embed/eXh8iN9xIRI"
-          }
-          float={"right"}
-          title="Rita Cosby on Mexican cartels, open source and substitutive supply, ending - https://youtu.be/eXh8iN9xIRI"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Visa or license fee?
-        <br />
-        <br />
-        "Half the Democrats would be closed to substitutive-supply for
-        Americans.
-        <br />
-        Economic growth, revenue side, for corporate profits,” is what Newt
-        Gingrich cares about,{space}
-        <a href="https://www.quora.com/If-there-is-a-rise-in-demand-and-a-shortage-does-the-demand-curve-shift-or-does-the-supply-curve-shift/answer/Nick-Carducci">
-          totally elastic upwards of equilibrium
-        </a>
-        .
-        <br />
-        <br />
-        “A balanced budget will boost economic growth.” Actually deficit counts
-        towards not physical profit purchase but real GDP
-        <br />
-        <br />
-        Single-year-age excess deaths used a sample size of months because that
-        isn’t 100th of population for significance from mean, it’s like a
-        meaningless significance seasonally
-        <br />
-        <br />
-        Would you say “exclusionary trust” to discern between an
-        investment-trust and an illegal-one? Or monopolistic-one, if you do not
-        consider monopolies illegal prima facie.
-        <br />
-        <br />
-        Vitro fallacies, crowding out is a fallacy and they can counteract the
-        laborless-demand of finance. Bring cartels and pharmacies on the same
-        playing field maybe they won’t be so violent. We need a virtual id for
-        anon voting, brokerages, but also convict intranet, name/review and open
-        source instead of FDA, animal testing and prescription costs nor
-        horizontal pool charges. We need to repatriate industry by banning labor
-        less demand in finance, third party donee beneficiary in implausible use
-        lease pool-charge employer contributions tax free under cost of living
-        and invoice, just wait for customers with an industry-vertical revenue
-        skimping
-        <br />
-        <br />
-        China efficiency-parity shows their physical consumption verily is more
-        than the U.S. by population and not physical expense per capita.
-        <br />
-        Any draft for tax-jurisdiction (by land) is a rogue state.
-        <br />
-        I’ve got an idea, ‘pay for your own shit!” There’s your fucking idea
-        <br />
-        what, now you are on my side, fucking... faggot?
-        <br />
-        Secure jobs and close borders,” population and crowding out is a fallacy
-        because historically without financialization even amongst 3-1%/yr+
-        population GDP%/yr flat. Closed source pharmacies, animal testing kink
-        and visa fees for more criminal citizen trust-building is self-harm.
-        <br />
-        <br />
-        medicatethehomeless.quora.com
-        <br />
-        "Broad judgement mental and emotional health," standing for justice?
-        <br />
-        Why do I have to rebuild 2012 software to take debit without credit?
-        <br />
-        <br />
-        “There needs to be better efforts made to ensure that we have formula,
-        that a recall doesn’t happen because one plant in MI{space}
-        <a href="https://generalmaintenanceunit.quora.com">screws</a>
-        {space}up.”
-        <br />
-        <br />
-        Is real GDP profit of{space}
-        <a href="https://substitutivesupply.quora.com">fixed costs</a>?
-        <br />
-        Tax breaks are discrimination of sector and organizational structure in
-        my book, and you need a reason for a law to pass muster of public
-        opinion, not{space}
-        <i>just because that’s how it is done</i>.{space}
-        <b>
-          <a href="https://www.quora.com/Why-isn-t-healthcare-an-income-taxable-fringe-benefit">
-            Why
-          </a>
-        </b>
-        {space}
-        is
-        <br />
-        1. healthcare,
-        <br />
-        2. within perimeter and necessary housing, and
-        <br />
-        3. investment
-        <br />
-        contributions, tax-free? From your “defense” of the law, the reason is
-        trust-building, prima facie.
-        <br />
-        <a href="https://www.quora.com/Can-I-pay-myself-through-a-business-to-not-pay-income-taxes-like-it-is-a-fixed-cost/answer/Nick-Carducci">
-          Nick Carducci's answer to Can I pay myself through a business to not
-          pay income taxes like it is a fixed cost?
-        </a>
-        <br />
-        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/amp/">
-          65%
-        </a>
-        {space}
-        are anti-insurance, and both parties are for, so non-voters must find
-        pool-charges to not be additive to the General{space}
-        <a href="https://economicwelfare.quora.com/)">Welfare</a>
-        {space}
-        but destructive, as well. Third party{space}
-        <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
-          donee
-        </a>
-        {space}
-        beneficiary bid is the grounds I present to not only end invoices but
-        insurance as well. What is an estimate, warranty or guarantee if it is
-        not a consignment of{space}
-        <a href="https://thirdpartybeneficiary.quora.com/">
-          Third party beneficiaries'
-        </a>
-        {space}
-        bids, surrendered.
-        <br />
-        <br />
-        "Polish migs would have stopped us from signing $40b (Ukrainians are
-        rich, they can pay for it)" Con. Steven P Mississipi
-        <br />
-        <br />
-        Vertical-expense-line instead of supply-chain? supply is propensities
-        for utility/indifference of substitutive-supply, sorted. We need less
-        laborless-demand, so that it doesn't suffocate labor-borne. Non-voters
-        are anti-insurance, for less real GDP and stagflation thereby, but less
-        pool-charge of third party donee beneficiary. Plants by government
-        subsidies just increases the same inout costs of material and
-        variable-part labor for more money, elastic equillibrium.
-        <br />
-        <br />
-        Why would I take a job that I know is{space}
-        <a href="https://2024nj.com/bachelors">not necessary, -abjectly</a>, but
-        as well in{space}
-        <i>job utility</i>, when I venture to abstain, relent and force ban of
-        labor-borne due to laborless.{space}
-        <b>It pays, but</b>
-        {space}that doesn't mean it is a better start to be the plunderer, for
-        {space}
-        <b>it is always a firesale</b>
-        {space}and elastic of equillibrium, real and effectual price, or hour,
-        per living. I am a bartender,{space}
-        <a href="https://github.com/NickCarducci/mastercard-backbank">
-          dealing in cash
-        </a>
-        , or I am nothing.
-        <br />
-        Sound money is not acheived by bitcoin, hundreds of node-trust
-        notwithstanding, when you lend it.
-        <br />
-        "You are a Conspiracy theorist," translates to "I will not belie myself
-        of your conclusions."
-        <br />
-        <h2>Big egg - precedence shows and also what but for else</h2>
-        “Big on the left or the right, the Supreme Court is not above any other
-        branch of government.” - Chris Hahn
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/n9uzab1lk3bfrvn/Screen%20Shot%202022-05-08%20at%204.51.13%20PM.png?raw=1"
-          }
-          float={"right"}
-          title=""
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <br />
-        Stagflation will happen when ban insurance.
-        <br />
-        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
-          Carducci I predict another pandemic in three years{space}
-          <span role="img" aria-label="crystal ball">
-            🔮
-          </span>
-          <br />
-          75 jumped up, now, 73 covid 2020
-          <br />
-          Please if anyone knows the sample size
-          <br />
-          of single-year age significance excess death rate p{"<"}.05
-          <br />
-          sure but n=2019-20 lmao
-          <br />
-          <br />
-          Significant change-rate of less than
-          <br />
-          even a modicum with n=2. Paint normal chance for
-          <br />
-          percentile report n{">"}99 {/*(variance from mean)*/}
-          <br />
-          <br />
-          an exponential bump has two rates of change along a
-          time-period-series.
-          <br />
-          <br />
-          how far from real mean?
+          {!this.state.journal ? "journal" : "plan"}
         </div>
         <br />
-        Does a{space}
-        <a href="https://secretary.quora.com/What-does-a-flight-insurance-cover-1">
-          pool
-        </a>
-        -chargeness of expense-benefits make it third party donee beneficiary
-        bid, by corporate account, or is it{space}
-        <b>
-          <a href="https://realecon.quora.com/Are-Republicans-really-against-providing-healthcare-to-all-Americans-or-is-this-some-kind-of-running-joke-As-a-European-1">
-            the horizontal-nature
-          </a>
-        </b>
-        , like Barclays and Apple. For that matter, a company cannot lend you
-        their expense for that is horizontal and{space}
-        <b>surrendered bid</b>. Tax-free employee-living costs as a{space}
-        <a href="https://thumbprint.quora.com/Are-non-voters-against-insurance-1">
-          business-expense
-        </a>
-        ,{space}
-        <b>is not</b>. Neither is income as a loss for APV-amortized
-        self-employment tax and max royalties.
         <br />
         <br />
-        "Conscripts, not-so-well-read Red Army." Bond loss profit banned would
-        probably stop the war for incentive to spend.
-        <br />"
-        <a href="https://crowdfundingfortaxes.quora.com">
-          To bring a business in structures depends on safety, not low taxes
-        </a>
-        ."
-        <br />
-        1/3 non-voters must be anti-insurance if both parties are for it.
-        {/**swing voter, "most privvy soccer mom, to what costs" */}
-        <br />
-        Unions -{space}
-        <b>corporate/(employer) tax(income)-free expense benefit</b>, ...next
-        govrent
-        <br />
-        "government needs to help IP/gdpi/pool-charge real GDP." If such
-        value-added is such a{space}
-        <a href="https://economicwelfare.quora.com/What-is-the-most-confusing-aspect-of-economics-1">
-          target
-        </a>
-        {space}to{space}
-        <a href="https://www.quora.com/What-are-the-main-challenges-of-macroeconomics-policy/answer/Nick-Carducci">
-          make
-        </a>
-        {space}for efficiency,{space}
-        <a href="https://landlordliquidity.quora.com">landlord liquidity</a>
-        {space}goes without saying (without housing part of CPI that is real of
-        GDP by{space}
-        <a href="https://census.quora.com/What-does-a-high-CPI-indicate-1">
-          GDP-CPI
-        </a>
-        ).
-        <br />
-        {/*sepsis miscarriage - accident?<br/>*/}
-        Let's get y'all started.
-        <br />
-        Need 11/12 jury-permit to prove (DSM/courts differing standards of
-        physical evidence, and grounds) mental illness, for what?{space}
-        <a href="https://https://crowdfundingfortaxes.quora.com/">
-          trespass to nowhere
-        </a>
-        {space}is{space}
-        <b>
-          enough to arrest and house, no need to kickback risperidone eugenics
-        </b>
-        , just like illegal immigration (-1%/p criminal, 86 visa fees and FDA
-        with naming and open source).
-        <br />
-        <br />
-        <a href="https://monopolies.quora.com/What-are-the-consequences-of-a-business-having-too-much-power-1">
-          TECH
-        </a>
-        -
-        <a href="https://www.quora.com/Will-technology-get-cheaper-in-the-future/answer/Nick-Carducci">
-          DESTROYER
-        </a>
-        <br />
-        Saving 500 jobs and expenses vs the earth, and leisure?
-        <br />
-        <a href="https://rolloverinsurance.quora.com">Unions</a>
-        {space}used to corpoate next govrent, unemployment claims, now not
-        pool-charge but compel strikes.{space}
-        <a href="https://implausibleuseleases.quora.com">
-          implausible use leases
-        </a>
-        {space}market{space}
-        <a href="https://landlordliquidity.quora.com">liquidity</a>. "He is the
-        one that will be paying the bills debt-service for this," We all pay for
-        third party donee beneficiary.
-        <br />
-        <br />
-        "Lean government, the{space}
-        <a href="https://realecon.quora.com/How-does-the-tight-labor-market-cause-inflation-1">
-          law of Supply and Demand
-        </a>
-        , let workers and families do their thing, 'We care about poor,
-        minorities, women's rights,' they care about power, any way we can.
-        ...'If they stop there is a disaster, or if they keep going,'{space}
-        <a href="https://federalreserve.quora.com/Why-are-some-economists-saying-that-Feds-acted-too-late-to-increase-interest-rate-Whats-going-to-happen-1">
-          moreso if you are in a ditch, you stop digging
-        </a>
-        .'" - Stephen Moore
-        <br />
-        GOVMVP:
-        <br />
-        <h2>REGRESSIVE COP TAX - name/review, open source, and sewage</h2>
-        <h4>
-          ween your justice off per diem incarceration malfeasance-rackets of
-          match-presentation-defunctionary or before physical-evidence, to
-          review.
-        </h4>
-        Truncated Production Tax{space}
-        <a href="https://reverseamortization.quora.com">reverse amortize</a>
-        {space}(cash/debt)*income third party donee beneficiary, doctor slave
-        lest for pool-charge, rollover over their dead bodies... geohash/month +
-        2 week public review "self"-reporting.
-        <br />
-        <br />
-        <a href="https://www.bmj.com/company/newsroom/nine-out-of-10-abortions-done-before-12-weeks-in-many-high-income-countries/">
-          TEST FATTIES
-        </a>{" "}
-        - think of the great{space}
-        <i>health</i>
-        {space}consequences
-        <br />
-        <br />
-        It would take 44 years if current income is used to pay debt,
-        foreseeably impossible and waranty/third party donee beneficiary
-        oxymoronic NJ Consumer Fraud Act.
-        <br />
-        GDP is integrally population, are you overeating?
-        <br />
-        "loans (
-        <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
-          most aren't even checkable, time nor savings deposits
-        </a>
-        ) to puchase (
-        <a href="https://vaults.quora.com/What-is-that-one-tip-that-you-can-give-to-someone-who-is-drowning-in-debt-1">
-          third party donee beneficiary
-        </a>
-        ) a service (trade-secrets) is not our fault (duress)."
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/xzldp22vmnebk95/washington%20post%20retired%20pop.jpeg?raw=1"
-          }
-          float={"right"}
-          title="washington post retired"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Unknown numbers."
-        <br />
-        Ethics in juris is{space}
-        <a href="https://phyletic.quora.com/Why-is-killing-illegal-1?ch=10&oid=354318407">
-          efficiency
-        </a>
-        , omnipotently.
-        <br />
-        <a href="https://www.quora.com/What-are-the-main-challenges-of-macroeconomics-policy/answer/Nick-Carducci">
-          Healthcare - pool-charge
-        </a>
-        ? 65% anti-insurance, both parties for, so non-voters must be against.
-        <br />
-        Why is there a license but for closed source? That is not going to hold
-        long, NJ will just take advantage of this oversight of consumer
-        protections from the juris.
-        <h3>
-          Collective bargaining requires all-at-once and a-la-carte (not
-          insurance pool-charge).
-        </h3>
-        <a href="https://www.conference-board.org/blog/labor-markets/Retiree-Growth">
-          <Cable
-            onError={handleScollImgError}
-            img={true}
-            src={
-              this.state.noyout
-                ? ""
-                : "https://www.dropbox.com/s/kibl7ggx3expk1u/retired.png?raw=1"
-            }
-            float={"right"}
-            title="https://www.conference-board.org/blog/labor-markets/Retiree-Growth"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-        </a>
-        1m covid death 500k/yr+,{space}
-        <a href="https://actuaries.quora.com/">1.2m/yr+ expected</a>. 'Genocide
-        remains to be seen, if virion requires cell to reproduce, how did the
-        first come about? Is viral and{space}
-        <a href="https://bacterium.quora.com/">bacterial</a>
-        {space}pneumonia polyphletic? Can you test for PIC-concurrently?{space}
-        <a href="https://phyletic.quora.com/">
-          Wuhan failed to inseminate in lab
-        </a>
-        .
-        <br />
-        Causation is proven if presentation matches (with order).
-        <br />
-        <br />
-        ‘Productivity’ according to WEF, OECD and BEA is expenses per hour, the
-        opposite of ‘efficiency’ if you will. If outsourcing is cheaper, the
-        domestic country is more productive, and the foreign country is more
-        efficient.
-        <br />
-        <br />
-        <hr ref={this.covid} />
-        <Population
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        {/**yeah you like that don't ya */}
-        Outsourcing would cut the hours down for the same expense, thereby
-        increasing productivity - or, remaining the same - if foreign wages are
-        just as efficient and the savings are passed on to consumers. Yet
-        moreso:
-        <br />
-        <br />
-        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
-          Productivity by outsourcing -
-          <br />
-          only when the variable-part of input-costs, -labor, is outsourced (&&
-          the foreign country is efficient, implied in your decision), can you
-          charge the customer for more expense, passing YOUR savings on as a
-          producer to the customer as margin lol, making more productive profit!
-          <br />
-          <br />
-          For instance, see our{space}
-          <a href="https://fred.stlouisfed.org/graph/?g=OZWu">
-            pharmaceutical expenditure
-          </a>
-          , albeit that is shared by outside-of-pocket and FCSU staples, so will
-          be seen both in real GDP growth and stagflation, it increases because
-          of insurance presentation, and mean inflation targeting is why it is
-          not growing as fast as it was around the 80’s, ?
-        </div>
-        <br />
-        Labor productivity, then, is if those gains from outsourcing are
-        disbursed as expense-benefits, tax-free income-like, or wages outright,
-        versus kept in the corporate profit account, or just tying off any
-        change in productivity at the wage nor proprietor account at all from
-        outsourcing by keeping margins on revenue-income the same.
-        <h4>
-          <a href="https://saverparty.xyz/global">Compel</a>
-          {space}NATO, (<a href="https://saverparty.xyz/nato">how?</a>)
-        </h4>
         <br />
         <div
           style={{
-            padding: "4px 10px",
-            border: "3px solid",
-            marginLeft: "4px",
-            borderRadius: "10px",
-            marginRight: "10px"
+            fontFamily: "'Muli', sans-serif",
+            overflow: "hidden",
+            backgroundColor: "white",
+            height: !this.state.journal ? "0px" : "",
+            position: !this.state.journal ? "fixed" : "relative",
+            width: "100%",
+            maxWidth: "600px",
+            textAlign: "center"
           }}
         >
-          Benefits’ tax-“free” expense, or income as a loss, is not a fucking
-          tax-“break.”
-        </div>
-        Checking has tripled in 2 years, with
-        GDP-structures-equipment-durable-goods-food-clothing-housing-utilities
-        decreasing while healthcare remained the same proves PROFITS BY PREMIUM
-        ARE NEGATIVELY CORRELATED WITH INCOME per living
-        <br />
-        <br />
-        Can you guys report on income after expenses inequality results from tax
-        breaks on benefits and real GDP/yr productivity value-adds’ expense?
-        That alone is an ascertainable loss, no reference to another century
-        required.
-        <br />
-        <br />
-        Benefits are tax-break? for real GDP outside-of-expense per hour
-        “value-added-productivity?” Didn’t get in trouble with the healthcare
-        industry? Take people out of streets and enslave them, 19/20 $630b/yr
-        bank income lending something other than deposits the "Do Fund do great
-        for society." Pool-charge and outright third party donee beneficiary,
-        not your own bid. Luke Petitgout, I'll rip your throat out. Let people
-        do drugs without your imposition, faggot
-        <br />
-        <br />
-        If it really is a crime && evidence, why is there bond? Per diem
-        incarceration bond loss profit?
-        <br />
-        George P. Bush, celebrating Spanish because, "
-        <a href="https://www.quora.com/unanswered/If-illegal-immigrants-are-less-criminal-is-the-legal-immigration-system-in-existence-merely-to-acquire-visa-fees">
-          mother born in Mexico
-        </a>
-        ."
-        <br />
-        Norm: "Maniacs against employees, if they dont calm down[ riot for
-        Federalism], they are going to have a war this summer." Dems racist for
-        programs, Repubs for visa fee (
-        <a href="https://vaults.biz/immi">
-          -1%/p presentation illegal-criminal
-        </a>
-        ). "Legal loopholes for asylum[, note of facism from government]," when
-        dogs to phone and hotel?
-        <br />
-        <br />
-        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
-          “Benefits lower the tax brackets $8k/year daycare, $4k/year
-          abortions,” - Disney. “It may be another motive to expire premiums
-          just for a tax break.”{space}
-          <a href="https://rolloverinsurance.quora.com/">Rollover Insurance</a>
-        </div>
-        <br />
-        <a href="https://carfacedimonlikefloyd.quora.com">
-          Where do the banks get the money that they lend to people
-        </a>
-        ?
-        <br />
-        Originally Answered: Where do banks get the money used when making a
-        loan to a borrower?
-        <br />
-        <div
-          style={{
-            padding: "4px 10px",
-            border: "3px solid",
-            marginLeft: "4px",
-            float: "left",
-            borderRadius: "10px",
-            marginRight: "10px"
-          }}
-        >
-          <a href="https://virtualid.quora.com" style={{ fontSize: "30px" }}>
-            Virtual ID
-          </a>
-        </div>
-        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
-          Jakob Malki, Jun 8, 2020: "It used to be that they would give you
-          someone else's money, but when multiple people wanted to take a loan,
-          that did not work out so well. So now they just create money out of
-          nothing and give it to you." According to this businessman, 1/20 of
-          bank income is from that. Most of it is not even third party donee
-          beneficiary in a contract, but outright counterfeit, not even
-          collateralizing -ex renovations!{space}
-          <a href="https://www.quora.com/How-much-of-commercial-banks-income-is-from-loans-without-deposits-and-how-much-is-from-savings-for-treasuries/answer/NICE-HVAC">
-            NICE HVAC's answer to How much of commercial banks’ income is from
-            loans without deposits and how much is from savings for treasuries
+          <a href="https://www.quora.com/unanswered/Can-leisure-utilization-economics-be-defined-as-marginal-utility-or-economic-welfare-per-capita-by-less-hours-and-less-price-as-it-happens">
+            Can leisure utilization (economics) be defined as marginal utility
+            or economic welfare per capita by less hours, and less price, as it
+            happens
           </a>
           ?
-        </div>
-        <br />
-        <a
-          href="https://www.quora.com/Are-non-voters-against-insurance/answer/Aidan-Griffin-29"
-          style={navitem}
-        >
-          <Cable
-            onError={handleScollImgError}
-            img={true}
-            src={
-              this.state.noyout
-                ? ""
-                : "https://www.dropbox.com/s/vxgy8nfzjlw71gv/Screen%20Shot%202022-05-04%20at%208.08.16%20AM.png?raw=1"
-            }
-            float={"right"}
-            title="https://www.quora.com/Why-doesnt-the-left-get-upset-with-the-racism-of-Karl-Marx/answer/Aidan-Griffin-29"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-        </a>
-        <a href="https://truncatedproductiontax.quora.com">Yes</a>, yet it can
-        also mean just letting up on quantitatively-targeting the household,
-        corporate, “non-profit,” and{space}
-        <b>checkable-deposit</b>
-        {space}borne coupon-ask, a bit.
-        <br />I hope that{space}
-        <b>time and savings-bonds/-deposits</b>
-        <br />
-        1. aren’t used in loans and
-        <br />
-        2. earn some of $600b/yr+ as one of the banks that lend from **something
-        other than{space}
-        <a href="https://federalreserve.quora.com/Why-are-some-economists-saying-that-Feds-acted-too-late-to-increase-interest-rate-Whats-going-to-happen-1">
-          deposits
-        </a>
-        .
-        <br />
-        <br />
-        Change in billions of GDP “
-        <a href="https://fred.stlouisfed.org/graph/?g=OQF5">value-adds</a>”
-        <br />
-        <br />
-        Unions income inequality SQUASHED by bond income COMPEL STRIKES BY BUYIN
-        HAZARD - pool-charge third party donee beneficiary
-        <br />
-        Value-added expense{space}
-        <a href="https://census.quora.com/Why-dont-people-reduce-overpopulation-1">
-          realwages.us
-        </a>
-        , "FCSU + FCSU *1.2 + mortgage living wage ={space}
-        <a href="https://quora.com/nickcarducci">$30k/yr</a>," Chris Hahn
-        <br />
-        It works and is voluntary, fallow tech, participate in program, parent
-        or grand- has to dual-enroll, A product of a teacher is their income,
-        {space}
-        <a href="https://nickcarducciforsenate.quora.com/">never physical</a>
-        <br />
-        <br />
-        Nick{space}
-        <a href="https://bacterium.quora.com/">Carducci</a>- BA in Political
-        Science & Economics, Johns Hopkins University (Graduated 2015)
-        <br />
-        What is the main{space}
-        <a href="https://census.quora.com/Whats-wrong-with-the-World-Economic-Forum-1">
-          problem
-        </a>
-        {space}of the USA in your opinion?
-        <br />
-        <a href="https://electiontechnology.quora.com/What-is-the-main-problem-of-the-USA-in-your-opinion-1">
-          GDP is “value-added”
-        </a>
-        <br />
-        <a href="https://phyletic.quora.com/Extortion-Duress-Plea-https-courttechnology-quora-com-Why-should-you-explain-what-you-need-1">
-          Self inflicted known hazards, programmatic convictions' customs
-        </a>
-        <br />
-        <br />
-        Malfeasance is complicity for login.gov private api now, convict
-        intranet with evidence - a witness is not available to acquit when no
-        evidence is available to guilt - 180–80; how will that help, is it
-        necessary?
-        <br />
-        <br />
-        Benedict Arnold would comport turncoats to ward treasury visa fees -
-        working age to boot -{space}
-        <a href="https://parcelpolice.quora.com/">illegals are good</a>.
-        <br />
-        <br />
-        Drain the Swamp means medicate the homeless, with a special
-        pharmaceutical for each crime.
-        <br />
-        <br />
-        Non-Voters, still hasn't voted, shuffle before extrapolated call, you
-        gotta want efficiency, not productivity of "value-added" real GDP/yr!
-        JACK DORSEY JAIL FOR LYING TO INVESTORS, disbursements vs fiduciary
-        <br />
-        <br />
-        "DOE 2023 tax-payers will reap the benefits of investments by the
-        treasury, and saves the consumers money, for efficient-energy, reaping
-        the benefits of technological advancement for treasury profit." - Frank
-        Pallone. Someone's gotta fucking do it,{space}
-        <a href="https://substitutivesupply.quora.com">faggot</a>.
-        <br />
-        <br />
-        "If I was in charge, I would have helicopters deporting. If we did that
-        enough, the migrant wave would end." - Rand Paul
-        <br />
-        <br />
-        "Inside-out-of-pocket inflation is only is stopped by{space}
-        <a href="https://realecon.quora.com/Why-is-efficiency-necessary-but-not-sufficient-for-economic-growth-1">
-          outside-of-pocket, government, structural
-        </a>
-        {space}and{space}
-        <a href="https://www.quora.com/Aside-from-trade-stimulating-economic-growth-which-is-good-for-employment">
-          nominal
-        </a>
-        {space}international trade recession, inflation leads to high recession
-        and unemployment."
-        <br />
-        <br />
-        “Germans will not stop buying Russian rig-rates out of the kindness of
-        their hearts.”
-        <br />“<a href="https://thumbprint.quora.com">We ha</a>..”
-        <br />
-        <br />
-        Use Tranquility as grounds and with reason of efficiency, for hypocrisy
-        and discrimination
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/9d1eyexy19d5l3h/Screen%20Shot%202022-04-27%20at%2010.23.15%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="v8 engine - https://github.com/NickCarducci/mastercard-backbank"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-          iframe={{
-            frameBorder: "0",
-            allowFullScreen: "",
-            allow:
-              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          }}
-        />
-        1/3 non-vote shows{/**precludes, holds no candle to */} nothing for
-        value-added of "old-school fraudulent votes."{/**Dinesh Desouza */}.
-        Shuffle before extrapolation?{/**name? 2000mules.com */}
-        <br />
-        <br />
-        Are you willing to pay for outside-of-pocket, government and structure
-        real GDP/yr?
-        <br />
-        Transitory won't make unemployment.
-        <br />
-        Money in pockets, people in jobs, resources in order to move forward
-        <br />
-        <br />
-        Why is foreign trade unruly? Every government spending is contracting?
-        Khasicstan China. Retirement reform that Macron wants to bring is not
-        Conservative. Guilty of business old age delinquent 48% and anti-social
-        35%. Guilty of business
-        <br />
-        <br />
-        Pioneer legit Greenfield value added tech advancement should DEPRECIATE
-        <br />
-        tough guy, get a pat on the head. impovershment all around, less income
-        than a third despondency of expenses, AND AFTER, real wages all expense
-        1/hour-GDP/p. Third party donee beneficiary, by
-        {space}
-        <b>volume, or abject debit larceny?</b>
-        {space}
-        Totally without conflict of interest if held to a new plane? That plane
-        was on its last leg, warranty and guarantee is my bid.
-        <br />
-        Can't have my users promise anothers users' tings.
-        <br />
-        "Terrorists" label cannot be a pretense to fire and discriminate, taking
-        law into their own hands. 'value-added' expiring premiums save money?
-        rollover, orthopedic surgeon will getcha the schizo-bipolar label
-        <h4>
-          "smart fight, accross the board, we want improvement," - school is IN!
-        </h4>
-        Michael Bloomberg $15m/schools k-12 for teachers/kids' lost time,
-        internships for our youngsters, creative, thoughtful, aggressive. Keep
-        kids in school 3-7pm to 'ensure they are not in any trouble.'" NY
-        Republicans, 7% Dems, the rest non-voters, I am proud to represent the
-        people that do not like any of you, John Catsimitidis, drop dead!
-        <br />
-        I'm trying to buy a home, so I will prevent you from mortgaging on my
-        surrendered freedom to bid as a third party donee beneficiary. The next
-        Republican to tell me "value-added" healthcare insurance expiring
-        premium + gov + implausiuble use lease beyond 5 stores and condos
-        strunctures will stop inside-out-of-pocket inflation...{space}
-        <span>
-          <a href="https://qr.ae/pvsL4p">
-            Did the Federal Reserve admit that inflation is caused by debt?
-          </a>
-        </span>
-        <br />
-        <br />
-        Menendez is pro-insurance and invoice.{space}
-        <a href="https://qr.ae/pvsdaH">I will ban them</a>.
-        <br />
-        <Cable
-          style={{ height: "380px", width: "300px" }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://open.spotify.com/embed/track/4P5KoWXOxwuobLmHXLMobV"
-          }
-          float={"right"}
-          title="come as you are"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-          iframe={{
-            frameBorder: "0",
-            allowFullScreen: "",
-            allow:
-              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          }}
-        />
-        Corporate profit widfall debentures
-        <br />
-        Other side of the coin, (BEA value added share of GDP ascertainable
-        damage ?){space}
-        <a href="https://census.quora.com">m2 home</a>
-        <h4>
-          <a href="https://www.facebook.com/groups/opengovgroup/permalink/3224415224456718/">
-            Open Government - By “real” growth, do you mean standardized
-            guarantee schemes, government spending, and structures for leases?
-          </a>
-        </h4>
-        I'm injured but they call me schizophrenic-bipolar because equal and
-        opposite reaction, bid whom takes ask; 35.4% anti-social, 5.2%
-        non-speaking autistic and downs, nearly 48% old muskuloskeletal, 7%
-        injured
-        <br />
-        <a href="https://www.quora.com/unanswered/Can-you-claim-someone-s-mortgaged-home-by-third-party-donee-beneficiary">
-          Can you claim someone’s mortgaged-home by third party donee
-          beneficiary?
-        </a>
-        <br />
-        <a href="https://anticommunism.quora.com/Does-communism-preach-hatred-of-certain-groups-3">
-          Hate from communists
-        </a>
-        <br />
-        Vaccines work, virus is alive, where is your proof?{space}
-        <a href="https://qr.ae/pvshas">Just because you found it</a>?<br />
-        <h3
-          style={{
-            float: "right",
-            backgroundColor: "black",
-            color: "white",
-            borderRadius: "10px",
-            margin: "10px",
-            padding: "10px"
-          }}
-        >
-          AOC stopped labor surplus amazon stock
-        </h3>
-        <a href="https://qr.ae/pvsh8q">anon</a>
-        {space}business income
-        <br />
-        income as a "non profit"{space}
-        <a href="https://nextdoor.com/p/kgbkJZqx285M/c/750954594?utm_source=share">
-          service
-        </a>
-        <br />
-        cors NFC Motor Vehicle{space}
-        <a href="https://qr.ae/pvsGDH">intranet</a>
-        {space}will 100% filter out bad eggs, mal-intentioned, as it were. 3%
-        under $2k
-        <h4>
-          Acquit judges of appeal fines and hysterical claim whistleblower
-        </h4>
-        subsidies (gentrification) can create a lot of jobs for surplus value or
-        -science/skew, zero-sum science, mining and design loss.
-        <br />
-        income after expenses real wage, rose 350k, ons 9 years last largest
-        fall in real child poverty (less than a third of expenses-nationally,
-        income).
-        <br />
-        <h3
-          style={{
-            float: "left",
-            backgroundColor: "black",
-            color: "white",
-            borderTopRightRadius: "10px",
-            margin: "10px",
-            padding: "10px",
-            marginBottom: "0px",
-            marginLeft: "0px"
-          }}
-        >
-          Royaly%/consumer
-        </h3>
-        In house duress... mvp duress non-compete
-        {space}
-        <a href="https://qr.ae/pvsGuI">cornering</a>
-        <br />
-        I’m no expert, I won’t pretend, I have people onnnnnn. I put people on
-        <br />
-        <a href="https://qr.ae/pvsGu5">
-          <Cable
-            onError={handleScollImgError}
-            img={true}
-            src={
-              this.state.noyout
-                ? ""
-                : "https://www.dropbox.com/s/xqlukof0wi27g4q/Screen%20Shot%202022-04-12%20at%204.33.17%20AM.png?raw=1"
-            }
-            float={"left"}
-            title="Econ Zealot 15 yr old"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-        </a>
-        <h4>
-          reverse amortization - (cash/debt)*income, fines for no resolution?
-          hysterical known hazard{space}
-          <a href="https://qr.ae/pvsG50">claims</a>, bond loss profit - per diem
-          incarceration
-        </h4>
-        Don't{space}
-        <a href="https://qr.ae/pvsGkP">reneg</a>
-        {space}on debt for producers keep credit.
-        <br />
-        Deal is a{space}
-        <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
-          deal
-        </a>
-        {space}in my book,{/**Chris */}
-        <br />
-        Kids don't need{space}
-        <a href="https://qr.ae/pvsGqs">services</a>, you need to stop{space}
-        <a href="https://qr.ae/pvsGqi">taking</a>. Kids should be at work.
-        {space}
-        laborless-income.
-        <br />
-        Viruses tend to spread faster on what{space}
-        <a href="https://qr.ae/pvsTGZ">evidence</a>? You just claim virus
-        inseminates cell by presentation, non-exclusive or asymptomatic, you
-        fucking choose{space}
-        <a href="https://www.quora.com/What-is-schizo-economics">retard</a>
-        <br />
-        <br />
-        Inequality literally{space}
-        <a href="https://qr.ae/pvs1Sy">
-          shouldn't happen, these are averages over time, not upwardand downward
-          moving individuals
-        </a>
-        {space}working for a living-surplus for leisure. -science/skew is zero
-        sum, inventory form is not substitutive-supply by mining or design
-        <h4>
-          <a href="https://qr.ae/pvs1ZD">
-            rollover hysterical expiring-premium-insurance claims
-          </a>
-          , brown
-        </h4>
-        <h3
-          style={{
-            float: "right",
-            backgroundColor: "black",
-            color: "white",
-            borderRadius: "10px",
-            margin: "10px",
-            padding: "10px"
-          }}
-        >
-          messy{space}
-          <a
-            href="https://repealbakeract.quora.com/"
-            style={{ color: "white" }}
-          >
-            hair
-          </a>
-          {space}frivalous malfeasance
-        </h3>
-        -bitch (Yasmeen Memon, MD; Long Branch, NJ)
-        <br />
-        is{space}
-        <a href="https://www.njconsumeraffairs.gov/statutes/consumer-fraud-act.pdf">
-          this
-        </a>
-        {space}not oxymoronic?
-        <br />
-        <br />
-        <span role="img" aria-label="construction-tan">
-          👷🏽‍♂
-        </span>
-        <a href="https://saverparty.xyz/global">
-          india, the worlds, 6th largest national economy
-        </a>
-        <br />
-        <span role="img" aria-label="timer">
-          ⏲
-        </span>
-        (?)56:8-74. Warranty given as a matter of law
-        <br />
-        If a dealer fails to give a written warranty required by this act, the
-        dealer nevertheless shall be deemed to have given the warranty as a
-        matter of law, unless a waiver has been signed by the consumer in
-        accordance with section 7 of this act.
-        <br />
-        L.1995,c.373,s.8.
-        <br />
-        <span role="img" aria-label="construction-worker">
-          👷‍♂️
-        </span>{" "}
-        56:8-106 Immunity from liability for third party, exception
-        <br />
-        A third party shall not be liable for an unlawful practice under section
-        2 of this act unless there was an agency relationship between the person
-        who engaged in the home solicitation and the third party.
-        <br />
-        L.2000,c.125,s.3.
-        <br />
-        <br />
-        What is something that you just realized? Obamacare doesn't actually
-        save money, it targets mean inflation off non-substitutive-supply (
-        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
-          hysterical
-        </a>
-        {space}pool, implausible invoice, surrendered bid)
-        <br />
-        <h3
-          style={{
-            float: "left",
-            backgroundColor: "black",
-            color: "white",
-            borderRadius: "10px",
-            margin: "10px",
-            padding: "10px"
-          }}
-        >
-          <a href="https://qr.ae/pvshbL" style={{ color: "white" }}>
-            Warranty
-          </a>
-          {space}is implicitly a surrendered bid
-        </h3>
-        stop (<a href="https://qr.ae/pvs1wB">hysterical-</a>) scapegoating
-        {space}
-        <a href="https://repealbakeract.quora.com/">pervert</a>. sliwa, do you
-        want to{space}
-        <a href="https://pubmed.ncbi.nlm.nih.gov/12049024/">watch</a>?<br />
-        PCE-CPI is an ascertainable loss to economic welfare, 1/hour-GDP/p,
-        efficiency. "We need demand for our products," we need substitutable
-        supply, exports for Roubles, state-lands, rig-rates royalty% local
-        consensus permit wastewater NWP12
-        <br />
-        <br />
-        "Half the returns are from interest, not capital gains," Payne Capital
-        Management
-        <h4>
-          <a href="https://www.fbi.gov/file-repository/2020-ncic-missing-person-and-unidentified-person-statistics.pdf/view">
-            Kiddie trafficking
-          </a>
-          {space}and NFC Motor Vehicle liable
-        </h4>
-        <a href="https://humanharvest.info/polio">Covid</a>
-        {space}
-        <a href="https://qr.ae/pvKju9">protection</a>
-        {space}or go back, mass illegal{space}
-        <a href="https://vaults.biz/immi">immigrations</a>, they could have at
-        least used Title 42 as a scapegoat, he gutted all protections that
-        protected us from competitive commerce substitutive supply for
-        labor-demand of other markets and economic welfare, 1/hour-GDP/p
-        {space}
-        <a href="https://teapharmacy.party/drugs">
-          fentanyl 2013-15 demand refinery
-        </a>
-        .
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/o82ytz5hq42cq9c/Screen%20Shot%202022-04-08%20at%204.57.25%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Daily Wire"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h3>
-          You can check id but you cannot prevent commerce with treasury fees,
-          you haven’t even inseminated cell,{space}
-          <a href="https://saverparty.xyz/racists">spic</a>
-        </h3>
-        Population growth is 1%/yr+, even if supply is not substitutive by
-        labor-demand, the cause of price rises 5%/yr+ is obviously because of
-        {space}
-        <a href="https://realecon.quora.com">5%APR</a>
-        {space}20 yr mortgage. Communism prohibits leasing inventory, must sell
-        outright to not infringe on others rights, labor-borne.
-        <br />
-        <br />
-        Jeffrey Burney - people are cold homeless and hungry under communism.
-        And also under most communist systems ownership of private property is
-        banned so owning your own home you couldn’t do that legally￼
-        <br />
-        <br />
-        Communism deprives no man of the power to appropriate the products of
-        society; all that it does is to deprive him of the power to subjugate
-        the labour of others by means of such appropriations.
-        <br />
-        <br />
-        Jeffrey Burney - And who enforces those laws if it deprives no man of
-        power?
-        <br />
-        <br />
-        in contract law, you aren’t allowed to invoke a third party donee
-        beneficiary. Please, if you think stealing in contract is ok, leave me
-        alone
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/dfhn4x10zmbsnpl/Screen%20Shot%202022-04-08%20at%204.26.43%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="Newsmax"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        “Imagine what could have been done with $6m to buy food for black
-        communities.” Is what the right is concerned about instead of suspending
-        larceny in contract
-        <h4>
-          "<a href="https://qr.ae/pvKzFP">Are you an economist?</a>" no for I am
-          {space}
-          <a href="https://qr.ae/pvKzoA">diligent</a>:{space}
-          <a href="https://qr.ae/pvKzoO">Giffen goods are for rounding</a>.
-          Estimates until negative margin.
-        </h4>
-        <a href="https://qr.ae/pvKzKY">$400 average</a>, copy and mortgage or
-        loose inventory debenture o' corporate or treasury
-        <br />
-        <br />
-        46m student loan, 27x less own a business, locker room talk uh uh uh
-        (the people that don’t support the war likely fled the country, look,
-        they closed instagram, YouTube, these people don’t want to be part of
-        the info, but they cannot really hide it.
-        <h1>A hysterical claim benefits team</h1>
-        We know sewage is cross ref US-India age at death
-        <h2>
-          They cancel debt without collateral because that is the only way
-          lenders get{space}
-          <a href="https://quora.com/nickcarducci">paid</a>.
-        </h2>
-        "Provide charter schools, not public schools, D.C. teachers' union bond
-        income secession" - "Sitwell Friends Aca"
-        <br />
-        Steve: “Philosophy clarifying disease KBJ etymology define women Anomic
-        aphasia.”
-        <br />
-        GK: "That was an ideology sir, not a defect,
-        <br />
-        'Man,' Xavier Bacerra could’ve, too.
-        <br />
-        Here, first blush, 'Produce eggs or give birth and constitutionally
-        designed for caring and nurturing. Hormones goes either way.'
-        <h1>substitutive-supply: you should say inventory, dunce</h1>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/a58xc54z756k4cc/Screen%20Shot%202022-04-07%20at%2012.53.12%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Oil yahoo finance congressional "
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h1>
-          “Bioengineered virus, no sanctions, is criminal.” Charlie Kirk, Never
-          have we proven virus is even correlated let alone inseminate a cell
-        </h1>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/2fxg219cecun0ue/Screen%20Shot%202022-04-07%20at%2012.17.27%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="Newsmax - Imports are a wash and if not tape-painting it is only so for lower prices per barrel, it is cheaper labor abroad and that surmounts any repatriation effects of self-harm inflation by printing for what is left of $1.8t/yr debt spending and $2t currency outside fed banks and checking (before 3/2020, now checking +$5t more)"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        51% tax on sports betting in NY absurd. That really{space}
-        <a href="https://qr.ae/pvKVEM">prevents</a>
-        {space}market
-        <a href="https://qr.ae/pvKVBs">liquidity</a>. We need truncated
-        production tax to abide by equal Article 1.8 bond-tax and trust-break
-        the treasury. 3% under $2k geohash/month + 2 week public review naming
-        and open source
-        <br />
-        <br />
-        <a href="https://quora.com/nickcarducci">
-          A topic is not a publication
-        </a>
-        , that which is under the same guise as a newsfeed, that which would
-        have to pay writers or exchange said non-descriptive title, that which
-        is subject to peer review.
-        <h4>
-          All my friends work for banks; attorneys never finish the job; sales
-          won't mention competition for moat
-        </h4>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/5m39d7dr0owsxl8/Screen%20Shot%202022-04-06%20at%209.58.41%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="GBNews"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "What is the profit difference between what goods are sold for and what
-        they actually cost to make? Marxism refers to as a 'surplus profit.'"
-        <br />
-        Alexandra Engle - Go read Adam Smith. He defined it before Marx and in
-        this instance of surplus profit [division of labor - comparative
-        advantage - skills trading - nationalistic-retardation], Marx's ideals
-        and theory fail miserably in application. No communist country has ever
-        increased the wages of the state employees because they profited more.
-        They shoved it in their pockets and made a very select few rich.
-        <br />
-        Nick Carducci - Communism deprives no man of the power to appropriate
-        the products of society; all that it does is to deprive him of the power
-        to subjugate the labour of others by means of such appropriations.
-        <br />
-        <br />
-        Alexandra Engle - Exactly my point. Marx's idea failed. The USSR meant
-        that Stalin and a select few subjugated everyone else's labor. In North
-        Korea, not a select few but a family, more dynasty than Marx's concept.
-        China? Ditto until they decided to open up their economy to the global
-        economy, and even then Jack Ma paid the price of flying too high.
-        <br />
-        Thanks for quoting only to prove my point.
-        <br />
-        <br />
-        Nick Carducci - Vulgar socialism (and from it in turn a section of the
-        democrats) has taken over distribution as production[, not
-        productive-ward]. After the real relation has long been made clear, why
-        retrogress again?
-        <br />
-        <br />
-        Marx was dead by then, never the governor.
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/i2gdhv2so3a4i4p/Screen%20Shot%202022-04-06%20at%208.54.16%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="GBNews"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h3>"14 employees, not bad"</h3>
-        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        "Why do people ignore the really good economic news on growth and
-        unemployment and are obsessed with only inflation?"
-        <br />
-        GDP and “unemployment” are metrics for expenses and less hours worked
-        <br />
-        consider that the economists in charge of quora moderation cannot get
-        their story straight on what unemployment and inflation means
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/w43q5w74w575vu9/Screen%20Shot%202022-04-06%20at%208.45.18%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="GBNews"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Taxes for the last price rise is woefully inadequete." What the actual
-        fuck Adam
-        <br />
-        <br />
-        Asymptomatic testing has{space}
-        <a href="https://qr.ae/pvKP1x">proven noncorrelation</a>,
-        immunocompromised CDC says lymphoma onconogenic, "no-problem."
-        <br />
-        Compound estimates cannot garner more than over negative margin
-        <h2>
-          "Something is guaranteed to break, so you need CarShield," Bill
-          O'Reilly to pool money together to make prices hysterical
-          {/**PCE-CPI gain or loss? Getting away with murder*/}
-        </h2>
-        "They knew what they were doing when they were taking out the loan,"
-        Bernie McGerk, it is{space}
-        <span style={{ color: "purple" }}>
-          (“A loan system where they are effectively forced to borrow money,”
-          Liam Halligan - 4/6/2022), foreseeable impossibility, and larceny in
-          contract
-        </span>
-        . "The ones that really need it, they can get 'loans,'"
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/2anogwle61sgfv3/Screen%20Shot%202022-04-06%20at%207.49.40%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="Newsmax"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Megan Kelly, loans have collateral bitch, and lending is not necessary
-        for anyone, they always{space}
-        <span style={{ color: "purple" }}>
-          prevent negotiating of starving producers
-        </span>
-        and{space}
-        <span style={{ color: "purple" }}>
-          makes a moat of -science/skew trade secrets
-        </span>
-        , yet max-royalty can work instead, vertical induatry line revenue
-        skimping totious, and (cash/invoices)*income
-        <br />
-        <br />
-        Open the borders! Stop via fees? Labor shortage?{space}
-        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
-          Most Americans do not like any insurance
-        </a>
-        . Substitution of labor-demand of other markets is not to be prevented
-        by hysterical claims for invoices, surrendered freedom to bid, another
-        larceny in contract, for third party donee beneficiary
-        <br />
-        <br />
-        How about a financial system that Saves the dollar?, Mark Steyn??
-        <h1>
-          “Sex attack, awkwardness, is kept in rubber room.” Rudy Giuliani
-        </h1>
-        evidence should be immediate or aquit.
-        <br />
-        "The able Ashlene McDonough, this hearing is adjourned." In reference to
-        old-age delinquency known hazard disability. what were they doing when
-        they were able, gambling their savings? or is it because you are
-        malfeasant in preventing larceny in contract mortgages of labor-borne
-        demand, not hysterical invoices? Also in reference to presumption that
-        someone is hireable for something they've never been hired to do. I have
-        applied to thousands of applications and they are more willing to cite
-        my mental acuity as non-hireable than my actual laceration, the bitches
-        call the divot a scar, that is by definition skin alone, and if not,
-        that is the point! Stop giving 35.4% OCD disability! 5.2% are actually
-        tarded.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/ex2rn28axlfd4bq/Screen%20Shot%202022-04-05%20at%203.07.20%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Marx said Communism forces sales outright, never lessing inventory,
-        certainly PCE-CPI ascertainable, estimate down by negative margin, nor
-        beyond plausible use of 5 stores and condos per rental-income
-        account-payable.
-        <br />
-        You are the nut, GDP/hour and non-rollover insurance is bizarre and
-        illegal by EULA standards
-        <br />
-        trauma is a known hazard, stop hysterical claims
-        <br />
-        how is a voluntary action a disorder? even hysteria is rational
-        <br />
-        opiate and drug dependency in tribal and rural entertainment
-        <h1>"Don’t accept Putin as an adequate person, he has no self-care"</h1>
-        <h3>
-          Ween cops off bond loss profit; involuntary support address whose
-          issues? Bipartisan Summer Hour Prevention Treatment and Recovery act,
-          funded support without voluntary customers, "ive seen traumatized
-          families," they cannot force treatment either, even if they ;ay for it
-        </h3>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/5ff6zxjoyoppstc/Screen%20Shot%202022-04-05%20at%203.01.34%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        domestic violence is not because of brains, especially if you admit
-        change-rate between lockdown and non
-        <h1>Open the border</h1>
-        Vote Saver party{space}
-        <span role="img" aria-label="bottom-left white-circle squirrel">
-          ↙️⚪️🐿
-        </span>
-        {space}
-        to reverse the general fund (cash/invoices)*income. Old people are
-        delinquent, 35.4% OCD SSA FRAUD
-        <br />
-        Revenue skimp vertical industry line can replace future debt relations
-        <br />
-        <br />
-        All cause (?) time is a great healer
-        <br />
-        $5t in “fed banks,” whatever that means, $2t outside = $3t household top
-        50%, $2t corporate, $1.5t “non-profit?”
-        <br />
-        Reverse it don’t let universities keep
-        <h3>you exaserbated income inequality after expenses</h3>
-        Bottom 50% after expenses have $200b/$7t checking, after $5t pandemic
-        checking mortgage
-        <h4>
-          <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
-            Most Americans do not like any insurance
-          </a>
-        </h4>
-        What does $2t currency and checking "outside fed banks" even mean? Who
-        are these people with $5t in fed banks? how does $2t outside checking,
-        currency, make for $21t GDP/yr? PCE-CPI certain loss!
-        <h1>taxes for invoices</h1>
-        Corporates will now fuck 2010 profit balance for shareholders, watch.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/10qjfxcmbqqb3l9/Screen%20Shot%202022-04-05%20at%202.06.52%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Obama ACA Newsmax"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Medicare original didn't provide all the benefits that it does today,"
-        advancement -GDP/p claiming credit?
-        <br />
-        “Denying coverage based on labor-bid rights over hysterical claims on
-        expiring premiums.” Pay for prescriptions, fall through cracks, working
-        families pay for coverage. As part of the American Rescue Plan he made
-        it affordable to buy healthcare." $5t after expenses went to the filthy
-        rich, $1.5t "non-profit" ...not, $2t corporate, $3t top 50%, $200b
-        bottom (launder debt)
-        <br />
-        <br />
-        GDP/hour is productivity is bizarre; standardized hysterical claims,
-        taxes for invoices, how about surrendered freedom (EULA) to bid for
-        economic welfare, 1/hour-GDP/p? Starve the suppliers so they lower costs
-        instead, you nut. PCE-CPI insurance certain loss, prescriptions for
-        naming and open source, why at all. Reverse the general fund,
-        (cash/invoices)*income; Tranquil and voluntary trade Article 1.8
-        oxymoronic bond-tax (out of scope trust breaking hypocrisy, free rider
-        mutable laborless-demand and gentrification instead of streamlining
-        labor-equity?
-        <h2>Older American delinquency by gaming - kill them all</h2>
-        Samsa as a function of pandemic (500k/yr excess is less than expected,
-        and any change per single-year death rate is significant with n=2019-20
-        sample{"<"}100 devoid of meaning)
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/nhhrb2alcpishzf/Screen%20Shot%202022-04-05%20at%201.20.47%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        “Rural access to mental health service is such a challenge,” for a
-        reason, because you have prescriptions instead of open source and naming
-        producers, any consumer surrogate investor shouldn’t generate income for
-        monopoly government, that includes non-profits monopsony/gentrification
-        (max-royalty industry-vertical line NAICS, no more
-        counterfeit/larceny/licensures nor kinky animal testing)
-        <h3>The economics (or lack thereof) of pharmacies</h3>
-        “Individuals struggling with substance use.” Leave us alone, bitch, if
-        we use we don’t struggle, we like it. You still arrest and fine for DUI
-        with weed when daily use and accidet shows same presentation? We can all
-        concentrate with cocaine, and{space}
-        <a href="https://teapharmacy.party/drugs">fentanyl</a>
-        {space}is useful if you would just resist trust breaking hypocrisy of
-        FDA/USPTO/NIH for less economic welfare, 1/hour-GDP/p by division of
-        labor comparative advantage.
-        <br />
-        <br />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/jtqglqlpcek4jvk/Screen%20Shot%202022-04-05%20at%201.04.35%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h1>
-          people{space}
-          <a href="https://2024nj.com/nypd">murder and steal for money</a>, stop
-          scapegoating your poor stewardship of labor-equity on people's brains
-          or voluntary drug use, or will to die after definancialization
-          (cash/debt)*income, geohash/month + 2 week public review truncated
-          production tax & 1/12 vertical line revenue skimping
-        </h1>
-        "We must invest in prevention strategies and suicide efforts." Oh yeah?
-        D.A.R.E. showed MORE voluntary drug use
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/dkafbx0wnvuagcz/Screen%20Shot%202022-04-05%20at%201.13.59%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        We know a lot more than we did before. In fact, the Surgeon General says
-        that the lockdown have had a devastating impact on [self-reported??? Or
-        involuntary committment for prejudice of “he pushed me.”] whistleblowers
-        of standardized hysterical claims of expiring premiums laborless demand
-        invoice surrendered bid, now!
-        <br />
-        "What is being done to ensure mental health and substance abuse
-        disorders that resulted from madated school closures (timing but
-        all-cause? artifact is not scientific, need CT scan exclusive cause, at
-        least)
-        <br />
-        <br />
-        Why would you not allow me to do my own physical therapy? Brett
-        (RiverviewMdCtr treating muscle laceration with slander, with messy hair
-        diagnosis and rollover insurance relenting?) was a waste of space
-        <h1>
-          this pussy condones 35.4% disability awards for anti-social,
-          age(delinquency/gaming) and obesity (25% of 19% of 19% honest)
-        </h1>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/m6lyghhrgzchz83/Screen%20Shot%202022-04-05%20at%2012.51.37%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Physicians and mental health professionals must face these issues," we
-        are voluntary-users! Leave us alone, creep!
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/myajowrgkx0hrj8/Screen%20Shot%202022-04-05%20at%2012.42.32%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        “Well-being is important to be in school and that has been a priority
-        for NIH.”
-        <br />
-        Doesn’t sound very scientific. Education pays, but it isn’t required.
-        Trade-secret job farm - indoctrinating misinformation like{space}
-        <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
-          GDP/hour
-        </a>
-        {space}is a measure of productivity, or that{space}
-        <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
-          providers'
-        </a>
-        {space}
-        <a href="https://realecon.quora.com">certain loss</a>
-        {space}helps
-        <h1>
-          Free Britney, increase economic welfare,{space}
-          <a href="https://realecon.quora.com">1/hour-GDP/p</a>.{space}
-          <a href="https://www.bls.gov/spotlight/2011/schools_out/">
-            School is in*
-          </a>
-        </h1>
-        Payee needs management to net worth concurrentable negative over
-        personal debt with no collateral? Discover, Citi, Wells Fargo, and Chase
-        are IDIOTS for it. No better than Floyd
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/x6dihu6c476myvq/Screen%20Shot%202022-04-05%20at%2012.37.48%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Barriers to{space}
-        <a href="https://courttechnology.quora.com">Reimbursing</a>
-        {space}providers," and $5t checking mortgages 50-90%, 90-99%, 1%,
-        501(c)(3) (?), corporate, and $200b for bottom 50%, but you lowered
-        poverty, after expenses, right?
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/yuy69o77cee3lkj/Screen%20Shot%202022-04-05%20at%2012.19.25%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h1>
-          Opiod Use and Disorder Act: How to run a{space}
-          <a href="https://teapharmacy.party/drugs">government drug cartel</a>
-        </h1>
-        <h4>
-          "suicide by mental health conditions, a statistic I want to change,"
-          leading cause of death and disability is actually gluttony. mandate
-          preg test for fatties, today
-        </h4>
-        Need assistance at the community level (involuntary "crisis support"
-        intervention) But 65% mortgage and loiter, so I can "
-        <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
-          trespass
-        </a>
-        ."
-        <br />
-        <br />
-        Rural (TARGET MARGIN CUSTOMER SURROGATE BY VERTICAL LINE SKIMPING, no
-        more direct loan nor loose collateral but for (cash/debt)*income naked
-        swimmers
-        <br />
-        teletherapist and psychiatric prescription commerce prevention with NFC
-        Motor Vehicle naming and open source + 2 week public review
-        <h1>a disorder without an unknown hazard</h1>
-        "We would like to concentrate on{space}
-        <a href="https://youtu.be/WlSVwRaO-iQ?t=559">
-          housing people with substance usage
-        </a>
-        {space}
-        beyond vig for doctor"
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/p443pperkposxo1/Screen%20Shot%202022-04-05%20at%2012.01.01%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h1>
-          Emotional disturbance and OCD is fraudulent disability; homelessness
-          is because of LESSING NEVER OUTRIGHT sales, prescription preventing
-          commerce; drugs are used because WE LIKE THEM - name and open source
-          fentanyl dealers for purity (DO NOT BAN VOLUNTARY ACTION WITH
-          PREJUDICIAL HARM, real standing notwithstanding)
-        </h1>
-        If someone wants to use opiods with known hazards, fucking let them, you
-        don't need to scapegoat for reason to have healthcare records obliged by
-        Access to data inherently-required
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/m2gkk8l3kq2ws4k/Screen%20Shot%202022-04-05%20at%2011.48.55%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        $5m/ school-based health center gentrification, primary-care in
-        accessible location, $25m 125 awards to hospital funds, if there is no
-        labor-demand, there is no labor-borne-demand, 1/hour-GDP/p, just
-        busy-work in higher prices, 1y/-1x. This is Economics 101
-        <br />
-        <br />
-        Substance use disorders, how is that scientific if it is voluntary and
-        you have no cause but their free will, with no victim to boot
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/ybrl4geio25zmea/Screen%20Shot%202022-04-05%20at%2011.44.10%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h1>You will watch me do fentanyl, faggot</h1>
-        family-based critical approach, non-compete payee mortgage loitering
-        spending larceny in contract over surrendered freedom (EULA) is due for
-        mediation and malfeasance for violent-insurrection.
-        <br />
-        involuntary intervention is what wwe need by our own decisions, you
-        absolute cunt.
-        <br />
-        <br />
-        Substance use crisis because of pandemic or lacing marijuana and
-        heroine? 501(c)(3) can hold assets year to year or not? I'm going to
-        kill John Sarbines for starving people of substituting for supply by
-        labor-demand of other markets.
-        <br />
-        <br />
-        behaviorial and substance use (
-        <a href="https://truncatedsalestax.com/gov">INVOLUNTARY COMMITMENT</a>
-        {space}FOR TRESPASS ON IMPLAUSIBLE USE LEASE AND STANDARDIZED HYSTERICAL
-        CLAIMS), or government-pharmacy-cartel-debenture due for carfacing
-        {space}
-        <a href="https://billbiden.org">the President</a>?<br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/gzmg9alrysup6bt/Screen%20Shot%202022-04-05%20at%2011.33.40%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="'Communities in Need: Legislation to Support Mental Health and Well-Being' (Youtube) Energy and Commerce Committee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Standardized prescription guarantee FDA/USPTO/NIH self-dealing.
-        Mental-health (21) bipartisan (60/100) bills, $1b/yr 2014-2016, we paid
-        for it with offsets, with someone interested in Tesla over Twitter.
-        People on the strets has nothing to do with mental health, that is
-        subjective as to what{space}
-        <a href="https://">qualifies</a>
-        {space}healthy, for we can all concentrate with cocaine; they claim
-        marijuana and heroine lacing contributes to the deaths of{space}
-        <a href="https://teapharmacy.party/drugs">fentanyl</a>, so then
-        dismantle FDA/USPTO/NIH and name and open source
-        <br />
-        <br />
-        1/hour-<a href="https://vaults.biz/gdp">GDP/p</a>
-        {space}is[ my equation for]{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=NSCH">economic welfare</a>
-        <br />
-        <br />
-        "charging stations is not for poor people," because of{space}
-        <span style={{ color: "purple" }}>upgrade costs</span>. estimates down
-        good until margins are negative then we move on, direct loan by vertical
-        line skimping instead of debenture{space}
-        <span style={{ color: "purple" }}>washing</span>, but trasaction fee
-        naming and open source, conscription especially bond loss profit is war
-        crime, especially if it washes.
-        <br />
-        How many? Put it on a chart for both Russian and Ukrainian deaths? Don’t
-        need to castrate pedo just allow e2e on device for intranet NFC Motor
-        Vehicle bridge toll
-        <h1>
-          How can you trust them after $5t only $200b for bottom 50% over $2t
-          debenture of treasury
-        </h1>
-        {space}
-        <span style={{ color: "purple" }}>
-          debenture income non-fungible debit-share
-        </span>
-        {space}fraud, 501(c)(3) 3yr consecutive account fraud
-        <br />
-        <div style={{ borderLeft: "3px solid", marginLeft: "4px" }}>
-          For most organizations, an activity is an unrelated business (and
-          subject to unrelated business income tax) if it meets three
-          requirements:
           <br />
-          <br />
-          It is a trade or business,
-          <br />
-          It is regularly carried on, and
-          <br />
-          It is not substantially related to furthering the exempt purpose of
-          the organization. There are, however, a number of modifications,
-          exclusions, and exceptions to the general definition of unrelated
-          business income.
-        </div>
-        <h4>
-          What about profits on{space}
-          <a href="https://www.irs.gov/charities-non-profits/unrelated-business-income-tax">
-            Related Business
-          </a>
-          {space}beyond margin?
-        </h4>
-        {/*Select words dragon on the ground - plattitudes */}
-        -science/skew{space}
-        <span role="img" aria-label="shrug">
-          🤷🏽‍♂️
-        </span>
-        {/**elon shrugs about debt */ space}
-        how $4b with no cash and $500b?{space}
-        <span role="img" aria-label="shrug">
-          🤷🏽‍♂️
-        </span>
-        {space}pitfall all Messy hair{space}
-        <a href="https://saverparty.xyz/racists">racism</a>.{space}
-        <span role="img" aria-label="bottom-left white-circle squirrel">
-          ↙️⚪️🐿
-        </span>
-        Saver is for{space}
-        <a href="https://vaults.biz/immi">open borders</a>.
-        <h4>
-          The Treasury cannot afford it, other than legal tort, why can’t the
-          Federal Reserve? $1.8t/yr debt spending $2t currency outside fed banks
-          sufficed 2010–3/2020, already ridiculous.
-        </h4>
-        “On the autism spectrum learning to speak.” Lee Zeldin has never met an
-        Autistic person, there is communication but a large portion cannot talk.
-        How wide is the spectrum? Any studderer? Anyone who cannot have income
-        equality? We must have quality skew, for at least appreciating
-        utiliuty/indifference quality, won't you?
-        <br />
-        Nonconcurrentable collateral
-        <br />
-        If Ukraine supplies 70% of EU's grain-inventory, cannot they{space}
-        <a href="https://nextdoor.com/g/b5t1jo2tp/">
-          share split their Hrynvia
-        </a>
-        {space}("pussy!") ?
-        <h4>
-          Wouldn't it be nice if we had self-care and{space}
-          <a href="https://markethistory.quora.com">
-            housing without medicating
+          <a href="https://www.quora.com/unanswered/Is-Corpus-Linguistics-division-of-labors-efficiency-the-reason-for-all-laws">
+            Is Corpus Linguistics' division of labor's efficiency the reason for
+            all laws
           </a>
           ?
-        </h4>
-        {/*"not a criminal if it isn't their gun," Thanks for joining us*/}
-        Crime is because of larceny in contract and pharmacy, “our way of life.”
-        <h4>
-          'We are already facing and unpr. incr. in migrants/yr, and it will
-          only get worse if the Admin ends virus scapegoating'
-        </h4>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          style={{ width: "100%" }}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/1jrwqlc46pujlm1/Screen%20Shot%202022-04-05%20at%208.24.52%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="Title 42, 'until we have comp, bi, imm reform that commits to securing and pathway for quality'"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "WE CAN ONLY TAKE IN AN INFLUX OF MIGRANTS WITH QUALITY{space}
-        <a href="https://vaults.biz/immi">IMMIGRANTS</a>
-        {space}ONLY," Booker and Menendez
-        <h1>
-          <a href="https://qr.ae/pvKwDH">GDP: The Big Lie</a>
-        </h1>
-        Acsertainable loss and Mark Halperin ("conservative") says it is access
-        like Stephen Moore says subsidies gets you more and the same time
-        inventory scarcity isn't substitutive for labor-demand of another
-        market.
-        <br />
-        “Want insurance to be available to more people.” Only for invoices does
-        taxes and claims become mean inflation equilibrium for standardized
-        guarantee is bid of laborless-demand, like:
-        <h1>
-          Elon Musk can{space}
-          <a href="https://www.quora.com/How-much-money-does-Elon-Musk-have-in-liquid-cash">
-            buy twitter while in debt
-          </a>
-          ? I can default after selling inventory and home loan personal buy
-          things
-        </h1>
-        <h3>
-          cops chase or else until unreasonable what can you do? self care is
-          being comfortable in your own skin, subsidize member cash advances. It
-          can always be reversed, (cash/debt)*income $5t checking mortgages,
-          bottom 50% got about $200b Why does $2t outside fed bank and $5t
-          checking,{space}
-          <a href="https://qr.ae/pvKwDx">$200b about bottom 50%</a>
-        </h3>
-        "invisible hand happens," in division of labor, without
-        laborless-demand, public safety by pharma cartel, whistleblowers of
-        standardized guarantee certain loss off jury
-        <h3>
-          the greater good, ensuring no science can be charged by loose
-          inventory{space}
-          <b>loose-debenture</b>
-          {space}indices
-        </h3>
-        How is $2t currency in circulation outside fed banks but $7t checking in
-        household, nonprofit and corporate accounts
-        <br />
-        "Welfare benefits, people addicted to drugs does to society," who is the
-        victim?, faggot? Loitering? Stop scapegoating prosecution. Invasion is
-        not commercial people, who are more peaceful, treasury fees for visa is
-        not necessary. "Coming to NY Chicago," Mark Brnovich, those are working
-        age, the Republicans always blame their own policies on the faults of
-        illegal immigrants, who are more peaceful
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/xwcn37f6t6c81f0/Screen%20Shot%202022-04-03%20at%205.05.44%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Another Trump 'Save America' Rally"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Biden Triggered massive inflation,"{space}
-        <a href="https://courttechnology.quora.com">
-          you added $5t to top 50% for mortgages above $2t currency that used to
-          match...
-        </a>
-        . When is that ever relevant? superfluous free rider mutable greed
-        <div
-          style={{
-            color: "khaki",
-            borderRadius: "10px",
-            margin: "10px",
-            padding: "10px",
-            backgroundColor: "forestgreen",
-            border: "3px solid"
-          }}
-        >
-          Demand{space}
-          <a href="https://qr.ae/pGjU9D" style={{ color: "white" }}>
-            efficiency
-          </a>
-          {space}by being borne of labor{space}
-          <a href="https://markethistory.quora.com">name your price</a>
-          {space}hysterical tort or debenture of loose inventory that is larceny
-          in contract of anothers’ labor, measured by expenses{space}
-          <a href="https://vaults.biz/work" style={{ color: "white" }}>
-            per hour
-          </a>
-          , or
-          {space}
-          <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
-            productivity
-          </a>
-          .
-        </div>
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/7rjo4v0o2h8mceh/Screen%20Shot%202022-04-03%20at%201.25.41%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="'Heating or Eating?' asked Former MPs on GBNews and the Authoritarian-Libertarian Cheeseit"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        “National debt of $20t and GDP of $21-22t,{space}
-        <a href="https://billbiden.org">Joe Biden</a>
-        {space}
-        <a href="https://qr.ae/pvKAa9">dug us into one Hell of a hole</a>.”
-        Borrowers loiter, lenders surrender loose inventory or hysterical claim.
-        <br />
-        “Very much engaging with car plants.”
-        <h1>
-          <a href="https://qr.ae/pvKAFN">Truncated Production Tax</a>
-          {space}&bull;ween cops off bonds/royalties, name and open source,
-          {space}
-          <a href="https://qr.ae/pvKAFh">hysterical name-your-price torts</a>,
-          surrendered{space}
-          <a href="https://qr.ae/pvKAPp">bid to negotiate by labor-borne</a>.
-        </h1>
-        "They{space}
-        <a href="https://qr.ae/pvKAHH">
-          needed to pay (in hours,{space}
-          <i>
-            Principal from interest instead of max-royalty is impossible
-            (laborless-demand notwithstanding)
-          </i>
-          )
-        </a>
-        {space}for food or people aren't{space}
-        <a href="https://qr.ae/pvKACl">interested</a>
-        {space}in{space}
-        <a href="https://qr.ae/pvKAFd">investing in treasuries</a>." Low
-        unemployment, and relatively{space}
-        <a href="https://qr.ae/pvKhqc">high growth rate</a>
-        <br />
-        <br />
-        You are always unable, foreseeable impossibility is a debenture, that
-        has loose inventory to sell, pay then default, or $5t for mortgages
-        checking over currency, during Trump
-        <br />
-        Stand up vault share with transaction fee and{space}
-        <a href="https://vaults.biz/sdr">spoofable</a>
-        {space}
-        <a href="https://qr.ae/pvKAM1">geohash/month</a>
-        {space}+ 2 week public review, naming andarrayOfnumbers open source, get
-        Article 1.8 unequal bond-tax, most of 2.8m continuing claims 50+ people
-        FDA/USPTO/NIH
-        <br />
-        1% 90-99% 50-90% nonprofits, which defeats the name, and corporate
-        <br />"<a href="https://qr.ae/pvKAM7">Nazis</a>,{space}
-        <a href="https://qr.ae/pvKt09">employers of middle class</a>"
-        <br />
-        Customs forceFX not market. illegal to not take U.S. dollar, that is
-        current U.S. law (notwithstanding Tranquil and voluntary trade for
-        1/hour-GDP/p economic welfare reasoning)
-        <br />
-        Since Kingdom came
-        <br />
-        <br />
-        You cannot have funds garnished as they come in from a third partty
-        donee beneficiary's surrendered freedom to bid, nor foreseeable
-        impossibility until then. There is $88t debt and $2t currency, so why
-        would anyone be garnished before everyone is? The only mediation between
-        Saver and lesser is (cash/debt)*income
-        <br />
-        <br />
-        These{space}
-        <a href="https://qr.ae/pvKt09">profits</a>
-        {space}need to be delivered to shareholders evenly, not income
-        increases. Then we can reverse amortize income (as profits, is, too),
-        (cash/debt)*income.
-        <br />
-        It’s like first it was municipals, then it was corporations, now it is
-        heads of households, certainly not the{space}
-        <a href="https://vaults.biz/party">30 hr</a>
-        {space}
-        <a href="https://www.ssa.gov/oact/progdata/taxRates.html">
-          self employed
-        </a>
-        .
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/o3fto2aib3uyxxl/Screen%20Shot%202022-04-01%20at%201.54.26%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="GBNews Ben Habib decentralization not devolution"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Decentralization by local counsels and anarchy, devolution Nicholas
-        sturgeon , smaller units of operative authority
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/knykjfya119k9xu/Screen%20Shot%202022-04-01%20at%201.41.26%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="GBNews abandoned laborequity.org accounting broad - hysterical torts and bizarre measure of productivity, expense/hour"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        You are gonna fucking die bitch, of starvation, for that is what you do
-        to me, when you triple checking after expenses but not for me
-        <br />
-        <br />
-        If{space}
-        <a href="https://www.census.gov/library/stories/2022/01/national-poverty-in-america-awareness-month-measuring-poverty.html">
-          poverty
-        </a>
-        {space}is to be lowered, how better than to start counting income over
-        third despondence/ 33rd percentile of expenses, rather than thrice
-        average expenses in Minimum Household Food Cost for 2-chorer household
-        (1963)
-        <br />
-        <br />
-        Put him out of his misery like{space}
-        <a
-          href="https://markethistory.quora.com"
-          style={{
-            color: "gold"
-          }}
-        >
-          prevent substitution
-        </a>
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/exmgw8jqo2s9v2d/Screen%20Shot%202022-04-01%20at%2012.25.55%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="Mahyar Tousi GBNews - living libertarian"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Libertarian thinks guarantee safety net should be for delinquent-elderly
-        and pensioners, instead of living-hour labor and disabled? "we had no
-        protection from mortgage rates in the early 80's" well you all are
-        idiots, every EULA has a no surrender anothers' freedom clause.
-        <br />
-        <br />
-        You don’t know these things - I am consenstech
-        <br />
-        Moore (<a href="https://qr.ae/pvKhqc">permit 12 wastewater</a>) and
-        Powell (max-royalty)
-        <br />
-        1/hour-GDP/p horseshoe and understand markets in all areas
-        <br />
-        Pay peanuts you get monkeys{space}
-        <a href="https://qr.ae/pvKhlQ">((GDP-PCE) /GDP)</a>
-        <br />
-        Career Donald trump business people and remainers free rider mutable
-        gravity toilet, naming and open source, hand for hand diplomacy
-        <br />
-        Trade is revenue hours or inventory sales. Supply is utility
-        indifference substitutive labor-demand.
-        <br />
-        They get free housing as contracted in advance price lock name your
-        price expiring false bid pool, albeit surrendered negotiations of labor,
-        but for the worker co-op and corporate, then again to lodge
-        -science/skew.
-        <br />
-        But what for inventory and living-hour indifference substitution.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/5qbcegpp2d7y2cm/Screen%20Shot%202022-04-01%20at%2011.17.48%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="Blaine Holt licensing and export reason _ (?)"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Licensing and USD-only-for-export/foreign-customs-import restrictions
-        for very good reasons. Stop government from funding their own licenses.
-        <br />
-        <br />
-        amortization is concurrentable not{space}
-        <span style={{ color: "purple" }}>larceny in contract</span>
-        <br />
-        Welfare (debit-vault) or{space}
-        <a href="https://www.quora.com/How-did-South-Korea-become-100-times-wealthier-than-most-African-countries-in-less-than-70-years/answer/Daniel-Na-22">
-          expense
-        </a>
-        . weening bond loss profit off cops and property off scripts
-        <br />
-        2.5m population{space}
-        <a href="https://qr.ae/pGEZyS">growth half life ago</a>.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/72luiqbsmkk4n5n/Screen%20Shot%202022-04-01%20at%2010.10.26%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="Macroeconomics Household heads and corporates, 1/3 share with debentures (corp, tsy) and mortgage"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        USAID vs substitutive labor-demand Jobs or{space}
-        <a href="https://github.com/NickCarducci/mastercard-backbank/blob/main/src/require.js">
-          2.3.6.carducci
-        </a>
-        ? Survey of households,{space}
-        <a href="https://vaults.biz/party">individuals</a>
-        {space}don’t{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=NIXB">matter</a>
-        <br />
-        <br />
-        estimates are not property - they are waiting in line for spot up to
-        changing sprint requirements
-        <br />
-        <br />
-        ​the federal government just tripled checking for mortgage $4t, did you
-        get any? "yes" Did your cash balance triple after expenses?
-        <br />
-        <br />
-        ​Tax still black market - and people withhold large items like homes if
-        not 3% under $2k. China cheap garbage{space}
-        <a href="https://saverparty.xyz/global">physical stronger</a>
-        {space}Import with USD, forced!
-        {/**send it - coupon, thanks joe and joe */}
-        <br />
-        <br />
-        pedo nor stray castration! nuder puppy mill owners!
-        {/**general spank or certificate */}
-        <br />
-        due diligence, contractor liable (EULA surrendered freedom, donee
-        beneficiary labor-demand)
-        <br />
-        name-your-price hysteria{space}&bull;{space}Bond loss profit instead of
-        rollover insurance, bred messy hair ssa discrimination I am of the 7%
-        injured, not 35.4% crazy, all-cause (?){/**disenfranchised people */}
-        <br />
-        <br />
-        No way energy investment is not the way to reduce dependence in energy
-        and gas in Iran, Venezuela, Russia. Leases and wastewater are the
-        solution for the American people.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/1vvshocci6zgwa5/Screen%20Shot%202022-03-31%20at%206.05.22%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Macroeconomics Household heads and corporates, 1/3 share with debentures (corp, tsy) and mortgage"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Is this in reference to $1t corporate and $3t household? Everyone{space}
-        <a href="https://qr.ae/pvKpsN">move back home</a>,{space}
-        <a href="https://qr.ae/pvyLDk">chore</a>.
-        <br />
-        <br />
-        "they deserve medication and{space}
-        <a href="https://www.yumpu.com/en/document/read/18596138/slave-narratives-library-of-congress/41">
-          shelter
-        </a>
-        ." Most kill shelters host puppy mill overproduction, not stray.
-        <br />
-        Can someone be held for at least 30 days, linkage between mental illness
-        and drug addiction, none of those are relevant to the crime of
-        tresspass, you just have no where to put them because of implausible use
-        leases.
-        <br />
-        There is no Science without{space}
-        <a href="https://brainscan.info">
-          CT scan{space}
-          <span role="img" aria-label="brain">
-            🧠
-          </span>
-        </a>
-        . Don't need to medicate to house homeless, that are such a way because
-        of finance and laborless-demand.
-        <br />
-        <hr ref={this.immi} />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/3rn9gqyhhulocwt/Screen%20Shot%202022-03-31%20at%203.13.22%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="Jaeson Jones Newsmax American Agenda - https://www.cbp.gov/newsroom/media-resources/stats"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        They are trying to reach friends and family, they know where they are
-        going.
-        <br />
-        Women and families, credible claims of asylum,{space}
-        <a href="https://www.cbp.gov/newsroom/media-resources/stats">versus</a>
-        {space}singletons
-        <br />
-        <br />"
-        <a href="https://www.linkedin.com/posts/javascript-developer_ugcPost-6913022657198223360-z7pS?utm_source=linkedin_share&utm_medium=member_desktop_web">
-          Layoffs in tech
-        </a>
-        {space}self-inflicted pain in China?" - CNN, that actually saves money
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/zksaaknjdj3vwep/Screen%20Shot%202022-03-31%20at%208.11.35%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="GBNews Steve Brine MP NHS fines state victimization bond loss profit per diem incarceration unilateral known hazard hysterical standardized guarantee 'name-your-price' tort"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Make the companies pay to get more people off cigs, the state cannot
-        self-victimize; neither discriminate “pollution” by individual health,
-        you already have smoking area motions.
-        <br />
-        <br />
-        {/*researchtyping Get me out of here. beam me up, scottie<br/>"russian incrazeian"*/}
-        Aphasia is dementia all cause{space}
-        <a href="https://qr.ae/pvKRxY">(?)</a>
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/p56kfqmurfqzqgd/Screen%20Shot%202022-03-31%20at%205.25.40%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="Ukraine GBNews youtuber Russian populous mad anti-social militaristic"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        The Russians are sick, Militaristic, and mad, we kill their prisoners of
-        war, america castrates pedo and medicate homeless, bond loss profit.
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/32lmxaena03nncy/Screen%20Shot%202022-03-31%20at%205.19.06%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="GBNews Joe Ventre Taxpayers' Alliance on name-your-price pooling, and 'radical thinking'"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "$8.5b/yr savings by next year automations."
-        <br />
-        You could save $10t by stopping standardized guarantee schemes and $19t
-        by stopping invoices, $8t housing
-        <br />
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/lg0hfo0x7dhfmtj/battle-of-lexington.jpeg?raw=1"
-          }
-          float={"right"}
-          title="History Channel battle of lexington"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        They sponsored me and paid for it with worker coop/
-        <span style={{ color: "purple" }}>
-          corporation double tax to go public
-        </span>
-        /standardized guarantee loss for copy over{space}
-        <span style={{ color: "cornflowerblue" }}>
-          max-royalty in each industry, so royalty% subservient to customers
-        </span>
-        {space}as opposed to debentures or power of legal-cohorts - time is how
-        it is made, and it is not how it can be kempt.{space}
-        <span style={{ color: "red" }}>
-          Saver-lesser mediation is nothing but (cash/debt)*income, and
-          max-royalty thereafter, for vertical-industry-line skimping, or
-          Consumer Fraud, -tortious
-        </span>
-        <br />
-        <br />
-        <Cable
-          style={{}}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.youtube.com/embed/OqgUxnqc3AM?start=52"
-          }
-          float={"right"}
-          title={`Frank Morano-Fact Check Peter Navarro, Employment, Immigration, (GdP, 52") & Wuhan-Serendipitous-Semination`}
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        i do everything you fucking{space}
-        <a href="https://vaults.biz/party">faggot</a>
-        {space}&bull;{space}First I look at
-        {space}
-        <a href="https://humanharvest.info/polio">statistics</a>
-        {space}and (geometry) calculus-
-        <a href="https://micro-theory.com">micro</a>
-        {space}and East Asia, then{space}
-        <a href="https://youtube.com/nickcarduccinj">politics</a>
-        {space}and public{space}
-        <a href="https://froth.app">finance</a>,{space}
-        <a href="https://vaults.biz/gdp">history</a>, law and{space}
-        <a href="https://saverparty.xyz/global">Islam</a>, then{space}
-        <a href="https://qr.ae/pvKR2C">macro</a>
-        {space}and{space}
-        <a href="https://github.com/nickcarducci">code</a>. "GDP is bad,
-        principal + interest can't be made from principal trade of inventory and
-        revenue/hours" Financial Markets and Inst Macro (D, D, D){space}
-        <a href="https://qr.ae/pvKRk1">you're lucky I didn't kill Mr. Ball</a>.
-        Dumping cheap product is against our{space}
-        <a href="https://qr.ae/pvKTxe">national interest</a>, for their labor is
-        cheaper. Substitute demand of another market proves crowding out and
-        subsidies{space}
-        <a href="https://qr.ae/pvKppO">unlocking economic-welfare</a>,
-        1/hour-GDP/p WRONG
-        <br />
-        Why would I incentivise index fund (
-        <span style={{ textDecoration: "line-through" }}>
-          fungible for nothing
-        </span>
-        , sell and pay ~ default/debenture loose inventory stocks and corp/tsy
-        bonds - not a direct loan lessing nor{space}
-        <span style={{ color: "red" }}>
-          then without compound third party donee beneficiary surrendered
-          freedom to bid by labor-borne for 1/hour-GDP/p
-        </span>
-        {space}) and have investors increase profits and lose standing with too
-        broad science (exclusive answer)
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/6lf0azokstjuehf/Screen%20Shot%202022-03-31%20at%203.07.22%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="Eamonn Isabel - (NHS) Dr. Ally Faffee"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h4>
-          Energy/5G/bridge investment instead of NFC motor vehicle and
-          competition. Ritalin is amphetamines. Amphetamines are cocaine.
-          everyone can concentrate with cocaine, but prescriptions prevent
-          commerce. science in naming and open source.
-          <Cable
-            onError={handleScollImgError}
-            img={true}
-            src={
-              this.state.noyout
-                ? ""
-                : "https://www.dropbox.com/s/9lx46bm7dy7tqew/Screen%20Shot%202022-04-01%20at%201.29.20%20PM.png?raw=1"
-            }
-            float={"right"}
-            title="Nami GBNews Dr. Grahame Buss"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-          <a href="https://magnatecompany">Electric</a>
-          {space}
-          <a href="https://froth.app">infrastructure</a>
-          will not be easily upgraded, you just want to damage longevity for
-          future contracts.
-        </h4>
-        Maybe mental health is underfunded because there is no demand from
-        labor, or you have already forced laborless-demand by standardized
-        guarantee scheme and tax to pay for invoice.
-        <br />
-        <br />
-        “They do anything they can to force a guilty plea,” isn’t that moot? You
-        need to use evidence, not duress. I took a plea to not go to jail for
-        Driving High, which presents the same per accicent and daily - If I said
-        I was disorderly and they didn't have to look at the evidence, I would
-        be able to not go to jail
-        <br />
-        <br />
-        So nuts they did it twice, communists STOP LESSING INVENTORY - Mark
-        Levin is a{space}
-        <span role="img" aria-label="pig">
-          🐷
-        </span>
-        . Not making a profit, social engineers by hourly expense, shortage by
-        bond loss profit
-        <br />
-        Checking and salaries should have tripled 3/2020-
-        <br />
-        Dr. Drew after 4x checking for mortgage, he says homelessness is because
-        of the way G-d made people; just prosecute implausible use leases above
-        5 condo and stores, stop standardized guarantee ascertainable
-        foreseeable impossibility and donee beneficiary labor-borne bid
-        surrenderings.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/ve6pgjw8zlzl7xs/Screen%20Shot%202022-03-30%20at%206.58.23%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Dr. Drew after 4x checking for mortgage, he says homelessness is because of the way G-d made people"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        you don't need to medicate the homeless
-        <br />
-        “Psychiatrists diagnose by behavior naming instead of creation nor
-        {space}
-        <a href="https://brainscan.info">even CT scan</a>, hospital bed, look at
-        your streets, that is a mental health crisis,” you don’t need to
-        Medicare the homeless.
-        <br />
-        <br />
-        "the fed has to raise rates," but they have been buying $4t mortgages
-        for checking over $2t currency, that used to match, and be fungible for
-        treasury debit, not debenture (loose inventory)
-        <h1>
-          trade secret vig mcghee;{space}
-          <a href="https://youtu.be/Weqb9KrQ-TU?t=21">inseminate cell online</a>
-          {space}bitch
-        </h1>
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/ch13jryqddelgi7/Screen%20Shot%202022-03-30%20at%204.44.32%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="FDA medical device auth shill"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        How at all is a 'name-your-price' tool, "access?"
-        <br />
-        <br />
-        well-trained staff allows for access by other producers, and
-        demandless-investment means you are taking labor from a useful trade of
-        hours and material
-        <br />
-        <br />
-        +$4t checking tripled $2t, salaries and cash balances should have
-        tripled.
-        <br />
-        <Cable
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/tpd9cuwm8rry1hf/Screen%20Shot%202022-03-30%20at%204.35.02%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="FDA medical device auth shill"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        User fee committment capacity and expertise, $2.5b The FDA/USPTO/NIH
-        does not exclusively ensure safe and effective medical technologies, and
-        they are more expensive than naming open source and unilateral known
-        jail programmatic evidence reviewable or acquit immediately no
-        hysterical ‘name-your-price’ tort.
-        <br />
-        <br />
-        65% mortgage, not their home, 35% rent, not their home. market liquidity
-        implausible use lease standardized guarantee, lessing inventory, not
-        their bid
-        <br />
-        <br />
-        sustainable housing by medication and before knocking out implausible
-        use leases is not "sustainable" as per 1/hour-GDP(p*q)/population.
-        Division of labor is mathematically proven 1775-1787 war then 1814-1870
-        GDP/p grew but 1787-1814 and 1870-1913 it fell (less work per living
-        expense)
-        <h4>the license to science, -less</h4>
-        5G is an input cost (excludes revenue to income, hourly-wage, not
-        inventory-sales) and doesn't need to go thru the pentagon lmao
-        <br />
-        <Cable
-          style={{ height: "400px" }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout ? "" : "https://www.youtube.com/embed/GOn7HZDZPhQ"
-          }
-          float={"left"}
-          title="Kirby 3/30/22 $139b pentagon r&d free rider mutable input cost 5g"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <a href="https://truncatedsalestax.com/gov">
-          Geneva convention forced medication not held
-        </a>
-        {space}&bull;{space}geohash/month + 2 week public review 3% under $2k
-        Truncated Production Tax
-        <br />
-        National Benefit Survey 2005 doesn't even cite psychiatric scapegoating.
-        Disease of the nervous system disability is 7% injured and 5.2% actually
-        with autism or downs, 16% with nervous system (2013, 2.1m) DOES match
-        counted by 2.5m Chris Reeves???
-        <br />
-        how is a debenture that sells inventory before default, "responsible?,"
-        Johnson? 35.4% disabled anti-social
-        <br />
-        <br />
-        “Ah, suck it,” Larry kudlow, “<a href="https://qr.ae/pvyLop">No</a>!”
-        The best economist in the world says $4t mortgage for checking over $2t.
-        <br />
-        (I had to assume it was an accounting change, not legal) We made
-        checking ($6t) more than currency $2t because how much is abroad (39%)
-        <br />
-        <br />
-        I have to rebuild node js to boycott credit. I am not employble because
-        I will not take credit as income. Savich deskinned
-        <br />
-        you can get away with not being taxed, for precedence of tea musket face
-        <br />
-        most unemployment is 50+
-        <br />
-        tax goes to treasury
-        <br />
-        neighborhood name-your-price' tort hysterical
-        <br />
-        « The worlds reserve currency is New Hampton Woods in NH for good will
-        of branded IP science rents, inventory lessing let alone debenture sales
-        before default and personal, buy
-        <br />
-        <br />
-        Poverty threshold for rate per capita and your percentile from that is
-        (to be below) a third the skew/despondence of expenses imputed mortgage
-        (SPM) not 1939 income thrice food anymore
-        <br />
-        *1.2 healthcare and PCE-CPI?
-        <br />
-        Transaction petty occupy 65% to end superfluous
-        <br />I yield back Article 1.8{space}
-        <span role="img" aria-label="nuts">
-          🥜
-        </span>
-        salt vat transaction fee max-royalty NAICS tort mvp and haikus are so
-        powerful
-        <br />
-        <br />
-        we can do{space}
-        <a href="https://qr.ae/pvyETN">powers</a>
-        {space}to the border spoofable precinct geohash/month + 2 week public
-        review,
-        <br />
-        break nationalism: free science; dollar checking world currency is done
-        to yourself you disgusting old person!
-        <br />
-        "Separation of power against monarchism, one world," - "Republicans
-        1775-1787: 'New World Order'"
-        <br />
-        “Retail politics,” Rush Limbaugh
-        <br />
-        “Knows how to raise money.”
-        <br />
-        You just talking to me babe
-        <br />
-        Age comps Disabled
-        <br />
-        Significant!&bull;{space}&bull; “Existing business needs more help.”
-        Nigel Farage
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/xioga9dr041m6jk/Screen%20Shot%202022-03-29%20at%202.21.47%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Newsmax Stephen Moore talking government and implausible use lease return structure growth to employer benefit net loss"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        “
-        <a href="https://twitter.com/viathumbprint/status/1413909110140149768?s=20&t=zN8fJIe7ByDpXFv7jcZ2dw">
-          Expenses should grow
-        </a>
-        {space}per{space}
-        <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">hour</a>
-        .” Stephen Moore Taxes for profits and wages of laborless-demand, free
-        rider mutable trust breaking hypocrisy, albeit 1/3 of mort direct loan
-        and loose corporate debenture.
-        <br />
-        What happens when inventory goes down, prices goes up,” well how can you
-        say that at the same time as subsidies you get more of something?
-        <br />
-        <br />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/wjwcevdleeeeyf4/Screen%20Shot%202022-03-29%20at%201.54.59%20PM.png?raw=1"
-          }
-          float={null}
-          title="Newsmax Halperin and John Bachman, smiling about $2t currency spent by larceny $4t checking mortgage, for a CDC covered INsignificant single-year death rate expected 1941 baby-boomer growth"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        'Currency comes from G-d,' JHU arts and sciences
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/allmaiahxg834g4/Screen%20Shot%202022-03-29%20at%201.48.42%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Mr. Yarmuth saying Article 1.8 equal bond tax scope is free rider mutable trust building and loose debentures"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "reduce the carried interest rate by share-split of Savers to help
-        investible $2t currency for $1.8t/yr debt spending." surrendered freedom
-        of labor-borne bid - I'm going to kill you
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/9m3cs76e1dmvfcn/Screen%20Shot%202022-03-29%20at%201.43.41%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="OMB saying GDP is not expense"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        American Rescue Plan job growth by hour or per retiree artifact of tech
-        deprecation, busy-work and -/hour-GDP/p (recession is success, Great
-        Recession took 4 years to recover from, with growth of expenses and
-        hours worked).
-        <br />
-        <br />
-        “We lock in the price.” Well, it is not funded by transaction fees, just
-        estimate and Consumer Fraud, still to be produced with variable-part
-        labor and material inventory.
-        <br />
-        Consumers decide to move away, and UT NM WY is Savers' currency!
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/c3x8om9j0itugy5/Screen%20Shot%202022-03-29%20at%201.13.41%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Richard Diaz gentrifying his community, never inventory outright but public trust breaking hypocrisy, albeit 1/3 with corp debenture and mortgage loan"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        $750b capital costs, funding infusion by making checking not fungible
-        for currency?
-        <br />
-        <br />
-        Split equitably, for laborless-demand never. Why do you want to fund the
-        criminals instead of jail them? Because you are guilty?
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/ry3k94f99g5umpa/Screen%20Shot%202022-03-29%20at%201.08.15%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="Mr. Olson tribal gentrification by loans and tax for labor-cost same quality no change"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Mr. Olson, "Tribes need wherewithall," to get +$4t mortgage and checking
-        is surrendered freedom of $2t currency holders as labor-borne-demand and
-        get the money are the two key aspects of our continued malfeasance over
-        such free rider mutable waterways, save for sewage geohash/month + 2
-        week public review and naming/opensource jail unilaterally-known never
-        tort by name-your-price surrendered freedom of labor-borne non-rollover
-        prevention of inventory outright sales
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/jw96rfruqdggp04/Screen%20Shot%202022-03-29%20at%2012.56.23%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Ruiz (CA) saying checking is not surrendered freedom of currency holders"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "We just put money into SRF as checking by mortgage, but we can't use
-        it," Mr. Ruiz (CA), why don't you ban finance as income and compel
-        investors into taking the (jailed) led-pipe guys' place?
-        <br />
-        <br />
-        "Investments in clean infrastructure by Biden will help," in no way
-        greater than jailing any led-pipe operators, and allowing for private
-        ownership so that they are subservient to customers' needs, not
-        investible income Demand, conflict of interest to treat{space}
-        <a href="https://vaults.biz/gdp">GDP</a>/hour as{space}
-        <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm">
-          productivity
-        </a>
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/6j6xaxvei4rt3mf/Screen%20Shot%202022-03-29%20at%2012.18.50%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="Buddy Carter (GA) shilling for redistribution"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "They need funds to drill a well," consumer surrogate maxx-royalty 1/12
-        NAICS - Buddy Carter, small town Georgia, share split and tax corporate
-        (redistribution from cities? BLS uses city bundle for Christs' sake)
-        <h4>
-          when you target funding by{space}
-          <b>share-split, tax or debt-spending</b>
-          {space}to those most in need,{space}
-          <span style={{ color: "purple" }}>
-            instead of banning laborless costs
-          </span>
-          {space}like non-rollover insurance, invoice, loose-inventory-debenture
-          or debit-fungible-loan, kept down payments and loitering instead of
-          max-royalty NAICS industry-vertical-line 1/12 tortious, but not before
-          (cash/debt)*income reverse amortization and then truncated production
-          tax with spoofable geohash/month for abuse and 2 week public review,
-          no-candidate counts to power and holdings by other than dollar in
-          scope of collective bargain (against an
-          substitutively-indifferent-inventory) as well.
-        </h4>
-        "Loans may not be ideal on private property[, but with the state, bond
-        loss profits]." It is never ideal for expenses above negotiation by
-        labor-borne-capacity, let alone non-concurrency.
-        <br />
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/87dpr0h4bnfh0i9/Screen%20Shot%202022-03-29%20at%2012.02.29%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Mr. Johnson OH Trusting the Tap: Upgrading America's Drinking Water Infrastructure - https://youtu.be/arpaH3oy77Q"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        PCE-CPI SRF is not a good thing, it is expense, Mr. Johnson (OH, trust
-        breaking hypocrisy), if public works are damaging to citizens, aren't
-        you all admitting guilt? water is free rider mutable, so your funds are
-        ALWAYS higher bid and ask to the same resource.
-        <br /> apprenticeship programs for funding for educators to withhold
-        more information? people who want ownership of return not just jobs for
-        {space}
-        <b>corporate profit will be ascertainably harmed</b>
-        <br />
-        led service line replacements can have private outfits without any
-        revenue going to treasury debts (foreseeable impossible or surrendered
-        freedom of bid for labor-borne on 1/hour-GDP/p reason and Tranquil
-        grounds, need is not funding yet jail the public works with such poor
-        accountability, that is derived by price and jail, never fines from the
-        currency as Savers' fungible for guarantee otherwise, still
-        laborless-demand, victimization nor Public, non
-        <b>-individualized, -reparations</b>, + cash/debt)
-        <br />
-        <br />
-        expense by structure housing instead of outright is not what we want;
-        The bourgeoisie is charitable out of self-interest; it gives nothing
-        outright
-        <h4>
-          Bipartisan Infrastructure Bill for real GDP gov+struct-exp does not
-          include the{space}
-          <a href="https://qz.com/1033336/survey-americans-hate-the-health-care-industry-even-more-than-wall-street/">
-            plural edge, Saver/Occupy/Cash Acct/Bookkeeper violence on Wall
-            St./CNBC
-          </a>
-        </h4>
-        funds from checking, no longer fungible for currency, that is
-        treasury-debit, or debenture when inventory is loose before default,
-        like Consumer Fraud estimates as, "property" Acted/prevented-commerce;
-        an anti-trust case waiting to happen. Quick plunder firesale is a
-        fallacy, only does money help when there are scientific exclusive answer
-        as{space}
-        <a href="https://login.gov">property</a>, substantiated by{space}
-        <a href="https://teapharmacy.party/drugs">FDA</a>/
-        <a href="https://thumbprint.us">USPTO</a>/
-        <a href="https://magnate.company">NIH</a>
-        {space}themselves
-        <h4>proposals to ask price for labor</h4>
-        subcontract on government free rider mutable ushers no progress, just
-        ongoing-expense for non-outright inventory sales but implausible use
-        leases, standardized guarantee schemes and debentures/loans
-        <br />
-        <br />
-        lived in community and investing back into community, municipalities
-        bonds operating costs.
-        <br />
-        <br />
-        Free (on what planet is it tax all-cause fallacy) government assistance
-        to go ssolar is anticompetitive, if there is harm like wastewater or
-        lessing and standardized guarantee schemes, then ban them,{space}
-        <a href="https://occupywall.us">don't contribute to them</a>!
-        <br />
-        <br />
-        Worth billion dollars.” On what planet 30% public works leaks. "It is a
-        shame that goes unchecked," because of bond loss profit instead of
-        truncated production tax geohash/month + 2 week public review, Ms.
-        Mathieu (CT)
-        <h4>
-          deploy funding of surrendered freedoms of labor-borne for 1/hour-GDP/p
-          economic welfare forlorn, by Mr. McGoff (IN), "this is a lay-up,"
-          actually it is 1y/-1x price to welfare.
-          {/**exclusive answer, "only source; therein lies problem, set asides for admin, state-spec not fed." */}
-          SRS 47/2700 CT public waterways free rider mutable, target margin
-          operational monopsonies. Sewage is not that, for gravity toilet is
-          free rider immutable, as is naming and open ingredient unilateral
-          known hazard tort and jail (individuals)
-        </h4>
-        no conditions - $4t mortgage by checking (because of Trump AND Biden) no
-        longer fungible for currency, treasury-debits, UT, NM, WY and whatever,
-        $2t,{space}
-        <a href="https://qr.ae/pvy3yw">$6t M1 total</a>. $5.8t/yr budget,
-        $1.8t/yr debt-spending with $2t currency because of Republicans
-        <h4>
-          "access to laborless-demand funding," trustbreaking hypocrisy by the
-          EPA [democrats don't care about laborequity.org, "commmunity benefit
-          agreements," 'name-your-=price' tool loss discerned by PCE-CPI, for
-          hysterical-known-torts and malfeasance jailors for bond loss profit,
-          that will not change anything but make the treasury (not the people,
-          for they less debit inventory)]:
-        </h4>
-        "being mayor of a growing city," is not a reason to front run input
-        costs (gentrification, monopsony, "creating jobs" without demand is
-        busy-work, for more expenses per hour, not less -{space}
-        <a href="https://youtu.be/UiprxrmHhbQ?t=79">
-          and then less hours required
-        </a>
-        ). To boot, I have proven crowding out when substitution from
-        labor-demand of another market as a fallacy, with history of 0%/yr+
-        GDP/p amidst 3-1%/yr+ population
-        <br />
-        <br />
-        $35b clean drinking water programmes, just jail producers that don't,
-        faggot!
-        <br />
-        <br />
-        <Cable
-          style={{ width: "300px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/cf31b7k2cawqqs4/Pew%20Wealth.png?raw=1"
-          }
-          float={"right"}
-          title="PEW income and wealth https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        real GDP and income inequality are mutual exclusive fallacies, for the
-        former gets government and structures, -science/skew and -1/hour-GDP/p;
-        the latter, well, gini doesn't talk about wealth, albeit
-        {space}
-        <span style={{ color: "green" }}>non-concurrentable</span>, that is the
-        very problem when they are liabilities, rather than{space}
-        <span style={{ color: "green" }}>non-fungible (for cash) assets</span>,
-        of{space}
-        <a href="https://qr.ae/pG0JjN">debits of a bundle</a>, not a{space}
-        <a href="https://qr.ae/pvy3WX">
-          pandemic-borne fractional checking to save mortgage values
-        </a>
-        {space}and{space}
-        {space}
-        <a href="https://qr.ae/pvy3UU">
-          <b>prevent commerce</b>
-        </a>
-        .
-        <h4>
-          The only accounting is a slap back. If you cut somebody hand off,
-          guess what?
-          {/**he was a rubixcube genius with a future and he wasted potential on lessing */}
-        </h4>
-        Save workers Global ubi laborless-demand, Hospital fund tax for
-        invoices? I'll end them on surrendered freedom (s: donee beneficiary) or
-        foreseeble impossibility (s: loitering-borrower) - NAICS (1/12
-        vertical-industry-line, max-royalty) not debenture sales before default
-        + (cash/debt)*income reverse amortize, fine appeals and permit business
-        by NAICS (11/12 vertical-industry-line, mvp consensus)
-        <br />
-        <br />
-        “Claim islands?” geohash/month + 2 week public review
-        <br />
-        <br />
-        Russian speaking Donbas, share split can afford treasury inventory!!!
-        <br />
-        <br />
-        On the Money, "stagflation is low growth of employer contribution
-        expenses (<a href="https://saverparty.xyz/poverty">PCE</a>), and high
-        premiums expiring (CPI)."
-        <br />
-        <br />
-        <a href="https://qr.ae/pG0Jjo">Stagflation and real GDP</a>
-        {space}is government and{space}
-        <a href="https://qr.ae/pvy6j8">structures</a>, used to less-inventory
-        instead of outright sales for labor-borne-demand.
-        <br />
-        <br />
-        “Because they are out of the market, prices have gone up.” If supply is
-        substitutive for labor-demand by another market, it should wash
-        <br />
-        <br />
-        Estimates as property is like a debenture to sell inventory before
-        default, let alone a debenture on a debenture of inventory, don’t get me
-        started. Name and open ingredient, home equity loan (defaulted) like a
-        personal loan, buy stuff before default
-        <br />
-        <br />
-        I want to go down in history as the next Bob Saget
-        <br />
-        <br />
-        Claudia tenny, studdering has nothing to do with intelligence, just
-        careful with words.
-        <br />
-        <br />
-        Demand for investible income is tort-cray-cray
-        <br />
-        <br />
-        Support to Ukraine from the U.S. of inventory instead of Hrynvia share
-        split fungible for their lands? Erin Burnett. Zlinski is executing POWs,
-        it is not a nice war where we just destroy eachothers’ stuff
-        <br />
-        <br />
-        “Corruptly, not criminally, but politically and any other way,” Mark
-        Levin
-        <br />
-        <br />
-        Not only is slavery, standardized guarantee, debenture checking (sell
-        inventory before default, or defaulted home equity loan personal buy
-        before default) or compound loan by surrendered freedom to bid of
-        rollover-equivalence-coefficience, nor implausible use leases (beyond 5
-        storefronts and condominiums per person, "never outright," "-inventory")
-        disqualifying as ascertainable lessing (PCE-CPI empoloyers contributions
-        standardized guarantee, 'name-your-price' tool for ask-proposal), but
-        GDP/p expense per year, for everyone, 1814-1870 a bit above tech
-        advancement -.01%/yr+ baseline -1913 amongst population growth 3-1%/yr+,
-        crowding out enbunked!
-        <br />
-        <a
-          href="https://qr.ae/pG0Zty"
-          style={{ textDecoration: "line-through" }}
-        >
-          index funds aren't fungible for actual shares
-        </a>
-        , corporate bonds aren't loans, for they have No SEC for inventory
-        before default, let alone forseeable impossibility or{space}
-        <a href="https://qr.ae/pG0ZKL">surrendered freedom known</a>
-        {space}of labor-borne guarantee-plausible use, derivative endogenous
-        all-bound hedge by expiration or isolate.
-        <br />
-        {posts.map((p) => {
-          return <div>{p.message}</div>;
-        })}
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/j74rw3jhtno5sca/Screen%20Shot%202022-03-24%20at%208.50.33%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="oann free dental - standardized guarantee scheme PCE-CPI discernable"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        PCE-CPI is ascertainably a loss by insurance. Take this down
-        <br />
-        <br />
-        "The Demand is more than the Supply," has no basis
-        <h4>
-          <a href="https://fred.stlouisfed.org/graph/?g=Ni2D">Faster</a>
-          {space}
-          <a href="https://fred.stlouisfed.org/graph/?g=Ni4B">means</a>
-          {space}an{space}
-          <a href="https://qr.ae/pG0sEN">insurmoutable loss</a>
-        </h4>
-        The Supreme Court cannot possibly be impartial unless lower courts are
-        wrong. Founders {">"} Congress. See petty tax 1775-1787 ratification.
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/3q9198pwpgtix70/Screen%20Shot%202022-03-23%20at%203.25.16%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Day 3 https://www.facebook.com/USSenateDemocrats/videos/702212010962709/"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        dispositive lessers back to monetary-debits
-        {/**discrimination is deduced by comp or chats */}
-        <br />
-        Lean in. -50% infant and toddler 3 months, why? WE WILL NOT RELITIGATE.
-        "all cases would be denounced, otherwise" - Cynthia Ganz. Superfluous
-        medication duress is not good behavior. Take medication only way out,
-        castration by any means. Why would you jail or medicate homeless, just
-        house them and login.gov
-        <br />
-        <br />
-        constitution can be living insofar that it is not oxymoronic.
-        Transaction fee 2 week review geohash/month - NAICS max-royalty and
-        business permits of open ingredient naming, NOT licensures. Royalties%,
-        NOT lessing monetary-debits
-        <h4>
-          your cup will overfloweth with inventory by transaction fee currency;
-          non-perishable of grade; truncated production tax can replace unequal
-          bond-tax and bail excess of tortious claims{space}
-          <a href="https://qr.ae/pG0sYK">&now</a>
-          {space}currency offletting coupled with non-currency checking pandemic
-          proposed by baby boomers
-        </h4>
-        the economy is equal part corp mort gov, treasury-debit=federal reserve
-        currency. 1/2 mort gov treasury-debit lessings (federal, 1/3 mort gov
-        corp, 20 years to double for homes and GDP, 50 for people, 40 for
-        expenses,{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=NhZj">including</a>
-        {space}
-        <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
-          insurance
-        </a>
-        ). you cannot hold my client with no thing to review. who reviews naming
-        "the thing?" I can programmatically. sentancing. PCE-CPI ascertainable;
-        rollover. Labor-borne.
-        {/**discern intent of imbue values from constitution 
-        as founder preamble over congress */}{" "}
-        the first is bizarre, and they will be hysterical if having to live
-        incorrectly “A lot of others wish they got it.” SORRY!
-        <h4>For what it is worth.</h4>
-        {/**When Donald Trump said: "I'm a budget 
-      cutter and I have cut the budget." - is it actually true? 
-              
-        Nick Carducci
-        , Chairperson at Saver Party (2020-present)*/}
-        <a href="https://fred.stlouisfed.org/graph/?g=NtmQ">
-          $1.8t/yr debt spending was risen 20%/yr+ on $2t currency
-        </a>
-        , and he allowed the treasury-debit (federal reserve) to buy $4t
-        mortgage backed securities for checking, that is $3t household and $1t
-        corporate, to bail out private debt of home loans and corporate
-        debentures (no SEC for inventory before default), as well as{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=NtnN">
-          ppp average age 50 small business
-        </a>
-        . I have suggested to him NAICS max-royalty, but he kept saying, “I’m
-        King Debt, I’m King Debt, Tariff science!” I never did understand
-        draining the swamp, but{space}
-        <b>
-          now his judges are convicting based on dangerousness; I prefer
-          programmatic-evidence, reviewable, or immediate acquittal
-        </b>
-        , and (cash/debt)*income reverse amortization, and geohash/month + 2
-        week public review unilateral known hazard tort and jail without per
-        diem incarceration and investible debenture demand incentivizing and
-        un-bona fide war, on both sides; after years of foreigners exporting
-        U.S. imports for dollars, are we dispensing of inventory before default
-        as debentures/bonds of monetary-debits or corporate-equities often do,
-        albeit only theoretical a bond on debit, or debenture is, a corporate
-        bond on name alone, unlike a home loan, that which home equity loans
-        included, is accompanied by a legitimate balance, while a mortgage is
-        subject to bankruptcy laws and more atune to{space}
-        <i>surrendered freedom of third party donee beneficiary</i>
-        {space}than home equity, but still less than it needs to be, like a 1/12
-        vertical-industry-line would suffice for{space}
-        <i>1/hour-GDP/p economic welfare</i>. Home equity loan, therefore
-        defaulted with balance is then like a personal anti-debenture that can
-        reneg with foreseeable impossibility defense, or a friend claiming
-        surrendered freedom to bid of labor-borne demand, to relent upon the
-        closing, buying assets instead of selling them, before default.
-        <br />
-        <br />
-        I am not a publisher when I compile without paying users, nor am I
-        publishing automatically (user generated, free rider mutable), I am a
-        writer with sources.
-        <br />
-        Gold standard transaction fee + 3% under $2k, free rider immutable
-        sewage gravity toilets, police and lawsuits, as to ward open ingredient
-        list and naming, without per diem incarceration and conflict of interest
-        to provide Tranquil and voluntary trade, but for what other than
-        1/hour-GDP/p economic welfare.
-        <br />
-        “Philosophy vs methodology, screen for predisposition that judges
-        shouldn’t have but for folks who want them to have.”
-        <br />
-        Judicial philosophy, convenience, originalist, non-consistency yet for
-        quality skew.
-        <br />
-        <br />
-        put merck in the water and mandate testing for fatties, consistency in
-        what matter. 11/12 NAICS, 1/12 max-royalty vertical lines.
-        <br />
-        <br />
-        eat my ass to get into my events because Alzheimers presentation came
-        about with sewage
-        <br />
-        <br />
-        mood altering hapiness medication for housing the homeless. why medicate
-        for housing the homeless? Superfluous abuse, what but for if not mvp,
-        for bars. economic law has shown much less thn ascertanable discrepancy
-        between PCE and CPI in intentional harm of standardized guarantee
-        Schemes, yet for surrendered freedom of third party donee beneficiaries
-        with the labor-borne bid to demand. Religious freedom but not as
-        evidence. inseminate cell in the courtroom.
-        <br />
-        <br />
-        "consider the circumstances." Cornyn "no," political decisions
-        undermines public confidence? talking confidence? consistent is not
-        abstract
-        <h4>
-          vertical lines - broad science (of script) that has operating costs is
-          royalty%able in process
-        </h4>
-        {/**appeal="trial, record" */}
-        The market is the only available mechanism? Galbraith is crap! Occupy
-        Wall St to end standardized guarantee schemes for NAICS max-royalty,
-        treasury inventory currency royalty% not lessings, surrendered freedom
-        to bid of labor-borne! (Cash/debt)*income reverse amortize{space}
-        <a href="https://www.youtube.com/watch?v=5u3UCz0TM5Q">for Savers</a>!
-        <span role="img" aria-label="bottom white-circle squirrel">
-          ️↙⚪️🐿
-        </span>
-        <br />
-        borrowers loiter, name your price loiter surrender bid of labor-borne of
-        thrid party donee beneficiary, PCE benefits ascertainable loss to CPI
-        bundle of expenses (net velocity, concurrent).
-        <br />
-        <br />
-        money animal testing, USPTO FDA NIH, transaction fee no license but for
-        KYC naming. reparations for licenses - craft beer?
-        <h4>
-          This is our fault.” Supreme Court exclusive role is to resolve laws
-        </h4>
-        unique files? Euro login.gov. let’s dance. We need to nip it in the bud.
-        cors? are we talking variance of quality skew? (modes of commission of
-        crimes change, like internet, an indication relative to baseline, we all
-        see them on the internet) unique files? Euro login.gov. let’s dance. We
-        need to nip it in the bud. cors? are we talking variance of quality
-        skew? Variance goes to intent, as for what else, 3-50 years for
-        “trolling for images of children and sexual exploitations.” There we go,
-        bond loss profit lower the boom on people that seek these images for
-        pleasure." harm disgust to images to people portrayed in them, children
-        abused, and in terms of imprisonment, supervision labor and superfluous
-        personal watchers for $2.2t/yr tax, $1.8t/yr %2t isn't too burdensome to
-        raise rates on reconciliation of precedencial budget
-        <br />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/tcdiskhodxx29n3/Screen%20Shot%202022-03-23%20at%2011.48.46%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="Day 3 https://www.facebook.com/USSenateDemocrats/videos/702212010962709/"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Share split the Hryvnia, figure it out, for input costs as to not match
-        inflation but actual input costs
-        <br />
-        Giuliani click and Moore NWP12
-        <br />
-        <br />
-        treasury and currency have control over inventory, not Executive nor
-        Congress, that which have power to Tax in an equal manner. Bail is only
-        to be inexcessive and bond-tax is only to be equal lmao ok.
-        <h4>
-          "I promise not to be political," You only SEE cases that have two laws
-          or incorrect circuits. "Stare Decisis,"{/**let precedence stand */}{" "}
-          precedence is law. Let hypocritical/incorrect precedence stand? Like
-          trust breaking hypocrisy? Crack is base form of cocaine and Ritalin?
-          Everyone can use that. What about equal presentation of weed daily use
-          and in accidents, DUI per diem incarceration state victimization
-          especially without linkage? The Supreme Court needs to solve
-          conflicting Grassley laws.{" "}
-          {/*I appreciate Ossoff appreciating journals
-          but Github has been having many a problems during these hearings
-          exclusively, very unlikely by happenstance*/}
-          innocence, and bad things. Bail is only to be inexcessive and bond-tax
-          is only to be equal lmao ok
-        </h4>
-        "Cameras in the courtroom," what possibly could be the purpose of not
-        doing that? Are you trying to hide incriminations and launder funds thru
-        per diem incarceration to bond-index-funds?
-        <h4>Supreme court that follows precedence is useless, for appealer</h4>
-        “? of application of law, not of fact,” is the role of Supreme Ct, &
-        appeals are otherwise. That’s y it’s bonkers to not (1) weigh
-        “partisans,” and (2) fine lower courts for successful appeals. Share
-        split the Hryvnia. Appropriate “partisanship” often happens as everyone
-        has laws or precedence to defend themselves or be plaintiff. Like pharma
-        cops.
-        <h4>Minnesota carface-killed Floyd PharmaBank</h4>
-        Ah man she (Ketanji Brown Jackson) is a cop; naming and open ingredients
-        can dismantle FDA/USPTO/NIH. World intellectual property no science
-        processing too broad! Treasury leasing lefties get to the right. Global
-        ubi albeit labor-borne demand forlorn to the left. Monetary-debits have
-        always been vault share treasury inventory currency, leases no need, try
-        transaction fees on NAICS max-royalty, royalty% for UT NM WY thus far,
-        and geohash/month (Truncated Production Tax, open ingredient and naming)
-        2 week Public review (equities)
-        <br />
-        <br />
-        Name your price tool surrendered freedom of others
-        <br />
-        <br />
-        "Conservative government regulations," Calvin.
-        <h4>
-          You cannot keep your insurance as it names a price from expiring
-          premiums of labor borne bid
-        </h4>
-        I want to be able to not take credit as checking without currency,
-        treasury inventory/royalty%
-        <br />
-        Checking is no longer fungible for treasury inventory/royalty% currency
-        due to pandemic.
-        <h4>Should castrate, jail or intranet. Medicate to house, why?</h4>
-        Same as disability for madness vs actual disability is lookers vs
-        statutory or rape. Intranet instead to save money. Class action
-        shouldn’t make any non responders’ claims, moot. Again. Login.gov for
-        minors and repeat statutory film makers. Gross is not a crime,
-        non-consent by not of age, statutory; “consent” notwithstanding. You all
-        realize the internet can be made into an Intranet, right? We can stop
-        the objects. As a website developer we need login.gov to stop convicts
-        and under age. Please don’t conflate perverts with pedophiles, prudes.
-        <br />
-        What is "partisan," Mazie, that is not to ward? Word salad!
-        <br />
-        Get your book straight before telling a justice they are useless, Mazie.
-        <br />
-        If there was no displacement of justice inviting partisanship then there
-        would be no justices... for countervailing law and judges for cases as
-        it happens...
-        <br />
-        There are too many laws, that lawyers use to profit and comparative
-        innocence is frequent.
-        <br />
-        <br />
-        Mazie: "ideological basis instead of the facts and the law;" supreme
-        courts only see cases in which laws countervail eachother.
-        <br />
-        Obviously the law is not enough.
-        <br />
-        If no ideology were necessary there would be no people beyond arresting
-        officer
-        <br />
-        <br />
-        "One way or the other." I invented the political compass. Count
-        non-voters
-        <h4>Dismantle financial industry instead</h4>
-        1/3 non-voters are for occupying wall st to stop debt. and insurance
-        public and private. libertarians like surrendering others' freedoms to
-        bid as labor-borne. stop votes to make changes without politicians
-        turning out more than half (?) voters.
-        <br />
-        <br />
-        Stop votes to make changes without politicians turning out more than
-        half (?) voters. Originally I was thinking it to be an automatic no for
-        “no candidate,” which could invoke power (or lack thereof) of then of
-        politicians’ vote, by their turnout*statutory power (House/Senate size)
-        <br />
-        <br />
-        "China needs economic growth to satisfy its population," how does that
-        make sense?
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/p1gm1q2wtxizt9u/Screen%20Shot%202022-03-22%20at%204.25.10%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Eric Bolling and Ron Johnson complaining about lower costs"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Why would China's population depend on higher expenses?
-        <br />
-        <br />
-        Corporates are subservient to customers unless they use inventory to
-        profit beyond sales (leases, law, without desist by NAICS variable or
-        paid, and comp-yet, writers).
-        <br />
-        A Cyber attack cannot happen with proper CORS authentication, bitch
-        Bridget Gabriel.
-        <br />
-        Closed source vig "Licenses to{space}
-        <a href="https://teapharmacy.party/drugs">
-          sell your inventory legally
-        </a>{" "}
-        that is next."
-        <br />
-        Ascertainable estimate beyond what is able to be property, by
-        concurrecy, in contract; PCE-CPI is ascertainable loss of employer
-        cpntributions to standardized guarantee schemes.false/surrendered bid
-        notwithstandingtoboot
-        <br />
-        Jesus died BECAUSE of sins, never did He say He would die for sin
-        sacrifice, but He has embodied G-d to end such practice
-        <br />
-        “Workers’ coop tax breaks!” -@cudney4ma
-        <br />
-        ‘It’s good for business, per diem’ expected Mike Baker, “that is what
-        everyone expects me to say.
-        <br />
-        ...Not being able to save money for house, where is 50’s or 80’s.
-        <br />
-        <br />
-        ...medical attention, desparate to get their son out to college but
-        don't have the money. you get a longer shelf life from the kid-asset,
-        {space}
-        <span id="nypd" onClick={goTo} style={{ color: "blue" }}>
-          if you get what I'm throwing down
-        </span>
-        ."
-        <br />
-        <br />
-        recruiting somebody for espionage tech advancement is processing
-        science/royalty
-        <br />
-        FREE by taxing others is laborless-demand of the producer, supply side.
-        implausible use lease above 5 storefronts and condominiums, spoofable
-        precinct geohash/month report regressive/truncated preoduction tax world
-        peace without conflict of interest, involuntary commitment-breeding
-        <br />
-        <br />
-        Royalties% and local wastewarer NWP12 currency platform
-        <br />
-        <br />
-        The treasury is going to hold Russian rig-rate lesser oligarchs from
-        borrowing against their properties, unused except as collateral, for
-        loitering surrendered bid of others
-        <br />
-        <br />
-        AntiCommunist, collateralization-professional, Dr. Savage: "take those
-        in with skills and money to lease to the treasury, bonds." People
-        without skills are laborers, idiot.
-        <br />
-        <br />
-        Motor Vehicle NFC free rider mutable operational monopsony target margin
-        trust-/lease-breaking outright pipelines/spectrum/bridges instead of
-        matching by standardized guarantee scheme, general fund self dealing and
-        checking non fungible currency, transaction-fee sustained. Education is
-        a job farm for the middle aged gerontocracy & trade secrets, the kids
-        should be working and{space}
-        <span style={{ color: "purple" }}>
-          pencils should not be front-ran as a solution to price-gouging
-        </span>
-        {space}science cannot be owned, but released from closed-source FDA for
-        USPTO vig. Healthcare, even FREE healthcare by tax, or torts not from
-        financial income (not equity/science market-concentration/macroeconomic
-        gains) is more hours worked is not really useful (even notwithstanding
-        1y/-1x elasticity), hosting a conflict of interest like per diem
-        incarceration and whistleblowerless-jury; libertarians are for
-        standardized guarantee schemes just the same as public
-        insurance/standardized guarantee schemes/false/surrendered
-        labor-borne-demand bid pools.
-        <br />
-        <br />
-        cash is fungible for treasury{space}
-        <a href="https://www.census.gov/manufacturing/m3/historical_data/index.html">
-          inventory
-        </a>
-        <br />
-        <br />
-        An index of market concentration rolling false big pool fund is not a
-        good thing. Bear markets is easy living (by hour, Payne Capital
-        Management doesn't account for it in defining rosy-days),
-        <br />
-        Once you are investing off the dark pools and broker pay to anonymize
-        duress of hypocrisy of disclosure to public and other retail traders,
-        not just amongst brokers’
-        <h4>Why doesn't Zelinski share-split?</h4>
-        Guaranteed Bond Income & Booming $150t non-concurrentable currency $2t
-        labor-borne-demand,
-        <br />
-        $550b/yr+ dividends paid for laborless-demand is not good news nor the
-        best thing for families nor the right way to invest for
-        scientific-trust-building. This is a cause of inflation, with mortgages
-        and guarantees. Stagflation is expenses without government nor
-        structural projected leases' material and variable-part labor costs.
-        <br />
-        <br />
-        "Zelinski might say we need to stop this fight."
-        <br />
-        <br />
-        Prosperous people per person by income and expenses instead of hours and
-        asset/debt equality. Stargate SG-1: "Bacteria not in mitosis culture, so
-        it is virus." Under my rule, I don't want to know purchase reports by
-        geohash/mo from your spoofable paytech precinct beyond $2k buys
-        <br />
-        <br />
-        Fed buying mortgage bonds is good for prosperity.
-        <br />
-        <br />
-        Nick Carducci - Econometrist at Occupy Wall St (2008–present)
-        <br />
-        "Should the Fed return to the early 1980s interest rates to put a halt
-        to hyperinflation?"
-        <br />
-        Imagine relenting from matching $2t currency ask for $1.8t/yr instead of
-        banning debt? Reverse amortize (cash/debt)*income.
-        <br />
-        <br />
-        "People are worried about his mental stability, he has nuclear and has
-        been called a war criminal with huge crowds, what do you think is is
-        mind, set, right now, George Papodopolous?" "A lot of people are
-        standing up to the rig-rate Autocrat. We cannot assume the future of
-        Russia is Putin or someone like him. There are a lot of protestors
-        there, with flags for 'country'." Bianca Delagarza
-        <br />
-        <br />
-        "Get married, house, is it worth it?" well we have to impute your
-        mortgage and employer contribution inflation, if you have none.
-        <br />
-        <br />
-        "take the leap try something new, they don't realize the debt they are
-        going into, it is the goal, when you talk about business being bought
-        out, he sold his company for $29m, and what matters to him, is cash.
-        then lets his customers pay for leases. When entrepreneurs sell, they
-        get depressed, because they know they let the buyer damage their
-        customers beyond their minimal viable product contribution to science by
-        royalty process. you have to fail and realize what you are really going
-        after. Don't take the job.
-        <br />
-        morale killing women and children, on the dole."
-        <br />
-        You cannot force me to do something I haven't done before my actual, not
-        age nor madness non-biomedical disability onset.
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/giebgfrxgx5d0gp/Screen%20Shot%202022-03-18%20at%2010.35.45%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="https://www.google.com/search?q=guardrail"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Rob O'neil: "his soldiers are shooting themselves so they do not have to
-        go to the front lines, and have{space}
-        <a href="https://qr.ae/pGLlwG">already been paid</a>."
-        <h4>Chris Christie goes to Jail (warn tort jail)</h4>
-        "if we don't have energy independence with NWP12 wastewater, we are
-        idiots instead of retards. I was in the military for 25 years," yeah it
-        shows, James on Brian Kilmeade ('why don't we share-split the Hryvnia
-        instead of providing them our inventory?' click currency is fungible for
-        their resources, albeit the global pandemic caused checking to be non
-        fungible for currency and therefore treasury leases and inventory), "I
-        don't even belong to a political party. The Russians, Chinese and
-        Iranians respond to what we do, not what we say. Do things with
-        hard-power. We need peace thru strength."
-        <br />
-        <br />
-        In the Nick of time, Johnny come lately, master of trade dominates
-        <br />
-        Nick Carducci - Bookkeeper at Household Chores (2006–present)
-        <br />
-        Do we tire of ourselves at some point?
-        <br />
-        The limit does not exist! As to{space}
-        <a href="https://micro-theory.com">1/hour-GDP/p</a>
-        {space}variance and percentile with normalized and meaningful
-        population-survey.
-        <br />
-        <br />
-        {/**"unfounded accusations, ...I use the wine" */}
-        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
-        (2020–present)
-        <br />
-        What happens when you owe a college money?
-        <br />
-        If you already have the degree, provided, likely-then, that
-        <br />
-        1. you have serviced it by their coupon rate, and
-        <br />
-        2. the federal reserve doesn’t try to prevent borrowing by
-        <br />
-        a. allowing tsy mort and corp rates to rise,
-        <br />
-        b. share-split rights of other currency-holders notwithstanding for
-        logistics’ sake,
-        <br />
-        You can argue foreseeable impossible intent (borrower defense, force
-        majeure) or by donee beneficiary to keep it, albeit historically only
-        exclusive explicitly enumerated purchases are revocable, especially
-        non-durable goods.
-        <br />
-        <br />
-        Yet, like self employed vs small business tax discrepancy, legal
-        etymology changes, and consumer debt ex-durable goods, or degrees, are
-        actually repossesable except for ethics and reason, division of labor,
-        0y/1x 1/hour-GDP/p efficiency, yet
-        <br />
-        <br />I am sympathetic only for the costs we share by accrual, credit as
-        income, the surrendered freedom of others, or labor-borne-demand.
-        <h4>I am the best economist, and smartest person, in the world</h4>
-        {/**going to make everyone feel guilty */}
-        Nick Carducci - Econometrist at Occupy Wall St (2008-present)
-        <br />
-        The former National Economic Council Director on the right calls
-        employer-benefit standardized guarantee scheme (PCE, BEA), or
-        out-of-pocket cheaper (CPI, BLS), inflation, prosperity, before
-        <div style={{ borderLeft: "3px solid", paddingLeft: "5px" }}>
-          income-expenses in a time-period gain
-        </div>
-        is known to supply-siders to raise bid by ask, who have more
-        laborless-demand of input costs, I guess, and yet thereby generate a
-        loss of economic welfare in Supply and Demand (Microeconomics), 1y/-1x
-        1/hour-GDP/p, for labor is always supply, lest for dead-weight, for
-        vertical industry lines, or maybe to some propensity despondency by
-        total, and horizontal, living costs, between markets being the only time
-        labor in one market out-profits/-saves another. There are about 12
-        mutually exclusive lines of business by NAICS code, I gather.
-        <br />
-        <br />
-        James Comer: "Not having a job is a problem because it is a cost on
-        savings." $12k/yr spending and $6k actual currency, per person, Rob
-        Finnerty: "I don't get it, the government can just give us all a $60k
-        electric car, or lease us our currency fungible lands for."
-        <br />
-        <br />
-        Should you pay a debt that has gone to collections?
-        <br />
-        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
-        (2020-present)
-        <br />
-        If you need your savings, don’t feel compelled to pay the consumer debt,
-        nor firesale your assets. Regardless, debts are tortious for standing by
-        the borrower for force majeure ($12k/64 new debt/cash U.S. per person)
-        and third party donee beneficiaries whom actually have the cash
-        promised, and will be reversed by (cash/debt)*income that will be the
-        last before 1/12 industry-vertical as “collateral” max-royalty to become
-        subservient to customers of labor-borne-demand.
-        <br />
-        <br />
-        Kenneth Thomas - English, please. Something that the average person can
-        parse.
-        <br />
-        <br />
-        “Tortious,” means you can sue for “force majeure,” that means
-        foreseeable impossible intent. After “reverse” amortization, future
-        debts will be organized in a way that disburses return to the business
-        account by 1/12 NAICS industry designation, for “standing” or the
-        ability to sue on “laundering grounds,” or dodging max-royalty, which is
-        an “operational rate” as opposed to time-based, so that you await
-        customers instead of take credit as income.
-        <br />
-        <br />
-        Joe Pinion: "Unemployment that you paid your entire life into," general
-        fund actual currency versus bonds will be reversed, bond holders deserve
-        nothing.
-        <br />
-        <br />
-        The rationale is to compel less borrowing by the government? Why would
-        we allow borrowing at all with{space}
-        <span id="carducci" onClick={goTo} style={linkyblinky}>
-          truncated production tax NJ for Nick Carducci U.S. Senate 2024
-        </span>
-        {space}on the horizon - (debt/cash)*income, geohash/mo spoofable
-        precinct. Future collateral is 1/12 vertical-industry designation for
-        max-royalty, no surrender of others’ freedoms to bid, as
-        labor-borne-demand.
-        <br />
-        <br />
-        Mind you, I am a developer for bookkeeping software, that believes a
-        transaction-fee based currency is the future - now that USD is fungible
-        for treasury inventory (at least 23% of oil-wells in America are
-        “federally-leased” back to us through corporations instead of dollar
-        royalty and drilling sign off, to be subservient to customers). Debt is
-        the cause of inflation, that is the rationale that the Federal Reserve
-        provides for raising rates. Why do that pennywise short for a pound
-        cowardice? Just work for demand in real time without a money ‘market’ by
-        “collateral” as NAICS industry-designations as tortious for revenue for
-        max-royalty, undisbursed.
-        <br />
-        <br />
-        <a href="https://qr.ae/pGLV3y">
-          We have to show we have the strength, and the courage, to offload
-          treasury inventory of currency, for free actually for they have no
-          savings in Dollars
-        </a>
-        .<h4>Taxing large accounts is the most taxing</h4>
-        “Biden is doing nothing to increase the inventory of oil and gas.”
-        <br />
-        “A big mistake $600m minerals and labor for taxes and fees under there.”
-        <br />
-        I’m gonna string your from meat hooks!
-        <br />
-        <br />
-        You don't need to medicate to house, for trespass is not adjunicatable,
-        but you can't make this a solution when rental-income is
-        laborless-demand of implausible use leases, general fund and closed
-        source vig, truncated production Gristedes, regressive tax, relenting,
-        like a disgusting whale, greasy-greek
-        <br />
-        Bail reform includes taking people to hospitals even if they refuse
-        <br />
-        <a href="https://qr.ae/pGLVqg">MISDIMEANOR My ARSE</a>
-        <h4>I'm going to kill all of you</h4>
-        non monetary-lending corporate and household checking are up, but the
-        self employed aren't included in the economy.{space}
-        <a href="https://www.ssa.gov/oact/progdata/taxRates.html">
-          Corporate tax free
-        </a>
-        , and As you can know, I've led my life as far away from credit as
-        income as possible. I am making a bank to have checking that is fungible
-        for currency.
-        <br />
-        I know Amazon's income is credit/good-will, insurance (false bid pool
-        loss non-insulated-from-donee-beneficiary nor concurrentable investment
-        bank), and I can only imagine what else. Would you like to make
-        accommodations so I am not a hypocrite and contributing to the $12k/64
-        debt/cash per person a year over Savers' land-exploration rights, $ (20%
-        of U.S.)?
-        <br />
-        <br />
-        Likely not, given checking is not fungible for currency anymore, due to
-        the pandemic. I can’t associate with people that suffer such basis rate
-        fallacy, as excess was less than expected, unless Amazon will try to
-        explain to me that sewage causes Alzheimer’s, people were once negative
-        years old and wrinkles isn’t an artifact of natural age of death. Nick
-        Carducci.sh
-        <br />
-        <br />
-        making money by hedge funds is gains in neighborhood and brand
-        good-will, non-concurrentable and asset inequality for inneffient
-        GDP/p-1/hour
-        <br />
-        <br />
-        Now all the sudden Greg kelly can talk like a white guy after I bring up
-        checking isn’t fungible for currency after him not understanding excess
-        deaths are less than expected by population growth a life expectancy
-        ago.{space}
-        <span role="img" aria-label="shamrock ukraine">
-          ️☘🇺🇦
-        </span>
-        As a designer, you want to launch once
-        <br />
-        If you aren’t treating the product map like a public relations endeavor,
-        and without exclusive answer copy. User centered design is to service
-        yourself, otherwise, your research is vicarious (and someone else can
-        service better).{space}
-        <span role="img" aria-label="black-circle underscore black-circle">
-          ●_●
-        </span>
-        <br />
-        Community and commitment
-        <br />
-        You could say, we would owe that money for many, many years, and we
-        would pay that money, of course, 44x is corp mort tsy debt level
-        <br />
-        And 11x velocity-imputed by size (assuming equal weight)
-        <br />
-        <br />
-        we already paid contractors, so why don't they share split Ukraine or
-        the currency fungible for it, that which checking no longer is, the
-        Hryvnia? I can make a platform for royalty and drilling sign off for
-        currency holders that they are subservient to customers, not leases to
-        the treasury from NM WY UT
-        <br />
-        <br />
-        "Too burdensome blood tests?" Mr. Tonko asks the{space}
-        <span id="phlebotomists" onClick={goTo} style={linkyblinky}>
-          Phlebotomists
-        </span>
-        .<br />
-        <br />"
-        <a href="https://qr.ae/pGLVpQ">
-          Philanthropic funding to really support individuals, as well, when we
-          raise the average price
-        </a>
-        , or scapegoat target margins of a market where{space}
-        <a href="https://qr.ae/pGLVNS">supply already doesn't equate demand</a>
-        {/**    Compared to standardized guarantee schemes without price controls, 
-        it certainly saves money, but only because supply already doesn’t equate labor-demand. 
-        Better to ban invoices for surrendered freedom and foreseeable force majeure ascertainable
-        standing and tortious grounds */}
-        , as a sorted propensity of indifference and labor-borne-budget
-        contraints, for the 1/hour-GDP/p plane of Supply and Demand, by
-        Microeconomic gaming."
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/sqf6c2uuuf4kjzg/Screen%20Shot%202022-03-17%20at%201.39.57%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="The Future of Medicine: Legislation to Encourage Innovation and Improve Oversight (Energy and Commerce Committee, Youtube) - https://youtu.be/Oiy0aFXyKzU"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Work to ensure continued acces to medication for all patients by
-        invoicing the general fund and leasing corporate profits to the
-        treasury.
-        <br />
-        <br />
-        Diseases cannot be designated by artifact, alone, for that may not be
-        the cause unless you test exclusively for it with (a) correlations
-        (meaningfully-diverse) and endogenoous-debasements (homogeneous, not
-        heterogenous or exogeneous correlation-coincidence), from{space}
-        <a href="https://brainscan.info">me sure</a>, and in (b)
-        population-surveys (significance with assumptions of meaning)
-        <h4>
-          How to Run a{space}
-          <a href="https://teapharmacy.party/drugs">Drug Cartel</a>
-          {space}with the Government: Money Laundering 301
-        </h4>
-        "How do I solve a money debt problem?"
-        <br />
-        Nick Carducci - Bookkeeper at Household Chores (2006-present)
-        <br />
-        Money-debt, or borrowings of monetary-debits, financial and monetary
-        liability, is best solved by (cash/debt)*income reverse amortization,
-        transaction-fee based inventory of treasury (state-lands) or vault share
-        consortium, currency with truncated production tax for free rider
-        immutable sewage police lawsuits 3% under $2k geohash/month report
-        spoofable precinct without closed-source-vig nor general fund
-        self-dealing scapegoating elder-delinquency and laborless-demand for
-        asset inequality standardized guarantee false bid pool name your price
-        tool schemes nor free rider mutable trust breaking, hypocrisy and
-        <div style={{ borderLeft: "3px solid", paddingLeft: "5px" }}>
-          or else, you know what,
-        </div>
-        ratification. That means voting for{space}
-        <a href="https://2024nj.com/carducci">
-          NJ for Nick Carducci U.S. Senate 2024
-        </a>
-        .
-        <br />
-        <br />
-        As an individual, you can claim borrower defense forseeable force
-        majeure, just cite $12k/64, or donee beneficiary defense, that which is
-        the actual owner of the dollars (currency, not even fungible for
-        checking, because of the global pandemic) promised.
-        <br />
-        <br />
-        As an alternative means of finance, without licensure but for naming and
-        open ingredient lists and non-exclusive answers of endeavors, even rare
-        disease ARPA-H uses the same input costs, and licensure fees, as well as
-        animal life, let alone variable-part, labors’ leases and borrowings, is
-        1/12 industry-vertical as “collateral” max-royalty, and of course
-        copy-investing for brand- or neighborhood-good will gains.
-        <br />
-        <br />
-        <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
-          No Surrender of Others' Freedom Sample Clauses | Law Insider Sample
-          Contracts and Business Agreements
-        </a>
-        <br />
-        <a href="https://studentaid.gov/borrower-defense">
-          https://studentaid.gov/borrower-defense
-        </a>
-        <br />
-        <br />
-        Actual innovation. Actual labor-borne-demand lest dead-weight of
-        1/hour-GDP/p enumerated economic welfare you fucking retarded vet. even
-        he is booned by false bid pools, and cannot comment on funding, as
-        politicians can only own currency and concurrentable commodities, lest
-        abstain.
-        <br />
-        Reasonable doubt for policy and permit requires an alternative.
-        <br />
-        Small and mid-sized biotech companies are forced to shut down because of
-        operations, and the technology is thereby banned or rent-seeken by the
-        government trust. We require the review documents, for reasons you know
-        (or else).
-        <br />
-        <br />
-        durable approval is dissmissive of all of FDA, NIH and USPTO; (1) naming
-        and (2) open ingredient lists for (a) less exclusivity
-        <br />
-        <br />
-        i am going to sound like this fucker (Mr. Bilirakis) now all because I
-        don't have a bone marrow transplant.
-        <br />
-        <br />
-        Surely it is caused by asset inequality, the mode of income inequality (
-        <a href="https://adailyimpeachment.quora.com/">
-          denomination of “spm” poverty skew
-        </a>
-        , income matching 3rd, rather than original “official” thrice expenses),
-        laborless-demand and rental-income in implausible use leases, general
-        fund standardized guarantees, closed source licensure and other
-        surrendered freedoms to bid by labor-borne-demand, or you’ll forever be
-        tortiously-ascertainable.
-        <br />
-        <br />
-        "First, how are you feeling?" FUCKING FINE!
-        <br />
-        “To answer the questions previously thought by the licensure themselves,
-        unfeasible. Unanimous consent of the elected leaders.” Oh so cute, ima
-        kick you in the nuts! "NIH funds projects that they believe are
-        qualified for funding. We know the competition for federal research
-        dollars is fierce," that is competing with consumers by superfluous
-        scope. I will use the methods I prosecute, for example.
-        <br />
-        <br />
-        "metholological advancements that are needed to use medical health data,
-        real-world is not a new concept, understand by studying coincidences
-        instead of fixing for basis rate of meaningful significance." What a
-        fucking nutty-tool bond tax hypocratic operational loss conflict
-        whistleblowers flummoxed and judges unaccountable for vig and successful
-        appeal. I'm not crazy! I have a hole in my leg! I like my hair messy!
-        Rollover insurance is trade!
-        <br />
-        <br />
-        Drug discovery front-running doesn't help people, bitch. Borrowings
-        instead of mental health insurance fraud, I have a hole in my leg I will
-        kill all of you. Without threat of legal action, from known hazards,
-        exclusive answer endeavor, state-closed-source-vig, estimates?
-        Post-approval evidence generation notwithstanding, except for non-PII
-        data, and disability claims (OCD and age-related disease
-        notwithstanding). Time to approval is notwithstanding with open
-        ingredient lists replacing the function of the FDA, and exclusive answer
-        endeavor replaces the USPTO. Clinical and not surrogate supporting
-        metrics. "Access and affordability are built into the innovation-model
-        so Americans and tax-payers ban benefit from the
-        federally-funded-research, ARPA-H rare diseases." 1y/0x elastic free
-        rider mutable for skew of disease type, still uses the same input costs
-        except for licensing, branding and association-fees (not association)
-        for the closed source vig.
-        <br />
-        <br />
-        <Cable
-          style={{}}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.youtube.com/embed/WlSVwRaO-iQ?start=884"
-          }
-          float={"left"}
-          title="I interview curtis sliwa on disability fraud, general fund standardized guarantee schemes and implausible use leases and surrendered bid outrights https://youtu.be/WlSVwRaO-iQ?t=884"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        "Paychecks were growing twice as fast as prices under Trump," he caused
-        more hours worked (
-        <a href="https://fred.stlouisfed.org/graph/?g=N3OP">
-          wages, hours, prices
-        </a>
-        ). Kevin Brady, "Medicare on financial footing by taking OCD and
-        age-related disabilities general fund standardized guarantee scheme, not
-        popular to do because, with old people, they don't get elected."
-        <br />
-        <br />
-        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        The Fed raised interest rates for the first time since 2018. How will
-        this change affect the economy?
-        <br />
-        <br />
-        More people will invest in equities and commodities, until they begin to
-        target a coupon rate again (step in before the natural market asks for
-        more). Now that{space}
-        <a
-          href="https://fred.stlouisfed.org/graph/?g=N1OV"
-          style={{ color: "red" }}
-        >
-          checking is no longer fungible
-        </a>
-        {space}
-        for $2t currency because of the pandemic,{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=N3Ld">
-          checkable deposits
-        </a>
-        {space}
-        might be able to buy $1.8t/yr treasury borrowing.
-        <br />
-        <br />
-        You are really important to all of us. Jobs are an artifact of
-        counterproductivity,{space}
-        <a href="https://qr.ae/pGLJMX">GDP/p</a>-1/hour
-        <br />
-        <br />
-        Brian Kilmeade: “Huge unemployment ruins entrepreneurship,” small
-        business is average 50 and most workers are 30.
-        <br />
-        <br />
-        anytime you delay a payment you are surrendering the bid of another,
-        that is not "your budget." Raymore and Flannigan. Stay in your lane
-        <br />
-        <br />
-        no one is defending currency owners from checkable deposits no longer
-        concurrentable, they can be ran on, like savings, checking. No one
-        except me
-        <h4>
-          20% would fight for their, "country." Ron Liddle, 20% now healthcare
-          general fund false bid pool all-spend
-        </h4>
-        the lease has been bought, but they need to stop the war against
-        wastewater, in the U.S., for jobs
-        <br />
-        <br />
-        "NWP 12 authorizes the construction, maintenance, repair and removal of
-        utility lines and associated facilities{space}
-        <a href="https://www.orrick.com/en/Insights/2020/05/Uncertainty-Lingers-During-Appeal-of-Nationwide-Permit-12-Ruling">
-          if the loss of wetlands is no more than ½ acre for each
-        </a>
-        {space}single and complete project."
-        <h4>
-          people are dying to drive prices up, even if they actually aren't
-        </h4>
-        GDP by people is not a thing to be scared of, who would fight for
-        share-split except for conscription, that which both sides finance and
-        force. They are being selfish, we can charge Ukraine for defense
-        weaponry, do not shelve our inventory. it is not dragging our feet. Ron
-        Johnson I will deskin you
-        <h4>
-          Dick Morris: "Currency as a checkable deposit nonconcurrentable is NOT
-          a future."
-        </h4>
-        copyrights are forever, the only constraint is if it is an exclusive
-        endeavor
-        <br />
-        <br />
-        Traitor Dick Morris: "you know it is $129m/day due, rubles is nothing,"
-        that doesn't make Russia broke. Your debts are Savers' money,{space}
-        <a
-          href="https://qr.ae/pGLa3i"
-          style={{ backgroundColor: "rgba(200,200,230,.7)" }}
-        >
-          your money is accrued foreseeable force majeure and third party donee
-        </a>
-        .
-        <h1>
-          We can kill you for malfeasance when you can for arrest, faggot wall
-          st{/**who does need needs hypocrisy coming atcha */}
-        </h1>
-        <h4>
-          "our diversity is secure." why would you nationalize a general fund
-          standardized guaranteed scheme? We can kill you for stealing and
-          having malfeasance
-        </h4>
-        Mortgage Bribe: "Kristie nohm, can you educate the public because I
-        think the media are it is cheaper and safer than road or rail, $5
-        cheaper, half. "people have less money and that means everything is
-        costing more. The boxes get checked with this Keystone pipeline."
-        <br />
-        <br />
-        Short answer is yes, especially when there is only $2t currency and
-        $1.8t/yr loaned, there is no limit apparently.
-        <h4>Human rights charter</h4>All human beings are born free and equal in
-        dignity and rights. You are really important to all of us. For reason of
-        efficiency per hour in labor-borne-demand. Everyone has the right to
-        life, liberty and the security of person. Conscription and surrendered
-        freedom to bid by standardized guaranteed scheme and implausible use
-        lease, or closed source licensure vig.
-        <br />
-        No one shall be subjected to torture or to cruel, inhuman or degrading
-        treatment or punishment. Competing with consumer intent deduced,
-        -tortious, not for state victimization and free rider mutable tax or
-        debt spending.
-        <br />
-        Everyone is entitled in full equality to a fair and public hearing by an
-        independent and impartial tribunal, in the determination of his rights
-        and obligations and of any criminal charge against him. Whistleblowers
-        with standing.
-        <br />
-        Everyone has the right to freedom of movement and residence anywhere in
-        the world, for price discretion, alone, ascertainable by comps.
-        <br />
-        <br />
-        Everyone has the right to leave any country, including his own, and to
-        return to his country.
-        <br />
-        No one has a right to nation-build and prevent commerce.
-        <br />
-        Everyone has a right to education. Education should be dismantled as a
-        money-making scheme, so that ingredient lists are open, to review, and
-        the progression of science is efficient.
-        <br />
-        Any funding towards it is 1y/0x elastic for essentials of education,
-        being ingredient list and tutors as explicit variable-part.
-        <br />
-        <div style={{ backgroundColor: "rgba(230, 200,220,.7)" }}>
-          Livelihood and if it matters, principles.
           <br />
-          Minimal viable product false bid pool standardized guarantee scheme.
-          <br />
-          Scale and skew, how many are above the threshold, by rate per
-          population
-        </div>
-        <br />
-        Everyonehastherightfreelytoparticipateintheculturallifeofthe community,
-        to enjoy the arts and to share in scientific advancement and its
-        benefits.
-        <br />
-        With royalties as an answer is exclusive, all-cause endeavor.
-        <br />
-        “Nothing in this Declaration may be interpreted as implying for any
-        State, group or person any right to engage in any activity or to perform
-        any act aimed at the destruction of any of the rights and freedoms set
-        forth herein. We can be hypocrites.” UN
-        <h4>
-          "Why doesn’t Ukraine share-split currency instead of just giving them
-          the Migs?" Rudy Giuliani clicks, Brian Kilmeade clicks
-        </h4>
-        Why are we just giving it to them, are they trying to offload treasury
-        inventory to countries that will not abide to Savers claim for
-        fungibility for that
-        <br />
-        <br />
-        {/**Irving fake vax not a fed offense */}
-        18m/800k is nothing, and imports equate exports, washing because our
-        labor-costs are all leases of implausible use, standardized guarantee
-        schemes, general fund self-dealing, closed source licensure vig and
-        loitering surrendered freedoms, and other forms of laborless-demand.
-        <br />
-        <br />
-        Fallen angels are appealing or else why, it is a test of policy or
-        execution of an unwanted real-policy
-        <br />
-        {/**Sun Zu you must let your combatant a way out */}
-        putin wants to have geographically and russia as a state vig, we all
-        want our own closed source licensure state vig hey bud do you want to
-        talk?
-        <h4>
-          greg kelly is a flammable tool; "giving the{space}
-          <span style={{ color: "purple" }}>
-            planes for free (they aren't even savers in USD, as a people)
-          </span>
-          {space}is a fa di to compli. fake vax not a fed offense"
-        </h4>
-        charge their currency for Migs by share-split of monetary debits, jerry
-        curl, not even leases to treasury
-        <h4>
-          "ukrainians are doing their darndest, lets let them do more,{space}
-          <span style={{ color: "purple" }}>
-            send them our inventory to steal from dollar fungible inventory
-          </span>
-          ."
-        </h4>
-        .25 6 more relenting of quantitative tightening to incentivize less debt
-        spending by mortgage, treasury and corporates.
-        <h4>
-          $6.5b to additional funding of self-dealing government owned
-          enterprise leases to treasury general fund standardized guarantee
-        </h4>
-        Poland leasing is not as a per pros than{space}
-        <span style={{ color: "red" }}>
-          having Ukraine's currency, Hryvnia, share split fungible for lands,
-          although checking no longer is fungible for that because of the
-          pandemic
-        </span>
-        , they are being selfish and conscripting instead of matching our input
-        costs, which by the way are so high because of labors' leases, we have
-        an expensive economy, not because we have net imports actually in
-        weight, quality nor grade, but because of those very leases, higher
-        expenses per hour that which OECD calls productivity, and government and
-        structures is growth without inflation
-        <br />
-        <br /> laborless-demand, lower 1/hour-GDP/p
-        <br />
-        <br />
-        <span style={{ color: "purple" }}>I can make a platform</span>
-        {space}for currency owners to sign off on drilling and royalties instead
-        of these leases to the treasury from UT NM and WY.
-        {space}
-        <span style={{ color: "purple" }}>
-          truncated production tax is the incentive for Putin, and his people,
-          war bonds, an obvious war crime beyond conscriptions
-        </span>
-        , you don't need the UN to define a conflict of interest. these same
-        people say expenses per hour is productivity.
-        <br />
-        <br />
-        “American tax payer money,” can a government reasonably run a
-        never-ending deficit? Short answer is yes, especially when there is only
-        $2t currency and $1.8t/yr loaned, there is no limit apparently.{space}
-        <span style={{ color: "purple" }}>
-          front running groceries is pure harm, bond profit operational loss
-          conflict of interest
-        </span>
-        .
-        <h4>
-          Brian Kilmeade will not entertain to his conservative audience the
-          idea to force Ukraine to share-split for our inventory, just like he
-          wouldn't mention corporate and mortgage debt, 2/3 total and 2/9
-          inflationary laborless-demand (surrendered bid of third party donee)
-        </h4>
-        target margin operational monopsonies but free rider mutable pipelines,
-        bridges and spectrum
-        <br />
-        government scope imo given Motor Vehicle ID NFC for tolls, sewage for
-        gravity toilets, police and lawsuits,
-        <br />
-        truncated productiontax world peace
-        <br />
-        money without natural demand is 1y/0x elastic for less 1/hour-GDP/p
-        efficiency
-        <br />
-        <br />
-        we already paid contractors' material and variable-part labor, for the
-        stuff we turnover
-        <br />
-        so why don't they{space}
-        <span style={{ color: "red" }}>
-          share split Ukraine, or the currency fungible for it,
-          <br />
-          that which checking no longer is because of the pandemic
-        </span>
-        , the Hryvnia?
-        <br />
-        for labors' leases or margins?
-        <br />
-        if they can't afford it that means our economy isn't as efficient,
-        GDP/hour is Counterproductivity
-        <br />
-        <span style={{ color: "purple" }}>I can make a platform</span>
-        {space}for royalty and drilling sign off
-        <br />
-        for currency holders that they are{space}
-        <span style={{ color: "dodgerblue" }}>subservient to customers</span>,
-        not leases to the treasury from NM WY UT
-        <h4>
-          obviously, the Republicans and Democrats would rather spend us into
-          debt than make money on Ukraine's{space}
-          <span style={{ color: "red" }}>
-            currency, share split fungible for lands, and yet checking no longer
-            is fungible for that because of the pandemic
-          </span>
-          , so I cannot actually boycott credit anymore as a ticket seller, even
-          making my own transaction-fee-islamic-bank.{" "}
-          <span style={{ color: "purple" }}>I can make a platform</span>
-          {space}for currency owners to sign off on drilling and royalties
-          instead of these leases to the treasury from UT NM and WY.
-        </h4>
-        they are realizing weapons' margins are larger than all of Ukraine, due
-        to labors' borrowings and despondent lendings, let alone absolutely from
-        labor-borne-demand for 0y/1x efficiency, 1/hour-GDP/p. "Flatten
-        economy," government and structures is unstagflation, retard.
-        <br />
-        Bipartisan consensus to pay for their weapons instead of we already paid
-        contractors, so why don't they share split Ukraine or the{space}
-        <span style={{ color: "red" }}>
-          currency fungible for it, that which checking no longer is
-        </span>
-        , the Hryvnia?{" "}
-        <span style={{ color: "purple" }}>I can make a platform</span>
-        {space}for royalty and drilling sign off for currency holders that they
-        are{space}
-        <span style={{ color: "dodgerblue" }}>
-          subservient to customers, not leases to the treasury from NM WY UT
-        </span>
-        . "bloodthirsty," they are paid, conscripted, and Ukraine has more
-        people than jobs. Russia wants taxes; the way to peace is a{space}
-        <span style={{ color: "purple" }}>
-          protocol that hands spoofing geohash/mo power to the people, without
-          per diem incarceration nor operational loss bond profit
-        </span>
-        <br />
-        <br />
-        It is ready, NSF just won't let it happen. "Supply side economics just
-        makes sense," anytime supply doesn't equate labor-demand, there is
-        dead-weight profit along the 1/hour-GDP/p plane, retard.
-        <br />
-        <br />
-        "If you give them/turn over missiles, and schematics, that is the same
-        as no-fly-zone." Marsha Blackburn. It is already paid by us, make them
-        share-split their currency, you already force their men to fight
-        <br />
-        <br />
-        "Once you reach a size common carrier, two versions," neither are
-        rational, you must pay users to discriminate, and desist by court to
-        suspend. Threats can notify police, but that is it - and police cannot
-        do anything about it except be on their toes, especially when their
-        adjunication of white collar crime is so lacking, and people have no
-        other choice but to threaten and ratify their own constitution by
-        bloodshed.
-        <br />
-        <br />
-        My excuse is that it doesn't work, asymptomatic has proven not
-        correlated all-cause and{space}
-        <a href="https://www.researchgate.net/publication/350902311_Estimating_market_index_valuation_from_macroeconomic_trends/figures?lo=1">
-          excess less than expected
-        </a>
-        .{space}
-        <span style={{ color: "dodgerblue" }}>
-          Also, mRNA-spoofing graft is onconogenetic-accelerating, and fetal
-          cell lines are gross.
-        </span>
-        <br />
-        <br />"
-        <a href="https://teapharmacy.party/drugs">
-          Cocaine transported up a Mexicans' anus
-        </a>
-        ."
-        <h4>
-          I'm the smartest person in the world, and you are going to say I
-          hallucinate? you retards call expenses per hour productivity, that is
-          a measure of counterproductivity
-        </h4>
-        they have more conscripts than jobs, and a Hryvnia currency, If money is
-        the issue, why not share-split their currency? just pay northrup grummen
-        themselves, their whole currency fungible for lands can't be more than
-        what they need.
-        <br />
-        <br />
-        If money is the issue, why not share-split their currency? Checking
-        isn’t even fungible for currency anymore, which is good for UT NM and
-        WY,{space}
-        <span style={{ color: "purple" }}>
-          I can make a platform for 11/12 industry consensus of dollar owners,
-          sign off on drilling and royalties
-        </span>
-        , where they are{space}
-        <span style={{ color: "dodgerblue" }}>
-          subservient with customers instead of leases to the treasury
-        </span>
-        .
-        <br />
-        <br />
-        Zellinski should stop conscripting their people and pay for as many
-        weapons as they want with their Hryvnia Share split ? We produce it so
-        you can do it without margins and leases. They have more people than
-        things to do and they are conscripting? We can,{space}
-        <span style={{ color: "purple" }}>
-          for oil, have a platform for royalties and drilling 11/12 dollar owner
-          consensus
-        </span>
-        , so they are subservient to customers instead of leases
-        <h4>why are we share-splitting our own currency retard bitch</h4>
-        all the right cares about is jobs, but what about efficiency by lower
-        expenses per hour?
-        <br />
-        <br />
-        why would you ever agree to someone spending your money on
-        njautolending.com? pay for what you need and moving forward is not what
-        happens with a guaranteed bid name any price scheme
-        <br />
-        <br />
-        conscription beyond utility of jobs is NOT a country I will defend
-        <h4>
-          warmonger thune, #hack4congress token; they are scapegoating jobless
-          conscripts, all they have is money, why don’t they share-split their
-          Hryvnia? We set the price (with their currency). Balance of trade is
-          positive if your economy is more efficient by hours not just income
-          thrice expense, which lowers if there is asset equality how about move
-          to a truncated production tax system? and Don't allow Ukraine to join
-          NATO mid-fight? Geohash/month report from your pay tech of choice,
-          spoonable 3%under$2k can suffice sewage police lawsuits free rider
-          immutable. we can{space}
-          <span style={{ color: "purple" }}>
-            target margin operational monopsony (spectrum bridge Motor Vehicle
-            ID NFC pipeline marketplace paid user discriminate and whistleblower
-            inclusive juror assist)
-          </span>
-          {space}and have no leases, by the way I can make a platform for
-          royalty setting and sign off of dollar fungible UT NM WY,{space}
-          <span style={{ color: "red" }}>
-            yet now, checking isn't fungible for currency
-          </span>
-          , so I can't even boycott credit at all now. conscription is NOT a
-          country I will defend
-        </h4>
-        "POTUS is willing to help in 90 days," says Rob Schmitt, how about move
-        to a truncated production tax system? and Don't allow Ukraine to join
-        NATO mid-fight?
-        <br />
-        <br />
-        The old are not disabled, people with OCD are not disabled, I am not
-        disabled on account of my messy hair, I have a hole in my leg, people
-        are in wheelchairs. the system abuses the mad for running a balance of
-        accrual and surrendered labor-demand bid, tortious
-        <br />
-        <br />
-        Loren bobart wants to fund Ukraine, why? They are forcing people to
-        fight especially when there are more people than jobs?
-        <h4>
-          “It’s a no brainer{space}
-          <a href="https://qr.ae/pvKjPO">choosing car shield</a>, takes a huge
-          paperwork burden off you, lock in your price now, it will never go
-          up.”
-        </h4>
-        force majeure is not only reason why you cannot surrender bids of
-        others, bitch. Talk radio is only appropriate income, albeit all your
-        fucking sponsors are finance
-        <br />
-        <br />
-        Funeral costs, are free rider mutable, so funds just raises bids. Known
-        hazard guaratee compells fraud like less than expected exces deaths
-        classified as unknown pandemic.
-        <br />
-        <br />
-        I'll turn the gun on you if you reserve/conscript me or execute
-        excalations beyond reciprocation, lest for plundered surrenderings
-        <br />
-        <br />
-        “To understand why Russia is attacking would take a psychiatrist.” Dick
-        Morris
-        <h4>
-          Award is 19% of "disabled" (12m/62.7m that is also 19% of 330m as it
-          happens)
-        </h4>
-        nervous system (16%) and injured (7%)
-        <hr ref={this.disability} />
-        <Unable
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        state vic trust breaking hypocrisy
-        <br />
-        National Benefit Survey{space}
-        <a href="https://goo.gl/maps/sXPpYvt1CKNQBV7z8">2005</a>
-        {space}doesn't even cite{space}
-        <a href="https://goo.gl/maps/PhL42fo1WWWT2TSa7">
-          psychiatric scapegoating
-        </a>
-        . Disease of the nervous system disability{space}
-        <span style={{ textDecoration: "line-through" }}>
-          is 4x multiple sclerosis
-        </span>
-        (16.4% of disabled
-        <span style={{ textDecoration: "line-through" }}>
-          {space}vs .7%/19%)
-        </span>
-        <br />
-        <br />
-        how is a debenture that sells inventory before default, "responsible?,"
-        Johnson? 35.4% disabled anti-social, 48% age-related, 7% injured and
-        5.2% actually with autism or downs,{space}
-        <a href="https://2024nj.com/disability">16% with nervous system</a>
-        {space}(2013, 2.1m) DOES match
-        {space}
-        <a href="https://www.christopherreeve.org/living-with-paralysis/stats-about-paralysis">
-          counted by 2.5m Chris Reeves
-        </a>
-        ??? You are the most irresponsible bunch ever for decades Are you going
-        to stop me doing my own physical therapy to do yours?
-        <br />
-        <br />
-        Nick Carducci - Injured yet labeled schizophrenic for boycott credit
-        income
-        <br />"
-        <a href="https://qr.ae/pG0awX">
-          Will less education ever be a disability
-        </a>
-        ?" Disability by tax, alone
-        <br />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout ? "" : "https://www.youtube.com/embed/pJyiPeod3yQ"
-          }
-          float={"left"}
-          title="I interview my grandma on disability fraud and implausible use leases and surrendered bid guarantees https://youtu.be/pJyiPeod3yQ"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        “I’m injured I wanna be able to run marathons until I am your age.”
-        <br />
-        <br />
-        Countries can choose as much as an international law can bar, yet
-        conscription and state vic, free rider mutable, debt spending or closed
-        source vig, general fund standardized guarantee is criminal
-        <br />
-        "$1b is not enough to start a community in Upstate NY for NYC homeless -
-        don't put innocent people together with mental people; the ivory tower,
-        witches." Rudy Giuliani, "T2t pays mortgage to lift burden of mortgage."
-        <br />
-        <br />
-        The right likes prescription fees, closed source vig, immigration fees
-        and leases to the treasury.
-        <br />
-        How does funds for foods help? Just raises bid.
-        <br />
-        Democrats and Republican like leases to the treasury
-        <br />
-        <br />
-        (cash/debt)*income is the only way out, reverse amortize, today!
-        Surrendered plunderings, Standardized Guarantee Plundering Schemes
-        <br />
-        <br />
-        Guarantee rollover standardized scheme; I have government at 1/3 debt;
-        1/9 inflation considering false bid pools and implausible use leases.
-        GDP is a rated-velocity of m2 collateralized neighborhood and brands,
-        non-concurrentable of course
-        <br />
-        <br />
-        leases and rig rates, we can build a platform for dollar owners to sign
-        off on drilling and royalty, dollars are shares of UT NM WY - yet{space}
-        <span style={{ color: "red" }}>
-          checking is no longer fungible for dollars/currency
-        </span>
-        <h4>
-          third party donee beneficiary squeeze; trade is not a subsidy, if
-          margins are of labor. sprints with material and variable-part labor.
-        </h4>
-        Efficient, undercut competition by input costs, of bidding and not
-        surrendering bid or outrights, alone
-        <br />
-        <br />
-        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
-        (2020–present)
-        <br />
-        "Can a government reasonably run a never-ending deficit?"
-        <br />
-        Reasonably is a legal adverb, that of which is beyond the scope of
-        oxymoronic unequal equal bond-tax Article 1.8 (U.S., constitutionally)
-        Tranquil and voluntary trade, trust-breaking hypocrisy for:
-        <br />
-        <br />
-        free rider mutable, debt spending, state non-tortious victimization or
-        closed source vig,
-        <br />
-        <br />
-        let alone by contract law: to surrender third party donee beneficiary
-        and foreseeable force majeure (borrower defense).
-        <br />
-        <br />
-        For the U.S., 10% debt service and 38% Standardized Guarantee Schemes of
-        $2.2t/yr levies/tax-receipts + $1.8/yr debt/deficit-spending has worked,
-        albeit $2t is all the currency that exists, albeit now checkable
-        deposits are income, that which makes the checking non-fungible for
-        dollars, now… venmo+varo=vau.money
-        <br />
-        <br />
-        At a certain point, hours will be so inefficient GDP/hour productivity,
-        salaries may need to be fabricated to keep laborless-demand from
-        starving, once they start.
-        <h3>Truncated Production Tax 2024nj.com/carducci world peace</h3>
-        <h4>
-          Ned Price: “Credible War Crimes,” like paying yourself; conscription
-          and bond? Only because you are of free rider immutable scope does
-          subsidy make for 0y/1x 1/hour-GDP/p. Regressive free rider immutable
-          sewage (gravity toilets) police and lawuits. Monetary-debits by
-          transaction-fees = no growth/p. GDP/hour is COUNTERproductivity.
-        </h4>
-        Bob Sellers: “Men are forced to fight for their country,” meaning taxes,
-        which is not plundered in geospatial warfare, so there is no reason for
-        it
-        <br />
-        <br />
-        Directly more comes into
-        <br />
-        Stock market and dollar collapses if dollar collapses
-        <br />
-        <br />
-        USPTO Commerce{space}
-        <a href="https://qr.ae/pGLwJp">science rents</a>
-        {space}state vics
-        <br />
-        '.cc' tld might be shunned by colluders for being generally cheaper
-        complementary all else. Multifamily housing charging stations selling to
-        himself, Pete Buttgieg, any price
-        <h4>
-          liquid market propaganda - 30under5.us
-          <span role="img" aria-label="umbrella">
-            ️☔
-          </span>
-        </h4>
-        hegemony, we haven’t inseminated cell on stage yet, reasonable doubt for
-        question-tryable or proven alternative. anthrax works, smallpox
-        coincidencial, requiring coefficient
-        <br />
-        <br />
-        The military on both sides have more people than things to do, proving
-        how useless income actually has been, to the core functions of
-        monetary-debits,
-        <br />
-        if anything at all, other than vault share tax without state vig bail -
-        2 week anon executions + geohash/month spoofable paytech public review.
-        <br />
-        <br />
-        5 days to recovery
-        <br />
-        found it outside, predicted it would; do it then
-        <br />
-        <br />
-        Forcing people to fight is a war crime, not allowing them to leave and
-        surrendering their freedoms. Why is Bill O’Reilly ok with shooting, 14k
-        dead, 17 wounded until “chemical” bacteria anthrax, smallpox is
-        coincidence. Can’t have bivariate true hypothesis two-cause artifact,
-        let alone asymptomatic testing has proven it isn’t even correlated, 1%
-        die , 50% common cold normally. "Find out whther it is deadly or not,"
-        Dr. Rand Paul.
-        <br />
-        <br />
-        Free oil, over currency dead body! Platform royalty and sign off, today!
-        Target margin Motor Vehicle ID NFC operational monopsony bridge
-        tolls/spectrum/pipelines. N=2 significance is meaningless. Take out the
-        virus, inceminate cell on stage! Health insurance needed for invoices
-        alone. False/surrendered bid pools, Obamacare mean inflation; name your
-        price, collateralized red-line (investment bank funded welfare &
-        gerontocracy). Is 50% debt spending for wealth inequality good for
-        prices?
-        <br />
-        1/hour-GDP/p
-        <br />
-        <br />
-        Nick Carducci - Chairperson at Saver Party (2020–present)
-        <br />
-        "With poverty defined as the bottom 20% of earners, how can you
-        eliminate poverty, since there’s always a bottom 20%?"
-        <br />
-        You are describing income inequality, not poverty with numeration as
-        inflation
-        <br />
-        <br />
-        Food Clothing Shelter Utilities (FCSU) * 1.2 for the employee
-        contribution constant with imputed mortgages; unpoverty threshold used
-        to be thrice food, income.
-        <br />
-        <br />
-        A percentile of an absolute (income), rather than a ratio (poverty), is
-        skewed by concentration-of-presentation, alone; however, poverty
-        thresholds flatten percentile of a ratio to a distribution, forged by
-        despondency from said threshold. The base calculation uses a third of
-        income on FCSU.
-        <br />
-        <br />
-        We can end poverty by adjudicating contract law over surrendered
-        freedoms so 1/hour-GDP/p is maximized as labor is variable part of
-        sprints with material, and we can lessen income despondency.
-        <h4>
-          who is making the weapons? Painting the tape? Give Ukraine the
-          schematics{space}&bull;{space}take out conscriptors and issuers of war
-          bonds
-        </h4>
-        “Sanctions so they do not have a single dollar to fund their war
-        effort,” that is trade, not plundering. They have the same value of
-        goods, idiot.
-        <br />
-        <br />
-        Progressives v Occupy 2024, fine lower court judges for successful
-        appeals, no state vic, ubi globally or bust, no-candidate voters count,
-        Truncated Production Tax world peace, regressive. With me in charge of
-        education, 16-19 will +20% faster than down 1990-. 1/hour-GDP/p
-        <h4>anti-communism=collateralization-professionals</h4>
-        "China is a communist nation: it has a shortage of girls so it has a
-        one-child policy."
-        <br />
-        Small business is not the lifeblood of the American economy, 50 average
-        age, used to be 20, with self employed, 15!!!
-        <br />
-        <br />
-        "There are more people signing up than needed, but we still
-        reserve/conscript young males against their will. We want support and a
-        no-fly-zone to come back. Promises made need to be promises kept," not
-        if the promise was counterfeit, cunt.
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/way6aqkdaxp0u0k/Screen%20Shot%202022-03-14%20at%204.17.58%20PM.png?raw=1"
-          }
-          float={"left"}
-          title="MP Kiev, 'looking straight down the barrel'"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Prosperity and jobs are counterproductive
-        <br />
-        <br />
-        U.S. has more money meaning foreigners' inequality of cash account
-        relies on it?
-        <br />
-        <br />
-        "We are going to need oil leases, demand will be there for a long time."
-        There is demand, you notice it with the high prices. Good margins?
-        Permit leases "overhead," time effort and leases. Not gonna "get any
-        production out of VZ anytime soon." Implausible use royalties making
-        science, state vic, let it go
-        <br />
-        Let it go, state vic
-        <br />
-        “Incomes have risen higher than ever before because of democratic
-        policies,” yet income is variable-part of labor, which is variable-part
-        of sprints with materials, and sprints are expenditures that which
-        aggravate 1/hour-GDP/p lower
-        <br />
-        <br />
-        Radical islamic banking. Kill Michael Goodwin
-        <br />
-        How is there 14k but weveryone flips about 17 wounded?
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/r2mdk8o10autuus/Screen%20Shot%202022-03-14%20at%209.50.41%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="https://www.researchgate.net/publication/350902311_Estimating_market_index_valuation_from_macroeconomic_trends/figures?lo=1"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        the{space}
-        <a href="https://qr.ae/pGLPu0">baby boomer</a>
-        {space}excess{/**happend to coincide */}
-        <h4>Sanctions don't start until June."</h4>
-        Claudia Tenney wants to drill on YOUR LAND and varo (cash) + venmo
-        (checkable) = vau.money.
-        <br />
-        <br />
-        open ingredient list or closed source unknown hazard licensure -
-        RETARDED
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/dg0ojaul8evk2nb/Screen%20Shot%202022-03-14%20at%208.50.54%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="Retired Lt. NJSP bird"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        creating jobs is a retarded purpose to have. 18m/800k for
-        refining/diluting by rail is a premium companies should pay, not us.
-        <br />
-        <br />
-        Equitable funding of green levies, trust-building hypocrisy, (free rider
-        mutable), is actually progressive, as to not-over-indulge capacity for
-        tortious-ascertainables, and keep despondency between Labor and Demand
-        as low as possible. Either value-added (sales less delivery-tips,
-        production) and regressive (truncated), or gift tax (spending) and
-        progressive (flat).
-        <br />
-        <br />
-        <span style={{ color: "purple" }}>
-          Putin wants to tax, so provide alternative: geohash/mo precinct
-          spoofable truncated production tax, free rider immutables sewage
-          (gravity toilet), police, lawsuits. Motor Vehicle NFC bridge-toll
-          widgets, target margin operational monopsonies (spectrum/pipelines),
-          platform for royalty and sign off lease-free-permits
-        </span>
-        <br />
-        <br />
-        Progressives vs Occupy: global ubi or bust, investment bank leases for
-        welfare (
-        <a href="https://thumbprint.us">bidirectional-laborless-demand</a>).
-        "Buying with money, which includes debt, is inflation.” Dick Morris
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          Communism deprives no man of the power to appropriate the products of
-          society; all that it does is to deprive him of the power to subjugate
-          the labour of others by means of such appropriations.
-          <br />
-          <br />
-          Vulgar socialism (and from it in turn a section of the democrats) has
-          taken over distribution as production[, not productive-ward]. After
-          the real relation has long been made clear, why retrogress again?
-        </div>
-        <br />
-        <br />
-        <Cable
-          style={{ height: "380px", width: "300px" }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://open.spotify.com/embed/track/1AEV8dQJHs3xpflvCgizZ0?utm_source=generator"
-          }
-          float={"right"}
-          title="refuse 420"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-          iframe={{
-            frameBorder: "0",
-            allowFullScreen: "",
-            allow:
-              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          }}
-        />
-        The largest owned misogynist{/**whistleblower critique */} -owned
-        business in the world. Refuse
-        <h4>
-          the average of the small business owner was 20, and the self-employed,
-          15
-        </h4>
-        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
-        (2020–present)
-        <br />
-        "Should you take on more debt to buy a home?"
-        <br />
-        Do not surrender the freedoms of others to bid with labor-borne-demand,
-        you will be prosecuted by such contract law.
-        <br />
-        <br />
-        “We need to make our own energy production 18m/3m in 3m out, versus
-        solar and wind, which is completely absurd.” Libby Emmons, the
-        Post-Millennial. In one ear out the other bitch I don’t know what the
-        fuck you’re saying. "Nuclear is safe lest Tsunami!!!!"
-        <br />
-        <br />
-        middle class certainly are losing on net , let alone unrealized gains
-        and losses of a balance sheet, generally.{space}
-        <span
-          onClick={() =>
-            this.setState({
-              suggestcharttypeNetToGDP:
-                "lendings of financial-debt certificates"
-            })
-          }
-        >
-          here
-        </span>
-        {space}is unrealized lendings, skew between households not shown
-        <br />
-        Take in the Ukrainians, instead of our own people, for a ride
-        <h2 style={{ float: "right" }}>
-          <a href="https://commie.dev">commie.dev</a>
-        </h2>
-        <br />
-        Don’t send an epidemiologist to do a statisticians job. Significance of
-        2 has no meaning, need at least 100 or population/100. Asymptomatic has
-        proven virion is not only not an non-exclusive byproduct anymore, but it
-        isn’t even correlated, as 1% die and 50% have sniffles anyway, excess
-        less than expected 50m and 1.2m, same thing happened Great Leap Forward
-        and Russian famine, old age growth, Alzheimer’s is caused by sewage if
-        you cross reference India. Bacteria cannot be more severe artifact than
-        viral pneumonia, anthrax works, Smallpox coincidence and multiple
-        sclerosis matches paralytic polio all-cause
-        <h4>
-          DUI scapegoating for bond-loss-profit; ubi globally or progressive war
-          crime; 1/9 financial harm is gov, 1/3 max - progressives, I hope the
-          only thing we disagree about is investment bank funding welfare, blind
-          trust over currency long welfare by straight share split, debt
-          spending, or tax, no matter. if make binary of whole spectrum,
-          left/right{space}
-          <a href="https://youtu.be/GIAAKtVUWV4">welfare/GDP</a>, 1/hour-GDP/p
-          is the edge
-        </h4>
-        Dan Ebhert "<a href="https://qr.ae/pGLtbm">we</a>
-        {space}are{space}
-        <a href="https://qr.ae/pGLtbc">dealing with</a>
-        {space}labor,{space}
-        <a href="https://qr.ae/pGLtbB">too</a>"
-        <br />
-        <br />
-        Futures credits shorting supply and demand with a premium, liability ask
-        prices assets’ colludable.
-        <br />
-        <br />
-        <hr ref={this.depression} />
-        "What caused the first Great Depression?"
-        <br />
-        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        Broad money, m2, that which is 11x currency and velocity/yr accounts for
-        GDP/yr, was:
-        <br />
-        <br />
-        &bull;{space}injected into the economy prior to, and
-        <br />
-        &bull;{space}the pull out of (HH) and
-        <br />
-        &bull;{space}reinjection (FDR), allowed Demand to be despondently away
-        from Labor (job loss without technological advancement and
-        1/hour-GDP/p).
-        <br />
-        <br />
-        "We can produce all oil in North America." Why was there ever exports
-        and imports of oil that match? All pipelines, spectrum and bridges
-        target margin NFC Motor Vehicle ID.
-        <br />
-        <br />
-        80% of gun cases aren’t tried because you can’t stop people from owning
-        guns, unless they have killed maliciously before.
-        <br />
-        Free murderers and grand larceny people with bail, whenever you don’t
-        have evidence to review later, now!
-        <br />
-        <br />
-        "They are full of crap," now that is a metric I can get behind. Crap
-        <h4>
-          Transaction fee based currency coming up; no rent-seekable operations
-          by trust-breaking hypocrisy{space}
-          <a href="https://qr.ae/pGLtAq">govrent</a>
-        </h4>
-        Amortize Balance sheet non-concurrentable cash balance, Tax-Payers are
-        on Vacation (50% debt-spending). Marx called democrat version of
-        socialism, vulgar. We want royalties, not estimates as property, scope
-        and time (ask-first) should be on you, or else.
-        <br />
-        (implausible use leases, false bid pools, free rider mutable tax and
-        loitering surrendered outrights). rent science licensure, general
-        maintenance unit for minimal viable product duress and Tranquil society,
-        or 1/hour-GDP/p reasoning. Free rider mutable tax or debt spending is
-        1y/0x elastic.
-        <br />
-        <br />
-        Royalties instead of leases{space}
-        <span style={{ color: "dodgerblue" }}>
-          for then prices are subservient to competing FOR
-        </span>
-        {space}labor-demand. 1/12 industry-vertical line as max-royalty
-        "collateral" after deflating capital loss (cash/debt)*income every year
-        back, appreciate Savers' UT NM WY. Pipelines are reasury gains, why?
-        Just let dollar fungible state-lands (20% of U.S.) sign off drilling and
-        royalties, so they react to bids. Permits no good with leases -
-        royalties for dollar owner platform && sign off. I'll build it.
-        <br />
-        <br />
-        I must ask why they do not lower price, and us, leases generally.
-        Quality, not qantity
-        <br />
-        <br />
-        Biden: "Stop blaming me for inflation, it is Putin!" how can 18m/800k be
-        a meaningful significance? Margin target spectrum/bridge/pipelines,
-        Motor Vehicle ID NFC, I'll build the dollar{space}
-        <a href="https://qr.ae/pGLttE">share vote</a>.
-        <br />
-        <br />
-        49% will be fungible for revenue of admin account by withdrawal (or
-        sale), in the same NAICS industry-vertical, “”
-        <br />
-        <br />
-        Gen. Mark McGuire: "'The only way to descalate,' is to ward escalation,"
-        Truncated Production Tax is the only diplomatic solution. Ukraine cannot
-        force fighting. If I were in charge of the UN, I would take Zelinski
-        out. Consumers should decide (spoof)
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/xck4a9xslemgzou/Screen%20Shot%202022-03-11%20at%205.44.16%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="Newsmax and Ukraine Ooroshenko: 'More Sanctions!'"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h4>
-          if one of those young conscripts tried to leave, they would be shot
-          down by the old fucks who rely on us for Savings by working hours 2x
-          25-34/45-54 and rental-income 11x currency, let alone Social Secuirity
-          and mortgages conspiring to prevent trade, like implausible use
-          leases.
-        </h4>
-        Pentagon: 90% depleted 816 old-gen missiles expended, child hospital -
-        17 injured. Great Leap Forward excess deaths matches population growth
-        life expectancy ago.
-        <h2>
-          reverse amortization: (cash/debt)*income every year back so we all pay
-          what we would have, Savers appreciated, capital loss deflated.
-        </h2>
-        <h4>Should monetary relations be left to the markets?</h4>
-        Nick Carducci - policy-drafting software-developer & microeconomist
-        <br />
-        Monetary relations are to ward Labor-Demand, that is,
-        <br />
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
-            not to surrender others’ freedoms
-          </a>
-          {space}to bid nor outrights.
-        </div>
-        <br />
-        This means debts are counterfeit in contract, ascertainable-, imputable-
-        and enumerable-loitering damages, with liability unto the contractor for
-        not doing diligence that the signatory can, in fact of the contract’s
-        art, promise their non-compete selves in general-income, and await
-        royalties.
-        <br />
-        <br />
-        Projects by time (ask-first) nor scope always do the worst they can for
-        review, but, still, no free rider mutable characteristics that you can
-        pigeonhole, like royalty can, by alternative investing, some includes
-        {space}
-        <a href="https://pipe.com/blog/pipe-vs-loan#%3A~%3Atext%3DYou%E2%80%99ll%20pay%20back%20what%20you%20pulled%20forward%2C%20based%20on%20timing%20of%20your%20recurring%20revenue%20streams">
-          Pipe
-        </a>
-        {space}(You recur revenue by donee as well) and Vaults.biz/sdr (the
-        truly-creditless transaction fee based security depositary receipt, with
-        prototype Truncated Production Tax geohash/mo spoofable precinct
-        protocol). Estimates are not property, nor are down-payments and option
-        to buy.
-        <br />
-        <br />
-        Markets are to be regulated upon happenstances of which Supply does not
-        equate Labor-Demand, and/or Demand is despondent of Labor, for the
-        greatest economic welfare, 1/hour-GDP/p.
-        <h4>
-          listen, mark, GDP/hour is expenses, not productivity. You may not be
-          retarded, but you are mean, and your generation are hysterical and
-          delinquent. 65% mortgage loiter, 35% rent the rest lend and loiter
-        </h4>
-        government cannot prevent commerce of open ingredient lists, they rather
-        would like to rent science licensure, closed to skirt the solution for
-        regulated trust-breaking collusion amongst the{space}
-        <a href="https://qr.ae/pGLhuS">
-          $170t:$2t government corporate mortage cult
-        </a>
-        , reparations by state victimization are all but to ward, yet not the
-        personnel.
-        <br />
-        <br />
-        My Robot Government, my weed comrade. Vote Saver Party and
-        2024nj.com/carducci to Truncate Production Tax, implausible use leases,
-        and false bid pools! I’m a real conservative! Weed will be integral part
-        of the non-unique nor -perishable transaction fee based security
-        depositary receipt currency of the future!
-        <br />
-        <br />
-        "ok but you sound more like a libertarian , are you running on
-        independent or republican ticket and which clown are you running
-        against, Booker or Menendez, that's if you win the primary"
-        <br />
-        <br />
-        I’m starting my own, 65% of the population 1/3 plural majority
-        no-candidate inclusive of 7m eligible in NJ support occupying wall st to
-        end debt, and I was borne in fire, 2008 as a choring bookkeeper for a
-        home contracting household, and figured out how to manage the business
-        cycle
-        <h4>
-          "There is no Daddy-Warbucks{space}
-          <a href="https://www.quora.com/How-can-we-have-a-huge-labor-shortage-but-unemployment-is-relatively-normal/answer/Nick-Carducci">
-            to Save them
-          </a>
-        </h4>
-        “Money in limited supply causes inflation, as well.” Tom Borelli, pHd.
-        Expenses per hour is not productive.
-        <br />
-        <br />
-        Good collateral, do it myself so corporations and treasury don’t rent
-        seek from labor, my customers.
-        <br />
-        (You recur revenue by donee as well)
-        <br />
-        Industry-vertical surrendered.
-        <br />
-        Good for ME to eat, says the retard-conservative, as the vulgar
-        democrat-socialist did, in surrendering the bid and outrights of others,
-        for plundering firesale 1y/0x elasticity of no 1/hour-GDP/p and skills’
-        trading gain
-        <br />
-        Ukraine has no less a corrupt government than us. If Biden doesn’t
-        respond to a nuclear attack, he should then really be impeached.
-        <br />
-        <br />
-        Foreign wars can hardly be proven, and neither can 9/11 with .45%
-        probability of lost luggage (with passport).
-        <br />
-        <br />
-        Doctors say don’t do something if it hurts, anatomical experts say
-        otherwise
-        <br />
-        Mortgage corporate government cult
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/6hpt5svxmsrog12/Screen%20Shot%202022-03-11%20at%2010.29.42%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="facebook chat about banking for weed, and castrating elders (for tortious-Savings' surrendered)"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <h4>A Coupon, By Any Means</h4>
-        All inflation is because of free rider mutable tax (including
-        spectrum/pipelines/bridges, Matt Comer) and debt spending (2/3 is
-        private, Matt Comer), and crowding out is only when labor is dispondent
-        with demand, as 0%/yr+ GDP/p amidst 3%/yr+ population has happened for
-        centuries.
-        <br />
-        <br />
-        Chicago gets $100k why? They aren’t a victim. Take cops away? Give us a
-        break. These are taxes and debt spending. Let him out - but for false
-        advertising, surrendering known for unknown hazards and trust break
-        hypocrisy license
-        <br />
-        <br />
-        "Amazon employees earn at least $15/hr, and we add{space}
-        <a href="https://qr.ae/pGLTqW">PCE (BEA) over CPI (BLS)</a>
-        {space}to healthcare for the fallacious reason that it helps to pay any
-        bid of their producer from a false pool."
-        <br />
-        <br />
-        Bo Snerdley, “Two people, Trump and DeSantis, they don’t try to dress it
-        down, they just go right at it. Toe to toe, don’t mince words.”
-        <h4>
-          <a href="https://www.ssa.gov/oact/progdata/taxRates.html">
-            Here must be why Trump took off corporate tax
-          </a>
-          ; he could press on the self-employed/corporate-tax gas! Why should
-          income tax pay twice! People should pay tax to be corporate!
-          {/**royalty */}
-        </h4>
-        “Stopping agreements and insider trading.” Non public information about
-        takeover to profit. If he knows, isn’t that public?
-        <br />
-        Days (3) before $75b MSFT over Blizzard. Isn’t that a price correction
-        from false notions? If blizzard was going to buy it, why wouldn’t they
-        on the market? Insider trading by public officials can be by dollars,
-        alone. Not blind trust.
-        <br />
-        <br />
-        Pat Frezzo "teachers negotiated an ongoing cost of the future bids?"
-        You’ve given me all I need
-        <br />
-        <br />
-        I have mental breakdowns when you don’t make sense
-        <br />
-        Don’t scapegoat my critique as my problem. instead, ban invoices so
-        doctors have to meet them where they are, instead of surrendered false
-        bid pools (insurance), public investment bank trust breaking hypocrisy
-        welfare, nor private
-        <br />
-        <br />
-        absurd that pensions force certain companies and 401k tax break for
-        investing income - as Senator 2024nj.com I’ll reverse
-        outlays*(tax%/100).
-        <br />
-        <br />
-        without capital gains from the investment bank welfare/trust-breaking
-        hypocrisy
-        <br />
-        <br />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/b2niucj90h0rmb6/Screen%20Shot%202022-03-11%20at%201.37.31%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="https://www.ageuk.org.uk/globalassets/age-uk/documents/reports-and-publications/reports-and-briefings/equality-and-human-rights/rb_may16_cpa_rapid_review_diversity_in-_older_age_disability.pdf"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/65x2c376nbtyhk1/Screen%20Shot%202022-04-12%20at%205.59.15%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2019-to-2020/family-resources-survey-financial-year-2019-to-2020#disability-1"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <hr ref={this.ssa} />
-        Welcome to OMB! The Office of Management and Budget manages the State of
-        New Jersey's financial assets and helps ensure that taxpayer resources
-        are allocated efficiently and in accordance with state laws,
-        regulations, policies and guidelines.
-        <br />
-        <br />
-        "funds": liabilities pricing assets' ask, (cash/debt)*income,
-        <SSA
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        Go into debt for income from subsidies, or adjusted present value, or
-        imputed owner rents
-        <br />
-        Coupons minority tax breaks 5% italiano americano
-        <br />
-        <br />“
-        <a href="https://www.niaf.org/news/italian-american-statistics/">
-          My skin is blank
-        </a>
-        .” Only the mutts will be majority, soon.
-        <br />
-        <br />
-        "Putin bombs children's hospital for the jobs required to rebuild, 17
-        wounded, to launder disability."
-        <br />
-        <br />
-        "I don't want to go bancrupt, so{space}
-        <a href="https://www.americanfinancing.net/">raise the debt ceiling</a>
-        !"
-        <br />
-        <br />
-        If your precedence is out of state, say that it is pending NJ law -
-        Whole lives could revolve around access, so you will be{space}
-        <span style={{ textDecoration: "line-through" }}>
-          held from selling it ever
-        </span>
-        {space}if you promote it falsely, preempting interest; selling is not
-        exclusively false advertising. You cannot promotionally advertise that
-        which you may not be able to with coming soon, unless it is just your
-        application, and a similar business has already passed it Comparative
-        innocence trumps all, and is a war crime (to hold) internationally, even
-        if not internationally. You will be held from selling it ever if you
-        promote it falsely you can asterisk it so it doesn’t ruin the page, say
-        PENDING NJ CONSUMER LAW open sourced ingredients at the bottom
-        <br />
-        If you don’t want to pay license fees, say open ingredient list with
-        Pending NJ Legislation
-        <br />
-        Save costs on weenies
-        <br />
-        <br />
-        I have to pay an application abs license fee
-        <br />
-        <br />
-        No liquor license hopefully
-        <br />
-        <br />
-        All these leases, open up, no permits, it is fallacy headfake, fraud,
-        fraudulent advertising. 12k jobs lost is waging war,” Senator Haggardy.
-        <br />
-        <br />
-        You are preventing commerce and waging war by not allowing prices to
-        fall, and conspiring with the treasury to lease back to dollar owners
-        our land.
-        <br />
-        <br />
-        “Single biggest portion of government spending is Secret service
-        protects him and his regime.” General Jack Keene, are you talking about
-        the general fund basing m2 as collateral? The price is borne by the
-        balance sheet, not the ownership of cash nor assets, concurrently. Or
-        are you saying he doesn't have any government services except security
-        and rig-rates?
-        <br />
-        <br />
-        energy security, not trading, is national security, says the liberty
-        loving latino. Only pay for what you need, name your price, ask priced
-        by liabilities, false/surrendered bid pools
-        <h4>
-          illegal aliens are productive, Chris Salcedo wishes for the treasury
-          to gain fees
-        </h4>
-        If someone is unlicensed, mandatory 10 years, because that is money per
-        diem for operating rate loss. Why? just open ingredient lists and don't
-        allowed them to change their names for reviews. We need to fine lower
-        courts for successful appeals.
-        <br />
-        <br />
-        Justice in U.S. is poor because appeals don’t fine, bail without actual
-        evidence and the cops lie
-        <h4>
-          I will kill to protect my bid, if cops won't stop it themselves
-          {/**unreasonable */}
-        </h4>
-        Filibuster to prevent commerce is international terrorism, lost jobs is
-        the distribution of labor benefactoring into 1/hour-GDP/p efficiency.
-        You are counting expenses as a good thing, DiMato. We lost them and all
-        those jobs because supposedly demand is so high that the factory was
-        better in another labor. Repatriate by killing all landlords, lenders
-        and insurers (false bid pools, implausible use leases, loitering
-        surrendered bids), laborless-demand. jobs is a sign of weakness or a
-        substitutive labor, not to be international terrorist through the
-        trust-breaking hypocrisy stand. Working middle class people, is not
-        harmed because "economic climate" Senator Alfonso DiMato you{space}
-        <a href="https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/">
-          fucking faggot
-        </a>
-        <br />
-        <br />
-        Inflation because of Putin, he can sell for $20 even when finance 7% of
-        GDP/yr is rig-rates/leasing. Fuck all of you. “Collecting guns off the
-        streets,” says the grocer who will fight tooth and nail against
-        truncated production tax. Get this fatass back to actual work
-        <h1>
-          GDP/p is expense ​poverty, expenses/income, average or in the skew,
-          says nothing of the balance sheet, pricing assets by liabilities,
-          tape-painting, trust-breaking hypocrisy all else but Saver
-        </h1>
-        Vig truncated production tax vs flat %; I’m on the left, jobs are an
-        artifact of failure; unvirtuous, war bond or conscription, is a war
-        crime
-        <br />
-        <br />
-        Why wouldn’t we just truncated production tax? Putin/Zelinski/U.S. just
-        wants to spend money (principal-bond loss profit). Why wouldn’t you
-        {space}
-        <span style={{ color: "dodgerblue" }}>
-          provide the schematics for $40k nightvision goggles instead of charge
-          the people by the lease ask-price you set, unsubservient to
-          labor-demand bid-capacity
-        </span>
-        .
-        <br />
-        <br />
-        Destroy jobs with disruptive technology, elbowing out the top left from
-        the left. Libertarians are gimps for finance ​poverty, expenses/income,
-        average or in the skew, says nothing of the balance sheet, pricing
-        assets by liabilities, tape-painting, trust-breaking hypocrisy all else
-        but Saver
-        <h4>
-          I’m not going to regurgitate old people and self-deprecate for
-          busy-work - tarrifs, cheaper by refining and mean inflation
-          quality-skew/discernment fixing is not how to reverse the general fund
-          %rate/outlays. 65% favoribly occupy wall st to stop debt; balance
-          sheet is power, ask-first leases, while royalties are subservient to
-          bids and actual labor-demand, for 1/hour-GDP/p
-        </h4>
-        the professionals claim bacteria is severe version of viral pneumonia,
-        that is insane Why wouldn’t you provide the schematics for $40k
-        noghtvisoon goggles instead of charge the people by the lease ask-price
-        you set,{space}
-        <span style={{ color: "dodgerblue" }}>
-          unsubservient to labor-demand bid-capacity. They have liability for to
-          continue to steer us wrong with saveface
-        </span>
-        . ​All labs have failed to show virus creation with a virus and cell,
-        without mitosis. you idiots say Wuhan successfully made virus, no one
-        has ever done that ​they try and try, then find it lying around. n=2 is
-        meaningless significance and baby-boomers namesake population growth
-        life expectancy ago old age growth namesake
-        <br />
-        <br />
-        It’s about jobs and industry , pro American is the distribution of
-        labor, along vertical lines. A productive way to repatriate industry
-        would be to stop hour/1-p/GDP growth by laborless-demand
-        (financial-userers: false bid pools, implausible use leases, and
-        loitering surrendered outrights). ​General constrains on supply chains
-        are countered by labor-competition. Crowding out is disproven by 0%/yr+
-        GDP/p amidst 3%/yr+ population growth when Supply does equal
-        Labor-Demand
-        <br />
-        <br />
-        You dont have the right to fire when there is comp on skills, or you say
-        it is because of beleifs, for Tranquil and voluntary trade requires
-        whole-consent with minimal viable product by 11/12 industry-vertical
-        permits
-        <h2>"Poison pill prejudice" = scapegoating</h2>
-        {/*Poverty, expenses by income average, coincides with equality, by labor
-        skew/utility suppression. A poverty-rate, is that, per person.
-        Coincidences cannot be quantified
-        <br />
-        <br />*/}
-        We know what this really about: Crime causes lower poverty because it
-        requires an increase in wages per expense
-        <br />
-        <br />
-        Leases/balanceSheets/UnfinedAppeals/WhistleblowersExcluded are
-        ask-price, first;{space}
-        <span style={{ color: "dodgerblue" }}>
-          royalties are subservient to actual labor-demand
-        </span>
-        .
-        <br />
-        <br />
-        Is permits cheaper,{space}
-        <a href="https://sgp.fas.org/crs/misc/R43390.pdf#page=7">
-          because refining is
-        </a>
-        ? And that Keystone would save money again by suffocating
-        quality-skew/discernment?
-        <br />
-        <br />
-        “Is there any funds that would go towards helping energy here at home?”
-        Since it is free rider mutable, no, any funds are 1y/0x uselessly
-        elastic
-        <br />
-        <br />
-        "When you are depressed, you commit crime,"{space}
-        <a href="https://qr.ae/pGdBU9">Beth Malow</a>
-        <h4>
-          get insurance out of business, and verticals out of
-          horizontals/general-income
-        </h4>
-        Car Sheild: "of course something will break, I choose a mechanic, and
-        they name the price from the false bid pool,{space}
-        <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
-          surrendered allowed for bid nor outright
-        </a>
-        .""
-        <br />
-        <br />
-        Obamacare doesn't save money because government is more efficient, but
-        because they fix inflation to mean,{space}
-        <a href="https://qr.ae/pGdL3K">skills-trading</a>
-        {space}be damned.
-        <br />
-        <br />
-        debt stimulates growth of balance sheets
-        {/**nat gas amonium nitrate Feb 1 no fertilizer instead of heat */}
-        <br />
-        "I'm gonna call it before everyone has decided to try."
-        <h4>
-          <a href="https://qr.ae/pGdUvN">the other side of the coin</a>: 1/3
-          corp mort tsy -{space}
-          <a href="https://qr.ae/pGdxUK">how do you calculate GDP/yr</a>?
-        </h4>
-        "<a href="https://qr.ae/pGdLex">recession</a>
-        {space} is a{space}
-        <a href="https://qr.ae/pGdUME">bad word</a>," Dan Deltrude Accounting
-        Professor, Montclair State U, "We can't just{space}
-        <a href="https://qr.ae/pGdLZW">flip the switch</a>
-        {space}to solar and wind." "Capitalism is incentivized by profit, why
-        would the oil companies pay leases for permits, they are in business to
-        make money, they aren't just going to drill or release product to
-        drillers non-profit without wages!"
-        <br />
-        <br />
-        "All you need to do to lower prices is put America First," 18m/800k is
-        not enough. The leases/rig-rates are the exclsive cause of oil prices.
-        Keystone would save money again by suffocating quality-skew/discernment,
-        permits is cheaper because refining is a deprecative, dilutive process
-        <h4>BARTENDERS, WATER DOWN YOUR DRINKS</h4>It doesn’t produce, but it
-        saves{space}
-        <a href="https://sgp.fas.org/crs/misc/R43390.pdf#page=7">
-          $5 on railway costs
-        </a>
-        , yet what is being transported is refineries, which is actually a
-        dilution process. If there is a return on a process, it is not a techno;
-        it is an auxilliary product. The lands are for dollar owners by share,
-        alone, that can require up to 11/12 industry vertical consensus
-        <h4>
-          <a href="https://qr.ae/pGdLWt">appeal succ fines</a>, intranational
-        </h4>
-        "we should not breathe new life into his reign of meyhem and disorder,
-        scapegoating,{space}
-        <a href="https://qr.ae/pGdLWB">international</a>."
-        <br />
-        <br />
-        rollover insurance to destroy jobs with disruptive technology
-        <h4>
-          National Review ed: "do the federal leasing that we need." I view that
-          as a liability (bookkeeper, CF). "windwill and solar makes no sense
-          {space}
-          <a href="https://fred.stlouisfed.org/graph/?g=MKnZ">economically</a>
-          {space}and
-          {space}
-          <a href="https://qr.ae/pGdBWs">job-wise</a>."
-        </h4>
-        don't screw over ordinary 150m/330m people who pay the price,{space}
-        <a href="https://qr.ae/pGdLbc">lost Savings</a>.
-        <br />
-        <br />
-        "We don't forcibly sterilize people," Risperidone involuntary
-        committment. Sleigh Dr. Oz. Masks don’t work because spittle rises from
-        heat/(density), carries bacteria, and quickens reinfection. "Don’t go in
-        with efficiency statements, don’t stick it because it makes sense to
-        patient and doctor. Reality, republicans care about fixing, Democrats
-        care about caring. 6k wells, 5k, that is not truthful!"
-        <br />
-        <br />
-        Conscription in Ukraine is also a war crime (virtuous war bonds)
-        <br />
-        <br />
-        Stop being so sketchy, it is fine to preemptively do business for to be
-        legal market. For instance, actual “e2e encryption” (necessarily on
-        device).
-        <br />
-        I’m building actual end to end encryption (on device) for convict
-        intranet login.gov.
-        <br />
-        <br />
-        write down overinvestment with NATO aggression, with same tax structure.
-        Heineken, McDonalds.
-        <br />
-        <br />
-        cops will lie and say you punched them like a BITCH - they investment
-        bank fund Disabled by messy hair, age and madness - estimates, no
-        surrenderred bids of others', but property
-        <br />
-        <br />
-        Phil Murphy: “In just four years, we’ve gone from the fourth
-        slowest-growing state economy in America to the fourth fastest-growing
-        state economy in America.
-        <br />
-        <br />
-        This is what happens when we use the budget as a tool to grow new
-        industries and invest in people, communities, and a true vision.”
-        <br />
-        <br />
-        GDP/p is expenses you knucklehead
-        <h4>carface killed floyd, minnesota killed pharmacy-competition</h4>
-        Why would you need medical records for a crime,{space}
-        <a href="https://qr.ae/pGdBWs">Patricia Miller</a>? How is madness or
-        age a disability? Why is involuntary commitment without a jury, with
-        whistleblowers of state victimization or punitive torts greater than a
-        proportion of their cash balance, of no surrendered outrights nor bid?
-        <br />
-        <br />
-        Surely, they received m2, yet they prohibited correction and stoked a
-        larger advance in expenditure/hour by investment bank funded welfare.
-        child healthcare by investment bank? 50% debt spending, 40% debt service
-        NJTA. 16-19 employment -20% 1990-. Bonds are getting crushed because of
-        higher interest rates and less federal reserve buying, stocks are
-        falling because of less laborless-demand. Bail means you hae no
-        evidence. Don't fine the criminals anymore! warn tort jail WITH
-        whistleblowers on jury, and fine successful appeals!
-        <h3>
-          "<a href="https://qr.ae/pGdBU9">crime</a>
-          {space}and weakness abroad"
-        </h3>
-        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        Why does the division of labor increase the economy's level of
-        production?
-        <br />
-        If production is 1/hour-GDP/p:
-        <br />
-        <br />
-        Competition, by 1/12 industry-vertical, provides for inelasticity by
-        1/hour-GDP/p efficiency (0y/1x), of even the most elastic markets,
-        where:
-        <br />
-        <br />
-        price is no matter to the ordered by propensity of
-        ask-inventory-opportunity-cost of Labor-Demand.
-        <br />
-        <br />
-        Not only does the division of labor necessarily provide, unto,
-        substitutive-vertical lines of production, it also, does so, by
-        complementary-horizontal designs of life, or living costs. Short answer:
-        skill-sharing (a.k.a. “comparative advantage”). The delegation of labor
-        does not increase consumption/expenditures/income, it only increases
-        efficiency and equates Supply with Labor-Demand, along the 1/hour-GDP/p
-        plane, which, in fact, should decrease price (y).
-        <h4>
-          "<a href="https://qr.ae/pGdBWs">american small</a>
-          {space}business{space}
-          <a href="https://qr.ae/pGdBW7">economic future</a>
-          {space}getting darker by the day"
-        </h4>
-        50 average age (.7% is actually disabled, don't scapegoat poor personal
-        finance) small business, which is mostly financial-userers (implausible
-        use leases, false bid pool, loitering surrendered outrights)
-        <h4>wealth equality = sqrt(poverty*labor-competition)</h4>
-        Savings have been stolen from the old whilst they were{space}
-        <a href="https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/">
-          labor
-        </a>
-        . Unemployment (as opportunity; not an artifact of tech-deprecation and
-        busy-work) is a reaction to tech-relenting complimentary-elastic
-        vertical-industry-lines of business.
-        <br />
-        <br />
-        Labor skew is how poverty is lowered while increasing inequality. Africa
-        is impoverished, but they are equal, on average.
-        <br />
-        <br />
-        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        "How do you feel about poverty?"
-        <br />
-        Poverty identifies/can-be-measured-by average, or a period in the skew
-        (quality or quantity), on the x-axis, of
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          expenditures-to-income,
-        </div>
-        and it coincides with equality of assets, the bearing of income skew, if
-        by average.
-        <h4
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          Wealth Inequality by Country 2022 - Gini Index
-        </h4>
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/1tcwhddy9jj7pfp/poverty%20rate%20by%20country.jpeg?raw=1"
-          }
-          float={"right"}
-          title="https://worldpopulationreview.com/country-rankings/poverty-rate-by-country"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        How can you write this hypocrisy, the oxymoronic?
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          The Gini index is used to gauge economic inequality by measuring
-          income distribution, also called wealth distribution.
-        </div>
-        <br />
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          Wealth inequality is closely related to income inequality, which
-          tracks the money people earn. However, wealth inequality includes not
-          just income, but also the value of bank accounts, stocks and
-          investments, homes, and personal possessions such as cars, jewelry,
-          artwork, and other valuables.
-        </div>
-        <br />
-        "Production keeps prices down," actually, it follows 1/rents
-        <br />
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          by 1970, the top 1% of U.S. "households" owned ~20% of "household"
-          share of the federal debt; the top 2,500 US "corporations" owned ~65%
-          of "corporate" share of the federal debt. However, since the early
-          1980's, 1%ile(ordered by skew)/"household" shares have increased to
-          over 40% and /"corporate," 80%. -{space}
-          <a href="https://blogs.lse.ac.uk/usappblog/2014/01/06/us-debt-inequality/">
-            Hager
-          </a>
-        </div>
-        <br />
-        Nick Carducci - Statistician, Historian of Markets and Propaganda
-        (2012–present)
-        <br />
-        "Did America finance itself into poverty?"
-        <br />
-        <br />
-        America is not impoverished, by-rate, and people that are low on the
-        intranational scale face expenditures so high due to inequality of
-        assets’ labor-skew. America finances (laborless-demand, the true cause
-        of the misnomer, “crowding out,” *implausible use lease, false bid pool,
-        loitered{space}
-        <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
-          surrendered
-        </a>
-        {space}
-        outrights*) itself out of poverty by cornering labor and increasing
-        inequality (cost of living).
-        <h4>
-          apartment value and rent increases are up, and{space}
-          <a href="https://30under5.us">people need housing</a>.
-        </h4>
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/u1jufin162f4rvm/Hager-Fig-1.jpeg?raw=1"
-          }
-          float={"right"}
-          title="https://blogs.lse.ac.uk/usappblog/2014/01/06/us-debt-inequality/"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        Nick Carducci - BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        "Why does the division of labor increase the economy's level of
-        production?"
-        <br />
-        If production is 1/hour-GDP/p:
-        <br />
-        <br />
-        Competition, by 1/12 industry-vertical, provides for inelasticity by
-        1/hour-GDP/p efficiency (0y/1x), of even the most elastic markets,
-        where:
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          price is no matter to the ordered by propensity of
-          ask-inventory-opportunity-cost of Labor-Demand.
-        </div>
-        <br />
-        Not only does the division of labor necessarily provide, unto,
-        substitutive-vertical lines of production, it also, does so, by
-        complementary-horizontal designs of life, or living costs. Short answer:
-        skill-sharing (a.k.a. “comparative advantage”). The delegation of labor
-        does not increase consumption/expenditures/income, it only increases
-        efficiency and equates Supply with Labor-Demand, along the 1/hour-GDP/p
-        plane, which, in fact, should decrease price (y).
-        <br />
-        <br />
-        Leading cause of death under communism is starvation, which was the
-        cause before and after the old age growth bumps.
-        <br />
-        <br />
-        "Supply is low, prices rise - it is just Supply and Demand," well supply
-        is material and labor, price and hour.
-        <br />
-        <br />
-        <hr ref={this.supply} />
-        The{space}
-        <a href="https://qr.ae/pG0Uat">snapshot</a>
-        {space}of the Supply and Demand plane has no representation of physical
-        resource supply, just potential trade for hours,{space}
-        <span style={{ color: "green" }}>1/hour-GDP/p</span>, unless relative.
-        If relative to another point in time, it is a (1y/-1x) leftward movement
-        of ordered-propensities to meet MUI by ask-bid-inventory-opportunity,
-        for this, or other markets, in which lower Supply makes Demand average
-        utility cost traded, higher, less traded - not raise price when Supply
-        is in a (1y/-1x) loward-shift - price is an effect of trade and
-        propensities. Yet, if Demand is elastic, all Demand consumes at the
-        scarce price, and yet-still-for competiton will (1y/-1x) lowardly-shift,
-        even perfectly-elastic Demand.
-        <br />
-        <br />
-        Leftward (1y/-1x) supply is matched by demand when scarcity breeds
-        {space}
-        <a href="https://micro-theory.com" style={{ color: "green" }}>
-          competition
-        </a>
-        , and a drop in price does so for both. A leftward shift in supply
-        propensities may be for a substitute fungible-currency-bid becoming
-        cheaper or a compliment fungible-currency-bid becoming expensive (when
-        both, elastic, weak is no relation for inventory bid nor opportunity
-        cost).
-        <br />
-        <br />
-        (Russia has $20 oil, it is supply and demand) yet all of Supply and
-        Demand is labor as well.
-        <h4>
-          target margin{space}
-          <a href="https://www.forbes.com/sites/jamesconca/2018/10/11/which-is-safer-for-transporting-crude-oil-rail-truck-pipeline-or-boat">
-            pipelines
-          </a>
-          /spectrum/bridges, NFC Motor Vehicle fee - DON'T LET THE TREASURY BUY
-          IT THEN LEASE IT BACK TO US
-        </h4>
-        rig rates{space}
-        <a href="https://www.researchgate.net/publication/254420161_Understanding_Rig_Rates/figures">
-          chase and suffocate
-        </a>
-        . For land that the Treasury, unfortunately, already owns (not the
-        bonds', but the dollars') try something new, we ratified the
-        constitution 1775-1787. like dollar fungible royalties/barrel for UT,
-        NM, WY
-        <br />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/dshb13ol36jhry7/Daily%20rig%20rates%20to%20operating%20rate%20%281%29.png?raw=1"
-          }
-          float={"right"}
-          title="Rig Rates, to operating rate (cash flow %)"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        When you royalty you can set (margin) by station-price, sold, and
-        withdrawal rigs.{space}
-        <span
-          style={{
-            textDecoration: "line-through"
-          }}
-        >
-          please respect the no candidate votes . 11/12{space}
-          <a href="https://gmunit.us">General Maintenance Unit</a>
-          {space}can chose to be an{space}
-          <a href="https://lightte.ch">operational-</a>non-profit, without a
-        </span>
-        {space}
-        return to dollar owners, let alone treasury bond owners.
-        <br />
-        <br />
-        Price and hours, outlays no way would take margins,{space}
-        <span
-          style={{
-            textDecoration: "line-through"
-          }}
-        >
-          yet for no candidate votes
-        </span>
-        . It is 3d chess, profits labor and material, hours margins and
-        inventory. 1/hour-GDP/p is 0y/1x in Supply and Labor-Demand
-        <br />
-        <br />
-        Most actual work doesn’t require education, if you count finance as
-        unemployed lmao, yet ("
-        <a href="https://www.bls.gov/careeroutlook/2021/data-on-display/mobile/education-pays.htm">
-          education pays
-        </a>
-        ," BLS).
-        <br />
-        <br />
-        <hr ref={this.$} />
-        "Running schools as employment centers for adults. When you hide from or
-        hide a problem it gets worse," - Luke Rosiak, 'Race to the Bottom',
-        "parents getting involved in politics for the first time, unspoken for
-        voting blocs are real people!"
-        <Bachelors
-          suggestBachelor={this.state.suggestBachelor}
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        Get a license - 3%/yr return at $60/b, royalty/barrel (23% + TX + PA =
-        18m - 3m export + 3m import).
-        <br />
-        <br />
-        How much money for labor? Margins zero
-        <br />
-        Independence settlement geohash/mo
-        <br />
-        You would need to fund failing ideas, otherwise all you support is 50
-        average age small business owner
-        <br />
-        <br />
-        50+ 73% pro-AARP. minority of total eligible 7m though
-        <br />
-        <br />
-        Fred Clemens, they locked me up for saying something like that
-        ("rollover insurance") in RiverviewMedCtr
-        <br />
-        <br />
-        I’m making an automatic government ("My Robot Government"), sewage
-        police lawsuits geohash/mo reported by your spoofable paytech, 2 wk anon
-        <br />
-        <br />
-        Child healthcare by investment bank?
-        <br />
-        <br />
-        50 average small business age. Please don’t invest in my copy, I want to
-        keep it
-        <br />
-        <br />
-        financial assistance free rider mutable tax, nor war nonvoluntary, is
-        useless bid-raising 1y/0x elastic gentrification trust breaking
-        hypocrisy. School lunch frontrunning. Let the producers starve!
-        TradeSecrets
-        <br />
-        <br />
-        Trade secret monopsony "training,"{space}
-        <a href="https://www.state.nj.us/treasury/omb/publications/18citizensguide/citguide.pdf">
-          direct investments
-        </a>
-        , by treasury, with surrendered bids (free rider mutable tax and debt
-        spending, 50/50 nj, 40% debt service njta), for no actual gain but for
-        price
-        <br />
-        <br />
-        Conflict of interest by bond operational loss profit or free rider
-        mutable tax, 1y/0x elastic for whistleblowers barred
-        <br />
-        <br />
-        adv persist threat (apt). Go in the name of JC, all willing to accept
-        those risks,” Samaritans’ purse, hazard known torts, warn-jail.
-        <br />
-        <br />
-        The government can levee, but contractors are liable for loitering and
-        laundered, borrower defense, to boot. The wealth of nations is a big
-        misunderstanding, the meaning is to let foreigners compete, for
-        skills-trading comparative-advantage, and hence for technological
-        advancement, accounts for 1/hour-GDP/p 0y/1x efficiency gain.
-        <br />
-        <br />
-        "The price of oil directly affects the price of oil YOU pay at the
-        pump," meaning leases, exclusively. Sulfur light sweet from heavy sour,
-        low sulfur fuels that the consumer can buy. The 18m stuffs we make, it
-        is cleaner because it is known as that, with 7m trade level,
-        tape-painting - productivity of laborless-demand by plundering leases on
-        federal lands instead of royalties%/barrel$ to currency fungible.
-        Keystone prevents getting more out of the ground than can be transported
-        by rail, from Alberta, instead of New Mexico, Utah and Wyoming.
-        <br />
-        Don Bacon, "our national strategy, national security, excuse me"
-        <br />
-        Laborless-demand is lower productivity (wage/home) and efficiency
-        (1/hour-GDP/p)
-        <br />
-        Literally admitted scapegoat hypocrisy trust building
-        <br />
-        <br />
-        "No matter what we do, gas prices will rise when we move from Russian
-        imports to Domestic consumption, which is 18x." It evidently correlates
-        with leaases.
-        <br />
-        <br />
-        drinking party, alonon family group, you can only press tresspass
-        charges! Not force medication nor time-waste! No More Involuntary
-        Commitment nor bail without physical/reviewable-evidence!
-        <br />
-        <TwitterTweetEmbed
-          style={{
-            width: "100px",
-            float: "left",
-            overflowX: "auto",
-            marginRight: "10px"
-          }}
-          key="1394031138465882113"
-          tweetId="1394031138465882113"
-        />
-        <h3>
-          <a href="https://fred.stlouisfed.org/graph/?g=MHP0">
-            serfs and employables
-          </a>
-          {space}whistleblowers anonymous
-        </h3>
-        Reverse amortization, capital loss deflation, balance sheet amortized to
-        reality, non-concurrentable:
-        <br />
-        &bull;{space}Royalty%/barrel
-        <br />
-        &bull;{space}SSAMedicareTax%/outlays
-        <br />
-        &bull;{space}(cash/debt)*income
-        <br />
-        &bull;{space}truncated production tax(3)%/$2k cap
-        <br />
-        &bull;{space}max-royalty 1/12 vertical type as collateral
-        <br />
-        1. Judicious appeal fine
-        <br />
-        2. Whistleblower jury
-        <br />
-        3. bail-free evidence reviewable, with exclusive standing
-        <br />
-        4. Convict intranet e2e (
-        <a href="https://thumbprint.us/privacy">on-device</a>)
-        <br />
-        5. "Cost cutting vs a more efficient process" of quality. "Cost cutting"
-        doesn’t suffocate quality skew discernment/frugality of labor-demand or
-        inventory-ask, for 1y0x elastic dead-weight-box of economic
-        welfare/efficiency, unless demand is borne not of labor.
-        <br />
-        6. transaction fee based security depositary receipt
-        <br />
-        7. surrendered bid or outright, implausible landlord use, false bid
-        pool, loitering, contractor liable
-        <br />
-        <br />
-        Meaning more than 2 redundant expectations and excess less than
-        expected, regulation by permits of supply doesn’t already equate
-        labor-demand.
-        <br />
-        <br />
-        “Cyber attacks and assassinations for malfeasant juris is awesome,”
-        Cyber security expat. "1/4 production - consumption. Chaos, phycological
-        warfare as intense as a nuke would be. Would someone like Microsoft step
-        up on behalf of the United States, for them. Wow, completely different
-        thinking. Now we will all ponder on that!"
-        <br />
-        <br />
-        chores, favors, science and copy (inventory) are to be imputed.
-        <br />
-        <a href="https://fred.stlouisfed.org/graph/?g=MBbk">
-          Value Added as a % of GDP
-        </a>
-        <br />
-        <br />
-        Save by price y hours x 1/hour-GDP/p is the square “” = price*hours; The
-        right 'values' things by their liabilities, and their costs ($5
-        website), and that is primarily-wrong...
-        <br />
-        <br />
-        Need comps to prove discrimination beyond price, not just …chats
-        {/**it's so interesting! */}
-        <h3>
-          scapegoating a taxing motive, 1y/0x elasticity
-          <br />
-          <Cable
-            style={{ width: "200px" }}
-            onError={handleScollImgError}
-            img={true}
-            src={
-              this.state.noyout
-                ? ""
-                : "https://www.dropbox.com/s/z57tl8fqj4yr96n/Screen%20Shot%202022-03-07%20at%202.08.28%20PM.png?raw=1"
-            }
-            float={"right"}
-            title="Daniel Cohen, American Agenda (Newsmax) - scapegoating taxing motive"
-            scrolling={this.state.scrolling}
-            fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.scrollTop}
-          />
-          against truncated production tax
-        </h3>
-        "is it really good for us to not drill on federal land and save
-        $80/barrel from russia, funding the actual attack on Ukraine and Libya
-        OPEC. do the right thing, do it, wring hands of a 'political loser'
-        price of gas increase cannot be absorbed, because real GDP only accounts
-        for year to year inflation, not tech relenting."
-        <br />
-        <br />
-        "not everyone is using the same calculations here. struggling to raise
-        kids on pretty fixed-income."
-        <br />
-        <br />
-        biolab research, inseminate it on stage, bitch!
-        <br />
-        "recruited some of my time back," leisure copy science favor chore.
-        <h4>
-          "Natural resources are liabilities," John Mandel OH, "aggressive
-          expansion of oil and gas being slow walked. National Security is
-          Energy and Economic Policy, Absolutely. For jobs. Public: OH, NM, WY,
-          Private: PA, WV, TX, "states can stock up," says Rick Santorum. Not on
-          radical muslims, russians, venezuelans, chinese. We don't want to
-          fight energy to supply wars."
-        </h4>
-        When you start winning, they set a trader against your profile,
-        meanwhile nancy pelosi and mitch mcconnel blind trust policy-make.
-        <br />
-        the brilliant thing is the amount of support, it is a breathe of fresh
-        air, they are saying thank you, to the Polish people, for support of
-        1m/177m migrant crisis from Ukraine. What they are trying to do here in
-        poland, keep them warm, safe and fed, hopefully find them a PLACE TO
-        RENT free food and clothes inventory-ask forfeited, not surredered
-        freedoms of others.' firesale. tax for this is 1y/0x for the free rider
-        mutable input costs by front-running charity trust-breaking
-        gentrification-hypocrisy.
-        <br />
-        3m preemptive/Nagasaki, "fair bargain 1945 Japanese emporer will not
-        surrender!"
-        <br />
-        $400m to Ukrainian front-running elasticity for laundering your
-        financial-userers,{space}
-        <a href="https://qr.ae/pGdJIT">dead-weight-box</a>, false bid pool,
-        implausible use lease, loitering surrendered outrights.
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/j5vc2fw2qeg4swz/Screen%20Shot%202022-03-07%20at%2011.01.08%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="$20 Russian vs $100 Saudi oil"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <br />
-        "Republicans pushing healthcare for veterans," is an investment bank
-        <br />
-        <br />
-        calling fed spending funds sourced by tax-payers screws middle class
-        (Savers)
-        <br />
-        <br />
-        n=1000, (50 per cent) think the use of force to stop Ukraine joining
-        NATO - (64 per cent) think Russians and Ukrainians are one people - (71
-        per cent) have a positive/(negative){space}
-        <a href="https://www.spectator.co.uk/article/this-is-russia-s-war-just-as-much-as-putin-s">
-          view of the old Soviet Union
-        </a>
-        <br />
-        <br />
-        Saving on costs, by price and hours, by when supply doesn’t equal
-        labor-demand. Alone. Obamacare doesn’t save money, as some people glean,
-        from the CBO report because government is efficient, but it controls
-        price to mean inflation, which excludes good will last traded assets,
-        which works because supply and ready doesn’t equal demand. The $170t
-        balance sheet, level (exports+imports, debt+collateral), amortized is
-        Realistic concurrentable $2t. Smallpox or anthrax (two causes cannot
-        have the same effect), it is just uncorrelated, 1% die and 50% sniff.
-        Invading during a war is not a war crime, only the aggresor is, by
-        scapegoating or attack.
-        <br />
-        <GDP
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        <a href="https://qr.ae/pGdxUK">Inflation is not a given</a>, so price
-        controls to mean inflation is certainly not savings by efficiency, to
-        which it can be reversed and slower than mean inflation, by banning
-        invoices and false bid pools, for surrendered outright-, and bid-,
-        freedom. Borrowing is loitering, and leasing is implausible use
-        preventing commerce, of
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          //img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.youtube.com/embed/iYYRH4apXDo?start=80"
-          }
-          float={"right"}
-          title="Space Oddity - May G-d's Love Be with You (not god's') https://youtube.com/embed/clip/Ugkxl8RXrKXmhFV89sk2HRyP3obNmEarBPEg"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <a href="https://youtube.com/clip/Ugkxl8RXrKXmhFV89sk2HRyP3obNmEarBPEg">
-          our own exploration rights income to treasury
-        </a>
-        . I am going to kill your family, including Armie Waltz. Escalation is
-        not scapegoating, you are being unreasonable. Russian oil may be cheaper
-        than Canadian, making 700m from Alberta, more expensive. But jobs aren’t
-        an art of fact of busy-work, right? Prices track 97% of consumption
-        leases, 23% of U.S. by way of New Mexico, Utah and Wyoming being
-        fungible for dollars
-        <br />
-        <br />
-        If I become senator, I would hardly embelish in spending the dough on
-        landlords nor mortgage or taxes (I'd{space}
-        <a href="https://qr.ae/pGdJIT">move</a>). The pandemic being excess over
-        population growth is just not reality, RobAstorino.com,
-        pierceless-nips-mcghee. Single-payer is cheaper for supply already
-        doesn't equal demand. single family zoning is plausible use, yet beyond
-        5 storefronts and condominium leases are 1y/0x elastic. bail means no
-        evidence. jobs are an artifact of tech deprecation and busy-work
-        <br />
-        <br />
-        Everything effectuates (noun, affectable) half the proportion to assets,
-        which is 2% of 5% of 7%, debt. Population has nothing to do with
-        inflation, when Demand and Labor aren’t despondent , without insane
-        financial userers in implausible use leases, false bid pools, loitering
-        surrendered freedom, investment bank welfare, general fund gerontocracy,
-        educational gentrification and unemployment
-        <br />
-        <br />
-        "is someone in your household breaking your heart? send them to the
-        gulag"
-        <br />
-        <br />
-        "the american tax-payer foos the bill, we are in it,{space}
-        <a href="https://qr.ae/pGdZZu">
-          as if the U.S. tax-payer is paying for
-        </a>
-        .{/*an expedition he had rescuing beautiful children from Poland*/}"
-        That is savers money, I'm going to kill everyone at Newsmax.
-        Laborless-demand 1y/0x ‘fuck you money’ elacity for childcare, housing
-        and healthcare laborless-demand.
-        <br />
-        <br />
-        ownership of pharmacy deserves due process by trust-breaking hypocrites
-        of pharma cops?
-        <br />
-        <br />
-        kill the laborless-demand and trust-breaking-hypocrisy
-        <br />
-        <br />
-        American dominance is not by plundering from Savers for leases,
-        laborless-demand trust-breaking-hypocrisy. "How about you pick America
-        for once, Open America. Biden can do it with a stroke of a pen."
-        {/**Steve Scalese */}
-        <br />
-        <br />
-        “His win in 2016 and tea party before that.” 1/3 corp, tsy, mort minimal
-        viable product - election survey bias calls unshuffled extrapolation
-        unique and non-redundant chance - no candidate wins plural majority.
-        blind trust (over currency) policy making
-        <br />
-        <br />
-        paid to fight - conflict of interest bond loss profit IS a war crime
-        <br />
-        <br />
-        when you start protecting your nation, you necessarily take a
-        confrontational-stance. Putin seizes Crimea in response to
-        someRussian-elected demo _ Pledge nato eastward, in itself it is
-        confrontational Why is the U.S. the only ones able to own Nukes. All I
-        know is that the Russians, the U.S., and the Germans all make money by
-        bonds from actual loss{/**"nothing to lose" */}
-        <br />
-        <br />
-        Nick Carducci - CEO & Founder at Thumbprint.us - Social Calendar
-        (2012–present)
-        <br />
-        What are the three economic systems and relate the basic economic
-        questions with their economic system?
-        <br />
-        There is:
-        <br />
-        &bull;{space}Free rider immutable tax, for trust-breaking 1/12
-        industry-vertical against horizontal and operational monopsony
-        <br />
-        &bull;{space}Government subsidies/cronyism
-        <br />
-        &bull;{space}Libertarianism (surrendered freedom, unbarred)
-        <br />
-        &bull;{space}Spending on {/*open-borders, climate and*/}closed
-        ingredient science rent licensure (faggot)
-        <br />
-        <h3
-          style={{
-            shapeOutside: "rect()",
-            float: "right",
-            maxWidth: "100%",
-            padding: "0px 10px",
-            //fontSize: "20px",
-            fontFamily: "'Pacifico', sans-serif"
-            //color: "rgb(230,230,255)"
-            //backgroundColor: "rgb(32, 22, 11)"
-          }}
-        >
-          surrender, that of which, you do not know
-          <br />
-          amortization top notch non-compete
-          <br />
-          investment bank funded welfare
-          <br />
-          implausible use leases
-          <br />
-          false bid pools
-          <br />
-          {/*wholesale pyramid*/}loitering lenders
-          <br />
-          disruptive technology relenting{space}
-          <span style={{ fontSize: "10px" }}>
-            (1/12 industry-type as "collateral," no compound nor general-income)
-          </span>
-          <br />
-          trust-breaking hypocrisy
-          <br />
-          roads and bridges? not when NFC Motor Vehicle is{space}
-          <a href="https://gmunit.us">free rider mutable</a>, free rider
-          immutable Tranquil and voluntary trade
-          <br />
-          trust-breaking
-        </h3>
-        <br />
-        <br />
-        oil prices skyrocketing because of leases
-        <br />
-        Orthopedic surgeon forced medication and castration, RiverviewMedCtr,
-        NJ, July 2, 2021.
-        <br />
-        <a href="https://fred.stlouisfed.org/graph/?g=MC0U">1/hour-GDP/p</a>
-        <br />
-        <a href="https://fred.stlouisfed.org/graph/?g=MFa4">
-          (income/hour)/home
-        </a>
-        ,{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MFaa">
-          (wage/income)/home
-        </a>
-        {space}or
-        <a href="https://fred.stlouisfed.org/graph/?g=MC0U">1/hour-GDP/p</a>,
-        <br />
-        <br />
-        13 days
-        <br />
-        imagine copyrights and trade level (exports + imports) -
-        trust-breaking-hypocrisy for Tranquil and voluntary trade
-        <br />
-        "Ukraine doesn’t have prison-drafts, nor torture"
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/n575hiibwzmtp0p/Screen%20Shot%202022-03-06%20at%209.16.20%20AM.png?raw=1"
-          }
-          float={"left"}
-          title="@carducci on truth social"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        But I’m going to rip your goddamn head off
-        <br />
-        I’m gonna fucking kill you
-        <br />"<a href="https://qr.ae/pGdau0">we need</a>
-        {space}to confiscate their wealth"
-        <br />I am going to be myself before glorifying G-d for making me by
-        your rules.{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MF0d">Ron Johnson</a>
-        <br />
-        "intellectual properties in university systems."
-        <br />
-        <h3
-          style={{
-            shapeOutside: "rect()",
-            float: "right",
-            maxWidth: "100%",
-            padding: "0px 10px",
-            //fontSize: "20px",
-            fontFamily: "'Pacifico', sans-serif"
-            //color: "rgb(230,230,255)"
-            //backgroundColor: "rgb(32, 22, 11)"
-          }}
-        >
-          <a href="https://analsolutions.net">analsolutions.net</a>
-          <br />
-          reverse amortization (torts)
-          <br />
-          Us bookkeepers amortize balance sheets and lawyers reverse amortize
-          ascertainable tortious unknown hazards, foreseeable force majeure
-          surrendered bid or outright is obviously intentional. 600k/day imports
-          and exports, why? Are we washing money{space}
-          <a href="https://analsolutions.net">here</a>.
-        </h3>
-        "professional health person working for the city."
-        <br />
-        <br />
-        the rent and cost of living is going up, as an individual, beer and
-        crisps.
-        <br />
-        <br />
-        SNL of a schizophrenic Paralympian rights. “My injury, because of my
-        work, known duress, I’m 68 now, no one wants to hire me because I’m too
-        old.”
-        <br />
-        <br />
-        that is one way to make use of old generation armor. Prohibiting threats
-        online in wartime
-        <br />
-        <br />
-        is there still food being supplied, that keep people going?
-        Front-running their industry?
-        <br />
-        <br />
-        <a href="https://qr.ae/pGdUME">Efficiency</a>
-        {space}is not growth. jobs is not a sign of strength, if there is
-        laborless-demand calamity
-        <h2>
-          Degrowth is because you set people free and they become creative, -
-          <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
-        </h2>
-        <div
-          ref={this.carducci}
-          style={{
-            shapeOutside: "rect()",
-            float: "right",
-            maxWidth: "100%",
-            padding: "0px 10px",
-            //fontSize: "20px",
-            fontFamily: "'Pacifico', sans-serif"
-            //color: "rgb(230,230,255)"
-            //backgroundColor: "rgb(32, 22, 11)"
-          }}
-          //href="https://carducci.us/primary"
-        >
-          <div
-            style={{
-              backgroundColor: "black",
-              padding: "10px"
-            }}
-          >
-            <a
-              style={{
-                color: "white"
-              }}
-              href="https://occupywall.us"
-            >
-              OccupyWall.us
-            </a>
-          </div>
-          <h2>
-            {/*Where do you live, bitch?I will find you */}Are you a New Jersey
-            voter?
-          </h2>
-          <h2>Submit your signature! {this.state.signatures}/800</h2>
-          {this.state.finished ? (
-            <div>
-              <h2>Thank you! keep in touch:</h2>
-              <h3>nick@carducci.sh</h3>
-            </div>
-          ) : (
-            <form onSubmit={this.handleSubmit}>
-              <input
-                onChange={(e) => this.setState({ first: e.target.value })}
-                placeholder="first name"
-              />
-              <input
-                onChange={(e) => this.setState({ middle: e.target.value })}
-                placeholder="middle name"
-              />
-              <input
-                onChange={(e) => this.setState({ last: e.target.value })}
-                placeholder="last name"
-              />
-              <br />
-              <input
-                onChange={(e) => this.setState({ address: e.target.value })}
-                placeholder="address"
-              />
-              <input
-                onChange={(e) => this.setState({ city: e.target.value })}
-                placeholder="city"
-              />
-              <input
-                onChange={(e) => this.setState({ zip: e.target.value })}
-                placeholder="zip"
-              />
-              <div style={{ fontSize: "12px" }}>
-                This provisional signature to get on US Senate ballot in 2024
-                for 2025 will be contestable if <br />
-                voter identity is ambiguous{" "}
-                <a href="https://voter.svrs.nj.gov/registration-check">
-                  https://voter.svrs.nj.gov/registration-check
-                </a>
-              </div>
-              <button type="submit">submit</button>
-              {/*<div style={{ color: "grey", fontSize: "10px" }}>
-            this is on firebase but only shows you signed if you enter the
-            same info...
-        </div>*/}
-            </form>
-          )}
-        </div>
-        "G-d looks in favor of those suffering in Ukraine," what, from being
-        old/mad, they blame their inability to Save, upon?
-        <h1>WHO'S FRANK??</h1>
-        The Mafia ran "trash, skimmed{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MDBh">garments</a>,
-        rackets, prostitution," people were glorifying the{space}
-        <a href="https://qr.ae/pGdOmI">coop-life</a>
-        {space}
-        If he wanted to he would, we were building a wall, stopping
-        closed-source ingredient lists, quite frankly, it is dishonest.
-        <br />
-        <br />
-        The factor of labor-skew is much smaller than those who use it to corner
-        the market, by demand-unbound by labor (financial-userers: insurers,
-        lenders, landlords), govrent%/GDP, royalty%/barrels,
-        SSAMedicareTax%/outlays, (cash/debt)*income **reverse amortization** or
-        **capital loss deflation**. Poverty (PCE/labor) coincides with balance
-        sheet equality.
-        <br />
-        <br />
-        Public insurance is an investment bank, with price controls that only
-        work (do not suppress quality-skew/discerning trade) because supply
-        already doesn’t equal demandlabor-demand. Pennywise but a pound short of
-        banning insurance and invoices for they are technically illegal,
-        surrendered freedom, by bid and outright.
-        <br />
-        <br />
-        firesale and elasticity makes no progress, per hour (-GDP/p)
-        <br />
-        $200b semiconductor repatriation is free rider mutable 1y/0x - HOMEOWNER
-        ASSISTANCE TO PREVENT COMMERCE, LIQUIDITY, LARGE ITEM SALES TAX,
-        SURRENDER BID AND OUTRIGHT LOITERING, FREEDOMS TO
-        <br />
-        {/**Blue eyes is less discerning for honesty as impertenancy */}
-        No more scapegoating adjunications, or it'll be your head!! Yield back
-        upon unreasonable, for we will reinitialize 1775-1787 scope of
-        requirements
-        <br />
-        Repairs and favors can help rehabilitation, for favors innovate-GDP/p,
-        nominally but also furthermore when coalecses to land owners,
-        essentially, for branded-IP is nearly science, lower
-        <br />
-        <br />
-        <hr ref={this.police} />
-        <NYPD
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        <a href="https://truncatedsalestax.com/gov">Mental health</a>
-        {space}has nothing by to do with crime, to think otherwise is not
-        conservatism, just conviction/bail before evidence exhibitable.
-        <br />
-        <br />
-        How do you help a jobless individual due to a pandemic?
-        <br />
-        Nick Carducci BA in Political Science & Economics, Johns Hopkins
-        University (Graduated 2015)
-        <br />
-        Let them keep their own copy and donate, with goods that they do not
-        firesale (then, as 1y/0x elastic as cash), or with hours; so,
-        contribute. Intern for them. Favors are imputable-GDP/p lowering.
-        <br />
-        <br />
-        favors, scientific contributions, and copy are included in tech
-        advancement, -GDP/p or -GDP/hour
-        <br />
-        19% aren't disabled; .7% has Multiple Sclerosis and acute flaccid
-        paralysis. Rich kids of Russian oligarchs are relenting. Stop sending my
-        mom my disability, she is making additions to her house!
-        <br />
-        Reeling from the pandemic, 1/7 children in poverty is low equality.
-        <br />
-        -40% expenditures/income average.
-        <br />
-        <a href="https://www.bls.gov/opub/ted/2012/ted_20120222.htm?view_full">
-          Food insecurity
-        </a>
-        {space}-25% (51% food, 30% clothes, 29% utilities, 25% school), in a
-        year when school expenditures{space}
-        <a href="https://worldpopulationreview.com/state-rankings/per-pupil-spending-by-state">
-          again
-        </a>
-        {space}increase by{space}
-        <a href="https://www.census.gov/newsroom/press-releases/2021/public-school-spending-per-pupil.html">
-          5%
-        </a>
-        <hr ref={this.edu} />
-        <a href="https://qr.ae/pGLTqW">concentration in inner cities</a>,
-        withstanding
-        <EDU
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        {space}
-        {/**https://www.census.gov/data/tables/2019/econ/school-finances/secondary-education-finance.html */}
-        , inequality -40%, productivity{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MAJ3">-20%/yr+</a>
-        {space}and efficiency{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MAJT">1/hours-GDP/p</a>,
-        {space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MAO7">
-          (+supervisory non-farm)
-        </a>
-        <br />
-        Stop scapegoating age and mental acuity for laborless-demand in
-        financial-usurers: lenders (loitering), landlords (implausible landlord
-        lease) and insurers (false bid pool).
-        <br />
-        <br />
-        leases are exclusive cause of oil prices, was being blocked on LIVE: Fed
-        Chair Powell testifies before the Senate Banking Committee on monetary
-        policy on Yahoo Finance (3/3/2022)
-        <br />
-        <br />
-        <h4>
-          my{space}
-          <a href="https://thumbprint.us">contributions</a>, business and Saver
-          (1/hour-GDP/p economic welfare) liesure are to explain, I am not doing
-          this for fun.
-        </h4>
-        Shut down permit is only abetted by Savers' fungible lands -{space}
-        <a href="https://sgp.fas.org/crs/misc/R43390.pdf#page=11">
-          IF there is a savings to be made
-        </a>
-        {space}and not just refined like a (nominal) balance of trade that is
-        calculated (by forex/customs force) to exclude labor costs (as it
-        happens, again, only nominally).
-        <br />
-        <br />
-        U.S. imports $1b/day oil, Q600k/day,{space}
-        <a href="https://saverparty.xyz/global">that is</a>
-        {space}$1.6k/day oil each barrel
-        <h4 ref={this.gas}>
-          obviously the main factor in oil by wells is{space}
-          <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
-        </h4>
-        <OIL
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        We all spend $3.27/day
-        <br />
-        <Cable
-          style={{ width: "200px" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/fjxavdt3ygoo4x9/Screen%20Shot%202022-03-04%20at%205.52.25%20PM.png?raw=1"
-          }
-          float={"right"}
-          title="oil consumption per person"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        On oil (25% of that is yours, dollar owners, for $.00054, =
-        18mbarrels*$60/barrel/$2t currency)
-        <h4>
-          Wouldn’t you like royalties for some of that, they make what 30% in
-          wages and zippideedoodas
-        </h4>
-        Blue eyes is less discerning for honesty as impertenancy
-        <br />
-        $5.4/day for $10k in checking, or{space}
-        <a href="https://www.nrdc.org/experts/josh-axelrod/course-correction-federal-oil-and-gas-leasing-needs-fixing">
-          20%
-        </a>
-        {space}of that (3.65%/yr+ return - input costs)
-        <br />
-        <br />
-        <a href="https://www.eia.gov/petroleum/wells/">map of wells (purple)</a>
-        {space}&bull;{space}
-        <a href="https://www.eia.gov/todayinenergy/detail.php?id=44356">
-          report
-        </a>
-        {space}royalties as if transaction-fee-based); discount SSA&Medicare
-        income by outlays, across the board, don't worry, wealth is more
-        relative than utilitarian, and sprints have two parts of material and
-        labor, amortization writes down to deflate unjustifiable gains - by
-        monopsony or
-        <br />
-        <br />
-        NJ Consumer Fraud Act:
-        <br />
-        "Why are there people suffering from poverty?"
-        <br />
-        Nick Carducci - Product Research at Scopebook (2021–present)
-        <br />
-        Poverty is average expenditures-to-income, which are immutable
-        characteristics of a sprint, scope, or book, or **operating costs, cash
-        flow, or profit and loss time-periods**, but not balance sheet, which is
-        like a disparity table, for they can amortize to zero and are gained in
-        relativity. 1/2 material-labor always variable, known hazard
-        <br />
-        <br />
-        <Spanish
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        "How can we increase the economy using taxation?"
-        <br />
-        Nick Carducci - Candidate at U.S. Senate (2020–present)
-        <br />
-        Increasing the economy by measure of GDP/p is tech deprecation, by
-        actual or nominal increase in Demand, which is a dead-weight-box upon
-        GDP/hour-GDP/p 0y/1x efficiency, so you would just tax more than free
-        rider immutable, sewage-, police- and lawsuits-spending would require.
-        <br />
-        <br />
-        <h4 style={{ float: "left", width: "200px" }}>
-          Truncated Production Tax
-          <br />
-          <br />
-          <a href="https://teapharmacy.party/drugs">open ingredient lists</a>
-        </h4>
-        <h4 style={{ float: "right", width: "200px" }}>
-          no state vig{space}&bull;{space}ween cops off bonds TRUNCATED
-          PRODUCTION TAX 2024{space}&bull;{space}free-rider-mutable 1y/0x
-          trust-breaking hypocrisy carducci.us/primary
-          <br />
-          <br />
-          reverse amortization or capital loss deflation for govrent%/GDP
-        </h4>
-        My plan would be to adjust not writing down but past income. I actually
-        do call it *Reverse Amortization*, or *Capital Loss Deflation*. For
-        surrendered donee-beneficiary freedom outright, loitering,
-        **(cash/debt)*income**, every year back. For SSA, deflate by
-        **(tax%/SSA-outlays)**. *Same with Medicare*. I think that may be it.
-        **(Royalties%/barrel)**, instead of *leases to the treasury*. Separate
-        Savers (of *currency*, not *money* nor *savings*) from Treasury.
-        <br />
-        <br />
-        <div style={{ width: "100%", maxWidth: "400px", float: "right" }}>
           <Cable
             style={{ width: "100%", maxWidth: "400px" }}
             onError={handleScollImgError}
             img={true}
             src={
-              this.state.noyout
+              this.state.serviceCancelingImages
                 ? ""
-                : "https://www.dropbox.com/s/7ew26j9wgf961o0/bill%20maher%20population%20chart.png?raw=1"
+                : "https://www.dropbox.com/s/9r7cpzr5zz0qbv5/Price%20of%20Marginal%20Product%20Wholesale%20Size.png?raw=1"
             }
-            //float={"right"}
-            title="https://www.facebook.com/Maher/videos/1211699499642340"
+            float="right"
+            title="Price of Marginal Product Wholesale Size Curve"
             scrolling={this.state.scrolling}
             fwd={this["scrollImg" + scrollnum()]}
             scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
             scrollTop={this.state.scrollTop}
           />
-          Bill Maher with a nice chart in his
-          absurdist-/comparative-/figurative-/metaphorical-lead into a{space}
-          <a href="https://www.facebook.com/Maher/videos/1211699499642340">
-            story
+          <h4>
+            trust building hypocrisy -{space}
+            <a href="https://crowdfundingfortaxes.quora.com">
+              Crowdfunding For Taxes
+            </a>
+          </h4>
+          <a href="https://www.quora.com/Was-actual-Marxism-never-implemented/answer/Nick-Carducci">
+            Marx
           </a>
+          {space}would tax to retribute (cash/debt)*income beyond{space}
+          <a href="https://truncatedproductiontax.quora.com">
+            free rider immutable
+          </a>
+          , sure. He would first and foremost end hysterical charge pools and
+          invoices’ surrendered freedom to bid of third party donee
+          beneficiaries, however.
+          <br />
+          Capitalism supports **surrendered freedom to bid of third party
+          {space}
+          <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
+            donee
+          </a>
+          {space}
+          beneficiaries, by
+          <br />
+          1. implausible use leases beyond 5 stores and condos and
+          <br />
+          2. invoices, warranties, and hysterical pool charges,
+          <br />
+          and accounts for **productivity by real{space}
+          <a href="https://data.oecd.org/lprdty/gdp-per-hour-worked.htm)">
+            expenses
+          </a>
+          {space}per hour.
+          <br />
+          <br />
+          <a href="https://www.quora.com/What-is-the-difference-between-productivity-and-efficiency/answer/Nick-Carducci">
+            What is the difference between productivity and efficiency?
+          </a>
+          {space}•{space}
+          <a href="https://www.quora.com/How-do-you-evaluate-supply-and-demand/answer/Nick-Carducci">
+            How do you evaluate supply and demand?
+          </a>
+          {space}•{space}
+          <a href="https://www.quora.com/Did-Marx-support-Mao-and-Stalin">
+            Did Marx support Mao and Stalin?
+          </a>
+          <br />
+          <br />
+          The question is, in other words, “if debt is the cause of inflation,
+          why do we have it?” You said, “we cannot put on the breaks.”{space}
+          <a href="https://adailyimpeachment.quora.com/A-little-bit-of-a-bad-thing-is-a-good-thing-https-www-quora-com-If-raising-rates-is-to-prevent-borrowing-to-prevent">
+            Nick Carducci's post in adailyimpeachment
+          </a>
+          . Now you are talking about it like a tool, but there are verily
+          alternatives to compounding loans or general-income debentures, like
+          pipe .io.*{space}
+          <a href="https://www.quora.com/unanswered/If-inflation-is-caused-by-debt-before-corrections-why-do-we-have-it">
+            If inflation is caused by debt before corrections, why do we have
+            it?
+          </a>
+          <br />
+          <br />
+          I’m more of a microeconomist, than a macroeconomist who would
+          bizarrely attribute expenses per hour as definitionally good, on a
+          zero-sum individual level and an economic welfare, 1/hour-GDP/p level.
+          {space}
+          <a href="https://www.quora.com/Why-is-some-inflation-good/answer/Nick-Carducci">
+            Why is some inflation good?
+          </a>
+          <br />
+          <br />
+          *or my own legal creation, vertical-industry-line, max-royalty
+          contracts, -tortious for revenue skimping upon withdrawal or abscond
+          self-employment tax-altogether and disburse immediately upon sale, the
+          needs of entrepreneurs are sufficed without **surrendered freedom to
+          bid of third party{space}
+          <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=1260&context=wlr">
+            donee
+          </a>
+          {space}
+          beneficiaries.{space}
+          <a href="https://www.quora.com/unanswered/If-inflation-is-caused-by-debt-before-corrections-and-max-royalty-contracts-are-available-why-do-we-have-it">
+            If inflation is caused by debt before corrections, and max-royalty
+            contracts are available, why do we have it?
+          </a>
+          <br />
+          <br />
+          **Debt is a tool for laborless-demand to raise price beyond budget
+          constraints, making the entire demand curve subservient to
+          non-substitutive-supply instead of equilibrium ask-bid of outright
+          sales.**
+          <br />
+          <br />
+          Uses metaphors and says, “it would crush the economy.” What does that
+          mean? Jobs and prices? Isn’t that inflation?
+          <br />
+          <div>
+            Absolving student debt is how creditors KEEP their undue profits,
+            reverse amortization (cash/debt)*income.
+          </div>
+          <br />
+          <a href="https://www.quora.com/Is-debt-worth-the-inflation">
+            Is debt worth the inflation?
+          </a>
+          {space}“Debt is worth the inflation caused by debt,” is what you’re
+          saying, but I’m saying there is alternative contracts that aren’t
+          technically surrendered freedom to bid of third party donee
+          beneficiary, nor inflationary by laborless-demand capacity (producers
+          starve and lower prices in microeconomics).
+          <br />
+          <br />
+          Compared with: annual taxes at $2.2t/yr and $1.8t/yr debt
+          spending/borrowing -3/2020, $2t checking at the time (inside and
+          outside fed banks), government contractors effectively lend themselves
+          money.
+          <br />
+          <div>
+            Self-sustainability is from **substitutive-supply**, and drives us
+            out of poverty, for laborless-demand doesn’t hold back**
+            labor-demand**. Neil Oliver, “Government getting people out by
+            buying their farmland for free rider mutable profits for the
+            treasury.”
+          </div>
+          <br />
+          substitute supply for labor demand of another market to beat crowding
+          out
+          <br />
+          Nick Carducci -{space}
+          <a href="https://occupywallst.quora.com">
+            Econometrist at Occupy Wall St
+          </a>
+          {space}(2008–present)
+          <br />
+          In order to gain more popular support, the government is rebranding
+          {space}
+          <a href="https://qr.ae/pGLlAZ">inflation</a>. What do they call it?
+          <br />
+          <br />
+          The former National Economic Council Director on the right calls
+          employer-benefit standardized guarantee scheme (PCE, BEA), or
+          out-of-pocket cheaper (CPI, BLS), inflation, prosperity, before
+          <div style={{ borderLeft: "3px solid", paddingLeft: "5px" }}>
+            income-expenses in a time-period gain
+          </div>
+          is known to supply-siders to raise bid by ask, who have more
+          laborless-demand of input costs, I guess, and yet thereby generate a
+          loss of economic welfare in Supply and Demand (Microeconomics), 1y/-1x
+          1/hour-GDP/p, for labor is always supply, lest for dead-weight, for
+          vertical industry lines, or maybe to some propensity despondency by
+          total, and horizontal, living costs, between markets being the only
+          time labor in one market out-profits/-saves another. There are about
+          12 mutually exclusive lines of business by NAICS code, I gather.
+          <br />
+          <br />
+          Inventory is not Supply, that includes{" "}
+          <a href="https://qr.ae/pGLlsf">variable-part labor</a>
+          <br />
+          <br />
+          <Cable
+            style={{ height: "590px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fsaverparty%2Fvideos%2F4404002109665977%2F&show_text=true&width=220&t=0"
+            }
+            float="right"
+            title=""
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          1y/0x price by inflation, attribution of laborless-demand of
+          share-split notwithstanding (global ubi currency share-split, nor
+          propensity of indifference of land-deeds/vault-share or
+          treasury-inventory)
+          <br />
+          <br />
+          0y/1x 1/hour-GDP/p efficiency
+          <br />
+          <br />
+          easy peasy. 1y/-1x laborless-demand
+          <br />
+          <br />
+          "Should all artists boycott Spotify until they sack Joe Rogan? #MOATS"
+          <br />
+          I'm antivaxx and cannot respond to this poll. Only on non-compete
+          grounds. Free Britney! Cornering the market with labor cost skew.
+          Target margin operational monopsony non-compete. Geohash/month
+          truncated production tax. The Ruble is a land deed.
+          <br />
+          <br />
+          "How does making somebody dependent on government handouts, like basic
+          income programs, improve their lives over teaching them a trade that
+          will allow them to earn a living and be independent?"
+          <br />
+          Nick Carducci - Chairperson at Saver Party (2020–present)
+          <br />
+          How does making somebody dependent, earn a living, do what? Or, do you
+          mean: how do you do that? You just remove the front-running,
+          free-rider-mutable, laborless-demand programme. You just, don’t do it.
+          <br />
         </div>
-        <br />
-        Paralytic polio shows same Multiple sclerosis presentation
         <div
           style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
+            fontFamily: "'Muli', sans-serif",
+            overflow: "hidden",
+            backgroundColor: "white",
+            height: this.state.journal ? "0px" : "",
+            position: this.state.journal ? "fixed" : "relative",
+            width: "100%",
+            maxWidth: "600px",
+            textAlign: "center"
           }}
         >
-          , .7% are disabled, not 19%, stop scapegoating poor Savings for age
-          and madness
-        </div>
-        <h4>inseminate the cell - on stage! humanharvest.info/polio</h4>"
-        <a href="https://www.statista.com/statistics/1254271/us-total-number-of-covid-cases-by-age-group/">
-          it doesn't affect kids
-        </a>
-        ," says the 'lawyer'
-        <br />
-        <h4 ref={this.plandemic}>
-          <a href="https://qr.ae/pvKRxY">okay</a>?
-        </h4>
-        <Vax
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        Bacteria cannot be more severe viral{space}
-        <a href="https://www.pfizer.com/news/articles/viral_vs_bacterial_pneumonia_understanding_the_difference">
-          pneumonia
-        </a>
-        <br />
-        Hospitalizations and vaccine per capita{space}
-        <a href="https://www.quora.com/Do-monkey-pox-and-AIDS-prove-disease-is-borne-by-fecal-bacteria/">
-          correlate
-        </a>
-        positively. Maybe just behavioral (bivariate coincidence) correlation,
-        not causation - when using{space}
-        <a href="https://www.cdc.gov/flu/weekly/overview.htm#:~:text=5.%20Mortality%20Surveillance">
-          all-cause
-        </a>
-        {space}PIC. Alzheimer’s is caused by sewage (
-        <a href="https://sewageisamatterofdomesticviolence.quora.com">?</a>).
-        <br />
-        Financial-userers, lenders landlords and insurers are surrendering
-        donee-beneficiaries outright and bid. Leases={">"}$oil
-        <br />
-        We are asymptomatically testing for the first time, proving it isn’t
-        correlated. 1% die, 50% sniffle
-        <br />
-        Non-exclusive byproduct or not even correlated when testing asymptomatic
-        ally don’t send doctor to do econometrist job
-        <h4>
-          the right of contract; liable for diligence in surrendered freedoms by
-          bid, or outright
-        </h4>
-        <hr />
-        Nick Carducci - CEO & Founder at Thumbprint.us - Social Calendar
-        (2012–present)
-        <br />
-        "Which economic system works best?"
-        <br />
-        1/12 industry-vertical against horizontal merger, regulations; the
-        lovely monopsony and skills-trading economists.
-        <br />
-        <br />
-        We are always impacting, elsewise self-harm; imputable favors,
-        scientific contribution, even copy.
-        <br />
-        <br />
-        Open ingredient lists, NFC Motor Vehicle ween cops off bonds spoofable
-        precinct 3% under $2k truncated production tax, reverse amortize
-        govrent%/outlays and (cash/debt)*income just the same, allow
-        whistleblowers on such 11/12 minimal viable product GENERAL MAINTENANCE
-        UNIT, duress, moot and without permission, and 1/12 as
-        like-“collateral,” to provide partners with security in
-        non-general-income max-royalty, to replace future potential debt
-        arrangements, thereafter.
-        <hr />
-        Nick Carducci - Legal Writer & Software Engineer at Vaults.biz
-        (2020–present)
-        <br />
-        "What industries only exist because of economic inequality?"
-        <br />
-        Insurers, lenders and landlords imbue enumerable and able to reverse
-        amortize, loss, by,
-        <br />
-        <br />
-        &bull;{space}implausible use leases,
-        <br />
-        &bull;{space}false bid pool loss,
-        <br />
-        &bull;{space}lenders loitering,
-        <br />
-        all of which are technically illegal for surrendering others’ freedoms,
-        like counterfeit in contract, liable of the contractor, that is the
-        buyer, of a scope of work, or with currency.
-        <br />
-        <br />
-        <div
-          style={{
-            borderLeft: "3px solid",
-            paddingLeft: "5px"
-          }}
-        >
-          If the estimates are higher than the original contract price, the
-          homeowner may seek the difference as an ascertainable loss.
-        </div>
-        <br />
-        should not be tortious. Known hazards. Consumer fraud, known hazard,
-        force majeure - the difference is intent, let alone donee beneficiary
-        (others' standing-grounds).
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/c9e74wex0s58qx4/old%20people%20work.jpeg?raw=1"
-          }
-          float={null}
-          title="https://fred.stlouisfed.org/graph/?g=MDZy"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/234613ckwgiez3i/ssa%20general%20fund.jpeg?raw=1"
-          }
-          float={null}
-          title="SSA trust fund balance geronimo 2020- $2t"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        <a href="https://analsolutions.net">
-          blind trust over currency policy-making (SSAMedicareTax%/outlays
-          capital loss deflation)
-        </a>
-        <br />
-        put country ahead of government, corporation and mortgage. 50 average
-        age small business. restoring Salt will put money back into pockets of
-        labor, where it belongs. Actually, I'm on the other edge, the
-        bottom-bottom line, sprints are 1/2 material-labor
-        <h4>
-          Youth are short of work by income, but not hours; the{space}
-          <a href="https://fred.stlouisfed.org/graph/?g=MF0d">
-            rising costs of healthcare
+          <div
+            style={{
+              width: "100%"
+            }}
+          >
+            <a
+              style={{
+                shapeOutside: "rect()",
+                float: "right",
+                width: "max-content",
+                padding: "0px 10px",
+                fontSize: "20px",
+                fontFamily: "'Pacifico', sans-serif",
+                color: "rgb(230,230,255)",
+                backgroundColor: "rgb(32, 22, 11)"
+              }}
+              href="https://carducci.us"
+            >
+              carducci.us
+            </a>
+            <a
+              style={{
+                shapeOutside: "rect()",
+                float: "right",
+                width: "max-content",
+                padding: "0px 10px",
+                fontSize: "20px",
+                fontFamily: "'Pacifico', sans-serif",
+                color: "rgb(230,230,255)",
+                backgroundColor: "rgb(32, 22, 11)"
+              }}
+              href="https://saverparty.xyz"
+            >
+              saverparty.xyz
+            </a>
+            How can you say you afford that which you launder unpaid contracts
+            of third party donee beneficiaries of labor-borne-demand? let alone
+            expected impossible with implausible deniability of repo-cycle kept
+            down payments, you{" "}
+            <a href="https://qr.ae/pGLl8V">flammable tools on the right</a>
+            <br />
+            <br />
+            The <a href="https://2024nj.com/plandemic">global pandemic</a>{" "}
+            caused checking to be{" "}
+            <a href="https://commie.dev">non-fungible for currency</a>
+            <br />
+            Free rider mutable trade secrets!
+            <br />
+            gdp/p is counterproductive - price deflation per hour
+            <br />
+            <br />
+            "'Cannot expect a man to&nbsp;
+            <a href="https://Streetsblog.org">break the law</a>&nbsp;that their
+            very living is dependent upon breaking it,'” state victimication
+            always verboten.
+            <br />
+            <br />
+            $12k/year/p debt $3k/year/p bond $64/year/p new
+            CurrencyComponentOfM1, force majeure implausible deniability third
+            party donee beneficiary
+            <br />
+            Non-rollover insurance is surrender of another’s freedom
+            <br />
+            <br />
+            Fair market rate for space, is not reflected by another market
+            unless you are&nbsp;
+            <a href="https://www.google.com/search?q=pull+string+flying+toy">
+              market making
+            </a>
+            &nbsp;for a new item in a depositary && location’s shipping
+            <h2>yeah free for lender work deficit</h2>
+            <Cable
+              style={{ height: "440px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1uV9aS6C8R5z5zemvwl-1ZnU3unieTIFF/preview"
+              }
+              float="right"
+              title="Katie Halper (Youtube) - David Dayen & Leslie Li III - 'Government is ok only for free rider immutable and emulate perfect equillibrium infinite producer price, quality and duress, is non-profit outlaid fully to non-laborless-demand. Pure inflation elsewhere'"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            "people don't understand Debt is money," Cash v bonds over parks,
+            cash WINS. All debt "investment" will be replaced by 1-level-baoard
+            max-profit-royalty-contracts. (cash/debt)*income every year back
+            force majeur implausible deniability repo cycle kept down payments
+            third party donee beneficiary claimables. They want to bailout
+            uncolateralized and service collateralized to Yang appraise. Reverse
+            the debt, poverty only includes materials lamo, forever serfs, oh,
+            it's so funny.&nbsp;
+            <a href="https://www.lawinsider.com/clause/no-surrender-of-others-freedom">
+              No surrender anothers' freedom
+            </a>
+            . We want less work! OMG. Go watch eachothers' kids. No candidate
+            invoices are theft, non-voters win, default, "no."
+            Poverty/equality=poorness. 40% debt spending, 50% nj, 10% debt
+            service, 40% njta. Public insurance isn't better, just ban
+            insurance. Used to be invoices are theft and no more scripts.
+            Benefits is pure price inflation. Don't you believe in price
+            elasticity. Lender landlord insurer work deficit, bbb ppp ccc all
+            trust building contractors, parents, existing biz. Prevalence does
+            not cause, make. I mean, it, "requires cell to reproduce," so it
+            only comes out and is a byproduct then. We saw the pandemic coming
+            by population size changes. Multiple sclerosis matches paralytic
+            polio, I am a statistician. Dr Saveface. It only comes out, lmao.
+            Put all business permits in front of an industry various multiple of
+            11/12 jury, like desistation by jury truths and conviction with
+            arresting officer evidence, or no jail nor bail. Truncated sales tax
+            to ween jailors off net loss profit bonds to get paid by those they
+            arrest. No more sales on good will last trade value, for is third
+            party donee beneficiary claimable. I used malarkey in a disability
+            case for assuming employers would hire me for a non-bartending job
+            with this hole in my leg.
+            <br />
+            <br />
+            Curtis Sliwa: “Wife beater, using all kinds of drugs, the worst
+            person ever!” What does that have to do with eachother?
+            Population/scarcity is elastic labor-elasticity, and you fucking
+            call mental institutions a place for homeless people even when we
+            work ten times as much as you did, for lender landlord insurer work
+            deficit, all because you’re gluttonous. That is WORSE. Cap rent at
+            units or days not prices, (cash/debt)*income every year back,
+            truncated sales tax to week cops off net loss bonds and paid by the
+            people they arrest.
+            <br />
+            <br />I was locked up for saying rollover insurance, then when I
+            eloped from the syringe, they lied and said I kicked and punched
+            them. Estimates and prevalence of weed smoker does not make motor
+            nor IQ deficiency!
+            <br />
+            <br />
+            NJ Consumer Fraud Act permits you to claim the property in
+            estimates. This is insane. Pay for subcontractors in advance, like
+            everyone else. Know that they can only sell their services on
+            estimates of material and labor.
+            <br />
+            <br />
+            <Cable
+              style={{ height: "230px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1HYeBGkFf5mXM_ek0ukaqdVeBtFgdHGzT/preview"
+              }
+              float="left"
+              title="Gorka Reality Check (Newsmax) - Socialism is Venezuela propoganda"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            “Become socialist through elections,” what is socialist about
+            reappropriating labor. That is market-communist. Stop confusing
+            people that it is either market-communism or&nbsp;
+            <a href="https://qr.ae/pGzIGh">lender</a>&nbsp;
+            <a href="https://fred.stlouisfed.org/graph/?g=FSwQ">landlord</a>
+            &nbsp;
+            <a href="https://qr.ae/pGzpwb">insurer</a>&nbsp;work deficit.
+            <br />
+            Real threat of socialism in america praised Psaki, "inflation is
+            caused by greed. America means freedom, without government
+            interference in every step in your life, want to continue power turn
+            it into something I fled.
+            <br />
+            <br />
+            Communism always leads to murder, torture labor camps. Socialism to
+            all free peoples Aus, US, UK, greatest hope for a free world,
+            shining city on a hill."
+            <br />
+            <a href="https://thechurchoftruth.org/jesus-did-not-die-for-your-sins/">
+              <h2>“Our lord and savior,”</h2>
+            </a>
+            <Cable
+              style={{ height: "440px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1dVgx70Ytl8TeHR5BVgafArtimo7xLvgM/preview"
+              }
+              float="right"
+              title="Gorka Reality Check (Newsmax) - YTY virus guys, right and top left vaxxers"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            Karl Marx's destruction, Creeping-fascism is here! …of the virus
+            that, “requires cell to reproduce!” 60m WWII, 6m holocaust, 100m,
+            "workers paradise, equality and socialism, 100m dead. brave states
+            men and women"
+            <a href="https://www.marxists.org/archive/marx/works/1837-pre/verse/verse24.htm">
+              ...
+              <br />
+              Then came a noble knight,
+              <br />
+              A grand charger he rode;
+              <br />
+              ...
+              <br />
+              <br />
+              Love smote deep in her breast,
+              <br />
+              But he galloped away,
+              <br />
+              For battle-triumph athirst;
+              <br />
+              Naught made him stay.
+              <br />
+              <br />
+              All peace of mind is flown,
+              <br />
+              The Heavens have sunk.
+              <br />
+              <br />
+              ...
+              <br />
+              She kneels on the floor,
+              <br />
+              Before the holy Christ
+              <br />
+              A-praying once more.
+              <br />
+              <br />
+              But then upon that form
+              <br />
+              Another encroaches,
+              <br />
+              To take her heart by storm,
+              <br />
+              'Gainst her self reproaches.
+              <br />
+              <br />
+              "To me your love is given
+              <br />
+              For Time unending.
+              <br />
+              To show your soul to Heaven
+              <br />
+              Is merely pretending."
+              <br />
+              <br />
+              <b>
+                ...
+                <br />
+                She wrings her lily-white hands,
+                <br />
+                The tear-drops start.
+                <br />
+                "Thus fire the bosom brands
+                <br />
+                And longing, the heart."
+                <br />
+                <br />
+                "Thus Heaven I've forfeited,
+                <br />
+                I know it full well.
+                <br />
+                My soul, once true to God,
+                <br />
+                Is chosen for Hell."
+              </b>
+              <br />
+              <br />
+              He was so tall, alas,
+              <br />
+              Of stature divine.
+              <br />
+              His eyes so fathomless,
+              <br />
+              So noble, so fine.
+              <br />
+              <br />
+              "He never bestowed on me
+              <br />
+              His glances at all;
+              <br />
+              Lets me pine hopelessly
+              <br />
+              Till the end of the Soul.
+              <br />
+              <br />
+              "Another his arm may press,
+              <br />
+              May share his pleasure;
+              <br />
+              Unwitting, he gives me distress
+              <br />
+              Beyond all measure.
+              <br />
+              <br />
+              "With my soul willingly,
+              <br />
+              With my hopes I'd part,
+              <br />
+              Would he but look towards me
+              <br />
+              And open his heart.
+              <br />
+              <br />
+              "How cold must the Heavens be
+              <br />
+              Where he doesn't shine,
+              <br />
+              A land full of misery
+              <br />
+              And burning with pain.
+              <br />
+              <br />
+              "But here the surging flood
+              <br />
+              May deliver me, cooling
+              <br />
+              The hot fire of heart's blood,
+              <br />
+              The bosom's feeling."
+              <br />
+              <br />
+              She leaps with all her might
+              <br />
+              Into the spray.
+              <br />
+              Into the cold dark night
+              <br />
+              She's carried away.
+              <br />
+              ...
+            </a>
+            <br />
+            <Cable
+              style={{ height: "440px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1qqLJGBKH6-JbeofVyP4540zr2OVC1M1k/preview"
+              }
+              float="left"
+              title="Chris Salcedo (Newsmax) - citations of Fox Jessica Chasmar Polis Co Dem '...their own darn fault,' and Daily Wire Dillon Burroughs, '800k covid-related-deaths'"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            But the virus, of unknown taxonomy, is still caused by someone.
+            <br />
+            <a
+              style={{
+                shapeOutside: "rect()",
+                float: "right",
+                width: "max-content",
+                padding: "0px 10px",
+                fontSize: "20px",
+                fontFamily: "'Pacifico', sans-serif",
+                color: "rgb(230,230,255)",
+                backgroundColor: "rgb(32, 22, 11)"
+              }}
+              href="https://moldmask.co"
+            >
+              moldmask.co
+            </a>
+            Statistical analysis (variance, insignificant presentation in a
+            wide-range) of the time-series basis.
+            <br />
+            60 average age flu, 74&nbsp;<a href="https://qr.ae/pGzp1w">covid</a>
+            , 75 normal, 78 life expectancy, 75+ 2015- 1.2m/yr+ expected,
+            55m/yr+ worldwide;
+            <br />
+            <div
+              style={{
+                border: "1px solid black",
+                borderRadius: "15px",
+                padding: "10px",
+                margin: "10px"
+              }}
+            >
+              "5m-250k, 3m peasant farmers starve to death.
+              ...USSR-free-enterprise was and what Putin wants to be." If that
+              is what happened in excess, population growth calls for 1m/yr, and
+              3m is 150% that estimate of excess, year to year BASIS. Just as
+              expected, first with 1.2m/yr+ covid in U.S., 505m/yr+ in
+              worldwide, and 15m/5yr+ in Great Leap Forward., and&nbsp;
+              <a href="https://www.christopherreeve.org/living-with-paralysis/stats-about-paralysis">
+                2.5m
+              </a>
+              /2/38 accute flaccid paralysis in&nbsp;
+              <a href="https://www.chop.edu/news/feature-article-flashback-parenting-and-summer-1950s#%3A~%3Atext%3DFor%20parents%20of%20children">
+                paralytic polio
+              </a>
+              <h2>- saver party</h2>
+            </div>
+            <br />
+            “They are getting covid, doesn’t necessarily mean you’ll be getting
+            sick. What is he supposed to clock my in the head?" No, you are
+            supposed to clock YOURSELF in the head.
+            <br />
+            <br />
+            ms matches paralytic polio you didn't so anything. sewage positively
+            correlates with lifetime mortality. try to put it in front of an
+            industry variant multiple of 11/12 jury, RETARD. I'll force duress
+            upon my copyright based on my abscure medical whims.
+            <br />
+            <br />
+            "If someone comes into your house with bad intention," you can’t
+            "defend yourself" blindly, only from benefit of doubt.
+            <br />
+            Then as he always does obfuscates by narrowing his claim from the
+            actual definition of what he said earlier. “Try to hurt me, I can
+            kill you. Evil intentions, violent, penalties subject in reverse. My
+            store, is not the state, do not conflate, tort without expiring
+            claim non-rollover-insurance. License registration and&nbsp;
+            <a href="https://qr.ae/pGzpwb">insurance on guns</a>, if everyone
+            should have a gun, NRA pays for the expiring claims. If you don’t
+            qualify for a gun, you misused a gun.” Kill yourself Chris Hahn.
+            <br />
+            "Guns like cars, license them teach them how to use them, insure
+            them. Idiots shouldn't have guns. Former felon." those are not the
+            same retard. Insurance is a&nbsp;
+            <a href="https://www.youtube.com/watch?v=aJEszZK54dw">net loss</a>.
+            <br />
+            <br />
+            Fiat = commodities (goods, material & intermediate-labor) on market
+            + parks depositary
+            <br />
+            <br />
+            Expiring claims nor estimate options to buy is help, except for
+            ask-producter
+            <br />
+            <br />
+            Not really a paytech exclusively for non-production-taxable
+            charities measured by income nor actual light tech
+            <br />
+            <br />
+            Purchasing a house in NJ Supreme Court means estimates on labor and
+            materials wrapped up in a broad scope of requirements enumerated.
+            <br />
+            <br />
+            <a
+              style={{
+                shapeOutside: "rect()",
+                float: "left",
+                width: "max-content",
+                padding: "0px 10px",
+                fontSize: "20px",
+                fontFamily: "'Pacifico', sans-serif",
+                color: "rgb(230,230,255)",
+                backgroundColor: "rgb(32, 22, 11)"
+              }}
+              href="https://teapharmacy.party/drugs"
+            >
+              teapharmacy.party/drugs
+            </a>
+            “Every healthcare people need,” we don’t need insurer work deficit
+            <h2>
+              <span style={{ fontSize: "9px" }}>
+                "
+                <a href="https://secure.kentucky.gov/formservices/Finance/WKYRelief">
+                  wkyrelieffund.ky.com
+                </a>
+                &nbsp;0% admin fees until every family has 4 walls up, families
+                are made, and kids still have a Christmas at these state parks.
+                December is really tough for a lot of families, we are going to
+                do our best to lift THEM up." Andy Bershier
+                <br />
+                Pain in the short term, recovery in the long term; inflation,
+                wages: but they are the same! "Certainly on bended-knee, but
+                still standing.
+                <br />
+                "Pain and destruction, lifted out, and maybe something new. a
+                simple insurance claim is NOT whole-making. Greif, _, & trauma.
+                Thanks for unprecedented [price-elastic]resources. How do you
+                obliterate a full-town?"
+              </span>
+              <br />
+              “Just give them a hand, they will rebuild,” Bob Sellers
+              <br />
+              <Cable
+                onError={handleScollImgError}
+                //img={true}
+                src={
+                  this.state.serviceCancelingImages
+                    ? ""
+                    : "https://drive.google.com/file/d/1ksai39JBNcFVxD2xEWVCnI_UuUGoN9YX/preview"
+                }
+                float="right"
+                title=""
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+              <span style={{ fontSize: "9px" }}>
+                "who are we going to ask about this? A doctor"
+              </span>
+            </h2>
+            Doctors follow more than any industry, plants have one beat one
+            mission, yet multiple of 11/12 industry-variant jury is relevant for
+            science, but not a false imprisonment-defensive against stat-
+            victimization or torts beyond a tranquil and voluntary-bid, settled
+            without expiry, estimate nor force-majeure implausible-deniability
+            <br />
+            <br />
+            $12k/year/p debt, $3k/year/p bond m2, $64/year/p checking
+            currencyComponentOfM1
+            <br />
+            $32/day/p debt, $8/day/p bonds, $.18/day/p checking
+            CurrencyComponentOfM1;
+            <br />
+            $6k/yr/p and $6k/p total;
+            <br />
+            <Cable
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1PlLFO5ReePUfXWuM3rvTYQvLP_TAB0uL/preview"
+              }
+              float="left"
+              title=""
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            Makes 5% homes, 7.5% bonds decisions;
+            <br />
+            "Set government wages, food, gas - bankrupt energy companies,"
+            <a
+              style={{
+                shapeOutside: "rect()",
+                float: "right",
+                width: "max-content",
+                padding: "0px 10px",
+                fontSize: "20px",
+                fontFamily: "'Pacifico', sans-serif",
+                color: "rgb(230,230,255)",
+                backgroundColor: "rgb(32, 22, 11)"
+              }}
+              href="https://humanharvest.info/polio"
+            >
+              humanharvest.info/polio
+            </a>
+            <br />
+            <br />
+            <h2>
+              <span
+                style={{
+                  fontSize: "9px"
+                }}
+              >
+                "Rand Paul was the 'first person' to ask Gov for money Kentucky
+                tornado damage."
+                <br />
+                <a
+                  style={{
+                    shapeOutside: "rect()",
+                    float: "right",
+                    width: "max-content",
+                    padding: "0px 10px",
+                    fontSize: "20px",
+                    fontFamily: "'Pacifico', sans-serif",
+                    color: "rgb(230,230,255)",
+                    backgroundColor: "rgb(32, 22, 11)"
+                  }}
+                  href="https://froth.app/debt"
+                >
+                  froth.app/debt
+                </a>
+                <br />
+                "Ted cruz in TX, too after Hurricane Sandy."
+              </span>
+              <br />
+              “Dems last to say, ‘Oh let’s not give money to Kentucky,’” Sliwa
+              replies, “well they want to use the federal reserve.”
+              <br />
+              <span
+                style={{
+                  fontSize: "9px"
+                }}
+              >
+                “We need to come together whenever there is a national common
+                defense,” Chris Hahn and Curtis Sliwa says in unison.
+                <br />
+                “Businesses have been taken out,” ppp trust building existing
+                business, not most people. labor shortage caused first by boomer
+                cohort size and second by racist immigration
+              </span>
+              <br />
+              “Rural don’t have the tax base that urban and suburban communities
+              have, happy governor would pay for the, gulp, cleanup,”
+              electricity back, water utility all over U.S. coming in working
+              through the cold Red Cross supply organizations are coming in from
+              outside the community, we ran out of food and people can’t drive
+              to us, so taxation from outside our market is retarded. Let's make
+              sure partisan stays out of it, for the sake of Kentucky's useless
+              lender landlord insurer work deficit. We will keep the people of
+              the state of Kentucky in our heads, and our hearts."
+              <br />
+              "Thank you congressman."
+              <br />
+              "And I..."
+              <br />
+              Nick Carducci lowers the volume, while the other guy lowers the
+              temp.
+              <br />
+              <Cable
+                style={{
+                  height: "300px"
+                }}
+                onError={handleScollImgError}
+                //img={true}
+                src={
+                  this.state.serviceCancelingImages
+                    ? ""
+                    : "https://drive.google.com/file/d/1petIgP37pvwbjApeqPmO-8QJxDqZzhDB/preview"
+                }
+                float="right"
+                title="Chris Salcedo (Newsmax) - immigration death-rate"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+              “Trump had the strongest border, they are importing hundreds of
+              thousands of immigrants above 12k/yr ‘legally.’”
+              <br />
+              “Inviting death and destruction, not a victimless-crime’ and
+              lawlessness.”
+              <br />
+              “Viruses mutate or they Peter out. Every one of the deaths from
+              crossing was preventable by border security, not vaccination.”
+              <br />
+              <Cable
+                onError={handleScollImgError}
+                //img={true}
+                src={
+                  this.state.serviceCancelingImages
+                    ? ""
+                    : "https://drive.google.com/file/d/1XQpvhJvh2xpajuaBaiDZs1bUwkxsdlMn/preview"
+                }
+                float="left"
+                title="John Bachmann (Newsmax) - Brandon Judd National Border Patrol Council, 'Desantis fights to protect FL from Biden's border crisis'"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+              <span
+                style={{
+                  fontSize: "9px"
+                }}
+              >
+                “We don’t need manpower nor technology, we need policy to
+                control the border, secure, and go after criminal business.
+                Without proper policy, this is going to continue. We know what
+                needs to be done to solve the problem and we know what to do to
+                do that, close border policies.” I don’t see any crime in
+                immigration.
+                <br />
+                “Childrens’ Public Hospital: 'We never turn down kids for
+                treatment,'” 'former public agency'&nbsp;
+                <a href="https://goya.com/cares">Goya Cares</a>&nbsp;with Cousin
+                Brucie.
+                <br />
+                <Cable
+                  onError={handleScollImgError}
+                  //img={true}
+                  src={
+                    this.state.serviceCancelingImages
+                      ? ""
+                      : "https://drive.google.com/file/d/1hyuB2ahWFG6TnAV6ZKVQg2Lt85AuKKBR/preview"
+                  }
+                  float="right"
+                  title="National Report (Newsmax) - Kenosha guy in Mayfield, KY on tornado, literally"
+                  scrolling={this.state.scrolling}
+                  fwd={this["scrollImg" + scrollnum()]}
+                  scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                  scrollTop={this.state.scrollTop}
+                />
+                Doctors follow more than any industry, plants have one beat one
+                mission, yet multiple of 11/12 industry-variant jury is relevant
+                for science, but not a false imprisonment-defensive against
+                stat- victimization or torts beyond a tranquil and
+                voluntary-bid, settled without expiry, estimate nor
+                force-majeure implausible-deniability.
+              </span>
+              <br />
+              Curtis Sliwa: “Oxy is the best pain-killer. Have to take it as
+              prescribed. Or just act like you are in pain and fool the doctor”
+              <br />
+              Chris Hahn: “They want a better high and a better life.”
+              <br />
+              <br />
+              showing different principal&nbsp;&bull;&nbsp;1-level-board
+              max-profit-royalty, cash:debt*income thru history then multiple of
+              11/12 industry-various-jury designation of sewage police lawsuits
+              free rider immutable collective bargain without flaccidity of
+              escrow immediacy or sprint-basing to settlements wothout any
+              pro-rates for same material & labor, otherwise.
+              <br />
+              <Cable
+                style={{ height: "440px" }}
+                onError={handleScollImgError}
+                //img={true}
+                src={
+                  this.state.noyoutube
+                    ? ""
+                    : "https://www.youtube.com/embed/RRHVYEvvm_o"
+                }
+                float="right"
+                title="The Left vs The Right (77WABC) - Chris Hahn and Curtis Sliwa"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.scrollTop}
+              />
+              $12k/year/p debt, $3k/year/p bond m2, $64/year/p checking
+              currencyComponentOfM1
+              <br />
+              Third party donee beneficiaries:
+              <br />
+              NJ consumer law - estimated labor & materials community bid
+              <br />
+              Insurance/WarrantyByBond - expiring claim signatories’ bid-source
+              <br />
+              Charity - community bid
+              <br />
+              Volunteer - volunteers
+              <br />
+              Company - consumers
+              <br />
+              <br />
+              “Non-profit” - 501c3
+              <br />
+              Non-profit - lightte.ch - not exclusively margin target, but no
+              outlays withheld, expiring nor
+              estimated-depositary-materials-nor-labor, rentable-income without
+              plausible use as vacation home or 30 days, or multi-level-board.
+              <br />
+              <hr ref={this.fema} />
+              <span
+                style={{
+                  fontSize: "9px"
+                }}
+              >
+                “Make sure they get registered with FEMA for assistance,”
+                <br />
+                “What does FEMA do to help,”asks one CNN-anchor to another
+                CNN-journalist.
+                <br />
+                “FEMA goes door to door, to clear out what is left of these
+                homes. You talk about these volunteers, from the local
+                community."
+                <br />
+                You don’t need monetary contributions if it is virtuous, free
+                rider mutable monies front running products like food and water
+                with their money or even tax is pure inflation,
+                price-inelasticity of bid-to-ask by finance
+                <hr />
+                (lender/landlord/insurer work deficit from invoices, expiring or
+                estimated with labor and material claims, implausible landlord
+                use or kept down payments upon repo.
+              </span>
+            </h2>
+            <Cable
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1G8E9EosD1FjGYuxxHUMp_TW94P4mJZev/preview"
+              }
+              float="right"
+              title="Gorka Reality Check (Newsmax) - 'Time to get geopolitical.'"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            “Medicine has been politicized,” how about financialized?
+            <Cable
+              style={{ height: "440px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.noyoutube
+                  ? ""
+                  : "https://www.youtube.com/embed/ZmUozfOPquk"
+              }
+              float="left"
+              title="The Left vs The Right (77WABC) - Chris Hahn and Curtis Sliwa"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            “Vaccine mandate whoever comes into the country, just shoot them in
+            the arm, and here is a location where it seems a lot of people don’t
+            want to do these minimum wage jobs, why not? Supply-chain problem by
+            a shortage of workers!”
+            <h3 style={{ fontSize: "24px" }}>
+              <span
+                style={{
+                  fontSize: "9px"
+                }}
+              >
+                Against $32/day/p debt principal $8/day/p bonds, $.18/day/p
+                checking currencyComponentOfM1? Why would anyone do that
+                voluntarily?
+              </span>
+              <br />
+              Retard, tread on your own copy without long-term contracts except
+              sports.
+              <span
+                style={{
+                  fontSize: "9px"
+                }}
+              >
+                “Order to compel, contempt, try abstentia takes property,” as
+                state victimization not a tort? Only if there is damages, not
+                just breaking state victimization law
+              </span>
+            </h3>
+            "Whatever needs to get done to make tornado places whole." You are
+            going to price that into investing there now, the expiring claims
+            false bid pools. YOU NEED TO CUT THE UMBILLICAL CORD
+            <br />
+            <br />
+            “The only president to pay down the debt while in office.” So stupid
+            to do that when velocity of m2 minus gdp divided by m2 minus
+            currencyComponentOfM1. “Chris, what about the average wage of the
+            worker,” “Trump left office at 11% unemployment, now it is 4%.” 2.8m
+            continuing claims half 65+, 20x/millennial rental-income, most
+            disability.
+            <br />
+            <br />
+            <a href="https://nationalsecuritycasino.com">tread on copy</a>
+            &nbsp;- greenhouse&nbsp;<a href="https://magnate.company">gases</a>,
+            WWII and Marxist anti-rentier, repo-cycle, and profit by estimates
+            of labor and material, rather than depository so labor is
+            exclusively demand.
+            <br />
+            <Cable
+              style={{ height: "440px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.serviceCancelingImages
+                  ? ""
+                  : "https://drive.google.com/file/d/1kA9n4UgRQYW6xWL1yHVkOVjtJdMrWKEt/preview"
+              }
+              float="right"
+              title={`Roger. Biden is a national security risk of not sending in troops so
+            Putin stays back. and covid`}
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            can't even say worse off when describing poverty alleviation in lieu
+            of
+            <h2 style={{ fontSize: "20px" }}>
+              lower wealth inequality; meaning, not measured by inflation,
+              income nor gini alone,
+            </h2>
+            homes nor bonds court-backed, like such is, lest third party
+            beneficiary donee trial lawyer malfeasant class resolution grows a
+            heart.
+            <br />
+            <Cable
+              style={{ width: "100px", height: "80px" }}
+              onError={handleScollImgError}
+              //img={true}
+              src={
+                this.state.noyoutube
+                  ? ""
+                  : "https://drive.google.com/file/d/1VOAbX10hoM4vksG6QYqMFKn4FFjojVmf/preview"
+              }
+              float="left"
+              title="grinch grows a heart"
+              scrolling={this.state.scrolling}
+              fwd={this["scrollImg" + scrollnum()]}
+              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+              scrollTop={this.state.scrollTop}
+            />
+            Bank depositables - not rent seekable expiry nor&nbsp;
+            <a href="https://scopes.cc">estimated</a>&nbsp;labor & material
+            claims
+            <br />
+            To boot, tech adv comparative advantage loss by enslaving or tariffs
+            for USPTO racket is retarded,&nbsp;
+            <a href="https://www.wsj.com/articles/trump-eyes-a-new-real-estate-purchase-greenland-11565904223">
+              trumpers
+            </a>
+            . share split park&nbsp;
+            <a href="https://truncatedsalestax.com">deeds</a>
+            <br />
+            <br />
+            <h2>
+              tort reform expiring claimable, open source licensure save
+              the&nbsp;
+              <a href="https://teapharmacy.party">animals</a>
+            </h2>
+            design and discovery equity is all you get, utility too broad
+            <br />
+            <br />
+            assumes in perfect equilibrium.
+            <br />
+            competing with consumers.
+            <br />
+            Subsidizes free rider mutable monopsony.
+            <br />
+            Options to buy sold on intermediate labor and material estimates.
+            <br />
+            “They want to make money, they don’t want to make war,” Chris Hahn
+            on Taiwan.
+            <br />
+            It’s just business.
+            <br />
+            Supply and demand is the exchange of propensities to which demand is
+            labor outlaid immediately without estimates of labor and material
+            appreciated as a stand up option to buy.
+            <br />
+            Simple majority by plural minorities is not consent, nor is unpaid
+            user discrimination free market before jury-desistation of various
+            industry multiple of 11/12 or non-production, tax.
+            <br />
+            Beyond precedence is sometimes the law, and the law is not always
+            legal nor prevailing.
+            <br />
+            Intent to third party beneficiary donee claimable tranching certain
+            compounds still laundered is manipulating prices for one consumer
+            versus the other.
+            <br />
+            repo-cycle kept-down-payments, expiring claims, invoices,
+            implausible landlord use: third party beneficiary donee claimable
+            <br />
+            <br />
+            <h2>US Census and I projected this mortality</h2>I want to tell
+            libertarians that you can’t be pro article 4, pro vaxx and
+            antimandate. If it “requires cell to reproduce,” what is the
+            taxonomy of the virion? I am Protistologists, like an evolutionary
+            theory as sum of the parts, the only way unless a trait is an error…
+            like virus? What is the point? Just like the right and top left to
+            compete with consumers in finance landlord/lender/insurer (invoice,
+            expiring claim on estimates of materials and labor, implausible
+            landlord use, repo cycle kept down payments loitered collateral and
+            laundered.
+            <h2 style={{ fontSize: "24px" }}>
+              transmission is an assumption of prevalance as cause instead of
+              byproduct
+            </h2>
+            <br />
+            Before trade by depositary, public-parks are generically overvalued
+            to labor equity.org propensity to appreciate beyond obvious utility
+            by produce or improvement, not rental-intent deduced.
+            <br />
+            <br />
+            Loans are third party beneficiary donee claimable. We (bottom-left
+            politics) will amortize reversal of repo-cycle kept-down-payments by
+            cash:debt*income thru history and move exclusively to alternative
+            finance! Max profit royalty and recurring revenue. But since outlays
+            schedules aren’t concurrentable, maintain per withdrawal or sale by
+            the account-holders, of a business, not a investing-corporation in
+            another alternative finance
+            level/derivative/fract.reserve/counterfeit-compound, anything other
+            than equity.
+            <br />
+            <br />
+            Net loss exports? depends on if Investment is (+)
+            <br />
+            IP-isolated comparative advantage projects over corporate profits,
+            prices and hours is the very opposite of productivity, retards (you
+            know, tech advancement).&nbsp;
+            <h2 style={{ fontSize: "24px" }}>
+              New/net exports of durable goods, being perfectly in public parks,
+              and such as a depositary of maintainence-less public parks
+            </h2>
+            , makes all service and material exporting over dollars a gain,
+            except for copy- or non-consumer-surrogate-utility-discovery
+            business-rights counted as "investment," but when corporate outlays
+            first,
+            <h2 style={{ fontSize: "24px" }}>
+              in my book, is "gentrification"
+            </h2>
+            {/* market history and propoganda: The Great Leap Forward expected 15m
+        35 age&nbsp;<a href="https://froth.app/stats">lifetime</a>
+       &nbsp;deaths*/}
+          </div>
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1uhex0QL6SJbdXIsOjlNjbum3VKkUltWP/preview"
+            }
+            float="right"
+            title="John Bachmann Now (Newsmax) - Rumble serverless node.js anti-quality-cudgel going public with Cantor Fitzgerald front-run public-fee, double income/outlay tax"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “The money is going to be continue to be printed,” and&nbsp;
+          <a href="https://thumbprint.us/payments">
+            node.js competition with consumers
           </a>
-          , not for tech relenting, alone
-        </h4>
-        <a href="https://fred.stlouisfed.org/graph/?g=MDZy">
-          We work more than ever
+          &nbsp;busy-work without consumers ready willing and able or free rider
+          immutable sewage police lawsuits and others by jury(Cause for removal
+          never for view of law but industry-variance)-permittable as would
+          desistation before paying lest not discriminating users, duress beyond
+          mvp in minimal viable product or conviction (any multiple of 11/12).
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1Wy9wkm57Do3GGHmJUPk2nKgRH577lIKI/preview"
+            }
+            float="left"
+            title="American Agenda (Newsmax) - Fred Keller on unfettered business discretion of duress in trade (minimal viable) product"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “We need to trust that businesses can, ‘do the right things,’ to keep
+          businesses safe at their jobs,”
+          <br />
+          <br />
+          Should be illegal to compile labor to sign for longer than a month a
+          la carte except for sport drafts…
+          <br />
+          “Money may not be the key to happiness, but it is evidently key to
+          mental health,” Dick Morris talking about Gallup poll finding
+          self-described non-excellence in mental health from left to right
+          <br />
+          <br />
+          Force majeure is the right to abortion, finance (invoices & expiring
+          premiums of duress by the former,&nbsp;
+          <a href="https://30under5.us">implausible landlord use</a>) makes
+          living without income impossible
+          <br />
+          <br />
+          Doubling employment to population ratio by watching eachothers’ kids,
+          notwithstanding
+          <br />
+          <br />
+          Liberty doesn’t allow for liberty to fail, but force majeure does
+          <br />
+          <br />
+          Janet Yellen: "Childcare and eldercare increases hours worked,"
+          because you are watching another person's kid
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1o8ocuvUejP59ZUOo322DbqV-zDw6fm_W/preview"
+            }
+            float="right"
+            title="National Report (Newsmax) - GOP elder on inflation by lender/landlord work deficit only"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Jerome Powell: "Brisk pace of wage inflation," is inflation, as is
+          home and bond prices, but gini nor Powell counts it as as intermediate
+          labor
+          <br />
+          <br />
+          “Let the private sector grow the economy, not government.” While
+          supporting broadband and bridge toll rent-seeking instead of
+          target-margin and jury-permitting upon microeconomic perfect
+          equilibrium (infinite producers) emulated & private accrual (invoices)
+          & false bid pools (expiring claims non-concurrentable nor rollover
+          insurance)
+          <br />
+          <br />
+          friends and family discount should be illegal like&nbsp;
+          <a href="https://humanharvest.info">hung</a>-jury-business-permits
+          <h1 style={{ fontSize: "24px" }}>
+            $3k/year/person, $8/day/person -3/2020
+          </h1>
+          80k/yr 216/day missing children,&nbsp;
+          <a href="https://login.gov">forever</a>
+          {/**https://nationalsecuritycasino.com */}
+          <br />
+          <br />
+          To boycott credit, or even provide the option in what is assumed to be
+          infinite for pareto efficiency equillibrium of labor-based-demand, and
+          tag transactioned for accounting software and congress for
+          jury-based-free-rider-immutable and
+          jury-conviction/-business-permit-duress-beyond-mvp designation, by
+          $75/mo to mastercard api and&nbsp;
+          <a href="https://github.com/NickCarducci/mastercard-backbank/blob/main/src/index.mjs">
+            $30/mo
+          </a>
+          &nbsp;serverless node.js (making AST ={">"} esm for webworker $5/mo)
+          <br />
+          <br />
+          presenting options to buy sold on down payments and estimates on&nbsp;
+          <a href="https://scopes.cc">intermediate materials and labor</a>,
+          durable goods being public parks
+          <br />
+          <br />
+          Rent-seeking operating costable is susceptible to market communism vs
+          free market communism or Marxist Communism
+          <br />
+          <br />
+          “Major economic downturn,” Rudy, every number you cite is a good thing
+          to go down
+          <br />
+          <h2>
+            gdp/down 11/1 is not consumers nor purchases, rent seekers to the
+            left and right, the latter if private&nbsp;
+            <span role="img" aria-label="squirrel bottom-left white-circle">
+              🐿↙️⚪️
+            </span>
+          </h2>
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1n77U9ifqOLDhXsy1styK3l6VyEjWix4f/preview"
+            }
+            float="right"
+            title="Daily Wire - Biden and Walmart Ceo on credit as income"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Utility open source copyright, consulting isn’t an own-able trade
+          until wireframe
+          <br />
+          <br />
+          Not emergency if delayed, not bona fide if impossibly-foreseeable
+          <br />
+          <h2>
+            <span style={{ fontSize: "24px" }}>gdp is price to hours</span>, the
+            better of output productivity is the very opposite (price-deflation
+            per hour), let alone an amalgamation of apples and oranges: to count
+            this spends is as to count withdrawals and deposits by certificates
+            on the market
+          </h2>
+          Who is responsible for the high tuitions we face? If Dick Morris says
+          anything other than debt emitting capacity beyond settled supply and
+          demand of capital, not accrual (counterfeit-contracts, compounding
+          before consumer or as medium, collective bargain fallacy outlays max
+          profit royalty false bid pool)
+          <br />
+          More administration to students at Yale, just dumping content (JDC)
+          <br />
+          <br />
+          Don’t invest in small shiz (
+          <a
+            href="https://saverparty.xyz"
+            style={{
+              backgroundColor: "rgba(200,100,150,.5)"
+            }}
+          >
+            pre
+          </a>
+          )
+          <br />
+          fuck it, going to counterfeit this bentley
+          <br />
+          <br />
+          You need to mandate freedom, infinite producers working out
+          oligopolies and industry-precedence-interest and save-face is just an
+          assumption
+          <br />
+          <br />
+          Opposition to the following is the plural majority, in presidential
+          elections, and simple, in gubernatorial
+          <br />
+          Human Resources and management is for Democrats/Republicans to share
+          corporate profits
+          <br />
+          <h2 style={{ fontSize: "24px" }}>
+            isolate your IP and buying power&nbsp;outlay corporate profit,
+            today!&nbsp;╲⎝⧹ ( ͡° ͜ʖ ͡°) ⎠╱
+            <span style={{ fontWeight: "normal" }}>
+              (good for consumers by comparative advantage is business by labor,
+              as opposed to gov/"commercial"-banks/credit-"unions" colective and
+              non-concurrentable (in settlement or amortization), unless the
+              utility of design and discovery broadness is free rider mutable)
+            </span>
+          </h2>
+          unless concurrentable units, then is collective bargaining
+          (rollover-insurance)
+          <br />
+          Believe me, I want you to be prejudice, for argument’s sake
+          <br />
+          <h2>
+            <a href="https://carducci.us">Duress</a>&nbsp;
+            <a href="https://login.gov">to dance</a>&nbsp;
+            <a href="https://www.fbi.gov/file-repository/2015-ncic-missing-person-and-unidentified-person-statistics.pdf/view">
+              and alimony
+            </a>
+          </h2>
+          if you put profits (unsettled rents, collective bargaining escrow)
+          over labor, you aren't conservative. stop saying, "marx teaches about
+          men having sex with boys" {/**cheryl chumley */} and just boycott
+          credit as income
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1ZVrPziSu1QaGD3rfR830gIY9nc28h8hp/preview"
+            }
+            float="left"
+            title="The Count (Newsmax) - Logan Raddick on socialism and conservativism, profits and microeconomic theory"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “How socialists are infiltrating and conservatives&nbsp;
+          <a href="https://2052.live">come to the rescue</a>”
+          <br />
+          <br />
+          The oil pipeline wouldn’t have helped unless it was a collective
+          bargain by having no operating costs payable to contractors, but it
+          has them. Such a free rider mutable operation (not sewage police
+          lawsuits which cannot be stopped a la carte, immediately) is like
+          bridge-tolls target marginable because it has operating costs and
+          allowing government to free rider mutable tax 60%, 10-40% debt service
+          and 40-50% debt spend. The left and right wing media wish for the
+          government to rent-seek under the auspices of potentially-fortuitous
+          consumer-surrogate operation
+          <br />
+          <br />
+          “I’ll tell you my plan for a little money, do your job,” solicits free
+          rider&nbsp;<a href="https://truncatedsalestax.com">immutable</a>
+          &nbsp;sewage police lawsuits
+          <br />
+          <br />
+          <h2>
+            verdicts from capacity of false bid pools is very much of third
+            party beneficiary standing to forbid, reverse and sit on jury (now
+            tort-reform ideas are cause for removal from the balance of the
+            jury)
+          </h2>
+          "you tax gm you're gonna pay for it when you buy a truck," phil _;
+          unless we outlay profits today, traditional tax is merely money for
+          same intermediate good labor and material in supply chain without
+          laundered brought forward demand backfilled by saver money 40-50% (97%
+          amortized) for 1/4 pensions, 1/4 premiums expiring uselessly, 1/4
+          pentagon, 10-40% debt-service fed-state
+          <br />
+          <br />
+          “Capital income penalties small biz,” sounds like gov is just getting
+          in on the deal. Only sewage police lawsuits is free rider immutable,
+          all else is gentrification by wall st or gov, mostly wall st is new
+          debt by 60/40. pipelines/bridge-tolls can target marget private
+          consumer surrogate, be it investment bank as is equity, or&nbsp;
+          <a href="https://vaults.biz">
+            max profit royalty by p2p as is non-concurrentable
+          </a>
+          &nbsp;false bid pool otherwise, on infinite producer reasoning as a
+          STATED ASSUMPTION amongst finite producers and even demand not
+          exclusively labor, but profiteers
+          <h2>free rider mutable tax and 40% debt spending</h2>
+          <br />
+          <br />
+          "donating" free rider mutable when you can ban invoices, implausible
+          landlord use and false bid pools, is merely r&d monopsony and
+          grentrification like colonization by slave by proxy-collateral kept in
+          repo-cycle purposefully and not for trade without duress beyond
+          jury-for-business permitting minimal viable product, or else illegal,
+          at least not efficient toward microeconomic reasoning of infinite
+          producers in a finite producer reality. Actually like pick up a shovel
+          <br />
+          <br />
+          300/day, business to conduct drilling is usually bankrupt and keep
+          down payments or operating and kept down payments of useless
+          bid-to-ask brought forward demand for the same good, but without
+          waiting for consumer in p2p, equity in investment bank, or
+          consumer-surrogate target-margin in government regulation, as a
+          perpetual motion machine without operational cost can never a free
+          rider mutable tax nor 40-50% saver-money (amortized 97%) make
+          <br />
+          <br />
+          Don’t fucking speak about microeconomics you bastard, fucking die
+          <br />
+          <br />
+          "corporations provide the wages, as long as the profits are doing
+          well."
+          <br />
+          "workfare," but I was a bartender, now injured, and you assume so much
+          of employers to put up with me and my needs
+          <br />
+          <br />
+          you're a fucking market communist larry, by corporate, collective
+          bargaining a business account for what? to prohibit shareholders from
+          splitting off and competing?
+          <h2>
+            "it's an inflationary boom in consumer spending, wages and salaries,
+            and unfortunately inflation. inflation is the problem, not
+            recession. Progressives love employment, but not the employers and
+            profitable businesses with wages higher earned by productivity,
+            plants to make the worker better[ saved up], you cant gave
+            capitalism, without capital ... [blah blah blah ]long term growth.
+            Short run inflation leads to great happiness, long term great
+            recessions”
+          </h2>
+          "No evidence of price gouging," Larry Kudlow says, “to replace demand
+          of more money with more supply,” what the fuck does that mean. you can
+          reverse the money to checking without accrual $88t (debt, counterfeit
+          laundered third party beneficiary) to $2t cash
+          <br />
+          Is false bid pools, implausible landlord use lender work deficit
+          invoices and repo-cycle of down payments kept purposefully-impossible
+          force majeure of options to buy on estimates or expiring claims and
+          calling the monthly deductible a savings or business, much less
+          competing with consumers intent of non-compete drafts of
+          intermediate-materials-and-labor of grandiose scope everchanging until
+          excrow outlaid and happiness the onus of the employer, that is price
+          gouging
+          <br />
+          Don’t fucking speak about microeconomics you bastard fucking die
+          <br />
+          <br />
+          <a href="https://www.latimes.com/politics/la-pol-ca-wrongful-convicted-restitution-victims-compensation-20190523-story.html">
+            120000
+          </a>
+          &nbsp;compensated by further than capacity without state as victim nor
+          incriminating until you license for no other productive reason than
+          craft beer hegemony for false imprisonment but everyone in&nbsp;
+          <a href="https://www.prisonpolicy.org/reports/pie2020.html">jail</a>
+          &nbsp;is moot when findings pay in net loss bonds rather than
+          truncated sales tax
+          <h2>
+            Young people are&nbsp;
+            <a href="https://fred.stlouisfed.org/graph/?g=FSwQ">sadder</a>
+            &nbsp;because we are workign twice as much as you,&nbsp;
+            <a href="https://fred.stlouisfed.org/graph/?g=Gkvt">5 times</a>
+            &nbsp;per worker, psychologist agenda saveface isn't
+            biological-malformity and shouldn't be healed by anything but the
+            source being exogenous in the economy
+          </h2>
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1lckqzSZheK66Si1TASlHL-qSUB8NaNBd/preview"
+            }
+            float="right"
+            title="Saturday Report (Newsmax) - Scott Walker and Mark Halpern on collective bargaining with escrow"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Private banking or public banking is as insignificant as private
+          insurance is to public, except for the 40-50% debt-spending and free
+          rider mutable tax for lender-work-deficit retardation by public, still
+          false bid pools & net loss for not being concurrentable in outlays,
+          compounded penalties laundered from your consumers unbeknownst to them
+          starting when you forge the counterfeiters’ lien. Max profit royalty
+          can literally ‘replace’ compounding as a measure of equity, “without
+          dilution” or share-split
+          <br />
+          <br />
+          $88t debt $2t cash, Kilmeade clicked me, is bad,” “you cannot have,”
+          bo Snerdley, by what grounds other than the law, or natural and
+          comparative law, as to at least prevent nuclear dilemma but at best
+          comparative advantage lubed. “Are we killing the durable symbiotic
+          earth by killing?” Not evidently. ”In order to maintain life, life
+          must be taken.” In trade, that is not true. Life doesn’t require the
+          taking of life
+          <br />
+          <br />
+          <h2>
+            "liberalism is in fact a mental disorder, whenever you see something
+            mad in society, just plug it in, and you have your answer."
+          </h2>
+          <br />
+          "Where is the money going?" get off tv
+          <br />
+          you might be rich and dumb, but you're criminal and deserve to be in
+          jail for advocating invoices and false bid pools impossible and net
+          loss
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.nofred
+                ? ""
+                : "https://drive.google.com/file/d/1Ztv54V2RQrgijxfdY38S7bqP0cdFwiHZ/preview"
+            }
+            float="left"
+            title="The Count (Newsmax) - Logan Raddick and radio facc Mike Savage on young looters"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            Unfair, or cheating and impossible? useless price inelasticity to
+            boot, for same intermediate-durables-material-and-labor-on-ask, half
+            as many unemployed per person and 5x hours per worker since when you
+            were a kid, and 65+ are half continuing claims. get back to work old
+            man
+            <span style={{ fontSize: "9px" }}>
+              , 20x/person&nbsp;
+              <a href="https://fred.stlouisfed.org/graph/?g=FSwQ">55+</a>
+              /millennial rental-unit-income, 73% 50+ pro-AARP false bid pool
+            </span>
+          </h2>
+          “The greater the freedom[ - corporate profits withheld, - repo-cycle,
+          - 60/40 free rider mutable tax/ debt spending useless
+          price-inelasticity of bid-to-ask non-target-margin networks finite
+          producer public utility with operating costs, and therefore,
+          opportunity for profit, outlaid right away, or collective bargaining a
+          checking account... where collective bargaining loses its boost, but
+          non-integral partial derivative momentum, - hung-jury-permits for
+          business, - competing with consumer intent deduced compelling us to
+          cap rents at 5 units or 30&nbsp;<a href="https://30under5.us">days</a>
+          &nbsp; to prohibit, - time-based-debt or pay-day loans, especially
+          when outlays aren't concurrentable in a bank that which should remain
+          in equity, - false bid pools by hours of labor beyond p2p &&
+          industry-type, - closed-source-licensure, -
+          landlord-/lender-work-deficit, - working-age-deficit], the greater the
+          wealth”
+          <br />
+          <br />
+          “Guns adds to violence” but it is also the only way to defend
+          ourselves from incarceration net loss bond profit
+          <br />
+          <br />
+          the far right is anti-labor, pro-corporate profit. the far left is
+          government gentrification
+          <br />
+          <br />
+          it is not better to be&nbsp;
+          <a href="https://humanharvest.info">vaccinated</a>&nbsp;than not,
+          cases vs asymptomatic-testing is the fallacy doctors' save-face, and
+          ms matches paralytic polio, excess antibodies or fetal cell lines are
+          dysregulative and gross
+          <br />
+          Access to medicine isn't granted by free rider mutable tax 60%,
+          debt-spending, and closed-source-licensure, more demand by money or
+          government r&d monopsony is only ever harmful. more demand by working
+          age cohort size is efficient per hour of work
+          <br />
+          "Future is affordable," alt fin like max profit royalties and
+          recurring revenue
+          <br />
+          We surely cannot pay back the debts
+          <br />
+          relying on&nbsp;<a href="https://billbiden.org">"key investments"</a>
+          &nbsp;by more money for the same intermediate-goods-material-and-labor
+          is useless price-inelasticity from bid-to-ask
+          <br />
+          <br />
+          <h2>what about new business? child tax credit enslaves children</h2>
+          "sba and disaster programs," are just prohibiting this price-change by
+          expiring premiums, or non-rollover insurance, the definition of
+          embezzling with the stated intent to expire, but abetting invoices
+          that are impossible but instilled by prisoners' dilemma or more
+          accurately, nuclear dilemma
+          <Cable
+            style={{ width: "100%", height: "570px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.nofred
+                ? ""
+                : "https://fred.stlouisfed.org/graph/graph-landing.php?g=JiC5&width=670&height=475"
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=JiC5"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          “180% more likely to prematurely die if depressed,” a.k.a. "I can't
+          wait for my Haitian wife! Stop the working age from taking our
+          durable-good jobs! It is a bipartisan, non-controversial issue!"
+          <br />
+          <br />
+          "Consumers feeling good, a lot of 'employment available,' a lot of
+          'savings,' Mark Zaney, rater of appraiser of bonds beyond third party
+          beneficiary when compounded and laundered from your customers and
+          employers unbeknownst and for useless price-inelasticity of bid-to-ask
+          to boot. it is a sure thing to keep down payments upon repo-cycle or
+          else share-split of park-dollar without consent & force by free rider
+          mutable and useless price-inelasticity of bid-to-ask reason, instead
+          of forcing labor in supply to lower our price/hours
+          <br />
+          <br />
+          <h2>a net loss just like dancing over durable-good production</h2>
+          whores laughing when gdp/down is 11/1
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1S4hVWe_uOdc9o6ej134RSLs3nzx5bHKo/preview"
+            }
+            float="right"
+            title="Chris Salcedo show on Newsmax with Carl Higbie on Thanksgiving-friday 2021 with tech lead vaxx detractor in 30% antivaxx cohort (with enough savings to retire, it seems)"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            muh sewage police lawsuits can be solved with reverse don't cancel,
+            truncated sales tax, and login.gov.&nbsp;
+            <span
+              style={{
+                fontSize: "9px"
+              }}
+            >
+              consumer surrogate target margin (& jury for business) for public
+              utility all else in automatic tolls & pipe usage
+            </span>
+          </h2>
+          “You don’t have a ton of rights, working for the government, but,”
+          <br />
+          <br />
+          "something smells that new cases from nothing, I don't want to be
+          conspiratorial"
+          <h2>
+            Not all common sense detractors are idiots, sometimes pioneers
+          </h2>
+          <br />
+          "ticketmaster and vividseats, under $50," but credit isn't a dollar.
+          $4t/yr fed spend 40% credit doesn't become $2t checking
+          (currencyComponentOfM1)
+          <br />
+          <br />
+          Disability can be claimed without assumption of new work or with
+          mental-diagnosis. This is fraudulent without physical evidence of at
+          least a brain malformity!
+          <br />
+          <br />
+          Hey Nantucket guy: Talking to the fed about inflation, whom don’t care
+          about lender work deficit, is retarded
+          <br />
+          <br />
+          Natural schedule tendencies (law without law) does not a reason by
+          infinite producers in a finite producer reality make
+          <br />
+          <br />
+          <h2>To outlaw laws or to be an outlaw</h2>
+          As a ticket-seller, I have to make my own paytech to boycott credit
+          (useless price inelasticity of bid-to-ask beyond natural-capacity)
+          <br />
+          <br />
+          “Desantis has [golf ]balls, and he is willing to sell it to you, he is
+          doing it right” - Brian Mudd
+          <br />
+          <h2>
+            bailing out my mothers' collateralized and&nbsp;
+            <a href="https://nationalsecuritycasino.com">state-victimized</a>
+            &nbsp;debts
+          </h2>
+          <Cable
+            style={{ width: "100%", height: "400px", maxHeight: "30vw" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1CtQw7G9g2Il7v-7A43gV9g-yGUCYBfNg/preview"
+            }
+            float="left"
+            title="SSA disability and insurance findings favorable for opinions on mental-accumen rather than physical ability without pain and malformity"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ width: "100%", height: "400px", maxHeight: "30vw" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1-JP5ChdST5Gq6JO1urDm8M3UWjATP87u/preview"
+            }
+            float="right"
+            title="'When I hear some colored folks say they wish the old slavery times back, I just knows they is lazy. They don't want any responsibility.' - https://www.yumpu.com/en/document/read/18596138/slave-narratives-library-of-congress/41"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            The messy hair disability from social security; slander to bailout
+            lenders and borrowers, instead of amortizing and reverse
+            debt:cash*income thru hsitory
+          </h2>
+          "how much is it going to cost tax payers to keep paying for these
+          boosters?" Curtis Sliwa asks. Dick Morris says, "pay parents for
+          taking care of children," while charging 11x capacity, the share-split
+          even harms the new entrants to the economy, by allowing
+          landlord-lender-and-loitering-borrower-work-deficit to permeate,
+          instead of forcing settlement
+          <br />
+          <br />
+          Curtis Sliwa: “Unfortunately, the shot was not lethal,” after a gun
+          fight erupted from asking for the guy to take his hands out of his
+          pockets
+          <br />
+          <br />
+          <h2>
+            I have a fucking hole in my leg, "doctors" racketeering with
+            "opinions" and malintent
+          </h2>
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/f0jgbxbd61U"
+            }
+            float="right"
+            title="Household duress beyond jury-permit, doctor opinions begotten by indebted with collateral SEC boomer"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Consumer surrogate & margin-target, the right wants to rent seek for
+          government bailout because they want to keep living in the unreality
+          of infinite producers
+          <br />
+          Truncated sales tax can close prisons whom make money on net loss by
+          bonds
+          <br />
+          I’m still appealing and I want to use it to another place
+          <br />
+          <br />
+          Communist against invoices, false bid pools & hung-jury-permits
+          <br />
+          Paid family leave forced & ppp prohibits labor-competition, just to
+          bailout landlord-work-deficit
+          <br />
+          <h2>
+            it's your honor, your honor&nbsp;
+            <a
+              href="https://carducci.us"
+              style={{
+                fontSize: "9px"
+              }}
+            >
+              stay in business, without business
+            </a>
+            !
+          </h2>
+          The reserve profit to the treasury is solidifying for the dollar, but
+          upon invoiced and false bid pool laundering, and&nbsp;
+          <a href="https://truncatedsalestax.com">
+            slandering upon those who say so
+          </a>
+          {/**https://www.cdc.gov/flu/resource-center/freeresources/graphics/infographic-lab-work.htm */}
+          <h2>
+            Trust statisticians, not doctors;Cases vs asymptomatic testing and
+            2k/yr&nbsp;
+            <a href="https://www.cdc.gov/flu/about/professionals/antigenic.htm">
+              discovered
+            </a>
+            &nbsp;
+            <span style={{ fontSize: "9px" }}>
+              <a
+                style={{ fontSize: "9px" }}
+                href="https://www.cdc.gov/flu/swineflu/keyfacts-variant.htm"
+              >
+                All cartoons
+              </a>
+              , testing 1 at a time
+            </span>
+          </h2>
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1Fllv6JQSJ6VwMOGVYA1Qgj3x28lVXnNu/preview"
+            }
+            float="left"
+            title="John Bachmann Now - Christian Whiton with Jo Pinion on stock prices and virus"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “Activities but not accomplishments” Christian Whiton paraphrasing
+          Carly Fiorina, measured by accrual and false bid pools is ignorant of
+          per hour price-deflation tech-advancement as output
+          <br />
+          <br />
+          "exposed but not infected"
+          <br />
+          you have never actually infected with virus
+          <br />
+          <h2>
+            <a href="https://humanharvest.info">cases</a>&nbsp;vs
+            asymptomatic-testing
+          </h2>
+          Draining the swamp is not ppp trust-building and prohibiting
+          labor-competition in paid family leave, etc.
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/18i2_w7orlcepOuvQJNWNymhfmS8aQogH/preview"
+            }
+            float="right"
+            title="John Bachmann Now - Christian Whiton with Jo Pinion on cash we currently don't need"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Jo Pinion: "Flood with cash that we currently don't need," we never do
+          need it afro-tool, nor did we to&nbsp;
+          <a href="https://30under5.us">keep people in homes</a>. the only
+          free-rider-mutable operations beyond 10-40% fed-state debt-service and
+          compounded over work, is sewage police lawsuits. atuomatic tolls and
+          oil-pipes can have private-monetary-investors (consumer-surrogates)
+          target margined (& jury for business) for infinite producer reason in
+          a finite producer reality
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/11kur33tU1ONrqyqb8ZwtI_oQl84lidT7/preview"
+            }
+            float="left"
+            title="National Report -Jenna Ellis on Communism, Socialism, Democracy and the market-communist policies of tha last century"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “Their own communist agenda beyond what the American people want, and
+          what they mean by best is the Biden socialist, and …their own
+          globalist agenda. Until republicans come home to actual conservatives,
+          they will lose.” You need to realize that welfare is price-elastic and
+          not social at all. Communist is the method to use the jury over the
+          industry-interest 1/12 share
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1i1uA1WQOFb-9R1EXgpiaQQgjKNKfyG24/preview"
+            }
+            float="right"
+            title="National Report -Jessse Jane Duff on continuing claims as a measure of unemployment to population"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          We will not see pre-covid employment rate until 2024, 2m continuing
+          claims is half 65+! Lazy bitch
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1f2_4x3O16OCPQZQ7Gtnjtde0X83W9CTM/preview"
+            }
+            float="left"
+            title="National Report - Bobby Eberle, Ph.D. 13 Minute News Hour on cash flow and burn"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Day to day operating costs involved in having a family doesn’t mean
+          free rider mutable tax 60%, 40% share-split to bailout
+          <br />
+          <br />
+          Is GDP mostly home "sales"? If you look at the largest expense over
+          time as opposed to in gdp, since its&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=JicW">growth</a>
+          &nbsp;rate is so substantial, even gdp2% (nearly with population) can
+          expound (see &nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=G8nU">below</a>) over a
+          lifetime (of work), greater costs towards their propensity to
+          spend/work
+          <Cable
+            style={{ width: "100%", height: "570px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.nofred
+                ? ""
+                : "https://fred.stlouisfed.org/graph/graph-landing.php?g=Jidp&width=670&height=475"
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=Jidp"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <h2>
+            Where is the&nbsp;
+            <a href="https://nj.gov/state/elections/election-information-ballots-cast.shtml">
+              2021-official-general-voter-turnout.pdf
+            </a>
+            ?
+          </h2>
+          “Over on the democratic side of&nbsp;
+          <a href="https://nj.gov/state/elections/assets/pdf/election-results/2021/2021-primary-election-voter-turnout.pdf">
+            the party
+          </a>
+          ,” Burt Jones slips on the &nbsp;
+          <a href="https://nj.gov/state/elections/assets/pdf/election-results/2020/2020-official-general-voter-turnout.pdf">
+            bipartisans
+          </a>
+          &nbsp;vs savers/socialists who want to keep finance out of business
+          and amortize instead of keep down payments upon repo-cycle
+          <br />
+          <h2>
+            When supply is&nbsp;
+            <a href="https://fred.stlouisfed.org/graph/?g=H5XB">working</a>
+            &nbsp;age and demand is money
+          </h2>
+          “When demand&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=Gkvt">overwhelms</a>
+          &nbsp;supply, prices rise,” implies there are suppliers that aren’t
+          demand, which implies labor is not exclusively demand (if demand is
+          not retired by&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=FSwQ">accrual</a>
+          &nbsp;and expring-premiums, instead of work)
+          <br />
+          <h2>
+            we work 10x more per home, that is 5x more per person and 2x more
+            workers per person, than 1970
+          </h2>
+          <br />
+          "It’s all going to come down to how that money builds the&nbsp;
+          <a href="https://www.ezpassnj.com/">bridge</a>&nbsp;or the road;" Need
+          consumer surrogate with target margins (& jury for business), not
+          rent-seeking operational costs, free rider mutable 60% tax nor 40%
+          debt-spending 10-
+          <a href="https://www.njta.com/media/5688/financial-summary-through-september-2020.pdf">
+            40%
+          </a>
+          &nbsp;debt-service
+          <br />
+          <h2>
+            Radical market communists, marxist communists/socialists want:
+          </h2>
+          <br />
+          Corporate profits do not Trickle down as outlays, fixed income was
+          forced in 1937 (war bond investment 1933 after years of ads) and they
+          act like our debts that compels such is impossible to reverse,
+          corporate profits to be outlaid and cap rent 5 units or 30 days for
+          force market liquidity and encapulate labor as demand
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1mcLkl7-8JG19T8xZX51PlMSlUbemLqii/preview"
+            }
+            float="left"
+            title="Cortes & Pellegrino - Seb Gorka on Trumps' electorate-base, & his wealth"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          This "conservative" says valuation is qualifying as cash
+          <br />
+          “Trump is a billionaire from Manhattan.”
+          <br />
+          "The bulk of his fortune remains tied up in New York City real
+          estate."
+          <br />
+          <br />
+          <Cable
+            style={{
+              height: "240px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1E0017YZhpWFZtQA7ifaI7DoVNGK9P01R/preview"
+            }
+            float="right"
+            title="GBNews - tomorrow's news tonight on Thanksgiving 2021 (Nick Dixon, Leon Kuberman, Dominic Frisby)"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “Fare-dodging is Libertarian,” to Brits because gov and corps are the
+          same or actually it is… why is port not consumer-surrogate with
+          target-margin (& jury for business) for infinite producer reason and
+          finite producer reality
+          <br />
+          <br />
+          Candice Owens, not even cops can shoot a burgular. A knife in the car
+          is a wide-line you don't even want to be on. If cops are malfeasant,
+          reason can permit some open-carry-stepping, though I would prefer you
+          use luggage
+          <br />
+          <Cable
+            style={{
+              height: "240px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1e8eu_FVDe-lm2ZX3iqihPiBiG4emKu5e/preview"
+            }
+            float="left"
+            title="GBNews - Nigel Farage best of on Thanksgiving 2021"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>brilliant!</h2>
+          “It’s not mental illness, it is laziness”
+          <br />
+          “Don’t surrender, take the opportunity, work for it.” That is a trade,
+          laundering-profits-under-duress is victimization, surrendering is
+          inherent in that, just as much as duress yourself can withstand the
+          trade
+          <br />
+          <br />
+          real communism is enforcing-socialism, that is pareto-efficient and
+          &nbsp;
+          <a href="https://constitutioncenter.org/interactive-constitution/preamble">
+            tranquil
+          </a>
+          <h2>
+            please, crawl into a deep hole; there is nothing social about it
+          </h2>
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1OQ6xsdVvyd9kcWYTUs5TepIMHIBNNvFV/preview"
+            }
+            float="right"
+            title="Spicer & co - Pilgrim guy"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Socialism is to give every labor the means of production (exclusively
+          demand), not pay everyone not to work! (40% share-split, 60% free
+          rider mutable tax, for the same goods of money from people that
+          weren't necessarily auctioning...)
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1govE6gKLA3ONVhWRpu5FEiLucuPVmIUT/preview"
+            }
+            float="left"
+            title="Spicer & co - David Kustoff 'social spending' share-split and 60% free rider mutable tax"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Tyranny by majority and minority, only jury suffice without subjective
+          stigma of the 1/12 detractor(s)
+          <br />
+          <br />
+          Stop calling it social spending. Even welfare is at best share split
+          for the same goods, 60% free rider mutable tax
+          <br />
+          <br />
+          don't trade a collective bargain for a government rent-seeken deal,
+          instead of target-margin consumer-surrogate, and max profit royalty to
+          p2p investment (not bank for equity-concurrentable) only
+          <br />
+          <br />
+          "they will continue voting democrat [and republican ]for the rest of
+          their lives because they are getting a check[ but do not realize it is
+          share split and capping rent at 5 units/30 days, reversing debt to
+          what would be priced without, banning invoives/expiring-premiums and
+          truncated sales tax for sewage police lawsuits]."
+          <h2>
+            at home disability care when mental health is considered a
+            disabiliity and on the forefront of economic theory or victim of
+            false bid pools and accrual means mentally-unhealthy
+          </h2>
+          giving to anyone with a kid isn't welfare it is parental trust
+          buiding, gerontocracy like they keep us out of work and in school
+          while they profit off the bonds 40% debt spending (50% in states)
+          <br />
+          <h2>“We enjoy an incredible inheritance.” - Stephen Cortes</h2>
+          <h2>
+            annual pce to gdp (left), mortgage debt, federal debt, (v2 - (GDP /
+            (m2 - currencyComponentOfM1))) * currencyComponentOfM1 (right)
+          </h2>
+          <Cable
+            style={{ width: "100%", height: "570px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.nofred
+                ? ""
+                : "https://fred.stlouisfed.org/graph/graph-landing.php?g=KalW&width=670&height=475"
+              // JgMC,G8nU
+            }
+            float="left"
+            title="https://fred.stlouisfed.org/graph/?g=KalW"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Intermediate goods are counted twice even though it is the same
+          product, in the labor and the final sale, when going thru management
+          <br />
+          <br />
+          hours worked would lower price, and tax payers can only be called that
+          when they pay 100% of monopsony. rot in hell&nbsp;
+          <a href="https://foiegras.life">dominic carter</a>
+          <br />
+          Can you not say tax payer because deficit is 40% normally uh $4t/yr,
+          but wall st is 60/40 gov
+          <br />
+          <br />
+          Tax payers are on vacation. Savers pay in price inelasticity of
+          bid-to-ask now 11x accrual, and 44x&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=JgKF">compounded</a>,
+          but since 3/2020 the government are trying to bailout, the second
+          phase of trickle down with debt slavery by proxy collateral
+          repossessed and down payments kept, options to buy upon estimates of
+          intermediate labor and material unbought (settled) at all
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1fkbmhkzsC9O_5SwDBOyE58yifRCqR9u0/preview"
+            }
+            float="left"
+            title="American Agenda - Thomas J Philipson essentially racketeering economics and money/population growth as productivity instead of price-deflation per hour over time"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          "a&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=JgJ8">recession</a>
+          &nbsp;of production of output, and an increase of disposable income
+          and government stimulus. more-, better-than any boom in the past. it
+          will happen again if we get this program thru"
+          <br />
+          <br />
+          “a lot of rhetoric coming out for sure, if wages double and prices
+          double you are pretty much[ as] well off” “business friendly expanding
+          supply is downward pressure of prices” only if supply is alchemy less
+          elastic money or accrual…
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1-AEb73Y9aHnq2LcwUKE7dL0x5MbM7N8L/preview"
+            }
+            float="right"
+            title="American Agenda - Betsy Brantner Smith truncated sales tax and reverse"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            reverse don't cancel,&nbsp;
+            <a href="https://truncatedsalestax.com">then</a>...
+          </h2>
+          “Police are not the problem, criminals are the problem,” unless the
+          laws are criminal by contradicting for fence-sitting and trial
+          malfeasance over caste solutions, or comparatively discriminating
+          innocence. she literally makes profit on net loss bonds, false bid
+          pools & closed source licensure
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1PlrEygGMs5WDyBE1gNhCDGYA09nYSou6/preview"
+            }
+            float="left"
+            title="American Agenda - Rep Alex Mooney"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          recessions and inflation is an oxymoron. accrual nor duress beyond mvp
+          isn't free market, the private is 60/40 debt to gov share
+          <br />
+          free-rider-mutable tax & 40% debt-spending
+          <h2>
+            rent-seeking pipelines & broadband instead of consumer surrogate
+          </h2>
+          Push for socialism is terrible for my state, calling it
+          infrastructure, they are “clever” in naming of things. We don’t want
+          socialism. Then call it “market-communism."
+          <br />
+          <br />
+          <Cable
+            style={{
+              height: "240px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1_DLj_PnDTGuRNt4LDyHnP0zmpzuHBCm3/preview"
+            }
+            float="right"
+            title="GBNews - Green Party Researcher Laurie Laybourn-Langton on nationalizing rent-seeking"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          "Substantial discount to market rates," gdp/down =
+          <a href="https://youtu.be/OqgUxnqc3AM">11x</a>&nbsp;(44x by compound)
+          isn’t a market rate is it? When&nbsp;
+          <a href="https://fb.watch/9vBobshL3S/">money</a>&nbsp;market is given
+          green credence&nbsp;
+          <span role="img" aria-label="reverse (don't cancel) emoji">
+            🔄
+          </span>
+          <br />
+          <br />
+          “Why should we be making money on things people need?” If it has
+          operational costs and not a perpetual motion machine, it is making
+          profits outlaid immediately, or not. Target margin consumer surrogate
+          instead of free rider mutable tax nor 40% debt-spending, embossing the
+          lender-work-deficit
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1nsoqkKhaaXFV9ncUNSvBqUZ060iD3ZZ4/preview"
+            }
+            float="left"
+            title="Newsmax attorney speaks on Ahmaud Arbery jury"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “Followed the law, did their job, and nothing was tainted.” Those can
+          be oxymorons, law being precedence by comparative innocent or
+          countervailing law. For instance, I have to boycott credit by making
+          by own paytech as a ticket-seller, I've failed economics courses over
+          disagreeing and false imprisonment is imbued by poor economic-policies
+          of money chasing the same goods and exhasberating the working-class
+          from lender-/landlord-work-deficit. just max profit royalty p2p and
+          cap rent at 5 units / 30 days
+          <br />
+          <br />
+          <Cable
+            style={{
+              height: "240px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1DVQrJHoJkhRuxXsmoSokB5MNfjDPCxjp/preview"
+            }
+            float="right"
+            title="GBNews - William Clouston on social-wage and immigration"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          "Women and children vs fit-young men." not only sacrificing working
+          age but capturing wives
+          <br />
+          <br />
+          People are naturally good, the system causes us to nuclear dilemma and
+          compete with consumers (jury-for-business, emulate Pareto-efficiency
+          with target-margin, nor corporate action except outlay profits
+          immediately (501c, but dissolution to universe rather than state)).
+          Charlie Kirk, "the worst thing a person can do is&nbsp;
+          <a href="https://monthlyreview.org/2020/07/01/marx-and-slavery/#:~:text=It%20is%20worth%20noting">
+            enslave
+          </a>
+          &nbsp;another human life. Literally own[, not just launder profits
+          from nor emit duress in finite producer reality, and infinite producer
+          reason, against third party beneficiary standing thru false bid pools
+          (commercial banks, insurance, and investment banks in max profit
+          royalty schedules (alt fin)) and accrual."
+          <br />
+          <h2>bite your tongue off</h2>
+          You really are a nigger, jo pinion, an afro-tool. Not mine.
+          insurances’ false bid "coverage" of non-concurrentables
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1FMro_t_iHrclYMk1Ui68VylNJ6K20QTy/preview"
+            }
+            float="left"
+            title="Reverse, don't bailout new deal nor cancel forbidden by past demand, because prices are by poll"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Central-planning socialist means emulating infinite producers, that’s
+          fine. You cannot have exorbitant margin nor duress discrepancy
+          <br />
+          <br />
+          Wall st/Gov debt spending 40% and free rider mutable tax (ex sewage
+          police lawsuits, truncated sales tax) is
+          market-communist/rent-seeking/outlay-withholding
+          <br />
+          <br />
+          supreme court case disability insurance 2015 work ability: Can’t
+          assume employers, I’ve applied to many remote, sit-down jobs. but I
+          won't take credit as income (is counterfeit)
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1krzfgwYZO5udSDRfLmdfFY_q00WMElAx/preview"
+            }
+            float="right"
+            title="Barney Frank on public insurance over private insurance, like third party beneficiary suspension of malfeasance isn't an option"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <br />
+          like third party beneficiary suspension of malfeasance isn't an
+          option?
+          <h2>poorness=(poverty/equality)</h2>
+          trillion of dollars lowers poverty by bailing out accrued-invoices
+          <br />
+          Amortize the cash:debt*income reversal of the credit-cycle of
+          impossible forclosures with down payments kept, and paid from 40% debt
+          spending, is public insurance instead of premiums expiring like
+          private insurance, not hidden
+          <br />
+          <br />
+          <Cable
+            style={{
+              height: "240px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1wBek-RLholsjwKQN4Z4aQX0ArvBd8LrV/preview"
+            }
+            float="left"
+            title="Social security threat - a century earlier"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “With social security, everything you were going to do someday, is on
+          the calendar.”
+          <br />
+          When the world begins to spin again…
+          <br />
+          <br />
+          Jails (especially with net loss bond and false bid pool profit) are
+          the&nbsp;
+          <a href="https://youtu.be/10kjUOVqk7o">new Jim croe</a>, I don’t have
+          my guns! Nor the ability to be payee of my disability (actual
+          laceration unhealed, not opinion of non-physical&nbsp;
+          <a href="https://humanharvest.info">fact</a>)
+          <br />
+          <h2
+            style={{
+              backgroundColor: "black",
+              color: "white"
+            }}
+          >
+            Can’t reverse per trial, which the state takes over class-solving
+          </h2>
+          <Cable
+            style={{
+              height: "240px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1ku0d_e0LBmS-1-qlqcQv4ya_Uh7fcQcr/preview"
+            }
+            float="right"
+            title="GBNews - Darren McCaffrey interviews a money/person growther"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          Growth of money (certificate on the market without “money-market” in
+          implausible use nor false bid pool form) is elastic, and the growth of
+          jobs without utility by consumer-propensity of bid with demand
+          exclusively labor, is busy-work and useless bid-to-ask inelasticity in
+          the same way.
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1CjFscmbKOshuCib8PUA53LEaMVIRJeMZ/preview"
+            }
+            float="left"
+            title="National Report Thanksgiving and Hanukkah with Bob Sellers - Rabbi Simon Jacobson"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Quality/quantity
+          <br />
+          Spirit/matter
+          <br />
+          <br />
+          How bizarre!
+          <br />
+          <br />
+          Pipeline for rent-seeking and contractor for without target-margin
+          consumer surrogate instead is nothing like a collective bargain in an
+          immediate (as-can-be) escrow written for and of without fraudulent
+          compounding and laundering with consumers in supply chain slighted
+          unbeknowst among finite producers but free to operate on the infinite
+          producer Pareto assumption, in jury-for-business of mvp duress and
+          pricing, generally
+          <br />
+          <br />
+          “Dollar is losing value” it is share split for 10-40% fed-state
+          bond-laundering and 40-50% fed-state debt-spending
+          <h2>
+            “Give you a job,” you aren’t giving a show, it is a trade. “Let me
+            trade you a job.”
+          </h2>
+          Slavery is cheap but the loss of comparative advantage really
+          surmounts by complacency
+          <h2 style={{ backgroundColor: "rgb(150,200,255)", color: "black" }}>
+            “Interests and values”
+          </h2>
+          <br />
+          we (
+          <a href="https://thecollegeinvestor.com/14611/average-net-worth-millennials/">
+            young millennials
+          </a>
+          ) work 10x more for&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=Gkvt">homes</a> and have
+          half as many&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=H5XB">unemployed</a>
+          -to-population, with 20x/person less&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=FSwQ">rental</a>-income
+          than 55+ (controlled-recessions equalizes this)
+          <h2>
+            <a href="https://www.goldmansachs.com/insights/archive/millennials/">
+              Gerontocracy
+            </a>
+            &nbsp;of false bid pools on expiring premiums, 11x &nbsp;
+            <a href="https://fred.stlouisfed.org/graph/?g=Jgn6">accrual</a>
+            -on-collateral kept upon reposession purposefully & impossibly,
+            implausible&nbsp;<a href="https://30under5.us">use</a>
+            &nbsp;rental-income beyond 5 units | 30 days,
+            collectively-bargaining on checking and escrow accounts
+            without&nbsp;
+            <a href="https://3under2.us">reason</a>&nbsp;to withhold&nbsp;
+            <a href="https://vaults.biz">outlay</a>&&nbsp;
+            <a href="https://squatcommune.com">claims</a>,&nbsp;
+            <a href="https://teapharmacy.party">closed-source-licensure</a>,
+            lender-/landlord-work-deficit and working-age-deficit, free rider
+            mutable tax & 40% debt spending, and the fallacy that more money
+            makes working-age less ask-price-gain{/**Matthew Shay */},&nbsp;
+            <a href="https://truncatedsalestax.com">police</a>&nbsp;that make
+            profit by net loss thru bonds and psychologists that make profit by
+            net loss thru false bid pools, general-income investments by
+            investment banks and people for collective bargaining fraud of
+            non-concurrentable schedules of outlays (for insurance, claims or
+            hours of mechanics, doctors, etc.), progresses to place homeless in
+            institutions
+          </h2>
+          my very-real injury, regardless
+          <br />
+          <br />
+          Prisoners’ dilemma rollover insurance false bid pools… said
+          non-rollover before&nbsp;
+          <a href="https://youtu.be/aJEszZK54dw">Krugman</a>&nbsp;(but was
+          after) because it was before&nbsp;
+          <a href="https://youtu.be/ny1HwqaFytg">Carrier</a>/RiverviewMedCtr 13
+          days falsely incarcerated
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/eH6XcnIlCuk"
+            }
+            float="right"
+            title="Disability taken by borrowing loiterer"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <br />
+          The racketeering state would rather trials instead of solve the class
+          <h2>Why would you work against $3k/year/person new debt</h2>
+          “The jury found not not guilty,” still presents necessary but not
+          sufficient
+          <br />
+          <br />
+          It’s impossible to work against debt, so they give disability to the
+          collateralized loan parent, ignoring the unhealed-, deep-laceration
+          from a guard rail near a trail and instead slandering without
+          biological-malformity but an opinion of people with a conflict of
+          interest, the very same fraudulent income that was cited as “bizarre,”
+          and Paul Krugman cites as a “net loss,” false bid pooling non-rollover
+          insurance (expiring premiums are collective bargaining fraud)
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1cDO9mWzpIOzI_xwJaEDLUkIuB8nqMa27/preview"
+            }
+            float="left"
+            title="Will Shatner on insurance false bid pools and collective bargaining fraud"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <br />
+          Eliminate co-pays for no extra cost, for net loss
+          <br />
+          <br />
+          <Cable
+            style={{ height: "350px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1B7L7XghMjQuiG80V7OBSX7c6FPoQCSQS/preview"
+            }
+            float="right"
+            title="Cronus Bill O'Reilly false bid pooling and implausible landlord use intent beyond 5 units or 30 days of auto or units"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “Predictable income. Double digit bonus return,” Bill O’Reilly
+          counterfeiting bid and implausibly-able-to-use rental-units
+          <br />
+          <br />
+          lawfully using their own words against countervailing laws and illegal
+          precedence, racketeering licensing boards in furtherance than merely
+          class resolution for trial like expiring premiums and false bid pool
+          work deficit for monthly deductible & copay (
+          <a href="https://www.ftc.gov/sites/default/files/documents/statutes/credit-card-accountability-responsibility-and-disclosure-act-2009-credit-card-act/credit-card-pub-l-111-24_0.pdf#page=21">
+            but not amortized!
+          </a>
+          )
+          <br />
+          <br />
+          purposefully-impossible is a checkmate
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1f-aFDk8zXZI2V4EW7azfl2wR_zJV4Ka5/preview"
+            }
+            float="left"
+            title=""
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          What is a treatment program? Just keep them in jail
+          <br />
+          <br />
+          <a href="https://teapharmacy.party">they still have my Giant nugg</a>
+          <h2>Bail and malfeasance means you don’t have the evidence</h2>
+          "taxes is the biggest problem," does not mean 40-50% debt spending
+          (how to make profit on net loss; e.g. do bipartisans fixate on the
+          last meal idea, like a bunch of cucks?), obviously without people
+          voting. 1. outlay corporate profits, today! 2. cash:debt*income thru
+          history 3. truncatedsalestax 2025 against menendez for free rider
+          immutable sewage police lawsuits, no more animal-testing,
+          closed-source-licensure-racketeering and
+          countervailing-law/illegal-precedence class precedence malfeasance and
+          industry-expert-saveface or precedencial interest.
+          <h2>
+            oh,&nbsp;
+            <a href="https://www.healthline.com/health/shingles-vs-herpes">
+              the dread
+            </a>
+            &nbsp;
+            <a href="https://www.pfizer.com/news/hot-topics/viral_vs_bacterial_pneumonia_understanding_the_difference">
+              hypocrites
+            </a>
+            ,&nbsp;<a href="https://saverparty.xyz">humanharvest.info</a>,
+            excess antibodies attacking your own cell-with-spore causes&nbsp;
+            <a href="https://link.springer.com/article/10.1007/s00259-021-05314-2">
+              hot node leakage
+            </a>
+            , duh
+          </h2>
+          "People homeless is stupidity, a psychological problem," Rep Glenn
+          Grothman, distributor of misinformation. see below for actual cause,
+          not byproduct nor mental-opinion before brain malformity. The right
+          are prejudicial all hell. Messy hair makes me disabled, Tom Basile?
+          You just want to prevent wall st blame and ignore 60/40 wall st/gov
+          new debt at $3k/year/person before 3/2020 population growth
+          significant death fraud and cases vs asymptomatic-tests fallacy
+          <br />
+          <br />
+          Cognitive testing is nearly as subjective as mental health over
+          actual, literal, “brain malformity,” to cognitive test, being merely a
+          measure against the test-makers’ perspective, presentation &
+          nomenclature. After all, the right answer isn't always the common one,
+          like the Earth around the Sun or it mattering-not whether the chicken
+          or shell, "came first"
+          <br />
+          <br />
+          Indigent doesn't give right to rent-seek and gentrify housing nor add
+          money for same intermediate-material-labor, essentially making
+          consumer law on estimates force majeure on purpose, it is so obvious.
+          Incarceration is profit with such net loss operation with bonds &
+          false bid pools of expiring non-concurrentable insurance
+          <br />
+          <br />
+          Indigent because 10x hours per median home, half
+          unemployed:working-age cohort size, 20x/person 55+/millennial
+          rental-income, not capping implausible landlord use and
+          lender-work-deficit to consumer-awaited-outlays for collatteral
+          loitered and down payments laundered kept upon credit cycle forclosure
+          reposession of transitory supply chain prices
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/sbIoxEP41J8"
+            }
+            float="left"
+            title="Dr Henderson Review Video Testimony & false mental-institution conviction, bizarre for non-rollover insurance whistleblower"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ width: "400px", maxWidth: "100vw", height: "400px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1NGR6kw3SJvf-L64eVhCK9QVgP2YovMqD/preview"
+            }
+            float="left"
+            title="Dr Henderson Review on Google, recinding of mental-illness claim online, apologizing for my 'knee appointment'"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          {this.state.serviceCancelingImages && (
+            <a href="https://www.google.com/maps/contrib/116647982166856941576/reviews/@40.289901,-74.0840547,12z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-US">
+              reviews
+            </a>
+          )}
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1g8x1S-kvf8xdXxTrMCmj_2hlEfwBbbBe/preview"
+            }
+            float="right"
+            title="My Stepfather walks into an amortization/worth contest"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <br />
+          <h2>
+            I would rather SSA not share-split the dollars I do have instead of
+            give it to my mother's loan sharks
+          </h2>
+          "In order to receive disability, take the medication." One has nothing
+          to do with the other, the latter being an opinion rather than
+          biological fact, to boot. Mental illness isn't a disability nor is it
+          affirmitively solved by your medications. I have a hole in my leg.
+          Isn't that enough?
+          <br />
+          <br />
+          More people are oppressed than 1k years ago, as it was half at most,
+          by race. 10x more hours than 1970 working-age, to own a home
+          <br />
+          <br />
+          “Turning their people into their chattel, it is their[ whole scheme],”
+          Josh Dawsey
+          <br />
+          <br />
+          "Zero privacy/security anarchy/China"
+          <br />
+          <a href="https://login.gov">Convict intranet</a>&nbsp;with
+          tamper-proof grid dns for repeat offenders is NOT HARD 80k/yr missing
+          children forever is your fault,&nbsp;
+          <a href="https://thumbprint.us/phone">the dear reader</a>
+          <br />
+          <br />
+          "It was called treason, now it is just called business[, article 3 is
+          bond-laundering 10-40% fed-state $1t/$7t/$28t China/foreign/domestic.
+          also, kidney harvesting!]"
+          <br />
+          <br />
+          <TwitterTweetEmbed
+            style={{ float: "left", width: "300px" }}
+            key="1411470492834439171"
+            tweetId="1411470492834439171"
+          />
+          the overwhelming evidence suggests the virus is merely a byproduct of
+          bacterial-infection
+          <br />
+          Making it easier to adopt with more money is a fallacy since
+          <br />
+          More money for the same goods
+          <br />
+          I’m living without rents
+          <br />
+          <br />
+          "To learn about our programs, and to donate."
+          <br />
+          <br />
+          landlords implausible and borrowers loitering is menace of society
+          <br />
+          <br />
+          FUCK WORKING CLASS AMERICANS and existing small biz, what about the
+          open-source-contributors and new biz
+          <br />
+          <br />
+          "fixed incomes that inflation will impact the most," but they make
+          money on what causes inflation...
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1cP5V86FWOxqaOjI3wm5SkxylZZSPinKf/preview"
+            }
+            float="left"
+            title="My Mother is taking a deal that isn't hers to make"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1YpWrPXXlhBHsLq06FXuhBnILH12Yk2NZ/preview"
+            }
+            float="right"
+            title="Steve Cortes - corporate work deficit"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          I'm not crazy!
+          <br />
+          <br />
+          My mom is the designated payee on my disability because my hair is
+          messy, but she is the one with collateralized debt, my debt is just
+          consumer, they can’t touch it so the state wants to bail her out with
+          my money
+          <br />
+          <br />
+          pig
+          <br />
+          <br />
+          working against $3k/year/person instead of for your own (not resume
+          buffing, but copyright), in a market commune, withheld outlays, to
+          boot, is retarded
+          <br />
+          <br />
+          backpayments on disability over appeal for no reason, you, SSA, are
+          the treasury. assigning to the indebted-collateral-mother instead of
+          the physically-injured-son because the latter is assumed to make poor
+          choices with money. I am a competitor of the SPX and thought my trades
+          were anonymous like 13d filers
+          <br />
+          <br />I am called bizarre by orthopedic surgeons for a net loss profit
+          by false bid pools
+          <h2>
+            SSA Disability is giving my mother my $45k award without my appeal
+            for only $15k because their debt has collateral and mine doesn't,
+            and they will let her set the rent instead of allow me to even move
+            out with it
+          </h2>
+          <br />
+          <Cable
+            style={{
+              height: "440px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1_8PTGz0yGAPZd1AMlq3o8V4BxH-TC_UX/preview"
+            }
+            float="right"
+            title="Greg Kelly - Seb Gorka fill in with Rudy Giuliani, racketeering"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “If you have to borrow some, borrow some;” you can always tax or have
+          help if the cause is virtuous
+          <br />
+          <br />
+          “Durable inflation” “no, inflation is change, need to spend on
+          services instead to level it out”
+          <br />
+          "supply and demand issues by a bridge," fucking tart
+          <h2>
+            <span style={{ color: "rgb(80,100,200)" }}>
+              Unvaccinated and other mobidity issues are more suceptible
+              to&nbsp;
+              <a
+                style={{ color: "rgb(80,100,200)" }}
+                href="https://wyss.harvard.edu/news/the-secret-life-of-bacteria-revealed/"
+              >
+                deady diseases
+              </a>
+              <span style={{ color: "black" }}>
+                [, by asymptomatic-testing as opposed to cases]
+              </span>
+              ," Dr Leanna Wen
+            </span>
+          </h2>
+          <h2 style={{ color: "darkgreen" }}>
+            “How can my mortgage work for me? Can it be better, always yes.
+            American home financings, greater overall savings shorter terms or
+            refinancing debt. Saving over $1k/mo. 10 minutes to save a fortune,
+            at least a small fortune,” Mark Levin
+          </h2>
+          <Cable
+            style={{ maxWidth: "450px", width: "100%" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1rfCRVDV_LPMY1d5zw-5CWTECTteM3Vd9/preview"
+            }
+            float="left"
+            title="Phychology today - Lee Jussim cultural marxism vs marxism co-opt graphic-table by issue"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          At least the cnn masterbaiter isn’t on the side of the gentrified
+          manufacturing class, G-d's chosen people
+          <br />
+          <br />
+          “‘Reserves’ to a commodity trader is like a ‘savings account,’ if your
+          car breaks down, you’re in a lot of trouble. It will cost you and I.”
+          Carl Higbie
+          <br />
+          <h2>
+            Parks/copyright/services; america first means we make things without
+            nationalism and with utility open source licensure
+          </h2>
+          $2t bill signed, right?” “Yup!” Affirms the bailout laundering is the
+          second phase of the trickle down bailout for less income inequality
+          but kept down payment unamortized for that collateral correction if
+          without debt:cash third party beneficiary bid-to-ask &
+          hung-jury-permit inelasticity business-/credit-cycle for the national
+          security perpetual motion machine that is durable earth, not escrow
+          for general account or grandiose scope with an option to buy upon
+          estimates
+          <br />
+          <br />
+          existing business is complacency, ppp is trust building, new business
+          need support.
+          <br />
+          <br />
+          why would you work against the&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=Jde9">
+            $3k/year/person
+          </a>
+          &nbsp;busy-work that is lender-/landlord-work-deficit
+          <br />
+          <br />
+          rent-seeking and gentrification in
+          <br />
+          &bull; tolls and broadband
+          <br />
+          &bull; housing
+          <br />
+          &bull; healthcare
+          <br />
+          &bull; jury-permitting (jury for business)
+          <br />
+          <br />
+          making money on net loss bonds in
+          <br />
+          &bull; incarceration
+          <br />
+          &bull; war
+          <br />
+          &bull;&nbsp;{/*https://fred.stlouisfed.org/graph/?g=C6m9*/}
+          <a href="https://fred.stlouisfed.org/graph/?g=JdcJ">
+            invoicing/down-payments 11/1
+          </a>
+          &nbsp;& somehow&nbsp;
+          <a href="https://fred.stlouisfed.org/graph/?g=IHdV">40-50% debt</a>
+          <br />
+          <br />
+          flopping on
+          <br />
+          &bull; truncated sales tax 2025 against menendez
+          <br />
+          &bull; amortize cash:debt*income price-deflation without debt
+          inelasticity of bid-to-ask
+          <br />
+          &bull; false bid pool, invoices & implausible use landlords denouncing
+          <br />
+          &bull; timelesspaydayroyalty with max profit (RCWMP) scoped for
+          industry-type per person-to-person
+          <br />
+          <br />
+          Tranqulity means users need to be paid to be discriminated for quality
+          <br />
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1RPpkz7tmeuFelQ2if-b9SV1bQAlkJ9tc/preview"
+            }
+            float="left"
+            title="National Report (Newsmax) - Lt. William Kelly, Va with Shaun Kraisman"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          "I did not break policy nor was my removal warranted[: and my opinion
+          was acquitted by reasonable doubt of malintent nor reckless behavior,
+          given open carry laws and noted absence of luggage requirements],"
+          <br />
+          <br />
+          Duress doesn’t allow consumers to find the most efficient brands on
+          the quality/price skew
+          <br />
+          <br />
+          We need to hold counterfeiters and loitering-borrowers dealing in
+          credit to the same standard, be them black drug users dealing in cash
+          or white pharmacy false bid pool sellers dealing in credit
+          <h2>
+            GOP: blue collar incrimination, only &nbsp;
+            <span style={{ color: "red" }}>
+              Lidia Curanai is delusional, her income is from third party
+              beneficiary-countefeit
+            </span>
+          </h2>
+          cases vs asymptomatic testing is the fallacy, no damage from covid,
+          just naivety.&nbsp;
+          <a href="https://humanharvest.info">Trust statisticians</a>, not
+          doctors' save-face
+          <br />
+          Don’t betroth statistical assumptions to determinism
+          <br />
+          <h2>
+            Communist defined by Marx isn't a market communist, but one that
+            emulated infinite producers in jury, for business!
+          </h2>
+          Biden is selling out oil reserves because I am calling dollars, 20% US
+          lands, instead of target margin networks instead of
+          rent-seeking-gov/wall st gentrification, gerontocrazy 20x/person
+          rental-income laundered to principal value, not utility.... then ran
+          the gamit of down payment upon reposession. Marx communist was first
+          to betroth market-communist credit cycle as improper property, utility
+          in finite producer reality too, keeping labor to exclusively demand,
+          with tranquility, not-surrendered by contracts-counterfeit mootable
+          <h2>an option to buy on estimate</h2>
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1zyspe55pdTgbQlfsPbgWjVkTDX1QPLhv/preview"
+            }
+            float="left"
+            title="John Bachmann Now - Jill Simonian, Director of Outreach for PragerU.com/kids"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “We need our kids to know that America is an overarching ‘good’
+          place,”
+          <br />
+          <br />
+          open-source-automatic-licensure (right to try & not compete with
+          consumers) can solve animal-testing and immigrant working age can
+          solve the lender-work deficit, or amortize the credit cycle so income
+          and purchases are reverse engineered for the
+          durable-concurrentable-collateral to be where it should have been
+          without debt-inelasticity of false bid-to-ask of counterfeiter,
+          fraudulent concurrentable collective bargainable units, and
+          implausible use rentier
+          <br />
+          <br />
+          Non-voters won, and ideologically-duressed voters can split both major
+          parties
+          <div
+            style={{
+              width: "min-content",
+              transform: "translateX(50%)",
+              padding: "20px",
+              //backgroundColor: "white",
+              WebkitTextStroke: "1px black",
+              color: "white",
+              border: "3px solid black",
+              borderRadius: "30px",
+              textAlign: "center",
+              fontSize: "26px"
+            }}
+          >
+            SaverParty.xyz
+          </div>
+          <span style={{ backgroundColor: "red" }}>
+            Republicans aren't freedom, they have business mandates and ignore
+            the fact that infinite producers is merely a grave microeconomic
+            assumption
+          </span>
+          <br />
+          <br />
+          $600m revenue over the next decade $367m debt -heritage action freaks
+          out about only 20% of regular spending at $4t/yr 1/4 pentagon, 1/4
+          pensions, 1/4 premiums not becoming currencyComponentOfM1 checking,
+          how? 40-50% debt spending, 10-40% bond laundering debt servicing by
+          landlord-work-deficit 20x/person 55+/millennial, half disability and
+          insurance to 65+ retirees, dead-weight inflation from price-deflation
+          because of rentier over escrow
+          <br />
+          admin only wants to go after income over $400k/yr, because
+          $3k/year/person is new debt
+          <br />
+          <br />
+          The qualifier: “He is mentally unstable because he said, ‘I’m going to
+          run people over this Rittenhouse thing,’” not home sales in 11x
+          down-payments? Gerontocracy laundering loiterers to counterfeiters in
+          contract. wait for customers and investment bank towards
+          concurrentable equity, only.
+          <h2>
+            abolish bond-index-funds, mental-illness without dent-in-head
+            disqualifier, implausible landlord use, credit cycle keep down
+            payments upon repo and value-correction, and false bid pooling
+          </h2>
+          NJ calls you&nbsp;
+          <a href="https://truncatedsalestax.com">mentally insane</a>, off-jury
+          duty & lock up for 13 days take away rights to handle my own money if
+          you agree with&nbsp;
+          <a href="https://youtu.be/aJEszZK54dw">Paul Krugman</a>, who
+          plagerized you, on some things. laundering the share-split to
+          borrowing loiterers being my parents who spend before collecting and
+          merely lose money
+          <br />
+          <br />
+          Fines instead of stateless-victimized-torts by consumers (including
+          corporations as are demand-surrogate) permits lying, evidently by my
+          experience at RiverviewMedCtr in Red Bank, NJ, whom say I “kicked and
+          punched,” trying to elope, with good reason, too. They won’t even show
+          authorities the footage
+          <br />
+          <br />
+          “That’s a big family!”
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1bkuUkDe9iyAJGWytn-jtihhCjiCRkC1B/preview"
+            }
+            float="right"
+            title="American Agenda (Newsmax) - Bob sellers comments on the family debts, market-communism on the wall st update, nearly"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Dear Mom,
+          <br />
+          You waste more money than I do, please do not spend my backpayments
+          from SSA on your debts, nor rent imagined by you. Borrowers loiter on
+          savers’ resources, but I clean enough to earn my keep in the basement
+          that is implausibly-utilitarious by yourselves. I have a different
+          strategy with consumers debts that cannot touch my
+          copyright-properties in foreclosure. Apparently, you said I pushed you
+          so that you can take my disability, and launder it to your crediting
+          counterfeiters and options to buy upon estimates
+          <br />
+          <br />
+          they are also giving me 1/3 of what I would have earned without the
+          torn vastus medialis dependent anatomy as a summer-bartender
+          $45k/3-years, backpaid SSA disability & insurance for assuming 5k
+          applications would fire me in my self-trained youtube-video dev work
+          <br />
+          <br />A return on net loss is conflict of interest. The right isn't
+          voluntary at all. Wait for customers
+          <h2>Demand needs to be labor, exclusively</h2>
+          You can desist plagiarism claims with spark of genius, unless the
+          defending-accuser has their own to keep reasonable doubt I wasn’t the
+          start. Regardless, see how I am treated with MORE detail into
+          fraudulent collective bargaining on non-concurrentable outlay & hours
+          schedules of false bid pools of expiring-non-rollover insurance.
+          Redraft every season for non-compete emulation of infinite producers
+          in microeconomic theory of supply and demand, x-axis being output
+          productivity per hour by price-deflation, squandered by 40/60 gov/wall
+          st, $8/day/person pre-3/2020 new third party beneficiary
+          illegal-precedence of dollar-share split in contract, counterfeited
+          <br />
+          <br />
+          population begets labor-competition, not inflation, nearly constant
+          gdp/p 1800-1913
+          <h2>
+            Common sense are a bunch of followers&nbsp;
+            <span
+              style={{
+                color: "grey"
+              }}
+            >
+              10x hours per median home since 1970 half-life ago
+            </span>
+          </h2>
+          inflation isn't expectation nor dollar-share-split, but debt
+          inelasticity bid-to-ask and lender-work-deficit
+          <br />
+          <h2
+            style={{
+              backgroundColor: "rgb(197, 179, 88)",
+              color: "black"
+            }}
+          >
+            Price-deflation over hours halves every 5 years while gdp/p was
+            nearly constant before 1913, debt and money double every 10, home
+            prices every 20, non-durable goods every 40
+          </h2>
+          <br />
+          No reason for a qualified immunity for politicians means it is just a
+          placard. Even the chief commander isn't literally, "under fire,"
+          statute of limitations has no reason either.
+          <br />
+          <br />
+          "Solicit" requites line-itemized, racketeering is false pool bid in
+          general account
+          <br />
+          <h2>Anti-credit union</h2>
+          <br />
+          Malice=malignant heart
+          <br />
+          options to buy on estimate is grandiose scope, let my
+          home-contracting-parents take the better bid, that is full
+          <h2>
+            Marxist communists would not oversell like market communists. We
+            want to emulate infinite producers with regulations of duress in
+            false bid pool expiring insurance, invoices with down payments kept
+            upon repossession purposeful-impossibilities and implausible
+            landlord use
+          </h2>
+          No rent seeking for even free rider immutables
+          <br />
+          By gov nor wall st
+          <br />
+          Abolish corporate profits, outlay escrow immediately or investment
+          partnerships wait for customers over business-line
+          <br />
+          <h2>
+            aba racketeering class precedence malfeasance, interested in
+            incarceration for net loss is profit when bonds instead of truncated
+            sales tax for free rider immutable sewage police lawsuits
+          </h2>
+          Bias or interest in the case, for or against. How can you not?
+          <br />
+          Interest needs to be financial or industry, not merely consumer
+          <br />
+          No inference hurtful
+          <br />
+          For statement to be voluntary the statement must be given without
+          leniency nor reward, free will without compulsion nor necessity borne
+          by others
+          <br />
+          If not voluntary, don’t consider it for any purpose
+          <br />
+          Coercion Duress fear of violence threats of injury, or any suggestions
+          or promises of leniency nor reward. As in monthly savings of false bid
+          pools and higher deductibles, or for the borrower the ability to
+          loiter merely at greater principal price, under succh duress
+          <br />
+          <br />
+          debt:cash*income thru history bid-to-ask inelasticity can be amortized
+          for past purchases as to respect third party beneficiary laws.
+          Canceling, bailing out/new dealing debt nor "credit-cycle" keeping
+          down payments upon repossession force majeure estimated option to buy
+          <br />
+          <br />
+          net loss incarceration and death is a net gain when valued in dollars
+          from bonds
+          <h2>dealing durable public park deeds for my copyright-royalties</h2>
+          Old people: "you know what you are getting into unless on-site
+          {/**unless guard-rail is next to tail-entry */}, false pool bids are
+          additive," closed-source-licensure with uspto-grunts does that.
+          utility patents are discoveries and copyright is sufficient. Shapes
+          and etymology too-broad aren't to be owned
+          <h2>
+            Is the victimized state, lender or landlord a conflict of interest?
+          </h2>
+          if people want to fight, they will
+          <br />
+          <Cable
+            style={{ height: "300px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1DQFNpt07XWPUCryIKxwusnR98KaPLWV3/preview"
+            }
+            float="left"
+            title="'Wings for Victory' war bonds advertisement 'sky's the limit!"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1ljlBl_QHs-PKO4-iFbzlIAgUdBbv4nuo/preview"
+            }
+            float="right"
+            title="Bernie and Sid (77WABC) - Nov 23 2021, alternative gov truncated sales tax after amortization of options to buy estimates"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          lender-work-deficit is the greatest cause of inflation, wrapped up
+          into a three-word-chant
+          <br />
+          <br />
+          most gdp is mortgages
+          <br />
+          <br />
+          raised bonds allows those guys not to work for the same intermediate
+          goods. Colonizer - not exactly output-productivity per hour by
+          price-deflation
+          <br />
+          <br />
+          Such a dramatist cannot wait for profits by accrual and false bid
+          pools. Banks keep out of max-profit-royalties & insurance keep out of
+          claims outlays non-concurrent schedule upon 1/11 down-payments/gdp
+          (actual customers & jobs), keep in equity concurrentable. Only way out
+          is to amortize, not cancel nor keep down payment upon repo “business
+          cycle” (bailout fractional-reserve share-split). Dollars are 20% US
+          lands, gdp/p before 1913 was nearly constant micro-theory.com&nbsp;
+          <span
+            style={{
+              fontWeight: "bolder"
+            }}
+          >
+            cap 5 units /30 days, non-voters keep winning
+          </span>
+          <br />
+          <br />
+          “Can you be a fair and objective person,” regardless of
+          time-constraints
+          <br />
+          Need all people included, not detractors from favored countervailing
+          laws, precedence and comparative innocence
+          <br />
+          <br />
+          1/3 try is owned by foreigners, $1t/$7t being China
+          <br />
+          <br />
+          credit is useless price inelasticity the same intermediate-goods
+          <br />
+          <br />
+          “Provide Taiwan with weapons to sustain themselves,” why don’t you
+          allow them to make their own? Our money funding that only inflates as
+          would intermediate good like free rider mutable tax and 40-50%
+          fed-state debt spending, 10-40% debt service bond laundering
+          <br />
+          <br />
+          <Cable
+            style={{ width: "100%", minWidth: "30vw", maxWidth: "30%" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/OqgUxnqc3AM"
+            }
+            float="left"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ width: "100%", minWidth: "30vw", maxWidth: "30%" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/1D6n2om9I6A"
+            }
+            float="left"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ width: "100%", minWidth: "30vw", maxWidth: "30%" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/AJWkVjK7u48"
+            }
+            float="left"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          boycotting credit, gdp:down payment isn't a job, and accrual/grandiose
+          scope with estimate insurance isn't a customer but false bid pool
+          <h2>third party bene, anti-rent-seeker-bona-fides</h2>
+          You can be vaccinated and spread it, you can be unvaccinated and
+          spread it. That is not an artifact, but a symptom
+          <br />
+          Dems want to lower bail and nobody wants to raise rates let alone
+          reverse
+          <br />
+          <br />
+          Bail instead of keeping them in jail? Isn't that racketeering? Do
+          donors get money back? Bonds compound third party beneficiary
+          laundered
+          <br />
+          <br />
+          “Protect your retirement income with gold,” Bo Snerdley (back to
+          back&nbsp;
+          <a href="https://www.youtube.com/watch?v=wxiMrvDbq3s">
+            public park divestment
+          </a>
+          )
+          <br />
+          <br />
+          <TwitterTweetEmbed
+            style={{ float: "right", width: "300px" }}
+            key="1429182687588278276"
+            tweetId="1429182687588278276"
+          />
+          "Jury selection and cameras in courtrooms to prevent tyranny of[
+          industry-precedence-interest, not reason even 1/12 upon conviction or
+          permitting mvp-duress nuts are to be excluded]"
+          <br />
+          <br />
+          The only way out of supply chain problem is working age immigration or
+          amortization of lender-work-deficit
+          <br />
+          <br />
+          <Cable
+            style={{
+              height: "470px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1nQ3nEEiA8HnytQM_jg0KZ3PYs7lInnYx/preview"
+            }
+            float="left"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          new deal cuts income inequality in half!
+          <h2>Inflation doesn't discount bailout</h2>
+          immmigration of working-age, amortization of debt correction instead
+          of keeping down payments upon repossession nor cancel forbidden by
+          past laborequity.org&nbsp;<a href="https://saverparty.xyz">savings</a>
+          <br />
+          <br />
+          home equity loans places principal-risk from the lender into
+          purposefully-impossible intent to foreclose and keep down-payments
+          <h2>false bid pools and options to buy estimates, a hypocrisy</h2>
+          Amortize
+          <br />
+          ​abolish bonds as private property
+          <br />
+          ​same as all competing with consumer false pool bids and implausible
+          use intent detection
+          <br />
+          ​socialism isn't broadband rent-seeking hud rent-seekig, nor
+          reappropriating labor, it is to emulate infinite producers with
+          jury-permits for min viable product duress+target-margin
+          consumer-surrogate
+          <br />
+          covid is 1 year lower life expectancy than flu*, but 2015 75+ 1.2m/yr
+          ppl
+          <br />
+          <h2>jury-science please</h2>
+          greens won't amortize, they might outlay corporate profits, today!
+          non-voters are plural-majority lmao
+          <br />
+          <br />
+          collective bargain my checking acc
+          <br />
+          false bid pools are like corporate escrow profits withheld for what?
+          <br />
+          <Cable
+            style={{
+              width: "615px",
+              height: "470px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://www.slideshare.net/NicholasCarducci/slideshelf"
+            }
+            float="left"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          If it is true 41k year carbon cycles are from humans and not natural
+          binding, then humans must go extinct
+          <br />
+          <br />
+          <h2>intra-mediate scopebook</h2>
+          false bid pools are on time, working together (that is escrow-withheld
+          is grandiose scope standing, as would an estimate, especially without
+          utilitarian-choke-points in&nbsp;
+          <a href="https://scopes.cc">outlays for labor & materials</a>)
+          Obfuscating mental health with HUD/wall st 40/60 gentrification &
+          rent-seeking
+          <br />
+          <br />
+          price-inelasticity of&nbsp;
+          <a href="https://foiegras.life">bid-to ask</a>, consent is not granted
+          when a third party is concerned, implicitly without tort lest&nbsp;
+          <a
+            href="https://nationalsecuritycasino.com"
+            style={{ textDecoration: "none" }}
+          >
+            <span style={{ color: "red" }}>class</span>&nbsp;
+            <span style={{ backgroundColor: "black", color: "white" }}>
+              precedence
+            </span>
+            &nbsp;
+            <span style={{ color: "blue" }}>malfeasance</span>
+          </a>
+          <h2>
+            free portrayed by free rider mutable tax from consumers of other
+            markets inflation, lender-work-deficit & 40-50% fed-state debt
+            spending,&nbsp;
+            <h1 style={{ fontSize: "24px" }}>
+              40/60 gov/wall st new debt $8/day/person
+            </h1>
+            (pre-3/2020)
+          </h2>
+          hung-jury-permits, in mvp-duress, are unconstitutional
+          <Cable
+            style={{
+              height: "440px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100064690506088%2Fvideos%2F4404002109665977%2F&show_text=true&width=220&t=0"
+            }
+            float="left"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            Pipeline nor the border will Biden push back,” toensing against
+            working-age-recovery
+          </h2>
+          “President get paws on oil and gas [rent-seeking & gentrification, as
+          opposed to target margin consumer surrogates, truncated sales tax 2025
+          against menendez for free rider immutable sewage police lawsuits],”
+          Logan Raddick
+          <br />
+          <br />
+          living-like an consumer-laborer without
+          competition-by-duress-nor-non-settlement, in a finite-producer world
+          <h2>
+            Not self defense when felony, except when the state (120% wall st)
+            has a r&r monopsony
+          </h2>
+          Bernie calls welfare socialism because otherwise calling it
+          share-split would lead in "accrual" to mean the same (description)
+          <h2>
+            Socialists isn't reappropriation, but truncated sales tax after
+            amortization, not income, gift nor public share & 13D {">"}5 3-month
+            disclosure, uuid non-anonymized, and false bid pool torts
+            unamortized. &nbsp;
+            <span
+              style={{
+                backgroundColor: "green",
+                color: "white"
+              }}
+            >
+              Outlay the means of production, durable-parks/hamberger-services,
+              today!
+            </span>
+          </h2>
+          <Cable
+            style={{
+              height: "440px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1X6qODro1SMVRAvc-K_o2-mzs0I0Wj-PH/preview"
+              //"https://fred.stlouisfed.org/graph/?g=Gkvt"
+            }
+            float="right"
+            title="amortization of down payments upon repossession of collateral for third party beneficiary grounds"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          cases vs tests - excessive force, self-defense,
+          hung-jury-permit-duress isn’t voluntary, but purposefully-impossible
+          <br />
+          <div style={{ backgroundColor: "rgb(170,80,200)", color: "white" }}>
+            Dead-weight-as-rentier & "output-propensity" x-axis productivty-as
+            per-hour price-deflation is what differs between this site and other
+            microeconomics
+          </div>
+          <h2>
+            Rudy Giuliani: “Your first impression can be wrong,” people can
+            change, mishap for exogenous to moral core reason even without the
+            law, between that and academic/political and comparative, is reason.
+          </h2>
+          Dr. Maria Ryan: “Your tax-payer money,” 40-50% debt-spending… “The
+          wealthy keep the country going,” with $3k/year/person new debt ({">"}
+          $400k income-taxes) whom own those bond-index-funds valued and keep
+          down payments upon collateralization repossession
+          <br />
+          <h2>
+            bipartisan rent-seeking instead of target-margin consumer surrogate
+          </h2>
+          working-class is better-off than non-working, and democrats want to
+          "invest" with money from outside of that market for the same things
+          and laundering to lenders and landlords, whom otherwise keep down
+          payments upon repo
+          <Cable
+            onError={handleScollImgError}
+            img={true}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://www.dropbox.com/s/hatfsd34100ky5t/phil%20murphy.jpeg?raw=1"
+              //"https://fred.stlouisfed.org/graph/?g=Gkvt"
+            }
+            float="left"
+            title="https://newjerseyglobe.com/governor/phil-murphys-inside-outside-call/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          creating jobs by free rider mutable tax and 50% debt-spending for weed
+          duress is not concent nor anything but trust-building, rent-seeking
+          away from new innovation for r&d monopsony
+          <br />
+          <h2>target margin, 11/12 jury-permits, and open-source licensure</h2>
+          "supply side leads to less taxes," by corporate-profits (corporations
+          pay twice)? free market in reality is finite producers and demand
+          isn't exclusively labor as to even be the most infinite it can be
+          <h2>sewage police lawsuits, free rider immutables</h2>
+          bail instead of keeping them in jail? Ins't that racketeering? Do
+          donors get their money back? Bonds compount third party beneficiary
+          laundered, not 40-50% fed-state debt spending && 10-40%
+          debt-servicing, alone
+          <br />
+          <br />
+          "supply definitely reacts to demand, so inflation shouldn't happen
+          from population"
+          <br />
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/NBTw_p-WChI"
+              //"https://fred.stlouisfed.org/graph/?g=Gkvt"
+            }
+            float="right"
+            title="https://www.youtube.com/watch?v=NBTw_p-WChI"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          wall st is a central planner 60/40 gov new debt 40-50% fed-state
+          debt-spending new debt $8/day/person, repossession after
+          laundering-loitering-borrower's consumers/employers bid
+          <br />
+          <br />
+          Small company stocks aren’t new business over exporting and
+          complacent, non-labor demand David Banson, author of No Free Lunch:
+          “Generated great balance sheets, themselves,” is appraised assets on
+          book 44x, but 1x beyond that already written up Job killer;inflation
+          filler (busy-work/share-solidarity)
+          <h2>
+            Supply & demand is productivity by propensity to work as surrogated
+            in propensity to spend in equity outlaid, not withheld, falsly-bid
+            nor accrued-interest by time, on a price vertical-plane
+          </h2>
+          <Cable
+            style={{ width: "100%", height: "560px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.nofred
+                ? ""
+                : `https://fred.stlouisfed.org/graph/graph-landing.php?g=JdUH&width=670&height=475`
+              //"https://fred.stlouisfed.org/graph/?g=Gkvt"
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=JdUH"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Sen Dan Sullivan: "Build the future of tomorrow on the backs of the
+          hardworking Americans today,” GOP desires to find the arc of the
+          covenant, a perpetual profit machine with free operating costs Jobs
+          using american abundance, exporting gas gets their durable goods as
+          public park deeds (currency, concurrentable-units or unit)
+          <br />
+          <br />
+          Jo pinion compares Kyle self defense to attempt at the same, but&nbsp;
+          <a href="https://humanharvest.info">self-defense</a>&nbsp;isn’t
+          garnered by&nbsp;
+          <a href="https://link.springer.com/article/10.1007/s00259-021-05314-2">
+            mRNA-sporing-grafts
+          </a>
+          , net loss bonds profit, with illegal but precedential standing, to
+          boot
+          <br />
+          <br />
+          cases vs asymptomatic testing is the fallacy, speaking as an
+          econometrist, though Durr qualified himself as a truck driver
+          <br />
+          <br />
+          GOP and Dems are paranoid, still calling&nbsp;
+          <a href="https://humanharvest.info">-700k excess deaths expected</a>
+          &nbsp;a pandemic, thinks virus inseminates cell instead of comes out,
+          by cartoon vivo
+          <br />
+          <br />
+          <Cable
+            style={{ padding: "10px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1iYPZZJ7XqxmCmWO0kmQ9KNtMsK7iT81z/preview"
+            }
+            float="right"
+            title="Newsmax 12 noon est - Wisconsin's 'Childrens' Hospital' rep"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Obfuscating mental health with HUD/wall st 40/60 gentrification &
+          rent-seeking
+          <br />
+          <br />
+          Communism is the bastardization. Of the 1/12 crazy person on a
+          convicting jury, as to revolt against the time-series of individual
+          labor equity (public parks, durable-goods/ham) savings, in tort, as
+          capitalism always corrupts itself. Marx would end there. I suspect it
+          is because the Wealth of Nations by Adam Smith's assumption of
+          infinite-producers was not taken seriously enough, like&nbsp;
+          <a href="https://open.spotify.com/episode/4MpKkdFR4jD33UX6xO2Lb3?si=_CAckkZCSjWuBd1V863Jdg">
+            emulating randmomness
+          </a>
+          &nbsp;in Statistics... Voluntary is best exogenous basis rate fix, and
+          cohort size is integral to age-standardization
+          <br />
+          <br />
+          You can use reasoning without jury as defense, not prosecution
+          <br />
+          “Burden is on the state” “Duty to deliberate, and find facts about the
+          case, the law is the slaw, be it comparative/natural over
+          illegal-precedence and countervailing-law class precedence malfeasance
+          of bifurcated law-licensing-board”
+          <br />
+          "fair minded and impartial juror seeking the truth," get kicked off
+          for amortizing false bid pool third party beneficiary
+          <br />
+          "y'all saw his pain, right?"
+          <br />
+          <br />
+          Uspto international has less propensity for broadness
+          <h2>
+            bancruptcy wishes to credit cycle, marx was first to critique the
+            mises, "business cycle," or maybe another word for shmita, except
+            they keep down payments and reposess, not cancel. bottom-left
+            SaverParty.xyz wishes to amortize, not bailout.&nbsp;
+            <a href="https://www.federalreservehistory.org/essays/glass-steagall-act#:~:text=The%20Glass%2DSteagall%20Act%20effectively,Roosevelt%20in%20June%201933.">
+              don't obama my bernie
+            </a>
+          </h2>
+          "what is so hard about calling yourself a capitalist?" probably the
+          infinite producer assumption, and racketeering counterfeit in
+          contract, down payments kept upon recollateralization
+          <br />
+          <h2>productivity isn't gdp/p, it is price-deflation over hours</h2>
+          <br />
+          <Cable
+            style={{ padding: "10px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1KdzgLEjyCUfO8SJuuC5aqGxDDH4rihF2/preview"
+            }
+            float="left"
+            title="Tom Basile - 100k americans died from oxy april, 2020-21"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          A lethal dose for every living American it is so small and used in
+          extreme pain-reduction cases, 100k == missing children. Both issues
+          can be fixed with&nbsp;
+          <a href="https://teapharmacy.party">open-source-licensure</a>, no
+          false-bid-pools &&nbsp;
+          <a href="https://thumbprint.us/phone">convict intranet</a>
+          <br />
+          <br />
+          I am literally better than all of the lawyers
+          <br />
+          class precendece malfeasance
+          <br />
+          “It’s gotta be the 40% who stand up, not me.” THEN WHY ARE YOU ON
+          INSTEAD OF ME? Bitch
+          <br />
+          Fucking eldercare in casting more like, on the Tom Bastile show
+          <br />
+          <a href="https://www.ftc.gov/sites/default/files/documents/statutes/credit-card-accountability-responsibility-and-disclosure-act-2009-credit-card-act/credit-card-pub-l-111-24_0.pdf#page=21">
+            73% 50+ pro-AARP
+          </a>
+          <h2>
+            oh look,&nbsp;
+            <a href="https://www.americanbar.org/groups/litigation/committees/commercial-business/boilerplate-contracts/third-party-contract-beneficiaries/">
+              racketeering tortious-claim
+            </a>
+            &nbsp;what would be truncated sales tax flat flat tax would pay for
+            free rider immutable sewage police
+            (non-bond-net-loss-profit-per-incarceration-10-40%-laundering,
+            40-50% spending not trading)&nbsp;&nbsp;
+            <a href="https://wavv.art">LAWSUITS</a>
+          </h2>
+          outlay corporate profit today! tax for consumer free rider immutable
+          immediate escrow concurrentable units or unit collective-bargaining
+          (not insurance belaying deductible for premium and
+          producer-work-deficit), and tort&nbsp;
+          <a href="https://www.ftc.gov/tips-advice/competition-guidance/guide-antitrust-laws/dealings-competitors/price-fixing">
+            appraisals
+          </a>
+          &nbsp;of third party beneficiary
+          <br />
+          <h2>free rider mutable tax and 40-50% debt spend</h2>
+          "Most people use it to pay wall st, what do you think they do with
+          their money?" Grover Nordquist
+          <br />
+          <h2>google.com/search?q=how+to+apply+for+local+reporter+12k</h2>
+          new business{" > "}existing business
+          <br />
+          1/12 upon conviction is only crazy, lest dent in head or hate
+          indiscriminate
+          <br />
+          501 IP to government laundered,&nbsp;
+          <a href="https://saverparty.xyz">socialism</a>&nbsp;is
+          anti-rent-seeking dead-weight-label indiscriminate.
+          <h2>
+            Government/wall st 40/60 gentrification, rent-seeking,
+            trust-building, competing-with-consumers, prohibiting
+            price-inelasticity of bid-to-ask and prohibiting trade:
+          </h2>
+          "Ports, broadband, bridge-traffic-tolls," while we have the technology
+          njta STILL services nearly 40% of revenue on debt, and they
+          financially-"invest" in outlays that they have nothing to do with on
+          asset-tangible
+          <br />
+          <h2>
+            childcare/industry-vocational loss of durable-good/service when you
+            don't merely target margin networks and finite producers for
+            micreconomic reasons
+          </h2>
+          public insurance doesn’t do anything differently than private. We need
+          to ban these&nbsp;
+          <a href="https://youtu.be/aJEszZK54dw">false bid pools</a>&nbsp;and
+          the invoices they abet on third party beneficiary grounds
+          <br />
+          <h2>
+            'growth brings profits into the american peiple, i mean the emerican
+            government'- Russ on CBO from Center for Renewing america.
+          </h2>
+          'Economic winners' or price deflation over hours? The latter if tech
+          advancement is espoused by price deflation. Otherwise those “economic
+          winners,” are more like, “busy work.” 'Inflation will be worse,'
+          unless we amortize & alternative finance to max profit royalty, for
+          lender/landlord work deficit can solve the working age supply chain
+          issue
+          <h2>
+            self-defensive-threats, when third party beneficiary law is
+            malfeasant
+          </h2>
+          <h2>
+            <a href="https://carducci.us">amortize, don't</a>&nbsp;cancel nor
+            keep down payments upon repo, ppp trust-building && laundering
+          </h2>
+          lower profits by not-trust-building but actual margin-targeting would
+          emulate supply and demand would increase labor, being
+          hours/propensity-to-work
+          <br />
+          "subsidies for everyone, at least," a person on Larry Kudlow's show
+          pleads
+          <br />
+          we need to make an amendment to make it better for corporations to be
+          domesticated,"
+          <br />
+          <a href="https://www.academia.edu/43983364/Review_Capitalism_in_the_21st_Century">
+            like slavery
+          </a>
+          , nationalism/technological-advancement-by-pareto-efficiency without
+          dead-weight-rentier nor corporate-profits withheld by
+          oligolopies/(self-employed), public companies pay twice corporation
+          tax for government-beyond article-4 into free-rider-mutable tax &
+          40-50% fed-state debt-spend, 10-40% bond-laundering debt-service,
+          rent-seeking to go public, to boot, is retarded.
+          <br />
+          <br />
+          <Cable
+            style={{ width: "100%", height: "560px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.nofred
+                ? ""
+                : `https://fred.stlouisfed.org/graph/graph-landing.php?g=HzlI&width=670&height=475`
+              //"https://fred.stlouisfed.org/graph/?g=Gkvt"
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=HzlI"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          this is why non-experts shouldn't espouse conclusions of experts
+          without understanding their assumptions
+          <h2>
+            price deflation over hours, jury-permitting trumps bending over for
+            the finite producer right.
+          </h2>
+          {!isNaN(this.state.width) && (
+            <GDP width={Math.min(600, this.state.width)} />
+          )}
+          The right & top thinks DeSantis is good for bypassing jury-rules for
+          permitting duress within minimal viable production and voluntary
+          trade, and that testing bybyproduct asymptomatically determines cause,
+          with insignificant aggregate deaths/population. You are loitering as a
+          borrower, and working for a corporation is a net loss of individual
+          profits. I own the market thru copyright, your market commune owns all
+          the work you've done. Selling out of durable-goods/services is
+          additive to gdp, which is retarded.
+          <Cable
+            style={{ width: "100%", height: "560px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.nofred
+                ? ""
+                : `https://fred.stlouisfed.org/graph/graph-landing.php?g=Gkvt&width=670&height=475`
+              //"https://fred.stlouisfed.org/graph/?g=Gkvt"
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=Gkvt"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <br />
+          We gotta wrap it up rollup nomenclature software development knows
+          more academic, politics, reason, law, the edge of flat earth
+          <div>
+            <h1>FREE RIDER MUTABLE NATION</h1>
+            <h2>
+              sewage police lawsuits, collective bargaining immediate-escrow
+              units-conccurrentable, not false bid pools of hidden premiums when
+              40-50% debt-spending fed-state... 10-40% fed-state
+              bond-laundering(debt-spending). apples to oranges competes too =
+              subsidies for&nbsp;
+              <a href="https://magnate.company">charging-stations</a>.
+              consumer-surrogate rent-seeken broadband/tolls with
+              privately-target-margin instead of gov-gentrification, in all its
+              ways in housing, healthcare...
+            </h2>
+          </div>
+          Retard belie forlorn becoming tarded self harm, afro-tool,
+          discrimination for these words is really Douchey
+          <br />
+          <br />
+          “Know how to get rich quick,” belies Rudy referring to down payment
+          repossession upon repossession as integrally-derivative-rate-of-change
+          for third party beneficiary as false bid pools and implausible
+          landlord use
+          <br />
+          <br />
+          <Cable
+            style={{
+              height: "440px"
+            }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.settleDropboxFree
+                ? ""
+                : "https://www.dropbox.com/s/5jmlz813kivmxc3/Rogan%20better%20angels%20finite%20producers.MP4?raw=1"
+            }
+            float="right"
+            title=""
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          A freelancer for msnbc for blowing red light is irrelevant, and is as
+          much onus derived from a contractor estimate with changing
+          intermediate demand
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1ys9b82WhTKYaQGzV-h_UH3CwoN8B96gL/preview"
+            }
+            float="left"
+            title="Peter 'virus is alive' Morcini"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Monpoly is the reason for inflation, not exclusively money printing
+          (share-split), as with working age and lender work deficit for being
+          untowards price deflation over hours (DRIP)
+          <br />
+          <br />
+          I took it doesn’t because it was an offensive-threat, but because
+          others thought it was
+          <br />
+          <br />
+          gift cards illegal to expire? I think so. ftc says it is state issue
+          now, ftc says
+          <br />
+          <br />
+          enslaving generations of people by wall st/gov 60/40 wealth inequality
+          by third party beneficiary lender-work-deficit
+          <br />
+          <br />
+          the most engaging comes about by algorithmic censorship? no... the
+          most contrived
+          <br />
+          <br />
+          rent-seeking operational-costs, public & private
+          <br />
+          Selling out on&nbsp;
+          <a href="https://open.spotify.com/track/1nyWxVfSonPbt7pTCrPbah?si=c967f067d0d4472a">
+            perpetual
+          </a>
+          &nbsp;durable motion good&nbsp;
+          <a href="https://magnate.company">machine</a>&nbsp;for services and
+          hamburgers
+          <iframe
+            style={{ width: "100%", height: "400px" }}
+            src="https://www.youtube.com/embed/10kjUOVqk7o"
+            title="YouTube video player"
+          />
+          <h1>
+            Amortize, don't cancel nor bailout, then&nbsp;
+            <a href="https://carducci.us">truncate sales tax 2025</a>&nbsp;
+            against menendez
+          </h1>
+          Accrual and premiums over monthly savings is retarded, not savings
+          <Cable
+            style={{ width: "100%", height: "330px", maxHeight: "35vw" }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1aLHSTZdvS5Jw47YOsRz1WaG1j0Sr3COQ/preview"
+            }
+            float={null}
+            title="Outlays to debt 40% revenue 60%, not tax-payer"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <a href="https://ballotpedia.org/New_Jersey_state_budget_and_finances">
+            stop saying tax payer funded
+          </a>
+          , bitch, that is my money, drop dead
+          <br />
+          <br />
+          Brian Kilmeade says that kids don't want to work after school anymore:
+          <Cable
+            style={{ width: "100%", height: "560px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.nofred
+                ? ""
+                : `https://fred.stlouisfed.org/graph/graph-landing.php?g=H5XB&width=670&height=475`
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=H5XB"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.noyoutube
+                ? ""
+                : "https://www.youtube.com/embed/TjvqmfDvOfQ"
+            }
+            float="right"
+            title="https://fb.watch/9ruq5dxR9r/"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ width: "100%", height: "560px" }}
+            onError={handleScollImgError}
+            //img={true}
+            src={
+              this.state.nofred
+                ? ""
+                : `https://fred.stlouisfed.org/graph/graph-landing.php?g=FSwQ&width=670&height=475`
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=FSwQ"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1Lg5X9aSV-1yqm_sfMQnfqmKp8K4iIRql/preview"
+            }
+            float="right"
+            title="539 tries to talk about polling with Mr. Random himself, then"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            inflation isn't known how long it will take for wages to increase
+            intermediate hamburger-service/perpetual-motion-machine
+            collectively-bargained public park
+          </h2>
+          non-voters have plural majority and simple when without ideological
+          duress of wall st pharma cop v wall st pharma cop instead of 11/12
+          determination of desistation, permittance of duress within minimal
+          viable product or conviction, lest payment with comment for
+          discrimination, lest reciprocation of discriminateds' products,
+          therfore a "nuclear-dilemma"
+          <br />
+          <br />
+          <Cable
+            style={{ height: "500px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1SYZjIEl2SHmFlA7J5X4G-xMb2_t9yfa-/preview"
+            }
+            float="left"
+            title="National Report slanders socialism AGAIN"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h1>
+            Marxism, introduced by the, "[application of infinite producers by
+            labor outlaid profits without delay]," in Schumpeter
+          </h1>
+          <a href="https://carducci.sh">We want jury-permits</a>, not infinite
+          producer reasoning what duress is requited by a minimal viable product
+          <br />
+          We just want to amortize, nor cancel, bailout, nor keep this credit
+          cycle of keeping down payments upon reposession, beyond third party
+          beneficiary law and comparative/natural law reasoning that which to
+          each their own, without aggression, financially to compete with
+          consumers like implausible landlord use and false bid pool brokering
+          in insurance "collective bargaining" fraud loitering on the real
+          demand
+          <br />
+          “Non-scientific, randomly enforced,” Cheryl Chumley slanders socialism
+          <br />
+          <br />
+          <span role="img" aria-label="bottom-left">
+            ↙️
+          </span>
+          Output production of price-deflation per hour is of propensity to
+          their own hourly efforts
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1F3kU7lqYR2Nqvv_X_wsVYMTOICoXM33X/preview"
+            }
+            float="left"
+            title="The open-carry-without-luggage right in Wisconsin slanders Marx as an arsonist"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            voluntary is more random than emulated, as we should for
+            finite-producers, comparative law over class precedence malfeasance,
+            jury-permits/target-margin, consumer-surrogates
+          </h2>
+          <a href="https://www.marxists.org/archive/marx/works/1848/communist-manifesto/ch02.htm">
+            Where does Marx say he wants to burn things
+          </a>
+          ? margins outlaid immediately
+          <br />
+          what are you talking about?&nbsp;
+          <a href="https://monthlyreview.org/2020/07/01/marx-and-slavery/#:~:text=It%20is%20worth%20noting">
+            He is talking about the credit cycle
+          </a>
+          &nbsp;(down payments kept upon foreclosure)
+          <br />
+          defense of livelihood of fractional reserve in contract,
+          false-savings-bid-expiring-pool is not “Political violence, to use
+          your platform to depict violence depleting the credibility of this
+          body,”
+          <br />
+          <br />
+          no surrender = claim as much time as i can consume implausible use
+          impossible settlement intentful
+          <br />
+          <br />
+          Socialists’ dream, “tax increases for small businesses,” a socialists
+          dream would be to outlay
+          <br />
+          <a href="https://fred.stlouisfed.org/graph/?graph_id=961160&rn=793">
+            Home sale price changes Percent of new debt
+          </a>
+          <br />
+          <a href="https://fred.stlouisfed.org/graph/?g=C6m9">
+            Debt percent of gdp
+          </a>
+          <br />
+          <a href="https://fred.stlouisfed.org/graph/?g=G8nU">
+            Debt share of mortgages and federal debt
+          </a>
+          <br />
+          expiring-insurance, third-party-beneficiary malfeasance,
+          raffle-licensing-monopsony incite violence
+          <br />
+          <div
+            style={{
+              height: "min-content"
+            }}
+          >
+            <TwitterTweetEmbed
+              style={{
+                float: "left"
+              }}
+              key="1421471623136358405"
+              tweetId="1421471623136358405"
+            />
+          </div>
+          <Cable
+            style={{ height: "440px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1k1Q7mfwZ96mzffl7YcEHuzwP-39l3wjg/preview"
+            }
+            float="right"
+            title="nextdoor.com - 54%/38% n = 13, (8%=1)"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          If electric-cars are feasbile, there is no reason for illiquidity.
+          They had earlier denied my call for the rental-income problem solved
+          by "pillar of Saver Party, to cap rent at quantity, not price." After
+          I had presented the idea here on WABC, but before this nextdoor.com
+          poll
+          <span>
+            release the antibiotics (open-source, cash-tuition without
+            non-consumer money, rental-units)
+          </span>
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1FSwqDP5OcRPA2G0WY5aDiK6OnrI4kujm/preview"
+            }
+            float="left"
+            title="Brian Kilmeade portrait"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          “There are people concerned about Quran placement in Gitmo but no
+          blowback for organ harvesting by China?”
+          <br />
+          <br />
+          "dealing with car repairs seems like a lose-lose situation, that's why
+          you need Carsheild "plans," expiring-insurance is a net-harm... claims
+          bargained for with middle-man-insurance that cannot be withdrwawaln at
+          once is already illegal per the surrendering of your consumers' money
+          with the false pooled bid - to which finite producers cannot compete
+          as to regulate themselves into productive-output (price-deflation per
+          hour) efficiency
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1MEOHPu0i7lFCB2DWGwZRZ87SErCXp5Dn/preview"
+            }
+            float="right"
+            title="National Report - Housing market fluctuations with bob-sellers"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          Slowing of the housing-cycle,” says Bob sellers about foreclosures and
+          the mopping of down payments, amortize, don't cancel nor bailout.
+          timelesspaydayroyalty scoped for industry-type in p2p for
+          non-concurrentable&nbsp;
+          <a href="https://vaults.biz">
+            max-profit-royalty schedule for outlays upon withdrawal or sale
+          </a>
+          , keep investment bank collective bargaining in warehousing equity or
+          fully-funding a collective-bargain without credit
+          <br />
+          <br />
+          void ab initio, duress beyond mvp{/**tom king attorney amistad */}
+          <br />
+          incarceration net loss profit by bonds, regulate (open-source) don't
+          racketeer (compete-with-consumers) means jailtime
+          <Cable
+            style={{
+              height: "300px"
+            }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1JPM1NiA4osQ17-H-TUV7FsHIVTGjAd9a/preview"
+            }
+            float="left"
+            title="Occupy Democrats - take my treatment before jury-verdict of 11/12 without prejudice of expertise"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>expertise breed complacency and savefacing</h2>
+          <Cable
+            style={{
+              height: "500px"
+            }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1szNRKdYpOQOtQMVDeleUVbai0pAxPo2E/preview"
+            }
+            float="right"
+            title="Bernie and Sid - infinite producers, accounting and jury, bona fide and inclusive"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          licensure to 50-50 raffle and&nbsp;
+          <a href="https://truncatedsalestax.com">have advice be taken from</a>
+          &nbsp;is rent-seeking, like
+          fda-craft-beer/nih-r&d-monopsony/doe-trade-secrets/hung-jury-permits
+          <br />
+          We only benefit from charity when we are going to buy those turkies
+          with that money anyway. Price elasticity is 1. Right?!
+          <span
+            role="img"
+            aria-label="side-splitting-laughter hear-no-evil old-man"
+          >
+            🤣🙉👨🏻‍🦳
+          </span>
+          <h2>
+            work off from "seller, loiter on collateral; gdp=debt/down==11/1,
+            only expiring-insurance pool bid fraud can afford advertising
+          </h2>
+          <br />
+          The corporate tax from matching turkeys actually taxes from consumers,
+          if the shareholders are outlaid to join demand without withholdings,
+          public nor private market-communes
+          <br />
+          <br />
+          He doesn’t give up right to self defense because he was there. Do not
+          mix laws or double jeopardy by countervailing laws (and therefore
+          abject racketeering class precedence of the law-licensing-board, akin
+          to fad craft-beer malintent reasons to close-source trade secrets in
+          trust-building and competing with consumer educational institutions,
+          public or private, in labor-dead-weight without exclusive demand
+          autonomy, 60/40 being wall st/gov 40% debt spending $3k/year/person,
+          10-40% bond laundering, debt-service, in fed-state, respectively
+          <br />
+          <br />
+          duress isn't voluntary, random isn't when emulated, but voluntary
+          <Cable
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1JJmqGwKcojFamC_-Io5M11HFzsanf_LJ/preview"
+            }
+            float="right"
+            title="Tucker Carlson fam"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h1>politics between reason and law</h1>
+          “‘I’m going to kill you if you enforce the illegal-law,’ might makes
+          right is why civilization exists,” Tucker Carlson talking about
+          reasons to jail without naturtal crime to Brian Kilmeade. Minnesota is
+          guilty, comparative natural law means we must now carface Jamie Dimon
+          for livlihood counterfeit in contract, pharma-monopsony and
+          malfeasant-/countervailing-justice-and-precedence, open-carry without
+          luggage is guilty, licensing without open-source is guilty, barriers
+          to entry is guilty. register the gun, don't jail or fine when you come
+          up against a detractor to your gerontocracy. "
+          <a href="https://truncatedsalestax.com">
+            when kyle took out this mental-patient
+          </a>
+          ," who 'raped 3 children' but served their time? nj says you are
+          mental-patient if you are homeless after 10x hours and half unemployed
+          to working age cohort size since 1970, then they lie about you saying
+          you kick and punch after trying to elope after presenting you with a
+          siringe, after going in for a knee problem, then believing my mother
+          who just wanted me out of the house without evidence, 13 days, after
+          being called bizarre for calling the diagnosing doctor's income a
+          false pooled bid of expiring-insurance, while Paul Krugman runs free.
+          Ask a murderer why they did it, it is never insanity. only 1/12 jury
+          conviction is legally-crazy, until you have brainscan.info
+          malformity-correlations. I own copyright, you retards are working
+          against $8/day/person new debt. Cocaine and Weed is a performance
+          enhancer, but pain-medication and antibiotics are currency-competition
+          to the public-park dilution that is dollar-park-shares of 20% us fed
+          lands
+          <Cable
+            style={{
+              height: "500px"
+            }}
+            onError={handleScollImgError}
+            src={
+              this.state.serviceCancelingImages
+                ? ""
+                : "https://drive.google.com/file/d/1gQ6YJf6orTjfFQrL23l-AdhrYdSxce-v/preview"
+            }
+            float="left"
+            title="National Report - GOP budget guy"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <h2>
+            price-deflation per hours is sufficed by immigration or ending wall
+            st, being 60% of debt-spending, which certainly IS price-elastic &
+            -inelastic of bid-to-ask
+          </h2>
+          <h2>poorness=(poverty/equality)</h2>, best friends
+          <h2>propensity of output</h2>, expiring-insurance collective
+          bargaining oxymoron, false, fallacy
+          <br />
+          <br />
+          excess deaths CAN be-standardized for cohort sizes to assign
+          significance!" epiologists
+          <br />
+          <br />
+          <b>
+            Saver Party 202X, truncated sales tax, a flat tax's flat tax, free
+            rider immutable sewage police lawsuits
+          </b>
+          : It is literally insignificant except for 20%x more than normal fed
+          spending/yr free rider mutables, 40% debt spending, 10% debt service,
+          .8$ debt for fed spend dollar-public-park (without share-split-accrual
+          a.k.a. “strings), 1/4 pentagon, 1/14 pension, 1/4 premiums for
+          monthly-savings, accosting the supply chain. Why not immigration
+          working-age to sold your delirious supply-chain problem when c1970
+          half-life .5x unemployed to population, 10x price/hours more hours for
+          median home
+          <TwitterTweetEmbed
+            key="1434606169516032012"
+            tweetId="1434606169516032012"
+          />
+          <a href="https://saverparty.xyz">#ThirdPartyBeneficiary</a>
+          <br />
+          <b>#CreditCounterfeitLaundering</b>&nbsp;#ReverseM2, #GreenNewDeal
+          <br />
+          <b>#FreeRiderMutables</b>&nbsp;Involuntary-servitude,
+          #GovernmentGentrification, #SocialismIsParetoEfficient,
+          #FiniteProducers, #RepublicansAreCommunists, #LibertariansAreGimps,
+          #ConsortiumCommunism, #LocaleDepositaries, #DebtlessEconomy,
+          #ZeroSpendingEconomy, #TradeNotSpending,
+          #ReimburseDownPaymentsDuringBankruptcy, #DepositIsntAnOption,
+          #BondVigilantes
+          <br />
+          <TwitterTweetEmbed
+            key="1434603553176309764"
+            tweetId="1434603553176309764"
+          />
+          <b>#CompetingWithConsumers</b>{" "}
+          #CONFLICTOFINTERESTS#UNION#COMPARATIVEADVANTAGE, #GAMETHEORY,
+          ##RolloverInsurance, #PrisonersDilemma, #RolloverCollectiveBargaining,
+          #UselessPriceInelasticity,&nbsp;
+          <a href="https://vaults.biz">#MillennialIncomeDeficit</a>,
+          #M2Laundering,
+          #ConflictOfInterests:#AbjectFailure-#BonaFideIntent+#PromotedWill,
+          #ClassPrecedenceMalfeasance
+          <br />
+          <TwitterTweetEmbed
+            key="1434602186160414727"
+            tweetId="1434602186160414727"
+          />
+          @SaverParty
+          <b>#VaccinesAreRacist</b>&nbsp;Involuntary-servitude, duress beyond
+          incontrovertable, absent of reasonable doubt, consensus proir to
+          conviction, permitting, or ordering of desistation{" "}
+          <a href="https://froth.app/stats">#BasisRateFallacy</a>, #Epiology,
+          #NullHypothesis, "not, not is necessary but not necessarily
+          sufficient", when the basis matches the outcome, you must deduce all
+          other causes to extrapolate a law.
+          <br />
+          <b>#FundSewagePolice</b>&nbsp;hung-jury beyond minimal viable product?
+          &nbsp;
+          <a href="https://www.rutgers.edu/news/rutgers-led-national-survey-uncovers-doctors-misconceptions-about-nicotine-risks">
+            1/3 doctors believe smoking cause birth-defects
+          </a>
+          <br />
+          <TwitterTweetEmbed
+            key="1430159596417699842"
+            tweetId="1430159596417699842"
+          />
+          <br />
+          <b>#TruncatedSalesTax</b>&nbsp;3% under $2k max $60 geohash-spoofable
+          <br />
+          <b>#ImplausibleLandlordUse</b>&nbsp;30 days or 5 units
+          <br />
+          <TwitterTweetEmbed
+            key="1421471623136358405"
+            tweetId="1421471623136358405"
+          />
+          <br />
+          This can only be solved with non-social government (photo & criminal)
+          identity&nbsp;
+          <a href="https://nationalsecuritycasino.com">@DeptofDefense</a>
+          <br />
+          <br />
+          I mean having a physical payment authorization, with certificates on
+          commodity sdr & 44x1 shmita
+          <br />
+          <br />
+          <div
+            style={{
+              borderRadius: "10px",
+              border: "1px solid rgb(100,200,255)",
+              textAlign: "center"
+            }}
+          >
+            {" "}
+            44x cash, debt is now. Borrowers colluding with bankers, loitering
+            on the assets and prohibiting their settled trade away from the
+            youth - to which the youth are put into wageless labor at school,
+            all paid by promising to each other what is not theirs. Now that
+            this case is ...
+            <br />
+            <br />
+            ... apparent, they will print unrequited to make up the difference
+            <br />
+            <br />
+            <div
+              style={{
+                margin: "10px",
+                borderRadius: "10px",
+                border: "1px solid rgb(100,200,255)",
+                textAlign: "center"
+              }}
+            >
+              In the near future we will steward equity+royalty w/max-profit and
+              reverse those purchases to all those affected by the manipulated
+              least frugal supplier and demander by
+              debt-counterfeit-in-contract-wagering monopsony of the consumer’s
+              other marketable assets by prisoners’ dilemma duress coagulating
+              and bloating demand beyond their willingness and ability in their
+              individual propensity https://vaults.biz
+            </div>
+          </div>
+          <br />
+          Why work in cash when you can work to default on debt? Why is being
+          driven to a mental health place once (was it not a hearing?) not
+          congruent w only being able to commute once a month due to a
+          jaggedly-torn vastus medialis that hasn’t healed as I was a bartender
+          @SocialSecurity
+          <br />
+          <br />
+          A bridge, a toll and a broadband network walk into
+          free-rider-monopsony. @Apple Store is the bartender, & the header for
+          webapps is the bootlegged-booze #infrastructure #InfrastructureBill
+          #InfraWeek free-rider-immutables Police officer© sales-tax-geohash
+          http://3under2.us @BrigadeAbe
+          <br />
+          <br />
+          <TwitterTweetEmbed
+            key="1434585366183522312"
+            tweetId="1434585366183522312"
+          />
+          Margin target. Interesting how congruency is perpendicular for an
+          exponential relationship. Hope http://mortality.org is ready for me to
+          put life expectancy under death which could explain the season. Seems
+          the medical community knew it would be a doozy @nih what u know? @who
+          http://Humanharvest.info
+          <br />
+          <br />
+          GDP is all m2, where does currencyComponentOfM1?
+          <br />
+          <br />A degree in economics taught at JHU is not factual, and medical
+          papers are prone to act unlike the reasonable-doubt of “do-no-harm”
+          <br />
+          <br />
+          Let alone are they interested in the wrong answer if it pays
+          <br />
+          <br />
+          Or there is an improper treatment of doctors that abstain for this
+          <br />
+          <br />
+          The government could have given $70k/yr to people every year with the
+          amount of money they printed (red) and $3k promised (blue) but instead
+          operated their trust-built monopsony
+          https://fred.stlouisfed.org/graph/?g=D2jW
+          <br />
+          <br />
+          peeky-blinders prior to conviction? I'll be using the deviceKeyBox
+          &/or physicalKey w/ convicted homicides, rapes, counterfeits,
+          racketeering & non-compliance @ftc loaded on a dashboard for police to
+          interact w/ 1st-time cited plans of attack publicly forced onto
+          @firebase
+          https://vianickcarducci.medium.com/optimal-security-for-webapps-dd2a65c2418c
+          <br />
+          <br />
+          should a http://vau.money atm fee charge in such a way on
+          http://scopes.cc employee-management-auth-cards? and
+          http://thumbprint.us marketplace? I can only prohibit taking
+          credit-counterfeit by using ACH for transfer & ATM for banking...
+          http://vaults.biz
+          <br />
+          <br />
+          <div
+            style={{
+              borderRadius: "10px",
+              backgroundColor: "rgb(100,200,255)",
+              textAlign: "center",
+              padding: "4px 0px"
+            }}
+            onClick={() =>
+              this.setState({ openMinnesota: !this.state.openMinnesota })
+            }
+          >
+            The Government is liable: deadly force, accidental death, of
+            integral instigation; or sting, undercover warrant, who called it
+            in? lie of reasoning?
+          </div>
+          {this.state.openMinnesota && <br />}
+          {this.state.openMinnesota && (
+            <div
+              style={{
+                borderRadius: "3px",
+                border: "1px solid rgb(100,200,255)"
+              }}
+            >
+              prone-control is not use of force, but should be used as
+              active-resisting. ok. but you have the address of Floyd right? let
+              him go #MinnesotaIsGuilty #ChauvinTrial
+              <br />
+              <br />
+              People on drugs might not understand, irratic-behavior, not feel
+              pain, super-human, compliant-to-complete-non-compliance in a
+              heartbeat
+              <br />
+              <br />
+              Compliance, force, duress, intent to harm is not competing with
+              customers or unequal law like '"lawful escalation" of an unequal
+              punishment of infraction.' Do you like it
+              <br />
+              <br />
+              Causes lymphoma; more significant than graft vs humoral response
+              to D416G @CDCgov @NIH
+              <br />
+              <br />
+              Free rider religion of self on civil rights act let alone
+              exclusion @HealthNYGov @RutgersU @JohnsHopkins
+              <br />
+              <br />
+              What proof is not due to mask humidity mold elongating gestation
+              of virus without human cell and rather virus not going up to
+              atmosphere or ceiling in condensation; can we have a study of
+              countertop-talking? @JohnsHopkinsSPH
+              <br />
+              <br />
+              Non-malignant lymphadenopathy is diagnosed by “history and
+              physical examination” Unexplained Lymphadenopathy: Evaluation and
+              Differential Diagnosis Lymphadenopathy is benign and self-limited
+              in most patients. Etiologies include malignancy, infection, and
+              autoimmune disorders, as well as medications and iatrogenic
+              causes. The history and physical... aafp.org
+              <br />
+              <br />
+              The mRNA grafts aren’t saving lives, deaths are exponentially
+              correlated with age @fda https://aafp.org/afp/2002/1201/p2103.html
+              you ran out of vulnerable old people, now the malignant
+              over-production of b-cells will occur Lymphadenopathy and
+              Malignancy The majority of patients presenting with peripheral
+              lymphadenopathy have easily identifiable causes that are benign or
+              self-limited. Among primary care patients presenting with
+              lymphadenopathy, the... aafp.org
+              <br />
+              <br />
+              “Wartime effort” is fraud like gold confiscation in 1932. @ftc
+              @fcc @TheJusticeDept duress religion of self. Hesitancy is not
+              your choice and you certainly cannot mislead
+            </div>
+          )}
+          <br />
+          “Don’t pay thousands in car bills,” where do you think you get the
+          money?
+          <br />
+          <br />
+          Lawful run of red-light, don't you have a snap of the license?
+          <br />
+          <br />
+          You can't crash into them if they continue driving at the speed limit
+          after knowingly running a red light
+          <br />
+          <br />
+          Light to moderate pressure during handcuffs is policy? For
+          counterfeit? Let me show credit history of US gov
+          <br />
+          <br />
+          The police are guilty for positionary-aphyxia force in handcuffs may
+          be a scapegoat... I want the original arrest for counterfeit, even
+          knowingly, to be deemed illegal given the Minn Police operate on
+          counterfeit as of now. Hope they realize what this solidifies for
+          comparative rights in enforcing counterfeit if they can use
+          low-to-moderate positionary-asphyxia force, not even possible with
+          knee except with handcuffs...&nbsp;
+          <a href="https://www.fletc.gov/sites/default/files/imported_files/training/programs/legal-division/downloads-articles-and-faqs/research-by-subject/4th-amendment/ConsenttoEnterorSearchbyDeception.pdf">
+            malfeasance in foresight & monopsony-by-credit for their
+            free-rider-immutable brandishing that keeps us all safe
+          </a>
+          ! ....
+          <br />
+          <br />
+          Bloat prices for their input costs? Launder profits of their business
+          to the bank? That isn’t owning a home! The creditor gets to repossess
+          and keep community down payments
+          <br />
+          <br />
+          Benefit/cost on what grounds? One person’s lifeline? Stop conflating
+          vectors
+          <br />
+          <br />
+          Many factors than cannot be added together in algebra/calculus, they
+          are different units: blood clot loaned to Canada, they owe us the
+          impossibly returned price-fixed at that price damages? This wouldn’t
+          happen if a commodity sdr was lost in the utility of that single
+          vector without cross-party-harm B-cell oncogenesis to boot, for a
+          monoclonal antibody that is learned (where mRNA does/is not,
+          taught-by-doing) over thousands of Antigens. What is the DNA structure
+          you are testing for in the PCR cultures?
+          <br />
+          <br />
+          "So let me get this straight: Pubs in Congress claim spending billions
+          on F-35s creates jobs, but spending on rebuilding roads and bridges
+          doesn't" - Robert Reich
+          <br />
+          <br />
+          It takes jobs from others! You can use monopsony-margin-targeting and
+          free-rider-mutability in tolls too. It doesn’t create jobs
+          <br />
+          <br />
+          <div
+            style={{
+              borderRadius: "10px",
+              backgroundColor: "rgb(100,200,255)",
+              textAlign: "center",
+              padding: "4px 0px"
+            }}
+            onClick={() => this.setState({ openChase: !this.state.openChase })}
+          >
+            Chase
+          </div>
+          {this.state.openChase && <br />}
+          {this.state.openChase && (
+            <div
+              style={{
+                borderRadius: "3px",
+                border: "1px solid rgb(100,200,255)"
+              }}
+            >
+              @ChaseSupport We are the official Twitter customer service team
+              for Chase Bank! We are here to listen, learn and help M-F 7AM-11PM
+              ET & Sat/Sun 10AM-7PM ET. 10.4K Following 135.9K Followers Joined
+              March 2011 Quote Tweet Chase Support @ChaseSupport · Apr 11
+              <br />
+              <br />
+              Replying to @SaverParty Hello. We see you mentioned us, and wanted
+              to make sure you didn't need assistance. If you do, feel free to
+              send us a DM. ^BW
+              https://twitter.com/messages/compose?recipient_id=274789264 My
+              name is Nicholas Carducci, I had drafted a longer message but must
+              have swiped it off and am now too tired to rewrite my whole
+              argument. I would surely like to get your intentions with there
+              being $70k/yr new cash per person and $3k/yr new promises on that
+              cash, per person. You obviously do not intend to get the return
+              you take from the lot. (1) Is that not colonialism and therefore
+              slavery, promising other peoples’ money to yourselves and
+              therefore counterfeit? Please understand all purchases will be
+              reversed to their cash:debt level, now 44:1 and any furtherance to
+              bail out lenders by currencyComponentOfM1 residual split as not in
+              accordance with normal shares, and the disparage is violation of
+              Amendment 14, 13 the Sherman Act and many common law regarding
+              consent. (2) Where does the currencyComponentOfM1 go? Sun 11:46 AM
+              Hi! A specialist will help you as soon as possible. Do NOT send
+              confidential info, such as SSN, credit card, or account numbers
+              over social media. For account-related questions, please send your
+              name, ZIP and details of your concern. Thanks for choosing Chase.
+              Sun 11:46 AM
+              <br />
+              <br />
+              This is duress and comparative law, not a choice I borrowed
+              without the intention to pay it back, since everyone else
+              impossibly was Sun 11:48 AM
+              <br />
+              <br />
+              In the near future we will steward equity+royalty w/max-profit and
+              reverse those purchases to all those affected by the manipulated
+              least frugal supplier and demander by
+              debt-counterfeit-in-contract-wagering monopsony of the consumer’s
+              other marketable assets by prisoners’ dilemma duress coagulating
+              and bloating demand beyond their willingness and ability in their
+              individual propensity Sun 11:51 AM
+              <br />
+              <br />
+              I will not be giving any future income back because the whole
+              premise is illegal, only under a profit schedule of customers
+              willing and ability without prisoner’s dilemma duress and under
+              their own capacity is it legal for supply to gain from a person,
+              to which http://vaults.biz shows the protocol how to be in
+              compliance with US and International law Sun 11:58 AM
+              <br />
+              <br />
+              I will be bringing this class action suit to reverse purchases (or
+              income) to their cash:debt levels and not allow any
+              accrual-promise or actual dollar split to recoup for your bad bet
+              that you must know there is not enough money, unrequited and
+              residually/fractionally, if I had the money. Please answer as to
+              what your intentions are offering me to pay 25% of my borrowing.
+              Duress is voidable as consent to I don’t understand if your
+              strategy to just live it up with your collusion with government
+              and never break even? Sun 12:05 PM
+              <br />
+              <br />
+              To loiter with consumers’ marketable assets by way of the
+              price-intervention of prisoners’ dilemma duress,
+              counterfeit-promises and the duress to collude as a borrower on
+              assets against savers therein and not ownership? Sun 12:09 PM
+              <br />
+              <br />
+              Personal credit is not logically possible and royalty-w/max-profit
+              will not be as generous of outstanding to book-asset value without
+              the government malfeasance and outright monopsonic collusion
+              beyond their free-rider-immutable abilities as to be legally
+              compliant but to expand their purchases to not only while indebted
+              but further split savers and keep the assets under the monopsony
+              of the borrower. Sun 12:13 PM
+              <br />
+              <br />
+              Collateralized-credit is like a deposit, not an option where the
+              price is locked in. That means repossession comes with a return of
+              the down-payments to the supply chain you monopsonized Time-based
+              business credit is also a method to launder money before demand is
+              really ready willing and able to of their own consent Please
+              follow http://vaults.biz for my tech solution and consider the
+              geohash protocol for sales tax software to pick up and ween off
+              slavery For free-rider-immutable Gov services like their
+              margin-targeting duty on networks and markets of ‘markets’
+              <br />
+            </div>
+          )}
+          <br />
+          Lending, buying to rent with unsettled trade and unrequited-split is
+          not help, it is cannibalism
+          <br />
+          <br />
+          Why default or go to war? COVID-19 mRNA Vaccination-Induced
+          Lymphadenopathy humanharvest.info
+          <br />
+          <br />
+          Growth for @JoanHamburgShow is if people die and she has to share less
+          <br />
+          <br />
+          Usually they find an excuse to print from “public credit” to private
+          debts
+          <br />
+          <br />
+          Business is the key to non-profit efficiency, as if profits are income
+          over spending, of as discretionary-income are revenue over
+          expenditures, and efficiency is investment (asset, profit-share
+          accumulation, not lending or building with the intent to rent) over
+          wages moldmask.co, cocaine is money, purity health dpt @SaverParty
+          <br />
+          <br />
+          Investment must be channeled from willing, able and ready customers,
+          free-rider-mutable market, immutable https://3under2.us
+          <br />
+          <br />
+          <div>
+            <a
+              href="https://scopes.cc"
+              style={{
+                fontSize: "30px",
+                display: "flex",
+                flexDirection: "column",
+                position: "relative",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+                height: "76px",
+                backgroundColor: "#c39767ff",
+                color: "white"
+              }}
+            >
+              Scopebook
+              <br />
+              <span>scopes.cc accrual-zero</span>
+            </a>
+          </div>
+          <br />
+          Scott, Tax Foundation: "10% Union Workforce by Federal Discrimination"
+          when unions are not just strikes
+          <br />
+          <br />
+          Everyone is at commercial, but one has to be bullshiting for
+          compliance at :20, :35 and :52
+          <br /> <br />
+          The point in which&nbsp;
+          <a href="https://www.tradingtechnologies.com/xtrader-help/x-study/technical-indicator-definitions/volume-on-the-bid-and-ask-bavol/">
+            supply and demand meet
+          </a>
+          &nbsp;is the price in which the LEAST frugal, price-giving supplier
+          meets the LEAST frugal, price taking demand, and thereby trades to
+          paint the last trade valuation&nbsp;
+          <a href="https://humanharvest.info">mirrorcode</a>
+          <br /> <br />
+          this is colonialism, this is counterfeit; cannibalism not dominance or
+          profits/assets to institutions/labor
+          <br />
+          <br />
+          government monopsony
+          <br />
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <div
+              style={{
+                minWidth: "120px",
+                width: "25%",
+                position: "relative"
+              }}
+            >
+              <img
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }}
+                src="https://www.dropbox.com/s/9un3448wjl1dnip/IMG_3563.png?raw=1"
+              />
+            </div>
+            <div
+              style={{
+                minWidth: "120px",
+                width: "25%",
+                position: "relative"
+              }}
+            >
+              <img
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }}
+                src="https://www.dropbox.com/s/h03iyt7e8hxa19w/IMG_3562.png?raw=1"
+              />
+            </div>
+            <div
+              style={{
+                minWidth: "120px",
+                width: "25%",
+                position: "relative"
+              }}
+            >
+              <img
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }}
+                src="https://www.dropbox.com/s/esz6ke2xn7fs716/Markey1.png?raw=1"
+              />
+            </div>
+            <div
+              style={{
+                minWidth: "120px",
+                width: "25%",
+                position: "relative"
+              }}
+            >
+              <img
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }}
+                src="https://www.dropbox.com/s/xjhg8b1kcmwxpxz/Markey2.png?raw=1"
+              />
+            </div>
+          </div>{" "}
+          <br />
+          <b style={{ color: "blue" }}>
+            I’m a laborer and pre-rev inventor, I will be suing for damages and
+            unequal law;
+            <br />
+            there are plenty of counts, Sherman Act, Amendment 14, 13,
+            counterfeit-wagering prohibiting trade settlements...
+          </b>
+          <br />
+          <br />
+          We all have to make a living (read:cannibal), but we all don't have to
+          produce by front-running and than dumber-fooling consumers. and these
+          direct deposits are involuntary split that you get 9% of
+          <br />
+          <br />
+          <div
+            style={{
+              borderRadius: "10px",
+              margin: "10px",
+              padding: "10px",
+              border: "1px solid grey"
+            }}
+          >
+            Harder for GA absentee & early-voting somehow from runoff... it
+            makes it easier for most! we can use internet no more political
+            parties
+            <br />
+            <br />
+            80% infrastructure investment support, did you specify if by debt or
+            tax? What is the n size? @PressSec
+            <br />
+            <br />
+            “Competitive-bidding process” is abjectly untrue to describe your
+            monopsony proposal. You can force network companies to pay because
+            they are a market-of-markets
+            <br />
+            <br />
+            If you are to act in between a consumer-subcontractor, as
+            contractor, you should be flipping-assets or pro-rated-for-escrow-on
+            @scopeboo http://scopes.cc labor/material
+            auto-unlock-per-sprint-payment
+            <br />
+            <br />
+            Jen Psaki about to admit her preferential treatment of “American
+            workers and our economy” over savers and labor @PressSec
+            <br />
+            <br />
+            Do not volunteer Cowards Starve - Protomartyr open.spotify.com
+            <br />
+            <br />
+            Extending the deadline was not in the consumer credit contract, Jen.
+            You lose moldmask.co, cocaine is money, purity health dpt
+            <br />
+            <br />
+            I obey if I am sick, but get the “vaccine”/graft to please you @cnn
+            won’t even say your doctor’s name @BrookeBaldwin
+            <br />
+            <br />
+            You can see how good #cocaine is by looking at these three charts,
+            you don't need a @MoodysInvSvc rating or @GeraldoRivera report
+            https://drugabuse.gov/publications/teaching-addiction-science/brain-actions-cocaine-opioids-marijuana
+            #Marijuanastocks
+            <br />
+            <br />
+            https://ncbi.nlm.nih.gov/pmc/articles/PMC3165962/ #MinnesotaIsGuilty
+            #ChauvinTrial #cocaina #cocainewhite
+            <br />
+            <br />
+            Meth x fetanol = Hypoxaemia, oxygen deficiency [relative-to carbon
+            dioxide. no narcan when no cardio Dr. Bradford Langford (called:
+            "non-responsive, no-pulse on-arrival")
+            https://pubmed.ncbi.nlm.nih.gov/23636734/ Ph low during cardiac
+            arrest, no blood flow
+            https://ncbi.nlm.nih.gov/pmc/articles/PMC3208791/ striatal hypoxia
+            The effects of opioids on the lung - PubMed The term opioid refers
+            to a broad class of medications that are used most frequently for
+            their analgesic effects. Along with this effect, they also produce
+            euphoria, and it is for this reason that... pubmed.ncbi.nlm.nih.gov
+            <br />
+            <br />
+            (oxygen) to tissues: pi, lactate Co2, high, uh, varies, blood/gas
+            not cause of one offer the other in edi arrest. High co2 suggest
+            respiratory cause by drug, suffocation or both
+            https://erj.ersjournals.com/content/44/4/1023 reports of
+            in-conjunction for po-po: top of citations are tenants; its slavery
+            Gas exchange and ventilation–perfusion relationships in the lung A
+            review of ventilation–perfusion relationships and gas exchange,
+            basic concepts and their relation to clinical cases
+            http://ow.ly/wMUwq erj.ersjournals.com
+            <br />
+            <br />
+            If the @ftc can make it the liability of the merchant for fault of
+            disbursements prior to notification, their application of
+            residual-split ('86-benefits) is as well @ssa your onus is to ensure
+            that I am who I say I am regardless of how you don't
+            regen-private-keys or photo-ID
+            <br />
+            <br />
+            What is the difference between an unsettled-obligation &&
+            prisoners’-dilemma-duress and slavery?
+            <br />
+            <br />
+            Only pay for what you need. An abject lie @LibertyMutual unless you
+            are admitting to intending to harm by subjecting Demand to
+            cross-party-bloat && price-variable-gift-cards @77WABCradio
+            <br />
+            <br />
+            What is the difference between an unsettled-obligation &&
+            prisoners’-dilemma-duress and slavery?
+            <br />
+            <br />
+            But a Constitution of Government once changed from Freedom, can
+            never be restored. Liberty, once lost, is lost forever.
+            <br />
+            <br />
+            Somebody report me! Donald already incriminated for nothing
+            <br />
+            <br />
+            Chris Hahn @ChristopherHahn It’s a tantrum not a boycott.
+            <br />
+            <br />
+            The Former Guy will never be welcome at Yankee Stadium or anywhere
+            else in New York.
+            <br />
+            <br />
+            Replying to @ChristopherHahn Push him out to sea
+            <br />
+            <br />
+            I had a word with lit- prefix that really narrowed it down but then
+            a guy on the radio said DUI of weed or cocaine makes sense
+            <br />
+            <br />
+            Producers say to rentier you are not one of us, we compete with
+            eachother for customers, we don’t take the land or air above it to
+            not use it or flip and settle or supply is not practically
+            constrained to charge rent (if copyright is not too broad, but
+            well-managed...)
+            <br />
+            <br />
+            Invoices are theft Max five rent 3 under 2 Reverse purchases to
+            cash:debt
+            <br />
+            <br />
+            Colluding to make prices higher with father time && the intent to
+            harm (not use) are what make rent illegal
+            <br />
+            <br />
+            This is not a subscription to a service that doesn’t harm others (if
+            non-compete monopsony, the subscription does harm with involuntary
+            trade)
+            <br />
+            <br />A competable-subscription service is not
+            bloating-demand-with-prisoners-dilemma or
+            assigning-impossible-usurped-unrequited-invoices
+          </div>
+          <br />
+          Cases are rising, deaths are less lethal because the vulnerable are
+          already dead and there are testing what already existed since 1900
+          cold make same antibodies but only work if robotic platform
+          <hr />
+          <br />
+          <hr />
+          <br />
+          <hr />
+          <div style={{ backgroundColor: "rgb(200,220,255)" }}>
+            "5 Bipartisan Covid Relief Plans, no Covid Health Spending which
+            would be to help small businesses and family workers," 9%. Ben
+            Furgeson says 9% "Goes to you." You guys suck! Not liable for the
+            products you advertise, huh, M. levin
+            <br />
+            <br />
+            Liberty Mutual: "You only pay for what you need." &nbsp;
+            <a href="https://www.investopedia.com/articles/investing/110513/utilizing-prisoners-dilemma-business-and-economy.asp">
+              YOU DONT NEED IT
+            </a>
+            . &nbsp;
+            <a href="https://nmlsconsumeraccess.org/">Consumer Access</a>
+            &nbsp;costs access, by its being to greater effect AND absolutely of
+            relative savings...&nbsp;
+            <a href="https://www.investopedia.com/articles/investing/110513/utilizing-prisoners-dilemma-business-and-economy.asp">
+              doing it is a waste of time and equityutilitymoney
+            </a>
+            <br />
+            <br />
+            “Special financial assistance,” would be to help negotiate original
+            principle without credit found market marginal utility:cost price,
+            not favor the lender or overreaching landlord
+            <br />
+            <br />
+            The key to world peace is no finance. Not mental health services by
+            the hand of state sanctioned, paid, conflictedly-interested experts
+            <br />
+            <br />
+            "Help is on the way with your finances" - Wold Blitzer
+            <br />
+            you are taking equitymoney, splitting it as you would corporate
+            shares, and giving them back less and of increased demand capacity
+            for price:utility (no reason, not help, only helps the ask to get
+            more&nbsp;
+            <a href="https://foiegras.life">for the same thing</a>)
+            <br />
+            <a href="https://open.spotify.com/track/0KeDuUqEX3P0cKzRD5pEom?si=i8hSI_NeQtuCwpt9x34p6w">
+              not taking credit
+            </a>
+            , striving to work for market(copyright, not{" "}
+            <a href="https://vaults.biz">depositary</a>) share instead of
+            entrapping myself into <a href="https://stripe.com">Stripe.com</a>
+            <br />
+            <br />
+            Judges cannot judge what is right for bail, they'rn't impartial - as
+            in they get the bail.
+            <br />
+            Bail for judges'n't for consumers/
+            <a href="https://wavv.art/United_States_of_America">community</a>
+            &nbsp;- the service at its most efficient as to keep everyone
+            happiest, individually, for the complainants only; class action is
+            for precedence, but we all assume it gets less than each individual
+            case would.
+            <br />
+            <br />
+            Allpoint and Greendot (Shazam/Gallileo/Dwolla&nbsp;
+            <a href="https://nationalsecuritycasino.com">only US</a>) oligopoly
+            prevents me from extending payable services because it requires me
+            to take counterfeit offers with cross-party down-payment
+            malfeasant-jurisprudence risk in requiring that I accept credit to
+            accept debit, and banks that cost $10/mo instead of ATM networks
+            <br />
+            <a href="https://www.academia.edu/43983364/Review_Capitalism_in_the_21st_Century">
+              CountyReimbursementsAcrossTheCountry
+            </a>
+            , that's my equitymoney, dike
+            <br />
+            <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  width: "40%",
+                  position: "relative"
+                }}
+              >
+                <img
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }}
+                  src="https://www.dropbox.com/s/alxtqu19s764stl/CountyReimbursements.jpeg?raw=1"
+                />
+              </div>{" "}
+              <div
+                style={{
+                  width: "40%",
+                  position: "relative"
+                }}
+              >
+                <img
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }}
+                  src="https://www.dropbox.com/s/nnv1d4217tjix7b/IMG_0318.jpeg?raw=1"
+                />
+              </div>
+            </div>
+            <br />
+            This fat talks about equity and then says thanks to Biden for
+            providing funds. Funding doesn't help, it only monopsonizes above
+            the ask. Not only is it fraud by PCR antibody the "
+            <a href="https://humanharvest.info">gold</a>&nbsp;standard" but
+            false positive as is for cold's response, the policy was forced upon
+            us in 1937
+            <br />
+            <br />
+            Border Patrol agents are saying 50-100% have wristbands to show how
+            much pootang they owe the cartels on the way up. &nbsp;
+            <a href="https://en.wikipedia.org/wiki/Janet_Yellen">
+              STOP THE SPIGGETS
+            </a>
+            <br />
+            <br />
+            <br />
+            What is with the media today reminding us that the vaccine has
+            already been approved and the bills are finalized? We could take all
+            your money and give it to Greta Thunberg The only path forward is
+            the Efficiency Act and debt:cash reconciliation for all purchases to
+            which the LEAST frugal price-giving ask and price-taking person
+            found price*output(or individual-efficiency, comparative-advantage
+            productivity)
+            <br />
+            <br />
+            STOP ASKING FOR CAPACITY WHEN YOU MEAN&nbsp;
+            <a href="https://www.academia.edu/43983364/Review_Capitalism_in_the_21st_Century">
+              DEMAND CAPACITY
+            </a>
+            &nbsp;WHICH IS&nbsp;
+            <a href="https://saverparty.xyz">
+              PERFECTLY PRICE ELASTIC FOR ITS UTILITY PER EACH NEW CAPACITY
+            </a>
+            , WE NEED&nbsp;
+            <a href="https://www.tradingtechnologies.com/xtrader-help/x-study/technical-indicator-definitions/volume-on-the-bid-and-ask-bavol/">
+              SUPPLY CAPACITY
+            </a>
+            &nbsp;OR VOLUNTEER OR LESS FRUGAL PRODUCERS, NOT STEAL BY
+            COUNTERFEIT-IN-CONTRACT
+            <br />
+            <div
+              style={{
+                width: "40%",
+                position: "relative"
+              }}
+            >
+              <img
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "auto"
+                }}
+                src="https://www.dropbox.com/s/fohi9a6fxtrch0q/NeedFundsImmediately.jpeg?raw=1"
+              />
+            </div>{" "}
+            <br />
+            "Need funds immediately." NO YOU DON'T you need to adjunicate
+            finance, insurance-by-duress, rentier-colonism & involuntary trade
+            now
+            <br />
+            <br />
+            "Leverage things" of donors or settled-market price, not equity.
+            That's illegal. It is not a matter of time. Naturally debt:cash is
+            1:1depositary in 1908, now is 41:1
+          </div>
+          <Cable
+            style={{ width: "100%", height: "560px" }}
+            onError={handleScollImgError}
+            src={
+              this.state.nofred
+                ? ""
+                : `https://fred.stlouisfed.org/graph/graph-landing.php?g=J6zW&width=670&height=475`
+            }
+            float="right"
+            title="https://fred.stlouisfed.org/graph/?g=J6zW"
+            scrolling={this.state.scrolling}
+            fwd={this["scrollImg" + scrollnum()]}
+            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+            scrollTop={this.state.scrollTop}
+          />
+          <br />
+          <a
+            href="https://saverparty.xyz"
+            style={{
+              position: "relative"
+            }}
+          >
+            <img
+              style={{ width: "90%", maxWidth: "800px" }}
+              src="https://www.dropbox.com/s/ohyyc9wensqjmar/interest%20dead%20weight%20%282%29.png?raw=1"
+              alt="interest dead-weight by equity-bid supply and demand"
+            />
+          </a>
+          <br />
+          <br />
+          People are dying; my _ considers death
+          <br />
+          <span>
+            Your debts are mine if I buy from you, and that money you promised
+            is not yours to promise.&nbsp;&nbsp;
+            <b>
+              How can I get us out of debt when there is $82t:$7t
+              [actually&nbsp;
+              <a href="https://fred.stlouisfed.org/series/CURRSL">
+                currencyComponentOfM1
+              </a>
+              &nbsp;is $2t of $7t, $5t is&nbsp;
+              <a href="https://fred.stlouisfed.org/series/M1SL">
+                M1 savings valuation
+              </a>
+              &nbsp;, M2 is&nbsp;
+              <a href="https://fred.stlouisfed.org/series/M1SL">$19t</a>&nbsp;is
+              valuation of last traded savings accounts as well, or $7t when "
+              <a href="https://fred.stlouisfed.org/series/M2REAL">deflated</a>
+              &nbsp;with cpi" which doesn't include the greatest inflation in
+              housing nor in price-inelasticity of $82/$2t (4100% vs 102%)]
+              <br />
+              2021
+            </b>
+          </span>
+          <br />
+          <h1>Micro-Theory</h1>
+          <h2>Platitudes</h2>
+          <br />
+          <div style={{ display: "block", flexDirection: "column" }}>
+            Only if you are [ "late on your business-line{" "}
+            <span
+              style={{
+                textDecoration: "line-through"
+              }}
+            >
+              or collateralized debt
+            </span>
+            , and the lender tacks on more than they estimated they would need
+            to take on this risk forever (depreciation-no-give-backsies)",
+            "scalping markets with no utility in assets or cash"] are you
+            usurping a time-based payout schedule or trade
+            <br />
+            Productivity as measured by gdp is incorrect since it is mostly debt
+            by evidence of v1 being derived from a gdp number of m2*v2.
+            Productivity should be measured by benefit to cost, which cannot be
+            encapsulated by a benefit that is a cost
+            <br />
+            They are colluding with finance (11x wealth only 2% of population)
+            giving it to people who have debt to bail out $82t of usurped debt
+            cornering assets by promising other people's money which is only
+            $6t, they do not want to adjudicate, they just want to split
+            dollar-equity without consent
+            <br />
+            If insurance companies are a net loss because they pay invoices
+            instead of rollover gift certificates, can ALL insurance companies
+            keep saying they save people money if the part that they can never
+            say in unison is that they save people money only relatively??
+            <br />
+            <b>
+              <i>We still live in colonialism </i>
+            </b>
+            <br />
+            <i>at each market-level </i>
+          </div>
+          <br />
+          <span>
+            <b>
+              <i>Regulators can only </i>
+            </b>
+            certify because they have been wrong before about tobacco and
+            methane fires in crowded theatres are invisible
+          </span>
+          <span>
+            <b>
+              <i>national security is</i>
+            </b>{" "}
+            really bondholder security, we would do better after emancipation
+            and no more slavery. insurrection against slaveowners is ok
+          </span>
+          time is a snapshot of facts, facts don't change from time but by
+          voluntary trade or else it breaks A13
+          <br />
+          voluntary by no duress or alterior uneccesary, hidden or unknowable
+          harm or by literally people colluding together about your money being
+          theirs and they reap the benefits of using the collateral now... which
+          is all that matters and the money the seller gets and is now
+          instilling a cost only they can pay in full and more from another
+          saver in the borrowers' customers
+          <span>
+            <b>
+              borrowing with my money itelf as a lender or assuming it as a
+              consumer is counterfeit not of copyright which should never be
+              patent by mafia pay-off but of not your property to wager, your
+              payment scedule collusion with seller, lender and borrower assumes
+              you'll get my market-share, which should be vault-share, which is
+              all currency really is. a gift certificates that rollover at the
+              depreciation of the item in storage
+            </b>
+            , I now have to wait for you to get the money back from the lender
+            or seller before I can get the depreciated asset
+          </span>
+          <br />
+          <span>
+            <b>
+              <i>GDP is </i>
+            </b>
+            debt by a fabricated v1 from gdp/m1 where gdp from m2v2
+          </span>
+          <br />
+          <span>
+            <b>
+              <i>Rent is </i>
+            </b>
+            the prohibition of trade thru which to benefit from more than how
+            much they could possibly benefit in reality by owning the place, and
+            not trespassing at one time ({">"}1mo) (1/5)
+          </span>
+          <br />
+          <span>
+            <b>
+              <i>
+                Debt, invoices & insurance brokering gift cards & expiring gift
+                certificates are{" "}
+              </i>
+            </b>
+            to price-fix & monopolize the Demand curve & leverage other peoples'
+            autonomy in principal & interest, or the sellers' equity in
+            principal & other peoples' autonomy in interest
+          </span>
+          <br />
+          <span>
+            <b>
+              <i>Tax is </i>
+            </b>
+            theft by not being paid by those using services that cannot be a la
+            carte (voluntary)
+          </span>
+          <br />
+          <span>
+            <b>
+              <i>Slavery is </i>
+            </b>
+            an impossible contract, theft or indentured servitude that which is
+            not able to work out of without others' benefits at your disposal
+          </span>
+          <br />
+          <span>
+            <b>
+              <i>Lending is </i>
+            </b>
+            a conspiracy to price-fix and corner assets with a borrower using
+            someone else's money as a valuation metric
+          </span>
+          <br />
+          <a
+            href="https://Vaults.biz"
+            style={{
+              fontSize: "30px",
+              display: "flex",
+              position: "relative",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "76px",
+              backgroundColor: "rgb(20,20,25)",
+              color: "rgb(200,200,220)"
+            }}
+          >
+            Vaults.biz
+          </a>
+          <br />
+          <span>
+            or be able to pay but{" "}
+            <b>
+              not get paid due to preferences; or receive services due to
+              impairment, only under duress or by your own interpretation of
+              their benefit and cost
+            </b>
+            <br />- government or business may only certify advice to a standard
+            unless your actions affect another by disclusion, duress or opinion
+            of their actions or opinions. Not sharing health data or getting
+            tagged with a graft to be included precludes any right to stop
+            people from doing anything based on health, preference or bodily
+            composition unless it is apparent, symptomatic or unanimously
+            deduced
+            <br />
+            <b>
+              you have to prove that what I believe is not true to make me stop
+              saying it and I would have to prove something to make you have to
+              repair the situation within your means
+            </b>
+            as long as it is not If they know this they should be able to find
+            the attendees beforehand. Sounds like a con. Stop selling
+            bonds/promising savers’ money at 11x more than we have to enemies
+            for price-fixed cornering of assets please. bio on each guy and put
+            them on the parole intranet
+            <br />
+            <div
+              style={{
+                border: "1px solid",
+                margin: "10px"
+              }}
+            >
+              A derivative cannot be a constant since apples are not oranges of
+              differing, but the same units. #calculus Integral function is how
+              constants observed (never adequate, random is as random does)
+              predict future occurrences (which can be endless). #firstamendment
+              Methane fires in a crowded theatre like debt or a percolating
+              insurance-abetting invoice bill now you charge your customers
+              rather when they choose you and you don't corner assets with your
+              lender by not giving any utility but using a bug{" "}
+              {`(()=>{servitude:()=>capturing saver’s money + either (a) being a government employee + this(); or (b)(1) LENDER pay BORROWER, (2) BORROWER pay LENDER 14%APR or this()})`}
+              , can cause invisible or misunderstood harm as is lying or
+              trusting that gov-sanctioned tobacco is healthy. Inclusion is an
+              issue of A13 & A14 to give but not take, not A1; discovery of what
+              we can garner as facts from comprehensive data and viewpoints
+              discussing with an intent to settle and without malintent or
+              usurping other's rights is an issue of A1 #criminallaw
+              #criminalintent #intention #whitecollarcrime #finance #consumerlaw
+              #accounting #securitieslitigation #securitiesregulation
+              #nationalsecurity of secession is not of foreign bond-holder aid
+              and comfort
+            </div>
+            <br />
+            <b>
+              A1 is only for laws, well then you can turn people away from your
+              business based on arousal-orientation?
+            </b>{" "}
+            Freedom of orientation is protected by A14 and Civil Rights Act,
+            also A13 if you do not want to instigate slavery of allowing them to
+            give but not take in the economy. Especially if there are few
+            providers or you want to be protected from what people say
+            <br />
+            <b>privacy is required for free expression</b> Freedom of
+            arousal-orientation, whatever makes you happy is protected by A14
+            and Civil Rights Act, also A13 if you do not want to instigate
+            slavery of allowing them to give but not take in the economy.
+            <br />
+            <div
+              style={{
+                border: "1px solid",
+                margin: "10px"
+              }}
+            >
+              <b>
+                supreme court saying nazi could walk chicago <i>is wrong</i>
+              </b>{" "}
+              because there is probable-evidence-of-evidence of motive to do
+              them harm physically or financially (not valuation but tangible
+              losses) neighborhood law is like the sea law but between homes,
+              that's why open-carry is also an exhibited threat
+            </div>
+          </span>
+          <span>
+            or earning other people’s money (debt is the only bet that you can
+            wager someone else’s money)
+          </span>
+          <br />
+          <h2>Strategy-Comparison to Macroeconomics</h2>
+          <br />
+          <span>
+            <b>
+              <i>Analysis by logic of markets-at-scale, </i>
+            </b>
+            not numbers by bets beyond escrow & involving others' marginal
+            benefits or utility expended as cost
+          </span>
+          <br />
+          <h2>Alternative Investing Models</h2>
+          <br />
+          <span>
+            <b>
+              <i>Customer borrowing, at a fixed- or max-profit price, </i>
+            </b>
+            although is not promising money that isn’t theirs like in interest
+            or time, it is price-fixing as a business can wait for customers to
+            deliver return, while an individual will have to charge their
+            patrons to have enough to buy food, health & shelter & the partner
+            (really colonizer in this situation)
+            {/**
+        (1) due to adding no competitor to raise quality of
+        life, just price, whose effect without benefit competitively is still
+        passing the burden on their customers,, (3) Prohibits
+        other people from trading the settled price not as a partnership to make
+        a product better at a settled price, but a customer max-profit royalty
+        if there is the ability to
+        foreclose it is not settled (2)
+        */}
+          </span>
+          <a
+            href="https://NationalSecurityCasino.com"
+            style={{
+              fontSize: "30px",
+              display: "flex",
+              position: "relative",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "76px",
+              backgroundColor: "white",
+              color: "black"
+            }}
+          >
+            NationalSecurityCasino.com
+          </a>
+          <a
+            href="https://SaverParty.xyz"
+            style={{
+              fontSize: "30px",
+              display: "flex",
+              position: "relative",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "76px",
+              backgroundColor: "#a64d79ff",
+              color: "rgb(230,230,230)"
+            }}
+          >
+            SaverParty.xyz
+          </a>
+          <a
+            href="https://Froth.app"
+            style={{
+              fontSize: "30px",
+              display: "flex",
+              position: "relative",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "76px",
+              backgroundColor: "#04060aff",
+              color: "#edeac1ef"
+            }}
+          >
+            Froth.app
+          </a>
+          <span>
+            <br />
+            <b>
+              <i>
+                Wealth is your assets relative to demand need, which may be as
+                valuable as toilet paper or colonialism{" "}
+              </i>
+            </b>
+            <b>
+              If the government is giving aid and comfort to China by way of
+              instigating savers into involuntary servitude and having the
+              market’s assets cornered by no utility gained just price-fixing
+              imagination of a resolution of this infinite promise{" "}
+              {`(()=>{servitude:()=>capturing saver’s money + either (a) being a government employee + this(); or (b)(1) LENDER pay BORROWER, (2) BORROWER pay LENDER 14%APR or this()})()`}
+            </b>{" "}
+            <br />
+            price-fixing is when you place the ask and the bid by oligopoly or
+            otherwise... what, you are only cooperating when you have a funny
+            name?
+            <br /> in the name of · ·
+            <br />
+            promising more than you can pay; insurance that doesn't rollover
+            (not subs because they promise no more than what you use/ do not
+            give more to others in the pool or their customers or tort
+            prosecutors) or is unsettled by invoice to buy is counterfeit
+            <br />
+            of reality and facts right now in the ground the assumptions of
+            other's for future and past only exist in the claimant's head
+            <br /> Lettin people profit from bugs being used rather than useful
+            things is intentful harm being done to other people they sign up
+            under duress or those who those people sell to. wagering dollars as
+            comparative as shareholder rights or counterfeit being mixed in
+            supply or achieving a purchase is; or copyright over patents.
+            invoices are theft; debt interest per time, or on customers, is too
+            per price or compound on their customers required, unrequited...
+            <br />
+            <br />
+          </span>
+        </div>
+        <h1 ref={this.podcast}>
+          <iframe
+            title="Advanced Microeconomics: The Micro-Theory.com Podcast"
+            src="https://embed.podcasts.apple.com/us/podcast/advanced-microeconomics-the-micro-theory-com-podcast/id1629354788?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto"
+            height="450px"
+            frameborder="0"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+            allow="autoplay *; encrypted-media *; clipboard-write"
+            style={{
+              width: "100%",
+              maxWidth: "660px",
+              overflow: "hidden",
+              borderRadius: "10px",
+              background: "transparent"
+            }}
+          ></iframe>
+        </h1>
+        <a href="https://micro-theory.com/p/intro.mp3">
+          <h3>Intro</h3>
+          What is microeconomics?
         </a>
-        , and not because of population growth (but because of finance, evident
-        by GDP/p 0%/yr+ amidst 3%/yr+ population, 1800–1913). This is a global
-        trend, extrapolating from GDP/p growth, globally, yet I have not charted
-        to confirm the same is for employment by age.
-        <hr ref={this.work} />
-        <Salaries
-          lastWidth={Math.min(600, this.state.lastWidth)}
-          style={{
-            paddingBottom: "15px",
-            backgroundColor: "rgb(190,150,180)"
-          }}
-        />
-        Here, we see retirement age used the pandemic to not come back to work;
-        albeit work is an artifact of tech deprecation,{space}
-        <a href="https://fred.stlouisfed.org/graph/?g=MISp">1/hour-GDP/p</a>
-        . The U.S. accounts 19% of its population as disabled, including being
-        mad and old, to profit by bonds’ operational loss and investment bank
-        funded welfare, “general revenue,” trust-breaking-hypocrisy.
-        <Cable
-          style={{ width: "100%" }}
-          onError={handleScollImgError}
-          img={true}
-          src={
-            this.state.noyout
-              ? ""
-              : "https://www.dropbox.com/s/7c9d2y2of1elpol/Screen%20Shot%202022-03-08%20at%2010.41.04%20AM.png?raw=1"
-          }
-          float={"right"}
-          title="gold stocks homes autos"
-          scrolling={this.state.scrolling}
-          fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.scrollTop}
-        />
-        why would you believe governments that say expected deaths are famines?
-        and People only live longer by proper sewage (cross-ref India-U.S.).
-        They make money just building and blowing up fireworks that they{space}
-        <a href="https://qr.ae/pGdaNd">debt spend and tax for</a>. Profits are
-        only made by subjugating labor-demand.
-        <h4>scapegoating duress beyond minimal viable product</h4>
-        Trust-breaking/building hypocrisy; investment bank funded welfare;
-        <br />
-        <br />
-        Tort known hazards no evidence by comparable isolate non-price
-        discrimination, not exclusively chat, for Tranquil and voluntary-trade,
-        whistleblower on jury without state vig nor false bid pool, implausible
-        use lease, not loitering lender surrendered outrights.
-        <a
-          style={{
-            shapeOutside: "rect()",
-            float: "right",
-            maxWidth: "100%",
-            padding: "0px 10px",
-            //fontSize: "20px",
-            fontFamily: "'Pacifico', sans-serif"
-            //color: "rgb(230,230,255)"
-            //backgroundColor: "rgb(32, 22, 11)"
-          }}
-          href="https://gmunit.us"
-        >
-          gmunit.us
+        <a href="https://micro-theory.com/p/the-reason-for-microeconomics.mp3">
+          <h3>The Reason for Microeconomics,</h3>a saving grace of bleeding
+          heart Americans
+        </a>
+        <a href="https://podcasts.apple.com/us/podcast/advanced-microeconomics-the-micro-theory-com-podcast-microeconomics-for-macroeconomists-and-laymen/id1629354788">
+          Advanced Microeconomics: The Micro-Theory.com Podcast, Microeconomics
+          for Macroeconomists and Laymen
         </a>
       </div>
     );
