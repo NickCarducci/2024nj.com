@@ -612,6 +612,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h4>Disassociation is a disability now?</h4>
         You should count{space}
         <a href="quora.com/How-would-politics-in-the-U-S-change-if-we-adopted-ranked-choice-voting/answer/Nick-Carducci">
           our
@@ -630,7 +631,7 @@ export default class App extends React.Component {
           allowtransparency="true"
           height="315"
           width="100%"
-          style={{border: "none", minWidth: "min(100%, 430px)"}}
+          style={{ border: "none", minWidth: "min(100%, 430px)" }}
           scrolling="no"
           data-name="pb-iframe-player"
           src="https://www.podbean.com/player-v2/?i=erve2-dcc91c-pbblog-playlist&share=1&download=1&fonts=Arial&skin=f6f6f6&font-color=ffffff&rtl=0&logo_link=episode_page&btn-skin=3267a3&size=315"
@@ -639,16 +640,47 @@ export default class App extends React.Component {
         NYU business pro Scott Galloway: "We've never been able to raise
         interest rates as much as necessary to counter inflation, without
         triggering a recession."
-        <br />
-        <br />
-        Why is expense good when it is incorporated? Deflation less inflation is
-        less employee benefits and government deficit. If raising rates combats
-        inflation because debt causes inflation by causing consumers to be price
-        takers for the jobs of tomorrow, why not cancel corresponding bonds of
-        student loans, or more pointedly reverse amortize (cash/debt)*income
-        (invaluable borrower’s defense to repayment is not as strong as third
-        party donee beneficiary surrendered freedom to bid in contract law, yet
-        it is another’s standing but for as duress of the former-grounds).
+        <h2>
+          Truncated Wholesale Tax - I might have an episode on tax exemptions,
+          just pay cops less.
+        </h2>
+        <Cable
+          style={{ width: "100px" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout ? "" : "https://www.youtube.com/embed/kOy3I2ceTRA"
+          }
+          float={"left"}
+          title="https://youtu.be/kOy3I2ceTRA"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <Cable
+          style={{ width: "100px" }}
+          onError={handleScollImgError}
+          //img={true}
+          src={
+            this.state.noyout ? "" : "https://www.youtube.com/embed/WnK_f8i7AQE"
+          }
+          float={"right"}
+          title="https://youtube.com/shorts/WnK_f8i7AQE?feature=share"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.scrollTop}
+        />
+        <b>Why is expense good when it is incorporated</b>? Deflation less
+        inflation is less employee benefits and government deficit. If raising
+        rates combats inflation because debt causes inflation by causing
+        consumers to be price takers for the jobs of tomorrow, why not cancel
+        corresponding bonds of student loans, or more pointedly reverse amortize
+        (cash/debt)*income (invaluable borrower’s defense to repayment is not as
+        strong as third party donee beneficiary surrendered freedom to bid in
+        contract law, yet it is another’s standing but for as duress of the
+        former-grounds).
         <br />
         <br />
         <a href="https://open.spotify.com/track/4tMZoPR9v4kvICAPyknxpa">
@@ -8677,3 +8709,4 @@ export default class App extends React.Component {
     );
   }
 }
+
