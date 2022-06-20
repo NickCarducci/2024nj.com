@@ -6,8 +6,8 @@ import { UAParser } from "ua-parser-js";
 //import Gist from "react-gist";
 import NYPD from "./nypd";
 import OIL from "./oil";
-import EDU from "./edu"; // Do I have to pay sales tax under $10k per person?
-import Spanish from "./flu"; //Can you save 5% on gross tax by taking income as a small business owner before reporting?
+import EDU from "./edu";
+import Spanish from "./flu";
 import Vax from "./vax";
 import firebase from "./init-firebase.js";
 import {
@@ -612,7 +612,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h4>Disassociation is a disability now?</h4>
+        <h4>
+          Disassociation is a{space}
+          <a href="https://saverparty.quora.com/Is-Chris-Murphy-correct-in-saying-mental-health-gun-restrictions-will-prevent-homicides-1">
+            disability
+          </a>
+          {space}now?
+        </h4>
         You should count{space}
         <a href="quora.com/How-would-politics-in-the-U-S-change-if-we-adopted-ranked-choice-voting/answer/Nick-Carducci">
           our
@@ -642,7 +648,11 @@ export default class App extends React.Component {
         triggering a recession."
         <h2>
           Truncated Wholesale Tax - I might have an episode on tax exemptions,
-          just pay cops less.
+          just pay{space}
+          <a href="https://www.quora.com/unanswered/Would-cops-not-be-relatively-richer-by-truncated-wholesale-tax-and-or-banning-tax-exemptions">
+            cops
+          </a>
+          {space}less.
         </h2>
         <Cable
           style={{ width: "100px" }}
@@ -676,11 +686,14 @@ export default class App extends React.Component {
         inflation is less employee benefits and government deficit. If raising
         rates combats inflation because debt causes inflation by causing
         consumers to be price takers for the jobs of tomorrow, why not cancel
-        corresponding bonds of student loans, or more pointedly reverse amortize
-        (cash/debt)*income (invaluable borrower’s defense to repayment is not as
-        strong as third party donee beneficiary surrendered freedom to bid in
-        contract law, yet it is another’s standing but for as duress of the
-        former-grounds).
+        corresponding bonds of{space}
+        <a href="https://truncatedproductiontax.quora.com/Has-anybody-suggested-incentivizing-repayment-of-student-loans-by-using-matching-grants-instead-of-merely-cancelling-a-t-1">
+          student loans
+        </a>
+        , or more pointedly reverse amortize (cash/debt)*income (invaluable
+        borrower’s defense to repayment is not as strong as third party donee
+        beneficiary surrendered freedom to bid in contract law, yet it is
+        another’s standing but for as duress of the former-grounds).
         <br />
         <br />
         <a href="https://open.spotify.com/track/4tMZoPR9v4kvICAPyknxpa">
