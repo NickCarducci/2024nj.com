@@ -232,6 +232,16 @@ export default class App extends React.Component {
       this.check = setTimeout(check, 4000);
     }
   }; //elated bizarre messy hair 1/hour-GDP/p
+
+  //pass named function as body? 'bound' no name
+  createNamedFunction = (name = "ok", body = function () {}) => {
+    //return function names(){}
+    return {
+      [name]: function () {
+        return body.apply(body, arguments);
+      }
+    }[name];
+  };
   render() {
     const { posts } = this.state;
     const handleScollImgError = (e) => {
@@ -612,6 +622,14 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        {/*<button
+          onClick={(e) => {
+            e.preventDefault();
+            console.log(this.createNamedFunction("ok", function () {}));
+          }}
+        >
+          test named func
+        </button>*/}
         <h4>
           Disassociation is a{space}
           <a href="https://saverparty.quora.com/Is-Chris-Murphy-correct-in-saying-mental-health-gun-restrictions-will-prevent-homicides-1">
@@ -619,6 +637,30 @@ export default class App extends React.Component {
           </a>
           {space}now?
         </h4>
+        <a href="https://www.quora.com/unanswered/Why-are-people-not-allowed-to-self-harm-but-a-family-can-decide-to-mercy-kill">
+          Why are people not allowed to self-harm but a family can decide to
+          mercy kill
+        </a>
+        ?
+        <br />
+        <br />
+        <a href="https://www.quora.com/unanswered/Is-involuntary-commitment-based-on-hearsay-evidence">
+          Is involuntary commitment based on hearsay evidence
+        </a>
+        ?
+        <br />
+        <br />
+        <a href="https://www.quora.com/unanswered/Why-did-I-get-involuntarily-committed-for-saying-rollover-insurance-to-a-doctor">
+          Why did I get involuntarily committed for saying "rollover insurance"
+          to a doctor
+        </a>
+        ?<br />
+        <br />
+        <a href="https://rolloverinsurance.quora.com/Why-is-a-bone-marrow-transplant-so-expensive">
+          Why is a bone marrow transplant so expensive
+        </a>
+        ?
+        <br />
         You should count{space}
         <a href="quora.com/How-would-politics-in-the-U-S-change-if-we-adopted-ranked-choice-voting/answer/Nick-Carducci">
           our
@@ -630,18 +672,30 @@ export default class App extends React.Component {
           reconciliation
         </a>
         .
-        <br />
-        <br />
+        <h2>
+          <a href="https://www.quora.com/Does-it-seem-that-many-people-advocate-for-socialism-despite-the-fact-that-government-regulations-restrictions-cause-monopolies-excessive-unnatural-inequalities-in-our-markets-not-buying-selling-in-an-open-market/answer/Nick-Carducci">
+            Does it seem that many people advocate for socialism, despite the
+            fact that government regulations & restrictions cause monopolies &
+            excessive unnatural inequalities in our markets, not buying &
+            selling in an open market without market coercions
+          </a>
+          ?
+        </h2>
         <iframe
           title="Advanced Microeconomics: The Micro-Theory.com Podcast, Microeconomics for Macroeconomists and Laymen"
-          allowtransparency="true"
           height="315"
           width="100%"
           style={{ border: "none", minWidth: "min(100%, 430px)" }}
           scrolling="no"
           data-name="pb-iframe-player"
           src="https://www.podbean.com/player-v2/?i=erve2-dcc91c-pbblog-playlist&share=1&download=1&fonts=Arial&skin=f6f6f6&font-color=ffffff&rtl=0&logo_link=episode_page&btn-skin=3267a3&size=315"
-          allowfullscreen=""
+          iframe={{
+            allowTransparency: "true",
+            frameBorder: "0",
+            allowFullScreen: "",
+            allow:
+              "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          }}
         ></iframe>
         NYU business pro Scott Galloway: "We've never been able to raise
         interest rates as much as necessary to counter inflation, without
