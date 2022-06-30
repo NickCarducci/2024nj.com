@@ -2056,9 +2056,23 @@ export default class App extends React.Component {
             marginRight: "10px"
           }}
         >
-          Benefits’ tax-“free” expense, or income as a loss, is not a fucking
-          tax-“break.”
+          Benefits’ tax-“free” expense, or income as a{space}
+          <span
+            style={{
+              textDecoration: "underline"
+            }}
+          >
+            loss
+          </span>{space}cost of production/goods sold
+          , is not a fucking tax-“break.”
         </div>
+        marginal value would price take budget contraint but for insurance, installments and rents.
+        <br/>
+        import outsourcing labor of other markets horizon themsleves but for money and exclusion inflation.
+        <br/>
+        would cartels be peaceful if the DEA wasn't destroying their pharmacy?
+        <br/>
+        <br/>
         Checking has tripled in 2 years, with
         GDP-structures-equipment-durable-goods-food-clothing-housing-utilities
         decreasing while healthcare remained the same proves PROFITS BY PREMIUM
@@ -8776,4 +8790,5 @@ export default class App extends React.Component {
     );
   }
 }
+
 
