@@ -9,35 +9,22 @@ import OIL from "./oil";
 import EDU from "./edu";
 import Spanish from "./flu";
 import Vax from "./vax";
-import firebase from "./init-firebase.js";
-import {
-  getFirestore,
-  collection,
-  doc,
-  onSnapshot,
-  addDoc,
-  getDoc,
-  updateDoc,
-  setDoc,
-  increment
-} from "firebase/firestore";
 import Salaries from "./salaries";
 import GDP from "./gdp";
 import SSA from "./ssa";
 import Unable from "./unable";
 import Population from "./population";
+import Petition from "./Petition";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     var parser = new UAParser();
     const name = parser.getBrowser().name;
     console.log(name);
-    const firestore = getFirestore(firebase);
     document.cookie = "";
     this.state = {
       posts: [],
       trigger: false,
-      firestore,
       browser: name,
       scrollTop: 0,
       ios: name.includes("Safari")
@@ -65,23 +52,6 @@ export default class App extends React.Component {
     window.addEventListener("resize", this.refresh);
     window.addEventListener("scroll", this.handleScroll);
     this.refresh(true);
-
-    onSnapshot(doc(this.state.firestore, "countData", "only"), (doc) => {
-      if (doc.exists()) {
-        var foo = doc.data();
-        foo.id = doc.id;
-        this.setState({ signatures: foo.count });
-      }
-    });
-    onSnapshot(collection(this.state.firestore, "posts"), (snapshot) => {
-      snapshot.docs.forEach((doc) => {
-        if (doc.exists()) {
-          var foo = doc.data();
-          foo.id = doc.id;
-          this.setState({ posts: foo.count });
-        }
-      });
-    });
   };
   componentWillUnmount = () => {
     document.body.style.margin = null;
@@ -124,68 +94,6 @@ export default class App extends React.Component {
         });
       }, 600);
     }
-  };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    if (
-      this.state.first !== "" &&
-      this.state.last !== "" &&
-      this.state.address !== "" &&
-      this.state.city !== "" &&
-      this.state.zip !== ""
-    ) {
-      /*console.log("do");
-      firebase
-        .firestore()
-        .collection("signatures")
-        .where("first", "==", this.state.first)
-        .where("middle", "==", this.state.middle)
-        .where("last", "==", this.state.last)
-        .where("address", "==", this.state.address)
-        .where("city", "==", this.state.city)
-        .where("zip", "==", this.state.zip)
-        .get()
-        .then((doc) => {
-          if (doc.exists) {
-            window.alert("you've signed! 🎉");
-          } else {*/
-
-      addDoc(collection(getFirestore(firebase), "signatures"), {
-        first: this.state.first,
-        middle: this.state.middle,
-        last: this.state.last,
-        address: this.state.address,
-        city: this.state.city,
-        zip: this.state.zip
-      }).then(() => {
-        this.setState({ finished: true });
-        const counts = collection(getFirestore(firebase), "countData");
-
-        getDoc(doc(counts, "only"))
-          .then((dc) => {
-            if (dc.exists()) {
-              updateDoc(doc(counts, "only"), {
-                count: increment(1)
-              });
-            } else {
-              setDoc(doc(counts, "only"), {
-                count: increment(1)
-              });
-            }
-          })
-          .then(() => {
-            window.alert("you've signed! 🎉");
-            this.setState({ finished: true });
-          })
-          .catch((err) => {
-            console.log(err.message);
-            this.setState({ finished: true });
-          });
-      });
-    } else
-      return window.alert(
-        "please complete required fields, all except middle name"
-      );
   };
   componentDidUpdate = (prevProps) => {
     if (this.props.pathname !== prevProps.pathname) {
@@ -622,6 +530,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+          <h2>
+            Nick Carucci's answer to{space}
+            <a href="https://realecon.quora.com/How-do-inventions-make-human-life-better-1">
+              How do inventions make human life better
+            </a>
+            ? in Real Economics
+          </h2>
         {/*<button
           onClick={(e) => {
             e.preventDefault();
@@ -2063,16 +1978,19 @@ export default class App extends React.Component {
             }}
           >
             loss
-          </span>{space}cost of production/goods sold
-          , is not a fucking tax-“break.”
+          </span>
+          {space}cost of production/goods sold , is not a fucking tax-“break[
+          verb].”
         </div>
-        marginal value would price take budget contraint but for insurance, installments and rents.
-        <br/>
-        import outsourcing labor of other markets horizon themsleves but for money and exclusion inflation.
-        <br/>
+        marginal value would price take budget contraint but for insurance,
+        installments and rents.
+        <br />
+        import outsourcing labor of other markets horizon themsleves but for
+        money and exclusion inflation.
+        <br />
         would cartels be peaceful if the DEA wasn't destroying their pharmacy?
-        <br/>
-        <br/>
+        <br />
+        <br />
         Checking has tripled in 2 years, with
         GDP-structures-equipment-durable-goods-food-clothing-housing-utilities
         decreasing while healthcare remained the same proves PROFITS BY PREMIUM
@@ -8209,88 +8127,7 @@ export default class App extends React.Component {
           Degrowth is because you set people free and they become creative, -
           <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
         </h2>
-        <div
-          ref={this.carducci}
-          style={{
-            shapeOutside: "rect()",
-            float: "right",
-            maxWidth: "100%",
-            padding: "0px 10px",
-            //fontSize: "20px",
-            fontFamily: "'Pacifico', sans-serif"
-            //color: "rgb(230,230,255)"
-            //backgroundColor: "rgb(32, 22, 11)"
-          }}
-          //href="https://carducci.us/primary"
-        >
-          <div
-            style={{
-              backgroundColor: "black",
-              padding: "10px"
-            }}
-          >
-            <a
-              style={{
-                color: "white"
-              }}
-              href="https://occupywall.us"
-            >
-              OccupyWall.us
-            </a>
-          </div>
-          <h2>
-            {/*Where do you live, bitch?I will find you */}Are you a New Jersey
-            voter?
-          </h2>
-          <h2>Submit your signature! {this.state.signatures}/800</h2>
-          {this.state.finished ? (
-            <div>
-              <h2>Thank you! keep in touch:</h2>
-              <h3>nick@carducci.sh</h3>
-            </div>
-          ) : (
-            <form onSubmit={this.handleSubmit}>
-              <input
-                onChange={(e) => this.setState({ first: e.target.value })}
-                placeholder="first name"
-              />
-              <input
-                onChange={(e) => this.setState({ middle: e.target.value })}
-                placeholder="middle name"
-              />
-              <input
-                onChange={(e) => this.setState({ last: e.target.value })}
-                placeholder="last name"
-              />
-              <br />
-              <input
-                onChange={(e) => this.setState({ address: e.target.value })}
-                placeholder="address"
-              />
-              <input
-                onChange={(e) => this.setState({ city: e.target.value })}
-                placeholder="city"
-              />
-              <input
-                onChange={(e) => this.setState({ zip: e.target.value })}
-                placeholder="zip"
-              />
-              <div style={{ fontSize: "12px" }}>
-                This provisional signature to get on US Senate ballot in 2024
-                for 2025 will be contestable if <br />
-                voter identity is ambiguous{" "}
-                <a href="https://voter.svrs.nj.gov/registration-check">
-                  https://voter.svrs.nj.gov/registration-check
-                </a>
-              </div>
-              <button type="submit">submit</button>
-              {/*<div style={{ color: "grey", fontSize: "10px" }}>
-            this is on firebase but only shows you signed if you enter the
-            same info...
-        </div>*/}
-            </form>
-          )}
-        </div>
+        <Petition />
         "G-d looks in favor of those suffering in Ukraine," what, from being
         old/mad, they blame their inability to Save, upon?
         <h1>WHO'S FRANK??</h1>
@@ -8790,5 +8627,4 @@ export default class App extends React.Component {
     );
   }
 }
-
 
