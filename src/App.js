@@ -530,13 +530,13 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-          <h2>
-            Nick Carucci's answer to{space}
-            <a href="https://realecon.quora.com/How-do-inventions-make-human-life-better-1">
-              How do inventions make human life better
-            </a>
-            ? in Real Economics
-          </h2>
+        <h2>
+          Nick Carucci's answer to{space}
+          <a href="https://realecon.quora.com/How-do-inventions-make-human-life-better-1">
+            How do inventions make human life better
+          </a>
+          ? in Real Economics
+        </h2>
         {/*<button
           onClick={(e) => {
             e.preventDefault();
@@ -8265,7 +8265,10 @@ export default class App extends React.Component {
         <br />
         U.S. imports $1b/day oil, Q600k/day,{space}
         <a href="https://saverparty.xyz/global">that is</a>
-        {space}$1.6k/day oil each barrel
+        {space}$1.6k/day oil each barrel.
+        <br />
+        12m/day barrels produced, 18m sold. that is 6m refined on net (gross
+        means you are dealing with a discount positive)
         <h4 ref={this.gas}>
           obviously the main factor in oil by wells is{space}
           <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
