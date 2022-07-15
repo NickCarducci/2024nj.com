@@ -8123,7 +8123,7 @@ export default class App extends React.Component {
         <a href="https://qr.ae/pGdUME">Efficiency</a>
         {space}is not growth. jobs is not a sign of strength, if there is
         laborless-demand calamity
-        <h2>
+        <h2 ref={this.carducci}>
           Degrowth is because you set people free and they become creative, -
           <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
         </h2>
