@@ -15,6 +15,7 @@ import SSA from "./ssa";
 import Unable from "./unable";
 import Population from "./population";
 import Petition from "./Petition";
+import OIL2 from "./oil2";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8273,6 +8274,13 @@ export default class App extends React.Component {
           obviously the main factor in oil by wells is{space}
           <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
         </h4>
+        <OIL2
+          lastWidth={Math.min(600, this.state.lastWidth)}
+          style={{
+            paddingBottom: "15px",
+            backgroundColor: "rgb(190,150,180)"
+          }}
+        />
         <OIL
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
