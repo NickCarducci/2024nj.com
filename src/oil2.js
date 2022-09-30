@@ -1190,6 +1190,7 @@ class OIL2 extends React.Component {
       return oil2data[b]["2021"] - oil2data[a]["2021"];
     });
     oildata.forEach((state, i) => {
+      if (["Wyoming", "New Mexico"].includes(state)) return null;
       states.push(state);
       const statedata = oil2data[state];
       Object.keys(statedata).forEach((year) => {
@@ -1212,6 +1213,7 @@ class OIL2 extends React.Component {
     var highDate = Math.max(...date);
     //console.log(dataData);
     var state = {
+      withbig: true,
       states,
       chosenState: "Total",
       oildrilling,
@@ -1225,6 +1227,58 @@ class OIL2 extends React.Component {
     };
     this.state = state;
   }
+  componentDidUpdate = () => {
+    if (this.state.withbig !== this.state.lastwithoutbig)
+      this.setState({ lastwithoutbig: this.state.withbig }, () => {
+        //let testing = [];
+        let noData = [];
+        let date = [];
+        let oildrilling = {};
+        let drilling = [];
+        let states = [];
+        const oildata = Object.keys(oil2data).sort((a, b) => {
+          //console.log(oil2data[a]["2021"]);
+          return oil2data[b]["2021"] - oil2data[a]["2021"];
+        });
+        oildata.forEach((state, i) => {
+          if (this.state.withbig && ["Wyoming", "New Mexico"].includes(state))
+            return null;
+          states.push(state);
+          const statedata = oil2data[state];
+          Object.keys(statedata).forEach((year) => {
+            i === 0 && date.push(year);
+            state !== "Total" && drilling.push(statedata[year]);
+            if (!oildrilling[state]) oildrilling[state] = [];
+            oildrilling[state].push([Number(year), statedata[year]]);
+            i === 0 && noData.push([year, 0]);
+          });
+        });
+        /*let dataDataData = {};
+    Object.keys(dataData).forEach((label, i) => {
+      const yearData = Object.values(label)[i];
+      if (!dataDataData[yearData[0]]) dataDataData[yearData[0]] = 0;
+      dataDataData[yearData[0]] = dataDataData[yearData[0]] + yearData[1];
+    });*/
+        var lowDrilling = Math.min(...drilling);
+        var lowDate = Math.min(...date);
+        var highDrilling = Math.max(...drilling);
+        var highDate = Math.max(...date);
+        //console.log(dataData);
+        var state = {
+          states,
+          chosenState: "Total",
+          oildrilling,
+          noData,
+          yAxisDrilling: highDrilling - lowDrilling,
+          xAxisDrilling: highDate - lowDate,
+          xAxisPrice: highDate - lowDate,
+          lowDrilling,
+          highDate,
+          lowDate
+        };
+        this.setState(state);
+      });
+  };
   render() {
     const labelstyle = {
       backgroundColor: "rgba(50,120,200,.6)",
@@ -1283,8 +1337,13 @@ class OIL2 extends React.Component {
       height: lineheight + 10,
       transform: "translate(0%,0px) scale(1,-1)"
     };
+    const states = this.state.states.filter((state) => {
+      if (this.state.withbig && ["Wyoming", "New Mexico"].includes(state))
+        return null;
+      return state;
+    });
     var oildrilling = {};
-    this.state.states.forEach((state) => {
+    states.forEach((state) => {
       oildrilling[state] = this.state.oildrilling[state].map(([x, y]) => [
         ((x - this.state.lowDate) / this.state.xAxisDrilling) *
           coefficience *
@@ -1320,8 +1379,8 @@ class OIL2 extends React.Component {
             value={this.state.chosenState}
             onChange={(e) => this.setState({ chosenState: e.target.value })}
           >
-            {this.state.states.map((state) => {
-              return <option>{state}</option>;
+            {this.state.states.map((state, i) => {
+              return <option key={state + i}>{state}</option>;
             })}
           </select>
           <div
@@ -1337,6 +1396,23 @@ class OIL2 extends React.Component {
           </div>
         </div>
         {this.state.highDrilling}
+        <div
+          style={{
+            top: "50px",
+            position: "absolute",
+            right: "0px",
+            zIndex: "9"
+          }}
+        >
+          WY, NM{" "}
+          <input
+            type="checkbox"
+            value={this.state.withbig}
+            onChange={(e) => {
+              this.setState({ withbig: e.target.checked });
+            }}
+          />
+        </div>
         <div
           style={{
             transform: "translateY(20px)",
@@ -1366,30 +1442,34 @@ class OIL2 extends React.Component {
                   />
                 )
             )}
-            {this.state.states.map((state) => {
-              return oildrilling[state].map(
-                ([x, y], i) =>
-                  !isNaN(x) &&
-                  !isNaN(y) && (
-                    <rect
-                      x={x}
-                      y={y}
-                      width={2}
-                      height={2}
-                      stroke={
-                        this.state.chosenState === state
-                          ? "blueviolet"
-                          : "lightgrey"
-                      }
-                      fill={
-                        this.state.chosenState === state ? "blue" : "lightgrey"
-                      }
-                      strokeWidth={1}
-                      key={i}
-                    />
-                  )
-              );
-            })}
+            {states
+              .sort((a, b) => b - a)
+              .map((state) => {
+                return oildrilling[state].map(
+                  ([x, y], i) =>
+                    !isNaN(x) &&
+                    !isNaN(y) && (
+                      <rect
+                        x={x}
+                        y={y}
+                        width={2}
+                        height={2}
+                        stroke={
+                          this.state.chosenState === state
+                            ? "blueviolet"
+                            : "lightgrey"
+                        }
+                        fill={
+                          this.state.chosenState === state
+                            ? "blue"
+                            : "lightgrey"
+                        }
+                        strokeWidth={1}
+                        key={i}
+                      />
+                    )
+                );
+              })}
           </svg>
         </div>
         {/*<div
