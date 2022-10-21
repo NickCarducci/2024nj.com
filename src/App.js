@@ -6141,6 +6141,15 @@ export default class App extends React.Component {
         </h4>
         nervous system (16%) and injured (7%)
         <hr ref={this.disability} />
+        2. A self-stunting ableist. 3. The developmentally disabled and/or
+        injured are more careful than to succumb to further retardation (I’m
+        interested in this topic because I’m injured and have a non-speaking
+        older cousin). 1. The tard is stupid if not disabled and/or injured. I
+        want able people to be able to self-stunt in out lexicon, or be stupid,
+        not just the developmentally-disabled/injured. It opens up the
+        mentally-ill to the same SSDI which is an affront, to me.
+        <br />
+        <a href="https://lightte.ch">tool?</a>
         <Unable
           lastWidth={Math.min(600, this.state.lastWidth)}
           style={{
