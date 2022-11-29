@@ -49,17 +49,20 @@ export default class Petition extends React.Component {
       .then(async (res) => await res.json())
       .then((r) => {
         const IPv4 = r.IPv4;
-        this.setState({ IPv4 });
-        const cookies = collection(firestore, "cookies");
-        onSnapshot(query(cookies, where("IPv4", "==", IPv4)), (snapshot) => {
-          snapshot.empty && this.setState({ cookied: false });
-          snapshot.docs.forEach((doc) => {
-            if (doc.exists()) {
+        //console.log(IPv4);
+        this.setState({ IPv4 }, () => {
+          onSnapshot(
+            doc(firestore, "cookies", IPv4),
+            (doc) => {
+              if (!doc.exists()) {
+                console.log(IPv4, "cookie:", false);
+                return this.setState({ cookied: false });
+              }
               console.log(IPv4);
-              doc.data();
               this.setState({ cookied: true });
-            }
-          });
+            },
+            (e) => console.log(e.message)
+          );
         });
       })
       .catch((err) => console.log(err.message));
@@ -163,6 +166,9 @@ export default class Petition extends React.Component {
         console.log(err.message);
       });
   };
+  componentWillUnmount = () => {
+    clearTimeout(this.check);
+  };
   componentDidUpdate = (prevProps) => {
     if (this.props.pathname !== prevProps.pathname) {
       clearTimeout(this.check);
@@ -240,32 +246,39 @@ export default class Petition extends React.Component {
           >
             OccupyWall.us
           </a>
-          <div
-            onClick={!this.state.cookied ? this.cookieplz : this.nocookie}
-            style={{ color: "white", display: "flex" }}
-          >
-            {this.state.cookieCount}
-            &nbsp;&nbsp;
+          {this.state.cookied === undefined ? (
+            <div style={{ color: "white", display: "flex" }}>loading</div>
+          ) : (
             <div
-              style={{
-                border: `${!this.state.cookied ? 1 : 0}px solid`,
-                color: "white",
-                display: "flex"
-              }}
+              onClick={!this.state.cookied ? this.cookieplz : this.nocookie}
+              style={{ color: "white", display: "flex" }}
             >
-              if you just want a cookie
-              {/*why is your cookie better than mine */}
+              {this.state.cookieCount}
+              &nbsp;&nbsp;
               <div
                 style={{
-                  border: `${this.state.cookied ? 1 : 0}px solid`,
+                  border: `${!this.state.cookied ? 1 : 0}px dotted grey`,
                   color: "white",
-                  backgroundColor: !this.state.cookied ? "green" : ""
+                  display: "flex"
                 }}
               >
-                ✓
+                {this.state.cookied
+                  ? "thanks you! you ARE strategically significant!"
+                  : "if you just want a cookie"}
+                {/*why is your cookie better than mine */}
+                <div
+                  style={{
+                    cursor: "pointer",
+                    border: `${this.state.cookied ? 1 : 0}px solid`,
+                    color: "white",
+                    backgroundColor: !this.state.cookied ? "green" : ""
+                  }}
+                >
+                  ✓
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
         <h2>
           {/*Where do you live, bitch?I will find you */}Are you a New Jersey
