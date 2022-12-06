@@ -531,6 +531,21 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3 style={{ float: "right" }}>
+          <a
+            href="https://account.venmo.com/u/truncatedwholesaletax" /*https://venmo.com/code?user_id=3567148823742342744"*/
+          >
+            Please Donate
+          </a>
+          <br />
+          <br />
+          <a href="https://venmo.com">(first, sign in)</a>
+        </h3>
+        How do banks secure wallets with a lost password functionality without
+        having a bank identification number for each{space}<a href="https://vau.money">account</a>? Do you even trust
+        the Office of the Comptroller of the Currency without historical latches
+        of the null, confirmed?
+        <br />
         <h2>
           Nick Carucci's answer to{space}
           <a href="https://realecon.quora.com/How-do-inventions-make-human-life-better-1">
