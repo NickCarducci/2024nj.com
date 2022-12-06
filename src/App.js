@@ -542,9 +542,16 @@ export default class App extends React.Component {
           <a href="https://venmo.com">(first, sign in)</a>
         </h3>
         How do banks secure wallets with a lost password functionality without
-        having a bank identification number for each{space}<a href="https://vau.money">account</a>? Do you even trust
-        the Office of the Comptroller of the Currency without historical latches
-        of the null, confirmed?
+        having a bank identification number for each{space}
+        <a href="https://vau.money">account</a>
+        {space}(<i>Don't processes have the quality of success?</i>)? Do you
+        even trust the Office of the Comptroller of the Currency without
+        historical latches of the null, confirmed?{space}Is{space}
+        <a href="https://markethistory.quora.com/Did-prohibition-stop-workplace-accidents-1">
+          subjectivity
+        </a>
+        {space}a good characteristic for one to have? Is a fiscal deficit a
+        financially responsible operation?
         <br />
         <h2>
           Nick Carucci's answer to{space}
