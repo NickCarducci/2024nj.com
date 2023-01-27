@@ -101,7 +101,7 @@ export default class Petition extends React.Component {
         zip: this.state.zip
       }).then(() => {
         this.setState({ finished: true });
-        const counts = collection(firestore, "signatures");
+        const counts = collection(firestore, "countData"); //signatures
 
         getDoc(doc(counts, "only"))
           .then((dc) => {
