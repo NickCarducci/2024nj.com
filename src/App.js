@@ -2038,7 +2038,7 @@ export default class App extends React.Component {
         bank income lending something other than deposits the "Do Fund do great
         for society." Pool-charge and outright third party donee beneficiary,
         not your own bid. Luke Petitgout, I'll rip your throat out. Let people
-        do drugs without your imposition, faggot
+        do drugs without your imposition, faggot. SELF DEFENSE
         <br />
         <br />
         If it really is a crime && evidence, why is there bond? Per diem
@@ -8105,7 +8105,7 @@ export default class App extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.scrollTop}
         />
-        But I’m going to rip your goddamn head off
+        But I’m going to rip your goddamn head off SELF DEFENSE
         <br />
         I’m gonna fucking kill you
         <br />"<a href="https://qr.ae/pGdau0">we need</a>
