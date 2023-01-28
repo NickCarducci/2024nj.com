@@ -241,7 +241,7 @@ export default class Petition extends React.Component {
         {this.state.finished ? (
           <div>
             <h2>Thank you! keep in touch:</h2>
-            <h3>nick@carducci.sh</h3>
+            <h3>sayists@icloud.com</h3>
           </div>
         ) : (
           <form onSubmit={this.handleSubmit}>
