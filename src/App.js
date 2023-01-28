@@ -536,7 +536,7 @@ export default class App extends React.Component {
               />
             </a>
           </div>
-        </div>
+        </div>psychitric medicine doesn't change the alleged crime of the following:
         if wall street keeps causing inflation I will rip their throats out.<br/>
         SELF DEFENSE. IF FLOYD CAN BE CARFACED YOU CAN TOO<br/>
         <h3 style={{ float: "right" }}>
