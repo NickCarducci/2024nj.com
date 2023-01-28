@@ -537,6 +537,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        SELF DEFENSE. IF FLOYD CAN BE CARFACED YOU CAN TOO<br/>
         <h3 style={{ float: "right" }}>
           <a
             href="https://account.venmo.com/u/truncatedwholesaletax" /*https://venmo.com/code?user_id=3567148823742342744"*/
