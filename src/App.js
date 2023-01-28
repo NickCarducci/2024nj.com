@@ -537,6 +537,12 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3>
+          <a href="https://nextdoor.com/pages/thumbprint-fair-haven-nj">
+            Why does the government force business people to bank with lenders
+          </a>
+          ?
+        </h3>
         I contribute open source and get paid in deflation. any weapon can be
         used of equal power. the people that cause inflation just by working are
         deadly. i think the people that need me to write this out are
