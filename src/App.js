@@ -536,8 +536,7 @@ export default class App extends React.Component {
               />
             </a>
           </div>
-        </div>
-        
+        </div>does self defense require the same weapon?
         is it a war crime to fight for the right to own?
         psychitric medicine doesn't change the alleged crime of the following:
         if wall street keeps causing inflation I will rip their throats out.<br/>
