@@ -8118,7 +8118,8 @@ export default class App extends React.Component {
         />
         But I’m going to rip your goddamn head off SELF DEFENSE
         <br />
-        I’m gonna fucking kill you
+        I’m gonna fucking kill you (Can't self-defense be a preemptive strike
+        with any weapon of similar caliber and potential damage?)
         <br />"<a href="https://qr.ae/pGdau0">we need</a>
         {space}to confiscate their wealth"
         <br />I am going to be myself before glorifying G-d for making me by
