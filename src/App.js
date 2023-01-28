@@ -536,11 +536,18 @@ export default class App extends React.Component {
               />
             </a>
           </div>
-        </div>does self defense require the same weapon?
-        is it a war crime to fight for the right to own?
-        psychitric medicine doesn't change the alleged crime of the following:
-        if wall street keeps causing inflation I will rip their throats out.<br/>
-        SELF DEFENSE. IF FLOYD CAN BE CARFACED YOU CAN TOO<br/>
+        </div>
+        I contribute open source and get paid in deflation. any weapon can be
+        used of equal power. the people that cause inflation just by working are
+        deadly. i think the people that need me to write this out are
+        incriminating themselves for not trying. it's an argument. does self
+        defense require the same weapon? is it a war crime to fight for the
+        right to own? psychitric medicine doesn't change the alleged crime of
+        the following: if wall street keeps causing inflation I will rip their
+        throats out.
+        <br />
+        SELF DEFENSE. IF FLOYD CAN BE CARFACED YOU CAN TOO
+        <br />
         <h3 style={{ float: "right" }}>
           <a
             href="https://account.venmo.com/u/truncatedwholesaletax" /*https://venmo.com/code?user_id=3567148823742342744"*/
