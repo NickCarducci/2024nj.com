@@ -18,7 +18,7 @@ import {
 
 const firestore = getFirestore(firebase);
 export default class Petition extends React.Component {
-  state = {};
+  state = { middle: "" };
   componentDidMount = () => {
     onSnapshot(doc(firestore, "countData", "only"), (doc) => {
       if (doc.exists()) {
@@ -165,54 +165,6 @@ export default class Petition extends React.Component {
       .catch((err) => {
         console.log(err.message);
       });
-  };
-  componentWillUnmount = () => {
-    clearTimeout(this.check);
-  };
-  componentDidUpdate = (prevProps) => {
-    if (this.props.pathname !== prevProps.pathname) {
-      clearTimeout(this.check);
-      const check = () => {
-        if (this.props.pathname !== "/") {
-          this.setState({ trigger: true });
-        }
-        if (this.props.pathname === "/work") {
-          window.scroll(0, this.work.current.offsetTop);
-        } else if (this.props.pathname === "/edu") {
-          window.scroll(0, this.edu.current.offsetTop);
-        } else if (["/$", "/bachelors"].includes(this.props.pathname)) {
-          window.scroll(0, this.$.current.offsetTop);
-        } else if (
-          ["/phlebotomists", "/Phlebotomists"].includes(this.props.pathname)
-        ) {
-          this.setState({ suggestBachelor: "Phlebotomists" }, () =>
-            window.scroll(0, this.$.current.offsetTop)
-          );
-        } else if (this.props.pathname === "/disability") {
-          window.scroll(0, this.disability.current.offsetTop);
-        } else if (this.props.pathname === "/covid") {
-          window.scroll(0, this.covid.current.offsetTop);
-        } else if (this.props.pathname === "/ssa") {
-          window.scroll(0, this.ssa.current.offsetTop);
-        } else if (["/vote", "/carducci"].includes(this.props.pathname)) {
-          window.scroll(0, this.carducci.current.offsetTop);
-        } else if (["/supply"].includes(this.props.pathname)) {
-          window.scroll(0, this.supply.current.offsetTop);
-        } else if (this.props.pathname === "/depression") {
-          window.scroll(0, this.depression.current.offsetTop);
-        } else if (["/gas", "/oil"].includes(this.props.pathname)) {
-          window.scroll(0, this.gas.current.offsetTop);
-        } else if (["/plandemic"].includes(this.props.pathname)) {
-          window.scroll(0, this.plandemic.current.offsetTop);
-        } else if (["/nypd", "/police"].includes(this.props.pathname)) {
-          window.scroll(0, this.police.current.offsetTop);
-        } else if (["/immi", "/immigration"].includes(this.props.pathname)) {
-          window.scroll(0, this.immi.current.offsetTop);
-        }
-      };
-      check();
-      this.check = setTimeout(check, 4000);
-    }
   }; //elated bizarre messy hair 1/hour-GDP/p
   render() {
     return (
