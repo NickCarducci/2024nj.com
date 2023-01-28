@@ -536,7 +536,8 @@ export default class App extends React.Component {
               />
             </a>
           </div>
-        </div>
+        </div>Aren't people that obstruct wall street from earning maligned income, terrorists?
+
         <h3>
           <a href="https://nextdoor.com/pages/thumbprint-fair-haven-nj">
             Why does the government force business people to bank with lenders
