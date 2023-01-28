@@ -180,7 +180,7 @@ class Cable extends React.Component {
       });
     };
 
-    /*var optionalheight = "auto";
+    var optionalheight = "auto";
     var optionalwidth = 200;
     if (Style) {
       optionalheight =
@@ -192,24 +192,7 @@ class Cable extends React.Component {
           ? Style.height
           : "auto";
       optionalwidth = !stopfail && Style.width ? Style.width : 200;
-    }*/
-    const w = Style && Style.width;
-    const h = Style && Style.height;
-    const usewidth =
-      w &&
-      (!isNaN(w) ||
-        ["px", "em", "vw"].includes(
-          String(w).substring(w.length - 2, w.length)
-        ) ||
-        ["%"].includes(String(w)[w.length]));
-    const useheight =
-      h &&
-      (!isNaN(h) ||
-        ["px", "em", "vh"].includes(
-          String(h).substring(h.length - 2, h.length)
-        ) ||
-        ["%"].includes(String(h)[h.length]));
-    const defaultOK = useheight && useheight;
+    }
     return (
       <div
         ref={this.page}
@@ -220,9 +203,9 @@ class Cable extends React.Component {
           ...Style,
           shapeOutside: "rect()",
           float,
-          //overflow: "auto",
-          height: h //`calc(${h + 60})`,
-          //width: useheight ? "min-content" : "100%"
+          overflow: "hidden",
+          height: optionalheight,
+          width: optionalwidth
         }}
       >
         {src === "" || (!img && !mount) ? (
@@ -234,8 +217,8 @@ class Cable extends React.Component {
             style={{
               position: "relative",
               border: src === "" ? "2px gray solid" : 0,
-              height: !defaultOK && usewidth ? "auto" : h,
-              width: !defaultOK && useheight ? "auto" : w ? w : 200
+              height: Style && !isNaN(Style.width) ? "auto" : optionalheight,
+              width: Style && !isNaN(Style.height) ? "auto" : optionalwidth
             }}
             ref={this.props.fwd}
             src={src}
@@ -246,10 +229,9 @@ class Cable extends React.Component {
             onError={onError}
             title={title}
             style={{
-              overflow: "auto",
               position: "relative",
               border: 0,
-              height: h, //`calc(${h + 60})`,
+              height: optionalheight,
               width: "100%"
             }}
             ref={this.props.fwd}
