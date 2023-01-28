@@ -223,11 +223,17 @@ export default class App extends React.Component {
             right: "20px",
             width: "36px",
             padding: "10px 0px",
-            backgroundColor: "green",
-            transform: "scale(-1,1)"
+            backgroundColor: "green"
           }}
         >
-          &#9998;
+          sign here!{space}
+          <span
+            style={{
+              transform: "scale(-1,1)"
+            }}
+          >
+            &#9998;
+          </span>
         </div>
         {/*<div
           onClick={() => {
