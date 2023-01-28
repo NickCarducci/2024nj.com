@@ -237,6 +237,7 @@ export default class Petition extends React.Component {
           voter?
         </h2>
         <h2>Submit your signature! {this.state.signatures}/800</h2>
+        Do you want banks that don’t force you to invest?
         {this.state.finished ? (
           <div>
             <h2>Thank you! keep in touch:</h2>
