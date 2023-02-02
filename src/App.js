@@ -536,8 +536,9 @@ export default class App extends React.Component {
               />
             </a>
           </div>
-        </div>Aren't people that obstruct wall street from earning maligned income, terrorists?
-
+        </div>
+        Aren't people that obstruct wall street from earning maligned income,
+        terrorists?
         <h3>
           <a href="https://nextdoor.com/pages/thumbprint-fair-haven-nj">
             Why does the government force business people to bank with lenders
@@ -8185,7 +8186,20 @@ export default class App extends React.Component {
           <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
         </h2>
         <Petition />
-        "G-d looks in favor of those suffering in Ukraine," what, from being
+        <h3>
+          <a href="https://scopes.cc">Untermed before nonterm</a>
+        </h3>
+        risk-free{space}
+        <a href="https://humanharvest.info">means</a>
+        {space}there is no{space}
+        <a href="https://vau.money/login">probate</a>, safe means it's unhinged
+        {space}
+        <a href="https://thetax.party">taxes</a>.
+        <br />
+        property can only be property when you can plausibly use it
+        <br />"<a href="https://marginalism.uk">G-d</a>
+        {space}looks in favor of those suffering in{space}
+        <a href="https://saverparty.xyz/global">Ukraine</a>," what, from being
         old/mad, they blame their inability to Save, upon?
         <h1>WHO'S FRANK??</h1>
         The Mafia ran "trash, skimmed{space}
