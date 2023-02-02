@@ -8186,6 +8186,8 @@ export default class App extends React.Component {
           <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
         </h2>
         <Petition />
+        (coalition = priorities)
+        <h2>Tax Security, First!</h2>
         <h3>
           <a href="https://scopes.cc">Untermed before nonterm</a>
         </h3>
