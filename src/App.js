@@ -455,32 +455,51 @@ export default class App extends React.Component {
                 🐿
               </span>
             </a>
-            {this.state.width < 400 ? null : this.state.opt === 1 ? (
-              <span>
-                “Not enough{space}
-                <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
-                  growth
-                </a>
-                , too much{space}
-                <a href="https://qr.ae/pvKt09">Stimulus</a>.” Larry Kudlow
-              </span>
-            ) : this.state.opt ? (
-              <span>
-                Prosperity! -science/skew: import{space}
-                <a href="https://qr.ae/pvKyC4">Brazilian</a>
-                {space}Real! Fine loser judges. Torttech programmatic -
-                immediate acquittal
-              </span>
-            ) : (
-              <span>
-                "I'm going to invoke{space}
-                <a href="https://qr.ae/pvKRD1">so much</a>
-                {space}duress on my{space}
-                <a href="https://qr.ae/pvKRxY">exclusive</a>
-                {space}answers." Naming and open source{space}&bull;{space}
-                acquittal bond loss profit per diem
-              </span>
-            )}
+            <div
+              style={{
+                position:"relative",
+                overflowX: "auto",
+                overflowY: "hidden",
+                height: "70px",
+                width: "100%",
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
+              <div
+                style={{width:"max-content",
+                  position: "absolute",
+                  height: "56px",
+                  top:"20px"
+                }}
+              >
+                {this.state.width < 400 ? null : this.state.opt === 1 ? (
+                  <span>
+                    Not enough{space}
+                    <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
+                      growth
+                    </a>
+                    , too much<br/>
+                    <a href="https://qr.ae/pvKt09">Stimulus</a>.” Larry Kudlow
+                  </span>
+                ) : this.state.opt ? (
+                  <span>
+                    Prosperity! -science/skew: import<br/>
+                    <a href="https://qr.ae/pvKyC4">Brazilian</a>
+                    {space}Real! Fine loser judges. Torttech<br/>programmatic -
+                    immediate acquittal
+                  </span>
+                ) : (
+                  <span>
+                    "I'm going to invoke{space}
+                    <a href="https://qr.ae/pvKRD1">so much</a><br/>duress on my{space}
+                    <a href="https://qr.ae/pvKRxY">exclusive</a>
+                    {space}answers." Naming and<br/>open source{space}&bull;{space}
+                    acquittal bond loss profit per diem
+                  </span>
+                )}
+              </div>
+            </div>
             <span
               role="img"
               aria-label="bachelors"
@@ -499,7 +518,14 @@ export default class App extends React.Component {
             >
               🛢
             </span>
-            <a href="https://teapharmacy.party/drugs" style={navitem}>
+            <a
+              href="https://teapharmacy.party/drugs"
+              style={{
+                ...navitem,
+                backgroundColor: "red",
+                fontWeight: "bolder"
+              }}
+            >
               <span
                 role="img"
                 aria-label="pharmacy"
@@ -537,8 +563,15 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        Aren't people that obstruct wall street from earning maligned income,
-        terrorists?
+        <div style={{ backgroundColor: "lightsalmon", textAlign: "center" }}>
+          Aren't{space}
+          <a href="https://vau.money/login">people</a>
+          {space}that obstruct{space}
+          <a href="https://book.com.co">wall street</a>
+          {space}from earning maligned income,
+          {space}
+          <a href="https://humanharvest.info">terrorists</a>?
+        </div>
         <h3>
           <a href="https://nextdoor.com/pages/thumbprint-fair-haven-nj">
             Why does the government force business people to bank with lenders
