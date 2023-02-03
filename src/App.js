@@ -364,19 +364,14 @@ export default class App extends React.Component {
                 scrollTop={this.state.scrollTop}
               />
             </a>
-            <div id="work" onClick={goTo} style={navitem}>
-              <span
-                role="img"
-                aria-label="construction-tan"
-                style={
-                  !this.state.ios
-                    ? {}
-                    : { backgroundColor: "black", color: "white" }
-                }
-              >
-                👷🏽‍♂️
-              </span>
-            </div>
+            <span
+              onClick={goTo}
+              role="img"
+              aria-label="work"
+              style={{ ...navitem }}
+            >
+              👷🏽‍♂️
+            </span>
             <a href="https://realecon.quora.com" style={navitem}>
               <Cable
                 style={picstyle}
@@ -457,7 +452,7 @@ export default class App extends React.Component {
             </a>
             <div
               style={{
-                position:"relative",
+                position: "relative",
                 overflowX: "auto",
                 overflowY: "hidden",
                 height: "70px",
@@ -467,10 +462,11 @@ export default class App extends React.Component {
               }}
             >
               <div
-                style={{width:"max-content",
+                style={{
+                  width: "max-content",
                   position: "absolute",
                   height: "56px",
-                  top:"20px"
+                  top: "20px"
                 }}
               >
                 {this.state.width < 400 ? null : this.state.opt === 1 ? (
@@ -479,22 +475,29 @@ export default class App extends React.Component {
                     <a href="https://www.bls.gov/osmr/research-papers/2017/st170010.htm">
                       growth
                     </a>
-                    , too much<br/>
+                    , too much
+                    <br />
                     <a href="https://qr.ae/pvKt09">Stimulus</a>.” Larry Kudlow
                   </span>
                 ) : this.state.opt ? (
                   <span>
-                    Prosperity! -science/skew: import<br/>
+                    Prosperity! -science/skew: import
+                    <br />
                     <a href="https://qr.ae/pvKyC4">Brazilian</a>
-                    {space}Real! Fine loser judges. Torttech<br/>programmatic -
-                    immediate acquittal
+                    {space}Real! Fine loser judges. Torttech
+                    <br />
+                    programmatic - immediate acquittal
                   </span>
                 ) : (
                   <span>
                     "I'm going to invoke{space}
-                    <a href="https://qr.ae/pvKRD1">so much</a><br/>duress on my{space}
+                    <a href="https://qr.ae/pvKRD1">so much</a>
+                    <br />
+                    duress on my{space}
                     <a href="https://qr.ae/pvKRxY">exclusive</a>
-                    {space}answers." Naming and<br/>open source{space}&bull;{space}
+                    {space}answers." Naming and
+                    <br />
+                    open source{space}&bull;{space}
                     acquittal bond loss profit per diem
                   </span>
                 )}
