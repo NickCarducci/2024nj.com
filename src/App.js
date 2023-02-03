@@ -365,6 +365,7 @@ export default class App extends React.Component {
               />
             </a>
             <span
+              id="work"
               onClick={goTo}
               role="img"
               aria-label="work"
