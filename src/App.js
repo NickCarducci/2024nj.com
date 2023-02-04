@@ -8231,7 +8231,9 @@ export default class App extends React.Component {
         risk-free{space}
         <a href="https://humanharvest.info">means</a>
         {space}there is no{space}
-        <a href="https://vau.money/login">probate</a>, safe means it's unhinged
+        <a href="https://vau.money/login">probate</a>
+        {space}(let's reverse total debt to cash liability), safe means it's
+        unhinged
         {space}
         <a href="https://thetax.party">taxes</a>.
         <br />
