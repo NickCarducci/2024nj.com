@@ -237,7 +237,11 @@ export default class Petition extends React.Component {
           voter?
         </h2>
         <h2>Submit your signature! {this.state.signatures}/800</h2>
-        Do you want banks that don’t force you to invest?
+        Do you want banks that don’t force you to invest?{" "}
+        <i>
+          Why should a product be closed source to have a fair end user license
+          agreement?
+        </i>
         {this.state.finished ? (
           <div>
             <h2>Thank you! keep in touch:</h2>
@@ -280,9 +284,9 @@ export default class Petition extends React.Component {
             </div>
             <button type="submit">submit</button>
             {/*<div style={{ color: "grey", fontSize: "10px" }}>
-      this is on firebase but only shows you signed if you enter the
-      same info...
-  </div>*/}
+                this is on firebase but only shows you signed if you enter the
+                same info...
+            </div>*/}
           </form>
         )}
       </div>
