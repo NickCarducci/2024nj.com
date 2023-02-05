@@ -42,7 +42,9 @@ class Frank extends React.Component {
           <a href="https://scopes.cc">Untermed before nonterm</a>
         </h3>
         risk-free{space}
-        <a href="https://humanharvest.info">means</a>
+        <a href="https://quant.stackexchange.com/questions/74289/are-stablecoins-stable-if-the-merchant-processor-uses-fiat-currencies-or-insuran">
+          means
+        </a>
         {space}there is no{space}
         <a href="https://vau.money/login">probate</a>
         {space}(let's reverse total debt to cash liability), safe means it's
@@ -198,6 +200,10 @@ class Frank extends React.Component {
           obviously the main factor in oil by wells is{space}
           <a href="https://occupywall.us">leases</a>; trust-breaking hypocrisy
         </h4>
+        <h2 style={{ fontSize: "30px" }}>
+          <a href="https://saverparty.xyz/global">saverparty.xyz/global</a>
+        </h2>
+        <h3 style={{ fontSize: "25px" }}>wholesaleeconomics.quora.com</h3>
         <OIL2
           lastWidth={Math.min(600, this.props.lastWidth)}
           style={{
@@ -357,6 +363,16 @@ class Frank extends React.Component {
         <h4 ref={this.props.plandemic}>
           <a href="https://qr.ae/pvKRxY">okay</a>?
         </h4>
+        <h2 style={{ fontSize: "30px" }}>
+          <a href="https://humanharvest.info">humanharvest.info</a>
+        </h2>
+        <h3
+          style={{
+            fontSize: "25px"
+          }}
+        >
+          sewageisamatterofdomesticviolence.quora.com
+        </h3>
         <Vax
           lastWidth={Math.min(600, this.props.lastWidth)}
           style={{
@@ -510,7 +526,10 @@ class Frank extends React.Component {
         by GDP/p 0%/yr+ amidst 3%/yr+ population, 1800–1913). This is a global
         trend, extrapolating from GDP/p growth, globally, yet I have not charted
         to confirm the same is for employment by age.
-        <hr ref={this.props.work} />
+        <h2 ref={this.props.work} style={{ fontSize: "30px" }}>
+          <a href="https://vaults.biz/party">vaults.biz/party</a>
+        </h2>
+        <h3 style={{ fontSize: "25px" }}>substitutivesupply.quora.com</h3>
         <Salaries
           lastWidth={Math.min(600, this.props.lastWidth)}
           style={{
