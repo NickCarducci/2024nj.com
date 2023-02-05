@@ -16,6 +16,7 @@ import Unable from "./unable";
 import Population from "./population";
 import Petition from "./Petition";
 import OIL2 from "./oil2";
+import Healthcare from "./Healthcare";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,7 @@ export default class App extends React.Component {
     const name = parser.getBrowser().name;
     console.log(name);
     document.cookie = "";
+    this.pharmacy = React.createRef();
     this.state = {
       posts: [],
       trigger: false,
@@ -105,6 +107,8 @@ export default class App extends React.Component {
         }
         if (this.props.pathname === "/work") {
           window.scroll(0, this.work.current.offsetTop);
+        } else if (this.props.pathname === "/pharmacy") {
+          window.scroll(0, this.pharmacy.current.offsetTop);
         } else if (this.props.pathname === "/edu") {
           window.scroll(0, this.edu.current.offsetTop);
         } else if (["/$", "/bachelors"].includes(this.props.pathname)) {
@@ -522,32 +526,28 @@ export default class App extends React.Component {
             >
               🛢
             </span>
-            <a
-              href="https://teapharmacy.party/drugs"
-              style={{
-                ...navitem,
-                backgroundColor: "red",
-                fontWeight: "bolder"
-              }}
+            <span
+              role="img"
+              aria-label="pharmacy"
+              style={
+                !this.state.ios
+                  ? {}
+                  : {
+                      cursor: "pointer",
+                      backgroundColor: "red",
+                      fontWeight: "bolder",
+                      color: "white"
+                    }
+              }
             >
-              <span
-                role="img"
-                aria-label="pharmacy"
-                style={
-                  !this.state.ios
-                    ? {}
-                    : { backgroundColor: "black", color: "white" }
-                }
-              >
-                ⚕️
-              </span>
-            </a>
+              ⚕️
+            </span>
             <a href="https://vaults.biz/sdr" style={navitem}>
               <span role="img" aria-label="vault">
                 🏦
               </span>
             </a>
-            <a href="https://occupywallst.quora.com" style={navitem}>
+            <a href="https://occupywall.us" style={navitem}>
               <Cable
                 style={picstyle}
                 onError={handleScollImgError}
@@ -558,7 +558,7 @@ export default class App extends React.Component {
                     : "https://www.dropbox.com/s/sjy2dil74i4ty8w/occupy%20logo_144%20%281%29.png?raw=1"
                 }
                 float={"left"}
-                title="https://occupywallst.quora.com"
+                title="https://occupywall.us"
                 scrolling={this.state.scrolling}
                 fwd={this["scrollImg" + scrollnum()]}
                 scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
@@ -569,7 +569,7 @@ export default class App extends React.Component {
         </div>
         <div style={{ backgroundColor: "lightsalmon", textAlign: "center" }}>
           Aren't{space}
-          <a href="https://vau.money/login">people</a>
+          <a href="https://facebook.com/occupynewjersey">people</a>
           {space}that obstruct{space}
           <a href="https://book.com.co">wall street</a>
           {space}from earning maligned income,
@@ -582,6 +582,8 @@ export default class App extends React.Component {
           </a>
           ?
         </h3>
+        <hr ref={this.pharmacy} />
+        <Healthcare width={this.state.width} />
         I contribute open source and get paid in deflation. any weapon can be
         used of equal power. the people that cause inflation just by working are
         deadly. i think the people that need me to write this out are
