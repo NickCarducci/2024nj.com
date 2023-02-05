@@ -480,13 +480,13 @@ export default class App extends React.Component {
                     </a>
                     , too much
                     <br />
-                    <a href="https://qr.ae/pvKt09">Stimulus</a>.” Larry Kudlow
+                    <a href="https://courttechnology.quora.com/What-are-the-things-that-rich-people-dont-have-but-poor-people-do">Stimulus</a>.” Larry Kudlow
                   </span>
                 ) : this.state.opt ? (
                   <span>
                     Prosperity! -science/skew: import
                     <br />
-                    <a href="https://qr.ae/pvKyC4">Brazilian</a>
+                    <a href="https://www.quora.com/Why-is-a-weak-currency-good-for-exports/answer/Nick-Carducci">Brazilian</a>
                     {space}Real! Fine loser judges. Torttech
                     <br />
                     programmatic - immediate acquittal
@@ -494,10 +494,10 @@ export default class App extends React.Component {
                 ) : (
                   <span>
                     "I'm going to invoke{space}
-                    <a href="https://qr.ae/pvKRD1">so much</a>
+                    <a href="https://adailyimpeachment.quora.com/What-is-a-living-crisis">so much</a>
                     <br />
                     duress on my{space}
-                    <a href="https://qr.ae/pvKRxY">exclusive</a>
+                    <a href="https://saverparty.quora.com/4t-checking-by-mortgage-bailouts-for-covid-single-year-age-death-rate-insignificant-n-2019-20-is-less-than-n-100-req">exclusive</a>
                     {space}answers." Naming and
                     <br />
                     open source{space}&bull;{space}
@@ -547,7 +547,7 @@ export default class App extends React.Component {
                 🏦
               </span>
             </a>
-            <a href="https://occupywall.us" style={navitem}>
+            <a href="https://facebook.com/occupynewjersey" style={navitem}>
               <Cable
                 style={picstyle}
                 onError={handleScollImgError}
@@ -558,7 +558,7 @@ export default class App extends React.Component {
                     : "https://www.dropbox.com/s/sjy2dil74i4ty8w/occupy%20logo_144%20%281%29.png?raw=1"
                 }
                 float={"left"}
-                title="https://occupywall.us"
+                title="https://facebook.com/occupynewjersey"
                 scrolling={this.state.scrolling}
                 fwd={this["scrollImg" + scrollnum()]}
                 scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
