@@ -525,6 +525,8 @@ export default class App extends React.Component {
               🛢
             </span>
             <span
+              id="pharmacy"
+              onClick={goTo}
               role="img"
               aria-label="pharmacy"
               style={
