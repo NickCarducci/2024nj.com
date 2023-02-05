@@ -7447,7 +7447,10 @@ export default class App extends React.Component {
           regulations, policies and guidelines.
           <br />
           <br />
-          "funds": liabilities pricing assets' ask, (cash/debt)*income,
+          <h2 style={{ fontSize: "30px" }}>
+            <a href="https://bankingisnot.biz">bankingisnot.biz</a>
+          </h2>
+          <h3 style={{ fontSize: "25px" }}>reverseamortization.quora.com</h3>
           <SSA
             lastWidth={Math.min(600, this.state.lastWidth)}
             style={{
@@ -7455,8 +7458,9 @@ export default class App extends React.Component {
               backgroundColor: "rgb(190,150,180)"
             }}
           />
-          Go into debt for income from subsidies, or adjusted present value, or
-          imputed owner rents
+          "funds": liabilities pricing assets' ask, (cash/debt)*income, Go into
+          debt for income from subsidies, or adjusted present value, or imputed
+          owner rents
           <br />
           Coupons minority tax breaks 5% italiano americano
           <br />
@@ -8691,7 +8695,7 @@ export default class App extends React.Component {
               edu: this.edu,
               gas: this.gas,
               plandemic: this.plandemic,
-              work:this.work
+              work: this.work
             }
           }}
         />
