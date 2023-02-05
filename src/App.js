@@ -8690,7 +8690,8 @@ export default class App extends React.Component {
               police: this.police,
               edu: this.edu,
               gas: this.gas,
-              plandemic: this.plandemic
+              plandemic: this.plandemic,
+              work:this.work
             }
           }}
         />
