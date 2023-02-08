@@ -582,12 +582,12 @@ export default class App extends React.Component {
         next few years the Internet will be an intranet by GSA for age and
         non-convict verification so business can actually confidentially
         compute!
-        <br />
+        <hr  ref={this.carducci}/>
         I'm not sure door to door canvassing is for a new organization by a
         youthful person. Perhaps I go to the train stations.<br/>
         <Petition />
         (coalition = priorities)
-        <h2 ref={this.carducci}
+        <h2
           style={{ textDecoration: "underline" }}
           onClick={() => this.setState({ openFrank: !this.state.openFrank })}
         >
