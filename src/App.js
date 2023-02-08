@@ -593,6 +593,7 @@ export default class App extends React.Component {
         >
           Tax Security, First!
         </h2>
+        <h3>Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty</h3>
         <Frank
           openFrank={this.state.openFrank}
           lastWidth={this.state.lastWidth}
