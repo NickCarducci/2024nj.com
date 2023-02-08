@@ -587,7 +587,7 @@ export default class App extends React.Component {
         youthful person. Perhaps I go to the train stations.<br/>
         <Petition />
         (coalition = priorities)
-        <h2
+        <h2 ref={this.carducci}
           style={{ textDecoration: "underline" }}
           onClick={() => this.setState({ openFrank: !this.state.openFrank })}
         >
@@ -8714,7 +8714,7 @@ export default class App extends React.Component {
           <a href="https://qr.ae/pGdUME">Efficiency</a>
           {space}is not growth. jobs is not a sign of strength, if there is
           laborless-demand calamity
-          <h2 ref={this.carducci}>
+          <h2>
             Degrowth is because you set people free and they become creative, -
             <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
           </h2>
