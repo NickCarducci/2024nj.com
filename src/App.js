@@ -480,13 +480,18 @@ export default class App extends React.Component {
                     </a>
                     , too much
                     <br />
-                    <a href="https://courttechnology.quora.com/What-are-the-things-that-rich-people-dont-have-but-poor-people-do">Stimulus</a>.” Larry Kudlow
+                    <a href="https://courttechnology.quora.com/What-are-the-things-that-rich-people-dont-have-but-poor-people-do">
+                      Stimulus
+                    </a>
+                    .” Larry Kudlow
                   </span>
                 ) : this.state.opt ? (
                   <span>
                     Prosperity! -science/skew: import
                     <br />
-                    <a href="https://www.quora.com/Why-is-a-weak-currency-good-for-exports/answer/Nick-Carducci">Brazilian</a>
+                    <a href="https://www.quora.com/Why-is-a-weak-currency-good-for-exports/answer/Nick-Carducci">
+                      Brazilian
+                    </a>
                     {space}Real! Fine loser judges. Torttech
                     <br />
                     programmatic - immediate acquittal
@@ -494,10 +499,14 @@ export default class App extends React.Component {
                 ) : (
                   <span>
                     "I'm going to invoke{space}
-                    <a href="https://adailyimpeachment.quora.com/What-is-a-living-crisis">so much</a>
+                    <a href="https://adailyimpeachment.quora.com/What-is-a-living-crisis">
+                      so much
+                    </a>
                     <br />
                     duress on my{space}
-                    <a href="https://saverparty.quora.com/4t-checking-by-mortgage-bailouts-for-covid-single-year-age-death-rate-insignificant-n-2019-20-is-less-than-n-100-req">exclusive</a>
+                    <a href="https://saverparty.quora.com/4t-checking-by-mortgage-bailouts-for-covid-single-year-age-death-rate-insignificant-n-2019-20-is-less-than-n-100-req">
+                      exclusive
+                    </a>
                     {space}answers." Naming and
                     <br />
                     open source{space}&bull;{space}
@@ -567,6 +576,36 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        In office or not, I'm advocating/making anonymous voting mechanisms
+        [public id, private+vote-increment], and an anonymous account identity
+        provider is past due for brokerage accounts and petitions! Surely in the
+        next few years the Internet will be an intranet by GSA for age and
+        non-convict verification so business can actually confidentially
+        compute!
+        <br />
+        I'm not sure door to door canvassing is for a new organization by a
+        youthful person. Perhaps I go to the train stations.<br/>
+        <Petition />
+        (coalition = priorities)
+        <h2
+          style={{ textDecoration: "underline" }}
+          onClick={() => this.setState({ openFrank: !this.state.openFrank })}
+        >
+          Tax Security, First!
+        </h2>
+        <Frank
+          openFrank={this.state.openFrank}
+          lastWidth={this.state.lastWidth}
+          ref={{
+            current: {
+              police: this.police,
+              edu: this.edu,
+              gas: this.gas,
+              plandemic: this.plandemic,
+              work: this.work
+            }
+          }}
+        />
         <div
           style={{
             transition: ".3s ease-in",
@@ -709,7 +748,7 @@ export default class App extends React.Component {
             onClick={() => this.setState({ openSynth: !this.state.openSynth })}
             style={{ fontSize: "30px", textDecoration: "underlined" }}
           >
-            More Info
+            More Info:{space}humanharvest.info
           </h2>
           NYU business pro Scott Galloway: "We've never been able to raise
           interest rates as much as necessary to counter inflation, without
@@ -8680,27 +8719,6 @@ export default class App extends React.Component {
             <a href="https://qr.ae/pGdUvN">GDP</a>/p. expenses
           </h2>
         </div>
-        <Petition />
-        (coalition = priorities)
-        <h2
-          style={{ textDecoration: "underline" }}
-          onClick={() => this.setState({ openFrank: !this.state.openFrank })}
-        >
-          Tax Security, First!
-        </h2>
-        <Frank
-          openFrank={this.state.openFrank}
-          lastWidth={this.state.lastWidth}
-          ref={{
-            current: {
-              police: this.police,
-              edu: this.edu,
-              gas: this.gas,
-              plandemic: this.plandemic,
-              work: this.work
-            }
-          }}
-        />
         <a
           style={{
             shapeOutside: "rect()",
