@@ -682,9 +682,10 @@ export default class App extends React.Component {
         <h3>
           Extractable-only:{space}
           <span style={{ fontSize: "15px" }}>
-            Insurance scalping schedules and expiring commodities causes
-            inflation, 2503(e) out-of-pocket admits this; coverage is not simple
-            human sense; it is scientifically retarding by action of course.
+            Insurance scalping schedules (without a stop-loss) and expiring
+            commodities causes inflation, 2503(e) out-of-pocket admits this;
+            coverage is not simple human sense; it is scientifically retarding
+            by action of course.
           </span>
         </h3>
         <h3>
