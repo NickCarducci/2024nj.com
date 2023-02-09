@@ -587,17 +587,25 @@ export default class App extends React.Component {
               textDecoration: "underline"
             }}
             onClick={() => {
-              this.setState({ openSchool: !this.state.openSchool });
+              this.setState({ openSchool: !this.state.openSchool,openIndustry:false });
             }}
           >
-            Tax for Anything{space}
+            Tax for Anything
             <span
               style={{
                 transition: ".3s ease-in",
                 fontSize: !this.state.openSchool ? "12px" : "0px"
               }}
-            >
+            >{space}
               (1/3 don't vote because "everyone likes debt")
+            </span>
+            <span
+              style={{
+                transition: ".3s ease-in",
+                fontSize: this.state.openIndustry ? "12px" : "0px"
+              }}
+            >{space}
+              (reverse total to cash liabilities, then)
             </span>
           </span>
           ,{space}
@@ -609,9 +617,17 @@ export default class App extends React.Component {
               fontSize: this.state.openSchool ? "12px" : "0px" //covalence null confirmed! ching!
             }}
           >
-            <i>or bar safe assets</i>
-            {space}50% deficit is, school? These kids should be working (truly
-            on their craft; NSF before income); yet moreover,{space}
+            <span
+              style={{
+                transition: ".3s ease-in",
+                fontSize: !this.state.openIndustry ? "12px" : "0px"
+              }}
+            >
+              <i>or bar safe assets</i>
+              {space}50% deficit is, school? These kids should be working (truly
+              on their craft; NSF before income); yet moreover,
+            </span>
+            {space}
             <span
               style={{
                 cursor: "pointer",
@@ -644,7 +660,9 @@ export default class App extends React.Component {
               loaning is non-inflationary, nor then covalent cause of
               accelerating(ly)-inflation(ary) layoffs. Probate student loan to
               industry type after reverse liability :). No more war{space}
-              <a href="https://vau.money/login">bar safe asset</a>.
+              <a href="https://vau.money/login">bar safe asset</a>. Advanced
+              payment{space}
+              <a href="https://scopes.cc">proprietor</a>.
             </span>
           </span>
           {/*} (I am impersonating the un barring holds war permit)
