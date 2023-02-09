@@ -680,9 +680,9 @@ export default class App extends React.Component {
         */}
         </h3>
         <h3>
-          Insurance scalping schedules and expiring commodities causes
+          Extractable-only:{space}<span style={{fontSize:"15px"}}>Insurance scalping schedules and expiring commodities causes
           inflation, 2503(e) out-of-pocket admits this; coverage is not simple
-          human sense; it is scientifically retarding by action of course.
+          human sense; it is scientifically retarding by action of course.</span>
         </h3>
         In office or not, I'm advocating/making anonymous voting mechanisms
         [public id, private+vote-increment], and an anonymous account identity
@@ -8850,3 +8850,4 @@ export default class App extends React.Component {
     );
   }
 }
+
