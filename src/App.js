@@ -691,9 +691,14 @@ export default class App extends React.Component {
         <h3>
           Don't let borrowers off for loitering nor lenders for fixing the
           either horizontal or foreclosure-sale kept-down payment game, both
-          causing an imbalance of supply and demand.{space}<span style={{
-            fontSize:"12px"
-          }}>(cash/debt)*liability payments.</span>
+          causing an imbalance of supply and demand.{space}
+          <span
+            style={{
+              fontSize: "12px"
+            }}
+          >
+            (cash/debt)*liability payments.
+          </span>
         </h3>
         In office or not, I'm advocating/making anonymous voting mechanisms
         [public id, private+vote-increment], and an anonymous account identity
@@ -716,6 +721,10 @@ export default class App extends React.Component {
         <h3>
           Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
         </h3>
+        Does illegal immigration and crime or debt and insurance cause
+        inflation? Why are{space}
+        <a href="https://vau.money/login">out-of-pocket</a>
+        {space}expenses tax-free?
         <Frank
           openFrank={this.state.openFrank}
           lastWidth={this.state.lastWidth}
