@@ -620,7 +620,7 @@ export default class App extends React.Component {
             <span
               style={{
                 transition: ".3s ease-in",
-                fontSize: !this.state.openIndustry ? "12px" : "0px"
+                fontSize: this.state.openSchool&&!this.state.openIndustry ? "12px" : "0px"
               }}
             >
               <i>or bar safe assets</i>
