@@ -587,7 +587,10 @@ export default class App extends React.Component {
               textDecoration: "underline"
             }}
             onClick={() => {
-              this.setState({ openSchool: !this.state.openSchool,openIndustry:false });
+              this.setState({
+                openSchool: !this.state.openSchool,
+                openIndustry: false
+              });
             }}
           >
             Tax for Anything
@@ -596,7 +599,8 @@ export default class App extends React.Component {
                 transition: ".3s ease-in",
                 fontSize: !this.state.openSchool ? "12px" : "0px"
               }}
-            >{space}
+            >
+              {space}
               (1/3 don't vote because "everyone likes debt")
             </span>
             <span
@@ -604,7 +608,8 @@ export default class App extends React.Component {
                 transition: ".3s ease-in",
                 fontSize: this.state.openIndustry ? "12px" : "0px"
               }}
-            >{space}
+            >
+              {space}
               (reverse total to cash liabilities, then)
             </span>
           </span>
@@ -620,7 +625,10 @@ export default class App extends React.Component {
             <span
               style={{
                 transition: ".3s ease-in",
-                fontSize: this.state.openSchool&&!this.state.openIndustry ? "12px" : "0px"
+                fontSize:
+                  this.state.openSchool && !this.state.openIndustry
+                    ? "12px"
+                    : "0px"
               }}
             >
               <i>or bar safe assets</i>
@@ -662,7 +670,9 @@ export default class App extends React.Component {
               industry type after reverse liability :). No more war{space}
               <a href="https://vau.money/login">bar safe asset</a>. Advanced
               payment{space}
-              <a href="https://scopes.cc">proprietor</a>.
+              <a href="https://scopes.cc">proprietor</a>. literally
+              revenuedata.doi.gov, student loans should industry proprietor
+              payday. Dollar vote; Money is stock.
             </span>
           </span>
           {/*} (I am impersonating the un barring holds war permit)
