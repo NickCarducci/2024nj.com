@@ -691,7 +691,9 @@ export default class App extends React.Component {
         <h3>
           Don't let borrowers off for loitering nor lenders for fixing the
           either horizontal or foreclosure-sale kept-down payment game, both
-          causing an imbalance of supply and demand.
+          causing an imbalance of supply and demand.{space}<span style={{
+            fontSize:"12px"
+          }}>(cash/debt)*liability payments.</span>
         </h3>
         In office or not, I'm advocating/making anonymous voting mechanisms
         [public id, private+vote-increment], and an anonymous account identity
