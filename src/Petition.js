@@ -164,9 +164,10 @@ export default class Petition extends React.Component {
       })
       .catch((err) => {
         console.log(err.message);
-      });
+      }); //you can probe with a grammy but not an emmy nor nobel
   }; //elated bizarre messy hair 1/hour-GDP/p
   render() {
+    const space = " ";
     return (
       <div
         ref={this.carducci}
@@ -190,14 +191,30 @@ export default class Petition extends React.Component {
             padding: "10px"
           }}
         >
-          <a
+          <span
             style={{
-              color: "white"
+              color: "lightgrey"
             }}
-            href="https://occupywall.us"
           >
-            OccupyWall.us
-          </a>
+            <a
+              style={{
+                color: "white"
+              }}
+              href="https://occupywall.us"
+            >
+              OccupyWall.us
+            </a>
+            {space}&bull;{space}Work at 9 (
+            <a
+              style={{
+                color: "grey"
+              }}
+              href="https://commie.dev/work"
+            >
+              years old
+            </a>
+            )
+          </span>
           {this.state.cookied === undefined ? (
             <div style={{ color: "white", display: "flex" }}>loading</div>
           ) : (
