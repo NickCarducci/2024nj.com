@@ -576,15 +576,91 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
+        <h3
+          style={{
+            color: "grey" //just do it (give me your address)
+          }}
+        >
+          <span
+            style={{
+              cursor: "pointer",
+              textDecoration: "underline"
+            }}
+            onClick={() => {
+              this.setState({ openSchool: !this.state.openSchool });
+            }}
+          >
+            Tax for Anything{space}
+            <span
+              style={{
+                transition: ".3s ease-in",
+                fontSize: !this.state.openSchool ? "12px" : "0px"
+              }}
+            >
+              (1/3 don't vote because "everyone likes debt")
+            </span>
+          </span>
+          ,{space}
+          <span
+            style={{
+              color: "lightgrey",
+              lineHeight: "12px",
+              transition: ".3s ease-in",
+              fontSize: this.state.openSchool ? "12px" : "0px" //covalence null confirmed! ching!
+            }}
+          >
+            <i>or bar safe assets</i>
+            {space}50% deficit is, school? These kids should be working (truly
+            on their craft; NSF before income); yet moreover,{space}
+            <span
+              style={{
+                cursor: "pointer",
+                textDecoration: "underline"
+              }}
+              onClick={() =>
+                this.setState({ openIndustry: !this.state.openIndustry })
+              }
+            >
+              industry-implied payday
+            </span>
+            <span
+              style={{
+                transition: ".3s ease-in",
+                fontSize: this.state.openIndustry ? "12px" : "0px" //covalence null confirmed! ching!
+              }}
+            >
+              ; 2503(e) tax exemptions out-of-pocket admits that student debt
+              and insurance premiums cause inflation. Material Resource and
+              Price substitutions are only complimented by video games, not
+              shrinkflation nor time to outcome [i.e. "accelerating(ly)
+              inflation(ary) layoffs"] without deflation. Real liquidity.
+              Landlord skimping toward the outright market is tax exempt.{space}
+              <a href="https://realecon.quora.com/Isnt-real-materiality-to-capital-as-real-productivity-is-to-labor-resources">
+                Property
+              </a>
+              {space}lock downs have a premium,{space}
+              <a href="https://marginalism.uk">will have a price</a>.
+              Intractable expiring commodities and scalped schedules because NOT
+              loaning is non-inflationary, nor then covalent cause of
+              accelerating(ly)-inflation(ary) layoffs. Probate student loan to
+              industry type after reverse liability :). No more war{space}
+              <a href="https://vau.money/login">bar safe asset</a>.
+            </span>
+          </span>
+          {/*} (I am impersonating the un barring holds war permit)
+        that must not be halal to the ohio man (mormon, utah?)
+        */}
+        </h3>
         In office or not, I'm advocating/making anonymous voting mechanisms
         [public id, private+vote-increment], and an anonymous account identity
         provider is past due for brokerage accounts and petitions! Surely in the
         next few years the Internet will be an intranet by GSA for age and
         non-convict verification so business can actually confidentially
         compute!
-        <hr  ref={this.carducci}/>
+        <hr ref={this.carducci} />
         I'm not sure door to door canvassing is for a new organization by a
-        youthful person. Perhaps I go to the train stations.<br/>
+        youthful person. Perhaps I go to the train stations.
+        <br />
         <Petition />
         (coalition = priorities)
         <h2
@@ -593,7 +669,9 @@ export default class App extends React.Component {
         >
           Tax Security, First!
         </h2>
-        <h3>Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty</h3>
+        <h3>
+          Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
+        </h3>
         <Frank
           openFrank={this.state.openFrank}
           lastWidth={this.state.lastWidth}
