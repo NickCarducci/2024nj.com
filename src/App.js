@@ -716,7 +716,10 @@ export default class App extends React.Component {
           style={{ textDecoration: "underline" }}
           onClick={() => this.setState({ openFrank: !this.state.openFrank })}
         >
-          Tax Security, First!
+          Tax Security, First!{space}<span style={{
+            fontSize:"12px",
+            color:"grey"
+          }}>[Finance for (public but) deflationary universal plaintiff cop real income gains]</span>
         </h2>
         <h3>
           Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
