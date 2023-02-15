@@ -8333,12 +8333,39 @@ export default class App extends React.Component {
                 scrollTop={this.state.openSynth && this.state.scrollTop}
               />
             </a>
-          <div style={{ fontSize: "15px" }}>
-            Productivity or recovery{space}Why are unsevered lands
-            improvable and tangible?{space}Are increments of income or advances
-            on either residences or commercial property tax-free? Is a stock of
-            goods held primarily for either consumption or investment deemed to
-            be held primary for sale?</div>
+            <div style={{ fontSize: "15px" }}>
+              <span style={{ textDecoration: "line-through" }}>
+                Uniformity yet advance tangible cash flow
+              </span>
+              , industry or{space}
+              <span style={{ color: "darkviolet" }}>
+                medical care providers, accredited educational institutions and
+                trade schools
+              </span>
+              .{space}
+              <i>
+                Productivity or recovery:{space}
+                <span style={{ color: "navy" }}>
+                  Why are unsevered lands improvable and tangible?
+                </span>
+                {space}Are increments of income or advances on either residences
+                or commercial property tax-free? Is a stock of goods held
+                primarily for either consumption or investment deemed to be held
+                primary for sale?
+              </i>
+              {space}
+              <b>
+                Can taxes be{space}
+                <span style={{ color: "orange" }}>
+                  generally uniform{space}
+                  <a href="https://www.quora.com/unanswered/Is-antifascism-or-historical-materialism-anarchism">
+                    but only in certain
+                  </a>
+                  {space}industries
+                </span>
+                {space}in parallel?
+              </b>
+            </div>
           </div>
           <h2 style={{ fontSize: "15px" }}>
             Is percentile ordinal or marginal?
@@ -8939,3 +8966,4 @@ export default class App extends React.Component {
     );
   }
 }
+
