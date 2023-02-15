@@ -8384,7 +8384,11 @@ export default class App extends React.Component {
                 {space}Are increments of income or advances on either residences
                 or commercial property tax-free? Is a stock of goods held
                 primarily for either consumption or investment deemed to be held
-                primary for sale?
+                primary for sale? If goods held primarily for either investment
+                or consumption and not sale can exchange advances in like-kind
+                and complementary proprietorships why does the U.S. Code 26 §
+                1.856-10 Definition of real property concern us with how severed
+                (c) lands are?
               </i>
               {space}
               <b>
