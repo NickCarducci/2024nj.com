@@ -8303,14 +8303,47 @@ export default class App extends React.Component {
           "parents getting involved in politics for the first time, unspoken for
           voting blocs are real people!"
           <div style={{ display: "flex", float: "left", flexWrap: "wrap" }}>
-            <Bachelors
-              suggestBachelor={this.state.suggestBachelor}
-              lastWidth={Math.min(600, this.state.lastWidth - 10)}
-              style={{
-                paddingBottom: "15px",
-                backgroundColor: "rgb(190,150,180)"
-              }}
-            />
+            <div style={{ display: "block" }}>
+              <Bachelors
+                suggestBachelor={this.state.suggestBachelor}
+                lastWidth={Math.min(600, this.state.lastWidth - 10)}
+                style={{
+                  float: "left",
+                  paddingBottom: "15px",
+                  backgroundColor: "rgb(190,150,180)"
+                }}
+              />
+              <h2 style={{ fontSize: "15px" }}>
+                Is percentile ordinal or marginal?
+                <br />
+                Secret{space}
+                <span
+                  style={{
+                    color: "tan"
+                  }}
+                >
+                  advances
+                </span>
+                {space}are indemnifiable
+                <br />
+                <span style={{ color: "grey" }}>
+                  Non-bourgoisie (post-revenue) trade material recovery
+                </span>
+                {space}secrets in a{space}
+                <span style={{ color: "firebrick" }}>
+                  severed, above ground, proprietor licensure
+                </span>
+                .
+                <br />
+                Standing license;{space}
+                <span style={{ color: "cornflowerblue" }}>downstream</span>
+                {space}and{space}
+                <span style={{ color: "darkgreen" }}>
+                  nationwide or dollar vote interior
+                </span>
+                .
+              </h2>
+            </div>
             <a href="https://www.quora.com/If-higher-education-no-longer-provides-stable-employment-and-costs-so-much-how-can-it-be-so-important">
               <Cable
                 style={{
@@ -8367,36 +8400,6 @@ export default class App extends React.Component {
               </b>
             </div>
           </div>
-          <h2 style={{ fontSize: "15px" }}>
-            Is percentile ordinal or marginal?
-            <br />
-            Secret{space}
-            <span
-              style={{
-                color: "tan"
-              }}
-            >
-              advances
-            </span>
-            {space}are indemnifiable
-            <br />
-            <span style={{ color: "grey" }}>
-              Non-bourgoisie (post-revenue) trade material recovery
-            </span>
-            {space}secrets in a{space}
-            <span style={{ color: "firebrick" }}>
-              severed, above ground, proprietor licensure
-            </span>
-            .
-            <br />
-            Standing license;{space}
-            <span style={{ color: "cornflowerblue" }}>downstream</span>
-            {space}and{space}
-            <span style={{ color: "darkgreen" }}>
-              nationwide or dollar vote interior
-            </span>
-            .
-          </h2>
           Get a license - 3%/yr return at $60/b, royalty/barrel (23% + TX + PA =
           18m - 3m export + 3m import).
           <br />
@@ -8966,4 +8969,3 @@ export default class App extends React.Component {
     );
   }
 }
-
