@@ -8930,26 +8930,23 @@ class Bachelors extends React.Component {
       }
       return newnum + (decimal ? "." + decimal : "") + suff[app];
     };
+    const width = Math.min(250, this.props.lastWidth);
     //console.log(this.state.oilprice);
     const noData = this.state.noData.map(([x, y]) => [
-      ((x - this.state.lowDate) / this.state.xAxis) *
-        0.9 *
-        this.props.lastWidth,
+      ((x - this.state.lowDate) / this.state.xAxis) * width,
       0
     ]);
     //console.log(this.state.oilprice);
 
     const currentDataData = this.state.currentDataData.map(([x, y]) => [
-      ((x - this.state.lowDate) / this.state.xAxisPPCS) *
-        0.9 *
-        this.props.lastWidth,
+      ((x - this.state.lowDate) / this.state.xAxisPPCS) * 0.9 * width,
       ((y - 0) / this.state.yAxisPPCS) * 150
     ]);
     return (
       <div
         style={{
           fontSize: "12px",
-          width: "100%",
+          width: width,
           minHeight: "240px",
           position: "relative",
           backgroundColor: "rgb(0,40,0)"
@@ -9004,7 +9001,9 @@ class Bachelors extends React.Component {
             :&nbsp;
             {shortNumber(this.state.lowPPCS)}
             &nbsp;-&nbsp;
-            {shortNumber(this.state.highPPCS)}, none-phd
+            {shortNumber(this.state.highPPCS)}
+            <br />
+            none high some asso_ bachelor master phd
           </div>
         </div>
         <div style={{ transform: "translate(0px,230px)" }}>
@@ -9029,22 +9028,43 @@ class Bachelors extends React.Component {
                   />
                 )
             )}
-            {currentDataData.map(
-              ([x, y], i) =>
+            {currentDataData.map(([x, y], i) => {
+              const label = i === 3 ? "pdh" : "";
+              return (
                 !isNaN(x) &&
                 !isNaN(y) && (
-                  <rect
-                    x={x}
-                    y={y}
-                    width={2}
-                    height={2}
-                    stroke="white"
-                    fill="blue"
-                    strokeWidth={1}
-                    key={i}
-                  />
+                  <g>
+                    <rect
+                      x={x}
+                      y={y}
+                      width={20}
+                      height={2}
+                      stroke="white"
+                      fill="blue"
+                      strokeWidth={1}
+                      key={i}
+                    />
+                    <text
+                      style={
+                        {
+                          //transform: "translate(0%,0%) scale(-1,-1)"
+                        }
+                      }
+                      display="inline-block"
+                      x={x}
+                      y={y + 10}
+                      font-family="Verdana"
+                      font-size="12"
+                      fill="white"
+                    >
+                      {/*label.split().map((x, i) => {
+                        return label[i - label.length + x.length];
+                      })*/}
+                    </text>
+                  </g>
                 )
-            )}
+              );
+            })}
           </svg>
         </div>
         {/*<div
