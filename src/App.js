@@ -716,10 +716,16 @@ export default class App extends React.Component {
           style={{ textDecoration: "underline" }}
           onClick={() => this.setState({ openFrank: !this.state.openFrank })}
         >
-          Tax Security, First!{space}<span style={{
-            fontSize:"12px",
-            color:"grey"
-          }}>[Finance for (public but) deflationary universal plaintiff cop real income gains]</span>
+          Tax Security, First!{space}
+          <span
+            style={{
+              fontSize: "12px",
+              color: "grey"
+            }}
+          >
+            [Finance for (public but) deflationary universal plaintiff cop real
+            income gains]
+          </span>
         </h2>
         <h3>
           Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
@@ -8296,14 +8302,68 @@ export default class App extends React.Component {
           or hide a problem it gets worse," - Luke Rosiak, 'Race to the Bottom',
           "parents getting involved in politics for the first time, unspoken for
           voting blocs are real people!"
-          <Bachelors
-            suggestBachelor={this.state.suggestBachelor}
-            lastWidth={Math.min(600, this.state.lastWidth)}
-            style={{
-              paddingBottom: "15px",
-              backgroundColor: "rgb(190,150,180)"
-            }}
-          />
+          <div style={{ display: "flex", float: "left" }}>
+            <Bachelors
+              suggestBachelor={this.state.suggestBachelor}
+              lastWidth={Math.min(600, this.state.lastWidth)}
+              style={{
+                paddingBottom: "15px",
+                backgroundColor: "rgb(190,150,180)"
+              }}
+            />
+            <a href="https://www.quora.com/If-higher-education-no-longer-provides-stable-employment-and-costs-so-much-how-can-it-be-so-important">
+              <Cable
+                style={{
+                  maxWidth: "200px",
+                  width: !this.state.openSynth ? "200px" : "0px",
+                  transition: ".3s ease-in"
+                }}
+                onError={handleScollImgError}
+                img={true}
+                src={
+                  this.state.noyout
+                    ? ""
+                    : "https://www.dropbox.com/s/vqa0a5vqsdgbnp9/Screen%20Shot%202023-02-15%20at%201.39.07%20PM.png?raw=1"
+                }
+                float={null}
+                title="https://www.quora.com/If-higher-education-no-longer-provides-stable-employment-and-costs-so-much-how-can-it-be-so-important/answer/Joshua-Gross-8"
+                scrolling={this.state.scrolling}
+                fwd={this["scrollImg" + scrollnum()]}
+                scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+                scrollTop={this.state.openSynth && this.state.scrollTop}
+              />
+            </a>
+          </div>
+          <h2 style={{ fontSize: "15px" }}>
+            Is percentile ordinal or marginal?
+            <br />
+            Secret{space}
+            <span
+              style={{
+                color: "tan"
+              }}
+            >
+              advances
+            </span>
+            {space}are indemnifiable
+            <br />
+            <span style={{ color: "grey" }}>
+              Non-bourgoisie (post-revenue) trade material recovery
+            </span>
+            {space}secrets 
+            in a{space}
+            <span style={{ color: "firebrick" }}>
+              severed, above ground, proprietor licensure
+            </span>
+            .
+            <br />
+            Standing license;{space}
+            <span style={{ color: "cornflowerblue" }}>downstream</span>
+            {space}and{space}
+            <span style={{ color: "darkgreen" }}>
+              nationwide or dollar vote interior
+            </span>.
+          </h2>
           Get a license - 3%/yr return at $60/b, royalty/barrel (23% + TX + PA =
           18m - 3m export + 3m import).
           <br />
