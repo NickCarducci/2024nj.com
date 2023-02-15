@@ -8333,6 +8333,12 @@ export default class App extends React.Component {
                 scrollTop={this.state.openSynth && this.state.scrollTop}
               />
             </a>
+          <div style={{ fontSize: "15px" }}>
+            Productivity or recovery{space}Why are unsevered lands
+            improvable and tangible?{space}Are increments of income or advances
+            on either residences or commercial property tax-free? Is a stock of
+            goods held primarily for either consumption or investment deemed to
+            be held primary for sale?</div>
           </div>
           <h2 style={{ fontSize: "15px" }}>
             Is percentile ordinal or marginal?
