@@ -8302,10 +8302,10 @@ export default class App extends React.Component {
           or hide a problem it gets worse," - Luke Rosiak, 'Race to the Bottom',
           "parents getting involved in politics for the first time, unspoken for
           voting blocs are real people!"
-          <div style={{ display: "flex", float: "left" }}>
+          <div style={{ display: "flex", float: "left", flexWrap: "wrap" }}>
             <Bachelors
               suggestBachelor={this.state.suggestBachelor}
-              lastWidth={Math.min(600, this.state.lastWidth)}
+              lastWidth={Math.min(600, this.state.lastWidth - 10)}
               style={{
                 paddingBottom: "15px",
                 backgroundColor: "rgb(190,150,180)"
@@ -8350,8 +8350,7 @@ export default class App extends React.Component {
             <span style={{ color: "grey" }}>
               Non-bourgoisie (post-revenue) trade material recovery
             </span>
-            {space}secrets 
-            in a{space}
+            {space}secrets in a{space}
             <span style={{ color: "firebrick" }}>
               severed, above ground, proprietor licensure
             </span>
@@ -8362,7 +8361,8 @@ export default class App extends React.Component {
             {space}and{space}
             <span style={{ color: "darkgreen" }}>
               nationwide or dollar vote interior
-            </span>.
+            </span>
+            .
           </h2>
           Get a license - 3%/yr return at $60/b, royalty/barrel (23% + TX + PA =
           18m - 3m export + 3m import).
