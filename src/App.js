@@ -576,7 +576,7 @@ export default class App extends React.Component {
             </a>
           </div>
         </div>
-        <h3
+        <div
           style={{
             color: "grey" //just do it (give me your address)
           }}
@@ -673,39 +673,56 @@ export default class App extends React.Component {
               <a href="https://scopes.cc">proprietor</a>. literally
               revenuedata.doi.gov, student loans should industry proprietor
               payday. Dollar vote; Money is stock.
+              <h3>
+                Extractable-only:{space}
+                <span
+                  style={{
+                    fontSize: this.state.openSchool ? "15px" : "0px",
+                    transition: ".3s ease-in"
+                  }}
+                >
+                  Insurance scalping schedules (without a stop-loss) and
+                  expiring commodities causes inflation, 2503(e) out-of-pocket
+                  admits this; coverage is not simple human sense; it is
+                  scientifically retarding by action of course.
+                </span>
+              </h3>
+              <h3>
+                Don't let borrowers off for loitering nor lenders for fixing the
+                either horizontal or foreclosure-sale kept-down payment game,
+                both causing an imbalance of supply and demand.{space}
+                <span
+                  style={{
+                    fontSize: this.state.openSchool ? "12px" : "0px",
+                    transition: ".3s ease-in"
+                  }}
+                >
+                  (cash/debt)*liability payments.
+                </span>
+              </h3>
             </span>
           </span>
           {/*} (I am impersonating the un barring holds war permit)
         that must not be halal to the ohio man (mormon, utah?)
+        //clandestine
         */}
-        </h3>
-        <h3>
-          Extractable-only:{space}
-          <span style={{ fontSize: "15px" }}>
-            Insurance scalping schedules (without a stop-loss) and expiring
-            commodities causes inflation, 2503(e) out-of-pocket admits this;
-            coverage is not simple human sense; it is scientifically retarding
-            by action of course.
-          </span>
-        </h3>
-        <h3>
-          Don't let borrowers off for loitering nor lenders for fixing the
-          either horizontal or foreclosure-sale kept-down payment game, both
-          causing an imbalance of supply and demand.{space}
-          <span
-            style={{
-              fontSize: "12px"
-            }}
-          >
-            (cash/debt)*liability payments.
-          </span>
-        </h3>
-        In office or not, I'm advocating/making anonymous voting mechanisms
-        [public id, private+vote-increment], and an anonymous account identity
-        provider is past due for brokerage accounts and petitions! Surely in the
-        next few years the Internet will be an intranet by GSA for age and
-        non-convict verification so business can actually confidentially
-        compute!
+        </div>
+        <i style={{ fontSize: "12px" }}>
+          My first time voting was in 2020 but I have been a covert economics
+          (OWS, JHU) researcher with an eye for degrowth and deflation, or what
+          I call material recovery. We are non-voters and our stake is
+          reconciliation but for real plaintiff coverage tax falls until
+          deflation (which should be immediate)!
+        </i>
+        <h2>malarkey is SSDI mental-injury. SSI for trauma...</h2>
+        <span style={{ fontSize: "12px" }}>
+          In office or not, I'm advocating/making anonymous voting mechanisms
+          [public id, private+vote-increment], and an anonymous account identity
+          provider is past due for brokerage accounts and petitions! Surely in
+          the next few years the Internet will be an intranet by GSA for age and
+          non-convict verification so business can actually confidentially
+          compute!
+        </span>
         <hr ref={this.carducci} />
         I'm not sure door to door canvassing is for a new organization by a
         youthful person. Perhaps I go to the train stations.
@@ -8973,3 +8990,4 @@ export default class App extends React.Component {
     );
   }
 }
+
