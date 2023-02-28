@@ -9029,22 +9029,22 @@ class Bachelors extends React.Component {
                 )
             )}
             {currentDataData.map(([x, y], i) => {
-              const label = i === 3 ? "pdh" : "";
+              //const label = i === 3 ? "pdh" : "";
               return (
                 !isNaN(x) &&
                 !isNaN(y) && (
-                  <g>
-                    <rect
-                      x={x}
-                      y={y}
-                      width={20}
-                      height={2}
-                      stroke="white"
-                      fill="blue"
-                      strokeWidth={1}
-                      key={i}
-                    />
-                    <text
+                  <rect
+                    x={x}
+                    y={y}
+                    width={20}
+                    height={2}
+                    stroke="white"
+                    fill="blue"
+                    strokeWidth={1}
+                    key={i}
+                  />
+                )
+                /* <text
                       style={
                         {
                           //transform: "translate(0%,0%) scale(-1,-1)"
@@ -9057,12 +9057,10 @@ class Bachelors extends React.Component {
                       font-size="12"
                       fill="white"
                     >
-                      {/*label.split().map((x, i) => {
+                      {label.split().map((x, i) => {
                         return label[i - label.length + x.length];
-                      })*/}
-                    </text>
-                  </g>
-                )
+                      })}
+                    </text>*/
               );
             })}
           </svg>
