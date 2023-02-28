@@ -182,7 +182,16 @@ export default class Petition extends React.Component {
           //backgroundColor: "rgb(32, 22, 11)"
         }}
         //href="https://carducci.us/primary"
+        //I don't wanna wait, living on a prayer
       >
+        <b style={{ float: "right", fontSize: "12px" }}>
+          <a href="https://scopes.cc" style={{ color: "black" }}>
+            Information insurance
+          </a>
+          <br />
+          (Save the rats!)
+          {/*}, plaintiff tax Warranty*/}
+        </b>
         <div
           style={{
             width: "max-content",
