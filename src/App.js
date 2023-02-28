@@ -714,6 +714,26 @@ export default class App extends React.Component {
           reconciliation but for real plaintiff coverage tax falls until
           deflation (which should be immediate)!
         </i>
+        <Cable
+          style={{
+            transition: ".3s ease-in",
+            width: "100%",
+            maxWidth: "200px"
+          }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/ij5ojj3eg48b3ip/petition%20photo.png?raw=1"
+          }
+          float={"right"}
+          title="petition photo"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.openSynth && this.state.scrollTop}
+        />
         <h2>malarkey is SSDI mental-injury. SSI for trauma...</h2>
         <span style={{ fontSize: "12px" }}>
           In office or not, I'm advocating/making anonymous voting mechanisms
@@ -8990,4 +9010,3 @@ export default class App extends React.Component {
     );
   }
 }
-
