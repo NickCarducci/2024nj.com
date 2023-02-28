@@ -185,6 +185,18 @@ export default class Petition extends React.Component {
       >
         <div
           style={{
+            width: "max-content",
+            color: "white",
+            backgroundColor: "darkorchid",
+            borderRadius: "12px",
+            padding: "4px 10px",
+            margin: "4px 0px"
+          }}
+        >
+          Ballotpedia.org/Nick_Carducci
+        </div>
+        <div
+          style={{
             justifyContent: "space-between",
             display: "flex",
             backgroundColor: "black",
