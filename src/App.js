@@ -707,6 +707,26 @@ export default class App extends React.Component {
         //clandestine
         */}
         </div>
+        <a href="https://www.quora.com/unanswered/Do-banks-technically-need-to-lend-deposits-to-operate">
+        <Cable
+          style={{
+            transition: ".3s ease-in",
+            width: "100%",
+          }}
+          onError={handleScollImgError}
+          img={true}
+          src={
+            this.state.noyout
+              ? ""
+              : "https://www.dropbox.com/s/3h60qq7tzvrc126/Screen%20Shot%202023-03-14%20at%2012.39.12%20AM.png?raw=1"
+          }
+          float={null}
+          title="DoD banking shill"
+          scrolling={this.state.scrolling}
+          fwd={this["scrollImg" + scrollnum()]}
+          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
+          scrollTop={this.state.openSynth && this.state.scrollTop}
+        /></a>
         <i style={{ fontSize: "12px" }}>
           My first time voting was in 2020 but I have been a covert economics
           (OWS, JHU) researcher with an eye for degrowth and deflation, or what
