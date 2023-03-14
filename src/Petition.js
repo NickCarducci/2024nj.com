@@ -72,7 +72,7 @@ export default class Petition extends React.Component {
     if (
       this.state.first !== "" &&
       this.state.last !== "" &&
-      this.state.address !== "" &&
+      //this.state.address !== "" &&
       this.state.city !== "" &&
       this.state.zip !== ""
     ) {
@@ -302,7 +302,7 @@ export default class Petition extends React.Component {
             <br />
             <input
               onChange={(e) => this.setState({ address: e.target.value })}
-              placeholder="address"
+              placeholder="address (optional)"
             />
             <input
               onChange={(e) => this.setState({ city: e.target.value })}
