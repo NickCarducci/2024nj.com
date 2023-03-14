@@ -4717,6 +4717,15 @@ export default class App extends React.Component {
             future contracts.
           </h4>
           <AMore
+            ref={{
+              current: {
+                disability: this.disability,
+                depression: this.depression,
+                ssa: this.ssa,
+                supply: this.supply,
+                $: this.$
+              }
+            }}
             goTo={goTo}
             scrolling={this.state.scrolling}
             scrollTop={this.state.scrollTop}
