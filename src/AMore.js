@@ -2138,7 +2138,7 @@ class AMore extends React.Component {
           happens)
         </h4>
         nervous system (16%) and injured (7%)
-        <hr ref={this.disability} />
+        <hr ref={this.props.disability} />
         2. A self-stunting ableist. 3. The developmentally disabled and/or
         injured are more careful than to succumb to further retardation (I’m
         interested in this topic because I’m injured and have a non-speaking
@@ -2635,7 +2635,7 @@ class AMore extends React.Component {
         prices assets’ colludable.
         <br />
         <br />
-        <hr ref={this.depression} />
+        <hr ref={this.props.depression} />
         "What caused the first Great Depression?"
         <br />
         Nick Carducci - BA in Political Science & Economics, Johns Hopkins
@@ -2973,7 +2973,7 @@ class AMore extends React.Component {
           scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
           scrollTop={this.state.openSynth && this.state.scrollTop}
         />
-        <hr ref={this.ssa} />
+        <hr ref={this.props.ssa} />
         Welcome to OMB! The Office of Management and Budget manages the State of
         New Jersey's financial assets and helps ensure that taxpayer resources
         are allocated efficiently and in accordance with state laws,
@@ -3534,7 +3534,7 @@ class AMore extends React.Component {
         is material and labor, price and hour.
         <br />
         <br />
-        <hr ref={this.supply} />
+        <hr ref={this.props.supply} />
         The{space}
         <a href="https://qr.ae/pG0Uat">snapshot</a>
         {space}of the Supply and Demand plane has no representation of physical
@@ -3636,7 +3636,7 @@ class AMore extends React.Component {
         ," BLS).
         <br />
         <br />
-        <hr ref={this.$} />
+        <hr ref={this.props.$} />
         "Running schools as employment centers for adults. When you hide from or
         hide a problem it gets worse," - Luke Rosiak, 'Race to the Bottom',
         "parents getting involved in politics for the first time, unspoken for
@@ -4292,4 +4292,6 @@ class AMore extends React.Component {
     );
   }
 }
-export default AMore;
+export default React.forwardRef((props, ref) => (
+  <AMore {...props} {...ref.current} />
+));
