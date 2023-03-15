@@ -697,7 +697,7 @@ export default class App extends React.Component {
         //clandestine
         */}
         </div>
-        <a href="https://www.quora.com/unanswered/Do-banks-technically-need-to-lend-deposits-to-operate">
+        <a href="https://occupywall.us">
           <Cable
             style={{
               transition: ".3s ease-in",
@@ -711,7 +711,7 @@ export default class App extends React.Component {
                 : "https://www.dropbox.com/s/3h60qq7tzvrc126/Screen%20Shot%202023-03-14%20at%2012.39.12%20AM.png?raw=1"
             }
             float={null}
-            title="DoD banking shill"
+            title="DoD banking shill - https://www.quora.com/unanswered/Do-banks-technically-need-to-lend-deposits-to-operate"
             scrolling={this.state.scrolling}
             fwd={this["scrollImg" + scrollnum()]}
             scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
@@ -719,7 +719,9 @@ export default class App extends React.Component {
           />
         </a>
         <div
+          onClick={() => this.setState({ openInfo: !this.state.openInfo })}
           style={{
+            cursor: "pointer",
             padding: "2px 6px",
             border: "1px solid",
             width: "min-content",
@@ -766,8 +768,44 @@ export default class App extends React.Component {
             transition: ".3s ease-in"
           }}
         >
-          malarkey is SSDI mental-injury. SSI for trauma...
+          malarkey is SSDI mental-injury. SSI for{space}
+          <span
+            style={{ textDecoration: "underline", cursor: "pointer" }}
+            onClick={() =>
+              this.setState({ openTrauma: !this.state.openTrauma })
+            }
+          >
+            trauma
+          </span>
+          ...
         </h2>
+        <div
+          style={{
+            fontSize: this.state.openTrauma ? "12px" : "0px",
+            transition: ".3s ease-in"
+          }}
+        >
+          Should medical{space}
+          <a href="https://saverparty.xyz">care escrow</a>
+          {space}continue to be for internal and psychological ailments or
+          should supplemental income be for trauma anytime while disability
+          insurance be for injury during work and public healthcare for sutures
+          already? Are people with cardiovascular and psychological issues or
+          with musculoskeletal lacerations disabled? Aren’t the developmentally
+          disabled traumatized? Why should an injured cash-basis hospitality
+          worker have to work for other accrual-based industries when people
+          with age-related diseases or personality disorders are given
+          disability insurance? Isn’t Social Security ageist? Why does Social
+          Security award young people disability for psychological issues when
+          they have musculoskeletal lacerations and old people when presenting
+          internal diseases that are positively correlated with age? Should
+          Social Security (continue to) make assumptions (about employers)?
+          {space}
+          <a href="https://bankingisnot.biz">
+            Is disability insurance or are unemployment benefits and employment
+            retention credits more corrupt?
+          </a>
+        </div>
         <div
           style={{
             fontSize: this.state.openInfo ? "12px" : "0px",
