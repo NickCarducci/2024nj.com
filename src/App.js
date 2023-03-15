@@ -697,6 +697,8 @@ export default class App extends React.Component {
         //clandestine
         */}
         </div>
+        Can a business legally make their products worse or prices higher in
+        line with margins?
         <a href="https://occupywall.us">
           <Cable
             style={{
@@ -840,6 +842,12 @@ export default class App extends React.Component {
             income gains]
           </span>
         </h2>
+        <i>
+          Service escrow sutures, moving to learn to code shelters with computer
+          labs, open the borders, truancy as trespass but inflation-affixed
+          dependency, tax cuts for surplus and hikes after recession yet during
+          its inflation part, codify past debt by factor.
+        </i>
         <h3>
           Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
         </h3>
