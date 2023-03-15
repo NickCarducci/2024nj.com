@@ -184,16 +184,10 @@ export default class Petition extends React.Component {
         //href="https://carducci.us/primary"
         //I don't wanna wait, living on a prayer
       >
-        <b style={{ float: "right", fontSize: "12px" }}>
-          <a href="https://scopes.cc" style={{ color: "black" }}>
-            Information insurance
-          </a>
-          <br />
-          (Save the rats!)
-          {/*}, plaintiff tax Warranty*/}
-        </b>
         <div
           style={{
+            float: "left",
+            fontSize: "12px",
             width: "max-content",
             color: "white",
             backgroundColor: "darkorchid",
@@ -204,10 +198,22 @@ export default class Petition extends React.Component {
         >
           Ballotpedia.org/Nick_Carducci
         </div>
+        <h2 style={{ margin: "4px 0px" }}>
+          {/*Where do you live, bitch?I will find you */}Are you a New Jersey
+          voter?
+        </h2>
+        <b style={{ fontSize: "12px" }}>
+          <a href="https://scopes.cc" style={{ color: "black" }}>
+            Information insurance
+          </a>
+          <br />
+          (Save the rats!)
+          {/*}, plaintiff tax Warranty*/}
+        </b>
         <div
           style={{
             justifyContent: "space-between",
-            display: "flex",
+            display: "none",
             backgroundColor: "black",
             padding: "10px"
           }}
@@ -270,16 +276,13 @@ export default class Petition extends React.Component {
             </div>
           )}
         </div>
-        <h2>
-          {/*Where do you live, bitch?I will find you */}Are you a New Jersey
-          voter?
-        </h2>
+        <h1>TaxSecurityFirst.com for Risk-Free Banking</h1>
         <h2>Submit your signature! {this.state.signatures}/800</h2>
-        Do you want banks that don’t force you to invest?{" "}
+        {/*Do you want banks that don’t force you to invest?{" "}
         <i>
           Why should a product be closed source to have a fair end user license
           agreement?
-        </i>
+                </i>*/}
         {this.state.finished ? (
           <div>
             <h2>Thank you! keep in touch:</h2>
@@ -288,27 +291,33 @@ export default class Petition extends React.Component {
         ) : (
           <form onSubmit={this.handleSubmit}>
             <input
+              style={{ width: "120px" }}
               onChange={(e) => this.setState({ first: e.target.value })}
               placeholder="first name"
             />
             <input
+              style={{ width: "100px" }}
               onChange={(e) => this.setState({ middle: e.target.value })}
               placeholder="middle name"
             />
             <input
+              style={{ width: "100px" }}
               onChange={(e) => this.setState({ last: e.target.value })}
               placeholder="last name"
             />
             <br />
             <input
+              style={{ width: "120px" }}
               onChange={(e) => this.setState({ address: e.target.value })}
               placeholder="address (optional)"
             />
             <input
+              style={{ width: "100px" }}
               onChange={(e) => this.setState({ city: e.target.value })}
               placeholder="city"
             />
             <input
+              style={{ width: "100px" }}
               onChange={(e) => this.setState({ zip: e.target.value })}
               placeholder="zip"
             />
