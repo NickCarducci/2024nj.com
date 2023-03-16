@@ -3646,15 +3646,17 @@ class AMore extends React.Component {
         voting blocs are real people!"
         <div style={{ display: "flex", float: "left", flexWrap: "wrap" }}>
           <div style={{ display: "block" }}>
-            <Bachelors
-              suggestBachelor={this.state.suggestBachelor}
-              lastWidth={Math.min(600, this.props.lastWidth - 10)}
-              style={{
-                float: "left",
-                paddingBottom: "15px",
-                backgroundColor: "rgb(190,150,180)"
-              }}
-            />
+            {this.props.lastWidth && (
+              <Bachelors
+                suggestBachelor={this.state.suggestBachelor}
+                lastWidth={Math.min(600, this.props.lastWidth - 10)}
+                style={{
+                  float: "left",
+                  paddingBottom: "15px",
+                  backgroundColor: "rgb(190,150,180)"
+                }}
+              />
+            )}
             <h2 style={{ fontSize: "15px" }}>
               Is percentile ordinal or marginal?
               <br />
@@ -4298,3 +4300,4 @@ class AMore extends React.Component {
 export default React.forwardRef((props, ref) => (
   <AMore {...props} {...ref.current} />
 ));
+
