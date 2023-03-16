@@ -265,7 +265,7 @@ class Population extends React.Component {
                     <rect
                       x={x}
                       y={y}
-                      transform=".3s ease-in"
+                      transition=".3s ease-in"
                       width={
                         !this.state.chosenAge
                           ? 2
