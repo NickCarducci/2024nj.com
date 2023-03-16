@@ -91,7 +91,7 @@ class AMore extends React.Component {
         <h1>
           trade secret vig mcghee;{space}
           <a href="https://youtu.be/Weqb9KrQ-TU?t=21">inseminate cell online</a>
-          {space}bitch
+          {space}b*tch
         </h1>
         <Cable
           style={{
@@ -1100,7 +1100,7 @@ class AMore extends React.Component {
         profit beyond sales (leases, law, without desist by NAICS variable or
         paid, and comp-yet, writers).
         <br />
-        A Cyber attack cannot happen with proper CORS authentication, bitch
+        A Cyber attack cannot happen with proper CORS authentication, b*tch
         Bridget Gabriel.
         <br />
         Closed source vig "Licenses to{space}
@@ -1592,7 +1592,7 @@ class AMore extends React.Component {
         <br />
         <br />
         Actual innovation. Actual labor-borne-demand lest dead-weight of
-        1/hour-GDP/p enumerated economic welfare you fucking retarded vet. even
+        1/hour-GDP/p enumerated economic welfare you f*cking retarded vet. even
         he is booned by false bid pools, and cannot comment on funding, as
         politicians can only own currency and concurrentable commodities, lest
         abstain.
@@ -1637,13 +1637,13 @@ class AMore extends React.Component {
         "metholological advancements that are needed to use medical health data,
         real-world is not a new concept, understand by studying coincidences
         instead of fixing for basis rate of meaningful significance." What a
-        fucking nutty-tool bond tax hypocratic operational loss conflict
+        f*cking nutty-tool bond tax hypocratic operational loss conflict
         whistleblowers flummoxed and judges unaccountable for vig and successful
         appeal. I'm not crazy! I have a hole in my leg! I like my hair messy!
         Rollover insurance is trade!
         <br />
         <br />
-        Drug discovery front-running doesn't help people, bitch. Borrowings
+        Drug discovery front-running doesn't help people, b*tch. Borrowings
         instead of mental health insurance fraud, I have a hole in my leg I will
         kill all of you. Without threat of legal action, from known hazards,
         exclusive answer endeavor, state-closed-source-vig, estimates?
@@ -2064,7 +2064,7 @@ class AMore extends React.Component {
           consensus
         </span>
         , so they are subservient to customers instead of leases
-        <h4>why are we share-splitting our own currency retard bitch</h4>
+        <h4>why are we share-splitting our own currency retard b*tch</h4>
         all the right cares about is jobs, but what about efficiency by lower
         expenses per hour?
         <br />
@@ -2118,8 +2118,8 @@ class AMore extends React.Component {
           up.”
         </h4>
         force majeure is not only reason why you cannot surrender bids of
-        others, bitch. Talk radio is only appropriate income, albeit all your
-        fucking sponsors are finance
+        others, b*tch. Talk radio is only appropriate income, albeit all your
+        f*cking sponsors are finance
         <br />
         <br />
         Funeral costs, are free rider mutable, so funds just raises bids. Known
@@ -2582,8 +2582,8 @@ class AMore extends React.Component {
         <br />
         “We need to make our own energy production 18m/3m in 3m out, versus
         solar and wind, which is completely absurd.” Libby Emmons, the
-        Post-Millennial. In one ear out the other bitch I don’t know what the
-        fuck you’re saying. "Nuclear is safe lest Tsunami!!!!"
+        Post-Millennial. In one ear out the other b*tch I don’t know what the
+        f*ck you’re saying. "Nuclear is safe lest Tsunami!!!!"
         <br />
         <br />
         middle class certainly are losing on net , let alone unrealized gains
@@ -3086,10 +3086,15 @@ class AMore extends React.Component {
         trust-breaking hypocrisy stand. Working middle class people, is not
         harmed because "economic climate" Senator Alfonso DiMato you{space}
         <a href="https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/">
-          fucking faggot
+          f*cking faggot
         </a>
-        <br />
-        <br />
+        <TwitterTweetEmbed
+          style={{
+            
+          }}
+          key="1635810357569634306"
+          tweetId="1635810357569634306"
+        />
         Inflation because of Putin, he can sell for $20 even when finance 7% of
         GDP/yr is rig-rates/leasing. Fuck all of you. “Collecting guns off the
         streets,” says the grocer who will fight tooth and nail against
@@ -3938,7 +3943,7 @@ class AMore extends React.Component {
         kids on pretty fixed-income."
         <br />
         <br />
-        biolab research, inseminate it on stage, bitch!
+        biolab research, inseminate it on stage, b*tch!
         <br />
         "recruited some of my time back," leisure copy science favor chore.
         <h4>
@@ -4229,7 +4234,7 @@ class AMore extends React.Component {
         />
         "But I’m going to rip your (goddamn) head off" SELF DEFENSE
         <br />
-        "I’m gonna (fucking) kill you" (Can't self-defense be a preemptive
+        "I’m gonna (f*cking) kill you" (Can't self-defense be a preemptive
         strike with any weapon of similar caliber and potential damage?)
         <br />"<a href="https://qr.ae/pGdau0">we need</a>
         {space}to confiscate their wealth"
@@ -4295,3 +4300,4 @@ class AMore extends React.Component {
 export default React.forwardRef((props, ref) => (
   <AMore {...props} {...ref.current} />
 ));
+
