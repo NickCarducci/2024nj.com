@@ -60,7 +60,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "" : "0px"
+            width: this.props.openSynth ? "" : "0px"
           }}
           onError={handleScollImgError}
           img={true}
@@ -71,10 +71,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Dr. Drew after 4x checking for mortgage, he says homelessness is because of the way G-d made people"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         you don't need to medicate the homeless
         <br />
@@ -96,7 +96,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "" : "0px"
+            width: this.props.openSynth ? "" : "0px"
           }}
           onError={handleScollImgError}
           img={true}
@@ -107,10 +107,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="FDA medical device auth shill"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         How at all is a 'name-your-price' tool, "access?"
         <br />
@@ -126,7 +126,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "" : "0px"
+            width: this.props.openSynth ? "" : "0px"
           }}
           onError={handleScollImgError}
           img={true}
@@ -137,10 +137,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="FDA medical device auth shill"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         User fee committment capacity and expertise, $2.5b The FDA/USPTO/NIH
         does not exclusively ensure safe and effective medical technologies, and
@@ -166,8 +166,8 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "" : "0px",
-            height: this.state.openSynth ? "400px" : "0px"
+            width: this.props.openSynth ? "" : "0px",
+            height: this.props.openSynth ? "400px" : "0px"
           }}
           onError={handleScollImgError}
           //img={true}
@@ -176,10 +176,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="Kirby 3/30/22 $139b pentagon r&d free rider mutable input cost 5g"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <a href="https://truncatedsalestax.com/gov">
           Geneva convention forced medication not held
@@ -260,7 +260,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "200px" : "0px"
+            width: this.props.openSynth ? "200px" : "0px"
           }}
           onError={handleScollImgError}
           img={true}
@@ -271,10 +271,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Newsmax Stephen Moore talking government and implausible use lease return structure growth to employer benefit net loss"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         “
         <a href="https://twitter.com/viathumbprint/status/1413909110140149768?s=20&t=zN8fJIe7ByDpXFv7jcZ2dw">
@@ -293,7 +293,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -304,10 +304,10 @@ class AMore extends React.Component {
           }
           float={null}
           title="Newsmax Halperin and John Bachman, smiling about $2t currency spent by larceny $4t checking mortgage, for a CDC covered INsignificant single-year death rate expected 1941 baby-boomer growth"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         'Currency comes from G-d,' JHU arts and sciences
         <br />
@@ -315,7 +315,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "" : "0px"
+            width: this.props.openSynth ? "" : "0px"
           }}
           onError={handleScollImgError}
           img={true}
@@ -326,10 +326,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Mr. Yarmuth saying Article 1.8 equal bond tax scope is free rider mutable trust building and loose debentures"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         "reduce the carried interest rate by share-split of Savers to help
         investible $2t currency for $1.8t/yr debt spending." surrendered freedom
@@ -338,7 +338,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -350,10 +350,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="OMB saying GDP is not expense"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         American Rescue Plan job growth by hour or per retiree artifact of tech
         deprecation, busy-work and -/hour-GDP/p (recession is success, Great
@@ -370,7 +370,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -382,10 +382,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Richard Diaz gentrifying his community, never inventory outright but public trust breaking hypocrisy, albeit 1/3 with corp debenture and mortgage loan"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         $750b capital costs, funding infusion by making checking not fungible
         for currency?
@@ -397,7 +397,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -409,10 +409,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="Mr. Olson tribal gentrification by loans and tax for labor-cost same quality no change"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Mr. Olson, "Tribes need wherewithall," to get +$4t mortgage and checking
         is surrendered freedom of $2t currency holders as labor-borne-demand and
@@ -425,7 +425,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -437,10 +437,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Ruiz (CA) saying checking is not surrendered freedom of currency holders"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         "We just put money into SRF as checking by mortgage, but we can't use
         it," Mr. Ruiz (CA), why don't you ban finance as income and compel
@@ -459,7 +459,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -471,10 +471,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="Buddy Carter (GA) shilling for redistribution"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         "They need funds to drill a well," consumer surrogate maxx-royalty 1/12
         NAICS - Buddy Carter, small town Georgia, share split and tax corporate
@@ -502,7 +502,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -514,10 +514,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Mr. Johnson OH Trusting the Tap: Upgrading America's Drinking Water Infrastructure - https://youtu.be/arpaH3oy77Q"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         PCE-CPI SRF is not a good thing, it is expense, Mr. Johnson (OH, trust
         breaking hypocrisy), if public works are damaging to citizens, aren't
@@ -621,7 +621,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "300px" : "0px"
+            width: this.props.openSynth ? "300px" : "0px"
           }}
           onError={handleScollImgError}
           img={true}
@@ -632,10 +632,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="PEW income and wealth https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         real GDP and income inequality are mutual exclusive fallacies, for the
         former gets government and structures, -science/skew and -1/hour-GDP/p;
@@ -742,7 +742,7 @@ class AMore extends React.Component {
         })}
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -754,10 +754,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="oann free dental - standardized guarantee scheme PCE-CPI discernable"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         PCE-CPI is ascertainably a loss by insurance. Take this down
         <br />
@@ -775,7 +775,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -787,10 +787,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Day 3 https://www.facebook.com/USSenateDemocrats/videos/702212010962709/"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         dispositive lessers back to monetary-debits
         {/**discrimination is deduced by comp or chats */}
@@ -950,7 +950,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -961,10 +961,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Day 3 https://www.facebook.com/USSenateDemocrats/videos/702212010962709/"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Share split the Hryvnia, figure it out, for input costs as to not match
         inflation but actual input costs
@@ -1076,7 +1076,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -1088,10 +1088,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Eric Bolling and Ron Johnson complaining about lower costs"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Why would China's population depend on higher expenses?
         <br />
@@ -1249,7 +1249,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -1261,10 +1261,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="https://www.google.com/search?q=guardrail"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Rob O'neil: "his soldiers are shooting themselves so they do not have to
         go to the front lines, and have{space}
@@ -1511,7 +1511,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -1523,10 +1523,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="The Future of Medicine: Legislation to Encourage Innovation and Improve Oversight (Energy and Commerce Committee, Youtube) - https://youtu.be/Oiy0aFXyKzU"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Work to ensure continued acces to medication for all patients by
         invoicing the general fund and leasing corporate profits to the
@@ -1671,10 +1671,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="I interview curtis sliwa on disability fraud, general fund standardized guarantee schemes and implausible use leases and surrendered bid outrights https://youtu.be/WlSVwRaO-iQ?t=884"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         "Paychecks were growing twice as fast as prices under Trump," he caused
         more hours worked (
@@ -2149,7 +2149,7 @@ class AMore extends React.Component {
         <br />
         <a href="https://lightte.ch">tool?</a>
         <Unable
-          lastWidth={Math.min(600, this.state.lastWidth)}
+          lastWidth={Math.min(600, this.props.lastWidth)}
           style={{
             paddingBottom: "15px",
             backgroundColor: "rgb(190,150,180)"
@@ -2197,7 +2197,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           //img={true}
@@ -2206,10 +2206,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="I interview my grandma on disability fraud and implausible use leases and surrendered bid guarantees https://youtu.be/pJyiPeod3yQ"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         “I’m injured I wanna be able to run marathons until I am your age.”
         <br />
@@ -2406,7 +2406,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -2418,10 +2418,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="MP Kiev, 'looking straight down the barrel'"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Prosperity and jobs are counterproductive
         <br />
@@ -2450,7 +2450,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -2462,10 +2462,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="https://www.researchgate.net/publication/350902311_Estimating_market_index_valuation_from_macroeconomic_trends/figures?lo=1"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         the{space}
         <a href="https://qr.ae/pGLPu0">baby boomer</a>
@@ -2480,7 +2480,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -2492,10 +2492,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="Retired Lt. NJSP bird"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         creating jobs is a retarded purpose to have. 18m/800k for
         refining/diluting by rail is a premium companies should pay, not us.
@@ -2541,9 +2541,9 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            height: this.state.openSynth ? "380px" : "0px",
+            height: this.props.openSynth ? "380px" : "0px",
             transition: ".3s ease-in",
-            fontSize: this.state.openSynth ? "300px" : "0px"
+            fontSize: this.props.openSynth ? "300px" : "0px"
           }}
           onError={handleScollImgError}
           //img={true}
@@ -2554,10 +2554,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="refuse 420"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
           iframe={{
             frameBorder: "0",
             allowFullScreen: "",
@@ -2717,7 +2717,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -2729,10 +2729,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Newsmax and Ukraine Ooroshenko: 'More Sanctions!'"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <h4>
           if one of those young conscripts tried to leave, they would be shot
@@ -2858,7 +2858,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -2870,10 +2870,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="facebook chat about banking for weed, and castrating elders (for tortious-Savings' surrendered)"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <h4>A Coupon, By Any Means</h4>
         All inflation is because of free rider mutable tax (including
@@ -2938,7 +2938,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -2949,15 +2949,15 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="https://www.ageuk.org.uk/globalassets/age-uk/documents/reports-and-publications/reports-and-briefings/equality-and-human-rights/rb_may16_cpa_rapid_review_diversity_in-_older_age_disability.pdf"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -2968,10 +2968,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2019-to-2020/family-resources-survey-financial-year-2019-to-2020#disability-1"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <hr ref={this.props.ssa} />
         Welcome to OMB! The Office of Management and Budget manages the State of
@@ -2985,7 +2985,7 @@ class AMore extends React.Component {
         </h2>
         <h3 style={{ fontSize: "25px" }}>reverseamortization.quora.com</h3>
         <SSA
-          lastWidth={Math.min(600, this.state.lastWidth)}
+          lastWidth={Math.min(600, this.props.lastWidth)}
           style={{
             paddingBottom: "15px",
             backgroundColor: "rgb(190,150,180)"
@@ -3397,7 +3397,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -3408,10 +3408,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="https://worldpopulationreview.com/country-rankings/poverty-rate-by-country"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         How can you write this hypocrisy, the oxymoronic?
         <div
@@ -3479,7 +3479,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -3490,10 +3490,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="https://blogs.lse.ac.uk/usappblog/2014/01/06/us-debt-inequality/"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         Nick Carducci - BA in Political Science & Economics, Johns Hopkins
         University (Graduated 2015)
@@ -3584,7 +3584,7 @@ class AMore extends React.Component {
         <Cable
           style={{
             transition: ".3s ease-in",
-            width: this.state.openSynth ? "100%" : "0%"
+            width: this.props.openSynth ? "100%" : "0%"
           }}
           onError={handleScollImgError}
           img={true}
@@ -3595,10 +3595,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Rig Rates, to operating rate (cash flow %)"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         When you royalty you can set (margin) by station-price, sold, and
         withdrawal rigs.{space}
@@ -3645,7 +3645,7 @@ class AMore extends React.Component {
           <div style={{ display: "block" }}>
             <Bachelors
               suggestBachelor={this.state.suggestBachelor}
-              lastWidth={Math.min(600, this.state.lastWidth - 10)}
+              lastWidth={Math.min(600, this.props.lastWidth - 10)}
               style={{
                 float: "left",
                 paddingBottom: "15px",
@@ -3687,7 +3687,7 @@ class AMore extends React.Component {
             <Cable
               style={{
                 maxWidth: "200px",
-                width: !this.state.openSynth ? "200px" : "0px",
+                width: !this.props.openSynth ? "200px" : "0px",
                 transition: ".3s ease-in"
               }}
               onError={handleScollImgError}
@@ -3699,10 +3699,10 @@ class AMore extends React.Component {
               }
               float={null}
               title="https://www.quora.com/If-higher-education-no-longer-provides-stable-employment-and-costs-so-much-how-can-it-be-so-important/answer/Joshua-Gross-8"
-              scrolling={this.state.scrolling}
+              scrolling={this.props.scrolling}
               fwd={this["scrollImg" + scrollnum()]}
-              scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-              scrollTop={this.state.openSynth && this.state.scrollTop}
+              scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+              scrollTop={this.props.openSynth && this.props.scrollTop}
             />
           </a>
           <div style={{ fontSize: "15px" }}>
@@ -3829,7 +3829,7 @@ class AMore extends React.Component {
         charges! Not force medication nor time-waste! No More Involuntary
         Commitment nor bail without physical/reviewable-evidence!
         <br />
-        {this.state.openSynth && (
+        {this.props.openSynth && (
           <TwitterTweetEmbed
             style={{
               float: "left"
@@ -3908,7 +3908,7 @@ class AMore extends React.Component {
           <br />
           <Cable
             style={{
-              width: this.state.openSynth ? "200px" : "0px",
+              width: this.props.openSynth ? "200px" : "0px",
               transition: ".3s ease-in"
             }}
             onError={handleScollImgError}
@@ -3920,10 +3920,10 @@ class AMore extends React.Component {
             }
             float={"right"}
             title="Daniel Cohen, American Agenda (Newsmax) - scapegoating taxing motive"
-            scrolling={this.state.scrolling}
+            scrolling={this.props.scrolling}
             fwd={this["scrollImg" + scrollnum()]}
-            scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-            scrollTop={this.state.openSynth && this.state.scrollTop}
+            scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+            scrollTop={this.props.openSynth && this.props.scrollTop}
           />
           against truncated production tax
         </h3>
@@ -3971,7 +3971,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -3983,10 +3983,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="$20 Russian vs $100 Saudi oil"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <br />
         "Republicans pushing healthcare for veterans," is an investment bank
@@ -4016,7 +4016,7 @@ class AMore extends React.Component {
         scapegoating or attack.
         <br />
         {/*<GDP
-            lastWidth={Math.min(600, this.state.lastWidth)}
+            lastWidth={Math.min(600, this.props.lastWidth)}
             style={{
               paddingBottom: "15px",
               backgroundColor: "rgb(190,150,180)"
@@ -4036,7 +4036,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -4048,10 +4048,10 @@ class AMore extends React.Component {
           }
           float={"right"}
           title="Space Oddity - May G-d's Love Be with You (not god's') https://youtube.com/embed/clip/Ugkxl8RXrKXmhFV89sk2HRyP3obNmEarBPEg"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         <a href="https://youtube.com/clip/Ugkxl8RXrKXmhFV89sk2HRyP3obNmEarBPEg">
           our own exploration rights income to treasury
@@ -4210,7 +4210,7 @@ class AMore extends React.Component {
         <br />
         <Cable
           style={{
-            width: this.state.openSynth ? "200px" : "0px",
+            width: this.props.openSynth ? "200px" : "0px",
             transition: ".3s ease-in"
           }}
           onError={handleScollImgError}
@@ -4222,10 +4222,10 @@ class AMore extends React.Component {
           }
           float={"left"}
           title="@carducci on truth social"
-          scrolling={this.state.scrolling}
+          scrolling={this.props.scrolling}
           fwd={this["scrollImg" + scrollnum()]}
-          scrollTopAndHeight={this.state.scrollTop + window.innerHeight}
-          scrollTop={this.state.openSynth && this.state.scrollTop}
+          scrollTopAndHeight={this.props.scrollTop + window.innerHeight}
+          scrollTop={this.props.openSynth && this.props.scrollTop}
         />
         "But I’m going to rip your (goddamn) head off" SELF DEFENSE
         <br />
