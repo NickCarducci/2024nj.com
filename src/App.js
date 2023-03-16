@@ -193,7 +193,13 @@ export default class App extends React.Component {
     return (
       <div>
         <iframe
-          style={{ width: "100%", height: "400px" }}
+          style={{
+            width: "calc(100% - 40px)",
+            right: "0px",
+            height: "400px",
+            position: "relative",
+            float: "right"
+          }}
           title="portfolio"
           src="https://carducci.vercel.app/"
         />
