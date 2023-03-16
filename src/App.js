@@ -4362,6 +4362,7 @@ export default class App extends React.Component {
               goTo={goTo}
               scrolling={this.state.scrolling}
               scrollTop={this.state.scrollTop}
+              lastWidth={this.state.lastWidth}
             />
           </div>
           <br />
