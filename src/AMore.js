@@ -3611,7 +3611,7 @@ class AMore extends React.Component {
           }}
         >
           please respect the no candidate votes . 11/12{space}
-          <a href="https://gmunit.us">General Maintenance Unit</a>
+          <a href="https://realvelocity.asia">General Maintenance Unit</a>
           {space}can chose to be an{space}
           <a href="https://lightte.ch">operational-</a>non-profit, without a
         </span>
@@ -4179,7 +4179,7 @@ class AMore extends React.Component {
           trust-breaking hypocrisy
           <br />
           roads and bridges? not when NFC Motor Vehicle is{space}
-          <a href="https://gmunit.us">free rider mutable</a>, free rider
+          <a href="https://realvelocity.asia">free rider mutable</a>, free rider
           immutable Tranquil and voluntary trade
           <br />
           trust-breaking
