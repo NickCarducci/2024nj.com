@@ -3089,9 +3089,7 @@ class AMore extends React.Component {
           f*cking faggot
         </a>
         <TwitterTweetEmbed
-          style={{
-            
-          }}
+          style={{}}
           key="1635810357569634306"
           tweetId="1635810357569634306"
         />
@@ -3668,7 +3666,7 @@ class AMore extends React.Component {
               >
                 advances
               </span>
-              {space}are indemnifiable
+              {space}are indemnifiable (multilevelcapital.com)
               <br />
               <span style={{ color: "grey" }}>
                 Non-bourgoisie (post-revenue) trade material recovery
@@ -4300,4 +4298,3 @@ class AMore extends React.Component {
 export default React.forwardRef((props, ref) => (
   <AMore {...props} {...ref.current} />
 ));
-
