@@ -364,7 +364,7 @@ export default class App extends React.Component {
           <Petition />
           (coalition = priorities)
           <h2
-            style={{ textDecoration: "underline" }}
+            style={{ textDecoration: "underline", cursor: "pointer" }}
             onClick={() => this.setState({ openFrank: !this.state.openFrank })}
           >
             Tax Security, First!{space}
@@ -429,7 +429,7 @@ export default class App extends React.Component {
               ?
             </h3>
             <hr ref={this.pharmacy} />
-            <Healthcare width={this.state.width} />
+            {this.state.width && <Healthcare width={this.state.width} />}
             I contribute open source and get paid in deflation. any weapon can
             be used of equal power. the people that cause inflation just by
             working are deadly. i think the people that need me to write this
@@ -4859,3 +4859,4 @@ export default class App extends React.Component {
     );
   }
 }
+
