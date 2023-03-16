@@ -4030,7 +4030,11 @@ class AMore extends React.Component {
         <iframe
           title="gdp 1800-2000"
           src="https://vaults.biz/gdp"
-          style={{ width: "100%", height: "400px" }}
+          style={{
+            width: "calc(100% - 80px)",
+            height: "400px",
+            float: "right"
+          }}
         />
         <a href="https://qr.ae/pGdxUK">Inflation is not a given</a>, so price
         controls to mean inflation is certainly not savings by efficiency, to
@@ -4300,4 +4304,3 @@ class AMore extends React.Component {
 export default React.forwardRef((props, ref) => (
   <AMore {...props} {...ref.current} />
 ));
-
