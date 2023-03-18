@@ -389,6 +389,13 @@ export default class App extends React.Component {
             computer labs, open the borders, truancy as trespass but
             inflation-affixed dependency, tax cuts for surplus and hikes after
             recession yet during its inflation part, codify past debt by factor.
+            {space}
+            <span style={{ color: "lightskyblue" }}>
+              Why is bankruptcy allowed to cause bank runs instead of codifying
+              student and government debt while liens use realty foreclosure and
+              shareholder loans from limited family testamentary partnership
+              protect against corporate bonds?
+            </span>
           </i>
           <h3>
             Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
@@ -4865,3 +4872,4 @@ export default class App extends React.Component {
     );
   }
 }
+
