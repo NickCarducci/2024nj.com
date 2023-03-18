@@ -18,7 +18,7 @@ import {
 
 const firestore = getFirestore(firebase);
 export default class Petition extends React.Component {
-  state = { middle: "", address: "" };
+  state = { middle: "", address: "", zip: "", city: "" };
   componentDidMount = () => {
     onSnapshot(doc(firestore, "countData", "only"), (doc) => {
       if (doc.exists()) {
@@ -73,8 +73,7 @@ export default class Petition extends React.Component {
       this.state.first !== "" &&
       this.state.last !== "" &&
       //this.state.address !== "" &&
-      this.state.city !== "" &&
-      this.state.zip !== ""
+      (this.state.city !== "" || this.state.zip !== "")
     ) {
       /*console.log("do");
       firebase
