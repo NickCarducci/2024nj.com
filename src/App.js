@@ -396,6 +396,15 @@ export default class App extends React.Component {
               shareholder loans from limited family testamentary partnership
               protect against corporate bonds?
             </span>
+            {space}https://secretary.quora.com/What-makes-a-contract-legal-1
+            {space}
+            Doesn’t a non-profit surrender control even though people donate
+            regardless? Are closed source companies allowed to make horizontal
+            parallel or concurrent vertical industry mega apps? How much as a
+            percentage of either a ticket sale or subscription do marketplace
+            facilitators and television programmers pay broadcasters on average,
+            or do broadcasters often either sponsor a purse or even outright pay
+            for channels?
           </i>
           <h3>
             Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
@@ -4872,4 +4881,3 @@ export default class App extends React.Component {
     );
   }
 }
-
