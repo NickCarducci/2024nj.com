@@ -18,7 +18,7 @@ import {
 
 const firestore = getFirestore(firebase);
 export default class Petition extends React.Component {
-  state = { middle: "" };
+  state = { middle: "", address: "" };
   componentDidMount = () => {
     onSnapshot(doc(firestore, "countData", "only"), (doc) => {
       if (doc.exists()) {
@@ -291,7 +291,8 @@ export default class Petition extends React.Component {
         ) : (
           <form onSubmit={this.handleSubmit}>
             <input
-              style={{ width: "120px" }}
+              required={true}
+              style={{ width: "110px" }}
               onChange={(e) => this.setState({ first: e.target.value })}
               placeholder="first name"
             />
@@ -301,6 +302,7 @@ export default class Petition extends React.Component {
               placeholder="middle name"
             />
             <input
+              required={true}
               style={{ width: "100px" }}
               onChange={(e) => this.setState({ last: e.target.value })}
               placeholder="last name"
@@ -312,24 +314,40 @@ export default class Petition extends React.Component {
               placeholder="address (optional)"
             />
             <input
+              required={true}
               style={{ width: "100px" }}
-              onChange={(e) => this.setState({ city: e.target.value })}
-              placeholder="city"
+              onChange={(e) => {
+                const entry = e.target.value;
+                const numberEntry = Number(entry);
+                const isNumber = !isNaN(numberEntry);
+                this.setState({
+                  [isNumber ? "zip" : "city"]: entry
+                }); //young and just see what's next (for the programs uh parts)
+              }}
+              placeholder="city or zip"
             />
-            <input
-              style={{ width: "100px" }}
-              onChange={(e) => this.setState({ zip: e.target.value })}
-              placeholder="zip"
-            />
-            <div style={{ fontSize: "12px" }}>
-              This provisional signature to get on US Senate ballot in 2024 for
-              2025 will be contestable if <br />
-              voter identity is ambiguous{" "}
-              <a href="https://voter.svrs.nj.gov/registration-check">
-                https://voter.svrs.nj.gov/registration-check
-              </a>
-            </div>
-            <button type="submit">submit</button>
+            &nbsp;
+            <span style={{ fontSize: "12px" }}>
+              You put your name to represent your electronic signature to
+              petition Independent ballot candidate.{space}
+              <button type="submit">submit</button>
+              {space}
+              <span style={{ color: "darkslategrey" }}>
+                This provisional signature to get on US Senate ballot in 2024
+                for 2025 will be contestable{space}
+                <i>
+                  if
+                  {space}
+                  <span style={{ color: "grey" }}>
+                    voter identity is ambiguous{" "}
+                    <a href="https://voter.svrs.nj.gov/registration-check">
+                      https://voter.svrs.nj.gov/registration-check
+                    </a>
+                    .
+                  </span>
+                </i>
+              </span>
+            </span>
             {/*<div style={{ color: "grey", fontSize: "10px" }}>
                 this is on firebase but only shows you signed if you enter the
                 same info...
