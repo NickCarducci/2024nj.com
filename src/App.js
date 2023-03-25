@@ -240,6 +240,8 @@ export default class App extends React.Component {
           </div>
           Can a business legally make their products worse or prices higher in
           line with margins?
+          <br />
+          <a href="https://change.org/NickCarducci">change.org/NickCarducci</a>
           <a href="https://occupywall.us">
             <Cable
               style={{
