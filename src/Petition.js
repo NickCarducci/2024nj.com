@@ -241,41 +241,46 @@ export default class Petition extends React.Component {
             </a>
             )
           </span>
-          {this.state.cookied === undefined ? (
-            <div style={{ color: "white", display: "flex" }}>loading</div>
-          ) : (
-            <div
-              onClick={!this.state.cookied ? this.cookieplz : this.nocookie}
-              style={{ color: "white", display: "flex" }}
-            >
-              {this.state.cookieCount}
-              &nbsp;&nbsp;
+          {
+            this.state.cookied === undefined ? (
+              <div style={{ color: "white", display: "flex" }}>loading</div>
+            ) : (
               <div
-                style={{
-                  border: `${!this.state.cookied ? 1 : 0}px dotted grey`,
-                  color: "white",
-                  display: "flex"
-                }}
+                onClick={!this.state.cookied ? this.cookieplz : this.nocookie}
+                style={{ color: "white", display: "flex" }}
               >
-                {this.state.cookied
-                  ? "thanks you! you ARE strategically significant!"
-                  : "if you just want a cookie"}
-                {/*why is your cookie better than mine */}
+                {this.state.cookieCount}
+                &nbsp;&nbsp;
                 <div
                   style={{
-                    cursor: "pointer",
-                    border: `${this.state.cookied ? 1 : 0}px solid`,
+                    border: `${!this.state.cookied ? 1 : 0}px dotted grey`,
                     color: "white",
-                    backgroundColor: !this.state.cookied ? "green" : ""
+                    display: "flex"
                   }}
                 >
-                  ✓
+                  {this.state.cookied
+                    ? "thanks you! you ARE strategically significant!"
+                    : "if you just want a cookie"}
+                  {/*why is your cookie better than mine */}
+                  <div
+                    style={{
+                      cursor: "pointer",
+                      border: `${this.state.cookied ? 1 : 0}px solid`,
+                      color: "white",
+                      backgroundColor: !this.state.cookied ? "green" : ""
+                    }}
+                  >
+                    ✓
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )
+            //TaxSecurityFirst
+          }
         </div>
-        <h1>TaxSecurityFirst.com for Risk-Free Banking</h1>
+        Do right-to-try laws permit holds or bar and sunlight trade secrets for
+        hush money payments to non-disclosure agreements?
+        <h1>PlaintiffRecessionTax.com for Risk-Free Banking</h1>
         <h2>Submit your signature! {this.state.signatures}/800</h2>
         {/*Do you want banks that don’t force you to invest?{" "}
         <i>
