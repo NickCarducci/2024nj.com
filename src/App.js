@@ -534,13 +534,13 @@ export default class App extends React.Component {
             ?
             <br />
             You should count{space}
-            <a href="quora.com/How-would-politics-in-the-U-S-change-if-we-adopted-ranked-choice-voting/answer/Nick-Carducci">
+            <a href="https://quora.com/How-would-politics-in-the-U-S-change-if-we-adopted-ranked-choice-voting/answer/Nick-Carducci">
               our
             </a>
             {space}
             second vote as a no for either candidate, then. This would cause the
             seat holder to only permit{space}
-            <a href="quora.com/Should-non-voters-votes-count-towards-a-reconciliation-of-the-office-holder">
+            <a href="https://quora.com/Should-non-voters-votes-count-towards-a-reconciliation-of-the-office-holder">
               reconciliation
             </a>
             .
@@ -4883,3 +4883,4 @@ export default class App extends React.Component {
     );
   }
 }
+
