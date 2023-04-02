@@ -242,7 +242,7 @@ export default class App extends React.Component {
           line with margins?
           <br />
           <a href="https://change.org/NickCarducci">change.org/NickCarducci</a>
-          <a href="https://occupywall.us">
+          <a href="https://occupybanks.uk">
             <Cable
               style={{
                 transition: ".3s ease-in",
@@ -4484,7 +4484,7 @@ export default class App extends React.Component {
                 Fed Res
               </a>
               <a
-                href="https://occupywall.us"
+                href="https://occupybanks.uk"
                 style={{ ...navitem, backgroundColor: "black", color: "white" }}
               >
                 Occupy
@@ -4883,4 +4883,3 @@ export default class App extends React.Component {
     );
   }
 }
-
