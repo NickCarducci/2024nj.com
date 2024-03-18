@@ -238,6 +238,9 @@ export default class App extends React.Component {
               &#9998;
             </span>
           </div>
+          <h2>
+            <a href="https://carducci.vercel.app">carducci.vercel.app</a>
+          </h2>
           Can a business legally make their products worse or prices higher in
           line with margins?
           <br />
@@ -4883,3 +4886,4 @@ export default class App extends React.Component {
     );
   }
 }
+
