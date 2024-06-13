@@ -241,9 +241,21 @@ export default class App extends React.Component {
           <h2>
             <a href="https://carducci.vercel.app">carducci.vercel.app</a>
           </h2>
+          <h1>Tax the Rich</h1>
+          Price limit hospital stays, ban medical bills.
+          <br />
+          Pay more in taxes as you age, phase out social security.
+          <br />
+          Collateral repossession returns all payments to the borrower.
+          <br />
+          New debts are to be treated as royalties, as Mr. Wonderful does on
+          {space}
+          <i>Shark Tank</i>.
+          <hr />
           Can a business legally make their products worse or prices higher in
           line with margins?
           <br />
+          Sign here:{" "}
           <a href="https://change.org/NickCarducci">change.org/NickCarducci</a>
           <a href="https://occupybanks.uk">
             <Cable
@@ -412,7 +424,7 @@ export default class App extends React.Component {
             for channels?
           </i>
           <h3>
-            Saverparty.xyz/nato{space}&bull;{space}Saverparty.xyz/poverty
+            Saverparty.com/nato{space}&bull;{space}Saverparty.com/poverty
           </h3>
           Does illegal immigration and crime or debt and insurance cause
           inflation? Why are{space}
@@ -4886,4 +4898,5 @@ export default class App extends React.Component {
     );
   }
 }
+
 
