@@ -18,7 +18,7 @@ export default class App extends React.Component {
       trigger: false,
       browser: name,
       scrollTop: 0,
-      ios: name.includes("Safari")
+      ios: name.includes("Safari"),
     };
     for (let i = 0; i < 201; i++) {
       this["scrollImg" + i] = React.createRef();
@@ -57,13 +57,13 @@ export default class App extends React.Component {
       this.setState(
         {
           scrolling: true,
-          scrollTop
+          scrollTop,
         },
         () => {
           clearTimeout(this.scrollTimeout);
           this.scrollTimeout = setTimeout(() => {
             this.setState({
-              scrolling: false
+              scrolling: false,
             });
           }, 900);
         }
@@ -81,7 +81,7 @@ export default class App extends React.Component {
           width,
           availableHeight: this.state.ios
             ? window.screen.availHeight - 20
-            : window.innerHeight
+            : window.innerHeight,
         });
       }, 600);
     }
@@ -93,7 +93,7 @@ export default class App extends React.Component {
         if (this.props.pathname !== "/") {
           this.setState({
             trigger: true,
-            openFrank: !["/vote", "/carducci"].includes(this.props.pathname)
+            openFrank: !["/vote", "/carducci"].includes(this.props.pathname),
           });
         }
         if (this.props.pathname === "/work") {
@@ -143,7 +143,7 @@ export default class App extends React.Component {
     return {
       [name]: function () {
         return body.apply(body, arguments);
-      }
+      },
     }[name];
   };
   render() {
@@ -181,24 +181,81 @@ export default class App extends React.Component {
       width: "max-content",
       cursor: "pointer",
       padding: "4px 10px",
-      color: "white"
+      color: "white",
     };
     const goTo = (path) =>
       (window.location.href = `https://${window.location.hostname}/${path.target.id}`);
     const picstyle = {
       backgroundColor: "white",
       width: "20px",
-      boxShadow: null
+      boxShadow: null,
     };
+    return (
+      <div
+        style={{
+          margin: "20px",
+        }}
+      >
+        <h2>
+          <a href="https://carducci.vercel.app">carducci.vercel.app</a>
+        </h2>
+        <h2>
+          <a href="https://change.org/nickcarducci">
+            U.S. Senate petition (change.org/nickcarducci)
+          </a>
+        </h2>
+        &nbsp;&nbsp;&nbsp;PUBLIC/MEDIA-FACING STATEMENT
+        <br />
+        &nbsp;&nbsp;&nbsp;FOR IMMEDIATE RELEASE
+        <br />
+        <br />
+        Political Candidate and Entrepreneur Deplatformed by Quora Without
+        Cause, Calls for Transparency and Fairness
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;Nicholas Carducci, a political candidate and
+        entrepreneur based in New Jersey, is speaking out after being banned
+        from Quora without warning or evidence of wrongdoing. Despite
+        contributing high-quality, educational content aligned with Quora’s
+        mission of “empowering people to share and grow the world's knowledge,”
+        Nick’s account was terminated, with no opportunity for appeal.
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;“As a candidate and business leader, I use digital
+        platforms to engage the public and share ideas that matter,” said
+        Carducci. “Being silenced without cause by a platform that claims to
+        support open knowledge is not just unjust—it’s misleading and harmful.”
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;The stated reason for the ban—allegedly sharing
+        repetitive or monetized content—is one Carducci firmly denies and says
+        is inconsistent with their actual use of the platform.
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;Carducci has filed a formal demand letter with Quora
+        and will file a consumer protection complaint with the State of New
+        Jersey by 6/10/2025 if they do not reverse this termination, and is
+        considering further legal action if the platform refuses to reverse the
+        ban or provide an adequate explanation.
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;Supporters and digital rights advocates are encouraged
+        to contact Quora and demand accountability.
+        <br />
+        <br />
+        For press inquiries, contact sayists@icloud.com.
+      </div>
+    );
     return (
       <div>
         <iframe
           style={{
+            display: "none",
             width: "calc(100% - 40px)",
             right: "0px",
             height: "400px",
             position: "relative",
-            float: "right"
+            float: "right",
           }}
           title="portfolio"
           src="https://carducci.vercel.app/"
@@ -211,7 +268,7 @@ export default class App extends React.Component {
             fontFamily: "arial, sans serif",
             wordBreak: "break-word",
             textAlign: "left",
-            maxWidth: "600px"
+            maxWidth: "600px",
           }}
         >
           <div
@@ -226,13 +283,13 @@ export default class App extends React.Component {
               right: "20px",
               width: "36px",
               padding: "10px 0px",
-              backgroundColor: "green"
+              backgroundColor: "green",
             }}
           >
             sign here!{space}
             <span
               style={{
-                transform: "scale(-1,1)"
+                transform: "scale(-1,1)",
               }}
             >
               &#9998;
@@ -261,7 +318,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openInfo ? "100%" : "0%"
+                width: this.state.openInfo ? "100%" : "0%",
               }}
               onError={handleScollImgError}
               img={true}
@@ -285,7 +342,7 @@ export default class App extends React.Component {
               padding: "2px 6px",
               border: "1px solid",
               width: "min-content",
-              borderRadius: "12px"
+              borderRadius: "12px",
             }}
           >
             ?
@@ -293,7 +350,7 @@ export default class App extends React.Component {
           <i
             style={{
               fontSize: this.state.openInfo ? "12px" : "0px",
-              transition: ".3s ease-in"
+              transition: ".3s ease-in",
             }}
           >
             My first time voting was in 2020 but I have been a covert economics
@@ -306,7 +363,7 @@ export default class App extends React.Component {
             style={{
               transition: ".3s ease-in",
               width: this.state.openInfo ? "100%" : "0%",
-              maxWidth: "200px"
+              maxWidth: "200px",
             }}
             onError={handleScollImgError}
             img={true}
@@ -325,7 +382,7 @@ export default class App extends React.Component {
           <h2
             style={{
               fontSize: this.state.openInfo ? "" : "0px",
-              transition: ".3s ease-in"
+              transition: ".3s ease-in",
             }}
           >
             malarkey is SSDI mental-injury. SSI for{space}
@@ -342,7 +399,7 @@ export default class App extends React.Component {
           <div
             style={{
               fontSize: this.state.openTrauma ? "12px" : "0px",
-              transition: ".3s ease-in"
+              transition: ".3s ease-in",
             }}
           >
             Should medical{space}
@@ -370,7 +427,7 @@ export default class App extends React.Component {
           <div
             style={{
               fontSize: this.state.openInfo ? "12px" : "0px",
-              transition: ".3s ease-in"
+              transition: ".3s ease-in",
             }}
           >
             In office or not, I'm advocating/making anonymous voting mechanisms
@@ -394,7 +451,7 @@ export default class App extends React.Component {
             <span
               style={{
                 fontSize: "12px",
-                color: "grey"
+                color: "grey",
               }}
             >
               [Finance for (public but) deflationary universal plaintiff cop
@@ -439,14 +496,14 @@ export default class App extends React.Component {
                 edu: this.edu,
                 gas: this.gas,
                 plandemic: this.plandemic,
-                work: this.work
-              }
+                work: this.work,
+              },
             }}
           />
           <div
             style={{
               transition: ".3s ease-in",
-              fontSize: this.state.openSynth ? "" : "0px"
+              fontSize: this.state.openSynth ? "" : "0px",
             }}
           >
             <div
@@ -578,7 +635,7 @@ export default class App extends React.Component {
               src="https://www.podbean.com/player-v2/?i=erve2-dcc91c-pbblog-playlist&share=1&download=1&fonts=Arial&skin=f6f6f6&font-color=ffffff&rtl=0&logo_link=episode_page&btn-skin=3267a3&size=315"
               iframe={{
                 allowTransparency: "true",
-                frameBorder: "0"
+                frameBorder: "0",
                 //allowFullScreen: "",
                 //allow:
                 //"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -606,7 +663,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "100px" : "0px"
+                width: this.state.openSynth ? "100px" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -625,7 +682,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "100px" : "0px"
+                width: this.state.openSynth ? "100px" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -689,7 +746,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "80px" : "0px"
+                width: this.state.openSynth ? "80px" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -708,7 +765,7 @@ export default class App extends React.Component {
                 frameBorder: "0",
                 allowFullScreen: "",
                 allow:
-                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
               }}
             />
             https://www.quora.com/unanswered/Do-Republicans-like-real-GDP-employee-benefits-and-government-deficit
@@ -803,7 +860,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "100px" : "0px"
+                width: this.state.openSynth ? "100px" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -826,7 +883,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "80px" : "0px"
+                width: this.state.openSynth ? "80px" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -938,7 +995,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "80px" : "0px"
+                width: this.state.openSynth ? "80px" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -1039,7 +1096,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "80px" : "0px"
+                width: this.state.openSynth ? "80px" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -1058,7 +1115,7 @@ export default class App extends React.Component {
                 frameBorder: "0",
                 allowFullScreen: "",
                 allow:
-                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
               }}
             />
             <h3>
@@ -1210,7 +1267,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -1273,7 +1330,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -1438,7 +1495,7 @@ export default class App extends React.Component {
               style={{
                 float: "right",
                 width: this.state.openSynth ? "200px" : "0px",
-                transition: ".3s ease-in"
+                transition: ".3s ease-in",
               }}
             >
               article 1.8 uniform{space}
@@ -1520,7 +1577,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -1702,7 +1759,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -1898,7 +1955,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -1939,7 +1996,7 @@ export default class App extends React.Component {
               <Cable
                 style={{
                   transition: ".3s ease-in",
-                  width: this.state.openSynth ? "" : "0px"
+                  width: this.state.openSynth ? "" : "0px",
                 }}
                 onError={handleScollImgError}
                 img={true}
@@ -1982,7 +2039,7 @@ export default class App extends React.Component {
               lastWidth={Math.min(600, this.state.lastWidth)}
               style={{
                 paddingBottom: "15px",
-                backgroundColor: "rgb(190,150,180)"
+                backgroundColor: "rgb(190,150,180)",
               }}
             />
             {/**yeah you like that don't ya */}
@@ -2028,13 +2085,13 @@ export default class App extends React.Component {
                 border: this.state.openSynth && "3px solid",
                 marginLeft: "4px",
                 borderRadius: "10px",
-                marginRight: "10px"
+                marginRight: "10px",
               }}
             >
               Benefits’ tax-“free” expense, or income as a{space}
               <span
                 style={{
-                  textDecoration: "underline"
+                  textDecoration: "underline",
                 }}
               >
                 loss
@@ -2117,7 +2174,7 @@ export default class App extends React.Component {
                 marginLeft: "4px",
                 float: "left",
                 borderRadius: "10px",
-                marginRight: "10px"
+                marginRight: "10px",
               }}
             >
               <a
@@ -2150,7 +2207,7 @@ export default class App extends React.Component {
               <Cable
                 style={{
                   transition: ".3s ease-in",
-                  width: this.state.openSynth ? "" : "0px"
+                  width: this.state.openSynth ? "" : "0px",
                 }}
                 onError={handleScollImgError}
                 img={true}
@@ -2282,7 +2339,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2301,7 +2358,7 @@ export default class App extends React.Component {
                 frameBorder: "0",
                 allowFullScreen: "",
                 allow:
-                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
               }}
             />
             1/3 non-vote shows{/**precludes, holds no candle to */} nothing for
@@ -2372,7 +2429,7 @@ export default class App extends React.Component {
               style={{
                 height: this.state.openSynth ? "380px" : "0px",
                 transition: ".3s ease-in",
-                fontSize: this.state.openSynth ? "300px" : "0px"
+                fontSize: this.state.openSynth ? "300px" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -2391,7 +2448,7 @@ export default class App extends React.Component {
                 frameBorder: "0",
                 allowFullScreen: "",
                 allow:
-                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
               }}
             />
             Corporate profit widfall debentures
@@ -2429,7 +2486,7 @@ export default class App extends React.Component {
                 color: "white",
                 borderRadius: "10px",
                 margin: this.state.openSynth && "10px",
-                padding: this.state.openSynth && "10px"
+                padding: this.state.openSynth && "10px",
               }}
             >
               AOC stopped labor surplus amazon stock
@@ -2465,7 +2522,7 @@ export default class App extends React.Component {
                 margin: "10px",
                 padding: "10px",
                 marginBottom: "0px",
-                marginLeft: "0px"
+                marginLeft: "0px",
               }}
             >
               Royaly%/consumer
@@ -2481,7 +2538,7 @@ export default class App extends React.Component {
               <Cable
                 style={{
                   transition: ".3s ease-in",
-                  width: this.state.openSynth ? "" : "0px"
+                  width: this.state.openSynth ? "" : "0px",
                 }}
                 onError={handleScollImgError}
                 img={true}
@@ -2548,7 +2605,7 @@ export default class App extends React.Component {
                 color: "white",
                 borderRadius: "10px",
                 margin: this.state.openSynth && "10px",
-                padding: this.state.openSynth && "10px"
+                padding: this.state.openSynth && "10px",
               }}
             >
               messy{space}
@@ -2615,7 +2672,7 @@ export default class App extends React.Component {
                 color: "white",
                 borderRadius: "10px",
                 margin: this.state.openSynth && "10px",
-                padding: this.state.openSynth && "10px"
+                padding: this.state.openSynth && "10px",
               }}
             >
               <a href="https://qr.ae/pvshbL" style={{ color: "white" }}>
@@ -2659,7 +2716,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2712,7 +2769,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2770,7 +2827,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2794,7 +2851,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2832,7 +2889,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2888,7 +2945,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2921,7 +2978,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -2963,7 +3020,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3022,7 +3079,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3064,7 +3121,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3119,7 +3176,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3164,7 +3221,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3200,7 +3257,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "100%" : "0%"
+                width: this.state.openSynth ? "100%" : "0%",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3232,7 +3289,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3271,7 +3328,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3294,7 +3351,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3341,7 +3398,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3365,7 +3422,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3416,7 +3473,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3447,7 +3504,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3476,7 +3533,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3520,7 +3577,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3652,7 +3709,7 @@ export default class App extends React.Component {
               img={true}
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "100%" : "0%"
+                width: this.state.openSynth ? "100%" : "0%",
               }}
               src={
                 this.state.noyout
@@ -3720,7 +3777,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3749,7 +3806,7 @@ export default class App extends React.Component {
                 margin: this.state.openSynth && "10px",
                 padding: this.state.openSynth && "10px",
                 backgroundColor: "forestgreen",
-                border: "3px solid"
+                border: "3px solid",
               }}
             >
               Demand{space}
@@ -3775,7 +3832,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3876,7 +3933,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3899,7 +3956,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3933,7 +3990,7 @@ export default class App extends React.Component {
             <a
               href="https://markethistory.quora.com"
               style={{
-                color: "gold"
+                color: "gold",
               }}
             >
               prevent substitution
@@ -3942,7 +3999,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -3991,7 +4048,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4027,7 +4084,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4087,7 +4144,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4134,7 +4191,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4170,7 +4227,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4198,7 +4255,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4222,7 +4279,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4247,7 +4304,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4283,7 +4340,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               //img={true}
@@ -4342,7 +4399,7 @@ export default class App extends React.Component {
             <Cable
               style={{
                 transition: ".3s ease-in",
-                width: this.state.openSynth ? "" : "0px"
+                width: this.state.openSynth ? "" : "0px",
               }}
               onError={handleScollImgError}
               img={true}
@@ -4366,7 +4423,7 @@ export default class App extends React.Component {
               <Cable
                 style={{
                   transition: ".3s ease-in",
-                  width: this.state.openSynth ? "" : "0px"
+                  width: this.state.openSynth ? "" : "0px",
                 }}
                 onError={handleScollImgError}
                 img={true}
@@ -4395,8 +4452,8 @@ export default class App extends React.Component {
                   depression: this.depression,
                   ssa: this.ssa,
                   supply: this.supply,
-                  $: this.$
-                }
+                  $: this.$,
+                },
               }}
               goTo={goTo}
               scrolling={this.state.scrolling}
@@ -4423,7 +4480,7 @@ export default class App extends React.Component {
             <div
               style={{
                 display: "flex",
-                backgroundColor: "green"
+                backgroundColor: "green",
               }}
             >
               <span
@@ -4449,7 +4506,11 @@ export default class App extends React.Component {
                   this.setState(
                     {
                       opt:
-                        this.state.opt === 1 ? true : this.state.opt ? false : 1
+                        this.state.opt === 1
+                          ? true
+                          : this.state.opt
+                          ? false
+                          : 1,
                     },
                     () =>
                       this.state.width < 400 &&
@@ -4472,7 +4533,7 @@ export default class App extends React.Component {
                     ...navitem,
                     backgroundColor: "green",
                     width: "8px",
-                    height: "13px"
+                    height: "13px",
                   }}
                   onError={handleScollImgError}
                   img={true}
@@ -4514,7 +4575,7 @@ export default class App extends React.Component {
                 display: "flex",
                 alignItems: "center",
                 padding: "4px 10px",
-                fontSize: "10px"
+                fontSize: "10px",
               }}
             >
               <a href="https://truncatedwholesaletax.com" style={navitem}>
@@ -4631,7 +4692,7 @@ export default class App extends React.Component {
                   transition: ".3s ease-in",
                   width: "100%",
                   display: "flex",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <div
@@ -4639,7 +4700,7 @@ export default class App extends React.Component {
                     width: "max-content",
                     position: "absolute",
                     height: "56px",
-                    top: "20px"
+                    top: "20px",
                   }}
                 >
                   {this.state.width < 400 ? null : this.state.opt === 1 ? (
@@ -4715,7 +4776,7 @@ export default class App extends React.Component {
                         cursor: "pointer",
                         backgroundColor: "red",
                         fontWeight: "bolder",
-                        color: "white"
+                        color: "white",
                       }
                 }
               >
@@ -4748,18 +4809,18 @@ export default class App extends React.Component {
           </div>
           <div
             style={{
-              color: "grey" //just do it (give me your address)
+              color: "grey", //just do it (give me your address)
             }}
           >
             <span
               style={{
                 cursor: "pointer",
-                textDecoration: "underline"
+                textDecoration: "underline",
               }}
               onClick={() => {
                 this.setState({
                   openSchool: !this.state.openSchool,
-                  openIndustry: false
+                  openIndustry: false,
                 });
               }}
             >
@@ -4767,7 +4828,7 @@ export default class App extends React.Component {
               <span
                 style={{
                   transition: ".3s ease-in",
-                  fontSize: !this.state.openSchool ? "12px" : "0px"
+                  fontSize: !this.state.openSchool ? "12px" : "0px",
                 }}
               >
                 {space}
@@ -4776,7 +4837,7 @@ export default class App extends React.Component {
               <span
                 style={{
                   transition: ".3s ease-in",
-                  fontSize: this.state.openIndustry ? "12px" : "0px"
+                  fontSize: this.state.openIndustry ? "12px" : "0px",
                 }}
               >
                 {space}
@@ -4789,7 +4850,7 @@ export default class App extends React.Component {
                 color: "lightgrey",
                 lineHeight: "12px",
                 transition: ".3s ease-in",
-                fontSize: this.state.openSchool ? "12px" : "0px" //covalence null confirmed! ching!
+                fontSize: this.state.openSchool ? "12px" : "0px", //covalence null confirmed! ching!
               }}
             >
               <span
@@ -4798,7 +4859,7 @@ export default class App extends React.Component {
                   fontSize:
                     this.state.openSchool && !this.state.openIndustry
                       ? "12px"
-                      : "0px"
+                      : "0px",
                 }}
               >
                 <i>or bar safe assets</i>
@@ -4809,7 +4870,7 @@ export default class App extends React.Component {
               <span
                 style={{
                   cursor: "pointer",
-                  textDecoration: "underline"
+                  textDecoration: "underline",
                 }}
                 onClick={() =>
                   this.setState({ openIndustry: !this.state.openIndustry })
@@ -4820,7 +4881,7 @@ export default class App extends React.Component {
               <span
                 style={{
                   transition: ".3s ease-in",
-                  fontSize: this.state.openIndustry ? "12px" : "0px" //covalence null confirmed! ching!
+                  fontSize: this.state.openIndustry ? "12px" : "0px", //covalence null confirmed! ching!
                 }}
               >
                 ; 2503(e) tax exemptions out-of-pocket admits that student debt
@@ -4849,7 +4910,7 @@ export default class App extends React.Component {
                   <span
                     style={{
                       fontSize: this.state.openSchool ? "15px" : "0px",
-                      transition: ".3s ease-in"
+                      transition: ".3s ease-in",
                     }}
                   >
                     Insurance scalping schedules (without a stop-loss) and
@@ -4865,7 +4926,7 @@ export default class App extends React.Component {
                   <span
                     style={{
                       fontSize: this.state.openSchool ? "12px" : "0px",
-                      transition: ".3s ease-in"
+                      transition: ".3s ease-in",
                     }}
                   >
                     (cash/debt)*liability payments.
@@ -4874,9 +4935,9 @@ export default class App extends React.Component {
               </span>
             </span>
             {/*} (I am impersonating the un barring holds war permit)
-        that must not be halal to the ohio man (mormon, utah?)
-        //clandestine
-        */}
+            that must not be halal to the ohio man (mormon, utah?)
+            //clandestine
+            */}
           </div>
           <a
             style={{
@@ -4885,7 +4946,7 @@ export default class App extends React.Component {
               maxWidth: "100%",
               padding: "0px 10px",
               //fontSize: "20px",
-              fontFamily: "'Pacifico', sans-serif"
+              fontFamily: "'Pacifico', sans-serif",
               //color: "rgb(230,230,255)"
               //backgroundColor: "rgb(32, 22, 11)"
             }}
@@ -4898,5 +4959,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
