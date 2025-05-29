@@ -193,6 +193,7 @@ export default class App extends React.Component {
     return (
       <div
         style={{
+          fontFamily: '"Inter", sans-serif',
           margin: "20px",
         }}
       >
@@ -5024,3 +5025,4 @@ export default class App extends React.Component {
     );
   }
 }
+
