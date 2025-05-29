@@ -294,10 +294,11 @@ export default class App extends React.Component {
               policy starts to phase out the SSA but for the injured).
             </li>
             <li>
-              Level corporate and income taxes by implementing a federal sales
-              tax instead. Suspend real property development, operating
-              expenses, and employee wage deductions to not discriminate
-              industries and/or against workers for business owners.
+              Level corporate and income taxes by implementing a (progessive)
+              federal sales tax instead. Suspend real property development,
+              operating expenses, and employee wage deductions to not
+              discriminate industries and/or against workers for business
+              owners.
             </li>
           </ul>
           <li style={{ color: "dodgerblue" }}>
@@ -5045,4 +5046,3 @@ export default class App extends React.Component {
     );
   }
 }
-
