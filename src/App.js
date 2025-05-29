@@ -281,7 +281,170 @@ export default class App extends React.Component {
         </div>
         {this.state.openMediaStatement ? <br /> : ""}
         Campaign Platform:
-        <ul>
+        <div>
+          <hr />
+          <h2>🗳️ Nick Carducci for U.S. Senate (2026)</h2>
+          <p>
+            <strong>Independent. Honest. Unafraid.</strong>
+          </p>
+          <h3>✅ My Platform: A Government That Trusts You</h3>
+          <hr />
+          <h3>🏛️ Keep Your Money — End Forced Retirement Programs</h3>
+          <p>
+            Social Security was designed in another era. Today, the idea that
+            the government needs to "save for you" doesn't hold up. I propose
+            phasing out <strong>Social Security retirement benefits</strong> for
+            future generations and replacing them with something better:
+            <br />
+            👉 <strong>You keep your money.</strong>
+            <br />
+            No more forced payroll taxes for a program you may never benefit
+            from. Injured or disabled Americans will still be protected, but
+            healthy working adults deserve{" "}
+            <strong>control over their own financial future.</strong>
+          </p>
+          <hr />
+          <h3>📉 A Debt-Free Economy: Break the Chains of Interest</h3>
+          <p>
+            America is addicted to debt. From student loans to small business
+            funding, we're told borrowing is the only way.
+            <br />I say:{" "}
+            <strong>
+              Let’s replace interest-heavy loans with fair, performance-based
+              payout schedules.
+            </strong>
+            <br />
+            This means:
+          </p>
+          <ul>
+            <li>
+              <p>No compounding interest traps.</p>
+            </li>
+            <li>
+              <p>You repay based on real income or results.</p>
+            </li>
+            <li>
+              <p>
+                If things don’t work out, there’s a clear, fair process—not
+                lifelong debt.
+              </p>
+            </li>
+          </ul>
+          <hr />
+          <h3>🏥 Fix Healthcare by Ending the Billing Nightmare</h3>
+          <p>
+            I will{" "}
+            <strong>
+              dismantle the Medical Billing &amp; Insurance Industrial Complex
+            </strong>{" "}
+            that profits from confusion and suffering.
+            <br />
+            Instead of overpriced "coverage," we’ll support:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>Transparent prices.</strong>
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Direct payment models.</strong>
+              </p>
+            </li>
+            <li>
+              <p>
+                Group-bought <strong>discount vouchers</strong> (like Costco for
+                care).
+              </p>
+            </li>
+          </ul>
+          <p>
+            Healthcare should be simple, honest, and focused on patients—not
+            paperwork.
+          </p>
+          <hr />
+          <h3>💸 Fair Taxes, Simple Rules</h3>
+          <p>
+            The current tax code rewards the rich with loopholes and punishes
+            workers and small businesses.
+            <br />I propose:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>Eliminating corporate and income taxes</strong>,
+                replacing them with a{" "}
+                <strong>progressive national sales tax.</strong>
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>No more special deductions</strong> for real estate
+                tycoons or giant corporations.
+              </p>
+            </li>
+            <li>
+              <p>Everyone plays by the same rules—finally.</p>
+            </li>
+          </ul>
+          <hr />
+          <h3>🔧 Responsible Growth, Not Empty Promises</h3>
+          <p>
+            Politicians love to talk about “economic growth,” but 3% growth only
+            brings in about $200 billion per year—
+            <strong>not enough to cover endless deficits</strong>.<br />
+            I won’t make big promises I can’t pay for.
+            <br />
+            I’ll fight to:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>Stop the deficit spending.</strong>
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Prioritize fairness over financial fantasy.</strong>
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>
+                  Protect future generations from government-induced inflation.
+                </strong>
+              </p>
+            </li>
+          </ul>
+          <hr />
+          <h2>🙌 A New Kind of Independent</h2>
+          <p>
+            I'm not backed by party machines or corporate donors. I'm running as
+            an Independent because I believe{" "}
+            <strong>you deserve real choices and real transparency</strong>.
+          </p>
+          <p>
+            If you agree that{" "}
+            <strong>you should control your future, not the government</strong>,
+            join me.
+          </p>
+          <p>
+            📍 Petition:{" "}
+            <a
+              rel="noopener"
+              target="_new"
+              href="https://change.org/nickcarducci"
+            >
+              change.org/nickcarducci
+            </a>
+            <br />
+            🎯 Goal: 800 signatures by June 2026
+            <br />
+            🗳️ Let’s shake up the system—together.
+          </p>
+        </div>
+        <ul style={{ display: "none" }}>
           <li style={{ color: "crimson" }}>
             3% economic growth (per year) will only contribute $200 billion (per
             year).
