@@ -215,6 +215,7 @@ export default class App extends React.Component {
           <div style={{ display: "flex" }}>
             <div
               style={{
+                cursor: "pointer",
                 transition: ".3s ease-in",
                 transform: `rotate(${
                   this.state.openMediaStatement ? 45 : -45
@@ -324,11 +325,36 @@ export default class App extends React.Component {
               <p>You repay based on real income or results.</p>
             </li>
             <li>
-              <p>
-                If things don’t work out, there’s a clear, fair process—not
-                lifelong debt.
+              <p
+                onClick={() => {
+                  this.setState({
+                    openWorkOut: !this.state.openWorkOut,
+                  });
+                }}
+              >
+                If things{space}
+                <span
+                  style={{
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                  }}
+                >
+                  don’t work out
+                </span>
+                , there’s a clear, fair process—not lifelong debt.
               </p>
             </li>
+            {this.state.openWorkOut && (
+              <ul>
+                <li>
+                  Personal credit can garnish income from the main industry the
+                  credit was approved upon, while installment loans with
+                  collateral must return payment installments upon repossession
+                  of the equity-asset. In neither case may interest compound
+                  beyond the original term.
+                </li>
+              </ul>
+            )}
           </ul>
           <hr />
           <h3>🏥 Fix Healthcare by Ending the Billing Nightmare</h3>
