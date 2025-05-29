@@ -320,6 +320,13 @@ export default class App extends React.Component {
               installments upon repossession of the equity-asset. In neither
               case may interest compound beyond the original term.
             </li>
+            <li>
+              Insurance may exist in order to broker gift certificates (at a
+              discount, for purchasing as a group - all at once, using wholesale
+              economics & bargaining), rather than coverage over a time period,
+              that carry-over indefinitely (until the purchase order is
+              redeemed).
+            </li>
           </ul>
         </ul>
         <div>Follow @nickcarduccii for more.</div>
