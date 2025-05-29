@@ -381,7 +381,8 @@ export default class App extends React.Component {
             <li>
               <p>
                 Group-bought <strong>discount vouchers</strong> (like Costco for
-                care).
+                care - but the subscription benefits carryover if you don't use
+                them).
               </p>
             </li>
           </ul>
