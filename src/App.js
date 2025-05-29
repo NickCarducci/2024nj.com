@@ -204,46 +204,111 @@ export default class App extends React.Component {
             U.S. Senate petition (change.org/nickcarducci)
           </a>
         </h2>
-        &nbsp;&nbsp;&nbsp;PUBLIC/MEDIA-FACING STATEMENT
+        <div
+          onClick={() => {
+            this.setState({
+              openMediaStatement: !this.state.openMediaStatement,
+            });
+          }}
+        >
+          <div style={{ display: "flex" }}>
+            <div
+              style={{
+                transition: ".3s ease-in",
+                transform: `rotate(${
+                  this.state.openMediaStatement ? 45 : -45
+                }deg)`,
+                width: "20px",
+                height: "20px",
+                borderRight: "2px solid black",
+                borderBottom: "2px solid black",
+              }}
+            ></div>
+            <div style={{ margin: "0px 20px" }}>
+              PUBLIC/MEDIA-FACING STATEMENT
+              <br />
+              FOR IMMEDIATE RELEASE
+            </div>
+          </div>
+          <br />
+          Political Candidate and Entrepreneur Deplatformed by Quora Without
+          Cause, Calls for Transparency and Fairness
+        </div>
         <br />
-        &nbsp;&nbsp;&nbsp;FOR IMMEDIATE RELEASE
-        <br />
-        <br />
-        Political Candidate and Entrepreneur Deplatformed by Quora Without
-        Cause, Calls for Transparency and Fairness
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;Nicholas Carducci, a political candidate and
-        entrepreneur based in New Jersey, is speaking out after being banned
-        from Quora without warning or evidence of wrongdoing. Despite
-        contributing high-quality, educational content aligned with Quora’s
-        mission of “empowering people to share and grow the world's knowledge,”
-        Nick’s account was terminated, with no opportunity for appeal.
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;“As a candidate and business leader, I use digital
-        platforms to engage the public and share ideas that matter,” said
-        Carducci. “Being silenced without cause by a platform that claims to
-        support open knowledge is not just unjust—it’s misleading and harmful.”
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;The stated reason for the ban—allegedly sharing
-        repetitive or monetized content—is one Carducci firmly denies and says
-        is inconsistent with their actual use of the platform.
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;Carducci has filed a formal demand letter with Quora
-        and will file a consumer protection complaint with the State of New
-        Jersey by 6/10/2025 if they do not reverse this termination, and is
-        considering further legal action if the platform refuses to reverse the
-        ban or provide an adequate explanation.
-        <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;Supporters and digital rights advocates are encouraged
-        to contact Quora and demand accountability.
-        <br />
-        <br />
-        For press inquiries, contact sayists@icloud.com.
+        <div
+          style={{
+            padding: !this.state.openMediaStatement ? "0px 10px" : "10px",
+            border: !this.state.openMediaStatement ? "" : "1px dashed grey",
+            transition: ".3s ease-out",
+            height: this.state.openMediaStatement ? "" : "0px",
+            overflow: "hidden",
+          }}
+        >
+          &nbsp;&nbsp;&nbsp;Nicholas Carducci, a political candidate and
+          entrepreneur based in New Jersey, is speaking out after being banned
+          from Quora without warning or evidence of wrongdoing. Despite
+          contributing high-quality, educational content aligned with Quora’s
+          mission of “empowering people to share and grow the world's
+          knowledge,” Nick’s account was terminated, with no opportunity for
+          appeal.
+          <br />
+          <br />
+          &nbsp;&nbsp;&nbsp;“As a candidate and business leader, I use digital
+          platforms to engage the public and share ideas that matter,” said
+          Carducci. “Being silenced without cause by a platform that claims to
+          support open knowledge is not just unjust—it’s misleading and
+          harmful.”
+          <br />
+          <br />
+          &nbsp;&nbsp;&nbsp;The stated reason for the ban—allegedly sharing
+          repetitive or monetized content—is one Carducci firmly denies and says
+          is inconsistent with their actual use of the platform.
+          <br />
+          <br />
+          &nbsp;&nbsp;&nbsp;Carducci has filed a formal demand letter with Quora
+          and will file a consumer protection complaint with the State of New
+          Jersey by 6/10/2025 if they do not reverse this termination, and is
+          considering further legal action if the platform refuses to reverse
+          the ban or provide an adequate explanation.
+          <br />
+          <br />
+          &nbsp;&nbsp;&nbsp;Supporters and digital rights advocates are
+          encouraged to contact Quora and demand accountability.
+          <br />
+          <br />
+          For press inquiries, contact sayists@icloud.com.
+        </div>
+        {this.state.openMediaStatement ? <br /> : ""}
+        Campaign Platform:
+        <ul>
+          <li>
+            3% economic growth (per year) will only contribute $200 billion (per
+            year).
+          </li>
+          <li>
+            In order to avoid unfair wealth inequality (from treasury bonds),
+            prevent deficits by retiring Social Security Old Age Survivorship
+            retirement benefits, and dismantle the Medical Billing & Insurance
+            Industrial Complex.
+          </li>
+          <li>
+            In the same vein, prevent loans but facilitate other types of
+            investment, namely, "payout schedules", for investors that are
+            limited so that entrepreneurs do not have to take on debt with
+            interest that would otherwise depend on time-passing in accrual
+            rather than actually-realized paying customers, if not outright
+            equity sales.
+          </li>
+          <li>
+            This means that all current and future debts are adjunicated through
+            the perspective of these payout schedules. Personal credit can
+            garnish income from the main industry the credit was approved upon,
+            while installment loans with collateral must return payment
+            installments upon repossession of the equity-asset. In neither case
+            may interest compound beyond the original term.
+          </li>
+        </ul>
+        <div>Follow @nickcarduccii for more.</div>
       </div>
     );
     return (
