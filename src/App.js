@@ -282,32 +282,45 @@ export default class App extends React.Component {
         {this.state.openMediaStatement ? <br /> : ""}
         Campaign Platform:
         <ul>
-          <li>
+          <li style={{ color: "crimson" }}>
             3% economic growth (per year) will only contribute $200 billion (per
             year).
           </li>
-          <li>
-            In order to avoid unfair wealth inequality (from treasury bonds),
-            prevent deficits by retiring Social Security Old Age Survivorship
-            retirement benefits, and dismantle the Medical Billing & Insurance
-            Industrial Complex.
+          <ul>
+            <li>
+              In order to avoid unfair wealth inequality (from treasury bonds),
+              prevent deficits by retiring Social Security Old Age Survivorship
+              retirement benefits (give FICA tax breaks to people after the
+              policy starts to phase out the SSA but for the injured).
+            </li>
+            <li>
+              Level corporate and income taxes by implementing a federal sales
+              tax instead. Suspend real property development, operating
+              expenses, and employee wage deductions to not discriminate
+              industries and/or against workers for business owners.
+            </li>
+          </ul>
+          <li style={{ color: "dodgerblue" }}>
+            Dismantle the Medical Billing & Insurance Industrial Complex.
           </li>
-          <li>
-            In the same vein, prevent loans but facilitate other types of
-            investment, namely, "payout schedules", for investors that are
-            limited so that entrepreneurs do not have to take on debt with
-            interest that would otherwise depend on time-passing in accrual
-            rather than actually-realized paying customers, if not outright
-            equity sales.
-          </li>
-          <li>
-            This means that all current and future debts are adjunicated through
-            the perspective of these payout schedules. Personal credit can
-            garnish income from the main industry the credit was approved upon,
-            while installment loans with collateral must return payment
-            installments upon repossession of the equity-asset. In neither case
-            may interest compound beyond the original term.
-          </li>
+          <ul>
+            <li>
+              In the same vein, prevent loans but facilitate other types of
+              investment, namely, "payout schedules", for investors that are
+              limited so that entrepreneurs do not have to take on debt with
+              interest that would otherwise depend on time-passing in accrual
+              rather than actually-realized paying customers, if not outright
+              equity sales.
+            </li>
+            <li>
+              This means that all current and future debts are adjunicated
+              through the perspective of these payout schedules. Personal credit
+              can garnish income from the main industry the credit was approved
+              upon, while installment loans with collateral must return payment
+              installments upon repossession of the equity-asset. In neither
+              case may interest compound beyond the original term.
+            </li>
+          </ul>
         </ul>
         <div>Follow @nickcarduccii for more.</div>
       </div>
