@@ -1,4 +1,5 @@
 import React from "react";
+import { InstagramEmbed } from "react-social-media-embed";
 import Cable from "./Dropwire";
 import { UAParser } from "ua-parser-js";
 import Population from "./population";
@@ -558,6 +559,10 @@ export default class App extends React.Component {
           </ul>
         </ul>
         <div>Follow @nickcarduccii for more.</div>
+        <InstagramEmbed
+          url="https://www.instagram.com/p/C829kXotHGT/"
+          width={328}
+        />
       </div>
     );
     return (
