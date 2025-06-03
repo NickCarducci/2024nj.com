@@ -1,7 +1,7 @@
 {
-  "name": "Nick Carducci",
+  "name": "nickcarducci",
   "version": "1.0.0",
-  "description": "Links to my portfolio and some political campaign information",
+  "description": "Links to Nick Carducci's portfolio and some political campaign information",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
