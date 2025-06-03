@@ -418,11 +418,30 @@ export default class App extends React.Component {
           <hr />
           <h3>🔧 Responsible Growth, Not Empty Promises</h3>
           <p>
-            Politicians love to talk about “economic growth,” but 3% growth only
-            brings in about $200 billion per year—
+            Politicians love to talk about “
+            <span
+              onClick={() => {
+                this.setState({
+                  openEconomicGrowth: !this.state.openEconomicGrowth,
+                });
+              }}
+              style={{ cursor: "pointer", textDecoration: "underline" }}
+            >
+              economic growth
+            </span>
+            ,” but 3% growth only brings in about $200 billion per year—
             <strong>not enough to cover endless deficits</strong>.<br />
             I won’t make big promises I can’t pay for.
             <br />
+            {this.state.openEconomicGrowth && (
+              <span>
+                <br />
+                Economic growth is good if it's from greater access to new
+                products, but even income and employment otherwise is either
+                from quantitative easing or investment.
+                <br />
+              </span>
+            )}
             I’ll fight to:
           </p>
           <ul>
@@ -5236,3 +5255,4 @@ export default class App extends React.Component {
     );
   }
 }
+
